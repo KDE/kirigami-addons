@@ -69,10 +69,9 @@ RowLayout {
 
     Component {
         id: tumberDelegate
-        Text {
+        Label {
             text: model.display
-            color: control.visualFocus ? control.palette.highlight : control.palette.text
-            font: control.font
+            color: Tumbler.tumbler.visualFocus ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
             opacity: 0.4 + Math.max(0, 1 - Math.abs(Tumbler.displacement)) * 0.6
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
