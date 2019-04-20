@@ -94,8 +94,8 @@ RowLayout {
         Tumbler {
             delegate: tumberDelegate
             model: NumberModel {
-                min: 1
-                max: 31
+                minimumValue: 1
+                maximumValue: 31
             }
         }
         //Tumbler doesn't have a separate user modified signal...booooooo!!!!!
@@ -116,8 +116,8 @@ RowLayout {
         Tumbler {
             delegate: tumberDelegate
             model: NumberModel {
-                min: 1
-                max: 12
+                minimumValue: 1
+                maximumValue: 12
             }
         }
     }
@@ -137,8 +137,8 @@ RowLayout {
         Tumbler {
             delegate: tumberDelegate
             model: NumberModel {
-                min: 1970
-                max: 2100
+                minimumValue: 1970
+                maximumValue: 2100
             }
         }
     }
