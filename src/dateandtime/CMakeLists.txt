@@ -16,8 +16,10 @@ target_link_libraries(dateandtimeplugin
 install(TARGETS dateandtimeplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/kirigamiaddons/dateandtime)
 install(FILES
         qmldir
+        ClockElement.qml
         ClockFace.qml
         DateInput.qml
         Hand.qml
         TimezoneTable.qml
-        DESTINATION ${KDE_INSTALL_QMLDIR}//org/kde/kirigamiaddons/dateandtime)
+        TimePicker.qml
+        DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/kirigamiaddons/dateandtime)

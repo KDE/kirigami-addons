@@ -5,4 +5,5 @@ DateInput 0.1 DateInput.qml
 ClockFace 0.1 ClockFace.qml
 Hand 0.1 Hand.qml
 TimeZoneTable 0.1 TimezoneTable.qml
-
+TimePicker 0.1 TimePicker.qml
+ClockElement 0.1 ClockElement.qml

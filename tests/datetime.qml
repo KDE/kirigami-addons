@@ -36,7 +36,12 @@ Kirigami.ApplicationWindow {
                     onValueChanged: console.log(value)
                 }
 
-                // TODO time only
+                Addon.TimePicker {
+                    id: timeInput
+                    Kirigami.FormData.label: "Time"
+                    // TODO value changes
+                }
+
                 // TODO date/time combined
 
                 Addon.TimeZoneTable {
@@ -47,6 +52,7 @@ Kirigami.ApplicationWindow {
                     text: "Set to now"
                     onClicked: {
                         dateInput.value = new Date();
+                        // TODO update timeInput
                     }
                 }
             }
