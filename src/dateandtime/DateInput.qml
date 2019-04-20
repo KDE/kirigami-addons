@@ -86,7 +86,11 @@ RowLayout {
             to: 31
             editable: true
             value: layout.value.getDate();
-            onValueModified: layout.value.setDate(value);
+            onValueModified: {
+                var dt = layout.value;
+                dt.setDate(value);
+                layout.value = dt;
+            }
         }
     }
     Component {
@@ -107,8 +111,12 @@ RowLayout {
             from: 1
             to: 12
             editable: true
-            value: layout.value.getMonth();
-            onValueModified: layout.value.setMonth(value);
+            value: layout.value.getMonth() + 1;
+            onValueModified: {
+                var dt = layout.value;
+                dt.setMonth(value - 1);
+                layout.value = dt;
+            }
         }
     }
     Component {
@@ -129,7 +137,11 @@ RowLayout {
             editable: true
             textFromValue: function(value) {return value} //default implementation does toLocaleString which looks super weird
             value: layout.value.getFullYear();
-            onValueModified: layout.value.setFullYear(value);
+            onValueModified: {
+                var dt = layout.value;
+                dt.setFullYear(value);
+                layout.value = dt;
+            }
         }
     }
     Component {
