@@ -2,7 +2,10 @@ set(dateandtime_SRCS
     lib/timezonemodel.cpp
     lib/timezonesi18n.cpp
     lib/knumbermodel.cpp
-    lib/plugin.cpp)
+    lib/plugin.cpp
+    lib/timeinputvalidator.cpp
+    lib/qdatetimeparser.cpp
+    )
 
 add_definitions(-DTRANSLATION_DOMAIN=\"kirigami_dateandtime\")
 
@@ -22,4 +25,5 @@ install(FILES
         Hand.qml
         TimezoneTable.qml
         TimePicker.qml
+        TimeInput.qml
         DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/kirigamiaddons/dateandtime)

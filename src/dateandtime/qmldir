@@ -7,3 +7,4 @@ Hand 0.1 Hand.qml
 TimeZoneTable 0.1 TimezoneTable.qml
 TimePicker 0.1 TimePicker.qml
 ClockElement 0.1 ClockElement.qml
+TimeInput 0.1 TimeInput.qml
