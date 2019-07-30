@@ -1,18 +1,41 @@
 #pragma once
 
-#include <QTime>
 #include <QValidator>
 
-class TimeInputValidator: public QValidator
+class TimeInputValidatorPrivate;
+
+class TimeInputValidator : public QValidator
 {
     Q_OBJECT
 
+    /**
+     * This property holds the desired time format.
+     */
+    Q_PROPERTY(QString format READ format WRITE setFormat NOTIFY formatChanged)
 
 public:
-    TimeInputValidator(QObject *parent = nullptr);
+    explicit TimeInputValidator(QObject *parent = nullptr);
+    ~TimeInputValidator() override;
+
+    // Overrides from QValidator.
     void fixup(QString &input) const override;
     QValidator::State validate(QString &input, int &pos) const override;
 
+    /**
+     * Returns the desired time format.
+     */
+    QString format() const;
+
+    /**
+     * Sets the desired time format.
+     */
+    void setFormat(const QString &format);
+
+Q_SIGNALS:
+    void formatChanged();
+
 private:
-    QTime m_time;
+    QScopedPointer<TimeInputValidatorPrivate> d;
+
+    Q_DISABLE_COPY(TimeInputValidator)
 };

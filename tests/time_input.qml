@@ -6,13 +6,39 @@ import org.kde.kirigamiaddons.dateandtime 0.1 as Addon
 
 Rectangle {
     ColumnLayout {
-        Addon.TimeInput {
-            id: timeInput
-            hours: 5
-            minutes: 5
+        ColumnLayout {
+            Addon.TimeInput {
+                id: timeInput
+            }
+            Text {
+                text: 'Text: ' + timeInput.text
+            }
+            Text {
+                text: 'Value: ' + timeInput.value
+            }
+            Text {
+                text: 'Acceptable input: ' + timeInput.acceptableInput
+            }
         }
-        Text {
-            text: timeInput.text + timeInput.acceptableInput
+        ColumnLayout {
+            Addon.TimeInput {
+                id: timeInput2
+                format: 'hh.mm.ss'
+
+                // I'm from the future and we still don't have flying cars... FTW???
+                value: new Date('2042-10-10T22:24:25')
+
+                onValueChanged: console.log('value has changed', value)
+            }
+            Text {
+                text: 'Text: ' + timeInput2.text
+            }
+            Text {
+                text: 'Value: ' + timeInput2.value
+            }
+            Text {
+                text: 'Acceptable input: ' + timeInput2.acceptableInput
+            }
         }
     }
 }

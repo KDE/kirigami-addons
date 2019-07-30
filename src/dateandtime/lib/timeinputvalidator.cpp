@@ -1,32 +1,97 @@
 #include "timeinputvalidator.h"
 
-TimeInputValidator::TimeInputValidator(QObject *parent):
-    QValidator(parent)
-{}
+#include "qdatetimeparser_p.h"
+
+static QDateTime nullDateTime()
+{
+    return QDateTime(QDate::currentDate(), QTime(0, 0));
+}
+
+class TimeInputValidatorPrivate : public QDateTimeParser
+{
+public:
+    TimeInputValidatorPrivate();
+
+    void fixup(QString &input) const;
+    QValidator::State validate(QString &input, int &pos) const;
+
+    QDateTime defaultValue;
+    QString format;
+};
+
+TimeInputValidatorPrivate::TimeInputValidatorPrivate()
+    : QDateTimeParser(QVariant::DateTime, Context::DateTimeEdit)
+    , defaultValue(nullDateTime())
+{
+}
+
+void TimeInputValidatorPrivate::fixup(QString &input) const
+{
+    if (input.isEmpty()) {
+        return;
+    }
+
+    if (format.isEmpty()) {
+        return;
+    }
+
+    const StateNode stateNode = parse(input, cursorPosition(), defaultValue, true);
+
+    input = stateNode.input;
+}
+
+QValidator::State TimeInputValidatorPrivate::validate(QString &input, int &pos) const
+{
+    if (input.isEmpty()) {
+        return QValidator::State::Invalid;
+    }
+
+    if (format.isEmpty()) {
+        return QValidator::State::Invalid;
+    }
+
+    const StateNode stateNode = parse(input, pos, defaultValue, false);
+
+    // TODO: Take conflicts field into account?
+    input = stateNode.input;
+    pos += stateNode.padded;
+
+    return QValidator::State(stateNode.state);
+}
+
+TimeInputValidator::TimeInputValidator(QObject *parent)
+    : QValidator(parent)
+    , d(new TimeInputValidatorPrivate)
+{
+}
+
+TimeInputValidator::~TimeInputValidator()
+{
+}
 
 void TimeInputValidator::fixup(QString &input) const
 {
-
+    d->fixup(input);
 }
 
 QValidator::State TimeInputValidator::validate(QString &input, int &pos) const
 {
-    QLocale::FormatType formats[] = { QLocale::LongFormat, QLocale::ShortFormat, QLocale::NarrowFormat };
-    QLocale locale;
+    return d->validate(input, pos);
+}
 
-    for (int i = 0; i < 3; i++) {
-        QTime tmp = locale.toTime(input, formats[i]);
-        if (tmp.isValid()) {
-            return QValidator::Acceptable;
-        }
+QString TimeInputValidator::format() const
+{
+    return d->format;
+}
+
+void TimeInputValidator::setFormat(const QString &format)
+{
+    if (d->format == format) {
+        return;
     }
-
-    int hours = 0;
-    int minutes = 0;
-
-
-//     QStringList sections = input.split(":");
-//     if (sections.length <
-
-    return QValidator::Intermediate;
+    if (!d->parseFormat(format)) {
+        return;
+    }
+    d->format = format;
+    emit formatChanged();
 }
