@@ -33,14 +33,18 @@ Kirigami.ApplicationWindow {
                 Addon.DateInput {
                     id: dateInput
                     Kirigami.FormData.label: "Date"
-                    onValueChanged: console.log(value)
+                    onSelectedDateChanged: console.log(selectedDate)
                 }
 
-                Addon.TimePicker {
-                    id: timeInput
-                    Kirigami.FormData.label: "Time"
-                    // TODO value changes
-                }
+
+//                 Addon.TimeLabel {
+//                 }
+
+//                 Addon.TimePicker {
+//                     id: timeInput
+//                     Kirigami.FormData.label: "Time"
+//                     // TODO value changes
+//                 }
 
                 // TODO date/time combined
 

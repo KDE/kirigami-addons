@@ -1,7 +1,6 @@
 set(dateandtime_SRCS
     lib/timezonemodel.cpp
     lib/timezonesi18n.cpp
-    lib/knumbermodel.cpp
     lib/plugin.cpp
     lib/timeinputvalidator.cpp
     lib/qdatetimeparser.cpp
@@ -22,8 +21,12 @@ install(FILES
         ClockElement.qml
         ClockFace.qml
         DateInput.qml
+        DatePicker.qml
+        DesktopDateInput.qml
+        MobileDateInput.qml
         Hand.qml
         TimezoneTable.qml
+        TimeLabel.qml
         TimePicker.qml
         TimeInput.qml
         DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/kirigamiaddons/dateandtime)
