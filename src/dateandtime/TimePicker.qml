@@ -22,6 +22,11 @@ import QtQuick.Controls 2.5 as Controls2
 import org.kde.kirigami 2.0 as Kirigami
 import QtQuick.Layouts 1.11
 
+/**
+ * A large time picker
+ * Represented as a clock provides a very visual way for a user
+ * to set and visulise a time being chosen
+ */
 ColumnLayout {
     
     id: root

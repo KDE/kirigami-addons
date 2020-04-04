@@ -22,6 +22,12 @@ import QtQml 2.14
 import QtQuick 2.4
 import QtQuick.Controls 1.2
 
+/**
+ * A large date picker
+ *
+ * Use case is for picking a date and visualising that in
+ * context of a calendar view
+ */
 FocusScope {
     property alias selectedDate: calendar.selectedDate
 
