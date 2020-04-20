@@ -27,85 +27,95 @@ import QtQuick.Layouts 1.11
  * Represented as a clock provides a very visual way for a user
  * to set and visulise a time being chosen
  */
-ColumnLayout {
-    
+
+Item {
     id: root
-    
+
     property int hours
     property int minutes
     property bool pm
-    
-        
-    Item {
-        id: clock
-        width: Kirigami.Units.gridUnit * 18
-        height: width
-        
-        //Hours clock
-        PathView {
-            id: hoursClock
-            
-            delegate: ClockElement {
-                type: "hours"
-                selectedValue: root.hours
-                onClicked: root.hours = index 
+
+    ColumnLayout {
+
+        anchors.fill: parent
+
+        Item {
+            id: clock
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+
+            //Hours clock
+            PathView {
+                id: hoursClock
+
+                anchors.fill: parent
+                interactive: false
+
+                delegate: ClockElement {
+                    type: "hours"
+                    selectedValue: root.hours
+                    onClicked: root.hours = index
+                }
+                model: 12
+
+                path: Path {
+                    PathAngleArc {
+                        centerX: clock.width / 2
+                        centerY: clock.height / 2
+                        radiusX: (Math.min(clock.width, clock.height) - Kirigami.Units.gridUnit) / 4
+                        radiusY: radiusX
+                        startAngle: -90
+                        sweepAngle: 360
+                    }
+                }
             }
-            model: 12
-            path: Path {
-                PathAngleArc {
-                    centerX: Kirigami.Units.gridUnit * 9
-                    centerY: centerX
-                    radiusX: Kirigami.Units.gridUnit * 4
-                    radiusY: radiusX
-                    startAngle: -90
-                    sweepAngle: 360
-                }   
+
+            //Minutes clock
+            PathView {
+                id: minutesClock
+
+                anchors.fill: parent
+                interactive: false
+
+                model: 60
+
+                delegate: ClockElement {
+                    type: "minutes"
+                    selectedValue: root.minutes
+                    onClicked: root.minutes = index
+                }
+
+                path: Path {
+                    PathAngleArc {
+                        centerX: clock.width / 2
+                        centerY: clock.height / 2
+                        radiusX: (Math.min(clock.width, clock.height) - Kirigami.Units.gridUnit) / 2
+                        radiusY: radiusX
+                        startAngle: -90
+                        sweepAngle: 360
+                    }
+                }
             }
         }
-                
-        //Minutes clock
-        PathView {
-            id: minutesClock
-            
-            model: 60
-            
-            delegate: ClockElement {
-                type: "minutes"
-                selectedValue: root.minutes
-                onClicked: root.minutes = index 
+
+        RowLayout {
+            Layout.alignment: Qt.AlignHCenter
+
+            Controls2.Label {
+                text: ((root.hours < 10) ? "0" : "" ) + root.hours + ":" + ( (root.minutes < 10) ? "0" : "") + root.minutes
+                font.pointSize: Kirigami.Units.fontMetrics.font.pointSize * 1.5
             }
-            
-            path: Path {
-                PathAngleArc {
-                    centerX: Kirigami.Units.gridUnit * 9
-                    centerY: centerX
-                    radiusX: Kirigami.Units.gridUnit * 7
-                    radiusY: radiusX
-                    startAngle: -90
-                    sweepAngle: 360
-                }           
+
+            Controls2.ToolButton {
+                id: pm
+
+                checked: root.pm
+                checkable: true
+                text: checked ? "PM" : "AM"
+                font.pointSize: Kirigami.Units.fontMetrics.font.pointSize * 1.5
+
+                onClicked: root.pm = checked
             }
         }
     }
-
-    RowLayout {
-        Layout.alignment: Qt.AlignHCenter
-
-        Controls2.Label {
-            text: ((root.hours < 10) ? "0" : "" ) + root.hours + ":" + ( (root.minutes < 10) ? "0" : "") + root.minutes
-            font.pointSize: Kirigami.Units.fontMetrics.font.pointSize * 1.5
-        }
-        
-        Controls2.ToolButton {
-            id: pm
-
-            checked: root.pm
-            checkable: true
-            text: checked ? "PM" : "AM"
-            font.pointSize: Kirigami.Units.fontMetrics.font.pointSize * 1.5
-
-            onClicked: root.pm = checked
-        }
-    }
-    
 }
