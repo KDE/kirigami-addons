@@ -24,6 +24,11 @@
 #include "timeinputvalidator.h"
 #include "monthmodel.h"
 
+#ifdef Q_OS_ANDROID
+#include "androidutils.h"
+#include "fuck.h"
+#endif
+
 class KirigamiAddonsDataAndTimePlugin : public QQmlExtensionPlugin
 {
     Q_OBJECT
@@ -48,6 +53,13 @@ void KirigamiAddonsDataAndTimePlugin::registerTypes(const char *uri)
     qmlRegisterType<TimeZoneModel>(uri, 0, 1, "TimeZoneModel");
     qmlRegisterType<TimeZoneFilterProxy>(uri, 0, 1, "TimeZoneFilterModel");
     qmlRegisterType<TimeInputValidator>(uri, 0, 1, "TimeInputValidator");
+
+#ifdef Q_OS_ANDROID
+    qmlRegisterSingletonType<AndroidUtils>(uri, 0, 1, "AndroidUtils", [](QQmlEngine *, QJSEngine *) -> QObject * {
+        return AndroidUtils::instance();
+    });
+    qmlRegisterType<Fuck>(uri, 0, 1, "Fuck");
+#endif
 }
 
 #include "plugin.moc"

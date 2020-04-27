@@ -1,0 +1,9 @@
+<rules>
+    <dependencies>
+        <lib name="kirigamidateandtime">
+            <depends>
+                <jar bundling="1" file="jar/KF5DateAndTime.aar"/>
+            </depends>
+        </lib>
+    </dependencies>
+</rules>

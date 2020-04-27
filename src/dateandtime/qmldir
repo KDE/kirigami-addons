@@ -10,3 +10,4 @@ TimePicker 0.1 TimePicker.qml
 ClockElement 0.1 ClockElement.qml
 TimeInput 0.1 TimeInput.qml
 TimeLabel 0.1 TimeLabel.qml
+DateDialog 0.1 DateDialog.qml

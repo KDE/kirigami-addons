@@ -13,10 +13,8 @@ SET(CMAKE_CXX_STANDARD 11)
 include(CPack)
 include(FeatureSummary)
 
-find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick QuickControls2)
-
 set(CMAKE_AUTOMOC ON)
-set(AUTOMOC_MOC_OPTIONS -Muri=org.kde.kirigami)
+# set(AUTOMOC_MOC_OPTIONS -Muri=org.kde.kirigami)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 ################# set KDE specific information #################
@@ -25,7 +23,7 @@ find_package(ECM 5.56.0 NO_MODULE)
 set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://projects.kde.org/projects/kdesupport/extra-cmake-modules")
 
 # where to look first for cmake modules, before ${CMAKE_ROOT}/Modules/ is checked
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules)
 
 include(GenerateExportHeader)
 include(ECMSetupVersion)
@@ -51,30 +49,37 @@ configure_package_config_file(
     PATH_VARS  KF5_INCLUDE_INSTALL_DIR CMAKE_INSTALL_PREFIX
 )
 
-# install(FILES
-#     "${CMAKE_CURRENT_BINARY_DIR}/KF5KirigamiAddonsConfig.cmake"
-#     "${CMAKE_CURRENT_BINARY_DIR}/KF5KirigamiAddonsConfigVersion.cmake"
-#     "${CMAKE_CURRENT_SOURCE_DIR}/KF5KirigamiAddonsMacros.cmake"
-#     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-#     COMPONENT Devel
-# )
-
-# install(EXPORT KF5KirigamiAddonsTargets
-#     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-#     FILE KF5KirigamiAddonsTargets.cmake
-#     NAMESPACE KF5::
-# )
-
+find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick QuickControls2)
 find_package(KF5I18n ${KF5_DEP_VERSION} REQUIRED)
 
-# ecm_setup_version(${KF5_VERSION}
-#     VARIABLE_PREFIX KIRIGAMIADDONS
-#     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kirigamiaddons_version.h"
-#     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5KirigamiAddonsConfigVersion.cmake"
-#     SOVERSION 5
-# )
+if(ANDROID)
+    find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS AndroidExtras)
+    find_package(Gradle REQUIRED)
+endif()
+
+ecm_setup_version(${KF5_VERSION}
+    VARIABLE_PREFIX KIRIGAMIADDONS
+    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kirigamiaddons_version.h"
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5KirigamiAddonsConfigVersion.cmake"
+    SOVERSION 1
+)
 
 add_subdirectory(src)
+
+if(ANDROID)
+install(FILES
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5KirigamiAddonsConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5KirigamiAddonsConfigVersion.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+    COMPONENT Devel
+)
+
+install(EXPORT KF5KirigamiAddonsTargets
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+    FILE KF5KirigamiAddonsTargets.cmake
+    NAMESPACE KF5::
+)
+endif()
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
