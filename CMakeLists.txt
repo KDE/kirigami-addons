@@ -9,12 +9,6 @@ set(REQUIRED_QT_VERSION 5.10.0)
 
 SET(CMAKE_CXX_STANDARD 11)
 
-################# Disallow in-source build #################
-
-if("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
-   message(FATAL_ERROR "kirigami requires an out of source build. Please create a separate build directory and run 'cmake path_to_kirigami [options]' there.")
-endif()
-
 # Make CPack available to easy generate binary packages
 include(CPack)
 include(FeatureSummary)
