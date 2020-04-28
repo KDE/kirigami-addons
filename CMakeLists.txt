@@ -14,7 +14,6 @@ include(CPack)
 include(FeatureSummary)
 
 set(CMAKE_AUTOMOC ON)
-# set(AUTOMOC_MOC_OPTIONS -Muri=org.kde.kirigami)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 ################# set KDE specific information #################
