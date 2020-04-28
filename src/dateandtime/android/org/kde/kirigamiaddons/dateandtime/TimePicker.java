@@ -21,7 +21,7 @@ public class TimePicker extends DialogFragment
     private Activity activity;
     private long initialTime;
 
-    private native void timeSelected(String time);
+    private native void timeSelected(int hours, int minutes);
     private native void cancelled();
 
     public TimePicker(Activity activity, long initialTime) {
@@ -39,19 +39,7 @@ public class TimePicker extends DialogFragment
     }
 
     public void onTimeSet(android.widget.TimePicker view, int hourOfDay, int minute) {
-
-        // Add leading zero if needed
-        String hourFormatted = Integer.toString(hourOfDay);
-        if (hourOfDay < 10) {
-            hourFormatted = "0" + hourFormatted;
-        }
-
-        String minuteFormatted = Integer.toString(minute);
-        if (minute < 10) {
-            minuteFormatted = "0" + minuteFormatted;
-        }
-
-        timeSelected(String.format("%s:%s", hourFormatted, minuteFormatted));
+        timeSelected(hourOfDay, minute);
     }
 
     @Override

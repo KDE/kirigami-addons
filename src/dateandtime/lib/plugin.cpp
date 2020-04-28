@@ -26,7 +26,6 @@
 
 #ifdef Q_OS_ANDROID
 #include "androidutils.h"
-#include "fuck.h"
 #endif
 
 class KirigamiAddonsDataAndTimePlugin : public QQmlExtensionPlugin
@@ -58,7 +57,6 @@ void KirigamiAddonsDataAndTimePlugin::registerTypes(const char *uri)
     qmlRegisterSingletonType<AndroidUtils>(uri, 0, 1, "AndroidUtils", [](QQmlEngine *, QJSEngine *) -> QObject * {
         return AndroidUtils::instance();
     });
-    qmlRegisterType<Fuck>(uri, 0, 1, "Fuck");
 #endif
 }
 

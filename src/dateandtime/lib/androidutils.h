@@ -8,6 +8,7 @@
 
 #include <QObject>
 #include <QDate>
+#include <QTime>
 
 class Q_DECL_EXPORT AndroidUtils : public QObject
 {
@@ -16,18 +17,17 @@ public:
     Q_INVOKABLE void showDatePicker();
     Q_INVOKABLE void showTimePicker();
 
-    void _dateSelected(int days, int monts, int years);
+    void _dateSelected(int days, int months, int years);
     void _dateCancelled();
 
-    void _timeSelected(const QString &data);
+    void _timeSelected(int hours, int minutes);
     void _timeCancelled();
 
     static AndroidUtils *instance();
 
 Q_SIGNALS:
     void datePickerFinished(bool accepted, const QDate date);
-    void timePickerFinished(bool accepted, const QString &time);
-    void foo();
+    void timePickerFinished(bool accepted, const QTime &time);
 
 private:
     static AndroidUtils *s_instance;

@@ -5,12 +5,11 @@ set(dateandtime_SRCS
     lib/plugin.cpp
     lib/timeinputvalidator.cpp
     lib/qdatetimeparser.cpp
-    lib/fuck.cpp
     )
 
 add_definitions(-DTRANSLATION_DOMAIN=\"kirigami_dateandtime\")
 
-add_library(dateandtimeplugin MODULE ${dateandtime_SRCS})
+add_library(dateandtimeplugin SHARED ${dateandtime_SRCS})
 target_link_libraries(dateandtimeplugin
         Qt5::Quick
         Qt5::Qml
@@ -53,4 +52,5 @@ install(FILES
         TimeLabel.qml
         TimePicker.qml
         TimeInput.qml
+        TimeDialog.qml
         DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/kirigamiaddons/dateandtime)

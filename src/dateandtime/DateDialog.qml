@@ -15,38 +15,26 @@ Item {
     signal datePicked(date theDate)
 
     function open() {
-
-        console.log("Succulent")
-
         if (Qt.platform.os === "android") {
             KDT.AndroidUtils.showDatePicker()
-//             KDT.AndroidUtils.datePickerFinished.connect((accepted, date)=> console.log("oh boi"))
         } else {
             dialog.open()
         }
     }
 
-//     onClicked: {
-//         if (_isAndroid) {
-//             _androidUtils.showDatePicker()
-//         } else {
-//             dialog.open()
-//         }
-//     }
-
-    KDT.Fuck {
-        onFoo: console.log("Here's a fuck")
+     Connections {
+        target: Qt.platform.os === "android" ? KDT.AndroidUtils : dummy
+        onDatePickerFinished: (accepted, newDate) => {
+            if (accepted) {
+                datePicked(newDate)
+            }
+        }
     }
 
-     Connections {
-        target: KDT.AndroidUtils
-        onDatePickerFinished: console.log("oh fucksing fucks")
-        function onDatePickerFinished(succ, date) {
-            console.log("I'm done")
-            datePicked(date)
-        }
-
-        onFoo: console.log("wtse fuck?")
+    // Dummy for AndroidUtils object when not on Android
+    Item {
+        id: dummy
+        signal datePickerFinished(bool accepted, date theDate)
     }
 
     Dialog {
@@ -62,4 +50,3 @@ Item {
         onAccepted: datePicked(picker.selectedDate)
     }
 }
-

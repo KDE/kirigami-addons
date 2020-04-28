@@ -27,7 +27,7 @@ AndroidUtils *AndroidUtils::instance()
 static void dateSelected(JNIEnv *env, jobject that, jint day, jint month, jint year)
 {
     Q_UNUSED(that);
-    AndroidUtils::instance()->_dateSelected(static_cast<int>(day), month, year);
+    AndroidUtils::instance()->_dateSelected(day, month, year);
 }
 
 static void dateCancelled(JNIEnv *env, jobject that)
@@ -37,10 +37,11 @@ static void dateCancelled(JNIEnv *env, jobject that)
     AndroidUtils::instance()->_dateCancelled();
 }
 
-static void timeSelected(JNIEnv *env, jobject that, jstring data)
+static void timeSelected(JNIEnv *env, jobject that, jint hours, jint minutes)
 {
     Q_UNUSED(that);
-    AndroidUtils::instance()->_timeSelected(QString::fromUtf8(env->GetStringUTFChars(data, nullptr)));
+    Q_UNUSED(env);
+    AndroidUtils::instance()->_timeSelected(hours, minutes);
 }
 
 static void timeCancelled(JNIEnv *env, jobject that)
@@ -49,17 +50,10 @@ static void timeCancelled(JNIEnv *env, jobject that)
     Q_UNUSED(env);
     AndroidUtils::instance()->_timeCancelled();
 }
-/*
-extern "C" {
-    Q_DECL_EXPORT void Java_org_kde_kirigamiaddons_dateandtime_DatePicker_cancelled(JNIEnv *, jobject)
-    {
-        qDebug() << "cancelled";
-    }
-}*/
 
 static const JNINativeMethod methods[] = {{"dateSelected", "(III)V", (void *)dateSelected}, {"cancelled", "()V", (void *)dateCancelled}};
 
-static const JNINativeMethod timeMethods[] = {{"timeSelected", "(Ljava/lang/String;)V", (void *)timeSelected}, {"cancelled", "()V", (void *)timeCancelled}};
+static const JNINativeMethod timeMethods[] = {{"timeSelected", "(II)V", (void *)timeSelected}, {"cancelled", "()V", (void *)timeCancelled}};
 
 Q_DECL_EXPORT jint JNICALL JNI_OnLoad(JavaVM *vm, void *)
 {
@@ -72,7 +66,7 @@ Q_DECL_EXPORT jint JNICALL JNI_OnLoad(JavaVM *vm, void *)
     auto foo = vm->GetEnv((void **)&env, JNI_VERSION_1_4);
 
     if (foo != JNI_OK) {
-        qWarning() << "Failed to get JNI environment. Fucking fuck." << foo << QThread::currentThreadId();
+        qWarning() << "Failed to get JNI environment.";
         return -1;
     }
     jclass theclass = env->FindClass("org/kde/kirigamiaddons/dateandtime/DatePicker");
@@ -96,11 +90,9 @@ void AndroidUtils::showDatePicker()
     picker.callMethod<void>("doShow");
 }
 
-void AndroidUtils::_dateSelected(int days, int monts, int years)
+void AndroidUtils::_dateSelected(int days, int months, int years)
 {
-    qDebug() << "Got dateipewckje   fkl" << days << monts << years;
-    Q_EMIT foo();
-    Q_EMIT datePickerFinished(true, QDate(years, monts, days));
+    Q_EMIT datePickerFinished(true, QDate(years, months, days));
 }
 
 void AndroidUtils::_dateCancelled()
@@ -114,12 +106,12 @@ void AndroidUtils::showTimePicker()
     picker.callMethod<void>("doShow");
 }
 
-void AndroidUtils::_timeSelected(const QString &data)
+void AndroidUtils::_timeSelected(int hours, int minutes)
 {
-    Q_EMIT timePickerFinished(true, data);
+    Q_EMIT timePickerFinished(true, QTime(hours, minutes));
 }
 
 void AndroidUtils::_timeCancelled()
 {
-    Q_EMIT timePickerFinished(false, QString());
+    Q_EMIT timePickerFinished(false, QTime());
 }

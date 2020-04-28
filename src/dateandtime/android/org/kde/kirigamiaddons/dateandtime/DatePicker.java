@@ -43,22 +43,10 @@ public class DatePicker extends DialogFragment implements DatePickerDialog.OnDat
         cancelled();
     }
 
+    @Override
     public void onDateSet(android.widget.DatePicker view, int year, int month, int day) {
         // Android reports month starting with 0
         month++;
-
-        // Add leading zero if needed
-//         String monthFormated = Integer.toString(month);
-//         if (month < 10) {
-//             monthFormated = "0" + monthFormated;
-//         }
-//
-//         String dayFormated = Integer.toString(day);
-//         if (day < 10) {
-//             dayFormated = "0" + dayFormated;
-//         }
-
-//         dateSelected(String.format("%d-%s-%s", year, monthFormated, dayFormated));
         dateSelected(day, month, year);
     }
 
