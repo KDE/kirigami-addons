@@ -8,10 +8,16 @@ Looking native with any QQC2 style (qqc2-desktop-theme, Material or Plasma)
 
 Kirigami-addons can depend on other KF5 frameworks, but things must still work on Android
 
+Components are grouped according to some topic, e.g. 'dateandtime' or 'chat'.
+Each group has its own source directory and QML import name. The name follows the scheme of
+'org.kde.kirigamiaddons.topic', e.g. 'org.kde.kirigamiaddons.dateandtime'.
+
+Components can use platform specializations, e.g. native dialogs, but a generic implementation for all platforms has to exist.
+
 Kirigami-addons is not:
  - a place for exposing non-visual QML bindings
- - the place for QML bindings for other libraries
-
+ - a place for QML bindings for other libraries
+ - a place for API for a specific platform
 
 -----
 
