@@ -32,7 +32,7 @@ Item {
     }
 
     // Dummy for AndroidUtils object when not on Android
-    Item {
+    QtObject {
         id: dummy
         signal timePickerFinished(bool accepted, date theTime)
     }

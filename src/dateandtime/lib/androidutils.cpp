@@ -9,68 +9,63 @@
 #include <QDateTime>
 #include <QDebug>
 #include <QtAndroid>
-#include <QThread>
 
 #define JSTRING(s) QAndroidJniObject::fromString(s).object<jstring>()
 
-AndroidUtils *AndroidUtils::s_instance = nullptr;
 
-AndroidUtils *AndroidUtils::instance()
+AndroidUtils &AndroidUtils::instance()
 {
-    if (!s_instance) {
-        s_instance = new AndroidUtils();
-    }
-
-    return s_instance;
+    static AndroidUtils instance;
+    return instance;
 }
 
 static void dateSelected(JNIEnv *env, jobject that, jint day, jint month, jint year)
 {
     Q_UNUSED(that);
-    AndroidUtils::instance()->_dateSelected(day, month, year);
+    Q_UNUSED(env);
+    AndroidUtils::instance()._dateSelected(day, month, year);
 }
 
 static void dateCancelled(JNIEnv *env, jobject that)
 {
     Q_UNUSED(that);
     Q_UNUSED(env);
-    AndroidUtils::instance()->_dateCancelled();
+    AndroidUtils::instance()._dateCancelled();
 }
 
 static void timeSelected(JNIEnv *env, jobject that, jint hours, jint minutes)
 {
     Q_UNUSED(that);
     Q_UNUSED(env);
-    AndroidUtils::instance()->_timeSelected(hours, minutes);
+    AndroidUtils::instance()._timeSelected(hours, minutes);
 }
 
 static void timeCancelled(JNIEnv *env, jobject that)
 {
     Q_UNUSED(that);
     Q_UNUSED(env);
-    AndroidUtils::instance()->_timeCancelled();
+    AndroidUtils::instance()._timeCancelled();
 }
 
-static const JNINativeMethod methods[] = {{"dateSelected", "(III)V", (void *)dateSelected}, {"cancelled", "()V", (void *)dateCancelled}};
+static const JNINativeMethod dateMethods[] = {{"dateSelected", "(III)V", (void *)dateSelected}, {"cancelled", "()V", (void *)dateCancelled}};
 
 static const JNINativeMethod timeMethods[] = {{"timeSelected", "(II)V", (void *)timeSelected}, {"cancelled", "()V", (void *)timeCancelled}};
 
 Q_DECL_EXPORT jint JNICALL JNI_OnLoad(JavaVM *vm, void *)
 {
     static bool initialized = false;
-    if (initialized)
+    if (initialized) {
         return JNI_VERSION_1_6;
+    }
     initialized = true;
 
     JNIEnv *env = nullptr;
-    auto foo = vm->GetEnv((void **)&env, JNI_VERSION_1_4);
-
-    if (foo != JNI_OK) {
+    if (vm->GetEnv((void **)&env, JNI_VERSION_1_4) != JNI_OK) {
         qWarning() << "Failed to get JNI environment.";
         return -1;
     }
     jclass theclass = env->FindClass("org/kde/kirigamiaddons/dateandtime/DatePicker");
-    if (env->RegisterNatives(theclass, methods, sizeof(methods) / sizeof(JNINativeMethod)) < 0) {
+    if (env->RegisterNatives(theclass, dateMethods, sizeof(dateMethods) / sizeof(JNINativeMethod)) < 0) {
         qWarning() << "Failed to register native functions.";
         return -1;
     }
@@ -86,7 +81,7 @@ Q_DECL_EXPORT jint JNICALL JNI_OnLoad(JavaVM *vm, void *)
 
 void AndroidUtils::showDatePicker()
 {
-    QAndroidJniObject picker("org/kde/kirigamiaddons/dateandtime/DatePicker", "(Landroid/app/Activity;J)V", QtAndroid::androidActivity().object(), QDateTime::currentDateTime().toMSecsSinceEpoch());
+    QAndroidJniObject picker("org/kde/kirigamiaddons/dateandtime/DatePicker", "(Landroid/app/Activity;J)V", QtAndroid::androidActivity().object(), QDateTime::currentMSecsSinceEpoch());
     picker.callMethod<void>("doShow");
 }
 

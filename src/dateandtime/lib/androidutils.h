@@ -7,8 +7,9 @@
 #pragma once
 
 #include <QObject>
-#include <QDate>
-#include <QTime>
+
+class QTime;
+class QDate;
 
 class Q_DECL_EXPORT AndroidUtils : public QObject
 {
@@ -23,10 +24,10 @@ public:
     void _timeSelected(int hours, int minutes);
     void _timeCancelled();
 
-    static AndroidUtils *instance();
+    static AndroidUtils &instance();
 
 Q_SIGNALS:
-    void datePickerFinished(bool accepted, const QDate date);
+    void datePickerFinished(bool accepted, const QDate &date);
     void timePickerFinished(bool accepted, const QTime &time);
 
 private:

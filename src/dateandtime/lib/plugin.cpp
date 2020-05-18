@@ -55,7 +55,8 @@ void KirigamiAddonsDataAndTimePlugin::registerTypes(const char *uri)
 
 #ifdef Q_OS_ANDROID
     qmlRegisterSingletonType<AndroidUtils>(uri, 0, 1, "AndroidUtils", [](QQmlEngine *, QJSEngine *) -> QObject * {
-        return AndroidUtils::instance();
+        QQmlEngine::setObjectOwnership(&AndroidUtils::instance(), QQmlEngine::CppOwnership);
+        return &AndroidUtils::instance();
     });
 #endif
 }
