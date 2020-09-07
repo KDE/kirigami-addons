@@ -1,0 +1,7 @@
+module org.kde.kirigamiaddons.treeview
+plugin treeviewplugin
+
+TreeListView 1.0 TreeListView.qml
+TreeTableView 1.0 TreeTableView.qml
+AbstractTreeItem 1.0 AbstractTreeItem.qml
+BasicTreeItem 1.0 BasicTreeItem.qml
