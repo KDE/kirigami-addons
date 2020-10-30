@@ -1,0 +1,4 @@
+module org.kde.kirigamiaddons.configdialog
+#plugin configdialogplugin
+
+BaseConfigDialog 1.0 BaseConfigDialog.qml
