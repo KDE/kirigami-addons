@@ -26,6 +26,12 @@ Loader {
 
     source: Kirigami.Settings.tabletMode ? "MobileDateInput.qml" : "DesktopDateInput.qml"
 
+    onSelectedDateChanged: {
+        if (item && root.selectedDate) {
+            item.selectedDate = root.selectedDate;
+        }
+    }
+
     onLoaded: {
         item.selectedDate = root.selectedDate
         root.selectedDate = Qt.binding(function() {return item.selectedDate});

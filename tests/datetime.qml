@@ -26,6 +26,11 @@ Kirigami.ApplicationWindow {
                 }
 
 
+                QQC2.Button {
+                    text: "set to now"
+                    onClicked: dateInput.selectedDate = new Date()
+                }
+
 //                 Addon.TimeLabel {
 //                 }
 
