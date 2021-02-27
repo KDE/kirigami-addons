@@ -9,6 +9,7 @@
 
 #include "timezonemodel.h"
 #include "timeinputvalidator.h"
+#include "yearmodel.h"
 #include "monthmodel.h"
 
 class KirigamiAddonsDataAndTimePlugin : public QQmlExtensionPlugin
@@ -31,6 +32,7 @@ void KirigamiAddonsDataAndTimePlugin::initializeEngine(QQmlEngine *engine, const
 
 void KirigamiAddonsDataAndTimePlugin::registerTypes(const char *uri)
 {
+    qmlRegisterType<YearModel>(uri, 0, 1, "YearModel");
     qmlRegisterType<MonthModel>(uri, 0, 1, "MonthModel");
     qmlRegisterType<TimeZoneModel>(uri, 0, 1, "TimeZoneModel");
     qmlRegisterType<TimeZoneFilterProxy>(uri, 0, 1, "TimeZoneFilterModel");

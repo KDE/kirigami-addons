@@ -79,7 +79,9 @@ RowLayout {
             // JS Date months start at 0, so we can map directly
             currentIndex: layout.value.getMonth() // DAVE should be a binding
             textRole: "display"
-            model: MonthModel {}
+            model: YearModel {
+                year: layout.value.getFullYear()
+            }
             onActivated: {
                 var dt = layout.value;
                 dt.setMonth(currentIndex);

@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.5)
 
 set(KF5_VERSION "5.57.0") # handled by release scripts
-set(KF5_DEP_VERSION "5.56.0") # handled by release scripts
+set(KF5_DEP_VERSION "5.70.0") # handled by release scripts
 
 project(kirigami-addons VERSION ${KF5_VERSION})
 
-set(REQUIRED_QT_VERSION 5.10.0)
+set(REQUIRED_QT_VERSION 5.15.0)
 
 SET(CMAKE_CXX_STANDARD 11)
 
@@ -39,6 +39,8 @@ include(ECMQtDeclareLoggingCategory)
 include(ECMAddQch)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 
+find_package(KF5 ${KF5_DEP_VERSION} REQUIRED COMPONENTS Kirigami2 I18n)
+
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5KirigamiAddons")
 
 option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)" OFF)
@@ -64,8 +66,6 @@ configure_package_config_file(
 #     FILE KF5KirigamiAddonsTargets.cmake
 #     NAMESPACE KF5::
 # )
-
-find_package(KF5I18n ${KF5_DEP_VERSION} REQUIRED)
 
 # ecm_setup_version(${KF5_VERSION}
 #     VARIABLE_PREFIX KIRIGAMIADDONS

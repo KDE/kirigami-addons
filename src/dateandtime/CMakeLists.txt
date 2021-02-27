@@ -1,6 +1,7 @@
 set(dateandtime_SRCS
     lib/timezonemodel.cpp
     lib/timezonesi18n.cpp
+    lib/yearmodel.cpp
     lib/monthmodel.cpp
     lib/plugin.cpp
     lib/timeinputvalidator.cpp
