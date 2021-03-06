@@ -3,6 +3,7 @@ plugin dateandtimeplugin
 
 DateInput 0.1 DateInput.qml
 DatePicker 0.1 DatePicker.qml
+DatePopup 0.1 DatePopup.qml
 ClockFace 0.1 ClockFace.qml
 Hand 0.1 Hand.qml
 TimePicker 0.1 TimePicker.qml

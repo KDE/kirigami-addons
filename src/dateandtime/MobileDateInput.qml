@@ -16,86 +16,30 @@ Controls.TextField { //inherited for style reasons to show we're interactive
     MouseArea {
         anchors.fill: parent
         onClicked: {
-            const popup = popupComponent.createObject(root, {
-                year: root.selectedDate.getFullYear(),
-                month: root.selectedDate.getMonth() + 1,
-                selectedDate: root.selectedDate,
-            });
-            popup.open();
+            popupLoader.active = true
+            popupLoader.item.year = root.selectedDate.getFullYear()
+            popupLoader.item.month = root.selectedDate.getMonth() + 1
+            popupLoader.item.selectedDate = root.selectedDate
+
+            popupLoader.item.open();
         }
 
     }
-    Component {
-        id: popupComponent
-        Kirigami.OverlaySheet {
-            id: popup
-            property alias year: datePicker.year
-            property alias month: datePicker.month
-            property alias selectedDate: datePicker.selectedDate
 
-            header: RowLayout {
-                implicitWidth: datePicker.width
-                Kirigami.Heading {
-                    level: 2
-                    text: datePicker.selectedDate.toLocaleDateString(Qt.locale(), "<b>MMMM</b>")
-                }
-                Kirigami.Heading {
-                    level: 3
-                    text: datePicker.selectedDate.getFullYear()
-                    opacity: 0.8
-                    Layout.fillWidth: true
-                }
+    Loader {
+        id: popupLoader
+        active: false
 
-                Controls.Button {
-                    icon.name: "go-previous"
-                    Controls.ToolTip.text: i18n("Previous")
-                    Controls.ToolTip.visible: hovered
-                    Controls.ToolTip.delay: Kirigami.Units.shortDuration
-                    onClicked: datePicker.previousMonth()
+        sourceComponent: Component {
+            DatePopup {
+                onAccepted: {
+                    root.selectedDate = item.selectedDate
+                    active = false
                 }
-                Controls.Button {
-                    icon.name: "go-jump-today"
-                    Controls.ToolTip.text: i18n("Today")
-                    Controls.ToolTip.visible: hovered
-                    Controls.ToolTip.delay: Kirigami.Units.shortDuration
-                    onClicked: datePicker.goToday()
-                }
-                Controls.Button {
-                    icon.name: "go-next"
-                    Controls.ToolTip.text: i18n("Next")
-                    Controls.ToolTip.visible: hovered
-                    Controls.ToolTip.delay: Kirigami.Units.shortDuration
-                    onClicked: datePicker.nextMonth()
+                onCancelled: {
+                    active = false
                 }
             }
-            contentItem: DatePicker {
-                id: datePicker
-                implicitWidth: Math.min(Window.width, Kirigami.Units.gridUnit * 25)
-                implicitHeight: width * 0.8
-            }
-            footer: RowLayout {
-                Controls.Label {
-                    text: datePicker.selectedDate.toLocaleDateString();
-                    Layout.fillWidth: true
-                }
-                Controls.Button {
-                    text: i18n("Cancel")
-                    icon.name: "dialog-cancel"
-                    onClicked: popup.destroy();
-                }
-                Controls.Button {
-                    text: i18n("Accept")
-                    icon.name: "dialog-ok-apply"
-                    onClicked: {
-                        root.selectedDate = datePicker.selectedDate
-                        popup.destroy();
-                    }
-                }
-            }
-            leftPadding: 0
-            rightPadding: 0
-            topPadding: 0
-            bottomPadding: 0
         }
     }
 }

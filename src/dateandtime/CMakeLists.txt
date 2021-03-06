@@ -22,6 +22,7 @@ install(FILES
         ClockFace.qml
         DateInput.qml
         DatePicker.qml
+        DatePopup.qml
         DesktopDateInput.qml
         MobileDateInput.qml
         Hand.qml
