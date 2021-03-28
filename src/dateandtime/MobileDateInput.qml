@@ -37,7 +37,7 @@ Controls.TextField { //inherited for style reasons to show we're interactive
                 implicitWidth: datePicker.width
                 Kirigami.Heading {
                     level: 2
-                    text: datePicker.selectedDate.toLocaleDateString(Qt.locale(), "MMMM")
+                    text: datePicker.selectedDate.toLocaleDateString(Qt.locale(), "<b>MMMM</b>")
                 }
                 Kirigami.Heading {
                     level: 3
