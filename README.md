@@ -1,7 +1,8 @@
 <!--
-SPDX-FileCopyrightText: 2020 Volker Krause <vkrause@kde.org>
+SPDX-FileCopyrightText: 2020 Nicolas Fella <nicolas.fella@gmx.de>
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
+
 # Kirigami Addons
 
 A set of "widgets" i.e visual end user components along with a code to support them.
