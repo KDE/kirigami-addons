@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2019 David Edmundson <kde@davidedmundson.co.uk>
+# SPDX-License-Identifier: BSD-2-Clause
+
 cmake_minimum_required(VERSION 3.5)
 
 set(KF5_VERSION "5.57.0") # handled by release scripts
