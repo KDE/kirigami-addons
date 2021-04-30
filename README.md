@@ -1,4 +1,5 @@
 <!--
+SPDX-FileCopyrightText: 2019 David Edmundson <kde@davidedmundson.co.uk>
 SPDX-FileCopyrightText: 2020 Nicolas Fella <nicolas.fella@gmx.de>
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
