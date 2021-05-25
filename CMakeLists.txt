@@ -1,11 +1,9 @@
 cmake_minimum_required(VERSION 3.5)
 
-set(KF5_VERSION "5.57.0") # handled by release scripts
-set(KF5_DEP_VERSION "5.70.0") # handled by release scripts
-
-project(kirigami-addons VERSION ${KF5_VERSION})
+project(kirigami-addons VERSION 0.2)
 
 set(REQUIRED_QT_VERSION 5.15.0)
+set(KF5_DEP_VERSION "5.70.0")
 
 SET(CMAKE_CXX_STANDARD 11)
 
