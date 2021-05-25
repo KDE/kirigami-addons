@@ -43,29 +43,19 @@ configure_package_config_file(
     INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
     PATH_VARS  KF5_INCLUDE_INSTALL_DIR CMAKE_INSTALL_PREFIX
 )
-
-# install(FILES
-#     "${CMAKE_CURRENT_BINARY_DIR}/KF5KirigamiAddonsConfig.cmake"
-#     "${CMAKE_CURRENT_BINARY_DIR}/KF5KirigamiAddonsConfigVersion.cmake"
-#     "${CMAKE_CURRENT_SOURCE_DIR}/KF5KirigamiAddonsMacros.cmake"
-#     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-#     COMPONENT Devel
-# )
-
-# install(EXPORT KF5KirigamiAddonsTargets
-#     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-#     FILE KF5KirigamiAddonsTargets.cmake
-#     NAMESPACE KF5::
-# )
-
-# ecm_setup_version(${KF5_VERSION}
-#     VARIABLE_PREFIX KIRIGAMIADDONS
-#     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kirigamiaddons_version.h"
-#     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5KirigamiAddonsConfigVersion.cmake"
-#     SOVERSION 5
-# )
+ecm_setup_version(${PROJECT_VERSION}
+    VARIABLE_PREFIX KIRIGAMIADDONS
+    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kirigamiaddons_version.h"
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5KirigamiAddonsConfigVersion.cmake"
+)
 
 add_subdirectory(src)
 
-feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
+install(FILES
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5KirigamiAddonsConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5KirigamiAddonsConfigVersion.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+    COMPONENT Devel
+)
 
+feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
