@@ -1,25 +1,19 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.16)
 
 project(kirigami-addons VERSION 0.2)
 
 set(REQUIRED_QT_VERSION 5.15.0)
-set(KF5_DEP_VERSION "5.70.0")
+set(KF5_DEP_VERSION "5.82.0")
 
-SET(CMAKE_CXX_STANDARD 11)
+SET(CMAKE_CXX_STANDARD 17)
 
-# Make CPack available to easy generate binary packages
-include(CPack)
 include(FeatureSummary)
 
 find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick QuickControls2)
 
-set(CMAKE_AUTOMOC ON)
 set(AUTOMOC_MOC_OPTIONS -Muri=org.kde.kirigami)
-set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-################# set KDE specific information #################
-
-find_package(ECM 5.56.0 NO_MODULE)
+find_package(ECM ${KF5_DEP_VERSION} NO_MODULE)
 set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://projects.kde.org/projects/kdesupport/extra-cmake-modules")
 
 # where to look first for cmake modules, before ${CMAKE_ROOT}/Modules/ is checked
@@ -29,7 +23,6 @@ include(GenerateExportHeader)
 include(ECMSetupVersion)
 include(ECMGenerateHeaders)
 include(CMakePackageConfigHelpers)
-include(ECMPoQmTools)
 include(ECMQMLModules)
 include(KDEInstallDirs)
 include(KDECMakeSettings)
