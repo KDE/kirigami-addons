@@ -99,5 +99,5 @@ void TimeInputValidator::setFormat(const QString &format)
         return;
     }
     d->format = format;
-    emit formatChanged();
+    Q_EMIT formatChanged();
 }
