@@ -25,32 +25,21 @@ Kirigami.ApplicationWindow {
                     onSelectedDateChanged: console.log(selectedDate)
                 }
 
-
                 QQC2.Button {
                     text: "set to now"
                     onClicked: dateInput.selectedDate = new Date()
                 }
 
-//                 Addon.TimeLabel {
-//                 }
-
-//                 Addon.TimePicker {
-//                     id: timeInput
-//                     Kirigami.FormData.label: "Time"
-//                     // TODO value changes
-//                 }
-
-                // TODO date/time combined
-
-                Addon.TimeZoneTable {
-                    Kirigami.FormData.label: "Timezone"
+                Addon.TimeInput {
+                    id: timeInput
+                    Kirigami.FormData.label: "Time"
+                    onValueChanged: console.log(value)
                 }
 
                 QQC2.Button {
                     text: "Set to now"
                     onClicked: {
-                        dateInput.value = new Date();
-                        // TODO update timeInput
+                        timeInput.value = new Date();
                     }
                 }
             }
