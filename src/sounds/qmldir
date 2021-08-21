@@ -1,0 +1,3 @@
+module org.kde.kirigamiaddons.sounds
+plugin soundsplugin
+SoundsPicker 0.1 SoundsPicker.qml
