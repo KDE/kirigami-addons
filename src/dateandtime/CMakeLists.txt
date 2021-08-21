@@ -37,6 +37,7 @@ ecm_target_qml_sources(dateandtimeplugin SOURCES
     TimeLabel.qml
     TimePicker.qml
     TimeInput.qml
+    TumblerTimePicker.qml
 )
 ecm_target_qml_sources(dateandtimeplugin PATH private SOURCES
     private/ClockElement.qml
