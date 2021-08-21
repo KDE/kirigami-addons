@@ -24,26 +24,19 @@ void SoundsPickerModel::loadFiles()
     auto locations = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
     QString path = QStringLiteral("/sounds/") + d->theme + QStringLiteral("/stereo/");
 
-    bool found = false; // could use goto, but use flag for readability
     for (const auto &directory : locations) {
         if (QDir(directory + path).exists()) {
             path = directory + path;
-            found = true;
-            break;
+            if (!d->notification && QDir(path + QStringLiteral("ringtone")).exists())
+                path += QStringLiteral("ringtone");
+            else if (d->notification && QDir(path + QStringLiteral("notification")).exists())
+                path += QStringLiteral("notificatoin");
+
+            QDirIterator it(path, QDir::Files, QDirIterator::Subdirectories);
+            while (it.hasNext()) {
+                d->soundsVec.push_back(it.next());
+            }
         }
-    }
-
-    if (!found)
-        return;
-
-    if (!d->notification && QDir(path + QStringLiteral("ringtone")).exists())
-        path += QStringLiteral("ringtone");
-    else if (d->notification && QDir(path + QStringLiteral("notification")).exists())
-        path += QStringLiteral("notificatoin");
-
-    QDirIterator it(path, QDir::Files, QDirIterator::Subdirectories);
-    while (it.hasNext()) {
-        d->soundsVec.push_back(it.next());
     }
 }
 SoundsPickerModel::~SoundsPickerModel() = default;
