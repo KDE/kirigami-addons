@@ -31,6 +31,9 @@ include(ECMAddQch)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 
 find_package(KF5 ${KF5_DEP_VERSION} REQUIRED COMPONENTS Kirigami2 I18n)
+if (BUILD_TESTING)
+    find_package(Qt5QuickTest ${REQUIRED_QT_VERSION} CONFIG QUIET)
+endif()
 
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5KirigamiAddons")
 
@@ -50,6 +53,10 @@ ecm_setup_version(${PROJECT_VERSION}
 )
 
 add_subdirectory(src)
+
+if (BUILD_TESTING AND BUILD_SHARED_LIBS)
+    add_subdirectory(autotests)
+endif()
 
 install(FILES
     "${CMAKE_CURRENT_BINARY_DIR}/KF5KirigamiAddonsConfig.cmake"

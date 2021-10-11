@@ -1,9 +1,11 @@
 // SPDX-FileCopyrightText: 2021 Han Young <hanyoung@protonmail.com>
 // SPDX-License-Identifier: LGPL-2.0-or-later
+
 #include "soundspickermodel.h"
 #include <vector>
 #include <QDirIterator>
 #include <QStandardPaths>
+
 class SoundsPickerModel::Private
 {
 public:
@@ -12,57 +14,65 @@ public:
     bool notification = false;
     QString theme = QStringLiteral("plasma-mobile");
 };
+
 SoundsPickerModel::SoundsPickerModel(QObject *parent)
     : QAbstractListModel(parent)
     , d(std::make_unique<Private>())
 {
     loadFiles();
 }
+
 void SoundsPickerModel::loadFiles()
 {
     d->soundsVec.clear();
-    auto locations = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
-    QString path = QStringLiteral("/sounds/") + d->theme + QStringLiteral("/stereo/");
+    const auto locations = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
+    const QString path = QStringLiteral("/sounds/") + d->theme + QStringLiteral("/stereo/");
 
     for (const auto &directory : locations) {
         if (QDir(directory + path).exists()) {
-            path = directory + path;
-            if (!d->notification && QDir(path + QStringLiteral("ringtone")).exists())
-                path += QStringLiteral("ringtone");
-            else if (d->notification && QDir(path + QStringLiteral("notification")).exists())
-                path += QStringLiteral("notificatoin");
+            QString subPath = directory + path;
+            if (!d->notification && QDir(subPath + QStringLiteral("ringtone")).exists()) {
+                subPath += QStringLiteral("ringtone");
+            } else if (d->notification && QDir(subPath + QStringLiteral("notification")).exists()) {
+                subPath += QStringLiteral("notificatoin");
+            }
 
-            QDirIterator it(path, QDir::Files, QDirIterator::Subdirectories);
+            QDirIterator it(subPath, QDir::Files, QDirIterator::Subdirectories);
             while (it.hasNext()) {
                 d->soundsVec.push_back(it.next());
             }
         }
     }
 }
+
 SoundsPickerModel::~SoundsPickerModel() = default;
+
 QHash<int, QByteArray> SoundsPickerModel::roleNames() const
 {
     return {
         {Roles::NameRole, QByteArrayLiteral("ringtoneName")},
-        {Roles::UrlRole, QByteArrayLiteral("sourceUrl")}};
+        {Roles::UrlRole, QByteArrayLiteral("sourceUrl")},};
 }
+
 bool SoundsPickerModel::notification() const
 {
     return d->notification;
 }
+
 void SoundsPickerModel::setNotification(bool notification)
 {
-    if (d->notification != notification)
-        d->notification = notification;
-    else
+    if (d->notification == notification) {
         return;
+    }
+    d->notification = notification;
 
     bool needReset = false;
     QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/") + d->theme + QStringLiteral("/stereo/");
-    if (!d->notification && QDir(path + QStringLiteral("ringtone")).exists())
+    if (!d->notification && QDir(path + QStringLiteral("ringtone")).exists()) {
         needReset = true;
-    else if (d->notification && QDir(path + QStringLiteral("notification")).exists())
+    } else if (d->notification && QDir(path + QStringLiteral("notification")).exists()) {
         needReset = true;
+    }
 
     if (needReset) {
         beginResetModel();
@@ -71,13 +81,15 @@ void SoundsPickerModel::setNotification(bool notification)
         rearrangeRingtoneOrder();
     }
 }
+
 QString SoundsPickerModel::initialSourceUrl(int index)
 {
-    if (index >= 0 && index < (int)d->soundsVec.size())
+    if (index >= 0 && index < (int)d->soundsVec.size()) {
         return d->soundsVec.at(index);
-    else
-        return {};
+    }
+    return {};
 }
+
 QVariant SoundsPickerModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.row() < 0 || index.row() >= (int)d->soundsVec.size()) {
@@ -87,15 +99,16 @@ QVariant SoundsPickerModel::data(const QModelIndex &index, int role) const
     if (role == NameRole) {
         auto ret = d->soundsVec.at(index.row());
         int suffixPos = ret.lastIndexOf(QLatin1Char('.'));
-        if (suffixPos > 0)
+        if (suffixPos > 0) {
             ret.truncate(suffixPos);
+        }
         int pathPos =  ret.lastIndexOf(QLatin1Char('/'));
-        if (pathPos >= 0)
+        if (pathPos >= 0) {
             ret.remove(0, pathPos + 1);
+        }
         return ret;
-    } else {
-        return d->soundsVec.at(index.row());
     }
+    return d->soundsVec.at(index.row());
 }
 int SoundsPickerModel::rowCount(const QModelIndex& parent) const {
     Q_UNUSED(parent)
@@ -120,16 +133,17 @@ const QString &SoundsPickerModel::theme() const
 
 void SoundsPickerModel::setTheme(const QString &theme)
 {
-    if (d->theme != theme)
-        d->theme = theme;
-    else
+    if (d->theme == theme) {
         return;
+    }
+    d->theme = theme;
 
     beginResetModel();
     loadFiles();
     endResetModel();
     rearrangeRingtoneOrder();
 }
+
 void SoundsPickerModel::rearrangeRingtoneOrder()
 {
     auto i {0};
