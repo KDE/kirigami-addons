@@ -10,11 +10,14 @@ import QtQuick.Layouts 1.11
  */
 
 Item {
-    id: root
-
+    property bool is12hour: true
     property int hours
     property int minutes
     property bool pm
+
+    id: root
+    implicitHeight: Kirigami.Units.gridUnit * 5
+    implicitWidth: is12hour ? Kirigami.Units.gridUnit * 10 : Kirigami.Units.gridUnit * 5.5
     FontMetrics {
         id: fontMetrics
     }
@@ -38,8 +41,6 @@ Item {
             font.pixelSize: fontMetrics.font.pixelSize * 1.25
         }
     }
-    implicitHeight: 100
-    implicitWidth: 200
     RowLayout {
         id: row
         anchors.fill: parent
@@ -50,12 +51,11 @@ Item {
                 radius: 10
             }
             RowLayout {
-                Layout.fillHeight: true
-                Layout.fillWidth: true
                 Tumbler {
                     id: hoursTumbler
-                    Layout.preferredHeight: Kirigami.Units.gridUnit * 3
-                    model: 12
+                    Layout.preferredWidth: Kirigami.Units.gridUnit * 2
+                    Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
+                    model: is12hour ? 12 : 24
                     delegate: hourDelegate
                     visibleItemCount: 3
                     onCurrentIndexChanged: hours = currentIndex + 1
@@ -63,12 +63,13 @@ Item {
                 Label {
                     Layout.alignment: Qt.AlignCenter
                     text: ":"
-                    font.pointSize: Kirigami.Theme.defaultFont.pointSize * 2
+                    font.pointSize: Kirigami.Theme.defaultFont.pointSize * 1.3
                 }
 
                 Tumbler {
                     id: minutesTumbler
-                    Layout.preferredHeight: Kirigami.Units.gridUnit * 3
+                    Layout.preferredWidth: Kirigami.Units.gridUnit * 2
+                    Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
                     model: 60
                     delegate: minuteDelegate
                     visibleItemCount: 3
@@ -77,19 +78,25 @@ Item {
             }
         }
         Switch {
-            text: "PM"
+            visible: is12hour
+            Layout.fillWidth: true
+            Layout.alignment: Qt.AlignLeft
+            text: Qt.locale().pmText
             height: parent.height
             onCheckedChanged: {
                 if (checked) {
-                    text = "AM"
+                    text = Qt.locale().amText
                     pm = false
                 }
                 else {
-                    text = "PM"
+                    text = Qt.locale().pmText
                     pm = true
                 }
             }
         }
     }
-    Component.onCompleted: hoursTumbler.currentIndex = hours
+    Component.onCompleted: { 
+        hoursTumbler.currentIndex = hours;
+        minutesTumbler.currentIndex = minutes;
+    }
 }
