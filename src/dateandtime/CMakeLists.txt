@@ -20,6 +20,7 @@ install(FILES
         qmldir
         ClockElement.qml
         ClockFace.qml
+        DateDialog.qml
         DateInput.qml
         DatePicker.qml
         DatePopup.qml

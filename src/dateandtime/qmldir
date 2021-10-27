@@ -1,6 +1,7 @@
 module org.kde.kirigamiaddons.dateandtime
 plugin dateandtimeplugin
 
+DateDialog 0.1 DateDialog.qml
 DateInput 0.1 DateInput.qml
 DatePicker 0.1 DatePicker.qml
 DatePopup 0.1 DatePopup.qml
@@ -10,3 +11,4 @@ TimePicker 0.1 TimePicker.qml
 ClockElement 0.1 ClockElement.qml
 TimeInput 0.1 TimeInput.qml
 TimeLabel 0.1 TimeLabel.qml
+
