@@ -3,13 +3,9 @@ cmake_minimum_required(VERSION 3.16)
 project(kirigami-addons VERSION 0.2)
 
 set(REQUIRED_QT_VERSION 5.15.0)
-set(KF5_DEP_VERSION "5.82.0")
-
-SET(CMAKE_CXX_STANDARD 17)
+set(KF5_DEP_VERSION "5.85.0")
 
 include(FeatureSummary)
-
-find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick QuickControls2)
 
 set(AUTOMOC_MOC_OPTIONS -Muri=org.kde.kirigami)
 
@@ -19,16 +15,19 @@ set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Mod
 # where to look first for cmake modules, before ${CMAKE_ROOT}/Modules/ is checked
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH})
 
+include(KDEInstallDirs)
+include(KDECMakeSettings)
+include(KDECompilerSettings NO_POLICY_SCOPE)
+
 include(GenerateExportHeader)
 include(ECMSetupVersion)
 include(ECMGenerateHeaders)
 include(CMakePackageConfigHelpers)
 include(ECMQMLModules)
-include(KDEInstallDirs)
-include(KDECMakeSettings)
 include(ECMQtDeclareLoggingCategory)
 include(ECMAddQch)
-include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
+
+find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick QuickControls2)
 
 find_package(KF5 ${KF5_DEP_VERSION} REQUIRED COMPONENTS Kirigami2 I18n)
 if (BUILD_TESTING)
