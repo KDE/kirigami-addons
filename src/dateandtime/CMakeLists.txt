@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2019 David Edmundson <kde@davidedmundson.co.uk>
+# SPDX-License-Identifier: BSD-2-Clause
+
 set(dateandtime_SRCS
     lib/yearmodel.cpp
     lib/monthmodel.cpp

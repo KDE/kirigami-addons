@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2020 Marco Martin <notmart@gmail.com>
+# SPDX-License-Identifier: BSD-2-Clause
 set(treeview_SRCS
     treeviewplugin.cpp
     )
