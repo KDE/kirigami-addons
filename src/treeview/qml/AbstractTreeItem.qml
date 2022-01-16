@@ -18,9 +18,62 @@ import org.kde.kirigamiaddons.treeview 1.0 as TreeView
  * which has to be set as contentItem
  *
  */
-Kirigami.AbstractListItem {
+QQC2.ItemDelegate {
     id: delegate
-    separatorVisible: false
+
+    property alias decoration: decoration
+
+    /**
+     * This propery holds the color for the text in the item.
+     * It is advised to leave the default value (Kirigami.Theme.textColor)
+     *
+     * @Note If custom text elements are inserted in an AbstractListItem,
+     * their color property will have to be manually bound with this property
+     *
+     * @since org.kde.kirigamiaddons.treeview 1.0
+     */
+    property color textColor: Kirigami.Theme.textColor
+
+    /**
+     * This property holds the color for the background of the item.
+     * It is advised to leave the default value ("transparent").
+     *
+     * @since org.kde.kirigamiaddons.treeview 1.0
+     */
+    property color backgroundColor: "transparent"
+
+    /**
+     * This property holds the background color to use if alternatingBackground is true.
+     * It is advised to leave the default.
+     *
+     * @since org.kde.kirigamiaddons.treeview 1.0
+     */
+    property color alternateBackgroundColor: Kirigami.Theme.alternateBackgroundColor
+
+    /**
+     * This property holds the color for the text in the item when pressed or
+     * selected. It is advised to leave the default value (Kirigami.Theme.highlightedTextColor).
+     *
+     * @note If custom text elements are inserted in an AbstractListItem,
+     * their color property will have to be manually bound with this property.
+     */
+    property color activeTextColor: Kirigami.Theme.highlightedTextColor
+
+    /**
+     * This property holds the color for the background of the item when pressed or
+     * selected. It is advised to leave the default value (Kirigami.Theme.highlightColor).
+     */
+    property color activeBackgroundColor: Kirigami.Theme.highlightColor
+
+    width: parent && parent.width > 0 ? parent.width : implicitWidth
+
+    padding: Kirigami.Settings.tabletMode ? Kirigami.Units.largeSpacing : Kirigami.Units.smallSpacing
+    Accessible.role: Accessible.ListItem
+    hoverEnabled: true
+    height: visible ? implicitHeight : 0
+    implicitHeight: contentItem.implicitHeight + topPadding + bottomPadding
+    implicitWidth: contentItem ? contentItem.implicitWidth + leftPadding + rightPadding : Kirigami.Units.gridUnit * 12
+    Layout.fillWidth: true
 
     data: [
         TreeView.TreeViewDecoration {
@@ -35,16 +88,6 @@ Kirigami.AbstractListItem {
             parentDelegate: delegate
             model: delegate.ListView.view ? delegate.ListView.view.descendantsModel :
                    (delegate.TableView.view ? delegate.TableView.view.descendantsModel : null)
-        },
-        Binding {
-            target: contentItem.anchors
-            property: "left"
-            value: delegate.left
-        },
-        Binding {
-            target: contentItem.anchors
-            property: "leftMargin"
-            value: decoration.width + delegate.padding * 2 + Kirigami.Units.smallSpacing
         }
     ]
 
@@ -70,10 +113,9 @@ Kirigami.AbstractListItem {
         decoration.model.toggleChildren(index);
     }
 
+    leftInset: Qt.application.layoutDirection !== Qt.RightToLeft ? decoration.width + listItem.padding * 2 : 0
+    leftPadding: Qt.application.layoutDirection !== Qt.RightToLeft ? decoration.width + listItem.padding * 2 : 0
 
-    // FIXME: it should probably use leftInset property but Kirigami.AbstractListItem doesn't have it because can't import QQC2 more than 2.0
-    background.anchors {
-        left: delegate.left
-        leftMargin: decoration.width + delegate.padding * 2
-    }
+    rightPadding: Qt.application.layoutDirection === Qt.RightToLeft ? decoration.width + listItem.padding * 2 : 0
+    rightInset: Qt.application.layoutDirection === Qt.RightToLeft ? decoration.width + listItem.padding * 2 : 0
 }

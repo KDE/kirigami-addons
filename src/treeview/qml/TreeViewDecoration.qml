@@ -19,23 +19,26 @@ import org.kde.kirigami 2.14 as Kirigami
  */
 RowLayout {
     /**
-     * parentDelegate: ItemDelegate
-     * The delegate this decoration will live in.
+     * This property holds the delegate there this decoration will live in.
      * It needs to be assigned explicitly by the developer.
      */
     property T2.ItemDelegate parentDelegate
 
     /**
-     * model: KDescendantsProxyModel
-     * The KDescendantsProxyModel the view is showing. 
+     * This property holds the KDescendantsProxyModel the view is showing.
      * It needs to be assigned explicitly by the developer.
      */
     property KDescendantsProxyModel model
 
+    /**
+     * This property holds the color of the decoration highlight.
+     */
+    property color decorationHighlightColor
+
     Layout.topMargin: -parentDelegate.topPadding
     Layout.bottomMargin: -parentDelegate.bottomPadding
     Repeater {
-        model: kDescendantLevel-1
+        model: kDescendantLevel - 1
         delegate: Item {
             Layout.preferredWidth: controlRoot.width
             Layout.fillHeight: true
@@ -77,7 +80,11 @@ RowLayout {
                 anchors.centerIn: parent
                 width: Kirigami.Units.iconSizes.small
                 height: width
-                source: kDescendantExpanded ? "go-down-symbolic" : "go-next-symbolic"
+                source: kDescendantExpanded ? "go-down-symbolic" : (Qt.application.layoutDirection == Qt.RightToLeft ? "go-previous-symbolic" : "go-next-symbolic")
+                isMask: true
+                color: controlRoot.hovered ? decorationLayout.decorationHighlightColor ? decorationLayout.decorationHighlightColor : Kirigami.Theme.highlightColor : Kirigami.Theme.textColor
+                Kirigami.Theme.highlightColor : Kirigami.Theme.textColor
+                Behavior on color { ColorAnimation { duration: Kirigami.Units.shortDuration; easing.type: Easing.InOutQuad } }
                 visible: kDescendantExpandable
             }
             Rectangle {
