@@ -1,17 +1,33 @@
 # SPDX-FileCopyrightText: 2020 Marco Martin <notmart@gmail.com>
 # SPDX-License-Identifier: BSD-2-Clause
-set(treeview_SRCS
-    treeviewplugin.cpp
-    )
 
-add_library(treeviewplugin ${treeview_SRCS})
+ecm_add_qml_module(treeviewplugin URI "org.kde.kirigamiaddons.treeview" VERSION 0.1)
+
+target_sources(treeviewplugin PRIVATE
+    treeviewplugin.cpp
+)
+
+ecm_target_qml_sources(treeviewplugin SOURCES
+    qml/InternalTreeListView.qml
+    qml/BasicTreeItem.qml
+    qml/TreeTableView.qml
+    qml/TreeViewDecoration.qml
+    qml/TreeListView.qml
+    qml/AbstractTreeItem.qml
+    qml/InternalTreeTableView.qml
+)
+
+ecm_target_qml_sources(treeviewplugin
+    PRIVATE PATH
+    styles/org.kde.desktop
+    SOURCES
+    qml/styles/org.kde.desktop/TreeViewDecoration.qml
+)
 
 target_link_libraries(treeviewplugin
-        PUBLIC
-            Qt5::Core
-        PRIVATE
-            ${Kirigami_EXTRA_LIBS} Qt5::Qml Qt5::Quick Qt5::QuickControls2
-    )
+    Qt5::Quick
+    Qt5::Qml
+    Qt5::QuickControls2
+)
 
-install(DIRECTORY qml/ DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/kirigamiaddons/treeview)
-install(TARGETS treeviewplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/kirigamiaddons/treeview)
+ecm_finalize_qml_module(treeviewplugin DESTINATION ${KDE_INSTALL_QMLDIR})

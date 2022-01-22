@@ -6,7 +6,7 @@ cmake_minimum_required(VERSION 3.16)
 project(kirigami-addons VERSION 0.2)
 
 set(REQUIRED_QT_VERSION 5.15.0)
-set(KF5_DEP_VERSION "5.85.0")
+set(KF5_DEP_VERSION "5.91.0")
 
 include(FeatureSummary)
 
@@ -29,6 +29,7 @@ include(CMakePackageConfigHelpers)
 include(ECMQMLModules)
 include(ECMQtDeclareLoggingCategory)
 include(ECMAddQch)
+include(ECMQmlModule)
 
 find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick QuickControls2)
 
