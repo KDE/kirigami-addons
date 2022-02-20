@@ -11,6 +11,12 @@
 #include "yearmodel.h"
 #include "monthmodel.h"
 
+#ifdef Q_OS_ANDROID
+#include "androidintegration.h"
+
+using namespace KirigamiAddonsDateAndTime;
+#endif
+
 class KirigamiAddonsDataAndTimePlugin : public QQmlExtensionPlugin
 {
     Q_OBJECT
@@ -34,6 +40,13 @@ void KirigamiAddonsDataAndTimePlugin::registerTypes(const char *uri)
     qmlRegisterType<YearModel>(uri, 0, 1, "YearModel");
     qmlRegisterType<MonthModel>(uri, 0, 1, "MonthModel");
     qmlRegisterType<TimeInputValidator>(uri, 0, 1, "TimeInputValidator");
+
+#ifdef Q_OS_ANDROID
+    qmlRegisterSingletonType<AndroidIntegration>(uri, 0, 1, "AndroidIntegration", [](QQmlEngine*, QJSEngine*) -> QObject* {
+        QQmlEngine::setObjectOwnership(&AndroidIntegration::instance(), QQmlEngine::CppOwnership);
+        return &AndroidIntegration::instance();
+    });
+#endif
 }
 
 #include "plugin.moc"

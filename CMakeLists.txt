@@ -36,6 +36,10 @@ find_package(KF5 ${KF5_DEP_VERSION} REQUIRED COMPONENTS Kirigami2 I18n)
 if (BUILD_TESTING)
     find_package(Qt5QuickTest ${REQUIRED_QT_VERSION} CONFIG QUIET)
 endif()
+if (ANDROID)
+    find_package(Gradle REQUIRED)
+    find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED CONFIG COMPONENTS AndroidExtras)
+endif()
 
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5KirigamiAddons")
 

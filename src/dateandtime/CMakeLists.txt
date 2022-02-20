@@ -1,6 +1,18 @@
 # SPDX-FileCopyrightText: 2019 David Edmundson <kde@davidedmundson.co.uk>
 # SPDX-License-Identifier: BSD-2-Clause
 
+if (ANDROID)
+    add_library(KF5KirigamiDateAndTime)
+    add_library(KF5::KirigamiDateAndTime ALIAS KF5KirigamiDateAndTime)
+    target_sources(KF5KirigamiDateAndTime PRIVATE
+        lib/androidintegration.cpp
+    )
+    generate_export_header(KF5KirigamiDateAndTime BASE_NAME KirigamiDateAndTime)
+    target_link_libraries(KF5KirigamiDateAndTime PUBLIC Qt5::Core Qt5::AndroidExtras)
+    add_subdirectory(android)
+    install(TARGETS KF5KirigamiDateAndTime ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+endif()
+
 ecm_add_qml_module(dateandtimeplugin URI "org.kde.kirigamiaddons.dateandtime" VERSION 0.1)
 
 target_compile_definitions(dateandtimeplugin PRIVATE -DTRANSLATION_DOMAIN=\"kirigami_dateandtime\")
@@ -32,5 +44,8 @@ target_link_libraries(dateandtimeplugin
     Qt5::Qml
     KF5::I18n
 )
+if (TARGET KF5KirigamiDateAndTime)
+    target_link_libraries(dateandtimeplugin KF5KirigamiDateAndTime)
+endif()
 
 ecm_finalize_qml_module(dateandtimeplugin DESTINATION ${KDE_INSTALL_QMLDIR})

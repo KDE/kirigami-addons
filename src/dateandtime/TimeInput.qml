@@ -4,7 +4,7 @@
  *   SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
-import QtQuick 2.0
+import QtQuick 2.15
 import QtQuick.Controls 2.5
 import org.kde.kirigamiaddons.dateandtime 0.1
 
@@ -47,4 +47,20 @@ TextField
     }
 
     Component.onCompleted: valueToText()
+
+    MouseArea {
+        anchors.fill: parent
+        enabled: Qt.platform.os === 'android'
+        onClicked: AndroidIntegration.showTimePicker(timeInput.value.getTime());
+        Connections {
+            enabled: Qt.platform.os === 'android'
+            ignoreUnknownSignals: !enabled
+            target: enabled ? AndroidIntegration : null
+            function onTimePickerFinished(accepted, newDate) {
+                if (accepted) {
+                    timeInput.value = newDate;
+                }
+            }
+        }
+    }
 }
