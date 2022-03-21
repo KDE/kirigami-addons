@@ -1,249 +1,494 @@
-// SPDX-FileCopyrightText: 2019 David Edmundson <davidedmundson@kde.org>
-// SPDX-FileCopyrightText: 2021 Carl Schwan <carlschwan@kde.org>
-// SPDX-License-Identifier: LGPL-2.0-or-later
+// SPDX-FileCopyrightText: 2021 Claudio Cambra <claudio.cambra@gmail.com>
+// SPDX-License-Identifier: LGPL-2.1-or-later
 
 import QtQuick 2.15
-import org.kde.kirigami 2.14 as Kirigami
-import QtQuick.Controls 2.15 as Controls
+import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.15
-import org.kde.kirigamiaddons.dateandtime 0.1
-import QtQml.Models 2.15
+import org.kde.kirigami 2.15 as Kirigami
+import org.kde.kalendar 1.0 as Kalendar
 
-/**
- * A large date picker
- *
- * Use case is for picking a date and visualising that in
- * context of a calendar view
- */
-Controls.Control {
-    id: monthView
+QQC2.Control {
+    id: datepicker
 
-    /**
-     * @brief The selected date.
-     */
-    property alias selectedDate: monthModel.selected;
+    signal datePicked(date pickedDate)
 
-    /**
-     * @property int DatePicker::year
-     * @brief The year displayed by the month view.
-     */
-    property alias year: monthModel.year
+    property date selectedDate: new Date() // Decides calendar span
+    property date clickedDate: new Date() // User's chosen date
+    property date today: new Date()
+    property int year: selectedDate.getFullYear()
+    property int month: selectedDate.getMonth()
+    property int day: selectedDate.getDate()
+    property bool showDays: true
+    property bool showControlHeader: true
 
-    /**
-     * @property int DatePicker::month
-     * @brief The month displayed by the month view.
-     */
-    property alias month: monthModel.month
+    topPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+    rightPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+    bottomPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+    leftPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
 
-    /**
-     * Go to the next month.
-     */
+    onSelectedDateChanged: setToDate(selectedDate)
+    onShowDaysChanged: if (!showDays) pickerView.currentIndex = 1;
+
+    function setToDate(date) {
+        const yearDiff = date.getFullYear() - yearPathView.currentItem.startDate.getFullYear();
+        // For the decadeDiff we add one to the input date year so that we use e.g. 2021, making the pathview move to the grid that contains the 2020 decade
+        // instead of staying within the 2010 decade, which contains a 2020 cell at the very end
+        const decadeDiff = Math.floor((date.getFullYear() + 1 - decadePathView.currentItem.startDate.getFullYear()) / 12); // 12 years in one decade grid
+
+        let newYearIndex = yearPathView.currentIndex + yearDiff;
+        let newDecadeIndex = decadePathView.currentIndex + decadeDiff;
+
+        let firstYearItemDate = yearPathView.model.data(yearPathView.model.index(1,0), Kalendar.InfiniteCalendarViewModel.StartDateRole);
+        let lastYearItemDate = yearPathView.model.data(yearPathView.model.index(yearPathView.model.rowCount() - 2,0), Kalendar.InfiniteCalendarViewModel.StartDateRole);
+        let firstDecadeItemDate = decadePathView.model.data(decadePathView.model.index(1,0), Kalendar.InfiniteCalendarViewModel.StartDateRole);
+        let lastDecadeItemDate = decadePathView.model.data(decadePathView.model.index(decadePathView.model.rowCount() - 1,0), Kalendar.InfiniteCalendarViewModel.StartDateRole);
+
+        if(showDays) { // Set to correct index, including creating new dates in model if needed, for the month view
+            const monthDiff = date.getMonth() - monthPathView.currentItem.firstDayOfMonth.getMonth() + (12 * (date.getFullYear() - monthPathView.currentItem.firstDayOfMonth.getFullYear()));
+            let newMonthIndex = monthPathView.currentIndex + monthDiff;
+            let firstMonthItemDate = monthPathView.model.data(monthPathView.model.index(1,0), Kalendar.InfiniteCalendarViewModel.FirstDayOfMonthRole);
+            let lastMonthItemDate = monthPathView.model.data(monthPathView.model.index(monthPathView.model.rowCount() - 1,0), Kalendar.InfiniteCalendarViewModel.FirstDayOfMonthRole);
+
+            while(firstMonthItemDate >= date) {
+                monthPathView.model.addDates(false)
+                firstMonthItemDate = monthPathView.model.data(monthPathView.model.index(1,0), Kalendar.InfiniteCalendarViewModel.FirstDayOfMonthRole);
+                newMonthIndex = 0;
+            }
+            if(firstMonthItemDate < date && newMonthIndex === 0) {
+                newMonthIndex = date.getMonth() - firstMonthItemDate.getMonth() + (12 * (date.getFullYear() - firstMonthItemDate.getFullYear())) + 1;
+            }
+
+            while(lastMonthItemDate <= date) {
+                monthPathView.model.addDates(true)
+                lastMonthItemDate = monthPathView.model.data(monthPathView.model.index(monthPathView.model.rowCount() - 1,0), Kalendar.InfiniteCalendarViewModel.FirstDayOfMonthRole);
+            }
+
+            monthPathView.currentIndex = newMonthIndex;
+        }
+
+        // Set to index and create dates if needed for year view
+        while(firstYearItemDate >= date) {
+            yearPathView.model.addDates(false)
+            firstYearItemDate = yearPathView.model.data(yearPathView.model.index(1,0), Kalendar.InfiniteCalendarViewModel.StartDateRole);
+            newYearIndex = 0;
+        }
+        if(firstYearItemDate < date && newYearIndex === 0) {
+            newYearIndex = date.getFullYear() - firstYearItemDate.getFullYear() + 1;
+        }
+
+        while(lastYearItemDate <= date) {
+            yearPathView.model.addDates(true)
+            lastYearItemDate = yearPathView.model.data(yearPathView.model.index(yearPathView.model.rowCount() - 1,0), Kalendar.InfiniteCalendarViewModel.StartDateRole);
+        }
+
+        // Set to index and create dates if needed for decade view
+        while(firstDecadeItemDate >= date) {
+            decadePathView.model.addDates(false)
+            firstDecadeItemDate = decadePathView.model.data(decadePathView.model.index(1,0), Kalendar.InfiniteCalendarViewModel.StartDateRole);
+            newDecadeIndex = 0;
+        }
+        if(firstDecadeItemDate < date && newDecadeIndex === 0) {
+            newDecadeIndex = date.getFullYear() - firstDecadeItemDate.getFullYear() + 1;
+        }
+
+        while(lastDecadeItemDate.getFullYear() <= date.getFullYear()) {
+            decadePathView.model.addDates(true)
+            lastDecadeItemDate = decadePathView.model.data(decadePathView.model.index(decadePathView.model.rowCount() - 1,0), Kalendar.InfiniteCalendarViewModel.StartDateRole);
+        }
+
+        yearPathView.currentIndex = newYearIndex;
+        decadePathView.currentIndex = newDecadeIndex;
+    }
+
+    function prevMonth() {
+        selectedDate = new Date(selectedDate.getFullYear(), selectedDate.getMonth() - 1, selectedDate.getDate())
+    }
+
     function nextMonth() {
-        monthModel.next();
+        selectedDate = new Date(selectedDate.getFullYear(), selectedDate.getMonth() + 1, selectedDate.getDate())
     }
 
-    /**
-     * Move calendar view to today
-     */
-    function goToday() {
-        monthModel.goToday();
-        selectedDate = new Date(Date.now());
+    function prevYear() {
+        selectedDate = new Date(selectedDate.getFullYear() - 1, selectedDate.getMonth(), selectedDate.getDate())
     }
 
-    /**
-     * Go to the previous month.
-     */
-    function previousMonth() {
-        monthModel.previous();
+    function nextYear() {
+        selectedDate = new Date(selectedDate.getFullYear() + 1, selectedDate.getMonth(), selectedDate.getDate())
     }
 
-    /**
-     * Model powering the month view, by default it is using a model
-     * without KCoreCalendar::Calendar loaded and just display an
-     * empty calendar.
-     */
-    property var model: MonthModel {
-        id: monthModel
-        onYearChanged: yearList.currentIndex = year;
+    function prevDecade() {
+        selectedDate = new Date(selectedDate.getFullYear() - 10, selectedDate.getMonth(), selectedDate.getDate())
     }
 
-    /**
-     * \internal
-     */
-    readonly property bool isLarge: width > Kirigami.Units.gridUnit * 40
-
-    background: Rectangle {
-        Kirigami.Theme.colorSet: monthView.isLarge ? Kirigami.Theme.Header : Kirigami.Theme.View
-        color: monthView.isLarge ? Kirigami.Theme.alternateBackgroundColor : Kirigami.Theme.backgroundColor
+    function nextDecade() {
+        selectedDate = new Date(selectedDate.getFullYear() + 10, selectedDate.getMonth(), selectedDate.getDate())
     }
 
-    Component {
-        id: mobileMonthDelegate
-        Controls.AbstractButton {
-            id: button
-            implicitWidth: monthGrid.width / 7
-            implicitHeight: (monthGrid.height - Kirigami.Units.gridUnit * 2) / 6
+    contentItem: ColumnLayout {
+        id: pickerLayout
+
+        RowLayout {
+            id: headingRow
             Layout.fillWidth: true
-            Layout.fillHeight: true
-            padding: 0
-            onClicked: monthView.selectedDate = model.date
-            contentItem: Kirigami.Heading {
-                id: number
-                topPadding: Kirigami.Units.largeSpacing * 2
-                width: parent.width
-                level: 3
-                text: model.dayNumber
-                horizontalAlignment: Text.AlignHCenter
-                verticalAlignment: Text.AlignTop
-                padding: Kirigami.Units.smallSpacing
-                opacity: model.sameMonth ? 1 : 0.7
-            }
+            visible: datepicker.showControlHeader
 
-            background: Item {
-                visible: model.isSelected || isToday
-                Rectangle {
-                    anchors.centerIn: parent
-                    height: parent.height - Kirigami.Units.smallSpacing
-                    color: model.isSelected ? Kirigami.Theme.highlightColor : Kirigami.Theme.positiveBackgroundColor
-                    radius: height / 2
-                    width: height
-                }
-            }
-        }
-    }
-
-    Component {
-        id: desktopMonthDelegate
-        Controls.AbstractButton {
-            id: button
-            implicitWidth: monthGrid.width / 7
-            implicitHeight: (monthGrid.height - Kirigami.Units.gridUnit * 2) / 6
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-            onClicked: monthView.selectedDate = model.date
-            background: Rectangle {
-                Kirigami.Theme.colorSet: Kirigami.Theme.View
-                color: model.sameMonth ? Kirigami.Theme.backgroundColor : Kirigami.Theme.alternateBackgroundColor
-            }
-            padding: 0
             Kirigami.Heading {
-                id: dayNumber
-                level: 3
-                anchors.right: parent.right
-                anchors.top: parent.top
-                anchors.rightMargin: model.dayNumber < 10 ? Kirigami.Units.largeSpacing : 0
-                text: model.dayNumber
-                horizontalAlignment: Text.AlignRight
-                verticalAlignment: Text.AlignTop
-                padding: Kirigami.Units.smallSpacing
-                background: Rectangle {
-                    visible: model.isSelected || isToday
-                    anchors.centerIn: parent
-                    height: parent.height - Kirigami.Units.smallSpacing
-                    color: model.isSelected ? Kirigami.Theme.highlightColor : Kirigami.Theme.positiveBackgroundColor
-                    radius: height / 2
-                    width: height
+                id: monthLabel
+                Layout.fillWidth: true
+                text: i18nc("%1 is month name, %2 is year", "%1 %2", Qt.locale().standaloneMonthName(selectedDate.getMonth()), String(selectedDate.getFullYear()))
+                level: 1
+            }
+            QQC2.ToolButton {
+                icon.name: 'go-previous-view'
+                onClicked: {
+                    if (pickerView.currentIndex == 1) { // monthGrid index
+                        prevYear()
+                    } else if (pickerView.currentIndex == 2) { // yearGrid index
+                        prevDecade()
+                    } else { // dayGrid index
+                        prevMonth()
+                    }
+                }
+            }
+            QQC2.ToolButton {
+                icon.name: 'go-jump-today'
+                onClicked: selectedDate = new Date()
+            }
+            QQC2.ToolButton {
+                icon.name: 'go-next-view'
+                onClicked: {
+                    if (pickerView.currentIndex == 1) { // monthGrid index
+                        nextYear()
+                    } else if (pickerView.currentIndex == 2) { // yearGrid index
+                        nextDecade()
+                    } else { // dayGrid index
+                        nextMonth()
+                    }
                 }
             }
         }
-    }
 
-    ColumnLayout {
-        anchors.fill: parent
-        spacing: 0
-
-        Controls.ScrollView {
+        QQC2.TabBar {
+            id: rangeBar
+            currentIndex: pickerView.currentIndex
             Layout.fillWidth: true
-            Layout.minimumHeight: Kirigami.Units.gridUnit * 2.5
-            Controls.ScrollBar.horizontal.policy: Controls.ScrollBar.AlwaysOff
-            ListView {
-                id: yearList
-                property int year: (new Date()).getFullYear();
-                Controls.RoundButton {
-                    icon.name: "go-previous"
-                    onClicked: yearList.currentIndex -= 10;
-                    anchors.left: parent.left
-                    anchors.leftMargin: Kirigami.Units.smallSpacing
-                    anchors.verticalCenter: parent.verticalCenter
-                    icon.width: Kirigami.Units.fontMetrics.roundedIconSize(Kirigami.Units.fontMetrics.height)
-                    icon.height: Kirigami.Units.fontMetrics.roundedIconSize(Kirigami.Units.fontMetrics.height)
-                    implicitWidth: icon.width * 2
-                    implicitHeight: icon.height * 2
-                    padding: 0
-                }
-                Controls.RoundButton {
-                    icon.name: "go-next"
-                    onClicked: yearList.currentIndex += 10;
-                    anchors.right: parent.right
-                    anchors.rightMargin: Kirigami.Units.smallSpacing
-                    anchors.verticalCenter: parent.verticalCenter
-                    icon.width: Kirigami.Units.fontMetrics.roundedIconSize(Kirigami.Units.fontMetrics.height)
-                    icon.height: Kirigami.Units.fontMetrics.roundedIconSize(Kirigami.Units.fontMetrics.height)
-                    implicitWidth: icon.width * 2
-                    implicitHeight: icon.height * 2
-                    padding: 0
-                }
-                orientation: Qt.Horizontal
-                model: year + 100
-                highlightFollowsCurrentItem: true
 
-                // HACK: position the listview to the correct year and don't put the
-                // current year to far to the left.
-                Component.onCompleted: {
-                    currentIndex = -1;
-                    currentIndex = monthModel.year - 2;
-                    currentIndex = monthModel.year;
-                }
-
-                delegate: Controls.ItemDelegate {
-                    implicitHeight: Kirigami.Units.gridUnit * 2.5
-                    highlighted: yearList.currentIndex == index
-                    contentItem: Kirigami.Heading {
-                        font.bold: yearList.currentIndex === index
-                        text: index
-                    }
-                    onClicked: {
-                        yearList.currentIndex = index;
-                        monthModel.year = index;
-                    }
-                }
+            QQC2.TabButton {
+                id: daysViewCheck
+                Layout.fillWidth: true
+                text: i18n("Days")
+                onClicked: pickerView.currentIndex = 0 // dayGrid is first item in pickerView
+                visible: datepicker.showDays
+                width: visible ? implicitWidth : 0
+            }
+            QQC2.TabButton {
+                id: monthsViewCheck
+                Layout.fillWidth: true
+                text: i18n("Months")
+                onClicked: pickerView.currentIndex = 1
+            }
+            QQC2.TabButton {
+                id: yearsViewCheck
+                Layout.fillWidth: true
+                text: i18n("Years")
+                onClicked: pickerView.currentIndex = 2
             }
         }
+        Kirigami.Separator {
+            Layout.topMargin: (-pickerLayout.spacing *2) - 1
+            Layout.fillWidth: true
+        }
 
-        GridLayout {
-            id: monthGrid
+        QQC2.SwipeView {
+            id: pickerView
             Layout.fillWidth: true
             Layout.fillHeight: true
-            columns: 7
-            columnSpacing: monthView.isLarge ? 1 : 0
-            rowSpacing: monthView.isLarge ? 1 : 0
-            Kirigami.Theme.inherit: false
+            clip: true
+            interactive: false
 
-            Repeater {
-                model: monthModel.weekDays
-                Controls.Control {
-                    implicitWidth: monthGrid.width / 7
-                    Layout.maximumHeight: Kirigami.Units.gridUnit * 2
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                    padding: Kirigami.Units.smallSpacing
-                    contentItem: Kirigami.Heading {
-                        text: modelData
-                        level: 2
-                        horizontalAlignment: monthView.isLarge ? Text.AlignRight : Text.AlignHCenter
+            PathView {
+                id: monthPathView
+
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                implicitHeight: Kirigami.Units.gridUnit * 16
+                flickDeceleration: Kirigami.Units.longDuration
+                preferredHighlightBegin: 0.5
+                preferredHighlightEnd: 0.5
+                snapMode: PathView.SnapToItem
+                focus: true
+                interactive: Kirigami.Settings.tabletMode
+                clip: true
+
+                path: Path {
+                    startX: - monthPathView.width * monthPathView.count / 2 + monthPathView.width / 2
+                    startY: monthPathView.height / 2
+                    PathLine {
+                        x: monthPathView.width * monthPathView.count / 2 + monthPathView.width / 2
+                        y: monthPathView.height / 2
                     }
-                    background: Rectangle {
-                        Kirigami.Theme.colorSet: Kirigami.Theme.View
-                        color: !monthView.isLarge ? Kirigami.Theme.backgroundColor : Kirigami.Theme.alternateBackgroundColor
+                }
+
+                model: Kalendar.InfiniteCalendarViewModel {
+                    scale: Kalendar.InfiniteCalendarViewModel.MonthScale
+                    datesToAdd: 300
+                }
+
+                property int startIndex
+                Component.onCompleted: {
+                    startIndex = count / 2;
+                    currentIndex = startIndex;
+                }
+                onCurrentIndexChanged: {
+                    if(pickerView.currentIndex == 0) {
+                        datepicker.selectedDate = new Date(currentItem.firstDayOfMonth.getFullYear(), currentItem.firstDayOfMonth.getMonth(), datepicker.selectedDate.getDate());
+                    }
+
+                    if(currentIndex >= count - 2) {
+                        model.addDates(true);
+                    } else if (currentIndex <= 1) {
+                        model.addDates(false);
+                        startIndex += model.datesToAdd;
+                    }
+                }
+
+                delegate: Loader {
+                    id: monthViewLoader
+                    property date firstDayOfMonth: model.firstDay
+                    property bool isNextOrCurrentItem: index >= monthPathView.currentIndex -1 && index <= monthPathView.currentIndex + 1
+
+                    active: isNextOrCurrentItem && datepicker.showDays
+
+                    sourceComponent: GridLayout {
+                        id: dayGrid
+                        columns: 7
+                        rows: 7
+                        width: monthPathView.width
+                        height: monthPathView.height
+                        Layout.topMargin: Kirigami.Units.smallSpacing
+
+                        property var modelLoader: Loader {
+                            asynchronous: true
+                            sourceComponent: Kalendar.MonthModel {
+                                year: firstDay.getFullYear()
+                                month: firstDay.getMonth() + 1 // From pathview model
+                            }
+                        }
+
+                        QQC2.ButtonGroup {
+                            buttons: dayGrid.children
+                        }
+
+                        Repeater {
+                            model: dayGrid.modelLoader.item.weekDays
+                            delegate: QQC2.Label {
+                                Layout.fillWidth: true
+                                Layout.fillHeight: true
+                                horizontalAlignment: Text.AlignHCenter
+                                opacity: 0.7
+                                text: modelData
+                            }
+                        }
+
+                        Repeater {
+                            model: dayGrid.modelLoader.item
+
+                            delegate: QQC2.Button {
+                                Layout.fillWidth: true
+                                Layout.fillHeight: true
+                                flat: true
+                                highlighted: model.isToday
+                                checkable: true
+                                checked: date.getDate() === clickedDate.getDate() &&
+                                    date.getMonth() === clickedDate.getMonth() &&
+                                    date.getFullYear() === clickedDate.getFullYear()
+                                opacity: sameMonth ? 1 : 0.7
+                                text: model.dayNumber
+                                onClicked: datePicked(model.date), clickedDate = model.date
+                            }
+                        }
                     }
                 }
             }
 
-            Repeater {
-                model: monthModel
-                delegate: monthView.isLarge ? desktopMonthDelegate : mobileMonthDelegate
+            PathView {
+                id: yearPathView
+
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                implicitHeight: Kirigami.Units.gridUnit * 9
+                flickDeceleration: Kirigami.Units.longDuration
+                preferredHighlightBegin: 0.5
+                preferredHighlightEnd: 0.5
+                snapMode: PathView.SnapToItem
+                focus: true
+                interactive: Kirigami.Settings.tabletMode
+                clip: true
+
+                path: Path {
+                    startX: - yearPathView.width * yearPathView.count / 2 + yearPathView.width / 2
+                    startY: yearPathView.height / 2
+                    PathLine {
+                        x: yearPathView.width * yearPathView.count / 2 + yearPathView.width / 2
+                        y: yearPathView.height / 2
+                    }
+                }
+
+                model: Kalendar.InfiniteCalendarViewModel {
+                    scale: Kalendar.InfiniteCalendarViewModel.YearScale
+                }
+
+                property int startIndex
+                Component.onCompleted: {
+                    startIndex = count / 2;
+                    currentIndex = startIndex;
+                }
+                onCurrentIndexChanged: {
+                    if(pickerView.currentIndex == 1) {
+                        datepicker.selectedDate = new Date(currentItem.startDate.getFullYear(), datepicker.selectedDate.getMonth(), datepicker.selectedDate.getDate())
+                    }
+
+                    if(currentIndex >= count - 2) {
+                        model.addDates(true);
+                    } else if (currentIndex <= 1) {
+                        model.addDates(false);
+                        startIndex += model.datesToAdd;
+                    }
+                }
+
+                delegate: Loader {
+                    id: yearViewLoader
+                    property date startDate: model.startDate
+                    property bool isNextOrCurrentItem: index >= yearPathView.currentIndex -1 && index <= yearPathView.currentIndex + 1
+
+                    active: isNextOrCurrentItem
+
+                    sourceComponent: GridLayout {
+                        id: yearGrid
+                        columns: 3
+                        rows: 4
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+                        Layout.topMargin: Kirigami.Units.smallSpacing
+
+                        QQC2.ButtonGroup {
+                            buttons: yearGrid.children
+                        }
+
+                        Repeater {
+                            model: yearGrid.columns * yearGrid.rows
+                            delegate: QQC2.Button {
+                                property date date: new Date(startDate.getFullYear(), index)
+                                Layout.fillWidth: true
+                                Layout.fillHeight: true
+                                flat: true
+                                highlighted: date.getMonth() === new Date().getMonth() &&
+                                    date.getFullYear() === new Date().getFullYear()
+                                checkable: true
+                                checked: date.getMonth() === clickedDate.getMonth() &&
+                                    date.getFullYear() === clickedDate.getFullYear()
+                                text: Qt.locale().standaloneMonthName(date.getMonth())
+                                onClicked: {
+                                    selectedDate = new Date(date);
+                                    clickedDate = new Date(date);
+                                    datepicker.datePicked(date);
+                                    if(datepicker.showDays) pickerView.currentIndex = 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            PathView {
+                id: decadePathView
+
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                implicitHeight: Kirigami.Units.gridUnit * 9
+                flickDeceleration: Kirigami.Units.longDuration
+                preferredHighlightBegin: 0.5
+                preferredHighlightEnd: 0.5
+                snapMode: PathView.SnapToItem
+                focus: true
+                interactive: Kirigami.Settings.tabletMode
+                clip: true
+
+                path: Path {
+                    startX: - decadePathView.width * decadePathView.count / 2 + decadePathView.width / 2
+                    startY: decadePathView.height / 2
+                    PathLine {
+                        x: decadePathView.width * decadePathView.count / 2 + decadePathView.width / 2
+                        y: decadePathView.height / 2
+                    }
+                }
+
+                model: Kalendar.InfiniteCalendarViewModel {
+                    scale: Kalendar.InfiniteCalendarViewModel.DecadeScale
+                }
+
+                property int startIndex
+                Component.onCompleted: {
+                    startIndex = count / 2;
+                    currentIndex = startIndex;
+                }
+                onCurrentIndexChanged: {
+                    if(pickerView.currentIndex == 2) {
+                        // getFullYear + 1 because the startDate is e.g. 2019, but we want the 2020 decade to be selected
+                        datepicker.selectedDate = new Date(currentItem.startDate.getFullYear() + 1, datepicker.selectedDate.getMonth(), datepicker.selectedDate.getDate())
+                    }
+
+                    if(currentIndex >= count - 2) {
+                        model.addDates(true);
+                    } else if (currentIndex <= 1) {
+                        model.addDates(false);
+                        startIndex += model.datesToAdd;
+                    }
+                }
+
+                delegate: Loader {
+                    id: decadeViewLoader
+                    property date startDate: model.startDate
+                    property bool isNextOrCurrentItem: index >= decadePathView.currentIndex -1 && index <= decadePathView.currentIndex + 1
+
+                    active: isNextOrCurrentItem
+
+                    sourceComponent: GridLayout {
+                        id: decadeGrid
+                        columns: 3
+                        rows: 4
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+                        Layout.topMargin: Kirigami.Units.smallSpacing
+
+                        QQC2.ButtonGroup {
+                            buttons: decadeGrid.children
+                        }
+
+                        Repeater {
+                            model: decadeGrid.columns * decadeGrid.rows
+                            delegate: QQC2.Button {
+                                property date date: new Date(startDate.getFullYear() + index, 0)
+                                property bool sameDecade: Math.floor(date.getFullYear() / 10) == Math.floor(year / 10)
+                                Layout.fillWidth: true
+                                Layout.fillHeight: true
+                                flat: true
+                                highlighted: date.getFullYear() === new Date().getFullYear()
+                                checkable: true
+                                checked: date.getFullYear() === clickedDate.getFullYear()
+                                opacity: sameDecade ? 1 : 0.7
+                                text: date.getFullYear()
+                                onClicked: {
+                                    selectedDate = new Date(date);
+                                    clickedDate = new Date(date);
+                                    datepicker.datePicked(date);
+                                    pickerView.currentIndex = 1;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
 }
-

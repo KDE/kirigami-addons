@@ -23,6 +23,7 @@ target_sources(dateandtimeplugin PRIVATE
     lib/plugin.cpp
     lib/timeinputvalidator.cpp
     lib/qdatetimeparser.cpp
+    lib/infinitecalendarviewmodel.cpp
 )
 
 ecm_target_qml_sources(dateandtimeplugin SOURCES

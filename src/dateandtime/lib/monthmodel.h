@@ -6,6 +6,7 @@
 #include <QAbstractListModel>
 #include <QCalendar>
 #include <QDate>
+#include <QLocale>
 #include <memory>
 
 /// Month model exposing month days and events to a QML view.
@@ -32,7 +33,7 @@ public:
 
 public:
     explicit MonthModel(QObject *parent = nullptr);
-    ~MonthModel();
+    ~MonthModel() override;
 
     int year() const;
     void setYear(int year);
@@ -53,7 +54,7 @@ public:
     // QAbstractItemModel overrides
     QHash<int, QByteArray> roleNames() const override;
     QVariant data(const QModelIndex &index, int role) const override;
-    int rowCount(const QModelIndex& parent) const override;
+    int rowCount(const QModelIndex &parent) const override;
 
 Q_SIGNALS:
     void yearChanged();
@@ -62,5 +63,6 @@ Q_SIGNALS:
 
 private:
     class Private;
+    QLocale m_locale;
     std::unique_ptr<Private> d;
 };

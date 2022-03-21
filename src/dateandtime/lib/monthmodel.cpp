@@ -98,7 +98,6 @@ void MonthModel::previous()
     }
 }
 
-
 void MonthModel::next()
 {
     if (d->calendar.monthsInYear(d->year) == d->month) {
@@ -126,58 +125,61 @@ QVariant MonthModel::data(const QModelIndex &index, int role) const
 
     if (!index.parent().isValid()) {
         // Fetch days in month
-        int prefix = d->calendar.dayOfWeek(QDate(d->year, d->month, 1));
+        int prefix = d->calendar.dayOfWeek(QDate(d->year, d->month, 1)) - m_locale.firstDayOfWeek();
 
-        if (prefix > 7) {
+        if (prefix <= 1) {
+            prefix += 7;
+        } else if (prefix > 7) {
             prefix -= 7;
         }
 
-
         switch (role) {
-            case Qt::DisplayRole:
-            case DayNumber:
-            case IsSelected:
-            case IsToday:
-            case Date: {
-                int day = -1;
-                int month = d->month;
-                int year = d->year;
-                const int daysInMonth = d->calendar.daysInMonth(d->month, d->year);
-                if (row >= prefix && row - prefix < daysInMonth) {
-                    // This month
-                    day = row - prefix + 1;
-                } else if (row - prefix >= daysInMonth) {
-                    // Next month
-                    month = d->calendar.monthsInYear(d->year) == d->month ? 1 : d->month + 1;
-                    year = d->calendar.monthsInYear(d->year) == d->month ? d->year + 1 : d->year;
-                    day = row - daysInMonth - prefix + 1;
-                } else {
-                    // Previous month
-                    year =  d->month > 0 ? d->year : d->year - 1;
-                    month = d->month > 0 ? d->month - 1 : d->calendar.monthsInYear(year) - 1;
-                    day = daysInMonth - prefix + row + 1;
-                }
-
-                if (role == DayNumber || role == Qt::DisplayRole) {
-                    return day;
-                }
-                const QDate date(year, month, day);
-                if (role == Date) {
-                    return date;
-                }
-
-                if (role == IsSelected) {
-                    return d->selected == date;
-                }
-                if (role == IsToday) {
-                    return date == QDate::currentDate();
-                }
-                return {};
+        case Qt::DisplayRole:
+        case DayNumber:
+        case IsSelected:
+        case IsToday:
+        case Date: {
+            int day = -1;
+            int month = d->month;
+            int year = d->year;
+            const int daysInMonth = d->calendar.daysInMonth(d->month, d->year);
+            if (row >= prefix && row - prefix < daysInMonth) {
+                // This month
+                day = row - prefix + 1;
+            } else if (row - prefix >= daysInMonth) {
+                // Next month
+                month = d->calendar.monthsInYear(d->year) == d->month ? 1 : d->month + 1;
+                year = d->calendar.monthsInYear(d->year) == d->month ? d->year + 1 : d->year;
+                day = row - daysInMonth - prefix + 1;
+            } else {
+                // Previous month
+                year = d->month > 1 ? d->year : d->year - 1;
+                month = d->month > 1 ? d->month - 1 : d->calendar.monthsInYear(year);
+                int daysInPreviousMonth = d->calendar.daysInMonth(month, year);
+                day = daysInPreviousMonth - prefix + row + 1;
             }
-            case SameMonth: {
-                const int daysInMonth = d->calendar.daysInMonth(d->month, d->year);
-                return row >= prefix && row - prefix < daysInMonth;
+
+            if (role == DayNumber || role == Qt::DisplayRole) {
+                return day;
             }
+            const QDate date(year, month, day);
+            if (role == Date) {
+                return date.startOfDay();
+                // Ensure the date doesn't get mangled into a different date by QML date conversion
+            }
+
+            if (role == IsSelected) {
+                return d->selected == date;
+            }
+            if (role == IsToday) {
+                return date == QDate::currentDate();
+            }
+            return {};
+        }
+        case SameMonth: {
+            const int daysInMonth = d->calendar.daysInMonth(d->month, d->year);
+            return row >= prefix && row - prefix < daysInMonth;
+        }
         }
     }
     return {};

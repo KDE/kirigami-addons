@@ -10,6 +10,7 @@
 #include "timeinputvalidator.h"
 #include "yearmodel.h"
 #include "monthmodel.h"
+#include "infinitecalendarviewmodel.h"
 
 #ifdef Q_OS_ANDROID
 #include "androidintegration.h"
@@ -40,6 +41,7 @@ void KirigamiAddonsDataAndTimePlugin::registerTypes(const char *uri)
     qmlRegisterType<YearModel>(uri, 0, 1, "YearModel");
     qmlRegisterType<MonthModel>(uri, 0, 1, "MonthModel");
     qmlRegisterType<TimeInputValidator>(uri, 0, 1, "TimeInputValidator");
+    qmlRegisterType<InfiniteCalendarViewModel>(uri, 0, 1, "InfiniteCalendarViewModel");
 
 #ifdef Q_OS_ANDROID
     qmlRegisterSingletonType<AndroidIntegration>(uri, 0, 1, "AndroidIntegration", [](QQmlEngine*, QJSEngine*) -> QObject* {
