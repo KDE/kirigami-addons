@@ -55,7 +55,7 @@ Kirigami.OverlaySheet {
             Controls.ToolTip.text: i18n("Previous")
             Controls.ToolTip.visible: hovered
             Controls.ToolTip.delay: Kirigami.Units.shortDuration
-            onClicked: datePicker.previousMonth()
+            onClicked: datePicker.prevMonth()
         }
         Controls.Button {
             icon.name: "go-jump-today"
