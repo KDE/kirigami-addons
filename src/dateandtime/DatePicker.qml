@@ -14,7 +14,6 @@ QQC2.Control {
 
     property date selectedDate: new Date() // Decides calendar span
     property date clickedDate: new Date() // User's chosen date
-    property date today: new Date()
     property int year: selectedDate.getFullYear()
     property int month: selectedDate.getMonth()
     property int day: selectedDate.getDate()
@@ -100,6 +99,10 @@ QQC2.Control {
         decadePathView.currentIndex = newDecadeIndex;
     }
 
+    function goToday() {
+        selectedDate = new Date()
+    }
+
     function prevMonth() {
         selectedDate = new Date(selectedDate.getFullYear(), selectedDate.getMonth() - 1, selectedDate.getDate())
     }
@@ -152,7 +155,7 @@ QQC2.Control {
             }
             QQC2.ToolButton {
                 icon.name: 'go-jump-today'
-                onClicked: selectedDate = new Date()
+                onClicked: goToday()
             }
             QQC2.ToolButton {
                 icon.name: 'go-next-view'
