@@ -12,8 +12,8 @@ ecm_target_qml_sources(soundsplugin SOURCES
 )
 
 target_link_libraries(soundsplugin
-    Qt5::Quick
-    Qt5::Qml
+    Qt${QT_MAJOR_VERSION}::Quick
+    Qt${QT_MAJOR_VERSION}::Qml
     KF5::I18n
 )
 

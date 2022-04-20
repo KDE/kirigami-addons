@@ -25,9 +25,9 @@ ecm_target_qml_sources(treeviewplugin
 )
 
 target_link_libraries(treeviewplugin
-    Qt5::Quick
-    Qt5::Qml
-    Qt5::QuickControls2
+    Qt${QT_MAJOR_VERSION}::Quick
+    Qt${QT_MAJOR_VERSION}::Qml
+    Qt${QT_MAJOR_VERSION}::QuickControls2
 )
 
 ecm_finalize_qml_module(treeviewplugin DESTINATION ${KDE_INSTALL_QMLDIR})

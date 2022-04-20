@@ -1,13 +1,13 @@
 # SPDX-FileCopyrightText: 2021 Arjen Hiemstra <ahiemstra@heimr.nl>
 # SPDX-License-Identifier: BSD-2-Clause
 
-if(NOT Qt5QuickTest_FOUND)
-    message(STATUS "Qt5QuickTest not found, autotests will not be built.")
+if(NOT Qt${QT_MAJOR_VERSION}QuickTest_FOUND)
+    message(STATUS "QtQuickTest not found, autotests will not be built.")
     return()
 endif()
 
 add_executable(qmltest qmltests.cpp)
-target_link_libraries(qmltest Qt5::QuickTest)
+target_link_libraries(qmltest Qt${QT_MAJOR_VERSION}::QuickTest)
 
 macro(kirigami_add_tests)
     if (WIN32)

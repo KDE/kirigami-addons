@@ -30,15 +30,15 @@ include(ECMQtDeclareLoggingCategory)
 include(ECMAddQch)
 include(ECMQmlModule)
 
-find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick QuickControls2)
+find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick QuickControls2)
 
 find_package(KF5 ${KF5_DEP_VERSION} REQUIRED COMPONENTS Kirigami2 I18n)
 if (BUILD_TESTING)
-    find_package(Qt5QuickTest ${REQUIRED_QT_VERSION} CONFIG QUIET)
+    find_package(Qt${QT_MAJOR_VERSION}QuickTest ${REQUIRED_QT_VERSION} CONFIG QUIET)
 endif()
 if (ANDROID)
     find_package(Gradle REQUIRED)
-    find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED CONFIG COMPONENTS AndroidExtras)
+    find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} REQUIRED CONFIG COMPONENTS AndroidExtras)
 endif()
 
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5KirigamiAddons")
@@ -50,7 +50,7 @@ configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KF5KirigamiAddonsConfig.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/KF5KirigamiAddonsConfig.cmake"
     INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
-    PATH_VARS  KF5_INCLUDE_INSTALL_DIR CMAKE_INSTALL_PREFIX
+    PATH_VARS CMAKE_INSTALL_PREFIX
 )
 ecm_setup_version(${PROJECT_VERSION}
     VARIABLE_PREFIX KIRIGAMIADDONS
