@@ -16,7 +16,6 @@
 #include <QSet>
 #include <QDateTime>
 #include <QTimeZone>
-#include <QRegExp>
 #include <QDebug>
 
 //#define QDATETIMEPARSER_DEBUG
