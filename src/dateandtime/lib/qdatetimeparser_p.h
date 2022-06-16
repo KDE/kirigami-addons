@@ -51,7 +51,7 @@ public:
         DateTimeEdit
     };
     QDateTimeParser(QVariant::Type t, Context ctx)
-        : currentSectionIndex(-1), display(nullptr), cachedDay(-1), parserType(t),
+        : currentSectionIndex(-1), display(NoSection), cachedDay(-1), parserType(t),
         fixday(false), spec(Qt::LocalTime), context(ctx)
     {
         defaultLocale = QLocale::system();
@@ -186,11 +186,20 @@ private:
                   QString *monthName = nullptr, int *used = nullptr) const;
     int findDay(const QString &str1, int intDaystart, int sectionIndex,
                 QString *dayName = nullptr, int *used = nullptr) const;
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     ParsedSection findTimeZone(QStringRef str, const QDateTime &when,
                                int maxVal, int minVal) const;
+#else
+    ParsedSection findTimeZone(QStringView str, const QDateTime &when,
+                               int maxVal, int minVal) const;
+#endif
 #if QT_CONFIG(timezone)
     // Implemented in qdatetime.cpp:
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     static int startsWithLocalTimeZone(const QStringRef name);
+#else
+    static int startsWithLocalTimeZone(const QStringView name);
+#endif
 #endif
 
     enum AmPmFinder {
@@ -203,7 +212,7 @@ private:
     };
     AmPmFinder findAmPm(QString &str, int index, int *used = nullptr) const;
 #endif // datestring
-
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     bool potentialValue(const QStringRef &str, int min, int max, int index,
                         const QDateTime &currentValue, int insert) const;
     bool potentialValue(const QString &str, int min, int max, int index,
@@ -211,6 +220,16 @@ private:
     {
         return potentialValue(QStringRef(&str), min, max, index, currentValue, insert);
     }
+#else
+    bool potentialValue(const QStringView &str, int min, int max, int index,
+                        const QDateTime &currentValue, int insert) const;
+    bool potentialValue(const QString &str, int min, int max, int index,
+                        const QDateTime &currentValue, int insert) const
+    {
+        return potentialValue(QStringView(str), min, max, index, currentValue, insert);
+    }
+
+#endif
 
 protected: // for the benefit of QDateTimeEditPrivate
     int sectionSize(int index) const;
@@ -226,12 +245,20 @@ protected: // for the benefit of QDateTimeEditPrivate
 
     int absoluteMax(int index, const QDateTime &value = QDateTime()) const;
     int absoluteMin(int index) const;
-
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     bool skipToNextSection(int section, const QDateTime &current, const QStringRef &sectionText) const;
     bool skipToNextSection(int section, const QDateTime &current, const QString &sectionText) const
     {
         return skipToNextSection(section, current, QStringRef(&sectionText));
     }
+#else
+    bool skipToNextSection(int section, const QDateTime &current, const QStringView &sectionText) const;
+    bool skipToNextSection(int section, const QDateTime &current, const QString &sectionText) const
+    {
+        return skipToNextSection(section, current, QStringView(sectionText));
+    }
+
+#endif
     QString stateName(State s) const;
     virtual QDateTime getMinimum() const;
     virtual QDateTime getMaximum() const;
