@@ -43,6 +43,8 @@ T.SwitchDelegate {
                 Layout.fillWidth: true
                 text: root.text
                 elide: Text.ElideRight
+                wrapMode: Text.Wrap
+                maximumLineCount: 2
                 color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
             }
             

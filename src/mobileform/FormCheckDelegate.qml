@@ -50,6 +50,8 @@ T.CheckDelegate {
             text: root.text
             color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
             elide: Text.ElideRight
+            wrapMode: Text.Wrap
+            maximumLineCount: 2
             Layout.fillWidth: true
         }
     }

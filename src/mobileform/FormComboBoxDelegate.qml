@@ -69,6 +69,8 @@ AbstractFormDelegate {
                 Layout.fillWidth: true
                 text: root.text
                 elide: Text.ElideRight
+                wrapMode: Text.Wrap
+                maximumLineCount: 2
             }
             
             Label {
