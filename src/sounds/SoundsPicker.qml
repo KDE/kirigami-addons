@@ -13,7 +13,7 @@ import QtMultimedia 5.15
 import org.kde.kirigamiaddons.sounds 0.1
 
 /**
- * A SoundPicker for picking ringtone and notification.
+ * A sound picker component for picking ringtones and notifications.
  * \inherits QtQuick.ListView
  */
 ListView {
@@ -26,7 +26,7 @@ ListView {
 
     /**
      * This property controls the sound type (ringtone or notification).
-     * \propert bool notification
+     * \property bool notification
      */
     property bool notification: true
 
@@ -46,6 +46,7 @@ ListView {
         id: soundsModel
         notification: listView.notification
     }
+    
     delegate: Kirigami.BasicListItem {
         text: ringtoneName
         icon: ListView.isCurrentItem ? "object-select-symbolic" : ""
@@ -58,6 +59,7 @@ ListView {
             }
         }
     }
+    
     Audio {
         id: playMusic
         source: selectedUrl

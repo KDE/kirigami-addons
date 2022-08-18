@@ -12,10 +12,14 @@ class SoundsPickerModel : public QAbstractListModel
     Q_PROPERTY(QStringList defaultAudio READ defaultAudio WRITE setDefaultAudio NOTIFY defaultAudioChanged)
     Q_PROPERTY(QString theme READ theme WRITE setTheme NOTIFY themeChanged)
 public:
-    enum Roles {NameRole = Qt::UserRole,
-                  UrlRole};
+    enum Roles {
+        NameRole = Qt::UserRole,
+        UrlRole
+    };
+    
     explicit SoundsPickerModel(QObject *parent = nullptr);
     ~SoundsPickerModel();
+    
     bool notification() const;
     void setNotification(bool notification);
     Q_INVOKABLE QString initialSourceUrl(int index);
@@ -27,10 +31,12 @@ public:
     void setDefaultAudio(const QStringList &audio);
     const QString &theme() const;
     void setTheme(const QString &theme);
+
 Q_SIGNALS:
     void notificationChanged();
     void defaultAudioChanged();
     void themeChanged();
+    
 private:
     void loadFiles();
     void rearrangeRingtoneOrder();

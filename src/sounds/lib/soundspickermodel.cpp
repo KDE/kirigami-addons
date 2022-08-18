@@ -2,7 +2,9 @@
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
 #include "soundspickermodel.h"
+
 #include <vector>
+
 #include <QDirIterator>
 #include <QStandardPaths>
 
@@ -34,7 +36,7 @@ void SoundsPickerModel::loadFiles()
             if (!d->notification && QDir(subPath + QStringLiteral("ringtone")).exists()) {
                 subPath += QStringLiteral("ringtone");
             } else if (d->notification && QDir(subPath + QStringLiteral("notification")).exists()) {
-                subPath += QStringLiteral("notificatoin");
+                subPath += QStringLiteral("notification");
             }
 
             QDirIterator it(subPath, QDir::Files, QDirIterator::Subdirectories);
@@ -51,7 +53,8 @@ QHash<int, QByteArray> SoundsPickerModel::roleNames() const
 {
     return {
         {Roles::NameRole, QByteArrayLiteral("ringtoneName")},
-        {Roles::UrlRole, QByteArrayLiteral("sourceUrl")},};
+        {Roles::UrlRole, QByteArrayLiteral("sourceUrl")}
+    };
 }
 
 bool SoundsPickerModel::notification() const
