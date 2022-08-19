@@ -54,11 +54,9 @@ AbstractFormDelegate {
             }
         }
         
-        Kirigami.Icon {
+        FormArrow {
             Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-            source: "arrow-right"
-            implicitWidth: Math.round(Kirigami.Units.iconSizes.small * 0.75)
-            implicitHeight: Math.round(Kirigami.Units.iconSizes.small * 0.75)
+            direction: FormArrow.Right
         }
     }
 }

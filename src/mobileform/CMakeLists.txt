@@ -11,6 +11,7 @@ target_sources(mobileformplugin PRIVATE
 
 ecm_target_qml_sources(mobileformplugin SOURCES
     AbstractFormDelegate.qml
+    FormArrow.qml
     FormButtonDelegate.qml
     FormCard.qml
     FormCardHeader.qml

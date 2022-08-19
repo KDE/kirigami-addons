@@ -33,18 +33,7 @@ AbstractFormDelegate {
     /**
      * The dialog component used for the combobox.
      */
-    property alias dialog: dialog
-    
-    /**
-     * The model to use for the dialog.
-     */
-    property alias model: repeater.model
-    
-    Layout.fillWidth: true
-    
-    onClicked: dialog.open()
-    
-    Kirigami.Dialog {
+    property var dialog: Kirigami.Dialog {
         id: dialog
         showCloseButton: false
         title: root.text
@@ -59,6 +48,15 @@ AbstractFormDelegate {
             }
         }
     }
+    
+    /**
+     * The model to use for the dialog.
+     */
+    property alias model: repeater.model
+    
+    Layout.fillWidth: true
+    
+    onClicked: root.dialog.open()
     
     contentItem: RowLayout {
         ColumnLayout {
@@ -90,11 +88,9 @@ AbstractFormDelegate {
             text: root.currentValue
         }
         
-        Kirigami.Icon {
-            Layout.alignment: Qt.AlignRight
-            source: "arrow-down"
-            implicitWidth: Math.round(Kirigami.Units.iconSizes.small * 0.75)
-            implicitHeight: Math.round(Kirigami.Units.iconSizes.small * 0.75)
+        FormArrow {
+            Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
+            direction: FormArrow.Down
         }
     }
 }
