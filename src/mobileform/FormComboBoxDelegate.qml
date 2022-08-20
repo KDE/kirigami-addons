@@ -32,11 +32,22 @@ AbstractFormDelegate {
     
     /**
      * The dialog component used for the combobox.
+     * 
+     * Can be replaced with a custom dialog implementation.
      */
     property var dialog: Kirigami.Dialog {
         id: dialog
         showCloseButton: false
         title: root.text
+        
+        // use connections instead of onClicked on root, so that users can supply
+        // their own behaviour.
+        Connections {
+            target: root
+            function onClicked() {
+                root.dialog.open();
+            }
+        }
         
         ColumnLayout {
             Kirigami.Theme.inherit: false
@@ -55,8 +66,6 @@ AbstractFormDelegate {
     property alias model: repeater.model
     
     Layout.fillWidth: true
-    
-    onClicked: root.dialog.open()
     
     contentItem: RowLayout {
         ColumnLayout {
