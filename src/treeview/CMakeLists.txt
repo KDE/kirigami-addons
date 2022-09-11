@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2020 Marco Martin <notmart@gmail.com>
 # SPDX-License-Identifier: BSD-2-Clause
 
-ecm_add_qml_module(treeviewplugin URI "org.kde.kirigamiaddons.treeview" VERSION 0.1)
+ecm_add_qml_module(treeviewplugin URI "org.kde.kirigamiaddons.treeview" VERSION 1.0)
 
 target_sources(treeviewplugin PRIVATE
     treeviewplugin.cpp
