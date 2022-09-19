@@ -36,7 +36,6 @@ T.RadioDelegate {
             
             enabled: root.enabled
             checked: root.checked
-            Controls.ButtonGroup.group: root.Controls.ButtonGroup.group
             
             onCheckedChanged: {
                 root.checked = checked;
