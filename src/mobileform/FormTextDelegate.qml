@@ -14,16 +14,18 @@ import org.kde.kirigami 2.19 as Kirigami
  */
 AbstractFormDelegate {
     id: root
-    
+
     /**
      * Label that appears under the text, providing the value of the label.
      */
     property string description: ""
-    
+
+    signal linkActivated(link: string)
+
     Layout.fillWidth: true
-    
+
     background: Item {}
-    
+
     contentItem: RowLayout {
         Kirigami.Icon {
             visible: root.icon.name !== ""
@@ -32,17 +34,18 @@ AbstractFormDelegate {
             implicitWidth: (root.icon.name !== "") ? Kirigami.Units.iconSizes.small : 0
             implicitHeight: (root.icon.name !== "") ? Kirigami.Units.iconSizes.small : 0
         }
-        
+
         ColumnLayout {
             Layout.fillWidth: true
             spacing: Kirigami.Units.smallSpacing
-            
+
             Label {
                 Layout.fillWidth: true
                 text: root.text
                 elide: Text.ElideRight
+                onLinkActivated: root.linkActivated(link)
             }
-            
+
             Label {
                 Layout.fillWidth: true
                 text: root.description
@@ -50,6 +53,7 @@ AbstractFormDelegate {
                 font: Kirigami.Theme.smallFont
                 elide: Text.ElideRight
                 visible: root.description !== ""
+                onLinkActivated: root.linkActivated(link)
             }
         }
     }
