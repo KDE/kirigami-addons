@@ -1,0 +1,63 @@
+# translation of kirigami-addons.po to Slovak
+# Roman Paholik <wizzardsk@gmail.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kirigami-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-30 00:48+0000\n"
+"PO-Revision-Date: 2022-04-15 19:10+0200\n"
+"Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
+"Language-Team: Slovak <kde-sk@linux.sk>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Qt-Contexts: true\n"
+"X-Generator: Lokalize 21.12.3\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: dateandtime/DatePicker.qml:141
+#, kde-format
+msgctxt "%1 is month name, %2 is year"
+msgid "%1 %2"
+msgstr "%1 %2"
+
+#: dateandtime/DatePicker.qml:182
+#, kde-format
+msgid "Days"
+msgstr "Dni"
+
+#: dateandtime/DatePicker.qml:190
+#, kde-format
+msgid "Months"
+msgstr "Mesiace"
+
+#: dateandtime/DatePicker.qml:196
+#, kde-format
+msgid "Years"
+msgstr "Roky"
+
+#: dateandtime/DatePopup.qml:55
+#, kde-format
+msgid "Previous"
+msgstr "Predchádzajúci"
+
+#: dateandtime/DatePopup.qml:62
+#, kde-format
+msgid "Today"
+msgstr "Dnes"
+
+#: dateandtime/DatePopup.qml:69
+#, kde-format
+msgid "Next"
+msgstr "Nasledujúci"
+
+#: dateandtime/DatePopup.qml:86
+#, kde-format
+msgid "Cancel"
+msgstr "Zrušiť"
+
+#: dateandtime/DatePopup.qml:95
+#, kde-format
+msgid "Accept"
+msgstr "Prijať"

@@ -1,0 +1,66 @@
+# Spanish translations for kirigami-addons.po package.
+# Copyright (C) 2021 This file is copyright:
+# This file is distributed under the same license as the kirigami-addons package.
+#
+# Automatically generated, 2021.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kirigami-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-30 00:48+0000\n"
+"PO-Revision-Date: 2022-03-22 20:33+0100\n"
+"Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
+"Language-Team: Spanish <kde-l10n-es@kde.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: dateandtime/DatePicker.qml:141
+#, kde-format
+msgctxt "%1 is month name, %2 is year"
+msgid "%1 %2"
+msgstr "%1 de %2"
+
+#: dateandtime/DatePicker.qml:182
+#, kde-format
+msgid "Days"
+msgstr "Días"
+
+#: dateandtime/DatePicker.qml:190
+#, kde-format
+msgid "Months"
+msgstr "Meses"
+
+#: dateandtime/DatePicker.qml:196
+#, kde-format
+msgid "Years"
+msgstr "Años"
+
+#: dateandtime/DatePopup.qml:55
+#, kde-format
+msgid "Previous"
+msgstr "Anterior"
+
+#: dateandtime/DatePopup.qml:62
+#, kde-format
+msgid "Today"
+msgstr "Hoy"
+
+#: dateandtime/DatePopup.qml:69
+#, kde-format
+msgid "Next"
+msgstr "Siguiente"
+
+#: dateandtime/DatePopup.qml:86
+#, kde-format
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: dateandtime/DatePopup.qml:95
+#, kde-format
+msgid "Accept"
+msgstr "Aceptar"

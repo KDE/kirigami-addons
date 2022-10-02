@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kirigami-addons package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kirigami-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-30 00:48+0000\n"
+"PO-Revision-Date: 2021-05-14 16:42+0000\n"
+"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
+"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: dateandtime/DatePicker.qml:141
+#, kde-format
+msgctxt "%1 is month name, %2 is year"
+msgid "%1 %2"
+msgstr "%1 de %2"
+
+#: dateandtime/DatePicker.qml:182
+#, kde-format
+msgid "Days"
+msgstr "Dias"
+
+#: dateandtime/DatePicker.qml:190
+#, kde-format
+msgid "Months"
+msgstr "Meses"
+
+#: dateandtime/DatePicker.qml:196
+#, kde-format
+msgid "Years"
+msgstr "Anos"
+
+#: dateandtime/DatePopup.qml:55
+#, kde-format
+msgid "Previous"
+msgstr "Anterior"
+
+#: dateandtime/DatePopup.qml:62
+#, kde-format
+msgid "Today"
+msgstr "Hoje"
+
+#: dateandtime/DatePopup.qml:69
+#, kde-format
+msgid "Next"
+msgstr "Seguinte"
+
+#: dateandtime/DatePopup.qml:86
+#, kde-format
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: dateandtime/DatePopup.qml:95
+#, kde-format
+msgid "Accept"
+msgstr "Aceitar"

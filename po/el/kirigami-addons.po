@@ -1,0 +1,64 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kirigami-addons package.
+#
+# Stelios <sstavra@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kirigami-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-30 00:48+0000\n"
+"PO-Revision-Date: 2021-06-20 09:35+0300\n"
+"Last-Translator: Stelios <sstavra@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#: dateandtime/DatePicker.qml:141
+#, kde-format
+msgctxt "%1 is month name, %2 is year"
+msgid "%1 %2"
+msgstr ""
+
+#: dateandtime/DatePicker.qml:182
+#, kde-format
+msgid "Days"
+msgstr ""
+
+#: dateandtime/DatePicker.qml:190
+#, kde-format
+msgid "Months"
+msgstr ""
+
+#: dateandtime/DatePicker.qml:196
+#, kde-format
+msgid "Years"
+msgstr ""
+
+#: dateandtime/DatePopup.qml:55
+#, kde-format
+msgid "Previous"
+msgstr "Προηγούμενη"
+
+#: dateandtime/DatePopup.qml:62
+#, kde-format
+msgid "Today"
+msgstr "Σήμερα"
+
+#: dateandtime/DatePopup.qml:69
+#, kde-format
+msgid "Next"
+msgstr "επόμενη"
+
+#: dateandtime/DatePopup.qml:86
+#, kde-format
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+#: dateandtime/DatePopup.qml:95
+#, kde-format
+msgid "Accept"
+msgstr "Αποδοχή"

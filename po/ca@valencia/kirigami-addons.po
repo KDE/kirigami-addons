@@ -1,0 +1,67 @@
+# Translation of kirigami-addons.po to Catalan (Valencian)
+# Copyright (C) 2021-2022 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2021.
+# Josep M. Ferrer <txemaq@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kirigami-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-30 00:48+0000\n"
+"PO-Revision-Date: 2022-03-22 11:16+0100\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca@valencia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: dateandtime/DatePicker.qml:141
+#, kde-format
+msgctxt "%1 is month name, %2 is year"
+msgid "%1 %2"
+msgstr "%1 %2"
+
+#: dateandtime/DatePicker.qml:182
+#, kde-format
+msgid "Days"
+msgstr "Dies"
+
+#: dateandtime/DatePicker.qml:190
+#, kde-format
+msgid "Months"
+msgstr "Mesos"
+
+#: dateandtime/DatePicker.qml:196
+#, kde-format
+msgid "Years"
+msgstr "Anys"
+
+#: dateandtime/DatePopup.qml:55
+#, kde-format
+msgid "Previous"
+msgstr "Anterior"
+
+#: dateandtime/DatePopup.qml:62
+#, kde-format
+msgid "Today"
+msgstr "Hui"
+
+#: dateandtime/DatePopup.qml:69
+#, kde-format
+msgid "Next"
+msgstr "Següent"
+
+#: dateandtime/DatePopup.qml:86
+#, kde-format
+msgid "Cancel"
+msgstr "Cancel·la"
+
+#: dateandtime/DatePopup.qml:95
+#, kde-format
+msgid "Accept"
+msgstr "Accepta"
