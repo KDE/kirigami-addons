@@ -35,12 +35,14 @@ ecm_target_qml_sources(dateandtimeplugin SOURCES
     DateInput.qml
     DatePicker.qml
     DatePopup.qml
-    DesktopDateInput.qml
-    MobileDateInput.qml
     Hand.qml
     TimeLabel.qml
     TimePicker.qml
     TimeInput.qml
+)
+ecm_target_qml_sources(dateandtimeplugin PATH private SOURCES
+    private/DesktopDateInput.qml
+    private/MobileDateInput.qml
 )
 
 target_link_libraries(dateandtimeplugin
