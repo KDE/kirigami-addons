@@ -77,6 +77,8 @@ AbstractFormDelegate {
             function onClicked() {
                 if (Kirigami.Settings.isMobile) {
                     root.dialog.open();
+                } else {
+                    combobox.popup.open();
                 }
             }
         }
@@ -105,6 +107,10 @@ AbstractFormDelegate {
         }
     }
 
+    function indexOfValue(value) {
+        return combobox.indexOfValue(value);
+    }
+
     Layout.fillWidth: true
 
     contentItem: RowLayout {
@@ -126,7 +132,6 @@ AbstractFormDelegate {
                 text: root.description
                 color: Kirigami.Theme.disabledTextColor
                 font: Kirigami.Theme.smallFont
-                elide: Text.ElideRight
             }
         }
 
