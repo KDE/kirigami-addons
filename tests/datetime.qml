@@ -42,6 +42,9 @@ Kirigami.ApplicationWindow {
                         timeInput.value = new Date();
                     }
                 }
+
+                Addon.TimeLabel {
+                }
             }
         }
     }
