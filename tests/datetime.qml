@@ -45,6 +45,12 @@ Kirigami.ApplicationWindow {
 
                 Addon.TimeLabel {
                 }
+
+                Addon.ClockFace {
+                    implicitWidth: 400
+                    implicitHeight: implicitWidth
+                    time: timeInput.value
+                }
             }
         }
     }
