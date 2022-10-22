@@ -26,6 +26,18 @@ AbstractFormDelegate {
     property alias echoMode: textField.echoMode
 
     /**
+     * This property holds the current status of the text field.
+     *
+     * Depending on the status of the textField the statusMessage property will look different
+     */
+    property var status: AbstractFormDelegate.Status.Default
+
+    /**
+     * This property holds the current status message of the text field.
+     */
+    property string statusMessage: ''
+
+    /**
      * This signal is emitted when the Return or Enter key is pressed. Note that if there
      * is a validator or inputMask set on the text input, the signal will only be emitted
      * if the input is in an acceptable state.
@@ -65,12 +77,19 @@ AbstractFormDelegate {
         }
         TextField {
             id: textField
-            Accessible.description: label.text
+            Accessible.description: label
             Layout.fillWidth: true
             onTextChanged: root.text = text
             onAccepted: root.accepted()
             onEditingFinished: root.editingFinished()
             onTextEdited: root.textEdited()
+        }
+
+        FormStatusMessage {
+            id: formErrorHandler
+            Layout.topMargin: visible ? Kirigami.Units.smallSpacing : 0
+            statusMessage: root.statusMessage
+            status: root.status
         }
     }
 }

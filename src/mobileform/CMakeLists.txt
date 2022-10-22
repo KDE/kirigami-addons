@@ -24,6 +24,7 @@ ecm_target_qml_sources(mobileformplugin SOURCES
     FormSwitchDelegate.qml
     FormTextDelegate.qml
     FormTextFieldDelegate.qml
+    FormStatusMessage.qml
 )
 
 target_link_libraries(mobileformplugin

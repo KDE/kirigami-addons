@@ -14,15 +14,21 @@ import org.kde.kirigami 2.12 as Kirigami
  */
 T.ItemDelegate {
     id: root
-    
+
+    enum Status {
+        Error,
+        Success,
+        Default
+    }
+
     leftPadding: Kirigami.Units.gridUnit
     topPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
     bottomPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
     rightPadding: Kirigami.Units.gridUnit
-    
+
     implicitWidth: contentItem.implicitWidth + leftPadding + rightPadding
     implicitHeight: contentItem.implicitHeight + topPadding + bottomPadding
-    
+
     hoverEnabled: true
     background: FormDelegateBackground { control: root }
 }
