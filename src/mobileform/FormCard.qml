@@ -44,7 +44,7 @@ Item {
     Kirigami.Theme.colorSet: Kirigami.Theme.View
     Kirigami.Theme.inherit: false
     
-    implicitHeight: topPadding + bottomPadding + contentItem.implicitHeight
+    implicitHeight: topPadding + bottomPadding + contentItem.implicitHeight + rectangle.borderWidth * 2
     
     onContentItemChanged: {
         // clear old items
@@ -56,8 +56,11 @@ Item {
     }
     
     Rectangle {
+        id: rectangle
+        readonly property real borderWidth: 1
+        
         border.color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.15)
-        border.width: 1
+        border.width: borderWidth
         
         // only have card radius if it isn't filling the entire width
         radius: root.cardWidthRestricted ? Kirigami.Units.smallSpacing : 0
@@ -74,10 +77,12 @@ Item {
         Item {
             id: contentItemLoader
             anchors.fill: parent
-            anchors.leftMargin: root.leftPadding
-            anchors.rightMargin: root.rightPadding
-            anchors.topMargin: root.topPadding
-            anchors.bottomMargin: root.bottomPadding
+            
+            // add 1 to margins to account for the border (so content doesn't overlap it)
+            anchors.leftMargin: root.leftPadding + rectangle.borderWidth
+            anchors.rightMargin: root.rightPadding + rectangle.borderWidth
+            anchors.topMargin: root.topPadding + rectangle.borderWidth
+            anchors.bottomMargin: root.bottomPadding + rectangle.borderWidth
         }
     }
 }
