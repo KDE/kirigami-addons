@@ -5,6 +5,7 @@
  */
 
 import QtQuick 2.12
+import './private
 
 /**
  * A TableView with an internal KDescendantsProxyModel already in place.

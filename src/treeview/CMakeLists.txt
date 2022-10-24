@@ -8,18 +8,18 @@ target_sources(treeviewplugin PRIVATE
 )
 
 ecm_target_qml_sources(treeviewplugin SOURCES
-    qml/InternalTreeListView.qml
     qml/BasicTreeItem.qml
     qml/TreeTableView.qml
     qml/TreeViewDecoration.qml
     qml/TreeListView.qml
     qml/AbstractTreeItem.qml
-    qml/InternalTreeTableView.qml
 )
 
 ecm_target_qml_sources(treeviewplugin
     PRIVATE PATH
     styles/org.kde.desktop
+    private/InternalTreeListView.qml
+    private/InternalTreeTableView.qml
     SOURCES
     qml/styles/org.kde.desktop/TreeViewDecoration.qml
 )
