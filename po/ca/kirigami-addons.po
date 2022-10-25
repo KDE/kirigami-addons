@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-03-30 00:48+0000\n"
+"POT-Creation-Date: 2022-10-25 00:45+0000\n"
 "PO-Revision-Date: 2022-03-22 11:16+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -27,17 +27,23 @@ msgid "%1 %2"
 msgstr "%1 %2"
 
 #: dateandtime/DatePicker.qml:182
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Days"
+msgctxt "kirigami-addons"
 msgid "Days"
 msgstr "Dies"
 
 #: dateandtime/DatePicker.qml:190
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Months"
+msgctxt "kirigami-addons"
 msgid "Months"
 msgstr "Mesos"
 
 #: dateandtime/DatePicker.qml:196
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Years"
+msgctxt "kirigami-addons"
 msgid "Years"
 msgstr "Anys"
 
@@ -46,22 +52,22 @@ msgstr "Anys"
 msgid "Previous"
 msgstr "Anterior"
 
-#: dateandtime/DatePopup.qml:62
+#: dateandtime/DatePopup.qml:64
 #, kde-format
 msgid "Today"
 msgstr "Avui"
 
-#: dateandtime/DatePopup.qml:69
+#: dateandtime/DatePopup.qml:73
 #, kde-format
 msgid "Next"
 msgstr "Següent"
 
-#: dateandtime/DatePopup.qml:86
+#: dateandtime/DatePopup.qml:92
 #, kde-format
 msgid "Cancel"
 msgstr "Cancel·la"
 
-#: dateandtime/DatePopup.qml:95
+#: dateandtime/DatePopup.qml:101
 #, kde-format
 msgid "Accept"
 msgstr "Accepta"

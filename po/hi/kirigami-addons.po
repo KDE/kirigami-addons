@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-03-30 00:48+0000\n"
+"POT-Creation-Date: 2022-10-25 00:45+0000\n"
 "PO-Revision-Date: 2021-06-29 17:45+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -25,16 +25,19 @@ msgstr ""
 
 #: dateandtime/DatePicker.qml:182
 #, kde-format
+msgctxt "kirigami-addons"
 msgid "Days"
 msgstr ""
 
 #: dateandtime/DatePicker.qml:190
 #, kde-format
+msgctxt "kirigami-addons"
 msgid "Months"
 msgstr ""
 
 #: dateandtime/DatePicker.qml:196
 #, kde-format
+msgctxt "kirigami-addons"
 msgid "Years"
 msgstr ""
 
@@ -43,22 +46,22 @@ msgstr ""
 msgid "Previous"
 msgstr "पिछला"
 
-#: dateandtime/DatePopup.qml:62
+#: dateandtime/DatePopup.qml:64
 #, kde-format
 msgid "Today"
 msgstr "आज"
 
-#: dateandtime/DatePopup.qml:69
+#: dateandtime/DatePopup.qml:73
 #, kde-format
 msgid "Next"
 msgstr "अगला"
 
-#: dateandtime/DatePopup.qml:86
+#: dateandtime/DatePopup.qml:92
 #, kde-format
 msgid "Cancel"
 msgstr "रद्द करें"
 
-#: dateandtime/DatePopup.qml:95
+#: dateandtime/DatePopup.qml:101
 #, kde-format
 msgid "Accept"
 msgstr "स्वीकारें"

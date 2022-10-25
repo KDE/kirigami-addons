@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-03-30 00:48+0000\n"
+"POT-Creation-Date: 2022-10-25 00:45+0000\n"
 "PO-Revision-Date: 2021-08-11 15:18+0300\n"
 "Last-Translator: Дронова Юлия <juliette.tux@gmail.com>\n"
 "Language-Team: RU\n"
@@ -26,16 +26,19 @@ msgstr ""
 
 #: dateandtime/DatePicker.qml:182
 #, kde-format
+msgctxt "kirigami-addons"
 msgid "Days"
 msgstr ""
 
 #: dateandtime/DatePicker.qml:190
 #, kde-format
+msgctxt "kirigami-addons"
 msgid "Months"
 msgstr ""
 
 #: dateandtime/DatePicker.qml:196
 #, kde-format
+msgctxt "kirigami-addons"
 msgid "Years"
 msgstr ""
 
@@ -44,22 +47,22 @@ msgstr ""
 msgid "Previous"
 msgstr "Назад"
 
-#: dateandtime/DatePopup.qml:62
+#: dateandtime/DatePopup.qml:64
 #, kde-format
 msgid "Today"
 msgstr "Сегодня"
 
-#: dateandtime/DatePopup.qml:69
+#: dateandtime/DatePopup.qml:73
 #, kde-format
 msgid "Next"
 msgstr "Далее"
 
-#: dateandtime/DatePopup.qml:86
+#: dateandtime/DatePopup.qml:92
 #, kde-format
 msgid "Cancel"
 msgstr "Отмена"
 
-#: dateandtime/DatePopup.qml:95
+#: dateandtime/DatePopup.qml:101
 #, kde-format
 msgid "Accept"
 msgstr "Принять"
