@@ -18,13 +18,13 @@ Kirigami.ApplicationWindow {
 
     width: Kirigami.Settings.isMobile ? 400 : 800
     height: Kirigami.Settings.isMobile ? 550 : 500
-    
+
     pageStack.defaultColumnWidth: Kirigami.Units.gridUnit * 35
     pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.ToolBar;
     pageStack.globalToolBar.showNavigationButtons: Kirigami.ApplicationHeaderStyle.ShowBackButton;
 
     pageStack.initialPage: pageComponent
-    
+
     Component {
         id: pageComponent
         Kirigami.ScrollablePage {
@@ -33,7 +33,7 @@ Kirigami.ApplicationWindow {
 
             Kirigami.Theme.colorSet: Kirigami.Theme.Window
             Kirigami.Theme.inherit: false
-            
+
             leftPadding: 0
             rightPadding: 0
             topPadding: Kirigami.Units.gridUnit
@@ -42,32 +42,32 @@ Kirigami.ApplicationWindow {
             ColumnLayout {
                 spacing: 0
                 width: page.width
-                
+
                 MobileForm.FormCard {
                     Layout.fillWidth: true
-                    
+
                     contentItem: ColumnLayout {
                         spacing: 0
 
                         MobileForm.FormCardHeader {
                             title: "Buttons"
                         }
-                        
+
                         MobileForm.FormButtonDelegate {
                             id: delegate1
                             text: "Button"
                             onClicked: applicationWindow().pageStack.push(pageComponent)
                         }
-                        
+
                         MobileForm.FormDelegateSeparator { above: delegate1; below: delegate2 }
-                        
+
                         MobileForm.FormButtonDelegate {
                             id: delegate2
                             text: "Button 2"
                         }
-                        
+
                         MobileForm.FormDelegateSeparator { above: delegate2; below: delegate3 }
-                        
+
                         MobileForm.FormButtonDelegate {
                             id: delegate3
                             text: "Notification Settings"
@@ -75,66 +75,66 @@ Kirigami.ApplicationWindow {
                         }
                     }
                 }
-                
+
                 MobileForm.FormSectionText {
                     text: "Use cards to denote relevant groups of settings."
                 }
-                
+
                 // checkboxes
                 MobileForm.FormCard {
                     Layout.fillWidth: true
                     Layout.topMargin: Kirigami.Units.largeSpacing
-                    
+
                     contentItem: ColumnLayout {
                         spacing: 0
-                        
+
                         MobileForm.FormCardHeader {
                             title: "Checkboxes"
                         }
-                        
+
                         MobileForm.FormCheckDelegate {
                             id: checkbox1
                             text: "Check the first box"
                         }
-                        
+
                         MobileForm.FormCheckDelegate {
                             id: checkbox2
                             text: "Check the second box"
                         }
-                        
+
                         MobileForm.FormCheckDelegate {
                             id: checkbox3
                             text: "Check the third box"
                         }
                     }
                 }
-                
+
                 // switches
                 MobileForm.FormCard {
                     Layout.fillWidth: true
                     Layout.topMargin: Kirigami.Units.largeSpacing
-                    
+
                     contentItem: ColumnLayout {
                         spacing: 0
-                        
+
                         MobileForm.FormCardHeader {
                             title: "Switches"
                         }
-                        
+
                         MobileForm.FormSwitchDelegate {
                             id: switch1
                             text: "Toggle the first switch"
                         }
-                        
+
                         MobileForm.FormDelegateSeparator { above: switch1; below: switch2 }
-                        
+
                         MobileForm.FormSwitchDelegate {
                             id: switch2
                             text: "Toggle the second switch"
                         }
-                        
+
                         MobileForm.FormDelegateSeparator { above: switch2; below: switch3 }
-                        
+
                         MobileForm.FormSwitchDelegate {
                             id: switch3
                             text: "Toggle the third switch"
@@ -142,28 +142,28 @@ Kirigami.ApplicationWindow {
                         }
                     }
                 }
-                
+
                 // dropdowns
                 // large amount of options -> push a new page
                 // small amount of options -> open dialog
                 MobileForm.FormCard {
                     Layout.fillWidth: true
                     Layout.topMargin: Kirigami.Units.largeSpacing
-                    
+
                     contentItem: ColumnLayout {
                         spacing: 0
-                        
+
                         MobileForm.FormCardHeader {
                             title: "Dropdowns"
                         }
-                        
+
                         MobileForm.FormComboBoxDelegate {
                             id: dropdown1
                             text: "Select a color"
                             Component.onCompleted: currentIndex = indexOfValue("Breeze Blue")
                             model: ["Breeze Blue", "Konqi Green", "Velvet Red", "Bright Yellow"]
                         }
-                        
+
                         MobileForm.FormDelegateSeparator { above: dropdown1; below: dropdown2 }
 
                         MobileForm.FormComboBoxDelegate {
@@ -172,9 +172,9 @@ Kirigami.ApplicationWindow {
                             Component.onCompleted: currentIndex = indexOfValue("Pentagon")
                             model: ["Circle", "Square", "Pentagon", "Triangle"]
                         }
-                        
+
                         MobileForm.FormDelegateSeparator { above: dropdown2; below: dropdown3 }
-                        
+
                         MobileForm.FormComboBoxDelegate {
                             id: dropdown3
                             text: "Select a time format"
@@ -184,29 +184,29 @@ Kirigami.ApplicationWindow {
                         }
                     }
                 }
-                
+
                 // radio buttons
                 MobileForm.FormCard {
                     Layout.fillWidth: true
                     Layout.topMargin: Kirigami.Units.largeSpacing
-                    
+
                     contentItem: ColumnLayout {
                         spacing: 0
-                        
+
                         MobileForm.FormCardHeader {
                             title: "Radio buttons"
                         }
-                        
+
                         MobileForm.FormRadioDelegate {
                             id: radio1
                             text: "Always on"
                         }
-                        
+
                         MobileForm.FormRadioDelegate {
                             id: radio2
                             text: "On during the day"
                         }
-                        
+
                         MobileForm.FormRadioDelegate {
                             id: radio3
                             text: "Always off"
@@ -218,16 +218,16 @@ Kirigami.ApplicationWindow {
                 MobileForm.FormCard {
                     Layout.fillWidth: true
                     Layout.topMargin: Kirigami.Units.largeSpacing
-                    
+
                     contentItem: ColumnLayout {
                         spacing: 0
-                        
+
                         MobileForm.AbstractFormDelegate {
                             id: slider1
                             Layout.fillWidth: true
-                            
+
                             background: Item {}
-                            
+
                             contentItem: RowLayout {
                                 spacing: Kirigami.Units.gridUnit
                                 Kirigami.Icon {
@@ -235,11 +235,11 @@ Kirigami.ApplicationWindow {
                                     implicitHeight: Kirigami.Units.iconSizes.smallMedium
                                     source: "brightness-low"
                                 }
-                                
+
                                 Controls.Slider {
                                     Layout.fillWidth: true
                                 }
-                                
+
                                 Kirigami.Icon {
                                     implicitWidth: Kirigami.Units.iconSizes.smallMedium
                                     implicitHeight: Kirigami.Units.iconSizes.smallMedium
@@ -247,9 +247,9 @@ Kirigami.ApplicationWindow {
                                 }
                             }
                         }
-                        
+
                         MobileForm.FormDelegateSeparator { above: slider1; below: textinput1 }
-                        
+
                         MobileForm.AbstractFormDelegate {
                             id: textinput1
                             Layout.fillWidth: true
@@ -258,16 +258,16 @@ Kirigami.ApplicationWindow {
                                     Layout.fillWidth: true
                                     text: "Enter text"
                                 }
-                                
+
                                 Controls.TextField {
                                     Layout.preferredWidth: Kirigami.Units.gridUnit * 8
                                     placeholderText: "Insert text…"
                                 }
                             }
                         }
-                        
+
                         MobileForm.FormDelegateSeparator { above: textinput1; below: action1 }
-                        
+
                         MobileForm.AbstractFormDelegate {
                             id: action1
                             Layout.fillWidth: true
@@ -276,7 +276,7 @@ Kirigami.ApplicationWindow {
                                     Layout.fillWidth: true
                                     text: "Do an action"
                                 }
-                                
+
                                 Controls.Button {
                                     text: "Do Action"
                                     icon.name: "edit-clear-all"
@@ -285,15 +285,15 @@ Kirigami.ApplicationWindow {
                         }
                     }
                 }
-                
+
                 // info block
                 MobileForm.FormCard {
                     Layout.fillWidth: true
                     Layout.topMargin: Kirigami.Units.largeSpacing
-                    
+
                     contentItem: ColumnLayout {
                         spacing: 0
-                        
+
                         MobileForm.FormCardHeader {
                             title: "Information"
                         }
@@ -303,29 +303,49 @@ Kirigami.ApplicationWindow {
                             text: "Color"
                             description: "Blue"
                         }
-                        
+
                         MobileForm.FormDelegateSeparator {}
-                        
+
                         MobileForm.FormTextDelegate {
                             id: info2
                             text: "Best Desktop Environment"
                             description: "KDE Plasma (Mobile)"
                         }
-                        
+
                         MobileForm.FormDelegateSeparator {}
-                        
+
                         MobileForm.FormTextDelegate {
                             id: info3
                             text: "Best Dragon"
                             description: "Konqi"
                         }
+
+                        MobileForm.FormTextFieldDelegate {
+                            label: "Account name"
+                        }
+
+                        MobileForm.FormTextFieldDelegate {
+                            label: "Password"
+                            statusMessage: "Password incorrect"
+                            status: MobileForm.AbstractFormDelegate.Status.Error
+                            echoMode: TextInput.Password
+                            text: "666666666"
+                        }
+
+                        MobileForm.FormTextFieldDelegate {
+                            label: "Password"
+                            statusMessage: "Password match"
+                            text: "4242424242"
+                            status: MobileForm.AbstractFormDelegate.Status.Success
+                            echoMode: TextInput.Password
+                        }
                     }
                 }
-                
+
                 MobileForm.FormSectionText {
                     text: "Use the text form delegates to display information."
                 }
-                
+
                 // TODO: "infinite" listview
             }
         }

@@ -11,6 +11,38 @@ import org.kde.kirigami 2.19 as Kirigami
 
 /**
  * Form delegate that corresponds to a text label.
+ *
+ * ```qml
+ * MobileForm.FormCard {
+ *     contentItem: ColumnLayout {
+ *         spacing: 0
+ *
+ *         MobileForm.FormCardHeader {
+ *             title: "Information"
+ *         }
+ *
+ *         MobileForm.FormTextFieldDelegate {
+ *             label: "Account name"
+ *         }
+ *
+ *         MobileForm.FormTextFieldDelegate {
+ *             label: "Password"
+ *             statusMessage: "Password incorrect"
+ *             status: MobileForm.AbstractFormDelegate.Status.Error
+ *             echoMode: TextInput.Password
+ *             text: "666666666"
+ *         }
+ *
+ *         MobileForm.FormTextFieldDelegate {
+ *             label: "Password"
+ *             statusMessage: "Password match"
+ *             text: "4242424242"
+ *             status: MobileForm.AbstractFormDelegate.Status.Success
+ *             echoMode: TextInput.Password
+ *         }
+ *     }
+ * }
+ * ```
  */
 AbstractFormDelegate {
     id: root
@@ -79,6 +111,7 @@ AbstractFormDelegate {
             id: textField
             Accessible.description: label
             Layout.fillWidth: true
+            text: root.text
             onTextChanged: root.text = text
             onAccepted: root.accepted()
             onEditingFinished: root.editingFinished()
