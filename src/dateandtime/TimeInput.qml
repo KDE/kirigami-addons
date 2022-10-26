@@ -5,14 +5,14 @@
  */
 
 import QtQuick 2.15
-import QtQuick.Controls 2.5
+import QtQuick.Controls 2.15 as QQC2
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kirigamiaddons.dateandtime 0.1
 
 /**
  * TimeInput is a single line time editor.
  */
-TextField
-{
+QQC2.TextField {
     id: timeInput
 
     /**
@@ -50,8 +50,12 @@ TextField
 
     MouseArea {
         anchors.fill: parent
-        enabled: Qt.platform.os === 'android'
-        onClicked: AndroidIntegration.showTimePicker(timeInput.value.getTime());
+        enabled: Kirigami.Settings.isMobile
+        onClicked: if (Qt.platform.os === 'android') {
+            AndroidIntegration.showTimePicker(timeInput.value.getTime());
+        } else {
+            popup.open();
+        }
         Connections {
             enabled: Qt.platform.os === 'android'
             ignoreUnknownSignals: !enabled
@@ -60,6 +64,30 @@ TextField
                 if (accepted) {
                     timeInput.value = newDate;
                 }
+            }
+        }
+    }
+
+    QQC2.Popup {
+        id: popup
+        x: parent ? Math.round((parent.width - width) / 2) : 0
+        y: parent ? Math.round((parent.height - height) / 2) : 0
+        modal: true
+
+        contentItem: TumblerTimePicker {
+            id: popupContent
+            implicitWidth: applicationWindow().width
+            minutes: timeInput.value.getMinutes()
+            hours: timeInput.value.getHours()
+            onMinutesChanged: {
+                const date = new Date(timeInput.value);
+                date.setHours(hours, minutes);
+                timeInput.value = date;
+            }
+            onHoursChanged: {
+                const date = new Date(timeInput.value);
+                date.setHours(hours, minutes);
+                timeInput.value = date;
             }
         }
     }
