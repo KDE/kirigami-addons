@@ -61,8 +61,14 @@ AbstractFormDelegate {
      * This property holds the current status of the text field.
      *
      * Depending on the status of the textField the statusMessage property will look different
+     *
+     * Accepted values:
+     * - Kirigami.MessageType.Information
+     * - Kirigami.MessageType.Positive
+     * - Kirigami.MessageType.Warning
+     * - Kirigami.MessageType.Error
      */
-    property var status: AbstractFormDelegate.Status.Default
+    property var status: Kirigami.MessageType.Information
 
     /**
      * This property holds the current status message of the text field.
@@ -118,11 +124,13 @@ AbstractFormDelegate {
             onTextEdited: root.textEdited()
         }
 
-        FormStatusMessage {
+        Kirigami.InlineMessage {
             id: formErrorHandler
+            visible: root.statusMessage.length > 0
             Layout.topMargin: visible ? Kirigami.Units.smallSpacing : 0
-            statusMessage: root.statusMessage
-            status: root.status
+            Layout.fillWidth: true
+            text: root.statusMessage
+            type: root.status
         }
     }
 }

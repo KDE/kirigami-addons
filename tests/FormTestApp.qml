@@ -320,11 +320,17 @@ Kirigami.ApplicationWindow {
                             description: "Konqi"
                         }
 
+                        MobileForm.FormDelegateSeparator { above: info3; below: account }
+
                         MobileForm.FormTextFieldDelegate {
+                            id: account
                             label: "Account name"
                         }
 
+                        MobileForm.FormDelegateSeparator { above: account; below: password1 }
+
                         MobileForm.FormTextFieldDelegate {
+                            id: password1
                             label: "Password"
                             statusMessage: "Password incorrect"
                             status: MobileForm.AbstractFormDelegate.Status.Error
@@ -332,7 +338,10 @@ Kirigami.ApplicationWindow {
                             text: "666666666"
                         }
 
+                        MobileForm.FormDelegateSeparator { above: password1; below: password2 }
+
                         MobileForm.FormTextFieldDelegate {
+                            id: password2
                             label: "Password"
                             statusMessage: "Password match"
                             text: "4242424242"
