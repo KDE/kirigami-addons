@@ -37,7 +37,6 @@ ecm_target_qml_sources(dateandtimeplugin SOURCES
     TimeInput.qml
 )
 ecm_target_qml_sources(dateandtimeplugin PATH private SOURCES
-    private/ClockElement.qml
     private/DesktopDateInput.qml
     private/Hand.qml
     private/MobileDateInput.qml
