@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2021 Han Young <hanyoung@protonmail.com>
+// SPDX-FileCopyrightText: 2022 Carl Schwan <carl@carlschwan.eu>
+// SPDX-License-Identifier: LGPL-2.1-or-later
+
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import org.kde.kirigami 2.20 as Kirigami
@@ -24,6 +28,8 @@ RowLayout {
 
     property bool _pm: false
 
+    property bool _init: false
+
     readonly property bool _isAmPm: Qt.locale().timeFormat().includes("AP")
 
     implicitHeight: Kirigami.Units.gridUnit * 5
@@ -32,6 +38,13 @@ RowLayout {
     Component.onCompleted: {
         hoursTumbler.currentIndex = (_isAmPm && hours > 12 ? hours - 12 : hours);
         minutesTumbler.currentIndex = minutes;
+        if (_isAmPm) {
+            amPmTumbler.currentIndex = hours > 12 ? 1 : 0;
+        }
+
+        // Avoid initialisation bug where thumbler are by default initialised
+        // to currentIndex 0
+        _init = true;
     }
 
     function formatText(count, modelData) {
@@ -64,7 +77,10 @@ RowLayout {
         model: _isAmPm ? 12 : 24
         delegate: delegateComponent
         visibleItemCount: 5
-        onCurrentIndexChanged: hours = currentIndex + (_isAmPm && _pm ? 12 : 0)
+        onCurrentIndexChanged: if (_init) {
+            console.error(_isAmPm, _pm, currentIndex)
+            hours = currentIndex + (_isAmPm && _pm ? 12 : 0)
+        }
     }
 
     Label {
@@ -79,17 +95,21 @@ RowLayout {
         model: 60
         delegate: delegateComponent
         visibleItemCount: 5
-        onCurrentIndexChanged: minutes = currentIndex
+        onCurrentIndexChanged: if (_init) {
+            minutes = currentIndex;
+        }
     }
 
     Tumbler {
+        id: amPmTumbler
         visible: _isAmPm
         Layout.preferredHeight: Kirigami.Units.gridUnit * 10
         model: [Qt.locale().amText, Qt.locale().pmText]
         delegate: delegateComponent
         visibleItemCount: 5
-        currentIndex: _isAmPm && hours > 12 ? 1 : 0
-        onCurrentIndexChanged: _pm = currentIndex
+        onCurrentIndexChanged: if (_isAmPm && _init) {
+            _pm = currentIndex;
+        }
     }
 
     Item {
