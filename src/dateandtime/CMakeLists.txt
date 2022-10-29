@@ -35,8 +35,12 @@ ecm_target_qml_sources(dateandtimeplugin SOURCES
     DatePicker.qml
     DatePopup.qml
     TimeInput.qml
+
+    # deprecated
+    TimePicker.qml
 )
 ecm_target_qml_sources(dateandtimeplugin PATH private SOURCES
+    private/ClockElement.qml
     private/DesktopDateInput.qml
     private/Hand.qml
     private/MobileDateInput.qml
