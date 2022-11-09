@@ -103,12 +103,6 @@ AbstractFormDelegate {
                 spacing: 0
                 model: controlRoot.model
                 delegate: controlRoot.delegate
-                //    Layout.preferredWidth: Kirigami.Units.gridUnit * 25
-                //    text: controlRoot.textRole ? (Array.isArray(controlRoot.model) ? modelData[root.textRole] : model[root.textRole]) : modelData
-                //    highlighted: combobox.highlightedIndex == index
-                //    Kirigami.Theme.colorSet: root.Kirigami.Theme.inherit ? root.Kirigami.Theme.colorSet : Kirigami.Theme.View
-                //    Kirigami.Theme.inherit: root.Kirigami.Theme.inherit
-                //}
             }
         }
     }
@@ -118,6 +112,7 @@ AbstractFormDelegate {
     }
 
     Layout.fillWidth: true
+    Accessible.description: description
 
     contentItem: RowLayout {
         ColumnLayout {
