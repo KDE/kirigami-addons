@@ -160,21 +160,8 @@ Kirigami.ApplicationWindow {
                         MobileForm.FormComboBoxDelegate {
                             id: dropdown1
                             text: "Select a color"
-                            currentValue: "Breeze Blue"
+                            Component.onCompleted: currentIndex = indexOfValue("Breeze Blue")
                             model: ["Breeze Blue", "Konqi Green", "Velvet Red", "Bright Yellow"]
-                            dialogDelegate: Controls.RadioDelegate {
-                                implicitWidth: Kirigami.Units.gridUnit * 16
-                                topPadding: Kirigami.Units.smallSpacing * 2
-                                bottomPadding: Kirigami.Units.smallSpacing * 2
-                                
-                                text: modelData
-                                checked: dropdown1.currentValue == modelData
-                                onCheckedChanged: {
-                                    if (checked) {
-                                        dropdown1.currentValue = modelData;
-                                    }
-                                }
-                            }
                         }
                         
                         MobileForm.FormDelegateSeparator { above: dropdown1; below: dropdown2 }
@@ -182,21 +169,8 @@ Kirigami.ApplicationWindow {
                         MobileForm.FormComboBoxDelegate {
                             id: dropdown2
                             text: "Select a shape"
-                            currentValue: "Pentagon"
+                            Component.onCompleted: currentIndex = indexOfValue("Pentagon")
                             model: ["Circle", "Square", "Pentagon", "Triangle"]
-                            dialogDelegate: Controls.RadioDelegate {
-                                implicitWidth: Kirigami.Units.gridUnit * 16
-                                topPadding: Kirigami.Units.smallSpacing * 2
-                                bottomPadding: Kirigami.Units.smallSpacing * 2
-                                
-                                text: modelData
-                                checked: dropdown2.currentValue == modelData
-                                onCheckedChanged: {
-                                    if (checked) {
-                                        dropdown2.currentValue = modelData;
-                                    }
-                                }
-                            }
                         }
                         
                         MobileForm.FormDelegateSeparator { above: dropdown2; below: dropdown3 }
@@ -205,21 +179,8 @@ Kirigami.ApplicationWindow {
                             id: dropdown3
                             text: "Select a time format"
                             description: "This will be used system-wide."
-                            currentValue: "Use System Default"
+                            Component.onCompleted: currentIndex = indexOfValue("Use System Default")
                             model: ["Use System Default", "24 Hour Time", "12 Hour Time"]
-                            dialogDelegate: Controls.RadioDelegate {
-                                implicitWidth: Kirigami.Units.gridUnit * 16
-                                topPadding: Kirigami.Units.smallSpacing * 2
-                                bottomPadding: Kirigami.Units.smallSpacing * 2
-                                
-                                text: modelData
-                                checked: dropdown3.currentValue == modelData
-                                onCheckedChanged: {
-                                    if (checked) {
-                                        dropdown3.currentValue = modelData;
-                                    }
-                                }
-                            }
                         }
                     }
                 }

@@ -13,7 +13,7 @@ import org.kde.kirigami 2.19 as Kirigami
  * Form delegate that corresponds to a combobox.
  */
 AbstractFormDelegate {
-    id: root
+    id: controlRoot
 
     /**
      * Label that appears under the main text, that provides additional information about the delegate.
@@ -26,9 +26,21 @@ AbstractFormDelegate {
     property alias currentValue: combobox.currentValue
 
     /**
-     * The delegate component to use as entries in the dialog.
+     * The delegate component to use as entries in the dialog and combobox.
      */
-    property alias dialogDelegate: repeater.delegate
+    property Component delegate: ItemDelegate {
+        implicitWidth: ListView.view ? ListView.view.width : Kirigami.Units.gridUnit * 16
+        text: controlRoot.textRole ? (Array.isArray(controlRoot.model) ? modelData[controlRoot.textRole] : model[controlRoot.textRole]) : modelData
+        highlighted: controlRoot.highlightedIndex == index
+        property bool separatorVisible: false
+        Kirigami.Theme.colorSet: controlRoot.Kirigami.Theme.inherit ? controlRoot.Kirigami.Theme.colorSet : Kirigami.Theme.View
+        Kirigami.Theme.inherit: controlRoot.Kirigami.Theme.inherit
+        onClicked: if (Kirigami.Settings.isMobile) {
+            combobox.currentIndex = index;
+            combobox.activated(index);
+            controlRoot.dialog.close();
+        }
+    }
 
     /**
      * The model to use for the dialog.
@@ -68,41 +80,35 @@ AbstractFormDelegate {
     property var dialog: Kirigami.Dialog {
         id: dialog
         showCloseButton: false
-        title: root.text
+        title: controlRoot.text
 
         // use connections instead of onClicked on root, so that users can supply
         // their own behaviour.
         Connections {
-            target: root
+            target: controlRoot
             function onClicked() {
                 if (Kirigami.Settings.isMobile) {
-                    root.dialog.open();
+                    controlRoot.dialog.open();
                 } else {
                     combobox.popup.open();
                 }
             }
         }
 
-        ColumnLayout {
+        ScrollView {
+            implicitWidth: Kirigami.Units.gridUnit * 16
             Kirigami.Theme.inherit: false
             Kirigami.Theme.colorSet: Kirigami.Theme.View
-            spacing: 0
-
-            Repeater {
-                id: repeater
-                model: root.model
-                delegate: ItemDelegate {
-                    Layout.preferredWidth: Kirigami.Units.gridUnit * 25
-                    text: root.textRole ? (Array.isArray(root.model) ? modelData[root.textRole] : model[root.textRole]) : modelData
-                    highlighted: combobox.highlightedIndex == index
-                    Kirigami.Theme.colorSet: root.Kirigami.Theme.inherit ? root.Kirigami.Theme.colorSet : Kirigami.Theme.View
-                    Kirigami.Theme.inherit: root.Kirigami.Theme.inherit
-                    onClicked: {
-                        combobox.currentIndex = index;
-                        combobox.activated(index);
-                        root.dialog.close();
-                    }
-                }
+            ListView {
+                spacing: 0
+                model: controlRoot.model
+                delegate: controlRoot.delegate
+                //    Layout.preferredWidth: Kirigami.Units.gridUnit * 25
+                //    text: controlRoot.textRole ? (Array.isArray(controlRoot.model) ? modelData[root.textRole] : model[root.textRole]) : modelData
+                //    highlighted: combobox.highlightedIndex == index
+                //    Kirigami.Theme.colorSet: root.Kirigami.Theme.inherit ? root.Kirigami.Theme.colorSet : Kirigami.Theme.View
+                //    Kirigami.Theme.inherit: root.Kirigami.Theme.inherit
+                //}
             }
         }
     }
@@ -120,16 +126,16 @@ AbstractFormDelegate {
 
             Label {
                 Layout.fillWidth: true
-                text: root.text
+                text: controlRoot.text
                 elide: Text.ElideRight
                 wrapMode: Text.Wrap
                 maximumLineCount: 2
             }
 
             Label {
-                visible: root.description !== ""
+                visible: controlRoot.description !== ""
                 Layout.fillWidth: true
-                text: root.description
+                text: controlRoot.description
                 color: Kirigami.Theme.disabledTextColor
                 font: Kirigami.Theme.smallFont
             }
@@ -139,15 +145,17 @@ AbstractFormDelegate {
             Layout.alignment: Qt.AlignRight
             Layout.rightMargin: Kirigami.Units.smallSpacing
             color: Kirigami.Theme.disabledTextColor
-            text: root.currentValue
+            text: controlRoot.currentValue
+            visible: Kirigami.Settings.isMobile
         }
 
         ComboBox {
             id: combobox
-            model: root.model
+            model: controlRoot.model
             visible: !Kirigami.Settings.isMobile
-            textRole: "display"
-            onActivated: root.activated(index)
+            delegate: controlRoot.delegate
+            currentIndex: controlRoot.currentIndex
+            onActivated: controlRoot.activated(index)
         }
 
         FormArrow {
