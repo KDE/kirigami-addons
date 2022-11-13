@@ -4,7 +4,7 @@
  */
 
 import QtQuick 2.15
-import QtQuick.Controls 2.15
+import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.15
 
 import org.kde.kirigami 2.19 as Kirigami
@@ -16,34 +16,27 @@ AbstractFormDelegate {
     id: controlRoot
 
     /**
+     * This signal is emitted when the item at index is activated by the user.
+     */
+    signal activated(int index)
+
+    /**
      * Label that appears under the main text, that provides additional information about the delegate.
      */
     property string description: ""
 
     /**
-     * Text to display as the current value of the combobox.
+     * This property holds the value of the current item in the combo box.
      */
     property alias currentValue: combobox.currentValue
 
     /**
-     * The delegate component to use as entries in the dialog and combobox.
+     * This property holds the text of the current item in the combo box.
      */
-    property Component delegate: ItemDelegate {
-        implicitWidth: ListView.view ? ListView.view.width : Kirigami.Units.gridUnit * 16
-        text: controlRoot.textRole ? (Array.isArray(controlRoot.model) ? modelData[controlRoot.textRole] : model[controlRoot.textRole]) : modelData
-        highlighted: controlRoot.highlightedIndex == index
-        property bool separatorVisible: false
-        Kirigami.Theme.colorSet: controlRoot.Kirigami.Theme.inherit ? controlRoot.Kirigami.Theme.colorSet : Kirigami.Theme.View
-        Kirigami.Theme.inherit: controlRoot.Kirigami.Theme.inherit
-        onClicked: if (Kirigami.Settings.isMobile) {
-            combobox.currentIndex = index;
-            combobox.activated(index);
-            controlRoot.dialog.close();
-        }
-    }
+    property alias currentText: combobox.currentText
 
     /**
-     * The model to use for the dialog.
+     * This property holds the model providing data for the combo box.
      */
     property var model
 
@@ -68,9 +61,33 @@ AbstractFormDelegate {
     property alias highlightedIndex: combobox.highlightedIndex
 
     /**
-     * This signal is emitted when the item at index is activated by the user.
+     * The delegate component to use as entries in the desktop combobox.
      */
-    signal activated(int index)
+    property Component delegate: QQC2.ItemDelegate {
+        implicitWidth: ListView.view ? ListView.view.width : Kirigami.Units.gridUnit * 16
+        text: controlRoot.textRole ? (Array.isArray(controlRoot.model) ? modelData[controlRoot.textRole] : model[controlRoot.textRole]) : modelData
+        highlighted: controlRoot.highlightedIndex === index
+        property bool separatorVisible: false
+        Kirigami.Theme.colorSet: controlRoot.Kirigami.Theme.inherit ? controlRoot.Kirigami.Theme.colorSet : Kirigami.Theme.View
+        Kirigami.Theme.inherit: controlRoot.Kirigami.Theme.inherit
+    }
+
+    /**
+     * The delegate component to use as entries in the mobile combobox.
+     */
+    property Component mobileDelegate: QQC2.RadioDelegate {
+        implicitWidth: ListView.view ? ListView.view.width : Kirigami.Units.gridUnit * 16
+        text: controlRoot.textRole ? (Array.isArray(controlRoot.model) ? modelData[controlRoot.textRole] : model[controlRoot.textRole]) : modelData
+        checked: controlRoot.currentIndex === index
+        property bool separatorVisible: false
+        Kirigami.Theme.colorSet: controlRoot.Kirigami.Theme.inherit ? controlRoot.Kirigami.Theme.colorSet : Kirigami.Theme.View
+        Kirigami.Theme.inherit: controlRoot.Kirigami.Theme.inherit
+        onClicked: {
+            combobox.currentIndex = index;
+            combobox.activated(index);
+            controlRoot.dialog.close();
+        }
+    }
 
     /**
      * The dialog component used for the combobox.
@@ -95,14 +112,14 @@ AbstractFormDelegate {
             }
         }
 
-        ScrollView {
+        QQC2.ScrollView {
             implicitWidth: Kirigami.Units.gridUnit * 16
             Kirigami.Theme.inherit: false
             Kirigami.Theme.colorSet: Kirigami.Theme.View
             ListView {
                 spacing: 0
                 model: controlRoot.model
-                delegate: controlRoot.delegate
+                delegate: controlRoot.mobileDelegate
             }
         }
     }
@@ -119,7 +136,7 @@ AbstractFormDelegate {
             Layout.fillWidth: true
             spacing: Kirigami.Units.smallSpacing
 
-            Label {
+            QQC2.Label {
                 Layout.fillWidth: true
                 text: controlRoot.text
                 elide: Text.ElideRight
@@ -127,7 +144,7 @@ AbstractFormDelegate {
                 maximumLineCount: 2
             }
 
-            Label {
+            QQC2.Label {
                 visible: controlRoot.description !== ""
                 Layout.fillWidth: true
                 text: controlRoot.description
@@ -136,15 +153,15 @@ AbstractFormDelegate {
             }
         }
 
-        Label {
+        QQC2.Label {
             Layout.alignment: Qt.AlignRight
             Layout.rightMargin: Kirigami.Units.smallSpacing
             color: Kirigami.Theme.disabledTextColor
-            text: controlRoot.currentValue
+            text: controlRoot.currentText
             visible: Kirigami.Settings.isMobile
         }
 
-        ComboBox {
+        QQC2.ComboBox {
             id: combobox
             model: controlRoot.model
             visible: !Kirigami.Settings.isMobile
