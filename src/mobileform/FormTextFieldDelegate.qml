@@ -28,7 +28,7 @@ import org.kde.kirigami 2.19 as Kirigami
  *         MobileForm.FormTextFieldDelegate {
  *             label: "Password"
  *             statusMessage: "Password incorrect"
- *             status: MobileForm.AbstractFormDelegate.Status.Error
+ *             status: Kirigami.MessageType.Error
  *             echoMode: TextInput.Password
  *             text: "666666666"
  *         }
@@ -37,7 +37,7 @@ import org.kde.kirigami 2.19 as Kirigami
  *             label: "Password"
  *             statusMessage: "Password match"
  *             text: "4242424242"
- *             status: MobileForm.AbstractFormDelegate.Status.Success
+ *             status: Kirigami.MessageType.Positive
  *             echoMode: TextInput.Password
  *         }
  *     }
@@ -107,6 +107,7 @@ AbstractFormDelegate {
     Layout.fillWidth: true
 
     onClicked: textField.forceActiveFocus()
+    background: Item {}
 
     contentItem: ColumnLayout {
         Label {

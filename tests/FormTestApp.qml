@@ -333,7 +333,7 @@ Kirigami.ApplicationWindow {
                             id: password1
                             label: "Password"
                             statusMessage: "Password incorrect"
-                            status: MobileForm.AbstractFormDelegate.Status.Error
+                            status: Kirigami.MessageType.Error
                             echoMode: TextInput.Password
                             text: "666666666"
                         }
@@ -345,7 +345,7 @@ Kirigami.ApplicationWindow {
                             label: "Password"
                             statusMessage: "Password match"
                             text: "4242424242"
-                            status: MobileForm.AbstractFormDelegate.Status.Success
+                            status: Kirigami.MessageType.Positive
                             echoMode: TextInput.Password
                         }
                     }
