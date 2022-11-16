@@ -58,6 +58,11 @@ AbstractFormDelegate {
     property alias echoMode: textField.echoMode
 
     /**
+     * This property holds the inputMethodHints of the internal TextField
+     */
+    property alias inputMethodHints: textField.inputMethodHints
+
+    /**
      * This property holds the current status of the text field.
      *
      * Depending on the status of the textField the statusMessage property will look different
