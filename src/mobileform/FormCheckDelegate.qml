@@ -37,6 +37,8 @@ T.CheckDelegate {
             checkState: root.checkState
             nextCheckState: root.nextCheckState
             tristate: root.tristate
+
+            onToggled: root.toggled()
             
             enabled: root.enabled
             checked: root.checked
