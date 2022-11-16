@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-25 00:45+0000\n"
+"POT-Creation-Date: 2022-11-16 00:45+0000\n"
 "PO-Revision-Date: 2022-10-25 11:59+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -66,3 +66,9 @@ msgstr "Скасувати"
 #, kde-format
 msgid "Accept"
 msgstr "Прийняти"
+
+#: dateandtime/private/TumblerTimePicker.qml:88
+#, kde-format
+msgctxt "Time separator"
+msgid ":"
+msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-25 00:45+0000\n"
+"POT-Creation-Date: 2022-11-16 00:45+0000\n"
 "PO-Revision-Date: 2022-10-25 21:34+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -65,3 +65,9 @@ msgstr "ரத்து செய்"
 #, kde-format
 msgid "Accept"
 msgstr "ஏற்றுக்கொள்"
+
+#: dateandtime/private/TumblerTimePicker.qml:88
+#, kde-format
+msgctxt "Time separator"
+msgid ":"
+msgstr ""
