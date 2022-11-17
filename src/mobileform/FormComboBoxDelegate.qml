@@ -59,6 +59,19 @@ AbstractFormDelegate {
      * This property holds the highlightedIndex of the internal combobox
      */
     property alias highlightedIndex: combobox.highlightedIndex
+    
+    enum DisplayMode {
+        ComboBox,
+        Dialog
+    }
+    
+    /** 
+     * This property holds what display mode the delegate should show in.
+     * Possible values:
+     * - FormComboBoxDelegate.ComboBox - Show a classic combobox component in the delegate.
+     * - FormComboBoxDelegate.Dialog - Have the full delegate be clickable and open a dialog to select values.
+     */
+    property int displayMode: Kirigami.Settings.isMobile ? FormComboBoxDelegate.Dialog : FormComboBoxDelegate.ComboBox
 
     /**
      * The delegate component to use as entries in the desktop combobox.
@@ -104,7 +117,7 @@ AbstractFormDelegate {
         Connections {
             target: controlRoot
             function onClicked() {
-                if (Kirigami.Settings.isMobile) {
+                if (controlRoot.displayMode === FormComboBoxDelegate.Dialog) {
                     controlRoot.dialog.open();
                 } else {
                     combobox.popup.open();
@@ -158,13 +171,13 @@ AbstractFormDelegate {
             Layout.rightMargin: Kirigami.Units.smallSpacing
             color: Kirigami.Theme.disabledTextColor
             text: controlRoot.currentText
-            visible: Kirigami.Settings.isMobile
+            visible: controlRoot.displayMode == FormComboBoxDelegate.Dialog
         }
 
         QQC2.ComboBox {
             id: combobox
             model: controlRoot.model
-            visible: !Kirigami.Settings.isMobile
+            visible: controlRoot.displayMode == FormComboBoxDelegate.ComboBox
             delegate: controlRoot.delegate
             currentIndex: controlRoot.currentIndex
             onActivated: controlRoot.activated(index)
@@ -173,7 +186,7 @@ AbstractFormDelegate {
         FormArrow {
             Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
             direction: FormArrow.Down
-            visible: Kirigami.Settings.isMobile
+            visible: controlRoot.displayMode == FormComboBoxDelegate.Dialog
         }
     }
 }
