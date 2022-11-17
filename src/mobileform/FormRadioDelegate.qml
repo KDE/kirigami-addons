@@ -15,6 +15,11 @@ import org.kde.kirigami 2.19 as Kirigami
  */
 T.RadioDelegate {
     id: root
+
+    /**
+     * Label that appears under the main text, that provides additional information about the delegate.
+     */
+    property string description: ""
     
     leftPadding: Kirigami.Units.gridUnit
     topPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
@@ -42,14 +47,28 @@ T.RadioDelegate {
                 checked = Qt.binding(() => root.checked);
             }
         }
-        
-        Controls.Label {
-            text: root.text
-            color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
-            elide: Text.ElideRight
-            wrapMode: Text.Wrap
-            maximumLineCount: 2
+
+        ColumnLayout {
             Layout.fillWidth: true
+            spacing: Kirigami.Units.smallSpacing
+
+            Controls.Label {
+                Layout.fillWidth: true
+                text: root.text
+                color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
+                elide: Text.ElideRight
+                wrapMode: Text.Wrap
+                maximumLineCount: 2
+            }
+
+            Controls.Label {
+                visible: root.description !== ""
+                Layout.fillWidth: true
+                text: root.description
+                color: Kirigami.Theme.disabledTextColor
+                font: Kirigami.Theme.smallFont
+                elide: Text.ElideRight
+            }
         }
     }
 }
