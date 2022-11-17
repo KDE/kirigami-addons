@@ -14,6 +14,7 @@ ecm_target_qml_sources(mobileformplugin SOURCES
     FormArrow.qml
     FormButtonDelegate.qml
     FormCard.qml
+    AboutCard.qml
     FormCardHeader.qml
     FormCheckDelegate.qml
     FormComboBoxDelegate.qml
