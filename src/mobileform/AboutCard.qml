@@ -37,7 +37,7 @@ FormCard {
           "authors" : [
               {
                   "name" : "...",
-                  "task" : "",
+                  "task" : "...",
                   "emailAddress" : "somebody@kde.org",
                   "webAddress" : "",
                   "ocsUsername" : ""
@@ -81,7 +81,6 @@ FormCard {
         AbstractFormDelegate {
             Layout.fillWidth: true
             contentItem: RowLayout {
-
                 spacing: Kirigami.Units.smallSpacing * 2
 
                 Kirigami.Avatar {
@@ -92,7 +91,7 @@ FormCard {
                     implicitWidth: Kirigami.Units.iconSizes.medium
                     implicitHeight: implicitWidth
                     initialsMode: Kirigami.Avatar.ImageMode.AlwaysShowImage
-                    source: hasRemoteAvatar ? "https://store.kde.org/avatar/%1?s=%2".arg(modelData.ocsUsername).arg(width) : "user"
+                    source: hasRemoteAvatar ? "https://store.kde.org/avatar/%1?s=%2".arg(modelData.ocsUsername).arg(width) : ''
                 }
 
                 ColumnLayout {
@@ -103,7 +102,6 @@ FormCard {
                         Layout.fillWidth: true
                         text: modelData.name
                         elide: Text.ElideRight
-                        onLinkActivated: root.linkActivated(link)
                     }
 
                     QQC2.Label {
@@ -113,8 +111,7 @@ FormCard {
                         color: Kirigami.Theme.disabledTextColor
                         font: Kirigami.Theme.smallFont
                         elide: Text.ElideRight
-                        visible: root.description !== ""
-                        onLinkActivated: root.linkActivated(link)
+                        visible: text !== ""
                     }
                 }
 

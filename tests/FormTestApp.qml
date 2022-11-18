@@ -24,6 +24,15 @@ Kirigami.ApplicationWindow {
     pageStack.globalToolBar.showNavigationButtons: Kirigami.ApplicationHeaderStyle.ShowBackButton;
 
     pageStack.initialPage: pageComponent
+    // Dummy implementation of ki18n
+    function i18nd(context, text) {
+        return text;
+    }
+
+    function i18ndp(context, text1, text2, number) {
+        return number === 1 ? text1 : text2;
+    }
+
 
     Component {
         id: pageComponent
@@ -286,6 +295,41 @@ Kirigami.ApplicationWindow {
                     }
                 }
 
+                MobileForm.AboutCard {
+                    Layout.fillWidth: true
+                    Layout.topMargin: Kirigami.Units.largeSpacing
+                    aboutData: {
+                        "displayName": "KirigamiApp",
+                       "productName" : "kirigami/app",
+                       "componentName" : "kirigamiapp",
+                       "shortDescription" : "A Kirigami example",
+                       "homepage" : "",
+                       "bugAddress" : "submit@bugs.kde.org",
+                       "version" : "5.14.80",
+                       "otherText" : "",
+                       "authors" : [
+                           {
+                               "name" : "Paul Müller",
+                               "task" : "Concept and development",
+                               "emailAddress" : "somebody@kde.org",
+                               "webAddress" : "",
+                               "ocsUsername" : ""
+                           }
+                       ],
+                       "credits" : [],
+                       "translators" : [],
+                       "licenses" : [
+                           {
+                               "name" : "GPL v2",
+                               "text" : "long, boring, license text",
+                               "spdx" : "GPL-2.0"
+                           }
+                       ],
+                       "copyrightStatement" : "© 2010-2018 Plasma Development Team",
+                       "desktopFileName" : "org.kde.kirigamiapp"
+                       }
+                }
+
                 // info block
                 MobileForm.FormCard {
                     Layout.fillWidth: true
@@ -368,7 +412,9 @@ Kirigami.ApplicationWindow {
                     }
                 }
 
-                // TODO: "infinite" listview
+                MobileForm.FormSectionText {
+                    text: "Use the text form delegates to display information."
+                }
             }
         }
     }
