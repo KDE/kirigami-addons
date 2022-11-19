@@ -21,9 +21,6 @@ import org.kde.kirigami 2.20 as Kirigami
 Kirigami.ScrollablePage {
     id: aboutCard
 
-    leftPadding: 0
-    rightPadding: 0
-
     /**
      * @brief This property holds an object with the same shape as KAboutData.
      *
@@ -79,6 +76,13 @@ Kirigami.ScrollablePage {
      */
     property url donateUrl: aboutData.desktopFileName.startsWith("org.kde.") ? "https://community.kde.org/donations" : ""
 
+    leftPadding: 0
+    rightPadding: 0
+    topPadding: Kirigami.Units.gridUnit
+    bottomPadding: Kirigami.Units.gridUnit
+
+
+    title: i18n("About %1", page.aboutData.displayName)
 
     ColumnLayout {
         width: parent.width
@@ -313,6 +317,7 @@ Kirigami.ScrollablePage {
 
         AbstractFormDelegate {
             Layout.fillWidth: true
+            background: Item {}
             contentItem: RowLayout {
                 spacing: Kirigami.Units.smallSpacing * 2
 

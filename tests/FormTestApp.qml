@@ -35,6 +35,42 @@ Kirigami.ApplicationWindow {
 
 
     Component {
+        id: aboutComponent
+        MobileForm.AboutPage {
+            aboutData: {
+                "displayName": "KirigamiApp",
+               "productName" : "kirigami/app",
+               "componentName" : "kirigamiapp",
+               "shortDescription" : "A Kirigami example",
+               "homepage" : "",
+               "bugAddress" : "submit@bugs.kde.org",
+               "version" : "5.14.80",
+               "otherText" : "",
+               "authors" : [
+                   {
+                       "name" : "Paul Müller",
+                       "task" : "Concept and development",
+                       "emailAddress" : "somebody@kde.org",
+                       "webAddress" : "",
+                       "ocsUsername" : ""
+                   }
+               ],
+               "credits" : [],
+               "translators" : [],
+               "licenses" : [
+                   {
+                       "name" : "GPL v2",
+                       "text" : "long, boring, license text",
+                       "spdx" : "GPL-2.0"
+                   }
+               ],
+               "copyrightStatement" : "© 2010-2018 Plasma Development Team",
+               "desktopFileName" : "org.kde.kirigamiapp"
+           }
+        }
+    }
+
+    Component {
         id: pageComponent
         Kirigami.ScrollablePage {
             id: page
@@ -48,12 +84,32 @@ Kirigami.ApplicationWindow {
             topPadding: Kirigami.Units.gridUnit
             bottomPadding: Kirigami.Units.gridUnit
 
+
             ColumnLayout {
                 spacing: 0
                 width: page.width
 
                 MobileForm.FormCard {
                     Layout.fillWidth: true
+
+                    contentItem: ColumnLayout {
+                        spacing: 0
+
+                        MobileForm.FormCardHeader {
+                            title: "About"
+                        }
+
+                        MobileForm.FormButtonDelegate {
+                            id: aboutDelegate
+                            text: "About"
+                            onClicked: applicationWindow().pageStack.push(aboutComponent)
+                        }
+                    }
+                }
+
+                MobileForm.FormCard {
+                    Layout.fillWidth: true
+                    Layout.topMargin: Kirigami.Units.largeSpacing
 
                     contentItem: ColumnLayout {
                         spacing: 0
@@ -293,41 +349,6 @@ Kirigami.ApplicationWindow {
                             }
                         }
                     }
-                }
-
-                MobileForm.AboutCard {
-                    Layout.fillWidth: true
-                    Layout.topMargin: Kirigami.Units.largeSpacing
-                    aboutData: {
-                        "displayName": "KirigamiApp",
-                       "productName" : "kirigami/app",
-                       "componentName" : "kirigamiapp",
-                       "shortDescription" : "A Kirigami example",
-                       "homepage" : "",
-                       "bugAddress" : "submit@bugs.kde.org",
-                       "version" : "5.14.80",
-                       "otherText" : "",
-                       "authors" : [
-                           {
-                               "name" : "Paul Müller",
-                               "task" : "Concept and development",
-                               "emailAddress" : "somebody@kde.org",
-                               "webAddress" : "",
-                               "ocsUsername" : ""
-                           }
-                       ],
-                       "credits" : [],
-                       "translators" : [],
-                       "licenses" : [
-                           {
-                               "name" : "GPL v2",
-                               "text" : "long, boring, license text",
-                               "spdx" : "GPL-2.0"
-                           }
-                       ],
-                       "copyrightStatement" : "© 2010-2018 Plasma Development Team",
-                       "desktopFileName" : "org.kde.kirigamiapp"
-                       }
                 }
 
                 // info block
