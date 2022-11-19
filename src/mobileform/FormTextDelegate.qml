@@ -20,6 +20,11 @@ AbstractFormDelegate {
      */
     property string description: ""
 
+    /**
+     * Wrap mode of the description
+     */
+    property alias wrapMode: description.wrapMode
+
     signal linkActivated(link: string)
 
     Layout.fillWidth: true
@@ -47,6 +52,7 @@ AbstractFormDelegate {
             }
 
             Label {
+                id: description
                 Layout.fillWidth: true
                 text: root.description
                 color: Kirigami.Theme.disabledTextColor
