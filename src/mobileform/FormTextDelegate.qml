@@ -25,6 +25,11 @@ AbstractFormDelegate {
      */
     property alias wrapMode: description.wrapMode
 
+    /**
+     * Text format of the description
+     */
+    property alias textFormat: description.textFormat
+
     signal linkActivated(link: string)
 
     Layout.fillWidth: true
