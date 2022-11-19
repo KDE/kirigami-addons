@@ -56,9 +56,9 @@ AbstractFormDelegate {
                 Layout.fillWidth: true
                 text: root.description
                 color: Kirigami.Theme.disabledTextColor
-                elide: Text.ElideRight
                 visible: root.description !== ""
                 onLinkActivated: root.linkActivated(link)
+                wrapMode: Text.Wrap
             }
         }
     }

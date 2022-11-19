@@ -162,7 +162,7 @@ AbstractFormDelegate {
                 Layout.fillWidth: true
                 text: controlRoot.description
                 color: Kirigami.Theme.disabledTextColor
-                font: Kirigami.Theme.smallFont
+                wrapMode: Text.Wrap
             }
         }
 

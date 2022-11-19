@@ -48,9 +48,9 @@ AbstractFormDelegate {
                 Layout.fillWidth: true
                 text: root.description
                 color: Kirigami.Theme.disabledTextColor
-                font: Kirigami.Theme.smallFont
                 elide: Text.ElideRight
                 visible: root.description !== ""
+                wrapMode: Text.Wrap
             }
         }
         

@@ -47,7 +47,6 @@ ColumnLayout {
         
         Label {
             color: Kirigami.Theme.disabledTextColor
-            font: Kirigami.Theme.smallFont
             text: subtitle
             visible: subtitle !== ""
             wrapMode: Text.Wrap
