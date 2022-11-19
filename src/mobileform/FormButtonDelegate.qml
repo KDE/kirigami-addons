@@ -22,7 +22,6 @@ AbstractFormDelegate {
      * This is supposed to be a short text and user of this API should avoid to make
      * it longer than two lines.
      */
-     */
     property string description: ""
 
     Layout.fillWidth: true
