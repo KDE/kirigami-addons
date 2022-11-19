@@ -21,14 +21,9 @@ AbstractFormDelegate {
     property string description: ""
 
     /**
-     * Wrap mode of the description
+     * This property holds the interal description item.
      */
-    property alias wrapMode: description.wrapMode
-
-    /**
-     * Text format of the description
-     */
-    property alias textFormat: description.textFormat
+    property alias descriptionItem: internalDescriptionItem
 
     signal linkActivated(link: string)
 
@@ -57,7 +52,7 @@ AbstractFormDelegate {
             }
 
             Label {
-                id: description
+                id: internalDescriptionItem
                 Layout.fillWidth: true
                 text: root.description
                 color: Kirigami.Theme.disabledTextColor
