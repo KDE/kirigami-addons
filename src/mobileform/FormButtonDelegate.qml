@@ -14,14 +14,19 @@ import org.kde.kirigami 2.19 as Kirigami
  */
 AbstractFormDelegate {
     id: root
-    
+
     /**
-     * Label that appears under the main text, that provides additional information about the delegate.
+     * This property holds the secondary text that appears under the main text.
+     * This provides additional information about the delegate.
+     *
+     * This is supposed to be a short text and user of this API should avoid to make
+     * it longer than two lines.
+     */
      */
     property string description: ""
-    
+
     Layout.fillWidth: true
-    
+
     contentItem: RowLayout {
         Kirigami.Icon {
             visible: root.icon.name !== ""

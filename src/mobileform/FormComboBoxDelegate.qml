@@ -21,7 +21,11 @@ AbstractFormDelegate {
     signal activated(int index)
 
     /**
-     * Label that appears under the main text, that provides additional information about the delegate.
+     * This property holds the secondary text that appears under the main text.
+     * This provides additional information about the delegate.
+     *
+     * This is supposed to be a short text and user of this API should avoid to make
+     * it longer than two lines.
      */
     property string description: ""
 
