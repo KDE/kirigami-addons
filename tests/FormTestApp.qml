@@ -37,7 +37,7 @@ Kirigami.ApplicationWindow {
             leftPadding: 0
             rightPadding: 0
             topPadding: Kirigami.Units.gridUnit
-            bottomPadding: 0
+            bottomPadding: Kirigami.Units.gridUnit
 
             ColumnLayout {
                 spacing: 0
@@ -326,8 +326,24 @@ Kirigami.ApplicationWindow {
                             id: account
                             label: "Account name"
                         }
+                    }
+                }
 
-                        MobileForm.FormDelegateSeparator { above: account; below: password1 }
+                MobileForm.FormSectionText {
+                    text: "Use the text form delegates to display information."
+                }
+                
+                // text fields
+                MobileForm.FormCard {
+                    Layout.fillWidth: true
+                    Layout.topMargin: Kirigami.Units.largeSpacing
+
+                    contentItem: ColumnLayout {
+                        spacing: 0
+
+                        MobileForm.FormCardHeader {
+                            title: "Text Fields"
+                        }
 
                         MobileForm.FormTextFieldDelegate {
                             id: password1
@@ -338,7 +354,8 @@ Kirigami.ApplicationWindow {
                             text: "666666666"
                         }
 
-                        MobileForm.FormDelegateSeparator { above: password1; below: password2 }
+                        // don't put above and below, since we don't care about hover events
+                        MobileForm.FormDelegateSeparator {}
 
                         MobileForm.FormTextFieldDelegate {
                             id: password2
@@ -349,10 +366,6 @@ Kirigami.ApplicationWindow {
                             echoMode: TextInput.Password
                         }
                     }
-                }
-
-                MobileForm.FormSectionText {
-                    text: "Use the text form delegates to display information."
                 }
 
                 // TODO: "infinite" listview
