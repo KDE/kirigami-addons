@@ -260,8 +260,7 @@ Kirigami.ScrollablePage {
                     model: aboutData.components
                     delegate: FormTextDelegate {
                         Layout.fillWidth: true
-                        text: modelData.name
-                        description: modelData.version === "" ? "" : modelData.version
+                        text: modelData.name + modelData.version === "" ? " " : modelData.version
                     }
                 }
             }
