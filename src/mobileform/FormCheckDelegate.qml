@@ -15,7 +15,19 @@ import org.kde.kirigami 2.19 as Kirigami
  */
 T.CheckDelegate {
     id: root
-    
+
+    /**
+     * Label that appears under the text, providing the value of the label.
+     */
+    property string description: ""
+
+    /**
+     * This property holds the interal description item.
+     */
+    property alias descriptionItem: internalDescriptionItem
+
+    signal linkActivated(link: string)
+
     leftPadding: Kirigami.Units.gridUnit
     topPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
     bottomPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
@@ -47,14 +59,28 @@ T.CheckDelegate {
                 checked = Qt.binding(() => root.checked);
             }
         }
-        
-        Controls.Label {
-            text: root.text
-            color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
-            elide: Text.ElideRight
-            wrapMode: Text.Wrap
-            maximumLineCount: 2
+
+        ColumnLayout {
             Layout.fillWidth: true
+            spacing: Kirigami.Units.smallSpacing
+            Controls.Label {
+                text: root.text
+                color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
+                elide: Text.ElideRight
+                wrapMode: Text.Wrap
+                maximumLineCount: 2
+                Layout.fillWidth: true
+            }
+
+            Controls.Label {
+                id: internalDescriptionItem
+                Layout.fillWidth: true
+                text: root.description
+                color: Kirigami.Theme.disabledTextColor
+                visible: root.description !== ""
+                onLinkActivated: root.linkActivated(link)
+                wrapMode: Text.Wrap
+            }
         }
     }
 }
