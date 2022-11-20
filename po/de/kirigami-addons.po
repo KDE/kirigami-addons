@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:45+0000\n"
+"POT-Creation-Date: 2022-11-20 00:45+0000\n"
 "PO-Revision-Date: 2022-11-10 20:56+0100\n"
 "Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.08.3\n"
 
 #: dateandtime/DatePicker.qml:141
@@ -74,4 +74,61 @@ msgstr "Annehmen"
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
+msgstr ""
+
+#: mobileform/AboutPage.qml:85
+#, kde-format
+msgid "About %1"
+msgstr ""
+
+#: mobileform/AboutPage.qml:132
+#, kde-format
+msgid "Copyright"
+msgstr ""
+
+#: mobileform/AboutPage.qml:139
+#, kde-format
+msgid "Licenses"
+msgid_plural "License"
+msgstr[0] ""
+msgstr[1] ""
+
+#: mobileform/AboutPage.qml:193
+#, kde-format
+msgid "Homepage"
+msgstr ""
+
+#: mobileform/AboutPage.qml:202
+#, kde-format
+msgid "Donate"
+msgstr ""
+
+#: mobileform/AboutPage.qml:211
+#, kde-format
+msgid "Get Involved"
+msgstr ""
+
+#: mobileform/AboutPage.qml:232
+#, kde-format
+msgid "Report a bug"
+msgstr ""
+
+#: mobileform/AboutPage.qml:245
+#, kde-format
+msgid "Libraries in use"
+msgstr ""
+
+#: mobileform/AboutPage.qml:276
+#, kde-format
+msgid "Authors"
+msgstr ""
+
+#: mobileform/AboutPage.qml:288
+#, kde-format
+msgid "Credits"
+msgstr ""
+
+#: mobileform/AboutPage.qml:300
+#, kde-format
+msgid "Translators"
 msgstr ""

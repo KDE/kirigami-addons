@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:45+0000\n"
-"PO-Revision-Date: 2022-11-06 01:07\n"
+"POT-Creation-Date: 2022-11-20 00:45+0000\n"
+"PO-Revision-Date: 2022-11-19 14:49\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -27,19 +27,19 @@ msgstr "%2 年 %1"
 #, kde-format
 msgctxt "kirigami-addons"
 msgid "Days"
-msgstr ""
+msgstr " 天"
 
 #: dateandtime/DatePicker.qml:190
 #, kde-format
 msgctxt "kirigami-addons"
 msgid "Months"
-msgstr ""
+msgstr "月"
 
 #: dateandtime/DatePicker.qml:196
 #, kde-format
 msgctxt "kirigami-addons"
 msgid "Years"
-msgstr ""
+msgstr "年"
 
 #: dateandtime/DatePopup.qml:55
 #, kde-format
@@ -70,4 +70,60 @@ msgstr "接受"
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
+msgstr ""
+
+#: mobileform/AboutPage.qml:85
+#, kde-format
+msgid "About %1"
+msgstr ""
+
+#: mobileform/AboutPage.qml:132
+#, kde-format
+msgid "Copyright"
+msgstr ""
+
+#: mobileform/AboutPage.qml:139
+#, kde-format
+msgid "Licenses"
+msgid_plural "License"
+msgstr[0] ""
+
+#: mobileform/AboutPage.qml:193
+#, kde-format
+msgid "Homepage"
+msgstr ""
+
+#: mobileform/AboutPage.qml:202
+#, kde-format
+msgid "Donate"
+msgstr ""
+
+#: mobileform/AboutPage.qml:211
+#, kde-format
+msgid "Get Involved"
+msgstr ""
+
+#: mobileform/AboutPage.qml:232
+#, kde-format
+msgid "Report a bug"
+msgstr ""
+
+#: mobileform/AboutPage.qml:245
+#, kde-format
+msgid "Libraries in use"
+msgstr ""
+
+#: mobileform/AboutPage.qml:276
+#, kde-format
+msgid "Authors"
+msgstr ""
+
+#: mobileform/AboutPage.qml:288
+#, kde-format
+msgid "Credits"
+msgstr ""
+
+#: mobileform/AboutPage.qml:300
+#, kde-format
+msgid "Translators"
 msgstr ""
