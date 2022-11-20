@@ -49,6 +49,7 @@ AbstractFormDelegate {
                 text: root.text
                 elide: Text.ElideRight
                 onLinkActivated: root.linkActivated(link)
+                visible: root.text
             }
 
             Label {
