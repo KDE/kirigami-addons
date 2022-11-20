@@ -136,7 +136,7 @@ Kirigami.ScrollablePage {
                 }
 
                 FormCardHeader {
-                    title: i18ndp("kirigami-addons", "Licenses", "License", aboutData.licenses.length)
+                    title: i18ndp("kirigami-addons", "License", "Licenses", aboutData.licenses.length)
                 }
 
                 QQC2.Dialog {
