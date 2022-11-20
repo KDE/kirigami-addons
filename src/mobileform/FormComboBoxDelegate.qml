@@ -63,12 +63,15 @@ AbstractFormDelegate {
      * This property holds the highlightedIndex of the internal combobox
      */
     property alias highlightedIndex: combobox.highlightedIndex
-    
+
+    property alias displayText: combobox.displayText
+
     enum DisplayMode {
         ComboBox,
-        Dialog
+        Dialog,
+        Page
     }
-    
+
     /** 
      * This property holds what display mode the delegate should show in.
      * Possible values:
@@ -100,9 +103,38 @@ AbstractFormDelegate {
         Kirigami.Theme.colorSet: controlRoot.Kirigami.Theme.inherit ? controlRoot.Kirigami.Theme.colorSet : Kirigami.Theme.View
         Kirigami.Theme.inherit: controlRoot.Kirigami.Theme.inherit
         onClicked: {
-            combobox.currentIndex = index;
-            combobox.activated(index);
-            controlRoot.dialog.close();
+            controlRoot.currentIndex = index;
+            controlRoot.activated(index);
+            controlRoot.closeDialog();
+        }
+    }
+
+    function closeDialog() {
+        if (_selectionPageItem) {
+            _selectionPageItem.closeDialog();
+            _selectionPageItem = null;
+        }
+
+        if (dialog) {
+            dialog.close();
+        }
+    }
+
+    property var _selectionPageItem: null
+
+
+    // use connections instead of onClicked on root, so that users can supply
+    // their own behaviour.
+    Connections {
+        target: controlRoot
+        function onClicked() {
+            if (controlRoot.displayMode === FormComboBoxDelegate.Dialog) {
+                controlRoot.dialog.open();
+            } else if (controlRoot.displayMode === FormComboBoxDelegate.Page) {
+                controlRoot._selectionPageItem = applicationWindow().pageStack.pushDialogLayer(page)
+            } else {
+                combobox.popup.open();
+            }
         }
     }
 
@@ -116,19 +148,6 @@ AbstractFormDelegate {
         showCloseButton: false
         title: controlRoot.text
 
-        // use connections instead of onClicked on root, so that users can supply
-        // their own behaviour.
-        Connections {
-            target: controlRoot
-            function onClicked() {
-                if (controlRoot.displayMode === FormComboBoxDelegate.Dialog) {
-                    controlRoot.dialog.open();
-                } else {
-                    combobox.popup.open();
-                }
-            }
-        }
-
         QQC2.ScrollView {
             implicitWidth: Kirigami.Units.gridUnit * 16
             Kirigami.Theme.inherit: false
@@ -138,6 +157,21 @@ AbstractFormDelegate {
                 model: controlRoot.model
                 delegate: controlRoot.mobileDelegate
             }
+        }
+    }
+
+    /**
+     * The dialog component used for the combobox.
+     * 
+     * Can be replaced with a custom dialog implementation.
+     */
+    property Component page: Kirigami.ScrollablePage {
+        title: controlRoot.text
+
+        ListView {
+            spacing: 0
+            model: controlRoot.model
+            delegate: controlRoot.mobileDelegate
         }
     }
 
@@ -174,8 +208,8 @@ AbstractFormDelegate {
             Layout.alignment: Qt.AlignRight
             Layout.rightMargin: Kirigami.Units.smallSpacing
             color: Kirigami.Theme.disabledTextColor
-            text: controlRoot.currentText
-            visible: controlRoot.displayMode == FormComboBoxDelegate.Dialog
+            text: controlRoot.displayText
+            visible: controlRoot.displayMode === FormComboBoxDelegate.Dialog || controlRoot.displayMode === FormComboBoxDelegate.Page
         }
 
         QQC2.ComboBox {
@@ -190,7 +224,7 @@ AbstractFormDelegate {
         FormArrow {
             Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
             direction: FormArrow.Down
-            visible: controlRoot.displayMode == FormComboBoxDelegate.Dialog
+            visible: controlRoot.displayMode === FormComboBoxDelegate.Dialog || controlRoot.displayMode === FormComboBoxDelegate.Page
         }
     }
 }
