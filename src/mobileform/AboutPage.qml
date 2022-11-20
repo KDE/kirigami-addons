@@ -19,7 +19,7 @@ import org.kde.kirigami 2.20 as Kirigami
  */
 
 Kirigami.ScrollablePage {
-    id: aboutCard
+    id: page
 
     /**
      * @brief This property holds an object with the same shape as KAboutData.
@@ -104,14 +104,14 @@ Kirigami.ScrollablePage {
                             Layout.rowSpan: 3
                             Layout.preferredHeight: Kirigami.Units.iconSizes.huge
                             Layout.preferredWidth: height
-                            Layout.maximumWidth: aboutCard.width / 3;
+                            Layout.maximumWidth: page.width / 3;
                             Layout.rightMargin: Kirigami.Units.largeSpacing
-                            source: Kirigami.Settings.applicationWindowIcon || aboutCard.aboutData.programLogo || aboutCard.aboutData.programIconName || aboutCard.aboutData.componentName
+                            source: Kirigami.Settings.applicationWindowIcon || page.aboutData.programLogo || page.aboutData.programIconName || page.aboutData.componentName
                         }
 
                         Kirigami.Heading {
                             Layout.fillWidth: true
-                            text: aboutCard.aboutData.displayName + " " + aboutCard.aboutData.version
+                            text: page.aboutData.displayName + " " + page.aboutData.version
                             wrapMode: Text.WordWrap
                         }
 
@@ -120,7 +120,7 @@ Kirigami.ScrollablePage {
                             level: 3
                             type: Kirigami.Heading.Type.Secondary
                             wrapMode: Text.WordWrap
-                            text: aboutCard.aboutData.shortDescription
+                            text: page.aboutData.shortDescription
                         }
                     }
                 }
@@ -209,11 +209,11 @@ Kirigami.ScrollablePage {
                 FormButtonDelegate {
                     id: homepageDelegate
                     text: i18nd("Kirigami-addons", "Get Involved")
-                    onClicked: Qt.openUrlExternally(aboutCard.getInvolvedUrl)
-                    visible: aboutCard.getInvolvedUrl
+                    onClicked: Qt.openUrlExternally(page.getInvolvedUrl)
+                    visible: page.getInvolvedUrl
                 }
 
-                FormDelegateSeparator { above: homepageDelegate; below: bugDelegate; visible: aboutCard.getInvolvedUrl }
+                FormDelegateSeparator { above: homepageDelegate; below: bugDelegate; visible: page.getInvolvedUrl }
 
                 FormButtonDelegate {
                     id: bugDelegate
