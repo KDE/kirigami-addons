@@ -52,6 +52,7 @@ T.SwitchDelegate {
                 visible: root.description !== ""
                 Layout.fillWidth: true
                 text: root.description
+                font: Kirigami.Theme.smallFont
                 wrapMode: Text.Wrap
                 color: Kirigami.Theme.disabledTextColor
             }

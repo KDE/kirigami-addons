@@ -165,6 +165,7 @@ AbstractFormDelegate {
                 visible: controlRoot.description !== ""
                 Layout.fillWidth: true
                 text: controlRoot.description
+                font: Kirigami.Theme.smallFont
                 color: Kirigami.Theme.disabledTextColor
                 wrapMode: Text.Wrap
             }

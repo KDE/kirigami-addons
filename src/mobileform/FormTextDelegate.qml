@@ -55,6 +55,7 @@ AbstractFormDelegate {
                 id: internalDescriptionItem
                 Layout.fillWidth: true
                 text: root.description
+                font: Kirigami.Theme.smallFont
                 color: Kirigami.Theme.disabledTextColor
                 visible: root.description !== ""
                 onLinkActivated: root.linkActivated(link)

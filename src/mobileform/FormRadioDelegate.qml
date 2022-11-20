@@ -65,6 +65,7 @@ T.RadioDelegate {
                 visible: root.description !== ""
                 Layout.fillWidth: true
                 text: root.description
+                font: Kirigami.Theme.smallFont
                 color: Kirigami.Theme.disabledTextColor
                 wrapMode: Text.Wrap
             }

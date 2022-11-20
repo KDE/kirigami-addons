@@ -49,6 +49,7 @@ ColumnLayout {
             color: Kirigami.Theme.disabledTextColor
             text: subtitle
             visible: subtitle !== ""
+            font: Kirigami.Theme.smallFont
             wrapMode: Text.Wrap
             Layout.fillWidth: true
         }
