@@ -24,6 +24,11 @@ AbstractFormDelegate {
      */
     property string description: ""
 
+    /**
+     * This property holds the interal description item.
+     */
+    property alias descriptionItem: internalDescriptionItem
+
     Layout.fillWidth: true
 
     contentItem: RowLayout {
@@ -49,6 +54,7 @@ AbstractFormDelegate {
             }
             
             Label {
+                id: internalDescriptionItem
                 Layout.fillWidth: true
                 text: root.description
                 color: Kirigami.Theme.disabledTextColor
