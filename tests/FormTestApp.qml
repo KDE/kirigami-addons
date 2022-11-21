@@ -247,6 +247,16 @@ Kirigami.ApplicationWindow {
                             Component.onCompleted: currentIndex = indexOfValue("Use System Default")
                             model: ["Use System Default", "24 Hour Time", "12 Hour Time"]
                         }
+
+                        MobileForm.FormDelegateSeparator { above: dropdown3; below: dropdown4 }
+
+                        MobileForm.FormComboBoxDelegate {
+                            id: dropdown4
+                            text: "Select a color (page)"
+                            displayMode: MobileForm.FormComboBoxDelegate.DisplayMode.Page
+                            Component.onCompleted: currentIndex = indexOfValue("Breeze Blue")
+                            model: ["Breeze Blue", "Konqi Green", "Velvet Red", "Bright Yellow"]
+                        }
                     }
                 }
 
