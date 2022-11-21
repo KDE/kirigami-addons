@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-20 00:45+0000\n"
-"PO-Revision-Date: 2022-11-16 18:40+0200\n"
+"POT-Creation-Date: 2022-11-21 00:45+0000\n"
+"PO-Revision-Date: 2022-11-20 08:56+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -76,58 +76,60 @@ msgstr ":"
 #: mobileform/AboutPage.qml:85
 #, kde-format
 msgid "About %1"
-msgstr ""
+msgstr "Про %1"
 
 #: mobileform/AboutPage.qml:132
 #, kde-format
 msgid "Copyright"
-msgstr ""
+msgstr "Авторські права"
 
 #: mobileform/AboutPage.qml:139
-#, kde-format
-msgid "Licenses"
-msgid_plural "License"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+#, fuzzy, kde-format
+#| msgid "Licenses"
+#| msgid_plural "License"
+msgid "License"
+msgid_plural "Licenses"
+msgstr[0] "Ліцензування"
+msgstr[1] "Ліцензування"
+msgstr[2] "Ліцензування"
+msgstr[3] "Ліцензування"
 
 #: mobileform/AboutPage.qml:193
 #, kde-format
 msgid "Homepage"
-msgstr ""
+msgstr "Домашня сторінка"
 
 #: mobileform/AboutPage.qml:202
 #, kde-format
 msgid "Donate"
-msgstr ""
+msgstr "Підтримати фінансово"
 
 #: mobileform/AboutPage.qml:211
 #, kde-format
 msgid "Get Involved"
-msgstr ""
+msgstr "Приєднатися до команди"
 
 #: mobileform/AboutPage.qml:232
 #, kde-format
 msgid "Report a bug"
-msgstr ""
+msgstr "Повідомити про помилку"
 
 #: mobileform/AboutPage.qml:245
 #, kde-format
 msgid "Libraries in use"
-msgstr ""
+msgstr "Використані бібліотеки"
 
 #: mobileform/AboutPage.qml:276
 #, kde-format
 msgid "Authors"
-msgstr ""
+msgstr "Автори"
 
 #: mobileform/AboutPage.qml:288
 #, kde-format
 msgid "Credits"
-msgstr ""
+msgstr "Подяки"
 
 #: mobileform/AboutPage.qml:300
 #, kde-format
 msgid "Translators"
-msgstr ""
+msgstr "Перекладачі"

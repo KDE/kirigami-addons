@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-20 00:45+0000\n"
-"PO-Revision-Date: 2022-11-16 19:15+0300\n"
+"POT-Creation-Date: 2022-11-21 00:45+0000\n"
+"PO-Revision-Date: 2022-11-20 10:59+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -75,56 +75,58 @@ msgstr ":"
 #: mobileform/AboutPage.qml:85
 #, kde-format
 msgid "About %1"
-msgstr ""
+msgstr "%1 Hakkında"
 
 #: mobileform/AboutPage.qml:132
 #, kde-format
 msgid "Copyright"
-msgstr ""
+msgstr "Telif Hakkı"
 
 #: mobileform/AboutPage.qml:139
-#, kde-format
-msgid "Licenses"
-msgid_plural "License"
-msgstr[0] ""
-msgstr[1] ""
+#, fuzzy, kde-format
+#| msgid "Licenses"
+#| msgid_plural "License"
+msgid "License"
+msgid_plural "Licenses"
+msgstr[0] "Lisanslar"
+msgstr[1] "Lisans"
 
 #: mobileform/AboutPage.qml:193
 #, kde-format
 msgid "Homepage"
-msgstr ""
+msgstr "Ana Sayfa"
 
 #: mobileform/AboutPage.qml:202
 #, kde-format
 msgid "Donate"
-msgstr ""
+msgstr "Bağış Yap"
 
 #: mobileform/AboutPage.qml:211
 #, kde-format
 msgid "Get Involved"
-msgstr ""
+msgstr "Katıl"
 
 #: mobileform/AboutPage.qml:232
 #, kde-format
 msgid "Report a bug"
-msgstr ""
+msgstr "Hata Bildir"
 
 #: mobileform/AboutPage.qml:245
 #, kde-format
 msgid "Libraries in use"
-msgstr ""
+msgstr "Kullanılan kitaplıklar"
 
 #: mobileform/AboutPage.qml:276
 #, kde-format
 msgid "Authors"
-msgstr ""
+msgstr "Yazarlar"
 
 #: mobileform/AboutPage.qml:288
 #, kde-format
 msgid "Credits"
-msgstr ""
+msgstr "Teşekkürler"
 
 #: mobileform/AboutPage.qml:300
 #, kde-format
 msgid "Translators"
-msgstr ""
+msgstr "Çeviriler"
