@@ -64,6 +64,9 @@ AbstractFormDelegate {
      */
     property alias highlightedIndex: combobox.highlightedIndex
 
+    /**
+     * This property holds the displayText of the internal combobox
+     */
     property alias displayText: combobox.displayText
 
     enum DisplayMode {
@@ -77,6 +80,7 @@ AbstractFormDelegate {
      * Possible values:
      * - FormComboBoxDelegate.ComboBox - Show a classic combobox component in the delegate.
      * - FormComboBoxDelegate.Dialog - Have the full delegate be clickable and open a dialog to select values.
+     * - FormComboBoxDelegate.Page - Have the full delegate be clickable and open a page in a seperate layers to select values.
      */
     property int displayMode: Kirigami.Settings.isMobile ? FormComboBoxDelegate.Dialog : FormComboBoxDelegate.ComboBox
 
@@ -109,6 +113,11 @@ AbstractFormDelegate {
         }
     }
 
+    /**
+     * Close the dialog or layer
+     *
+     * Usefull when reimplementing the page or dialog
+     */
     function closeDialog() {
         if (_selectionPageItem) {
             _selectionPageItem.closeDialog();
@@ -161,9 +170,9 @@ AbstractFormDelegate {
     }
 
     /**
-     * The dialog component used for the combobox.
+     * The page component used for the combobox, if applicable.
      * 
-     * Can be replaced with a custom dialog implementation.
+     * Can be replaced with a custom page implementation.
      */
     property Component page: Kirigami.ScrollablePage {
         title: controlRoot.text
