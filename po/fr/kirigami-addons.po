@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-21 00:45+0000\n"
-"PO-Revision-Date: 2022-11-18 06:43+0100\n"
+"PO-Revision-Date: 2022-11-21 13:59+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
 "Language: fr\n"
@@ -75,12 +75,12 @@ msgstr ":"
 #: mobileform/AboutPage.qml:85
 #, kde-format
 msgid "About %1"
-msgstr ""
+msgstr "À propos de %1"
 
 #: mobileform/AboutPage.qml:132
 #, kde-format
 msgid "Copyright"
-msgstr ""
+msgstr "Licence"
 
 #: mobileform/AboutPage.qml:139
 #, kde-format
@@ -92,39 +92,39 @@ msgstr[1] ""
 #: mobileform/AboutPage.qml:193
 #, kde-format
 msgid "Homepage"
-msgstr ""
+msgstr "Page d'accueil"
 
 #: mobileform/AboutPage.qml:202
 #, kde-format
 msgid "Donate"
-msgstr ""
+msgstr "Faire un don"
 
 #: mobileform/AboutPage.qml:211
 #, kde-format
 msgid "Get Involved"
-msgstr ""
+msgstr "Impliquez-vous"
 
 #: mobileform/AboutPage.qml:232
 #, kde-format
 msgid "Report a bug"
-msgstr ""
+msgstr "Signaler un bogue"
 
 #: mobileform/AboutPage.qml:245
 #, kde-format
 msgid "Libraries in use"
-msgstr ""
+msgstr "Bibliothèques en cours d'utilisation"
 
 #: mobileform/AboutPage.qml:276
 #, kde-format
 msgid "Authors"
-msgstr ""
+msgstr "Auteurs"
 
 #: mobileform/AboutPage.qml:288
 #, kde-format
 msgid "Credits"
-msgstr ""
+msgstr "Remerciements"
 
 #: mobileform/AboutPage.qml:300
 #, kde-format
 msgid "Translators"
-msgstr ""
+msgstr "Équipe de traduction"

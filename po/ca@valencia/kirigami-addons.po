@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-21 00:45+0000\n"
-"PO-Revision-Date: 2022-11-20 10:24+0100\n"
+"PO-Revision-Date: 2022-11-21 09:13+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -86,13 +86,11 @@ msgid "Copyright"
 msgstr "Copyright"
 
 #: mobileform/AboutPage.qml:139
-#, fuzzy, kde-format
-#| msgid "Licenses"
-#| msgid_plural "License"
+#, kde-format
 msgid "License"
 msgid_plural "Licenses"
-msgstr[0] "Llicències"
-msgstr[1] "Llicència"
+msgstr[0] "Llicència"
+msgstr[1] "Llicències"
 
 #: mobileform/AboutPage.qml:193
 #, kde-format

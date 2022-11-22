@@ -7,16 +7,16 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-21 00:45+0000\n"
-"PO-Revision-Date: 2022-11-17 09:21+0100\n"
+"PO-Revision-Date: 2022-11-21 07:40+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.08.2\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
+"%100<=4 ? 2 : 3);\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #: dateandtime/DatePicker.qml:141
 #, kde-format
@@ -76,58 +76,58 @@ msgstr ":"
 #: mobileform/AboutPage.qml:85
 #, kde-format
 msgid "About %1"
-msgstr ""
+msgstr "O %1"
 
 #: mobileform/AboutPage.qml:132
 #, kde-format
 msgid "Copyright"
-msgstr ""
+msgstr "Copyright"
 
 #: mobileform/AboutPage.qml:139
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Licenca"
+msgstr[1] "Licenci"
+msgstr[2] "Licence"
+msgstr[3] "Licence"
 
 #: mobileform/AboutPage.qml:193
 #, kde-format
 msgid "Homepage"
-msgstr ""
+msgstr "Domača stran"
 
 #: mobileform/AboutPage.qml:202
 #, kde-format
 msgid "Donate"
-msgstr ""
+msgstr "Donirajte"
 
 #: mobileform/AboutPage.qml:211
 #, kde-format
 msgid "Get Involved"
-msgstr ""
+msgstr "Bodite vpleteni"
 
 #: mobileform/AboutPage.qml:232
 #, kde-format
 msgid "Report a bug"
-msgstr ""
+msgstr "Poročaj o napaki"
 
 #: mobileform/AboutPage.qml:245
 #, kde-format
 msgid "Libraries in use"
-msgstr ""
+msgstr "Knjižnice v rabi"
 
 #: mobileform/AboutPage.qml:276
 #, kde-format
 msgid "Authors"
-msgstr ""
+msgstr "Avtorji"
 
 #: mobileform/AboutPage.qml:288
 #, kde-format
 msgid "Credits"
-msgstr ""
+msgstr "Zasluge"
 
 #: mobileform/AboutPage.qml:300
 #, kde-format
 msgid "Translators"
-msgstr ""
+msgstr "Prevajalci"
