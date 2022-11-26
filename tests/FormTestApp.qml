@@ -32,6 +32,8 @@ Kirigami.ApplicationWindow {
     function i18ndp(context, text1, text2, number) {
         return number === 1 ? text1 : text2;
     }
+    
+    LayoutMirroring.enabled: false
 
 
     Component {
@@ -106,7 +108,7 @@ Kirigami.ApplicationWindow {
                         }
                     }
                 }
-
+                
                 MobileForm.FormCard {
                     Layout.fillWidth: true
                     Layout.topMargin: Kirigami.Units.largeSpacing
@@ -143,7 +145,7 @@ Kirigami.ApplicationWindow {
                 }
 
                 MobileForm.FormSectionText {
-                    text: "Use cards to denote relevant groups of settings."
+                    text: "The form components support keyboard navigation with Tab and Shift+Tab."
                 }
 
                 // checkboxes
@@ -173,6 +175,10 @@ Kirigami.ApplicationWindow {
                             text: "Check the third box"
                         }
                     }
+                }
+                
+                MobileForm.FormSectionText {
+                    text: "Use cards to denote relevant groups of settings."
                 }
 
                 // switches
@@ -206,6 +212,17 @@ Kirigami.ApplicationWindow {
                             id: switch3
                             text: "Toggle the third switch"
                             description: "This is a description for the switch."
+                        }
+                        
+                        MobileForm.FormDelegateSeparator { above: switch3; below: layoutMirroring }
+
+                        MobileForm.FormSwitchDelegate {
+                            id: layoutMirroring
+                            text: "Layout mirroring"
+                            description: "Toggle layout mirroring to test flipped layouts."
+                            onCheckedChanged: {
+                                applicationWindow().LayoutMirroring.enabled = checked;
+                            }
                         }
                     }
                 }
@@ -325,7 +342,7 @@ Kirigami.ApplicationWindow {
                             }
                         }
 
-                        MobileForm.FormDelegateSeparator { above: slider1; below: textinput1 }
+                        MobileForm.FormDelegateSeparator { below: textinput1 }
 
                         MobileForm.AbstractFormDelegate {
                             id: textinput1
@@ -395,6 +412,10 @@ Kirigami.ApplicationWindow {
                             id: info3
                             text: "Best Dragon"
                             description: "Konqi"
+                            trailing: Controls.Button {
+                                text: "Agree"
+                                icon.name: "dialog-ok"
+                            }
                         }
                     }
                 }

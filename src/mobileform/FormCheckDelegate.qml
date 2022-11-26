@@ -10,6 +10,8 @@ import QtQuick.Layouts 1.15
 
 import org.kde.kirigami 2.19 as Kirigami
 
+import "private" as Private
+
 /**
  * Form delegate that corresponds to a checkbox.
  */
@@ -22,11 +24,24 @@ T.CheckDelegate {
     property string description: ""
 
     /**
-     * This property holds the interal description item.
+     * This property holds an item that will be displayed before the delegate's contents.
      */
-    property alias descriptionItem: internalDescriptionItem
-
-    signal linkActivated(link: string)
+    property var leading: null
+    
+    /**
+     * This property holds the padding after the leading item.
+     */
+    property real leadingPadding: Kirigami.Units.smallSpacing
+    
+    /**
+     * This property holds an item that will be displayed after the delegate's contents.
+     */
+    property var trailing: null
+    
+    /**
+     * This property holds the padding before the trailing item.
+     */
+    property real trailingPadding: Kirigami.Units.smallSpacing
 
     leftPadding: Kirigami.Units.gridUnit
     topPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
@@ -43,9 +58,18 @@ T.CheckDelegate {
     Layout.fillWidth: true
     
     contentItem: RowLayout {
+        spacing: 0
+        
+        Private.ContentItemLoader {
+            Layout.rightMargin: root.leading ? root.leadingPadding : 0
+            implicitHeight: root.leading ? root.leading.implicitHeight : 0
+            implicitWidth: root.leading ? root.leading.implicitWidth : 0
+            contentItem: root.leading
+        }
+        
         Controls.CheckBox {
             id: checkBoxItem
-            Layout.rightMargin: Kirigami.Units.largeSpacing
+            Layout.rightMargin: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
             focusPolicy: Qt.NoFocus // provided by delegate
             
             checkState: root.checkState
@@ -83,9 +107,15 @@ T.CheckDelegate {
                 text: root.description
                 color: Kirigami.Theme.disabledTextColor
                 visible: root.description !== ""
-                onLinkActivated: root.linkActivated(link)
                 wrapMode: Text.Wrap
             }
+        }
+        
+        Private.ContentItemLoader {
+            Layout.rightMargin: root.trailing ? root.trailingPadding : 0
+            implicitHeight: root.trailing ? root.trailing.implicitHeight : 0
+            implicitWidth: root.trailing ? root.trailing.implicitWidth : 0
+            contentItem: root.trailing
         }
     }
 }

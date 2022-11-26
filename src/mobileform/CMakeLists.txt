@@ -27,6 +27,10 @@ ecm_target_qml_sources(mobileformplugin SOURCES
     FormTextFieldDelegate.qml
 )
 
+ecm_target_qml_sources(mobileformplugin PATH private SOURCES
+    private/ContentItemLoader.qml
+)
+
 target_link_libraries(mobileformplugin
     Qt${QT_MAJOR_VERSION}::Quick
     Qt${QT_MAJOR_VERSION}::Qml

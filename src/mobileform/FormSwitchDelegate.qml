@@ -10,6 +10,8 @@ import QtQuick.Layouts 1.15
 
 import org.kde.kirigami 2.19 as Kirigami
 
+import "private" as Private
+
 /**
  * Form delegate that corresponds to a switch.
  */
@@ -20,6 +22,26 @@ T.SwitchDelegate {
      * Label that appears under the main text, that provides additional information about the delegate.
      */
     property string description: ""
+    
+    /**
+     * This property holds an item that will be displayed before the delegate's contents.
+     */
+    property var leading: null
+    
+    /**
+     * This property holds the padding after the leading item.
+     */
+    property real leadingPadding: Kirigami.Units.smallSpacing
+    
+    /**
+     * This property holds an item that will be displayed after the delegate's contents.
+     */
+    property var trailing: null
+    
+    /**
+     * This property holds the padding before the trailing item.
+     */
+    property real trailingPadding: Kirigami.Units.smallSpacing
     
     leftPadding: Kirigami.Units.gridUnit
     topPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
@@ -36,6 +58,15 @@ T.SwitchDelegate {
     Layout.fillWidth: true
     
     contentItem: RowLayout {
+        spacing: 0
+        
+        Private.ContentItemLoader {
+            Layout.rightMargin: root.leading ? root.leadingPadding : 0
+            implicitHeight: root.leading ? root.leading.implicitHeight : 0
+            implicitWidth: root.leading ? root.leading.implicitWidth : 0
+            contentItem: root.leading
+        }
+        
         ColumnLayout {
             Layout.fillWidth: true
             spacing: Kirigami.Units.smallSpacing
@@ -61,7 +92,7 @@ T.SwitchDelegate {
         Controls.Switch {
             id: switchItem
             focusPolicy: Qt.NoFocus // provided by delegate
-            Layout.leftMargin: Kirigami.Units.largeSpacing
+            Layout.leftMargin: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
             
             enabled: root.enabled
             checked: root.checked
@@ -75,6 +106,13 @@ T.SwitchDelegate {
                 root.checked = checked;
                 checked = Qt.binding(() => root.checked);
             }
+        }
+        
+        Private.ContentItemLoader {
+            Layout.rightMargin: root.trailing ? root.trailingPadding : 0
+            implicitHeight: root.trailing ? root.trailing.implicitHeight : 0
+            implicitWidth: root.trailing ? root.trailing.implicitWidth : 0
+            contentItem: root.trailing
         }
     }
 }

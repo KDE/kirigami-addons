@@ -9,6 +9,8 @@ import QtQuick.Layouts 1.15
 
 import org.kde.kirigami 2.19 as Kirigami
 
+import "private" as Private
+
 /**
  * A single card that is contained in a form.
  * 
@@ -46,15 +48,6 @@ Item {
     
     implicitHeight: topPadding + bottomPadding + contentItem.implicitHeight + rectangle.borderWidth * 2
     
-    onContentItemChanged: {
-        // clear old items
-        contentItemLoader.children = "";
-        
-        contentItem.parent = contentItemLoader;
-        contentItem.anchors.fill = contentItemLoader;
-        contentItemLoader.children.push(contentItem);
-    }
-    
     Rectangle {
         id: rectangle
         readonly property real borderWidth: 1
@@ -74,8 +67,9 @@ Item {
         anchors.leftMargin: root.cardWidthRestricted ? Math.round((root.width - root.maximumWidth) / 2) : -1
         anchors.rightMargin: root.cardWidthRestricted ? Math.round((root.width - root.maximumWidth) / 2) : -1
         
-        Item {
+        Private.ContentItemLoader {
             id: contentItemLoader
+            contentItem: root.contentItem
             anchors.fill: parent
             
             // add 1 to margins to account for the border (so content doesn't overlap it)
