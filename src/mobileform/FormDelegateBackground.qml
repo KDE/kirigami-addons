@@ -14,17 +14,17 @@ Rectangle {
     color: {
         let colorOpacity = 0;
         
-        if (!control.enabled) {
-            colorOpacity = 0;
-        }
-        if (control.pressed) {
-            colorOpacity = 0.2;
+        if (!Kirigami.Settings.tabletMode && control.hovered) {
+            colorOpacity = 0.07;
         }
         if (control.visualFocus) {
             colorOpacity = 0.1
         }
-        if (!Kirigami.Settings.tabletMode && control.hovered) {
-            colorOpacity = 0.07;
+        if (control.pressed) {
+            colorOpacity = 0.2;
+        }
+        if (!control.enabled) {
+            colorOpacity = 0;
         }
         
         return Qt.rgba(Kirigami.Theme.textColor.r, Kirigami.Theme.textColor.g, Kirigami.Theme.textColor.b, colorOpacity)
