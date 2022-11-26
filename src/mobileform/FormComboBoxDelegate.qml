@@ -30,42 +30,42 @@ AbstractFormDelegate {
     property string description: ""
 
     /**
-     * This property holds the value of the current item in the combo box.
+     * This property holds the value of the current item in the combobox.
      */
     property alias currentValue: combobox.currentValue
 
     /**
-     * This property holds the text of the current item in the combo box.
+     * This property holds the text of the current item in the combobox.
      */
     property alias currentText: combobox.currentText
 
     /**
-     * This property holds the model providing data for the combo box.
+     * This property holds the model providing data for the combobox.
      */
     property var model
 
     /**
-     * This property holds the textRole of the internal combobox
+     * This property holds the textRole of the internal combobox.
      */
     property alias textRole: combobox.textRole
 
     /**
-     * This property holds the valueRole of the internal combobox
+     * This property holds the valueRole of the internal combobox.
      */
     property alias valueRole: combobox.valueRole
 
     /**
-     * This property holds the currentIndex of the internal combobox
+     * This property holds the currentIndex of the internal combobox.
      */
     property alias currentIndex: combobox.currentIndex
 
     /**
-     * This property holds the highlightedIndex of the internal combobox
+     * This property holds the highlightedIndex of the internal combobox.
      */
     property alias highlightedIndex: combobox.highlightedIndex
 
     /**
-     * This property holds the displayText of the internal combobox
+     * This property holds the displayText of the internal combobox.
      */
     property alias displayText: combobox.displayText
 
@@ -85,9 +85,9 @@ AbstractFormDelegate {
     property int displayMode: Kirigami.Settings.isMobile ? FormComboBoxDelegate.Dialog : FormComboBoxDelegate.ComboBox
 
     /**
-     * The delegate component to use as entries in the desktop combobox.
+     * The delegate component to use as entries in the combobox display mode.
      */
-    property Component delegate: QQC2.ItemDelegate {
+    property Component comboBoxDelegate: QQC2.ItemDelegate {
         implicitWidth: ListView.view ? ListView.view.width : Kirigami.Units.gridUnit * 16
         text: controlRoot.textRole ? (Array.isArray(controlRoot.model) ? modelData[controlRoot.textRole] : model[controlRoot.textRole]) : modelData
         highlighted: controlRoot.highlightedIndex === index
@@ -97,9 +97,9 @@ AbstractFormDelegate {
     }
 
     /**
-     * The delegate component to use as entries in the mobile combobox.
+     * The delegate component to use as entries in the dialog and page display mode.
      */
-    property Component mobileDelegate: QQC2.RadioDelegate {
+    property Component dialogDelegate: QQC2.RadioDelegate {
         implicitWidth: ListView.view ? ListView.view.width : Kirigami.Units.gridUnit * 16
         text: controlRoot.textRole ? (Array.isArray(controlRoot.model) ? modelData[controlRoot.textRole] : model[controlRoot.textRole]) : modelData
         checked: controlRoot.currentIndex === index
@@ -156,16 +156,12 @@ AbstractFormDelegate {
         id: dialog
         showCloseButton: false
         title: controlRoot.text
+        preferredWidth: Kirigami.Units.gridUnit * 16
 
-        QQC2.ScrollView {
-            implicitWidth: Kirigami.Units.gridUnit * 16
-            Kirigami.Theme.inherit: false
-            Kirigami.Theme.colorSet: Kirigami.Theme.View
-            ListView {
-                spacing: 0
-                model: controlRoot.model
-                delegate: controlRoot.mobileDelegate
-            }
+        ListView {
+            spacing: 0
+            model: controlRoot.model
+            delegate: controlRoot.dialogDelegate
         }
     }
 
@@ -180,7 +176,7 @@ AbstractFormDelegate {
         ListView {
             spacing: 0
             model: controlRoot.model
-            delegate: controlRoot.mobileDelegate
+            delegate: controlRoot.dialogDelegate
         }
     }
 
@@ -226,7 +222,7 @@ AbstractFormDelegate {
             focusPolicy: Qt.NoFocus // provided by parent
             model: controlRoot.model
             visible: controlRoot.displayMode == FormComboBoxDelegate.ComboBox
-            delegate: controlRoot.delegate
+            delegate: controlRoot.comboBoxDelegate
             currentIndex: controlRoot.currentIndex
             onActivated: controlRoot.activated(index)
         }
