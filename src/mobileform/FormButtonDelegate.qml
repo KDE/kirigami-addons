@@ -29,7 +29,7 @@ AbstractFormDelegate {
      */
     property alias descriptionItem: internalDescriptionItem
 
-    Layout.fillWidth: true
+    focusPolicy: Qt.StrongFocus
 
     contentItem: RowLayout {
         Kirigami.Icon {

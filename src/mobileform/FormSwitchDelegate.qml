@@ -29,6 +29,7 @@ T.SwitchDelegate {
     implicitWidth: contentItem.implicitWidth + leftPadding + rightPadding
     implicitHeight: contentItem.implicitHeight + topPadding + bottomPadding
     
+    focusPolicy: Qt.StrongFocus
     hoverEnabled: true
     background: FormDelegateBackground { control: root }
     
@@ -59,6 +60,7 @@ T.SwitchDelegate {
         
         Controls.Switch {
             id: switchItem
+            focusPolicy: Qt.NoFocus // provided by delegate
             Layout.leftMargin: Kirigami.Units.largeSpacing
             
             enabled: root.enabled

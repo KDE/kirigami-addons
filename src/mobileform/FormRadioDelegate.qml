@@ -29,6 +29,7 @@ T.RadioDelegate {
     implicitWidth: contentItem.implicitWidth + leftPadding + rightPadding
     implicitHeight: contentItem.implicitHeight + topPadding + bottomPadding
     
+    focusPolicy: Qt.StrongFocus
     hoverEnabled: true
     background: FormDelegateBackground { control: root }
     
@@ -37,6 +38,7 @@ T.RadioDelegate {
     contentItem: RowLayout {
         Controls.RadioButton {
             id: radioButtonItem
+            focusPolicy: Qt.NoFocus // provided by delegate
             Layout.rightMargin: Kirigami.Units.largeSpacing
             
             enabled: root.enabled

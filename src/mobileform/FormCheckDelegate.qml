@@ -36,6 +36,7 @@ T.CheckDelegate {
     implicitWidth: contentItem.implicitWidth + leftPadding + rightPadding
     implicitHeight: contentItem.implicitHeight + topPadding + bottomPadding
     
+    focusPolicy: Qt.StrongFocus
     hoverEnabled: true
     background: FormDelegateBackground { control: root }
     
@@ -45,6 +46,7 @@ T.CheckDelegate {
         Controls.CheckBox {
             id: checkBoxItem
             Layout.rightMargin: Kirigami.Units.largeSpacing
+            focusPolicy: Qt.NoFocus // provided by delegate
             
             checkState: root.checkState
             nextCheckState: root.nextCheckState

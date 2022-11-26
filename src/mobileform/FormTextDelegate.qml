@@ -27,7 +27,7 @@ AbstractFormDelegate {
 
     signal linkActivated(link: string)
 
-    Layout.fillWidth: true
+    focusPolicy: Qt.NoFocus
 
     background: Item {}
 

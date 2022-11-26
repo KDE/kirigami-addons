@@ -109,7 +109,7 @@ AbstractFormDelegate {
         textField.clear();
     }
 
-    Layout.fillWidth: true
+    focusPolicy: Qt.NoFocus // supplied by text field
 
     onClicked: textField.forceActiveFocus()
     background: Item {}

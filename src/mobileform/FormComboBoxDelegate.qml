@@ -188,7 +188,7 @@ AbstractFormDelegate {
         return combobox.indexOfValue(value);
     }
 
-    Layout.fillWidth: true
+    focusPolicy: Qt.StrongFocus
     Accessible.description: description
 
     contentItem: RowLayout {
@@ -223,6 +223,7 @@ AbstractFormDelegate {
 
         QQC2.ComboBox {
             id: combobox
+            focusPolicy: Qt.NoFocus // provided by parent
             model: controlRoot.model
             visible: controlRoot.displayMode == FormComboBoxDelegate.ComboBox
             delegate: controlRoot.delegate
