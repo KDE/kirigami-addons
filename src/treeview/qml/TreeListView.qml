@@ -5,7 +5,7 @@
  */
 
 import QtQuick 2.12
-import './private
+import 'private'
 
 /**
  * A ListView with an internal KDescendantsProxyModel already in place.
