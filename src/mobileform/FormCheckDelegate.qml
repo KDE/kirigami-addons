@@ -53,6 +53,9 @@ T.CheckDelegate {
             tristate: root.tristate
 
             onToggled: root.toggled()
+            onClicked: root.clicked()
+            onPressAndHold: root.pressAndHold()
+            onDoubleClicked: root.doubleClicked()
             
             enabled: root.enabled
             checked: root.checked

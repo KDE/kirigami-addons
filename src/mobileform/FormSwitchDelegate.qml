@@ -66,6 +66,11 @@ T.SwitchDelegate {
             enabled: root.enabled
             checked: root.checked
             
+            onToggled: root.toggled()
+            onClicked: root.clicked()
+            onPressAndHold: root.pressAndHold()
+            onDoubleClicked: root.doubleClicked()
+            
             onCheckedChanged: {
                 root.checked = checked;
                 checked = Qt.binding(() => root.checked);
