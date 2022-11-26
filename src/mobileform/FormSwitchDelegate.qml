@@ -61,9 +61,9 @@ T.SwitchDelegate {
         spacing: 0
         
         Private.ContentItemLoader {
-            Layout.rightMargin: root.leading ? root.leadingPadding : 0
-            implicitHeight: root.leading ? root.leading.implicitHeight : 0
-            implicitWidth: root.leading ? root.leading.implicitWidth : 0
+            Layout.rightMargin: (root.leading && root.visible) ? root.leadingPadding : 0
+            implicitHeight: (root.leading && root.visible) ? root.leading.implicitHeight : 0
+            implicitWidth: (root.leading && root.visible) ? root.leading.implicitWidth : 0
             contentItem: root.leading
         }
         
@@ -109,9 +109,9 @@ T.SwitchDelegate {
         }
         
         Private.ContentItemLoader {
-            Layout.rightMargin: root.trailing ? root.trailingPadding : 0
-            implicitHeight: root.trailing ? root.trailing.implicitHeight : 0
-            implicitWidth: root.trailing ? root.trailing.implicitWidth : 0
+            Layout.leftMargin: (root.trailing && root.visible) ? root.trailingPadding : 0
+            implicitHeight: (root.trailing && root.visible) ? root.trailing.implicitHeight : 0
+            implicitWidth: (root.trailing && root.visible) ? root.trailing.implicitWidth : 0
             contentItem: root.trailing
         }
     }
