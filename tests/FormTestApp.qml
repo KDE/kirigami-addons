@@ -121,6 +121,7 @@ Kirigami.ApplicationWindow {
                         MobileForm.FormButtonDelegate {
                             id: delegate1
                             text: "Button"
+                            description: "Click me!"
                             onClicked: applicationWindow().pageStack.push(pageComponent)
                         }
 
@@ -184,6 +185,7 @@ Kirigami.ApplicationWindow {
 
                         MobileForm.FormCardHeader {
                             title: "Switches"
+                            subtitle: "This card contains switches."
                         }
 
                         MobileForm.FormSwitchDelegate {
@@ -394,13 +396,6 @@ Kirigami.ApplicationWindow {
                             text: "Best Dragon"
                             description: "Konqi"
                         }
-
-                        MobileForm.FormDelegateSeparator { above: info3; below: account }
-
-                        MobileForm.FormTextFieldDelegate {
-                            id: account
-                            label: "Account name"
-                        }
                     }
                 }
 
@@ -418,6 +413,11 @@ Kirigami.ApplicationWindow {
 
                         MobileForm.FormCardHeader {
                             title: "Text Fields"
+                        }
+                        
+                        MobileForm.FormTextFieldDelegate {
+                            id: account
+                            label: "Account name"
                         }
 
                         MobileForm.FormTextFieldDelegate {
@@ -441,10 +441,6 @@ Kirigami.ApplicationWindow {
                             echoMode: TextInput.Password
                         }
                     }
-                }
-
-                MobileForm.FormSectionText {
-                    text: "Use the text form delegates to display information."
                 }
             }
         }
