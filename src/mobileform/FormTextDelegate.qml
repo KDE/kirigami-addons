@@ -23,9 +23,25 @@ AbstractFormDelegate {
     property string description: ""
 
     /**
-     * This property holds the interal description item.
+     * This property holds the description label item.
      */
-    property alias descriptionItem: internalDescriptionItem
+    property Label descriptionItem: Label {
+        text: root.description
+        color: Kirigami.Theme.disabledTextColor
+        visible: root.description !== ""
+        onLinkActivated: root.linkActivated(link)
+        wrapMode: Text.Wrap
+    }
+    
+    /**
+     * This property holds the text label item.
+     */
+    property Label textItem: Label {
+        text: root.text
+        elide: Text.ElideRight
+        onLinkActivated: root.linkActivated(link)
+        visible: root.text
+    }
 
     /**
      * This property holds an item that will be displayed before the delegate's contents.
@@ -57,9 +73,10 @@ AbstractFormDelegate {
         spacing: 0
         
         Private.ContentItemLoader {
-            Layout.rightMargin: (root.leading && root.visible) ? root.leadingPadding : 0
-            implicitHeight: (root.leading && root.visible) ? root.leading.implicitHeight : 0
-            implicitWidth: (root.leading && root.visible) ? root.leading.implicitWidth : 0
+            Layout.rightMargin: visible ? root.leadingPadding : 0
+            visible: root.leading && root.leading.visible
+            implicitHeight: visible ? root.leading.implicitHeight : 0
+            implicitWidth: visible ? root.leading.implicitWidth : 0
             contentItem: root.leading
         }
         
@@ -73,31 +90,31 @@ AbstractFormDelegate {
 
         ColumnLayout {
             Layout.fillWidth: true
-            spacing: Kirigami.Units.smallSpacing
-
-            Label {
+            spacing: 0
+            
+            Private.ContentItemLoader {
                 Layout.fillWidth: true
-                text: root.text
-                elide: Text.ElideRight
-                onLinkActivated: root.linkActivated(link)
-                visible: root.text
+                visible: root.textItem && root.textItem.visible && root.textItem.text != ""
+                implicitHeight: visible ? root.textItem.implicitHeight : 0
+                implicitWidth: visible ? root.textItem.implicitWidth : 0
+                contentItem: root.textItem
             }
 
-            Label {
-                id: internalDescriptionItem
+            Private.ContentItemLoader {
                 Layout.fillWidth: true
-                text: root.description
-                color: Kirigami.Theme.disabledTextColor
-                visible: root.description !== ""
-                onLinkActivated: root.linkActivated(link)
-                wrapMode: Text.Wrap
+                Layout.topMargin: visible ? Kirigami.Units.smallSpacing : 0
+                visible: root.descriptionItem && root.descriptionItem.visible && root.descriptionItem.text != ""
+                implicitHeight: visible ? root.descriptionItem.implicitHeight : 0
+                implicitWidth: visible ? root.descriptionItem.implicitWidth : 0
+                contentItem: root.descriptionItem
             }
         }
         
         Private.ContentItemLoader {
-            Layout.leftMargin: (root.trailing && root.visible) ? root.trailingPadding : 0
-            implicitHeight: (root.trailing && root.visible) ? root.trailing.implicitHeight : 0
-            implicitWidth: (root.trailing && root.visible) ? root.trailing.implicitWidth : 0
+            Layout.leftMargin: visible ? root.trailingPadding : 0
+            visible: root.trailing && root.trailing.visible
+            implicitHeight: visible ? root.trailing.implicitHeight : 0
+            implicitWidth: visible ? root.trailing.implicitWidth : 0
             contentItem: root.trailing
         }
     }

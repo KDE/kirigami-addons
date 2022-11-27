@@ -47,9 +47,10 @@ AbstractFormDelegate {
         spacing: 0
         
         Private.ContentItemLoader {
-            Layout.rightMargin: (root.leading && root.visible) ? root.leadingPadding : 0
-            implicitHeight: (root.leading && root.visible) ? root.leading.implicitHeight : 0
-            implicitWidth: (root.leading && root.visible) ? root.leading.implicitWidth : 0
+            Layout.rightMargin: visible ? root.leadingPadding : 0
+            visible: root.leading && root.leading.visible
+            implicitHeight: visible ? root.leading.implicitHeight : 0
+            implicitWidth: visible ? root.leading.implicitWidth : 0
             contentItem: root.leading
         }
         
