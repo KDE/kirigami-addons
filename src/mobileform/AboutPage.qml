@@ -88,7 +88,6 @@ Kirigami.ScrollablePage {
         width: parent.width
 
         FormCard {
-            Layout.topMargin: Kirigami.Units.largeSpacing
             Layout.fillWidth: true
             contentItem: ColumnLayout {
                 spacing: 0
@@ -139,31 +138,14 @@ Kirigami.ScrollablePage {
                     title: i18ndp("kirigami-addons", "License", "Licenses", aboutData.licenses.length)
                 }
 
-                QQC2.Dialog {
+                Kirigami.OverlaySheet {
                     id: licenseSheet
                     property alias text: bodyLabel.text
-                    modal: true
-                    parent: applicationWindow().overlay
-                    x: Math.round((parent.width - width) / 2)
-                    y: Math.round((parent.height - height) / 2)
 
-                    leftPadding: 0
-                    rightPadding: 0
-                    topPadding: 0
-                    bottomPadding: 0
-
-                    implicitWidth: Kirigami.Units.gridUnit * 40
-
-                    contentItem: QQC2.ScrollView {
-                        leftPadding: Kirigami.Units.gridUnit
-                        rightPadding: Kirigami.Units.gridUnit
-                        topPadding: Kirigami.Units.gridUnit
-                        bottomPadding: Kirigami.Units.gridUnit
-                        Kirigami.SelectableLabel {
-                            id: bodyLabel
-                            text: licenseSheet.text
-                            wrapMode: Text.Wrap
-                        }
+                    contentItem: Kirigami.SelectableLabel {
+                        id: bodyLabel
+                        text: licenseSheet.text
+                        wrapMode: Text.Wrap
                     }
                 }
 
