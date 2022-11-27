@@ -62,7 +62,7 @@ T.CheckDelegate {
         
         Private.ContentItemLoader {
             Layout.rightMargin: visible ? root.leadingPadding : 0
-            visible: root.leading && root.leading.visible
+            visible: root.leading
             implicitHeight: visible ? root.leading.implicitHeight : 0
             implicitWidth: visible ? root.leading.implicitWidth : 0
             contentItem: root.leading
@@ -114,7 +114,7 @@ T.CheckDelegate {
         
         Private.ContentItemLoader {
             Layout.leftMargin: visible ? root.trailingPadding : 0
-            visible: root.trailing && root.trailing.visible
+            visible: root.trailing
             implicitHeight: visible ? root.trailing.implicitHeight : 0
             implicitWidth: visible ? root.trailing.implicitWidth : 0
             contentItem: root.trailing

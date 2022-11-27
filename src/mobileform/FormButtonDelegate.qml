@@ -48,7 +48,7 @@ AbstractFormDelegate {
         
         Private.ContentItemLoader {
             Layout.rightMargin: visible ? root.leadingPadding : 0
-            visible: root.leading && root.leading.visible
+            visible: root.leading
             implicitHeight: visible ? root.leading.implicitHeight : 0
             implicitWidth: visible ? root.leading.implicitWidth : 0
             contentItem: root.leading
