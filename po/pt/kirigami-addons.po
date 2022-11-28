@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-21 00:45+0000\n"
+"POT-Creation-Date: 2022-11-28 00:47+0000\n"
 "PO-Revision-Date: 2022-11-16 09:42+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -77,54 +77,54 @@ msgstr ":"
 msgid "About %1"
 msgstr "Acerca do %1"
 
-#: mobileform/AboutPage.qml:132
+#: mobileform/AboutPage.qml:131
 #, kde-format
 msgid "Copyright"
 msgstr "Copyright"
 
-#: mobileform/AboutPage.qml:139
+#: mobileform/AboutPage.qml:138
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "Licença"
 msgstr[1] "Licenças"
 
-#: mobileform/AboutPage.qml:193
+#: mobileform/AboutPage.qml:175
 #, kde-format
 msgid "Homepage"
 msgstr "Página Web"
 
-#: mobileform/AboutPage.qml:202
+#: mobileform/AboutPage.qml:184
 #, kde-format
 msgid "Donate"
 msgstr "Doar"
 
-#: mobileform/AboutPage.qml:211
+#: mobileform/AboutPage.qml:193
 #, kde-format
 msgid "Get Involved"
 msgstr "Envolva-se"
 
-#: mobileform/AboutPage.qml:232
+#: mobileform/AboutPage.qml:214
 #, kde-format
 msgid "Report a bug"
 msgstr "Comunicar um erro"
 
-#: mobileform/AboutPage.qml:245
+#: mobileform/AboutPage.qml:227
 #, kde-format
 msgid "Libraries in use"
 msgstr ""
 
-#: mobileform/AboutPage.qml:276
+#: mobileform/AboutPage.qml:258
 #, kde-format
 msgid "Authors"
 msgstr "Autores"
 
-#: mobileform/AboutPage.qml:288
+#: mobileform/AboutPage.qml:270
 #, kde-format
 msgid "Credits"
 msgstr "Créditos"
 
-#: mobileform/AboutPage.qml:300
+#: mobileform/AboutPage.qml:282
 #, kde-format
 msgid "Translators"
 msgstr "Tradutores"

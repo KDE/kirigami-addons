@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-21 00:45+0000\n"
-"PO-Revision-Date: 2022-11-17 08:10+0100\n"
+"POT-Creation-Date: 2022-11-28 00:47+0000\n"
+"PO-Revision-Date: 2022-11-27 11:37+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -76,56 +76,56 @@ msgstr ":"
 #: mobileform/AboutPage.qml:85
 #, kde-format
 msgid "About %1"
-msgstr ""
+msgstr "%1-ის შესახებ"
 
-#: mobileform/AboutPage.qml:132
+#: mobileform/AboutPage.qml:131
 #, kde-format
 msgid "Copyright"
-msgstr ""
+msgstr "საავტორო უფლებები"
 
-#: mobileform/AboutPage.qml:139
+#: mobileform/AboutPage.qml:138
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ლიცენზია"
+msgstr[1] "ლიცენზიები"
+
+#: mobileform/AboutPage.qml:175
+#, kde-format
+msgid "Homepage"
+msgstr "Homepage"
+
+#: mobileform/AboutPage.qml:184
+#, kde-format
+msgid "Donate"
+msgstr "შემოწირულობა"
 
 #: mobileform/AboutPage.qml:193
 #, kde-format
-msgid "Homepage"
-msgstr ""
-
-#: mobileform/AboutPage.qml:202
-#, kde-format
-msgid "Donate"
-msgstr ""
-
-#: mobileform/AboutPage.qml:211
-#, kde-format
 msgid "Get Involved"
-msgstr ""
+msgstr "შემოგვიერთდით"
 
-#: mobileform/AboutPage.qml:232
+#: mobileform/AboutPage.qml:214
 #, kde-format
 msgid "Report a bug"
-msgstr ""
+msgstr "შეცდომის პატაკი"
 
-#: mobileform/AboutPage.qml:245
+#: mobileform/AboutPage.qml:227
 #, kde-format
 msgid "Libraries in use"
-msgstr ""
+msgstr "გამოყენებული ბიბლიოთეკები"
 
-#: mobileform/AboutPage.qml:276
+#: mobileform/AboutPage.qml:258
 #, kde-format
 msgid "Authors"
-msgstr ""
+msgstr "ავტორები"
 
-#: mobileform/AboutPage.qml:288
+#: mobileform/AboutPage.qml:270
 #, kde-format
 msgid "Credits"
-msgstr ""
+msgstr "კრედიტები"
 
-#: mobileform/AboutPage.qml:300
+#: mobileform/AboutPage.qml:282
 #, kde-format
 msgid "Translators"
-msgstr ""
+msgstr "მთარგმნელები"
