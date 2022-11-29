@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-28 00:47+0000\n"
-"PO-Revision-Date: 2022-11-16 09:42+0000\n"
+"PO-Revision-Date: 2022-11-28 18:22+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -112,7 +112,7 @@ msgstr "Comunicar um erro"
 #: mobileform/AboutPage.qml:227
 #, kde-format
 msgid "Libraries in use"
-msgstr ""
+msgstr "Bibliotecas em uso"
 
 #: mobileform/AboutPage.qml:258
 #, kde-format
