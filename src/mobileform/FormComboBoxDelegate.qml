@@ -158,10 +158,12 @@ AbstractFormDelegate {
         title: controlRoot.text
         preferredWidth: Kirigami.Units.gridUnit * 16
 
-        ListView {
+        ColumnLayout {
             spacing: 0
-            model: controlRoot.model
-            delegate: controlRoot.dialogDelegate
+            Repeater {
+                model: controlRoot.model
+                delegate: controlRoot.dialogDelegate
+            }
         }
     }
 
