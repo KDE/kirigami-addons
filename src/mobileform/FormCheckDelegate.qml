@@ -43,6 +43,11 @@ T.CheckDelegate {
      */
     property real trailingPadding: Kirigami.Units.smallSpacing
 
+    /**
+     * This property allows for access to the description label item.
+     */
+    property alias descriptionItem: internalDescriptionItem
+
     leftPadding: Kirigami.Units.gridUnit
     topPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
     bottomPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
