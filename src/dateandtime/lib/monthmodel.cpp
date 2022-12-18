@@ -2,7 +2,6 @@
 // SPDX-License-Identifier: LGPL-2.1-or-later
 
 #include "monthmodel.h"
-#include <QDate>
 #include <QRandomGenerator>
 
 class MonthModel::Private {
