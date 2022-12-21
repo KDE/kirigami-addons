@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-28 00:47+0000\n"
-"PO-Revision-Date: 2022-03-24 11:23-0300\n"
+"PO-Revision-Date: 2022-12-20 10:53-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: dateandtime/DatePicker.qml:141
 #, kde-format
@@ -25,22 +25,19 @@ msgid "%1 %2"
 msgstr "%1 %2"
 
 #: dateandtime/DatePicker.qml:182
-#, fuzzy, kde-format
-#| msgid "Days"
+#, kde-format
 msgctxt "kirigami-addons"
 msgid "Days"
 msgstr "Dias"
 
 #: dateandtime/DatePicker.qml:190
-#, fuzzy, kde-format
-#| msgid "Months"
+#, kde-format
 msgctxt "kirigami-addons"
 msgid "Months"
 msgstr "Meses"
 
 #: dateandtime/DatePicker.qml:196
-#, fuzzy, kde-format
-#| msgid "Years"
+#, kde-format
 msgctxt "kirigami-addons"
 msgid "Years"
 msgstr "Anos"
@@ -74,61 +71,61 @@ msgstr "Aceitar"
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: mobileform/AboutPage.qml:85
 #, kde-format
 msgid "About %1"
-msgstr ""
+msgstr "Sobre o %1"
 
 #: mobileform/AboutPage.qml:131
 #, kde-format
 msgid "Copyright"
-msgstr ""
+msgstr "Direitos autorais"
 
 #: mobileform/AboutPage.qml:138
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Licença"
+msgstr[1] "Licenças"
 
 #: mobileform/AboutPage.qml:175
 #, kde-format
 msgid "Homepage"
-msgstr ""
+msgstr "Site"
 
 #: mobileform/AboutPage.qml:184
 #, kde-format
 msgid "Donate"
-msgstr ""
+msgstr "Doar"
 
 #: mobileform/AboutPage.qml:193
 #, kde-format
 msgid "Get Involved"
-msgstr ""
+msgstr "Participe"
 
 #: mobileform/AboutPage.qml:214
 #, kde-format
 msgid "Report a bug"
-msgstr ""
+msgstr "Relate um erro"
 
 #: mobileform/AboutPage.qml:227
 #, kde-format
 msgid "Libraries in use"
-msgstr ""
+msgstr "Bibliotecas em uso"
 
 #: mobileform/AboutPage.qml:258
 #, kde-format
 msgid "Authors"
-msgstr ""
+msgstr "Autores"
 
 #: mobileform/AboutPage.qml:270
 #, kde-format
 msgid "Credits"
-msgstr ""
+msgstr "Créditos"
 
 #: mobileform/AboutPage.qml:282
 #, kde-format
 msgid "Translators"
-msgstr ""
+msgstr "Tradutores"
