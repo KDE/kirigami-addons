@@ -78,7 +78,12 @@ AbstractFormDelegate {
     /**
      * This property holds the current status message of the text field.
      */
-    property string statusMessage: ''
+    property string statusMessage: ""
+
+    /**
+     * This property holds the placeholder text of the text field.
+     */
+    property string placeholderText: ""
 
     /**
      * This signal is emitted when the Return or Enter key is pressed. Note that if there
@@ -123,6 +128,7 @@ AbstractFormDelegate {
             id: textField
             Accessible.description: label
             Layout.fillWidth: true
+            placeholderText: root.placeholderText
             text: root.text
             onTextChanged: root.text = text
             onAccepted: root.accepted()
