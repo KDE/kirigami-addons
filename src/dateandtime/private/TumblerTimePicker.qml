@@ -85,7 +85,7 @@ RowLayout {
 
     Label {
         Layout.alignment: Qt.AlignCenter
-        text: i18ndc("Kirigami-addons", "Time separator", ":")
+        text: i18ndc("kirigami-addons", "Time separator", ":")
         font.pointSize: Kirigami.Theme.defaultFont.pointSize * 1.3
     }
 

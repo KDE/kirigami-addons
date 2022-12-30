@@ -128,7 +128,7 @@ Kirigami.ScrollablePage {
 
                 FormTextDelegate {
                     id: copyrightDelegate
-                    text: i18nd("Kirigami-addons", "Copyright")
+                    text: i18nd("kirigami-addons", "Copyright")
                     descriptionItem.textFormat: Text.RichText
                     description: aboutData.otherText + (aboutData.otherText.length > 0 ? '</br>' : '')
                         + aboutData.copyrightStatement
@@ -172,7 +172,7 @@ Kirigami.ScrollablePage {
 
                 FormButtonDelegate {
                     id: getInvolvedDelegate
-                    text: i18nd("Kirigami-addons", "Homepage")
+                    text: i18nd("kirigami-addons", "Homepage")
                     onClicked: Qt.openUrlExternally(aboutData.homepage)
                     visible: aboutData.homepage
                 }
@@ -181,7 +181,7 @@ Kirigami.ScrollablePage {
 
                 FormButtonDelegate {
                     id: donateDelegate
-                    text: i18nd("Kirigami-addons", "Donate")
+                    text: i18nd("kirigami-addons", "Donate")
                     onClicked: Qt.openUrlExternally(donateUrl)
                     visible: donateUrl
                 }
@@ -190,7 +190,7 @@ Kirigami.ScrollablePage {
 
                 FormButtonDelegate {
                     id: homepageDelegate
-                    text: i18nd("Kirigami-addons", "Get Involved")
+                    text: i18nd("kirigami-addons", "Get Involved")
                     onClicked: Qt.openUrlExternally(page.getInvolvedUrl)
                     visible: page.getInvolvedUrl
                 }
@@ -211,7 +211,7 @@ Kirigami.ScrollablePage {
                         return url;
                     }
 
-                    text: i18nd("Kirigami-addons", "Report a bug")
+                    text: i18nd("kirigami-addons", "Report a bug")
                     onClicked: Qt.openUrlExternally(theUrl)
                     visible: theUrl !== ''
                 }
