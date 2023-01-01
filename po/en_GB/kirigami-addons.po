@@ -7,9 +7,9 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-28 00:47+0000\n"
-"PO-Revision-Date: 2022-04-02 16:52+0100\n"
+"PO-Revision-Date: 2022-12-31 15:57+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
-"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language-Team: English <kde-i18n-doc@kde.org>\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,22 +24,19 @@ msgid "%1 %2"
 msgstr "%1 %2"
 
 #: dateandtime/DatePicker.qml:182
-#, fuzzy, kde-format
-#| msgid "Days"
+#, kde-format
 msgctxt "kirigami-addons"
 msgid "Days"
 msgstr "Days"
 
 #: dateandtime/DatePicker.qml:190
-#, fuzzy, kde-format
-#| msgid "Months"
+#, kde-format
 msgctxt "kirigami-addons"
 msgid "Months"
 msgstr "Months"
 
 #: dateandtime/DatePicker.qml:196
-#, fuzzy, kde-format
-#| msgid "Years"
+#, kde-format
 msgctxt "kirigami-addons"
 msgid "Years"
 msgstr "Years"
@@ -73,61 +70,61 @@ msgstr "Accept"
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: mobileform/AboutPage.qml:85
 #, kde-format
 msgid "About %1"
-msgstr ""
+msgstr "About %1"
 
 #: mobileform/AboutPage.qml:131
 #, kde-format
 msgid "Copyright"
-msgstr ""
+msgstr "Copyright"
 
 #: mobileform/AboutPage.qml:138
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Licence"
+msgstr[1] "Licences"
 
 #: mobileform/AboutPage.qml:175
 #, kde-format
 msgid "Homepage"
-msgstr ""
+msgstr "Homepage"
 
 #: mobileform/AboutPage.qml:184
 #, kde-format
 msgid "Donate"
-msgstr ""
+msgstr "Donate"
 
 #: mobileform/AboutPage.qml:193
 #, kde-format
 msgid "Get Involved"
-msgstr ""
+msgstr "Get Involved"
 
 #: mobileform/AboutPage.qml:214
 #, kde-format
 msgid "Report a bug"
-msgstr ""
+msgstr "Report a bug"
 
 #: mobileform/AboutPage.qml:227
 #, kde-format
 msgid "Libraries in use"
-msgstr ""
+msgstr "Libraries in use"
 
 #: mobileform/AboutPage.qml:258
 #, kde-format
 msgid "Authors"
-msgstr ""
+msgstr "Authors"
 
 #: mobileform/AboutPage.qml:270
 #, kde-format
 msgid "Credits"
-msgstr ""
+msgstr "Credits"
 
 #: mobileform/AboutPage.qml:282
 #, kde-format
 msgid "Translators"
-msgstr ""
+msgstr "Translators"
