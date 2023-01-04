@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
-# Vit Pelcak <vpelcak@suse.cz>, 2021, 2022.
+# Vit Pelcak <vit@pelcak.org>, 2021, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-28 00:47+0000\n"
-"PO-Revision-Date: 2022-04-06 12:00+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"PO-Revision-Date: 2022-11-08 16:45+0100\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: dateandtime/DatePicker.qml:141
 #, kde-format
@@ -24,22 +24,19 @@ msgid "%1 %2"
 msgstr "%1 %2"
 
 #: dateandtime/DatePicker.qml:182
-#, fuzzy, kde-format
-#| msgid "Days"
+#, kde-format
 msgctxt "kirigami-addons"
 msgid "Days"
-msgstr "Dnů"
+msgstr "Dny"
 
 #: dateandtime/DatePicker.qml:190
-#, fuzzy, kde-format
-#| msgid "Months"
+#, kde-format
 msgctxt "kirigami-addons"
 msgid "Months"
 msgstr "Měsíce"
 
 #: dateandtime/DatePicker.qml:196
-#, fuzzy, kde-format
-#| msgid "Years"
+#, kde-format
 msgctxt "kirigami-addons"
 msgid "Years"
 msgstr "Roky"
@@ -78,12 +75,12 @@ msgstr ""
 #: mobileform/AboutPage.qml:85
 #, kde-format
 msgid "About %1"
-msgstr ""
+msgstr "O aplikaci %1"
 
 #: mobileform/AboutPage.qml:131
 #, kde-format
 msgid "Copyright"
-msgstr ""
+msgstr "Copyright"
 
 #: mobileform/AboutPage.qml:138
 #, kde-format
@@ -96,22 +93,22 @@ msgstr[2] ""
 #: mobileform/AboutPage.qml:175
 #, kde-format
 msgid "Homepage"
-msgstr ""
+msgstr "Domovská stránka"
 
 #: mobileform/AboutPage.qml:184
 #, kde-format
 msgid "Donate"
-msgstr ""
+msgstr "Přispět"
 
 #: mobileform/AboutPage.qml:193
 #, kde-format
 msgid "Get Involved"
-msgstr ""
+msgstr "Přidejte se"
 
 #: mobileform/AboutPage.qml:214
 #, kde-format
 msgid "Report a bug"
-msgstr ""
+msgstr "Nahlásit chybu"
 
 #: mobileform/AboutPage.qml:227
 #, kde-format
@@ -121,14 +118,14 @@ msgstr ""
 #: mobileform/AboutPage.qml:258
 #, kde-format
 msgid "Authors"
-msgstr ""
+msgstr "Autoři"
 
 #: mobileform/AboutPage.qml:270
 #, kde-format
 msgid "Credits"
-msgstr ""
+msgstr "Poděkování"
 
 #: mobileform/AboutPage.qml:282
 #, kde-format
 msgid "Translators"
-msgstr ""
+msgstr "Překladatelé"
