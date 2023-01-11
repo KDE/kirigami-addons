@@ -73,6 +73,7 @@ AbstractFormDelegate {
                 wrapMode: Text.Wrap
                 maximumLineCount: 2
                 color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
+                Accessible.ignored: true // base class sets this text on root already
             }
             
             Label {
@@ -83,6 +84,7 @@ AbstractFormDelegate {
                 elide: Text.ElideRight
                 visible: root.description !== ""
                 wrapMode: Text.Wrap
+                Accessible.ignored: !visible
             }
         }
         
@@ -92,4 +94,6 @@ AbstractFormDelegate {
             direction: FormArrow.Right
         }
     }
+
+    Accessible.onPressAction: action ? action.trigger() : root.clicked()
 }
