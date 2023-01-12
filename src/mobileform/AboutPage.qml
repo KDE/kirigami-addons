@@ -96,8 +96,8 @@ Kirigami.ScrollablePage {
                     id: generalDelegate
                     Layout.fillWidth: true
                     background: Item{}
-                    contentItem: GridLayout {
-                        columns: 2
+                    contentItem: RowLayout {
+                        spacing: Kirigami.Units.smallSpacing * 2
 
                         Kirigami.Icon {
                             Layout.rowSpan: 3
@@ -108,18 +108,23 @@ Kirigami.ScrollablePage {
                             source: Kirigami.Settings.applicationWindowIcon || page.aboutData.programLogo || page.aboutData.programIconName || page.aboutData.componentName
                         }
 
-                        Kirigami.Heading {
+                        ColumnLayout {
                             Layout.fillWidth: true
-                            text: page.aboutData.displayName + " " + page.aboutData.version
-                            wrapMode: Text.WordWrap
-                        }
+                            spacing: Kirigami.Units.smallSpacing
 
-                        Kirigami.Heading {
-                            Layout.fillWidth: true
-                            level: 3
-                            type: Kirigami.Heading.Type.Secondary
-                            wrapMode: Text.WordWrap
-                            text: page.aboutData.shortDescription
+                            Kirigami.Heading {
+                                Layout.fillWidth: true
+                                text: page.aboutData.displayName + " " + page.aboutData.version
+                                wrapMode: Text.WordWrap
+                            }
+
+                            Kirigami.Heading {
+                                Layout.fillWidth: true
+                                level: 3
+                                type: Kirigami.Heading.Type.Secondary
+                                wrapMode: Text.WordWrap
+                                text: page.aboutData.shortDescription
+                            }
                         }
                     }
                 }
