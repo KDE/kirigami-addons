@@ -88,6 +88,7 @@ AbstractFormDelegate {
                 elide: Text.ElideRight
                 onLinkActivated: root.linkActivated(link)
                 visible: root.text
+                Accessible.ignored: true // base class sets this text on root already
             }
             
             Label {
