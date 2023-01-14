@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-28 00:47+0000\n"
+"POT-Creation-Date: 2023-01-14 16:32+0000\n"
 "PO-Revision-Date: 2022-11-24 05:07+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -80,54 +80,54 @@ msgstr ":"
 msgid "About %1"
 msgstr "%1(e)ri buruz"
 
-#: mobileform/AboutPage.qml:131
+#: mobileform/AboutPage.qml:136
 #, kde-format
 msgid "Copyright"
 msgstr "Copyright"
 
-#: mobileform/AboutPage.qml:138
+#: mobileform/AboutPage.qml:143
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "Lizentzia"
 msgstr[1] "Lizentziak"
 
-#: mobileform/AboutPage.qml:175
+#: mobileform/AboutPage.qml:180
 #, kde-format
 msgid "Homepage"
 msgstr "Orri nagusia"
 
-#: mobileform/AboutPage.qml:184
+#: mobileform/AboutPage.qml:189
 #, kde-format
 msgid "Donate"
 msgstr "Egin dohaintza"
 
-#: mobileform/AboutPage.qml:193
+#: mobileform/AboutPage.qml:198
 #, kde-format
 msgid "Get Involved"
 msgstr "Engaia zaitez"
 
-#: mobileform/AboutPage.qml:214
+#: mobileform/AboutPage.qml:219
 #, kde-format
 msgid "Report a bug"
 msgstr "Eman akats baten berri"
 
-#: mobileform/AboutPage.qml:227
+#: mobileform/AboutPage.qml:232
 #, kde-format
 msgid "Libraries in use"
 msgstr "Erabiltzen ari diren liburutegiak"
 
-#: mobileform/AboutPage.qml:258
+#: mobileform/AboutPage.qml:263
 #, kde-format
 msgid "Authors"
 msgstr "Egileak"
 
-#: mobileform/AboutPage.qml:270
+#: mobileform/AboutPage.qml:275
 #, kde-format
 msgid "Credits"
 msgstr "Merituak"
 
-#: mobileform/AboutPage.qml:282
+#: mobileform/AboutPage.qml:287
 #, kde-format
 msgid "Translators"
 msgstr "Itzultzaileak"

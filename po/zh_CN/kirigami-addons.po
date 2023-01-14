@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-28 00:47+0000\n"
+"POT-Creation-Date: 2023-01-14 16:32+0000\n"
 "PO-Revision-Date: 2023-01-12 10:32\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -77,53 +77,53 @@ msgstr ":"
 msgid "About %1"
 msgstr "关于 %1"
 
-#: mobileform/AboutPage.qml:131
+#: mobileform/AboutPage.qml:136
 #, kde-format
 msgid "Copyright"
 msgstr "版权信息"
 
-#: mobileform/AboutPage.qml:138
+#: mobileform/AboutPage.qml:143
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "许可证"
 
-#: mobileform/AboutPage.qml:175
+#: mobileform/AboutPage.qml:180
 #, kde-format
 msgid "Homepage"
 msgstr "主页"
 
-#: mobileform/AboutPage.qml:184
+#: mobileform/AboutPage.qml:189
 #, kde-format
 msgid "Donate"
 msgstr "捐款"
 
-#: mobileform/AboutPage.qml:193
+#: mobileform/AboutPage.qml:198
 #, kde-format
 msgid "Get Involved"
 msgstr "参与贡献"
 
-#: mobileform/AboutPage.qml:214
+#: mobileform/AboutPage.qml:219
 #, kde-format
 msgid "Report a bug"
 msgstr "报告程序缺陷"
 
-#: mobileform/AboutPage.qml:227
+#: mobileform/AboutPage.qml:232
 #, kde-format
 msgid "Libraries in use"
 msgstr "使用的程序库"
 
-#: mobileform/AboutPage.qml:258
+#: mobileform/AboutPage.qml:263
 #, kde-format
 msgid "Authors"
 msgstr "作者"
 
-#: mobileform/AboutPage.qml:270
+#: mobileform/AboutPage.qml:275
 #, kde-format
 msgid "Credits"
 msgstr "鸣谢"
 
-#: mobileform/AboutPage.qml:282
+#: mobileform/AboutPage.qml:287
 #, kde-format
 msgid "Translators"
 msgstr "翻译人员"
