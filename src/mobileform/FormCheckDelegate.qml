@@ -82,17 +82,16 @@ T.CheckDelegate {
             nextCheckState: root.nextCheckState
             tristate: root.tristate
 
-            onToggled: root.toggled()
+            onToggled: {
+                root.toggle()
+                root.toggled()
+            }
             onClicked: root.clicked()
             onPressAndHold: root.pressAndHold()
             onDoubleClicked: root.doubleClicked()
             
             enabled: root.enabled
             checked: root.checked
-            onCheckedChanged: {
-                root.checked = checked;
-                checked = Qt.binding(() => root.checked);
-            }
         }
 
         ColumnLayout {
