@@ -43,6 +43,7 @@ ColumnLayout {
             text: title
             visible: title !== ""
             wrapMode: Text.Wrap
+            Accessible.ignored: !visible
         }
         
         Label {
@@ -51,11 +52,13 @@ ColumnLayout {
             visible: subtitle !== ""
             wrapMode: Text.Wrap
             Layout.fillWidth: true
+            Accessible.ignored: !visible
         }
     }
     
     Kirigami.Separator { 
         opacity: 0.5
         Layout.fillWidth: true
+        Accessible.ignored: true
     }
 }
