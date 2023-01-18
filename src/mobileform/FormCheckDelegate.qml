@@ -82,10 +82,7 @@ T.CheckDelegate {
             nextCheckState: root.nextCheckState
             tristate: root.tristate
 
-            onToggled: {
-                root.toggle()
-                root.toggled()
-            }
+            onToggled: root.toggle()
             onClicked: root.clicked()
             onPressAndHold: root.pressAndHold()
             onDoubleClicked: root.doubleClicked()
