@@ -31,9 +31,10 @@ include(ECMQtDeclareLoggingCategory)
 include(ECMAddQch)
 include(ECMQmlModule)
 
-find_package(Qt6 ${QT_REQUIRED_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick QuickControls2)
+find_package(Qt6 ${QT_REQUIRED_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick)
 
-find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS Kirigami2 I18n)
+find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS Kirigami2 I18n Config)
+
 if (BUILD_TESTING)
     find_package(Qt6QuickTest ${QT_REQUIRED_VERSION} CONFIG QUIET)
 endif()
