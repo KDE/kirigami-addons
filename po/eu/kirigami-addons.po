@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-14 16:32+0000\n"
+"POT-Creation-Date: 2023-01-22 00:55+0000\n"
 "PO-Revision-Date: 2022-11-24 05:07+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -75,59 +75,117 @@ msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: mobileform/AboutPage.qml:85
+#: mobileform/AboutPage.qml:94
 #, kde-format
 msgid "About %1"
 msgstr "%1(e)ri buruz"
 
-#: mobileform/AboutPage.qml:136
+#: mobileform/AboutPage.qml:145
 #, kde-format
 msgid "Copyright"
 msgstr "Copyright"
 
-#: mobileform/AboutPage.qml:143
+#: mobileform/AboutPage.qml:152
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "Lizentzia"
 msgstr[1] "Lizentziak"
 
-#: mobileform/AboutPage.qml:180
+#: mobileform/AboutPage.qml:189 mobileform/private/AboutKDE.qml:83
 #, kde-format
 msgid "Homepage"
 msgstr "Orri nagusia"
 
-#: mobileform/AboutPage.qml:189
+#: mobileform/AboutPage.qml:198 mobileform/private/AboutKDE.qml:163
 #, kde-format
 msgid "Donate"
 msgstr "Egin dohaintza"
 
-#: mobileform/AboutPage.qml:198
+#: mobileform/AboutPage.qml:207 mobileform/private/AboutKDE.qml:125
 #, kde-format
 msgid "Get Involved"
 msgstr "Engaia zaitez"
 
-#: mobileform/AboutPage.qml:219
+#: mobileform/AboutPage.qml:228 mobileform/private/AboutKDE.qml:105
 #, kde-format
 msgid "Report a bug"
 msgstr "Eman akats baten berri"
 
-#: mobileform/AboutPage.qml:232
+#: mobileform/AboutPage.qml:241
 #, kde-format
 msgid "Libraries in use"
 msgstr "Erabiltzen ari diren liburutegiak"
 
-#: mobileform/AboutPage.qml:263
+#: mobileform/AboutPage.qml:272
 #, kde-format
 msgid "Authors"
 msgstr "Egileak"
 
-#: mobileform/AboutPage.qml:275
+#: mobileform/AboutPage.qml:284
 #, kde-format
 msgid "Credits"
 msgstr "Merituak"
 
-#: mobileform/AboutPage.qml:287
+#: mobileform/AboutPage.qml:296
 #, kde-format
 msgid "Translators"
 msgstr "Itzultzaileak"
+
+#: mobileform/AboutPage.qml:322 mobileform/private/AboutKDE.qml:25
+#, fuzzy, kde-format
+#| msgid "About %1"
+msgid "About KDE"
+msgstr "%1(e)ri buruz"
+
+#: mobileform/private/AboutKDE.qml:57
+#, kde-format
+msgid "KDE"
+msgstr ""
+
+#: mobileform/private/AboutKDE.qml:66
+#, kde-format
+msgid "Be Free!"
+msgstr ""
+
+#: mobileform/private/AboutKDE.qml:75
+#, kde-format
+msgid ""
+"KDE is a world-wide community of software engineers, artists, writers, "
+"translators and creators who are committed to Free Software development. KDE "
+"produces the Plasma desktop environment, hundreds of applications, and the "
+"many software libraries that support them.\n"
+msgstr ""
+
+#: mobileform/private/AboutKDE.qml:96
+#, kde-format
+msgid ""
+"Software can always be improved, and the KDE team is ready to do so. "
+"However, you - the user - must tell us when something does not work as "
+"expected or could be done better.\n"
+msgstr ""
+
+#: mobileform/private/AboutKDE.qml:118
+#, kde-format
+msgid ""
+"You do not have to be a software developer to be a member of the KDE team. "
+"You can join the national teams that translate program interfaces. You can "
+"provide graphics, themes, sounds, and improved documentation. You decide!"
+msgstr ""
+
+#: mobileform/private/AboutKDE.qml:132
+#, kde-format
+msgid "Developer Documentation"
+msgstr ""
+
+#: mobileform/private/AboutKDE.qml:145
+#, kde-format
+msgid ""
+"KDE software is and will always be available free of charge, however "
+"creating it is not free.\n"
+msgstr ""
+
+#: mobileform/private/AboutKDE.qml:156
+#, kde-format
+msgid "KDE e.V"
+msgstr ""
