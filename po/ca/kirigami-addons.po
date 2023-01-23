@@ -1,24 +1,24 @@
 # Translation of kirigami-addons.po to Catalan
-# Copyright (C) 2021-2022 This_file_is_part_of_KDE
+# Copyright (C) 2021-2023 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Antoni Bella Pérez <antonibella5@yahoo.com>, 2021.
-# Josep M. Ferrer <txemaq@gmail.com>, 2022.
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2021, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-22 00:55+0000\n"
-"PO-Revision-Date: 2022-11-21 09:13+0100\n"
-"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"PO-Revision-Date: 2023-01-22 18:39+0100\n"
+"Last-Translator: Antoni Bella <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Kate 22.08.3\n"
 
 #: dateandtime/DatePicker.qml:141
 #, kde-format
@@ -133,20 +133,19 @@ msgid "Translators"
 msgstr "Traductors"
 
 #: mobileform/AboutPage.qml:322 mobileform/private/AboutKDE.qml:25
-#, fuzzy, kde-format
-#| msgid "About %1"
+#, kde-format
 msgid "About KDE"
-msgstr "Quant al %1"
+msgstr "Quant al KDE"
 
 #: mobileform/private/AboutKDE.qml:57
 #, kde-format
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: mobileform/private/AboutKDE.qml:66
 #, kde-format
 msgid "Be Free!"
-msgstr ""
+msgstr "Sigues lliure!"
 
 #: mobileform/private/AboutKDE.qml:75
 #, kde-format
@@ -156,6 +155,11 @@ msgid ""
 "produces the Plasma desktop environment, hundreds of applications, and the "
 "many software libraries that support them.\n"
 msgstr ""
+"KDE és una comunitat mundial d'enginyers de programari, artistes, "
+"escriptors, traductors i creadors que estan compromesos amb el "
+"desenvolupament de programari lliure. KDE produeix l'entorn d'escriptori "
+"Plasma, centenars d'aplicacions i moltes biblioteques de programari que els "
+"donen suport.\n"
 
 #: mobileform/private/AboutKDE.qml:96
 #, kde-format
@@ -164,6 +168,9 @@ msgid ""
 "However, you - the user - must tell us when something does not work as "
 "expected or could be done better.\n"
 msgstr ""
+"El programari sempre es pot millorar, i l'equip del KDE està preparat per a "
+"fer-ho. No obstant això, vós -l'usuari- ha de dir-nos quan alguna cosa no "
+"funciona com s'espera o podria fer-se millor.\n"
 
 #: mobileform/private/AboutKDE.qml:118
 #, kde-format
@@ -172,11 +179,15 @@ msgid ""
 "You can join the national teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
+"No cal que sigueu desenvolupador/a de programari per a ser membre de l'equip "
+"de KDE. Podeu unir-vos als equips nacionals que tradueixen les interfícies "
+"dels programes. Podeu proporcionar gràfics, temes, sons i millorar la "
+"documentació. Vós decidiu!"
 
 #: mobileform/private/AboutKDE.qml:132
 #, kde-format
 msgid "Developer Documentation"
-msgstr ""
+msgstr "Documentació de desenvolupament"
 
 #: mobileform/private/AboutKDE.qml:145
 #, kde-format
@@ -184,8 +195,10 @@ msgid ""
 "KDE software is and will always be available free of charge, however "
 "creating it is not free.\n"
 msgstr ""
+"El programari de KDE està i sempre estarà disponible de franc, però crear-lo "
+"no és gratuït.\n"
 
 #: mobileform/private/AboutKDE.qml:156
 #, kde-format
 msgid "KDE e.V"
-msgstr ""
+msgstr "KDE e.V"

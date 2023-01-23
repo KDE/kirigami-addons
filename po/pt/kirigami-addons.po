@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-22 00:55+0000\n"
-"PO-Revision-Date: 2022-11-28 18:22+0000\n"
+"PO-Revision-Date: 2023-01-22 22:55+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-POFile-SpellExtra: aplicaçlões\n"
 
 #: dateandtime/DatePicker.qml:141
 #, kde-format
@@ -130,20 +131,19 @@ msgid "Translators"
 msgstr "Tradutores"
 
 #: mobileform/AboutPage.qml:322 mobileform/private/AboutKDE.qml:25
-#, fuzzy, kde-format
-#| msgid "About %1"
+#, kde-format
 msgid "About KDE"
-msgstr "Acerca do %1"
+msgstr "Acerca do KDE"
 
 #: mobileform/private/AboutKDE.qml:57
 #, kde-format
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: mobileform/private/AboutKDE.qml:66
 #, kde-format
 msgid "Be Free!"
-msgstr ""
+msgstr "Seja Livre!"
 
 #: mobileform/private/AboutKDE.qml:75
 #, kde-format
@@ -153,6 +153,11 @@ msgid ""
 "produces the Plasma desktop environment, hundreds of applications, and the "
 "many software libraries that support them.\n"
 msgstr ""
+"O KDE é uma comunidade mundial de engenheiros informáticos, artistas, "
+"escritores, tradutores e criadores que estão comprometidos com o "
+"desenvolvimento de 'software' livre. O KDE produz o ambiente de trabalho "
+"Plasma, centenas de aplicações e uma enorme quantidade bibliotecas de "
+"'software' que dão suporte às mesmas.\n"
 
 #: mobileform/private/AboutKDE.qml:96
 #, kde-format
@@ -161,6 +166,10 @@ msgid ""
 "However, you - the user - must tell us when something does not work as "
 "expected or could be done better.\n"
 msgstr ""
+"As aplicações poderão sempre ser melhoradas, e a equipa do KDE está "
+"disponível para o fazer. Contudo, você - o utilizador - deve-nos indicar "
+"quando algo não funciona como seria de esperar ou como poderia funcionar "
+"melhor.\n"
 
 #: mobileform/private/AboutKDE.qml:118
 #, kde-format
@@ -169,11 +178,15 @@ msgid ""
 "You can join the national teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
+"Não tem de ser um programador de aplicações para ser um membro da equipa do "
+"KDE. Pode-se juntar às equipas nacionais que traduzem as interfaces dos "
+"programas. Poderá fornecer gráficos, temas, sons e melhoras na documentação. "
+"Você decide!"
 
 #: mobileform/private/AboutKDE.qml:132
 #, kde-format
 msgid "Developer Documentation"
-msgstr ""
+msgstr "Documentação de Desenvolvimento"
 
 #: mobileform/private/AboutKDE.qml:145
 #, kde-format
@@ -181,8 +194,10 @@ msgid ""
 "KDE software is and will always be available free of charge, however "
 "creating it is not free.\n"
 msgstr ""
+"As aplicações do KDE são e sempre serão disponíveis sem qualquer encargo; "
+"contudo, a sua criação não é de graça.\n"
 
 #: mobileform/private/AboutKDE.qml:156
 #, kde-format
 msgid "KDE e.V"
-msgstr ""
+msgstr "KDE e.V"

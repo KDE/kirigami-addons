@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2021, 2022.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-22 00:55+0000\n"
-"PO-Revision-Date: 2022-11-21 11:12+0100\n"
+"PO-Revision-Date: 2023-01-22 15:07+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: dateandtime/DatePicker.qml:141
 #, kde-format
@@ -130,20 +130,19 @@ msgid "Translators"
 msgstr "Vertalers"
 
 #: mobileform/AboutPage.qml:322 mobileform/private/AboutKDE.qml:25
-#, fuzzy, kde-format
-#| msgid "About %1"
+#, kde-format
 msgid "About KDE"
-msgstr "Info over %1"
+msgstr "Over KDE"
 
 #: mobileform/private/AboutKDE.qml:57
 #, kde-format
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: mobileform/private/AboutKDE.qml:66
 #, kde-format
 msgid "Be Free!"
-msgstr ""
+msgstr "Wees vrij!"
 
 #: mobileform/private/AboutKDE.qml:75
 #, kde-format
@@ -153,6 +152,10 @@ msgid ""
 "produces the Plasma desktop environment, hundreds of applications, and the "
 "many software libraries that support them.\n"
 msgstr ""
+"KDE is een wereldwijde gemeenschap van software engineers, artiesten, "
+"schrijvers, vertalers en makers die toegewijd zijn aan Vrije Software "
+"ontwikkeling. KDE produceert de Plasma bureaubladomgeving, honderden "
+"toepassingen en de vele software bibliotheken die hen ondersteunen.\n"
 
 #: mobileform/private/AboutKDE.qml:96
 #, kde-format
@@ -161,6 +164,9 @@ msgid ""
 "However, you - the user - must tell us when something does not work as "
 "expected or could be done better.\n"
 msgstr ""
+"Software kan altijd verbeterd worden en het KDE team is gereed om dat te "
+"doen. Echter, u - de gebruiker - moet ons vertellen wanneer iets niet werkt "
+"zoals verwacht of beter zou kunnen.\n"
 
 #: mobileform/private/AboutKDE.qml:118
 #, kde-format
@@ -169,11 +175,15 @@ msgid ""
 "You can join the national teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
+"U hoeft geen softwareontwikkelaar te zijn om lid te worden van het KDE-team. "
+"U kunt bijv. deelnemen aan een van de nationale teams die de programma's en "
+"documentatie vertalen. U kunt afbeeldingen, thema's, geluiden en verbeterde "
+"documentatie leveren. Aan u de keuze!"
 
 #: mobileform/private/AboutKDE.qml:132
 #, kde-format
 msgid "Developer Documentation"
-msgstr ""
+msgstr "Documentatie voor ontwikkelaars"
 
 #: mobileform/private/AboutKDE.qml:145
 #, kde-format
@@ -181,8 +191,10 @@ msgid ""
 "KDE software is and will always be available free of charge, however "
 "creating it is not free.\n"
 msgstr ""
+"KDE software is en zal altijd vrij van kosten beschikbaar zijn, het maken, "
+"echter, is niet gratis.\n"
 
 #: mobileform/private/AboutKDE.qml:156
 #, kde-format
 msgid "KDE e.V"
-msgstr ""
+msgstr "KDE e.V"

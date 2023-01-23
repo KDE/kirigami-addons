@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
 #
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-22 00:55+0000\n"
-"PO-Revision-Date: 2022-11-21 20:59+0300\n"
+"PO-Revision-Date: 2023-01-22 20:09+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: dateandtime/DatePicker.qml:141
 #, kde-format
@@ -130,20 +130,19 @@ msgid "Translators"
 msgstr "Çeviriler"
 
 #: mobileform/AboutPage.qml:322 mobileform/private/AboutKDE.qml:25
-#, fuzzy, kde-format
-#| msgid "About %1"
+#, kde-format
 msgid "About KDE"
-msgstr "%1 Hakkında"
+msgstr "KDE Hakkında"
 
 #: mobileform/private/AboutKDE.qml:57
 #, kde-format
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: mobileform/private/AboutKDE.qml:66
 #, kde-format
 msgid "Be Free!"
-msgstr ""
+msgstr "Özgür Olun!"
 
 #: mobileform/private/AboutKDE.qml:75
 #, kde-format
@@ -153,6 +152,11 @@ msgid ""
 "produces the Plasma desktop environment, hundreds of applications, and the "
 "many software libraries that support them.\n"
 msgstr ""
+"KDE, dünyanın dört bir yanında bulunan ve Özgür Yazılım geliştirme "
+"felsefesini benimsemiş yazılım mühendislerinin, sanatçıların, yazarların ve "
+"çevirmenlerin katılımı ile oluşmuş bir topluluktur. KDE; Plasma masaüstü "
+"ortamını, yüzlerce uygulamayı ve bu uygulamaları destekleyen çok sayıda "
+"yazılım kitaplığını geliştirir.\n"
 
 #: mobileform/private/AboutKDE.qml:96
 #, kde-format
@@ -161,6 +165,10 @@ msgid ""
 "However, you - the user - must tell us when something does not work as "
 "expected or could be done better.\n"
 msgstr ""
+"Bir yazılım, doğası gereği her zaman iyileştirmeye açıktır ve KDE takımının "
+"tek amacı budur. Kullanıcılar olarak, bir şeyler beklediğiniz gibi "
+"çalışmadığında veya kimi şeylerin daha iyi olabileceğini düşündüğünüzde "
+"lütfen bize bunları bildirin.\n"
 
 #: mobileform/private/AboutKDE.qml:118
 #, kde-format
@@ -169,11 +177,15 @@ msgid ""
 "You can join the national teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
+"KDE Takımının bir üyesi olmak için yazılım mühendisi olmanız gerekmez. "
+"Uygulama arayüzleri çevirisi için kendi dilinizin çeviri takımınıza "
+"katılabilirsiniz. İsterseniz grafikler, temalar, sesler yaratabilir ve "
+"yardım belgeleri yazıp var olanları geliştirebilirsiniz. Karar sizin!"
 
 #: mobileform/private/AboutKDE.qml:132
 #, kde-format
 msgid "Developer Documentation"
-msgstr ""
+msgstr "Geliştirici Belgelendirmesi"
 
 #: mobileform/private/AboutKDE.qml:145
 #, kde-format
@@ -181,8 +193,10 @@ msgid ""
 "KDE software is and will always be available free of charge, however "
 "creating it is not free.\n"
 msgstr ""
+"KDE yazılımı ücretsizdir ve her zaman ücretsiz olacaktır, ancak onu yapmak "
+"ücretsiz değildir.\n"
 
 #: mobileform/private/AboutKDE.qml:156
 #, kde-format
 msgid "KDE e.V"
-msgstr ""
+msgstr "KDE e.V"

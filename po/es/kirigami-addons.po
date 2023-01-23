@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the kirigami-addons package.
 #
 # Automatically generated, 2021.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2021, 2022.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-22 00:55+0000\n"
-"PO-Revision-Date: 2022-11-22 00:10+0100\n"
+"PO-Revision-Date: 2023-01-22 05:28+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.11.80\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: dateandtime/DatePicker.qml:141
 #, kde-format
@@ -132,15 +132,14 @@ msgid "Translators"
 msgstr "Traductores"
 
 #: mobileform/AboutPage.qml:322 mobileform/private/AboutKDE.qml:25
-#, fuzzy, kde-format
-#| msgid "About %1"
+#, kde-format
 msgid "About KDE"
-msgstr "Acerca de %1"
+msgstr "Acerca de KDE"
 
 #: mobileform/private/AboutKDE.qml:57
 #, kde-format
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: mobileform/private/AboutKDE.qml:66
 #, kde-format
@@ -175,7 +174,7 @@ msgstr ""
 #: mobileform/private/AboutKDE.qml:132
 #, kde-format
 msgid "Developer Documentation"
-msgstr ""
+msgstr "Documentación del desarrollador"
 
 #: mobileform/private/AboutKDE.qml:145
 #, kde-format
@@ -187,4 +186,4 @@ msgstr ""
 #: mobileform/private/AboutKDE.qml:156
 #, kde-format
 msgid "KDE e.V"
-msgstr ""
+msgstr "KDE e.V"

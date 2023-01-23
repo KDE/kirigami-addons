@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2021, 2022.
+# Yuri Chornoivan <yurchor@ukr.net>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-22 00:55+0000\n"
-"PO-Revision-Date: 2022-11-21 13:22+0200\n"
+"PO-Revision-Date: 2023-01-22 12:44+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -133,20 +133,19 @@ msgid "Translators"
 msgstr "Перекладачі"
 
 #: mobileform/AboutPage.qml:322 mobileform/private/AboutKDE.qml:25
-#, fuzzy, kde-format
-#| msgid "About %1"
+#, kde-format
 msgid "About KDE"
-msgstr "Про %1"
+msgstr "Про KDE"
 
 #: mobileform/private/AboutKDE.qml:57
 #, kde-format
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: mobileform/private/AboutKDE.qml:66
 #, kde-format
 msgid "Be Free!"
-msgstr ""
+msgstr "Будьте вільними!"
 
 #: mobileform/private/AboutKDE.qml:75
 #, kde-format
@@ -156,6 +155,11 @@ msgid ""
 "produces the Plasma desktop environment, hundreds of applications, and the "
 "many software libraries that support them.\n"
 msgstr ""
+"KDE — всесвітня спільнота програмістів, художників, авторів текстів, "
+"перекладачів та творчих особистостей, які роблять внесок до розробки "
+"вільного програмного забезпечення. KDE працює над випусками стільничного "
+"середовища Плазми, сотень програм та багатьох бібліотек програмного "
+"забезпечення, які лежать в основі усього цього.\n"
 
 #: mobileform/private/AboutKDE.qml:96
 #, kde-format
@@ -164,6 +168,9 @@ msgid ""
 "However, you - the user - must tell us when something does not work as "
 "expected or could be done better.\n"
 msgstr ""
+"Програми завжди можна удосконалити, і команда KDE готова це робити. Втім, ви "
+"— користувач — маєте повідомити нам, якщо щось не працює, як слід, або може "
+"бути зроблене краще.\n"
 
 #: mobileform/private/AboutKDE.qml:118
 #, kde-format
@@ -172,11 +179,15 @@ msgid ""
 "You can join the national teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
+"Не обов'язково бути програмістом, щоб належати до Команди KDE. Можете "
+"приєднатися до національних команд, що перекладають інтерфейс програм. "
+"Можете забезпечувати користувачів графікою, темами, звуками та вдосконаленою "
+"документацію. Вам вирішувати!"
 
 #: mobileform/private/AboutKDE.qml:132
 #, kde-format
 msgid "Developer Documentation"
-msgstr ""
+msgstr "Документація для розробників"
 
 #: mobileform/private/AboutKDE.qml:145
 #, kde-format
@@ -184,8 +195,10 @@ msgid ""
 "KDE software is and will always be available free of charge, however "
 "creating it is not free.\n"
 msgstr ""
+"Програмне забезпечення KDE є і завжди буде безкоштовним, але його створення "
+"пов'язано із певними витратами.\n"
 
 #: mobileform/private/AboutKDE.qml:156
 #, kde-format
 msgid "KDE e.V"
-msgstr ""
+msgstr "KDE e.V"
