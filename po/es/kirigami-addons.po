@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-22 00:55+0000\n"
-"PO-Revision-Date: 2023-01-22 05:28+0100\n"
+"PO-Revision-Date: 2023-01-23 02:34+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -144,7 +144,7 @@ msgstr "KDE"
 #: mobileform/private/AboutKDE.qml:66
 #, kde-format
 msgid "Be Free!"
-msgstr ""
+msgstr "¡Sea libre!"
 
 #: mobileform/private/AboutKDE.qml:75
 #, kde-format
@@ -154,6 +154,10 @@ msgid ""
 "produces the Plasma desktop environment, hundreds of applications, and the "
 "many software libraries that support them.\n"
 msgstr ""
+"KDE es una comunidad mundial de ingenieros de software, artistas, "
+"escritores, traductores y creadores comprometidos con el desarrollo del "
+"Software Libre. KDE produce el entorno de escritorio Plasma, cientos de "
+"aplicaciones y muchas bibliotecas de software que los apoyan.\n"
 
 #: mobileform/private/AboutKDE.qml:96
 #, kde-format
@@ -162,6 +166,9 @@ msgid ""
 "However, you - the user - must tell us when something does not work as "
 "expected or could be done better.\n"
 msgstr ""
+"El software siempre se puede mejorar y el equipo de KDE siempre está listo "
+"para hacerlo. Sin embargo, usted, el usuario, debe informarnos cuando algo "
+"no funciona como se esperaba o se podría hacer mejor.\n"
 
 #: mobileform/private/AboutKDE.qml:118
 #, kde-format
@@ -170,6 +177,10 @@ msgid ""
 "You can join the national teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
+"No necesita ser desarrollador de software para ser miembro del equipo de "
+"KDE. Puede unirse a los equipos nacionales que traducen la interfaz de los "
+"programas. Puede proporcionar gráficos, temas, sonidos y documentación "
+"mejorada. ¡Usted decide!"
 
 #: mobileform/private/AboutKDE.qml:132
 #, kde-format
@@ -182,6 +193,8 @@ msgid ""
 "KDE software is and will always be available free of charge, however "
 "creating it is not free.\n"
 msgstr ""
+"El software de KDE está y siempre estará disponible de forma gratuita. Sin "
+"embargo, crearlo no es gratuito.\n"
 
 #: mobileform/private/AboutKDE.qml:156
 #, kde-format

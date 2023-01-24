@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-22 00:55+0000\n"
-"PO-Revision-Date: 2022-11-27 11:37+0100\n"
+"PO-Revision-Date: 2023-01-23 07:23+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: dateandtime/DatePicker.qml:141
 #, kde-format
@@ -131,20 +131,19 @@ msgid "Translators"
 msgstr "მთარგმნელები"
 
 #: mobileform/AboutPage.qml:322 mobileform/private/AboutKDE.qml:25
-#, fuzzy, kde-format
-#| msgid "About %1"
+#, kde-format
 msgid "About KDE"
-msgstr "%1-ის შესახებ"
+msgstr "KDE-ს შესახებ"
 
 #: mobileform/private/AboutKDE.qml:57
 #, kde-format
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: mobileform/private/AboutKDE.qml:66
 #, kde-format
 msgid "Be Free!"
-msgstr ""
+msgstr "იყავით თავისუფალი!"
 
 #: mobileform/private/AboutKDE.qml:75
 #, kde-format
@@ -154,6 +153,11 @@ msgid ""
 "produces the Plasma desktop environment, hundreds of applications, and the "
 "many software libraries that support them.\n"
 msgstr ""
+"KDE არის პროგრამული უზრუნველყოფის ინჟინრების, მხატვრების, მწერლების, "
+"მთარგმნელებისა და შემქმნელების მსოფლიო საზოგადოება, რომლებიც მზად არიან "
+"უფასო პროგრამული უზრუნველყოფის განვითარებისთვის. KDE აწარმოებს პლაზმური "
+"დესკტოპის გარემოს, ასობით აპლიკაციას და ბევრ პროგრამულ ბიბლიოთეკს, რომლებიც "
+"მხარს უჭერენ მათ.\n"
 
 #: mobileform/private/AboutKDE.qml:96
 #, kde-format
@@ -162,6 +166,9 @@ msgid ""
 "However, you - the user - must tell us when something does not work as "
 "expected or could be done better.\n"
 msgstr ""
+"პროგრამის გაუმჯობესება ყოველთვის შეიძლება და KDE გუნდი ამისთვის მზადაა. "
+"ამისათვის საჭიროა რომ თქვენ - მომხმარებელმა - შეგვატყობინოთ თქვენი სურვილები "
+"და წინადადებები.\n"
 
 #: mobileform/private/AboutKDE.qml:118
 #, kde-format
@@ -170,11 +177,15 @@ msgid ""
 "You can join the national teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
+"KDE გუნდის მონაწილე რომ გახდეთ აუცილებელი არაა პროგრამისტი იყოთ. შეგიძლიათ "
+"მიუერთდეთ ეროვნულ გუნებს  KDE-ეს მშობლიურ ენაზე სათარგმნელად. შეგიძლიათ "
+"შექმნათ ნახატები, თემები, ხმოვანი ფაილები და გააუმჯობესოთ დოკუმენტაცია. "
+"გადაწყვიტეთ რას ისურვებთ!"
 
 #: mobileform/private/AboutKDE.qml:132
 #, kde-format
 msgid "Developer Documentation"
-msgstr ""
+msgstr "პროგრამისტის დოკუმენტაცია"
 
 #: mobileform/private/AboutKDE.qml:145
 #, kde-format
@@ -182,8 +193,10 @@ msgid ""
 "KDE software is and will always be available free of charge, however "
 "creating it is not free.\n"
 msgstr ""
+"KDE პროგრამა არის და ყოველთვის ხელმისაწვდომი იქნება უფასოდ, თუმცა მისი "
+"შექმნა უფასო არ არის.\n"
 
 #: mobileform/private/AboutKDE.qml:156
 #, kde-format
 msgid "KDE e.V"
-msgstr ""
+msgstr "KDE e.V"

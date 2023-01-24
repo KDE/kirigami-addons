@@ -1,16 +1,16 @@
 # Translation for kirigami-addons.po to Euskara/Basque (eu).
-# Copyright (C) 2021-2022 This file is copyright:
+# Copyright (C) 2021-2023 This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
 # KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2021, 2022.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-22 00:55+0000\n"
-"PO-Revision-Date: 2022-11-24 05:07+0100\n"
+"PO-Revision-Date: 2023-01-23 08:14+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: dateandtime/DatePicker.qml:141
 #, kde-format
@@ -133,20 +133,19 @@ msgid "Translators"
 msgstr "Itzultzaileak"
 
 #: mobileform/AboutPage.qml:322 mobileform/private/AboutKDE.qml:25
-#, fuzzy, kde-format
-#| msgid "About %1"
+#, kde-format
 msgid "About KDE"
-msgstr "%1(e)ri buruz"
+msgstr "KDEri buruz"
 
 #: mobileform/private/AboutKDE.qml:57
 #, kde-format
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: mobileform/private/AboutKDE.qml:66
 #, kde-format
 msgid "Be Free!"
-msgstr ""
+msgstr "Izan aske!"
 
 #: mobileform/private/AboutKDE.qml:75
 #, kde-format
@@ -156,6 +155,10 @@ msgid ""
 "produces the Plasma desktop environment, hundreds of applications, and the "
 "many software libraries that support them.\n"
 msgstr ""
+"KDE Software Askearen garapenarekin engaiatutako mundu osoko software "
+"ingeniari, artista, idazle, itzultzaile eta sortzaile komunitate bat da. "
+"KDEk Plasma mahaigain ingurunea, ehunka aplikazio, eta haiei sostengua "
+"ematen dieten liburutegi ugariak ekoizten ditu.\n"
 
 #: mobileform/private/AboutKDE.qml:96
 #, kde-format
@@ -164,6 +167,9 @@ msgid ""
 "However, you - the user - must tell us when something does not work as "
 "expected or could be done better.\n"
 msgstr ""
+"Softwarea beti hobetu daiteke, eta KDE taldea hobekuntza horiek egiteko "
+"prest dago. Hala ere, zuk -erabiltzaileak-, esan behar diguzu zerbait behar "
+"bezala noiz ez dabilen edo hobetu daitekeen.\n"
 
 #: mobileform/private/AboutKDE.qml:118
 #, kde-format
@@ -172,11 +178,14 @@ msgid ""
 "You can join the national teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
+"Ez duzu software programatzailea izan behar KDE taldeko kide izateko. "
+"Programen interfazeak itzultzen dituzten hizkuntza-taldeetan parte har "
+"dezakezu. Irudiak, gaiak, soinuak eta dokumentu hobetuekin lagun dezakezu!"
 
 #: mobileform/private/AboutKDE.qml:132
 #, kde-format
 msgid "Developer Documentation"
-msgstr ""
+msgstr "Garatzailearen dokumentazioa"
 
 #: mobileform/private/AboutKDE.qml:145
 #, kde-format
@@ -184,8 +193,10 @@ msgid ""
 "KDE software is and will always be available free of charge, however "
 "creating it is not free.\n"
 msgstr ""
+"KDE softwarea doan eskuragarri dago eta beti egongo da, hala ere, hura "
+"sortzea ez da doan.\n"
 
 #: mobileform/private/AboutKDE.qml:156
 #, kde-format
 msgid "KDE e.V"
-msgstr ""
+msgstr "KDE e.V"
