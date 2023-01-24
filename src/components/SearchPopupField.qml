@@ -202,7 +202,7 @@ QQC2.Control {
                     bottomPadding: 0
 
                     Layout.fillWidth: true
-                    Layout.bottomMargin: 2
+                    Layout.topMargin: 2
                 }
 
                 Kirigami.Separator {
