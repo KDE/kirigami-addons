@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
 #
-# Kishore G <kishore96@gmail.com>, 2021, 2022.
+# Kishore G <kishore96@gmail.com>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-22 00:55+0000\n"
-"PO-Revision-Date: 2022-11-22 21:39+0530\n"
+"PO-Revision-Date: 2023-01-24 21:49+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: dateandtime/DatePicker.qml:141
 #, kde-format
@@ -130,20 +130,19 @@ msgid "Translators"
 msgstr "மொழிபெயர்ப்பாளர்கள்"
 
 #: mobileform/AboutPage.qml:322 mobileform/private/AboutKDE.qml:25
-#, fuzzy, kde-format
-#| msgid "About %1"
+#, kde-format
 msgid "About KDE"
-msgstr "%1 பற்றி "
+msgstr "கே.டீ.யீ. பற்றி"
 
 #: mobileform/private/AboutKDE.qml:57
 #, kde-format
 msgid "KDE"
-msgstr ""
+msgstr "கே.டீ.யீ."
 
 #: mobileform/private/AboutKDE.qml:66
 #, kde-format
 msgid "Be Free!"
-msgstr ""
+msgstr "சுதந்திரமாக இரு"
 
 #: mobileform/private/AboutKDE.qml:75
 #, kde-format
@@ -153,6 +152,10 @@ msgid ""
 "produces the Plasma desktop environment, hundreds of applications, and the "
 "many software libraries that support them.\n"
 msgstr ""
+"கே.டீ.யீ. என்பது, கட்டற்ற மென்பொருளின்பால் ஆர்வங்கொண்ட நிரலாளர்களின், கலைஞர்களின், "
+"எழுத்தாளர்களின், மற்றும் மொழிபெயர்ப்பாளர்களின் உலகலாவிய சமூகம் ஆகும். பிளாஸ்மா "
+"பணிமேடையையும், நூற்றுக்கணக்கான செயலிகளையும், அவற்றுக்குத் தேவையான நிரலகங்களையும் கே.டீ."
+"யீ. உருவாக்குகிறது.\n"
 
 #: mobileform/private/AboutKDE.qml:96
 #, kde-format
@@ -161,6 +164,8 @@ msgid ""
 "However, you - the user - must tell us when something does not work as "
 "expected or could be done better.\n"
 msgstr ""
+"மென்பொருள் மேம்படுத்தத்தக்கதே; அதற்கு கே.டீ.யீ.யும் தயாராக உள்ளது. ஆனால், எதிர்பார்த்தப்படி "
+"எதாவது இல்லாத பட்சத்தில் அதை எங்களிடம் தெரிவிப்பது, பயனராகிய உங்களுடைய பொறுப்பு.\n"
 
 #: mobileform/private/AboutKDE.qml:118
 #, kde-format
@@ -169,11 +174,14 @@ msgid ""
 "You can join the national teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
+"கே.டீ.யீ.யில் பங்களிக்க நீங்கள் நிரலாளராக இருக்கவேண்டிய அவசியம் இல்லை. செயலிகளை "
+"மொழிபெயர்க்கும் குழுக்களில் செரலாம். ஓவியங்களையும் தோற்றத்திட்டங்களையும் உருவாக்கலாம். "
+"கையேடுகளை எழுதலாம். முடிவு உங்களதே!"
 
 #: mobileform/private/AboutKDE.qml:132
 #, kde-format
 msgid "Developer Documentation"
-msgstr ""
+msgstr "நிரலாளர்களுக்கான கையேடு"
 
 #: mobileform/private/AboutKDE.qml:145
 #, kde-format
@@ -181,8 +189,9 @@ msgid ""
 "KDE software is and will always be available free of charge, however "
 "creating it is not free.\n"
 msgstr ""
+"கே.டீ.யீ. செயலிகள் இலவசமாக விநியோகிக்கப்பட்டாலும், அவற்றை உருவாக்குவது எளிதல்ல.\n"
 
 #: mobileform/private/AboutKDE.qml:156
 #, kde-format
 msgid "KDE e.V"
-msgstr ""
+msgstr "கே.டீ.யீ. e.V"
