@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 3.16)
 
-project(kirigami-addons VERSION 0.6.1)
+project(kirigami-addons VERSION 0.7.0)
 
 set(REQUIRED_QT_VERSION 5.15.2)
 set(KF5_DEP_VERSION "5.91.0")
