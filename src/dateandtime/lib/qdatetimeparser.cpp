@@ -380,12 +380,12 @@ bool QDateTimeParser::parseFormat(const QString &newFormat)
     QVector<SectionNode> newSectionNodes;
     Sections newDisplay = NoSection;
     QStringList newSeparators;
-    int i, index = 0;
+    int index = 0;
     int add = 0;
     QChar status(zero);
     const int max = newFormat.size();
     int lastQuote = -1;
-    for (i = 0; i<max; ++i) {
+    for (int i = 0; i<max; ++i) {
         if (newFormat.at(i) == quote) {
             lastQuote = i;
             ++add;
