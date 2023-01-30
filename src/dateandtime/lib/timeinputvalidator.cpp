@@ -26,7 +26,7 @@ public:
 };
 
 TimeInputValidatorPrivate::TimeInputValidatorPrivate()
-    : QDateTimeParser(QVariant::DateTime, Context::DateTimeEdit)
+    : QDateTimeParser(QMetaType::QDateTime, Context::DateTimeEdit)
     , defaultValue(nullDateTime())
 {
 }

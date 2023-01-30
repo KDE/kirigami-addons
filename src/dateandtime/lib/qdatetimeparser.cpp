@@ -399,7 +399,7 @@ bool QDateTimeParser::parseFormat(const QString &newFormat)
             switch (sect) {
             case 'H':
             case 'h':
-                if (parserType != QVariant::Date) {
+                if (parserType != QMetaType::QDate) {
                     const Section hour = (sect == 'h') ? Hour12Section : Hour24Section;
                     const SectionNode sn = { hour, i - add, countRepeat(newFormat, i, 2), 0 };
                     newSectionNodes.append(sn);
@@ -410,7 +410,7 @@ bool QDateTimeParser::parseFormat(const QString &newFormat)
                 }
                 break;
             case 'm':
-                if (parserType != QVariant::Date) {
+                if (parserType != QMetaType::QDate) {
                     const SectionNode sn = { MinuteSection, i - add, countRepeat(newFormat, i, 2), 0 };
                     newSectionNodes.append(sn);
                     appendSeparator(&newSeparators, newFormat, index, i - index, lastQuote);
@@ -420,7 +420,7 @@ bool QDateTimeParser::parseFormat(const QString &newFormat)
                 }
                 break;
             case 's':
-                if (parserType != QVariant::Date) {
+                if (parserType != QMetaType::QDate) {
                     const SectionNode sn = { SecondSection, i - add, countRepeat(newFormat, i, 2), 0 };
                     newSectionNodes.append(sn);
                     appendSeparator(&newSeparators, newFormat, index, i - index, lastQuote);
@@ -431,7 +431,7 @@ bool QDateTimeParser::parseFormat(const QString &newFormat)
                 break;
 
             case 'z':
-                if (parserType != QVariant::Date) {
+                if (parserType != QMetaType::QDate) {
                     const SectionNode sn = { MSecSection, i - add, countRepeat(newFormat, i, 3) < 3 ? 1 : 3, 0 };
                     newSectionNodes.append(sn);
                     appendSeparator(&newSeparators, newFormat, index, i - index, lastQuote);
@@ -442,7 +442,7 @@ bool QDateTimeParser::parseFormat(const QString &newFormat)
                 break;
             case 'A':
             case 'a':
-                if (parserType != QVariant::Date) {
+                if (parserType != QMetaType::QDate) {
                     const bool cap = (sect == 'A');
                     const SectionNode sn = { AmPmSection, i - add, (cap ? 1 : 0), 0 };
                     newSectionNodes.append(sn);
@@ -456,7 +456,7 @@ bool QDateTimeParser::parseFormat(const QString &newFormat)
                 }
                 break;
             case 'y':
-                if (parserType != QVariant::Time) {
+                if (parserType != QMetaType::QTime) {
                     const int repeat = countRepeat(newFormat, i, 4);
                     if (repeat >= 2) {
                         const SectionNode sn = { repeat == 4 ? YearSection : YearSection2Digits,
@@ -470,7 +470,7 @@ bool QDateTimeParser::parseFormat(const QString &newFormat)
                 }
                 break;
             case 'M':
-                if (parserType != QVariant::Time) {
+                if (parserType != QMetaType::QTime) {
                     const SectionNode sn = { MonthSection, i - add, countRepeat(newFormat, i, 4), 0 };
                     newSectionNodes.append(sn);
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
@@ -484,7 +484,7 @@ bool QDateTimeParser::parseFormat(const QString &newFormat)
                 }
                 break;
             case 'd':
-                if (parserType != QVariant::Time) {
+                if (parserType != QMetaType::QTime) {
                     const int repeat = countRepeat(newFormat, i, 4);
                     const Section sectionType = (repeat == 4 ? DayOfWeekSectionLong
                         : (repeat == 3 ? DayOfWeekSectionShort : DaySection));
@@ -497,7 +497,7 @@ bool QDateTimeParser::parseFormat(const QString &newFormat)
                 }
                 break;
             case 't':
-                if (parserType != QVariant::Time) {
+                if (parserType != QMetaType::QTime) {
                     const SectionNode sn = { TimeZoneSection, i - add, countRepeat(newFormat, i, 4), 0 };
                     newSectionNodes.append(sn);
                     appendSeparator(&newSeparators, newFormat, index, i - index, lastQuote);
@@ -1240,7 +1240,7 @@ QDateTimeParser::scanString(const QDateTime &defaultValue,
         return StateNode();
     }
 #endif
-    if (parserType != QVariant::Time) {
+    if (parserType != QMetaType::QTime) {
         if (year % 100 != year2digits && (isSet & YearSection2Digits)) {
             if (!(isSet & YearSection)) {
                 year = (year / 100) * 100;
@@ -1317,7 +1317,7 @@ QDateTimeParser::scanString(const QDateTime &defaultValue,
         }
     }
 
-    if (parserType != QVariant::Date) {
+    if (parserType != QMetaType::QDate) {
         if (isSet & Hour12Section) {
             const bool hasHour = isSet & Hour24Section;
             if (ampm == -1) {
@@ -1356,7 +1356,7 @@ QDateTimeParser::scanString(const QDateTime &defaultValue,
 
     // If hour wasn't specified, check the default we're using exists on the
     // given date (which might be a spring-forward, skipping an hour).
-    if (parserType == QVariant::DateTime && !(isSet & HourSectionMask) && !when.isValid()) {
+    if (parserType == QMetaType::QDateTime && !(isSet & HourSectionMask) && !when.isValid()) {
         qint64 msecs = when.toMSecsSinceEpoch();
         // Fortunately, that gets a useful answer ...
         const QDateTime replace =
