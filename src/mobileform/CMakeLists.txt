@@ -15,6 +15,7 @@ ecm_target_qml_sources(mobileformplugin SOURCES
     FormButtonDelegate.qml
     FormCard.qml
     AboutPage.qml
+    AboutKDE.qml
     FormCardHeader.qml
     FormCheckDelegate.qml
     FormComboBoxDelegate.qml
@@ -29,7 +30,6 @@ ecm_target_qml_sources(mobileformplugin SOURCES
 
 ecm_target_qml_sources(mobileformplugin PATH private SOURCES
     private/ContentItemLoader.qml
-    private/AboutKDE.qml
 )
 
 target_link_libraries(mobileformplugin

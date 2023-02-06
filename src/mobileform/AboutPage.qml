@@ -78,13 +78,6 @@ Kirigami.ScrollablePage {
      */
     property url donateUrl: aboutData.desktopFileName.startsWith("org.kde.") ? "https://www.kde.org/community/donations" : ""
 
-    /**
-     * @brief This property controls the "About KDE" button shown at the bottom of the page.
-     *
-     * default: true
-     */
-    property bool showAboutKDE: true
-
     leftPadding: 0
     rightPadding: 0
     topPadding: Kirigami.Units.gridUnit
@@ -302,25 +295,6 @@ Kirigami.ScrollablePage {
                     id: repTranslators
                     model: aboutData.translators
                     delegate: personDelegate
-                }
-            }
-        }
-
-        FormCard {
-            Layout.topMargin: Kirigami.Units.largeSpacing
-            Layout.fillWidth: true
-            visible: showAboutKDE
-            contentItem: ColumnLayout {
-                spacing: 0
-
-                Component {
-                    id: aboutKDEPage
-                    Private.AboutKDE {}
-                }
-
-                FormButtonDelegate {
-                    text: i18nd("kirigami-addons", "About KDE")
-                    onClicked: push(aboutKDEPage)
                 }
             }
         }
