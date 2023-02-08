@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-22 00:55+0000\n"
-"PO-Revision-Date: 2023-01-12 10:32\n"
+"PO-Revision-Date: 2023-02-07 11:03\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -129,20 +129,19 @@ msgid "Translators"
 msgstr "翻译人员"
 
 #: mobileform/AboutPage.qml:322 mobileform/private/AboutKDE.qml:25
-#, fuzzy, kde-format
-#| msgid "About %1"
+#, kde-format
 msgid "About KDE"
-msgstr "关于 %1"
+msgstr "关于 KDE"
 
 #: mobileform/private/AboutKDE.qml:57
 #, kde-format
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: mobileform/private/AboutKDE.qml:66
 #, kde-format
 msgid "Be Free!"
-msgstr ""
+msgstr "为自由而生！"
 
 #: mobileform/private/AboutKDE.qml:75
 #, kde-format
@@ -152,6 +151,10 @@ msgid ""
 "produces the Plasma desktop environment, hundreds of applications, and the "
 "many software libraries that support them.\n"
 msgstr ""
+"KDE 是由一群致力于自由软件的人们所组成的全球性协作社区。它的成员包括了来自世"
+"界各地的软件工程师、艺术工作者、文字工作者、翻译人员和其他创意人员。KDE 社区"
+"开发了 Plasma 桌面环境、数百款功能各异的应用软件、以及用于支持它们的大量程序"
+"库。\n"
 
 #: mobileform/private/AboutKDE.qml:96
 #, kde-format
@@ -160,6 +163,9 @@ msgid ""
 "However, you - the user - must tell us when something does not work as "
 "expected or could be done better.\n"
 msgstr ""
+"KDE 团队一直致力于改进软件的品质。为了做到这一点，倾听来自用户的反馈非常重"
+"要。如果遇到软件不能正常工作，请务必告诉我们。如果您有关于改进软件的想法，也"
+"请与我们分享。\n"
 
 #: mobileform/private/AboutKDE.qml:118
 #, kde-format
@@ -168,20 +174,23 @@ msgid ""
 "You can join the national teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
+"即使您不是软件开发人员，我们也欢迎您加入 KDE 的队伍！您可以加入各国语言的翻译"
+"团队来翻译软件的界面，您还可以制作图像、主题、音效，或者改进软件配套的文档……"
+"您的角色您来定！"
 
 #: mobileform/private/AboutKDE.qml:132
 #, kde-format
 msgid "Developer Documentation"
-msgstr ""
+msgstr "开发者文档"
 
 #: mobileform/private/AboutKDE.qml:145
 #, kde-format
 msgid ""
 "KDE software is and will always be available free of charge, however "
 "creating it is not free.\n"
-msgstr ""
+msgstr "KDE 开发的软件是自由且免费的，但是开发这些软件必须投入大量人力物力。\n"
 
 #: mobileform/private/AboutKDE.qml:156
 #, kde-format
 msgid "KDE e.V"
-msgstr ""
+msgstr "KDE e.V"

@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the kirigami-addons package.
 #
 # Thiago Masato Costa Sueto <herzenschein@gmail.com>, 2021.
-# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2021, 2022.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-22 00:55+0000\n"
-"PO-Revision-Date: 2022-12-20 10:53-0300\n"
+"PO-Revision-Date: 2023-02-07 10:56-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -131,20 +131,19 @@ msgid "Translators"
 msgstr "Tradutores"
 
 #: mobileform/AboutPage.qml:322 mobileform/private/AboutKDE.qml:25
-#, fuzzy, kde-format
-#| msgid "About %1"
+#, kde-format
 msgid "About KDE"
-msgstr "Sobre o %1"
+msgstr "Sobre o KDE"
 
 #: mobileform/private/AboutKDE.qml:57
 #, kde-format
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: mobileform/private/AboutKDE.qml:66
 #, kde-format
 msgid "Be Free!"
-msgstr ""
+msgstr "Seja livre!"
 
 #: mobileform/private/AboutKDE.qml:75
 #, kde-format
@@ -186,4 +185,4 @@ msgstr ""
 #: mobileform/private/AboutKDE.qml:156
 #, kde-format
 msgid "KDE e.V"
-msgstr ""
+msgstr "KDE e.V"
