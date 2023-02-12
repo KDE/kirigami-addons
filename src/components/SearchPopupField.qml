@@ -115,10 +115,16 @@ QQC2.Control {
             root.popup.open()
         }
 
-        onAccepted: if (text.length > 2) {
-            root.accepted()
-        } else {
-            root.popup.close();
+        onAccepted: {
+            if (root.autoAccept) {
+                if (text.length > 2) {
+                    root.accepted()
+                }
+            } else if (text.length === 0) {
+                root.popup.close();
+            } else {
+                root.accepted();
+            }
         }
     }
 
