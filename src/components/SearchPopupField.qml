@@ -109,6 +109,10 @@ QQC2.Control {
     property alias popup: popup
 
     property Kirigami.SearchField searchField: Kirigami.SearchField {
+        // HACK: anchor searchField to (changing) parent; this is done to
+        // guarantee that it resizes properly and timely
+        anchors.left: parent.left
+        anchors.right: parent.right
         selectByMouse: true
 
         onFocusChanged: if (focus) {
@@ -145,10 +149,7 @@ QQC2.Control {
         width: root.width
         height: Kirigami.Units.gridUnit * 20
 
-        property int searchFieldWidth
-
         onAboutToShow: {
-            searchFieldWidth = searchField.width
             searchField.parent = fieldContainer
             fieldContainer.contentItem = searchField
             searchField.background.visible = false
@@ -160,7 +161,6 @@ QQC2.Control {
             searchField.parent = root;
             searchField.background.visible = true
             searchField.focus = false
-            searchField.width = searchFieldWidth;
             playCloseHeight.running = true
         }
 
