@@ -37,12 +37,16 @@ ColumnLayout {
         
         spacing: Kirigami.Units.smallSpacing
         
-        Label {
-            Layout.fillWidth: true
-            font.weight: Font.Bold
-            text: title
+        Kirigami.Heading {
             visible: title !== ""
+
+            Layout.fillWidth: true
+
+            text: title
+            type: Kirigami.Heading.Primary
+            level: 2
             wrapMode: Text.Wrap
+
             Accessible.ignored: !visible
         }
         
