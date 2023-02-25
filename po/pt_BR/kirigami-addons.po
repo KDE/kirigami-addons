@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-22 00:55+0000\n"
-"PO-Revision-Date: 2023-02-14 10:56-0300\n"
+"PO-Revision-Date: 2023-02-24 16:56-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -177,7 +177,7 @@ msgstr ""
 #: mobileform/private/AboutKDE.qml:132
 #, kde-format
 msgid "Developer Documentation"
-msgstr ""
+msgstr "Documentação do desenvolvedor"
 
 #: mobileform/private/AboutKDE.qml:145
 #, kde-format
