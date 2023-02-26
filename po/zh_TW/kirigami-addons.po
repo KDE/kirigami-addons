@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-22 00:55+0000\n"
+"POT-Creation-Date: 2023-02-26 00:57+0000\n"
 "PO-Revision-Date: 2023-02-19 09:48+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -75,78 +75,22 @@ msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: mobileform/AboutPage.qml:94
-#, kde-format
-msgid "About %1"
-msgstr "關於 %1"
-
-#: mobileform/AboutPage.qml:145
-#, kde-format
-msgid "Copyright"
-msgstr "版權"
-
-#: mobileform/AboutPage.qml:152
-#, kde-format
-msgid "License"
-msgid_plural "Licenses"
-msgstr[0] "授權"
-
-#: mobileform/AboutPage.qml:189 mobileform/private/AboutKDE.qml:83
-#, kde-format
-msgid "Homepage"
-msgstr "首頁"
-
-#: mobileform/AboutPage.qml:198 mobileform/private/AboutKDE.qml:163
-#, kde-format
-msgid "Donate"
-msgstr "贊助"
-
-#: mobileform/AboutPage.qml:207 mobileform/private/AboutKDE.qml:125
-#, kde-format
-msgid "Get Involved"
-msgstr "參與"
-
-#: mobileform/AboutPage.qml:228 mobileform/private/AboutKDE.qml:105
-#, kde-format
-msgid "Report a bug"
-msgstr "回報問題"
-
-#: mobileform/AboutPage.qml:241
-#, kde-format
-msgid "Libraries in use"
-msgstr "使用函式庫"
-
-#: mobileform/AboutPage.qml:272
-#, kde-format
-msgid "Authors"
-msgstr "作者群"
-
-#: mobileform/AboutPage.qml:284
-#, kde-format
-msgid "Credits"
-msgstr "致謝"
-
-#: mobileform/AboutPage.qml:296
-#, kde-format
-msgid "Translators"
-msgstr "翻譯者"
-
-#: mobileform/AboutPage.qml:322 mobileform/private/AboutKDE.qml:25
+#: mobileform/AboutKDE.qml:23
 #, kde-format
 msgid "About KDE"
 msgstr "關於 KDE"
 
-#: mobileform/private/AboutKDE.qml:57
+#: mobileform/AboutKDE.qml:55
 #, kde-format
 msgid "KDE"
 msgstr "KDE"
 
-#: mobileform/private/AboutKDE.qml:66
+#: mobileform/AboutKDE.qml:64
 #, kde-format
 msgid "Be Free!"
 msgstr "擁抱自由！"
 
-#: mobileform/private/AboutKDE.qml:75
+#: mobileform/AboutKDE.qml:73
 #, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
@@ -155,7 +99,12 @@ msgid ""
 "many software libraries that support them.\n"
 msgstr ""
 
-#: mobileform/private/AboutKDE.qml:96
+#: mobileform/AboutKDE.qml:81 mobileform/AboutPage.qml:182
+#, kde-format
+msgid "Homepage"
+msgstr "首頁"
+
+#: mobileform/AboutKDE.qml:94
 #, kde-format
 msgid ""
 "Software can always be improved, and the KDE team is ready to do so. "
@@ -163,7 +112,12 @@ msgid ""
 "expected or could be done better.\n"
 msgstr ""
 
-#: mobileform/private/AboutKDE.qml:118
+#: mobileform/AboutKDE.qml:103 mobileform/AboutPage.qml:221
+#, kde-format
+msgid "Report a bug"
+msgstr "回報問題"
+
+#: mobileform/AboutKDE.qml:116
 #, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
@@ -171,19 +125,65 @@ msgid ""
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
 
-#: mobileform/private/AboutKDE.qml:132
+#: mobileform/AboutKDE.qml:123 mobileform/AboutPage.qml:200
+#, kde-format
+msgid "Get Involved"
+msgstr "參與"
+
+#: mobileform/AboutKDE.qml:130
 #, kde-format
 msgid "Developer Documentation"
 msgstr "開發者說明文件"
 
-#: mobileform/private/AboutKDE.qml:145
+#: mobileform/AboutKDE.qml:143
 #, kde-format
 msgid ""
 "KDE software is and will always be available free of charge, however "
 "creating it is not free.\n"
 msgstr ""
 
-#: mobileform/private/AboutKDE.qml:156
+#: mobileform/AboutKDE.qml:154
 #, kde-format
 msgid "KDE e.V"
 msgstr "KDE e.V"
+
+#: mobileform/AboutKDE.qml:161 mobileform/AboutPage.qml:191
+#, kde-format
+msgid "Donate"
+msgstr "贊助"
+
+#: mobileform/AboutPage.qml:87
+#, kde-format
+msgid "About %1"
+msgstr "關於 %1"
+
+#: mobileform/AboutPage.qml:138
+#, kde-format
+msgid "Copyright"
+msgstr "版權"
+
+#: mobileform/AboutPage.qml:145
+#, kde-format
+msgid "License"
+msgid_plural "Licenses"
+msgstr[0] "授權"
+
+#: mobileform/AboutPage.qml:234
+#, kde-format
+msgid "Libraries in use"
+msgstr "使用函式庫"
+
+#: mobileform/AboutPage.qml:265
+#, kde-format
+msgid "Authors"
+msgstr "作者群"
+
+#: mobileform/AboutPage.qml:277
+#, kde-format
+msgid "Credits"
+msgstr "致謝"
+
+#: mobileform/AboutPage.qml:289
+#, kde-format
+msgid "Translators"
+msgstr "翻譯者"

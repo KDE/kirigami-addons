@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-22 00:55+0000\n"
+"POT-Creation-Date: 2023-02-26 00:57+0000\n"
 "PO-Revision-Date: 2022-11-24 09:48+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -73,17 +73,95 @@ msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: mobileform/AboutPage.qml:94
+#: mobileform/AboutKDE.qml:23
+#, fuzzy, kde-format
+#| msgid "About %1"
+msgid "About KDE"
+msgstr "حول %1"
+
+#: mobileform/AboutKDE.qml:55
+#, kde-format
+msgid "KDE"
+msgstr ""
+
+#: mobileform/AboutKDE.qml:64
+#, kde-format
+msgid "Be Free!"
+msgstr ""
+
+#: mobileform/AboutKDE.qml:73
+#, kde-format
+msgid ""
+"KDE is a world-wide community of software engineers, artists, writers, "
+"translators and creators who are committed to Free Software development. KDE "
+"produces the Plasma desktop environment, hundreds of applications, and the "
+"many software libraries that support them.\n"
+msgstr ""
+
+#: mobileform/AboutKDE.qml:81 mobileform/AboutPage.qml:182
+#, kde-format
+msgid "Homepage"
+msgstr "الصّفحة الرّئيسيّة"
+
+#: mobileform/AboutKDE.qml:94
+#, kde-format
+msgid ""
+"Software can always be improved, and the KDE team is ready to do so. "
+"However, you - the user - must tell us when something does not work as "
+"expected or could be done better.\n"
+msgstr ""
+
+#: mobileform/AboutKDE.qml:103 mobileform/AboutPage.qml:221
+#, kde-format
+msgid "Report a bug"
+msgstr "بلغ عن علة"
+
+#: mobileform/AboutKDE.qml:116
+#, kde-format
+msgid ""
+"You do not have to be a software developer to be a member of the KDE team. "
+"You can join the national teams that translate program interfaces. You can "
+"provide graphics, themes, sounds, and improved documentation. You decide!"
+msgstr ""
+
+#: mobileform/AboutKDE.qml:123 mobileform/AboutPage.qml:200
+#, kde-format
+msgid "Get Involved"
+msgstr "شاركنا"
+
+#: mobileform/AboutKDE.qml:130
+#, kde-format
+msgid "Developer Documentation"
+msgstr ""
+
+#: mobileform/AboutKDE.qml:143
+#, kde-format
+msgid ""
+"KDE software is and will always be available free of charge, however "
+"creating it is not free.\n"
+msgstr ""
+
+#: mobileform/AboutKDE.qml:154
+#, kde-format
+msgid "KDE e.V"
+msgstr ""
+
+#: mobileform/AboutKDE.qml:161 mobileform/AboutPage.qml:191
+#, kde-format
+msgid "Donate"
+msgstr "تبرّع"
+
+#: mobileform/AboutPage.qml:87
 #, kde-format
 msgid "About %1"
 msgstr "حول %1"
 
-#: mobileform/AboutPage.qml:145
+#: mobileform/AboutPage.qml:138
 #, kde-format
 msgid "Copyright"
 msgstr "حقوق النشر"
 
-#: mobileform/AboutPage.qml:152
+#: mobileform/AboutPage.qml:145
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
@@ -94,100 +172,22 @@ msgstr[3] "الرّخص"
 msgstr[4] "الرّخص"
 msgstr[5] "الرّخص"
 
-#: mobileform/AboutPage.qml:189 mobileform/private/AboutKDE.qml:83
-#, kde-format
-msgid "Homepage"
-msgstr "الصّفحة الرّئيسيّة"
-
-#: mobileform/AboutPage.qml:198 mobileform/private/AboutKDE.qml:163
-#, kde-format
-msgid "Donate"
-msgstr "تبرّع"
-
-#: mobileform/AboutPage.qml:207 mobileform/private/AboutKDE.qml:125
-#, kde-format
-msgid "Get Involved"
-msgstr "شاركنا"
-
-#: mobileform/AboutPage.qml:228 mobileform/private/AboutKDE.qml:105
-#, kde-format
-msgid "Report a bug"
-msgstr "بلغ عن علة"
-
-#: mobileform/AboutPage.qml:241
+#: mobileform/AboutPage.qml:234
 #, kde-format
 msgid "Libraries in use"
 msgstr "المكتبات المستخدمة"
 
-#: mobileform/AboutPage.qml:272
+#: mobileform/AboutPage.qml:265
 #, kde-format
 msgid "Authors"
 msgstr "المؤلفين"
 
-#: mobileform/AboutPage.qml:284
+#: mobileform/AboutPage.qml:277
 #, kde-format
 msgid "Credits"
 msgstr "إشادات"
 
-#: mobileform/AboutPage.qml:296
+#: mobileform/AboutPage.qml:289
 #, kde-format
 msgid "Translators"
 msgstr "المترجمون"
-
-#: mobileform/AboutPage.qml:322 mobileform/private/AboutKDE.qml:25
-#, fuzzy, kde-format
-#| msgid "About %1"
-msgid "About KDE"
-msgstr "حول %1"
-
-#: mobileform/private/AboutKDE.qml:57
-#, kde-format
-msgid "KDE"
-msgstr ""
-
-#: mobileform/private/AboutKDE.qml:66
-#, kde-format
-msgid "Be Free!"
-msgstr ""
-
-#: mobileform/private/AboutKDE.qml:75
-#, kde-format
-msgid ""
-"KDE is a world-wide community of software engineers, artists, writers, "
-"translators and creators who are committed to Free Software development. KDE "
-"produces the Plasma desktop environment, hundreds of applications, and the "
-"many software libraries that support them.\n"
-msgstr ""
-
-#: mobileform/private/AboutKDE.qml:96
-#, kde-format
-msgid ""
-"Software can always be improved, and the KDE team is ready to do so. "
-"However, you - the user - must tell us when something does not work as "
-"expected or could be done better.\n"
-msgstr ""
-
-#: mobileform/private/AboutKDE.qml:118
-#, kde-format
-msgid ""
-"You do not have to be a software developer to be a member of the KDE team. "
-"You can join the national teams that translate program interfaces. You can "
-"provide graphics, themes, sounds, and improved documentation. You decide!"
-msgstr ""
-
-#: mobileform/private/AboutKDE.qml:132
-#, kde-format
-msgid "Developer Documentation"
-msgstr ""
-
-#: mobileform/private/AboutKDE.qml:145
-#, kde-format
-msgid ""
-"KDE software is and will always be available free of charge, however "
-"creating it is not free.\n"
-msgstr ""
-
-#: mobileform/private/AboutKDE.qml:156
-#, kde-format
-msgid "KDE e.V"
-msgstr ""

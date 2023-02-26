@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-22 00:55+0000\n"
+"POT-Creation-Date: 2023-02-26 00:57+0000\n"
 "PO-Revision-Date: 2023-02-01 14:04+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -72,79 +72,22 @@ msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: mobileform/AboutPage.qml:94
-#, kde-format
-msgid "About %1"
-msgstr "%1 Hakkında"
-
-#: mobileform/AboutPage.qml:145
-#, kde-format
-msgid "Copyright"
-msgstr "Telif Hakkı"
-
-#: mobileform/AboutPage.qml:152
-#, kde-format
-msgid "License"
-msgid_plural "Licenses"
-msgstr[0] "Lisans"
-msgstr[1] "Lisanslar"
-
-#: mobileform/AboutPage.qml:189 mobileform/private/AboutKDE.qml:83
-#, kde-format
-msgid "Homepage"
-msgstr "Ana Sayfa"
-
-#: mobileform/AboutPage.qml:198 mobileform/private/AboutKDE.qml:163
-#, kde-format
-msgid "Donate"
-msgstr "Bağış Yap"
-
-#: mobileform/AboutPage.qml:207 mobileform/private/AboutKDE.qml:125
-#, kde-format
-msgid "Get Involved"
-msgstr "Katıl"
-
-#: mobileform/AboutPage.qml:228 mobileform/private/AboutKDE.qml:105
-#, kde-format
-msgid "Report a bug"
-msgstr "Hata Bildir"
-
-#: mobileform/AboutPage.qml:241
-#, kde-format
-msgid "Libraries in use"
-msgstr "Kullanılan kitaplıklar"
-
-#: mobileform/AboutPage.qml:272
-#, kde-format
-msgid "Authors"
-msgstr "Yazarlar"
-
-#: mobileform/AboutPage.qml:284
-#, kde-format
-msgid "Credits"
-msgstr "Emeği Geçenler"
-
-#: mobileform/AboutPage.qml:296
-#, kde-format
-msgid "Translators"
-msgstr "Çeviriler"
-
-#: mobileform/AboutPage.qml:322 mobileform/private/AboutKDE.qml:25
+#: mobileform/AboutKDE.qml:23
 #, kde-format
 msgid "About KDE"
 msgstr "KDE Hakkında"
 
-#: mobileform/private/AboutKDE.qml:57
+#: mobileform/AboutKDE.qml:55
 #, kde-format
 msgid "KDE"
 msgstr "KDE"
 
-#: mobileform/private/AboutKDE.qml:66
+#: mobileform/AboutKDE.qml:64
 #, kde-format
 msgid "Be Free!"
 msgstr "Özgür Olun!"
 
-#: mobileform/private/AboutKDE.qml:75
+#: mobileform/AboutKDE.qml:73
 #, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
@@ -158,7 +101,12 @@ msgstr ""
 "ortamını, yüzlerce uygulamayı ve bu uygulamaları destekleyen çok sayıda "
 "yazılım kitaplığını geliştirir.\n"
 
-#: mobileform/private/AboutKDE.qml:96
+#: mobileform/AboutKDE.qml:81 mobileform/AboutPage.qml:182
+#, kde-format
+msgid "Homepage"
+msgstr "Ana Sayfa"
+
+#: mobileform/AboutKDE.qml:94
 #, kde-format
 msgid ""
 "Software can always be improved, and the KDE team is ready to do so. "
@@ -170,7 +118,12 @@ msgstr ""
 "çalışmadığında veya kimi şeylerin daha iyi olabileceğini düşündüğünüzde "
 "lütfen bize bunları bildirin.\n"
 
-#: mobileform/private/AboutKDE.qml:118
+#: mobileform/AboutKDE.qml:103 mobileform/AboutPage.qml:221
+#, kde-format
+msgid "Report a bug"
+msgstr "Hata Bildir"
+
+#: mobileform/AboutKDE.qml:116
 #, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
@@ -182,12 +135,17 @@ msgstr ""
 "katılabilirsiniz. İsterseniz grafikler, temalar, sesler yaratabilir ve "
 "yardım belgeleri yazıp var olanları geliştirebilirsiniz. Karar sizin!"
 
-#: mobileform/private/AboutKDE.qml:132
+#: mobileform/AboutKDE.qml:123 mobileform/AboutPage.qml:200
+#, kde-format
+msgid "Get Involved"
+msgstr "Katıl"
+
+#: mobileform/AboutKDE.qml:130
 #, kde-format
 msgid "Developer Documentation"
 msgstr "Geliştirici Belgelendirmesi"
 
-#: mobileform/private/AboutKDE.qml:145
+#: mobileform/AboutKDE.qml:143
 #, kde-format
 msgid ""
 "KDE software is and will always be available free of charge, however "
@@ -196,7 +154,49 @@ msgstr ""
 "KDE yazılımı ücretsizdir ve her zaman ücretsiz olacaktır, ancak onu yapmak "
 "ücretsiz değildir.\n"
 
-#: mobileform/private/AboutKDE.qml:156
+#: mobileform/AboutKDE.qml:154
 #, kde-format
 msgid "KDE e.V"
 msgstr "KDE e.V"
+
+#: mobileform/AboutKDE.qml:161 mobileform/AboutPage.qml:191
+#, kde-format
+msgid "Donate"
+msgstr "Bağış Yap"
+
+#: mobileform/AboutPage.qml:87
+#, kde-format
+msgid "About %1"
+msgstr "%1 Hakkında"
+
+#: mobileform/AboutPage.qml:138
+#, kde-format
+msgid "Copyright"
+msgstr "Telif Hakkı"
+
+#: mobileform/AboutPage.qml:145
+#, kde-format
+msgid "License"
+msgid_plural "Licenses"
+msgstr[0] "Lisans"
+msgstr[1] "Lisanslar"
+
+#: mobileform/AboutPage.qml:234
+#, kde-format
+msgid "Libraries in use"
+msgstr "Kullanılan kitaplıklar"
+
+#: mobileform/AboutPage.qml:265
+#, kde-format
+msgid "Authors"
+msgstr "Yazarlar"
+
+#: mobileform/AboutPage.qml:277
+#, kde-format
+msgid "Credits"
+msgstr "Emeği Geçenler"
+
+#: mobileform/AboutPage.qml:289
+#, kde-format
+msgid "Translators"
+msgstr "Çeviriler"

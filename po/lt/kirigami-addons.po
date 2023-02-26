@@ -1,92 +1,92 @@
-# Xavier Besnard <xavier.besnard@neuf.fr>, 2021, 2022.
-# Xavier BESNARD <xavier.besnard]neuf.fr>, 2023.
+# Lithuanian translations for kirigami-addons package.
+# Copyright (C) 2023 This file is copyright:
+# This file is distributed under the same license as the kirigami-addons package.
+# Automatically generated, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-26 00:57+0000\n"
-"PO-Revision-Date: 2023-01-23 16:42+0100\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
-"Language-Team: fr\n"
-"Language: fr\n"
+"PO-Revision-Date: 2023-01-22 00:55+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
-"X-Environment: kde\n"
-"X-Accelerator-Marker: &\n"
-"X-Text-Markup: kde4\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
+"%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: dateandtime/DatePicker.qml:141
 #, kde-format
 msgctxt "%1 is month name, %2 is year"
 msgid "%1 %2"
-msgstr "%1 %2"
+msgstr ""
 
 #: dateandtime/DatePicker.qml:182
 #, kde-format
 msgctxt "kirigami-addons"
 msgid "Days"
-msgstr "Jours"
+msgstr ""
 
 #: dateandtime/DatePicker.qml:190
 #, kde-format
 msgctxt "kirigami-addons"
 msgid "Months"
-msgstr "Mois"
+msgstr ""
 
 #: dateandtime/DatePicker.qml:196
 #, kde-format
 msgctxt "kirigami-addons"
 msgid "Years"
-msgstr "Années"
+msgstr ""
 
 #: dateandtime/DatePopup.qml:55
 #, kde-format
 msgid "Previous"
-msgstr "Précédent"
+msgstr ""
 
 #: dateandtime/DatePopup.qml:64
 #, kde-format
 msgid "Today"
-msgstr "Aujourd'hui"
+msgstr ""
 
 #: dateandtime/DatePopup.qml:73
 #, kde-format
 msgid "Next"
-msgstr "Suivant"
+msgstr ""
 
 #: dateandtime/DatePopup.qml:92
 #, kde-format
 msgid "Cancel"
-msgstr "Annuler"
+msgstr ""
 
 #: dateandtime/DatePopup.qml:101
 #, kde-format
 msgid "Accept"
-msgstr "Accepter"
+msgstr ""
 
 #: dateandtime/private/TumblerTimePicker.qml:88
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
-msgstr ":"
+msgstr ""
 
 #: mobileform/AboutKDE.qml:23
 #, kde-format
 msgid "About KDE"
-msgstr "À propos de KDE"
+msgstr ""
 
 #: mobileform/AboutKDE.qml:55
 #, kde-format
 msgid "KDE"
-msgstr "KDE"
+msgstr ""
 
 #: mobileform/AboutKDE.qml:64
 #, kde-format
 msgid "Be Free!"
-msgstr "Soyez libre !"
+msgstr ""
 
 #: mobileform/AboutKDE.qml:73
 #, kde-format
@@ -96,16 +96,11 @@ msgid ""
 "produces the Plasma desktop environment, hundreds of applications, and the "
 "many software libraries that support them.\n"
 msgstr ""
-"KDE est une communauté mondiale d’ingénieurs en logiciels, d’artistes, "
-"d’écrivains, de traducteurs et de créateurs qui s’engagent dans le "
-"développement du Logiciel Libre. KDE produit l’environnement de bureau "
-"Plasma, des centaines d’applications et les nombreuses bibliothèques "
-"logicielles qui les supportent. \n"
 
 #: mobileform/AboutKDE.qml:81 mobileform/AboutPage.qml:182
 #, kde-format
 msgid "Homepage"
-msgstr "Page d'accueil"
+msgstr ""
 
 #: mobileform/AboutKDE.qml:94
 #, kde-format
@@ -114,14 +109,11 @@ msgid ""
 "However, you - the user - must tell us when something does not work as "
 "expected or could be done better.\n"
 msgstr ""
-"Les logiciels peuvent toujours être améliorés et l’équipe KDE est prête à le "
-"faire. Cependant, vous - la personne utilisatrice - devez nous dire quand "
-"quelque chose ne fonctionne pas comme prévu ou pourrait être fait mieux.  \n"
 
 #: mobileform/AboutKDE.qml:103 mobileform/AboutPage.qml:221
 #, kde-format
 msgid "Report a bug"
-msgstr "Signaler un bogue"
+msgstr ""
 
 #: mobileform/AboutKDE.qml:116
 #, kde-format
@@ -130,20 +122,16 @@ msgid ""
 "You can join the national teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
-"Vous n’avez pas besoin d’être un développeur de logiciels pour faire partie "
-"de l’équipe KDE. Vous pouvez rejoindre les équipes nationales traduisant les "
-"interfaces de programmes. Vous pouvez fournir des graphiques, des thèmes, "
-"des sons et une documentation améliorée. C'est vous qui décidez !"
 
 #: mobileform/AboutKDE.qml:123 mobileform/AboutPage.qml:200
 #, kde-format
 msgid "Get Involved"
-msgstr "Impliquez-vous"
+msgstr ""
 
 #: mobileform/AboutKDE.qml:130
 #, kde-format
 msgid "Developer Documentation"
-msgstr "Documentation pour équipe de développement"
+msgstr ""
 
 #: mobileform/AboutKDE.qml:143
 #, kde-format
@@ -151,52 +139,51 @@ msgid ""
 "KDE software is and will always be available free of charge, however "
 "creating it is not free.\n"
 msgstr ""
-"Le logiciel KDE est et sera toujours disponible gratuitement, mais sa "
-"production n’est pas gratuite.\n"
 
 #: mobileform/AboutKDE.qml:154
 #, kde-format
 msgid "KDE e.V"
-msgstr "KDE e.V"
+msgstr ""
 
 #: mobileform/AboutKDE.qml:161 mobileform/AboutPage.qml:191
 #, kde-format
 msgid "Donate"
-msgstr "Faire un don"
+msgstr ""
 
 #: mobileform/AboutPage.qml:87
 #, kde-format
 msgid "About %1"
-msgstr "À propos de %1"
+msgstr ""
 
 #: mobileform/AboutPage.qml:138
 #, kde-format
 msgid "Copyright"
-msgstr "Licence"
+msgstr ""
 
 #: mobileform/AboutPage.qml:145
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
-msgstr[0] "Licence"
-msgstr[1] "Licences"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #: mobileform/AboutPage.qml:234
 #, kde-format
 msgid "Libraries in use"
-msgstr "Bibliothèques en cours d'utilisation"
+msgstr ""
 
 #: mobileform/AboutPage.qml:265
 #, kde-format
 msgid "Authors"
-msgstr "Auteurs"
+msgstr ""
 
 #: mobileform/AboutPage.qml:277
 #, kde-format
 msgid "Credits"
-msgstr "Remerciements"
+msgstr ""
 
 #: mobileform/AboutPage.qml:289
 #, kde-format
 msgid "Translators"
-msgstr "Équipe de traduction"
+msgstr ""
