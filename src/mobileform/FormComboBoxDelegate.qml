@@ -198,6 +198,7 @@ AbstractFormDelegate {
                 Layout.fillWidth: true
                 text: controlRoot.text
                 elide: Text.ElideRight
+                color: controlRoot.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
                 wrapMode: Text.Wrap
                 maximumLineCount: 2
             }
