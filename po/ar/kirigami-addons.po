@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
 #
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-26 00:57+0000\n"
-"PO-Revision-Date: 2022-11-24 09:48+0400\n"
+"PO-Revision-Date: 2023-02-27 19:45+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -74,20 +74,19 @@ msgid ":"
 msgstr ":"
 
 #: mobileform/AboutKDE.qml:23
-#, fuzzy, kde-format
-#| msgid "About %1"
+#, kde-format
 msgid "About KDE"
-msgstr "حول %1"
+msgstr "حول كدي"
 
 #: mobileform/AboutKDE.qml:55
 #, kde-format
 msgid "KDE"
-msgstr ""
+msgstr "كدي"
 
 #: mobileform/AboutKDE.qml:64
 #, kde-format
 msgid "Be Free!"
-msgstr ""
+msgstr "كُنْ حُرًّا!"
 
 #: mobileform/AboutKDE.qml:73
 #, kde-format
@@ -97,11 +96,14 @@ msgid ""
 "produces the Plasma desktop environment, hundreds of applications, and the "
 "many software libraries that support them.\n"
 msgstr ""
+"كدي هو مجتمع عالمي من مهندسي البرمجيات والفنانين والكتّاب، والمترجمين "
+"والمبدعون الملتزمين بتطوير البرمجيات الحرة. تنتج كدي بيئة سطح مكتب البلازما، "
+"ومئات التطبيقات، والعديد من مكتبات البرامج التي تدعمها.\n"
 
 #: mobileform/AboutKDE.qml:81 mobileform/AboutPage.qml:182
 #, kde-format
 msgid "Homepage"
-msgstr "الصّفحة الرّئيسيّة"
+msgstr "الصّفحة الرئيسة"
 
 #: mobileform/AboutKDE.qml:94
 #, kde-format
@@ -110,6 +112,8 @@ msgid ""
 "However, you - the user - must tell us when something does not work as "
 "expected or could be done better.\n"
 msgstr ""
+"يمكن دائمًا تحسين البرنامج، وفريق كدي مستعد لذلك. ومع ذلك، يجب أن تخبرنا أنت -"
+"المستخدم- عندما لا يعمل شيء ما كما هو متوقع أو يمكن القيام به بشكل أفضل.\n"
 
 #: mobileform/AboutKDE.qml:103 mobileform/AboutPage.qml:221
 #, kde-format
@@ -123,6 +127,9 @@ msgid ""
 "You can join the national teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
+"ليس عليك أن تكون مطوّر برمجيّات لتكون عضوًا في فريق «كدي» يمكنك الانضمام إلى "
+"الفِرق المحليّة التي تترجم واجهات البرامج. ويمكنك توفير الرّسوميّات، والسّمات، "
+"والأصوات وكتابة التّوثيق. أنت تقرّر ذلك!"
 
 #: mobileform/AboutKDE.qml:123 mobileform/AboutPage.qml:200
 #, kde-format
@@ -132,19 +139,19 @@ msgstr "شاركنا"
 #: mobileform/AboutKDE.qml:130
 #, kde-format
 msgid "Developer Documentation"
-msgstr ""
+msgstr "وثائق المطورين"
 
 #: mobileform/AboutKDE.qml:143
 #, kde-format
 msgid ""
 "KDE software is and will always be available free of charge, however "
 "creating it is not free.\n"
-msgstr ""
+msgstr "تطبيقات كدي مجانية وستبقى كذلك، لكن كتابتها ليست دون تكلفة.\n"
 
 #: mobileform/AboutKDE.qml:154
 #, kde-format
 msgid "KDE e.V"
-msgstr ""
+msgstr "كدي e.V."
 
 #: mobileform/AboutKDE.qml:161 mobileform/AboutPage.qml:191
 #, kde-format

@@ -1,15 +1,15 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
 #
-# Steve Allewell <steve.allewell@gmail.com>, 2021, 2022.
+# Steve Allewell <steve.allewell@gmail.com>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-26 00:57+0000\n"
-"PO-Revision-Date: 2022-12-31 15:57+0000\n"
+"PO-Revision-Date: 2023-02-27 19:49+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
-"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language-Team: English <kde-l10n-en_gb@kde.org>\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -73,20 +73,19 @@ msgid ":"
 msgstr ":"
 
 #: mobileform/AboutKDE.qml:23
-#, fuzzy, kde-format
-#| msgid "About %1"
+#, kde-format
 msgid "About KDE"
-msgstr "About %1"
+msgstr "About KDE"
 
 #: mobileform/AboutKDE.qml:55
 #, kde-format
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: mobileform/AboutKDE.qml:64
 #, kde-format
 msgid "Be Free!"
-msgstr ""
+msgstr "Be Free!"
 
 #: mobileform/AboutKDE.qml:73
 #, kde-format
@@ -96,6 +95,10 @@ msgid ""
 "produces the Plasma desktop environment, hundreds of applications, and the "
 "many software libraries that support them.\n"
 msgstr ""
+"KDE is a world-wide community of software engineers, artists, writers, "
+"translators and creators who are committed to Free Software development. KDE "
+"produces the Plasma desktop environment, hundreds of applications, and the "
+"many software libraries that support them.\n"
 
 #: mobileform/AboutKDE.qml:81 mobileform/AboutPage.qml:182
 #, kde-format
@@ -109,6 +112,9 @@ msgid ""
 "However, you - the user - must tell us when something does not work as "
 "expected or could be done better.\n"
 msgstr ""
+"Software can always be improved, and the KDE team is ready to do so. "
+"However, you - the user - must tell us when something does not work as "
+"expected or could be done better.\n"
 
 #: mobileform/AboutKDE.qml:103 mobileform/AboutPage.qml:221
 #, kde-format
@@ -122,6 +128,9 @@ msgid ""
 "You can join the national teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
+"You do not have to be a software developer to be a member of the KDE team. "
+"You can join the national teams that translate program interfaces. You can "
+"provide graphics, themes, sounds, and improved documentation. You decide!"
 
 #: mobileform/AboutKDE.qml:123 mobileform/AboutPage.qml:200
 #, kde-format
@@ -131,7 +140,7 @@ msgstr "Get Involved"
 #: mobileform/AboutKDE.qml:130
 #, kde-format
 msgid "Developer Documentation"
-msgstr ""
+msgstr "Developer Documentation"
 
 #: mobileform/AboutKDE.qml:143
 #, kde-format
@@ -139,11 +148,13 @@ msgid ""
 "KDE software is and will always be available free of charge, however "
 "creating it is not free.\n"
 msgstr ""
+"KDE software is and will always be available free of charge, however "
+"creating it is not free.\n"
 
 #: mobileform/AboutKDE.qml:154
 #, kde-format
 msgid "KDE e.V"
-msgstr ""
+msgstr "KDE e.V"
 
 #: mobileform/AboutKDE.qml:161 mobileform/AboutPage.qml:191
 #, kde-format
