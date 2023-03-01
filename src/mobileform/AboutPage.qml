@@ -136,7 +136,7 @@ Kirigami.ScrollablePage {
                 FormTextDelegate {
                     id: copyrightDelegate
                     text: i18nd("kirigami-addons", "Copyright")
-                    descriptionItem.textFormat: Text.RichText
+                    descriptionItem.textFormat: Text.PlainText
                     description: aboutData.otherText + (aboutData.otherText.length > 0 ? '</br>' : '')
                         + aboutData.copyrightStatement
                 }
