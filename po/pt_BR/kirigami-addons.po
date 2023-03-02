@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-26 00:57+0000\n"
-"PO-Revision-Date: 2023-02-24 16:56-0300\n"
+"PO-Revision-Date: 2023-02-28 10:40-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -96,6 +96,10 @@ msgid ""
 "produces the Plasma desktop environment, hundreds of applications, and the "
 "many software libraries that support them.\n"
 msgstr ""
+"O KDE é uma comunidade mundial de engenheiros de software, artistas, "
+"escritores, tradutores e criadores comprometidos com o desenvolvimento de "
+"software livre. O KDE produz a área de trabalho Plasma, centenas de "
+"aplicativos e muitas bibliotecas de software que os suportam.\n"
 
 #: mobileform/AboutKDE.qml:81 mobileform/AboutPage.qml:182
 #, kde-format
@@ -109,6 +113,9 @@ msgid ""
 "However, you - the user - must tell us when something does not work as "
 "expected or could be done better.\n"
 msgstr ""
+"O software sempre pode ser melhorado e a equipe do KDE está pronta para "
+"isso. No entanto, você - o usuário - deve nos informar quando algo não "
+"funcionar conforme o esperado ou puder ser melhorado.\n"
 
 #: mobileform/AboutKDE.qml:103 mobileform/AboutPage.qml:221
 #, kde-format
@@ -143,6 +150,8 @@ msgid ""
 "KDE software is and will always be available free of charge, however "
 "creating it is not free.\n"
 msgstr ""
+"O software do KDE é e sempre estará disponível gratuitamente, no entando, "
+"criá-lo não é gratuito.\n"
 
 #: mobileform/AboutKDE.qml:154
 #, kde-format
