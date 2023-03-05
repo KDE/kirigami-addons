@@ -318,12 +318,14 @@ Kirigami.ScrollablePage {
                     implicitHeight: implicitWidth
                     initialsMode: Kirigami.Avatar.ImageMode.AlwaysShowImage
                     name: modelData.name
-                    source: if (modelData.avatarUrl) {
+                    source: if (!!modelData.avatarUrl && modelData.avatarUrl.toString().startsWith('https://')) {
                         const url = new URL(modelData.avatarUrl);
                         const params = new URLSearchParams(url.search);
                         params.append("s", width);
                         url.search = params.toString();
                         return url;
+                    } else {
+                        return '';
                     }
                 }
 
