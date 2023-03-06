@@ -14,7 +14,7 @@ ecm_target_qml_sources(soundsplugin SOURCES
 target_link_libraries(soundsplugin
     Qt${QT_MAJOR_VERSION}::Quick
     Qt${QT_MAJOR_VERSION}::Qml
-    KF${KF_MAJOR_VERSION}::I18n
+    KF5::I18n
 )
 
 ecm_finalize_qml_module(soundsplugin DESTINATION ${KDE_INSTALL_QMLDIR})

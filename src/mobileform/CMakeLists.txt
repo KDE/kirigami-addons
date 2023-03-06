@@ -35,7 +35,7 @@ ecm_target_qml_sources(mobileformplugin PATH private SOURCES
 target_link_libraries(mobileformplugin
     Qt${QT_MAJOR_VERSION}::Quick
     Qt${QT_MAJOR_VERSION}::Qml
-    KF${KF_MAJOR_VERSION}::I18n
+    KF5::I18n
 )
 
 ecm_finalize_qml_module(mobileformplugin DESTINATION ${KDE_INSTALL_QMLDIR})
