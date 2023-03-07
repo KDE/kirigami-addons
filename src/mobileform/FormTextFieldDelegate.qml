@@ -63,6 +63,11 @@ AbstractFormDelegate {
     property alias inputMethodHints: textField.inputMethodHints
 
     /**
+     * This property holds the placeholderText of the internal TextField
+     */
+    property alias placeholderText: textField.placeholderText
+
+    /**
      * This property holds the current status of the text field.
      *
      * Depending on the status of the textField the statusMessage property will look different

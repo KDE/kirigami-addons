@@ -69,6 +69,16 @@ AbstractFormDelegate {
      */
     property alias displayText: combobox.displayText
 
+    /**
+     * This property holds the ediable of the internal combobox.
+     */
+    property alias editable: combobox.editable
+
+    /**
+     * This property holds the editText of the internal combobox.
+     */
+    property alias editText: combobox.editText
+
     enum DisplayMode {
         ComboBox,
         Dialog,
@@ -82,7 +92,7 @@ AbstractFormDelegate {
      * - FormComboBoxDelegate.Dialog - Have the full delegate be clickable and open a dialog to select values.
      * - FormComboBoxDelegate.Page - Have the full delegate be clickable and open a page in a seperate layers to select values.
      */
-    property int displayMode: Kirigami.Settings.isMobile ? FormComboBoxDelegate.Dialog : FormComboBoxDelegate.ComboBox
+    property int displayMode: width < Kirigami.Units.gridUnit * 20 ? FormComboBoxDelegate.Dialog : FormComboBoxDelegate.ComboBox
 
     /**
      * The delegate component to use as entries in the combobox display mode.
@@ -160,9 +170,16 @@ AbstractFormDelegate {
 
         ColumnLayout {
             spacing: 0
+
             Repeater {
                 model: controlRoot.model
                 delegate: controlRoot.dialogDelegate
+            }
+
+            QQC2.TextField {
+                visible: controlRoot.editable
+                onTextChanged: controlRoot.editText = text;
+                Layout.fillWidth: true
             }
         }
     }
@@ -179,6 +196,12 @@ AbstractFormDelegate {
             spacing: 0
             model: controlRoot.model
             delegate: controlRoot.dialogDelegate
+
+            footer: QQC2.TextField {
+                visible: controlRoot.editable
+                onTextChanged: controlRoot.editText = text;
+                Layout.fillWidth: true
+            }
         }
     }
 
