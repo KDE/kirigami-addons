@@ -18,10 +18,8 @@ import org.kde.kirigami 2.12 as Kirigami
 T.ItemDelegate {
     id: root
 
-    leftPadding: Kirigami.Units.gridUnit
-    topPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
-    bottomPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
-    rightPadding: Kirigami.Units.gridUnit
+    horizontalPadding: Kirigami.Units.gridUnit
+    verticalPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
 
     implicitWidth: contentItem.implicitWidth + leftPadding + rightPadding
     implicitHeight: contentItem.implicitHeight + topPadding + bottomPadding

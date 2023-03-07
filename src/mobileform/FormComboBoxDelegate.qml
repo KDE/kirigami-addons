@@ -140,6 +140,10 @@ AbstractFormDelegate {
     }
 
     property var _selectionPageItem: null
+    property real __indicatorMargin: controlRoot.indicator && controlRoot.indicator.visible && controlRoot.indicator.width > 0 ? controlRoot.spacing + indicator.width + controlRoot.spacing : 0
+
+    leftPadding: horizontalPadding + (!controlRoot.mirrored ? 0 : __indicatorMargin)
+    rightPadding: horizontalPadding + (controlRoot.mirrored ? 0 : __indicatorMargin)
 
 
     // use connections instead of onClicked on root, so that users can supply
