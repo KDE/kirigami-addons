@@ -92,7 +92,7 @@ AbstractFormDelegate {
      * - FormComboBoxDelegate.Dialog - Have the full delegate be clickable and open a dialog to select values.
      * - FormComboBoxDelegate.Page - Have the full delegate be clickable and open a page in a seperate layers to select values.
      */
-    property int displayMode: width < Kirigami.Units.gridUnit * 20 ? FormComboBoxDelegate.Dialog : FormComboBoxDelegate.ComboBox
+    property int displayMode: Kirigami.Settings.isMobile ? FormComboBoxDelegate.Dialog : FormComboBoxDelegate.ComboBox
 
     /**
      * The delegate component to use as entries in the combobox display mode.
