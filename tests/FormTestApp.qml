@@ -463,6 +463,32 @@ Kirigami.ApplicationWindow {
                         }
                     }
                 }
+
+                // spin boxes fields
+                MobileForm.FormCard {
+                    Layout.fillWidth: true
+                    Layout.topMargin: Kirigami.Units.largeSpacing
+
+                    contentItem: ColumnLayout {
+                        MobileForm.FormCardHeader {
+                            title: "Spin boxes"
+                        }
+
+                        MobileForm.FormSpinBoxDelegate {
+                            label: "Amount"
+                            value: 42
+                        }
+
+                        MobileForm.FormDelegateSeparator {}
+
+                        MobileForm.FormSpinBoxDelegate {
+                            label: "Amount 2"
+                            value: 84
+                            statusMessage: "This is too high"
+                            status: Kirigami.MessageType.Error
+                        }
+                    }
+                }
             }
         }
     }

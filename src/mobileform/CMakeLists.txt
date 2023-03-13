@@ -23,6 +23,7 @@ ecm_target_qml_sources(mobileformplugin SOURCES
     FormDelegateSeparator.qml
     FormRadioDelegate.qml
     FormSectionText.qml
+    FormSpinBoxDelegate.qml
     FormSwitchDelegate.qml
     FormTextDelegate.qml
     FormTextFieldDelegate.qml
@@ -30,6 +31,7 @@ ecm_target_qml_sources(mobileformplugin SOURCES
 
 ecm_target_qml_sources(mobileformplugin PATH private SOURCES
     private/ContentItemLoader.qml
+    private/SpinButton.qml
 )
 
 target_link_libraries(mobileformplugin
