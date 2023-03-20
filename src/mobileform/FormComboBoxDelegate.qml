@@ -21,6 +21,12 @@ AbstractFormDelegate {
     signal activated(int index)
 
     /**
+     * This signal is emitted when the Return or Enter key is pressed on an editable combo box.
+     * @see editable
+     */
+    signal accepted()
+
+    /**
      * This property holds the secondary text that appears under the main text.
      * This provides additional information about the delegate.
      *
@@ -255,6 +261,7 @@ AbstractFormDelegate {
             delegate: controlRoot.comboBoxDelegate
             currentIndex: controlRoot.currentIndex
             onActivated: controlRoot.activated(index)
+            onAccepted: controlRoot.accepted()
         }
 
         FormArrow {
