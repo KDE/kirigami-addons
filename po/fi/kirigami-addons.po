@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
-# Tommi Nieminen <translator@legisign.org>, 2022.
+# Tommi Nieminen <translator@legisign.org>, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-26 00:57+0000\n"
-"PO-Revision-Date: 2022-05-01 22:12+0300\n"
+"PO-Revision-Date: 2023-03-14 21:58+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: dateandtime/DatePicker.qml:141
 #, kde-format
@@ -24,22 +24,19 @@ msgid "%1 %2"
 msgstr "%1 %2"
 
 #: dateandtime/DatePicker.qml:182
-#, fuzzy, kde-format
-#| msgid "Days"
+#, kde-format
 msgctxt "kirigami-addons"
 msgid "Days"
 msgstr "Päivät"
 
 #: dateandtime/DatePicker.qml:190
-#, fuzzy, kde-format
-#| msgid "Months"
+#, kde-format
 msgctxt "kirigami-addons"
 msgid "Months"
 msgstr "Kuukaudet"
 
 #: dateandtime/DatePicker.qml:196
-#, fuzzy, kde-format
-#| msgid "Years"
+#, kde-format
 msgctxt "kirigami-addons"
 msgid "Years"
 msgstr "Vuodet"
@@ -73,22 +70,22 @@ msgstr "Hyväksy"
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: mobileform/AboutKDE.qml:23
 #, kde-format
 msgid "About KDE"
-msgstr ""
+msgstr "Tietoa KDE:stä"
 
 #: mobileform/AboutKDE.qml:55
 #, kde-format
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: mobileform/AboutKDE.qml:64
 #, kde-format
 msgid "Be Free!"
-msgstr ""
+msgstr "Ole vapaa!"
 
 #: mobileform/AboutKDE.qml:73
 #, kde-format
@@ -98,11 +95,15 @@ msgid ""
 "produces the Plasma desktop environment, hundreds of applications, and the "
 "many software libraries that support them.\n"
 msgstr ""
+"KDE on ohjelmoijien, taiteilijoiden, kirjoittajien, kääntäjien ja muiden "
+"kansainvälinen vapaiden ohjelmien kehittämiseen omistautunut yhteisö. KDE "
+"valmistaa Plasma-työpöytäympäristöä, satoja sovelluksia ja monia niitä "
+"tukevia ohjelmakirjastoja.\n"
 
 #: mobileform/AboutKDE.qml:81 mobileform/AboutPage.qml:182
 #, kde-format
 msgid "Homepage"
-msgstr ""
+msgstr "Kotisivu"
 
 #: mobileform/AboutKDE.qml:94
 #, kde-format
@@ -111,11 +112,14 @@ msgid ""
 "However, you - the user - must tell us when something does not work as "
 "expected or could be done better.\n"
 msgstr ""
+"Ohjelmia voi aina parantaa, ja KDE-ryhmä on valmis tekemään niin. Sinun – "
+"käyttäjän – on kuitenkin kerrottava meille, ellei jokin toimi odotetusti tai "
+"voisi toimia paremmin.\n"
 
 #: mobileform/AboutKDE.qml:103 mobileform/AboutPage.qml:221
 #, kde-format
 msgid "Report a bug"
-msgstr ""
+msgstr "Ilmoita viasta"
 
 #: mobileform/AboutKDE.qml:116
 #, kde-format
@@ -124,16 +128,19 @@ msgid ""
 "You can join the national teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
+"Sinun ei tarvitse olla ohjelmistokehittäjä liittyäksesi KDE-ryhmään. Voit "
+"liittyä käyttöliittymiä kääntävään kansalliseen ryhmään. Voit myös tehdä "
+"grafiikkaa, teemoja, ääniä tai parantaa dokumentaatiota. Päätä itse!"
 
 #: mobileform/AboutKDE.qml:123 mobileform/AboutPage.qml:200
 #, kde-format
 msgid "Get Involved"
-msgstr ""
+msgstr "Ota osaa"
 
 #: mobileform/AboutKDE.qml:130
 #, kde-format
 msgid "Developer Documentation"
-msgstr ""
+msgstr "Kehitysohjeistus"
 
 #: mobileform/AboutKDE.qml:143
 #, kde-format
@@ -141,50 +148,52 @@ msgid ""
 "KDE software is and will always be available free of charge, however "
 "creating it is not free.\n"
 msgstr ""
+"KDE-ohjelmat ovat ja tulevat aina olemaan saatavilla ilmaiseksi, mutta "
+"niiden luominen ei ole sitä.\n"
 
 #: mobileform/AboutKDE.qml:154
 #, kde-format
 msgid "KDE e.V"
-msgstr ""
+msgstr "KDE e.V."
 
 #: mobileform/AboutKDE.qml:161 mobileform/AboutPage.qml:191
 #, kde-format
 msgid "Donate"
-msgstr ""
+msgstr "Lahjoita"
 
 #: mobileform/AboutPage.qml:87
 #, kde-format
 msgid "About %1"
-msgstr ""
+msgstr "Tietoa – %1"
 
 #: mobileform/AboutPage.qml:138
 #, kde-format
 msgid "Copyright"
-msgstr ""
+msgstr "Tekijänoikeudet"
 
 #: mobileform/AboutPage.qml:145
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Lisenssi"
+msgstr[1] "Lisenssit"
 
 #: mobileform/AboutPage.qml:234
 #, kde-format
 msgid "Libraries in use"
-msgstr ""
+msgstr "Käytetyt kirjastot"
 
 #: mobileform/AboutPage.qml:265
 #, kde-format
 msgid "Authors"
-msgstr ""
+msgstr "Tekijät"
 
 #: mobileform/AboutPage.qml:277
 #, kde-format
 msgid "Credits"
-msgstr ""
+msgstr "Kiitokset"
 
 #: mobileform/AboutPage.qml:289
 #, kde-format
 msgid "Translators"
-msgstr ""
+msgstr "Kääntäjät"
