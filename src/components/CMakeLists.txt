@@ -48,12 +48,14 @@ ecm_target_qml_sources(componentsplugin SOURCES
     FloatingButton.qml
     DoubleFloatingButton.qml
     Banner.qml
+    BottomDrawer.qml
     DialogRoundedBackground.qml
-    SegmentedButton.qml
 
     MessageDialog.qml
     MessageDialogButton.qml
     MessageDialogButtonBox.qml
+    SearchPopupField.qml
+    SegmentedButton.qml
 )
 
 target_link_libraries(componentsplugin PRIVATE
