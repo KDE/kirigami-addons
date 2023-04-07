@@ -109,6 +109,7 @@ RowLayout {
         visibleItemCount: 5
         onCurrentIndexChanged: if (_isAmPm && _init) {
             _pm = currentIndex;
+            hours = (hours + 12) % 24;
         }
     }
 
