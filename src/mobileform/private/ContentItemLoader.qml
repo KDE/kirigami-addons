@@ -11,11 +11,11 @@ import QtQuick 2.15
 Item {
     id: root
     property var contentItem: Item {}
-    
+
     onContentItemChanged: {
         // clear old items
         root.children = "";
-        
+
         if (contentItem instanceof Item) {
             contentItem.parent = root;
             contentItem.anchors.fill = root;
