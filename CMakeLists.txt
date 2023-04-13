@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 3.16)
 
-project(kirigami-addons VERSION 0.7.2)
+project(kirigami-addons VERSION 0.8.0)
 
 include(FeatureSummary)
 
