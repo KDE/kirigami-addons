@@ -27,17 +27,17 @@ T.CheckDelegate {
      * This property holds an item that will be displayed before the delegate's contents.
      */
     property var leading: null
-    
+
     /**
      * This property holds the padding after the leading item.
      */
     property real leadingPadding: Kirigami.Units.smallSpacing
-    
+
     /**
      * This property holds an item that will be displayed after the delegate's contents.
      */
     property var trailing: null
-    
+
     /**
      * This property holds the padding before the trailing item.
      */
@@ -52,19 +52,19 @@ T.CheckDelegate {
     topPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
     bottomPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
     rightPadding: Kirigami.Units.gridUnit
-    
+
     implicitWidth: contentItem.implicitWidth + leftPadding + rightPadding
     implicitHeight: contentItem.implicitHeight + topPadding + bottomPadding
-    
+
     focusPolicy: Qt.StrongFocus
     hoverEnabled: true
     background: FormDelegateBackground { control: root }
-    
+
     Layout.fillWidth: true
-    
+
     contentItem: RowLayout {
         spacing: 0
-        
+
         Private.ContentItemLoader {
             Layout.rightMargin: visible ? root.leadingPadding : 0
             visible: root.leading
@@ -72,12 +72,12 @@ T.CheckDelegate {
             implicitWidth: visible ? root.leading.implicitWidth : 0
             contentItem: root.leading
         }
-        
+
         Controls.CheckBox {
             id: checkBoxItem
             Layout.rightMargin: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
             focusPolicy: Qt.NoFocus // provided by delegate
-            
+
             checkState: root.checkState
             nextCheckState: root.nextCheckState
             tristate: root.tristate
@@ -89,7 +89,7 @@ T.CheckDelegate {
             onClicked: root.clicked()
             onPressAndHold: root.pressAndHold()
             onDoubleClicked: root.doubleClicked()
-            
+
             enabled: root.enabled
             checked: root.checked
         }
@@ -115,7 +115,7 @@ T.CheckDelegate {
                 wrapMode: Text.Wrap
             }
         }
-        
+
         Private.ContentItemLoader {
             Layout.leftMargin: visible ? root.trailingPadding : 0
             visible: root.trailing
