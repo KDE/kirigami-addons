@@ -9,6 +9,11 @@ target_sources(componentsplugin PRIVATE
 
 ecm_target_qml_sources(componentsplugin SOURCES
     SearchPopupField.qml
+    AbstractMaximizeComponent.qml
+    AlbumMaximizeComponent.qml
+    ImageMaximizeDelegate.qml
+    VideoMaximizeDelegate.qml
+    AlbumModelItem.qml
 )
 
 target_link_libraries(componentsplugin
