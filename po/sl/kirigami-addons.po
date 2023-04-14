@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-26 00:57+0000\n"
+"POT-Creation-Date: 2023-04-14 00:45+0000\n"
 "PO-Revision-Date: 2023-02-28 08:26+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -17,6 +17,53 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "X-Generator: Poedit 3.2.2\n"
+
+#: components/AbstractMaximizeComponent.qml:126
+#, kde-format
+msgid "Close"
+msgstr ""
+
+#: components/AlbumMaximizeComponent.qml:79
+#, kde-format
+msgid "Zoom in"
+msgstr ""
+
+#: components/AlbumMaximizeComponent.qml:84
+#, kde-format
+msgid "Zoom out"
+msgstr ""
+
+#: components/AlbumMaximizeComponent.qml:90
+#, kde-format
+msgid "Rotate left"
+msgstr ""
+
+#: components/AlbumMaximizeComponent.qml:96
+#, kde-format
+msgid "Rotate right"
+msgstr ""
+
+#: components/AlbumMaximizeComponent.qml:101
+#, kde-format
+msgid "Save as"
+msgstr ""
+
+#: components/AlbumMaximizeComponent.qml:156
+#, fuzzy, kde-format
+#| msgid "Previous"
+msgid "Previous image"
+msgstr "Prejšnji"
+
+#: components/AlbumMaximizeComponent.qml:170
+#, kde-format
+msgid "Next image"
+msgstr ""
+
+#: components/VideoMaximizeDelegate.qml:145
+#, kde-format
+msgctxt "@action:button"
+msgid "Volume"
+msgstr ""
 
 #: dateandtime/DatePicker.qml:141
 #, kde-format
