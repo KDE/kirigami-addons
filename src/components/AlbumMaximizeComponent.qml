@@ -62,6 +62,11 @@ AbstractMaximizeComponent {
     property int initialIndex: -1
 
     /**
+     * @brief Whether the caption should be shown.
+     */
+    property bool showCaption: true
+
+    /**
      * @brief Emitted when the content image is right clicked.
      */
     signal itemRightClicked()
@@ -86,13 +91,13 @@ AbstractMaximizeComponent {
             onTriggered: view.currentItem.scaleFactor = Math.max(view.currentItem.scaleFactor - 0.25, 0.25)
         },
         Kirigami.Action {
-            visible: root.model[view.currentIndex].type === AlbumModelItem.Image
+            visible: view.currentItem.type === AlbumModelItem.Image
             text: i18n("Rotate left")
             icon.name: "image-rotate-left-symbolic"
             onTriggered: view.currentItem.rotationAngle = view.currentItem.rotationAngle - 90
         },
         Kirigami.Action {
-            visible: root.model[view.currentIndex].type === AlbumModelItem.Image
+            visible: view.currentItem.type === AlbumModelItem.Image
             text: i18n("Rotate right")
             icon.name: "image-rotate-right-symbolic"
             onTriggered: view.currentItem.rotationAngle = view.currentItem.rotationAngle + 90
@@ -174,12 +179,12 @@ AbstractMaximizeComponent {
 
     footer: QQC2.Control {
         Layout.fillWidth: true
-        visible: root.model[view.currentIndex] ? root.model[view.currentIndex].caption : false
+        visible: root.showCaption && view.currentItem.caption
 
         contentItem: QQC2.Label {
             Layout.leftMargin: Kirigami.Units.largeSpacing
             wrapMode: Text.WordWrap
-            text: root.model[view.currentIndex] ? root.model[view.currentIndex].caption : ""
+            text: view.currentItem.caption
         }
 
         background: Rectangle {

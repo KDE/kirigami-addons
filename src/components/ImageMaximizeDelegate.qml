@@ -25,6 +25,24 @@ Item {
     required property string tempSource
 
     /**
+     * @brief The caption for the item.
+     *
+     * Typically set to the filename if no caption is available.
+     *
+     * @note Declared here so that parent components can access this parameter
+     *       when used as a listView delegate.
+     */
+    required property string caption
+
+    /**
+     * @brief The delegate type for this item.
+     *
+     * @note Declared here so that parent components can access this parameter
+     *       when used as a listView delegate.
+     */
+    readonly property int type: AlbumModelItem.Image
+
+    /**
      * @brief The padding around the content image.
      *
      * The padding is factored in when calculating the maximum size of the content
