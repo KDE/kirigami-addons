@@ -115,6 +115,8 @@ QQC2.Control {
         anchors.right: parent.right
         selectByMouse: true
 
+        KeyNavigation.tab: scrollView
+
         onFocusChanged: if (focus) {
             root.popup.open()
         }
@@ -224,6 +226,9 @@ QQC2.Control {
                     Layout.fillHeight: true
                     Layout.fillWidth: true
 
+                    onActiveFocusChanged: if (activeFocus) {
+                        contentItem.forceActiveFocus();
+                    }
                 }
             }
         }
