@@ -5,10 +5,11 @@
 
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
+import QtQuick.Templates 2.15 as T
 import org.kde.kirigami 2.20 as Kirigami
 
 Rectangle {
-    required property Item control
+    required property T.Control control
 
     color: {
         let colorOpacity = 0;
