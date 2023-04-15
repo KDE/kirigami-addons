@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-14 00:45+0000\n"
-"PO-Revision-Date: 2023-01-22 12:44+0200\n"
+"POT-Creation-Date: 2023-04-15 00:47+0000\n"
+"PO-Revision-Date: 2023-04-14 17:43+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -21,49 +21,48 @@ msgstr ""
 #: components/AbstractMaximizeComponent.qml:126
 #, kde-format
 msgid "Close"
-msgstr ""
-
-#: components/AlbumMaximizeComponent.qml:79
-#, kde-format
-msgid "Zoom in"
-msgstr ""
+msgstr "Закрити"
 
 #: components/AlbumMaximizeComponent.qml:84
 #, kde-format
-msgid "Zoom out"
-msgstr ""
+msgid "Zoom in"
+msgstr "Збільшити"
 
-#: components/AlbumMaximizeComponent.qml:90
+#: components/AlbumMaximizeComponent.qml:89
+#, kde-format
+msgid "Zoom out"
+msgstr "Зменшити"
+
+#: components/AlbumMaximizeComponent.qml:95
 #, kde-format
 msgid "Rotate left"
-msgstr ""
-
-#: components/AlbumMaximizeComponent.qml:96
-#, kde-format
-msgid "Rotate right"
-msgstr ""
+msgstr "Обернути ліворуч"
 
 #: components/AlbumMaximizeComponent.qml:101
 #, kde-format
+msgid "Rotate right"
+msgstr "Обернути праворуч"
+
+#: components/AlbumMaximizeComponent.qml:106
+#, kde-format
 msgid "Save as"
-msgstr ""
+msgstr "Зберегти як"
 
-#: components/AlbumMaximizeComponent.qml:156
-#, fuzzy, kde-format
-#| msgid "Previous"
+#: components/AlbumMaximizeComponent.qml:161
+#, kde-format
 msgid "Previous image"
-msgstr "Назад"
+msgstr "Попереднє зображення"
 
-#: components/AlbumMaximizeComponent.qml:170
+#: components/AlbumMaximizeComponent.qml:175
 #, kde-format
 msgid "Next image"
-msgstr ""
+msgstr "Наступне зображення"
 
-#: components/VideoMaximizeDelegate.qml:145
+#: components/VideoMaximizeDelegate.qml:163
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
-msgstr ""
+msgstr "Гучність"
 
 #: dateandtime/DatePicker.qml:141
 #, kde-format

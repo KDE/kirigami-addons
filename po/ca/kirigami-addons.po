@@ -9,63 +9,62 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-14 00:45+0000\n"
-"PO-Revision-Date: 2023-01-22 18:39+0100\n"
-"Last-Translator: Antoni Bella <antonibella5@yahoo.com>\n"
+"POT-Creation-Date: 2023-04-15 00:47+0000\n"
+"PO-Revision-Date: 2023-04-14 17:14+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Kate 22.08.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: components/AbstractMaximizeComponent.qml:126
 #, kde-format
 msgid "Close"
-msgstr ""
-
-#: components/AlbumMaximizeComponent.qml:79
-#, kde-format
-msgid "Zoom in"
-msgstr ""
+msgstr "Tanca"
 
 #: components/AlbumMaximizeComponent.qml:84
 #, kde-format
-msgid "Zoom out"
-msgstr ""
+msgid "Zoom in"
+msgstr "Amplia"
 
-#: components/AlbumMaximizeComponent.qml:90
+#: components/AlbumMaximizeComponent.qml:89
+#, kde-format
+msgid "Zoom out"
+msgstr "Redueix"
+
+#: components/AlbumMaximizeComponent.qml:95
 #, kde-format
 msgid "Rotate left"
-msgstr ""
-
-#: components/AlbumMaximizeComponent.qml:96
-#, kde-format
-msgid "Rotate right"
-msgstr ""
+msgstr "Gira a l'esquerra"
 
 #: components/AlbumMaximizeComponent.qml:101
 #, kde-format
+msgid "Rotate right"
+msgstr "Gira a la dreta"
+
+#: components/AlbumMaximizeComponent.qml:106
+#, kde-format
 msgid "Save as"
-msgstr ""
+msgstr "Desa com a"
 
-#: components/AlbumMaximizeComponent.qml:156
-#, fuzzy, kde-format
-#| msgid "Previous"
+#: components/AlbumMaximizeComponent.qml:161
+#, kde-format
 msgid "Previous image"
-msgstr "Anterior"
+msgstr "Imatge anterior"
 
-#: components/AlbumMaximizeComponent.qml:170
+#: components/AlbumMaximizeComponent.qml:175
 #, kde-format
 msgid "Next image"
-msgstr ""
+msgstr "Imatge següent"
 
-#: components/VideoMaximizeDelegate.qml:145
+#: components/VideoMaximizeDelegate.qml:163
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
-msgstr ""
+msgstr "Volum"
 
 #: dateandtime/DatePicker.qml:141
 #, kde-format

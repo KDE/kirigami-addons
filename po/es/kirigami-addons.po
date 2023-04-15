@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-14 00:45+0000\n"
-"PO-Revision-Date: 2023-01-23 02:34+0100\n"
+"POT-Creation-Date: 2023-04-15 00:47+0000\n"
+"PO-Revision-Date: 2023-04-15 01:05+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,54 +17,53 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.03.90\n"
 
 #: components/AbstractMaximizeComponent.qml:126
 #, kde-format
 msgid "Close"
-msgstr ""
-
-#: components/AlbumMaximizeComponent.qml:79
-#, kde-format
-msgid "Zoom in"
-msgstr ""
+msgstr "Cerrar"
 
 #: components/AlbumMaximizeComponent.qml:84
 #, kde-format
-msgid "Zoom out"
-msgstr ""
+msgid "Zoom in"
+msgstr "Ampliar"
 
-#: components/AlbumMaximizeComponent.qml:90
+#: components/AlbumMaximizeComponent.qml:89
+#, kde-format
+msgid "Zoom out"
+msgstr "Reducir"
+
+#: components/AlbumMaximizeComponent.qml:95
 #, kde-format
 msgid "Rotate left"
-msgstr ""
-
-#: components/AlbumMaximizeComponent.qml:96
-#, kde-format
-msgid "Rotate right"
-msgstr ""
+msgstr "Rotar a la izquierda"
 
 #: components/AlbumMaximizeComponent.qml:101
 #, kde-format
+msgid "Rotate right"
+msgstr "Rotar a la derecha"
+
+#: components/AlbumMaximizeComponent.qml:106
+#, kde-format
 msgid "Save as"
-msgstr ""
+msgstr "Guardar como"
 
-#: components/AlbumMaximizeComponent.qml:156
-#, fuzzy, kde-format
-#| msgid "Previous"
+#: components/AlbumMaximizeComponent.qml:161
+#, kde-format
 msgid "Previous image"
-msgstr "Anterior"
+msgstr "Anterior imagen"
 
-#: components/AlbumMaximizeComponent.qml:170
+#: components/AlbumMaximizeComponent.qml:175
 #, kde-format
 msgid "Next image"
-msgstr ""
+msgstr "Siguiente imagen"
 
-#: components/VideoMaximizeDelegate.qml:145
+#: components/VideoMaximizeDelegate.qml:163
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
-msgstr ""
+msgstr "Volumen"
 
 #: dateandtime/DatePicker.qml:141
 #, kde-format
