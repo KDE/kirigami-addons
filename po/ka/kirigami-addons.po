@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-15 00:47+0000\n"
-"PO-Revision-Date: 2023-01-23 07:23+0100\n"
+"PO-Revision-Date: 2023-04-15 05:26+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -21,49 +21,48 @@ msgstr ""
 #: components/AbstractMaximizeComponent.qml:126
 #, kde-format
 msgid "Close"
-msgstr ""
+msgstr "დახურვა"
 
 #: components/AlbumMaximizeComponent.qml:84
 #, kde-format
 msgid "Zoom in"
-msgstr ""
+msgstr "გადიდება"
 
 #: components/AlbumMaximizeComponent.qml:89
 #, kde-format
 msgid "Zoom out"
-msgstr ""
+msgstr "დაპატარავება"
 
 #: components/AlbumMaximizeComponent.qml:95
 #, kde-format
 msgid "Rotate left"
-msgstr ""
+msgstr "მარცხნივ მოტრიალება"
 
 #: components/AlbumMaximizeComponent.qml:101
 #, kde-format
 msgid "Rotate right"
-msgstr ""
+msgstr "მარჯვნივ მოტრიალება"
 
 #: components/AlbumMaximizeComponent.qml:106
 #, kde-format
 msgid "Save as"
-msgstr ""
+msgstr "შენახვა, როგორც"
 
 #: components/AlbumMaximizeComponent.qml:161
-#, fuzzy, kde-format
-#| msgid "Previous"
+#, kde-format
 msgid "Previous image"
-msgstr "წინა"
+msgstr "წინა გამოსახულება"
 
 #: components/AlbumMaximizeComponent.qml:175
 #, kde-format
 msgid "Next image"
-msgstr ""
+msgstr "შემდეგი გამოსახულება"
 
 #: components/VideoMaximizeDelegate.qml:163
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
-msgstr ""
+msgstr "ხმა"
 
 #: dateandtime/DatePicker.qml:141
 #, kde-format
