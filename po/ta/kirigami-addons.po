@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-15 00:47+0000\n"
-"PO-Revision-Date: 2023-01-24 21:49+0530\n"
+"PO-Revision-Date: 2023-04-16 15:31+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,54 +15,53 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.03.90\n"
 
 #: components/AbstractMaximizeComponent.qml:126
 #, kde-format
 msgid "Close"
-msgstr ""
+msgstr "மூடு"
 
 #: components/AlbumMaximizeComponent.qml:84
 #, kde-format
 msgid "Zoom in"
-msgstr ""
+msgstr "பெரிதாக்கு"
 
 #: components/AlbumMaximizeComponent.qml:89
 #, kde-format
 msgid "Zoom out"
-msgstr ""
+msgstr "சிறிதாக்கு"
 
 #: components/AlbumMaximizeComponent.qml:95
 #, kde-format
 msgid "Rotate left"
-msgstr ""
+msgstr "இடதுபுறமாக திருப்பு"
 
 #: components/AlbumMaximizeComponent.qml:101
 #, kde-format
 msgid "Rotate right"
-msgstr ""
+msgstr "வலதுபுறமாக திருப்பு"
 
 #: components/AlbumMaximizeComponent.qml:106
 #, kde-format
 msgid "Save as"
-msgstr ""
+msgstr "வேறு பெயரில் சேமி"
 
 #: components/AlbumMaximizeComponent.qml:161
-#, fuzzy, kde-format
-#| msgid "Previous"
+#, kde-format
 msgid "Previous image"
-msgstr "முந்தையது"
+msgstr "முந்தைய படம்"
 
 #: components/AlbumMaximizeComponent.qml:175
 #, kde-format
 msgid "Next image"
-msgstr ""
+msgstr "அடுத்த படம்"
 
 #: components/VideoMaximizeDelegate.qml:163
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
-msgstr ""
+msgstr "ஒலியளவு"
 
 #: dateandtime/DatePicker.qml:141
 #, kde-format
