@@ -5,4 +5,31 @@
  */
 
 #include <QtQuickTest>
-QUICK_TEST_MAIN(Kirigami)
+#include <QQmlEngine>
+#include <QQmlContext>
+
+#include <KLocalizedContext>
+
+#include "example_albummodel.h"
+
+class KirigamiAddonsSetup : public QObject
+{
+    Q_OBJECT
+
+public:
+    KirigamiAddonsSetup()
+    {
+    }
+
+public Q_SLOTS:
+    void qmlEngineAvailable(QQmlEngine *engine)
+    {
+        engine->rootContext()->setContextObject(new KLocalizedContext(engine));
+
+        qmlRegisterType<ExampleAlbumModel>("test.artefacts", 1, 0, "ExampleAlbumModel");
+    }
+};
+
+QUICK_TEST_MAIN_WITH_SETUP(KirigamiAddons, KirigamiAddonsSetup)
+
+#include "qmltests.moc"

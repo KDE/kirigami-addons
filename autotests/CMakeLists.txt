@@ -6,8 +6,22 @@ if(NOT Qt${QT_MAJOR_VERSION}QuickTest_FOUND)
     return()
 endif()
 
+add_library(test-artefacts STATIC
+    example_albummodel.cpp
+)
+
+target_link_libraries(test-artefacts
+    Qt${QT_MAJOR_VERSION}::Core
+)
+
 add_executable(qmltest qmltests.cpp)
-target_link_libraries(qmltest Qt${QT_MAJOR_VERSION}::QuickTest)
+
+target_link_libraries(qmltest
+    test-artefacts
+    Qt${QT_MAJOR_VERSION}::QuickTest
+    Qt${QT_MAJOR_VERSION}::Qml
+    KF${QT_MAJOR_VERSION}::I18n
+)
 
 macro(kirigami_add_tests)
     if (WIN32)
@@ -27,5 +41,7 @@ endmacro()
 
 kirigami_add_tests(
     tst_sounds.qml
+    tst_album_qmllistmodel.qml
+    tst_album_abstractlistmodel.qml
 )
 
