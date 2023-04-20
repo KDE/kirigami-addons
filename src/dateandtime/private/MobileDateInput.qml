@@ -15,9 +15,12 @@ Controls.TextField { //inherited for style reasons to show we're interactive
     readOnly: true
     text: selectedDate.toLocaleDateString(Qt.locale(), Locale.ShortFormat)
     MouseArea {
+        id: mouseArea
         anchors.fill: parent
+        property bool androidPickerActive: false
         onClicked: {
             if (Qt.platform.os === 'android') {
+                androidPickerActive = true;
                 KDT.AndroidIntegration.showDatePicker(root.selectedDate.getTime());
             } else {
                 popupLoader.active = true
@@ -30,10 +33,11 @@ Controls.TextField { //inherited for style reasons to show we're interactive
         }
 
         Connections {
-            enabled: Qt.platform.os === 'android'
+            enabled: Qt.platform.os === 'android' && mouseArea.androidPickerActive
             ignoreUnknownSignals: !enabled
             target: enabled ? KDT.AndroidIntegration : null
             function onDatePickerFinished(accepted, newDate) {
+                mouseArea.androidPickerActive = false;
                 if (accepted) {
                     root.selectedDate = newDate;
                 }

@@ -50,18 +50,22 @@ QQC2.TextField {
     Component.onCompleted: valueToText()
 
     MouseArea {
+        id: mouseArea
         anchors.fill: parent
         enabled: Kirigami.Settings.isMobile
+        property bool androidPickerActive: false
         onClicked: if (Qt.platform.os === 'android') {
+            androidPickerActive = true;
             AndroidIntegration.showTimePicker(timeInput.value.getTime());
         } else {
             popup.open();
         }
         Connections {
-            enabled: Qt.platform.os === 'android'
+            enabled: Qt.platform.os === 'android' && mouseArea.androidPickerActive
             ignoreUnknownSignals: !enabled
             target: enabled ? AndroidIntegration : null
             function onTimePickerFinished(accepted, newDate) {
+                mouseArea.androidPickerActive = false;
                 if (accepted) {
                     timeInput.value = newDate;
                 }
