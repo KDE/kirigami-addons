@@ -17,32 +17,31 @@ Item {
         width: 100
         height: 100
 
-        property list<AlbumModelItem> items: [
-            AlbumModelItem {
+        initialIndex: 0
+        model: ListModel {
+            ListElement {
                 type: AlbumModelItem.Image
                 source: "https://kde.org/stuff/clipart/logo/kde-logo-white-blue-rounded-source.svg"
                 tempSource: "https://kde.org/stuff/clipart/logo/kde-logo-white-gray-rounded-source.svg"
                 caption: "A test image"
-            },
-            AlbumModelItem {
+            }
+            ListElement {
                 type: AlbumModelItem.Video
                 source: "https://cdn.kde.org/promo/Announcements/Plasma/5.27/discover_hl_720p.webm"
                 tempSource: "https://kde.org/stuff/clipart/logo/kde-logo-white-gray-rounded-source.svg"
                 caption: "A test video"
-            },
+            }
             // This is just to test a blank caption.
-            AlbumModelItem {
+            ListElement {
                 type: AlbumModelItem.Image
                 source: "https://kde.org/stuff/clipart/logo/kde-logo-white-blue-rounded-source.svg"
                 tempSource: "https://kde.org/stuff/clipart/logo/kde-logo-white-gray-rounded-source.svg"
                 caption: ""
             }
-        ]
-        initialIndex: 0
-        model: items
+        }
 
         TestCase {
-            name: "AblumQmlListModelTest"
+            name: "AlbumQmlListModelTest"
             when: windowShown
 
             function test_hasItems() {

@@ -43,5 +43,6 @@ kirigami_add_tests(
     tst_sounds.qml
     tst_album_qmllistmodel.qml
     tst_album_abstractlistmodel.qml
+    tst_album_qmlqobjectmodel.qml
 )
 

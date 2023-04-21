@@ -6,7 +6,6 @@ import QtTest 1.2
 
 import org.kde.kirigami 2.15 as Kirigami
 import org.kde.kirigamiaddons.labs.components 1.0
-import test.artefacts 1.0
 
 Item {
     id: root
@@ -18,11 +17,32 @@ Item {
         width: 100
         height: 100
 
+        property list<AlbumModelItem> items: [
+            AlbumModelItem {
+                type: AlbumModelItem.Image
+                source: "https://kde.org/stuff/clipart/logo/kde-logo-white-blue-rounded-source.svg"
+                tempSource: "https://kde.org/stuff/clipart/logo/kde-logo-white-gray-rounded-source.svg"
+                caption: "A test image"
+            },
+            AlbumModelItem {
+                type: AlbumModelItem.Video
+                source: "https://cdn.kde.org/promo/Announcements/Plasma/5.27/discover_hl_720p.webm"
+                tempSource: "https://kde.org/stuff/clipart/logo/kde-logo-white-gray-rounded-source.svg"
+                caption: "A test video"
+            },
+            // This is just to test a blank caption.
+            AlbumModelItem {
+                type: AlbumModelItem.Image
+                source: "https://kde.org/stuff/clipart/logo/kde-logo-white-blue-rounded-source.svg"
+                tempSource: "https://kde.org/stuff/clipart/logo/kde-logo-white-gray-rounded-source.svg"
+                caption: ""
+            }
+        ]
         initialIndex: 0
-        model: ExampleAlbumModel {}
+        model: items
 
         TestCase {
-            name: "AlbumAbstractListModelTest"
+            name: "AlbumQmlQObjectModelTest"
             when: windowShown
 
             function test_hasItems() {
