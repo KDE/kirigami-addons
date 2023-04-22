@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
-# Shinjo Park <kde@peremen.name>, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-15 00:47+0000\n"
-"PO-Revision-Date: 2022-04-16 00:01+0200\n"
+"PO-Revision-Date: 2023-04-22 00:58+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,54 +15,53 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: components/AbstractMaximizeComponent.qml:126
 #, kde-format
 msgid "Close"
-msgstr ""
+msgstr "닫기"
 
 #: components/AlbumMaximizeComponent.qml:84
 #, kde-format
 msgid "Zoom in"
-msgstr ""
+msgstr "확대"
 
 #: components/AlbumMaximizeComponent.qml:89
 #, kde-format
 msgid "Zoom out"
-msgstr ""
+msgstr "축소"
 
 #: components/AlbumMaximizeComponent.qml:95
 #, kde-format
 msgid "Rotate left"
-msgstr ""
+msgstr "왼쪽으로 회전"
 
 #: components/AlbumMaximizeComponent.qml:101
 #, kde-format
 msgid "Rotate right"
-msgstr ""
+msgstr "오른쪽으로 회전"
 
 #: components/AlbumMaximizeComponent.qml:106
 #, kde-format
 msgid "Save as"
-msgstr ""
+msgstr "다른 이름으로 저장"
 
 #: components/AlbumMaximizeComponent.qml:161
-#, fuzzy, kde-format
-#| msgid "Previous"
+#, kde-format
 msgid "Previous image"
-msgstr "이전"
+msgstr "이전 그림"
 
 #: components/AlbumMaximizeComponent.qml:175
 #, kde-format
 msgid "Next image"
-msgstr ""
+msgstr "다음 그림"
 
 #: components/VideoMaximizeDelegate.qml:163
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
-msgstr ""
+msgstr "음량"
 
 #: dateandtime/DatePicker.qml:141
 #, kde-format
@@ -71,22 +70,19 @@ msgid "%1 %2"
 msgstr "%2년 %1"
 
 #: dateandtime/DatePicker.qml:182
-#, fuzzy, kde-format
-#| msgid "Days"
+#, kde-format
 msgctxt "kirigami-addons"
 msgid "Days"
 msgstr "일"
 
 #: dateandtime/DatePicker.qml:190
-#, fuzzy, kde-format
-#| msgid "Months"
+#, kde-format
 msgctxt "kirigami-addons"
 msgid "Months"
 msgstr "월"
 
 #: dateandtime/DatePicker.qml:196
-#, fuzzy, kde-format
-#| msgid "Years"
+#, kde-format
 msgctxt "kirigami-addons"
 msgid "Years"
 msgstr "년"
@@ -120,22 +116,22 @@ msgstr "수락"
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: mobileform/AboutKDE.qml:23
 #, kde-format
 msgid "About KDE"
-msgstr ""
+msgstr "KDE 정보"
 
 #: mobileform/AboutKDE.qml:55
 #, kde-format
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: mobileform/AboutKDE.qml:64
 #, kde-format
 msgid "Be Free!"
-msgstr ""
+msgstr "자유롭게!"
 
 #: mobileform/AboutKDE.qml:73
 #, kde-format
@@ -145,11 +141,14 @@ msgid ""
 "produces the Plasma desktop environment, hundreds of applications, and the "
 "many software libraries that support them.\n"
 msgstr ""
+"KDE는 자유 소프트웨어를 개발하려고 모인 소프트웨어 개발자, 예술가, 집필가, 번"
+"역가 및 기타 인원의 모임입니다. KDE 커뮤니티에서는 Plasma 데스크톱 환경, 다양"
+"한 프로그램 및 지원 라이브러리를 개발합니다.\n"
 
 #: mobileform/AboutKDE.qml:81 mobileform/AboutPage.qml:182
 #, kde-format
 msgid "Homepage"
-msgstr ""
+msgstr "홈페이지"
 
 #: mobileform/AboutKDE.qml:94
 #, kde-format
@@ -158,11 +157,14 @@ msgid ""
 "However, you - the user - must tell us when something does not work as "
 "expected or could be done better.\n"
 msgstr ""
+"소프트웨어는 항상 개선되며, KDE 팀도 그럴 준비가 되어 있습니다. 따라서 사용"
+"자 여러분은 무언가가 예상한 대로 작동하지 않거나 더 잘 작동하기를 바라면 개발"
+"자에게 알려 주십시오.\n"
 
 #: mobileform/AboutKDE.qml:103 mobileform/AboutPage.qml:221
 #, kde-format
 msgid "Report a bug"
-msgstr ""
+msgstr "버그 보고"
 
 #: mobileform/AboutKDE.qml:116
 #, kde-format
@@ -171,66 +173,69 @@ msgid ""
 "You can join the national teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
+"소프트웨어 개발자만이 KDE에 참가할 수 있는 것은 아닙니다. 프로그램 인터페이스"
+"를 번역하는 각 나라 번역팀을 도울 수도 있습니다. 또한 그래픽, 테마, 소리, 더 "
+"나은 문서 등을 기여할 수도 있습니다. 직접 결정하십시오!"
 
 #: mobileform/AboutKDE.qml:123 mobileform/AboutPage.qml:200
 #, kde-format
 msgid "Get Involved"
-msgstr ""
+msgstr "참여하기"
 
 #: mobileform/AboutKDE.qml:130
 #, kde-format
 msgid "Developer Documentation"
-msgstr ""
+msgstr "개발자 문서"
 
 #: mobileform/AboutKDE.qml:143
 #, kde-format
 msgid ""
 "KDE software is and will always be available free of charge, however "
 "creating it is not free.\n"
-msgstr ""
+msgstr "KDE는 무료로 사용 가능하지만, 만드는 것은 무료가 아닙니다.\n"
 
 #: mobileform/AboutKDE.qml:154
 #, kde-format
 msgid "KDE e.V"
-msgstr ""
+msgstr "KDE e.V"
 
 #: mobileform/AboutKDE.qml:161 mobileform/AboutPage.qml:191
 #, kde-format
 msgid "Donate"
-msgstr ""
+msgstr "기부하기"
 
 #: mobileform/AboutPage.qml:87
 #, kde-format
 msgid "About %1"
-msgstr ""
+msgstr "%1 정보"
 
 #: mobileform/AboutPage.qml:138
 #, kde-format
 msgid "Copyright"
-msgstr ""
+msgstr "저작권"
 
 #: mobileform/AboutPage.qml:145
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
-msgstr[0] ""
+msgstr[0] "라이선스"
 
 #: mobileform/AboutPage.qml:234
 #, kde-format
 msgid "Libraries in use"
-msgstr ""
+msgstr "사용하는 라이브러리"
 
 #: mobileform/AboutPage.qml:265
 #, kde-format
 msgid "Authors"
-msgstr ""
+msgstr "작성자"
 
 #: mobileform/AboutPage.qml:277
 #, kde-format
 msgid "Credits"
-msgstr ""
+msgstr "제작진"
 
 #: mobileform/AboutPage.qml:289
 #, kde-format
 msgid "Translators"
-msgstr ""
+msgstr "번역자"
