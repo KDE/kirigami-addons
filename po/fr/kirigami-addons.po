@@ -162,7 +162,7 @@ msgid ""
 msgstr ""
 "Les logiciels peuvent toujours être améliorés et l’équipe KDE est prête à le "
 "faire. Cependant, vous - la personne utilisatrice - devez nous dire quand "
-"quelque chose ne fonctionne pas comme prévu ou pourrait être fait mieux.  \n"
+"quelque chose ne fonctionne pas comme prévu ou pourrait être fait mieux.\n"
 
 #: mobileform/AboutKDE.qml:103 mobileform/AboutPage.qml:221
 #, kde-format
