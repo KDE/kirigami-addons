@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-15 00:47+0000\n"
-"PO-Revision-Date: 2023-03-14 21:58+0200\n"
+"PO-Revision-Date: 2023-04-20 11:36+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -20,49 +20,48 @@ msgstr ""
 #: components/AbstractMaximizeComponent.qml:126
 #, kde-format
 msgid "Close"
-msgstr ""
+msgstr "Sulje"
 
 #: components/AlbumMaximizeComponent.qml:84
 #, kde-format
 msgid "Zoom in"
-msgstr ""
+msgstr "Lähennä"
 
 #: components/AlbumMaximizeComponent.qml:89
 #, kde-format
 msgid "Zoom out"
-msgstr ""
+msgstr "Loitonna"
 
 #: components/AlbumMaximizeComponent.qml:95
 #, kde-format
 msgid "Rotate left"
-msgstr ""
+msgstr "Kierrä vasemmalle"
 
 #: components/AlbumMaximizeComponent.qml:101
 #, kde-format
 msgid "Rotate right"
-msgstr ""
+msgstr "Kierrä oikealle"
 
 #: components/AlbumMaximizeComponent.qml:106
 #, kde-format
 msgid "Save as"
-msgstr ""
+msgstr "Tallenna nimellä"
 
 #: components/AlbumMaximizeComponent.qml:161
-#, fuzzy, kde-format
-#| msgid "Previous"
+#, kde-format
 msgid "Previous image"
-msgstr "Edellinen"
+msgstr "Edellinen kuva"
 
 #: components/AlbumMaximizeComponent.qml:175
 #, kde-format
 msgid "Next image"
-msgstr ""
+msgstr "Seuraava kuva"
 
 #: components/VideoMaximizeDelegate.qml:163
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
-msgstr ""
+msgstr "Äänenvoimakkuus"
 
 #: dateandtime/DatePicker.qml:141
 #, kde-format
