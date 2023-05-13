@@ -1,0 +1,246 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kirigami-addons package.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kirigami-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-04-15 00:47+0000\n"
+"PO-Revision-Date: 2023-05-12 11:09+0200\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.04.0\n"
+
+#: components/AbstractMaximizeComponent.qml:126
+#, kde-format
+msgid "Close"
+msgstr "Pechar"
+
+#: components/AlbumMaximizeComponent.qml:84
+#, kde-format
+msgid "Zoom in"
+msgstr "Achegar"
+
+#: components/AlbumMaximizeComponent.qml:89
+#, kde-format
+msgid "Zoom out"
+msgstr "Afastar"
+
+#: components/AlbumMaximizeComponent.qml:95
+#, kde-format
+msgid "Rotate left"
+msgstr "Rotar á esquerda"
+
+#: components/AlbumMaximizeComponent.qml:101
+#, kde-format
+msgid "Rotate right"
+msgstr "Rotar á dereita"
+
+#: components/AlbumMaximizeComponent.qml:106
+#, kde-format
+msgid "Save as"
+msgstr "Gardar como"
+
+#: components/AlbumMaximizeComponent.qml:161
+#, kde-format
+msgid "Previous image"
+msgstr "Imaxe anterior"
+
+#: components/AlbumMaximizeComponent.qml:175
+#, kde-format
+msgid "Next image"
+msgstr "Seguinte imaxe"
+
+#: components/VideoMaximizeDelegate.qml:163
+#, kde-format
+msgctxt "@action:button"
+msgid "Volume"
+msgstr "Volume"
+
+#: dateandtime/DatePicker.qml:141
+#, kde-format
+msgctxt "%1 is month name, %2 is year"
+msgid "%1 %2"
+msgstr "%1 %2"
+
+#: dateandtime/DatePicker.qml:182
+#, kde-format
+msgctxt "kirigami-addons"
+msgid "Days"
+msgstr "Días"
+
+#: dateandtime/DatePicker.qml:190
+#, kde-format
+msgctxt "kirigami-addons"
+msgid "Months"
+msgstr "Meses"
+
+#: dateandtime/DatePicker.qml:196
+#, kde-format
+msgctxt "kirigami-addons"
+msgid "Years"
+msgstr "Anos"
+
+#: dateandtime/DatePopup.qml:55
+#, kde-format
+msgid "Previous"
+msgstr "Anterior"
+
+#: dateandtime/DatePopup.qml:64
+#, kde-format
+msgid "Today"
+msgstr "Hoxe"
+
+#: dateandtime/DatePopup.qml:73
+#, kde-format
+msgid "Next"
+msgstr "Seguinte"
+
+#: dateandtime/DatePopup.qml:92
+#, kde-format
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: dateandtime/DatePopup.qml:101
+#, kde-format
+msgid "Accept"
+msgstr "Aceptar"
+
+#: dateandtime/private/TumblerTimePicker.qml:88
+#, kde-format
+msgctxt "Time separator"
+msgid ":"
+msgstr ":"
+
+#: mobileform/AboutKDE.qml:23
+#, kde-format
+msgid "About KDE"
+msgstr "Sobre KDE"
+
+#: mobileform/AboutKDE.qml:55
+#, kde-format
+msgid "KDE"
+msgstr "KDE"
+
+#: mobileform/AboutKDE.qml:64
+#, kde-format
+msgid "Be Free!"
+msgstr "Sexa libre!"
+
+#: mobileform/AboutKDE.qml:73
+#, kde-format
+msgid ""
+"KDE is a world-wide community of software engineers, artists, writers, "
+"translators and creators who are committed to Free Software development. KDE "
+"produces the Plasma desktop environment, hundreds of applications, and the "
+"many software libraries that support them.\n"
+msgstr ""
+"KDE é unha comunidade internacional de persoas adicadas á enxeñaría de "
+"software, á arte, a escribir, a traducir, e a crear, todas elas "
+"comprometidas co desenvolvemento de software libre. KDE produce o ambiente "
+"de escritorio Plasma, centos de aplicacións, e moitas bibliotecas de "
+"software nas que se apoian.\n"
+
+#: mobileform/AboutKDE.qml:81 mobileform/AboutPage.qml:182
+#, kde-format
+msgid "Homepage"
+msgstr "Páxina web"
+
+#: mobileform/AboutKDE.qml:94
+#, kde-format
+msgid ""
+"Software can always be improved, and the KDE team is ready to do so. "
+"However, you - the user - must tell us when something does not work as "
+"expected or could be done better.\n"
+msgstr ""
+"O software sempre se pode mellorar, e o equipo de KDE está listo para "
+"facelo. Porén, vostede, a persoa usuaria, tennos que avisar cando algo non "
+"funciona como se espera ou podería funcionar mellor.\n"
+
+#: mobileform/AboutKDE.qml:103 mobileform/AboutPage.qml:221
+#, kde-format
+msgid "Report a bug"
+msgstr "Informar dun fallo"
+
+#: mobileform/AboutKDE.qml:116
+#, kde-format
+msgid ""
+"You do not have to be a software developer to be a member of the KDE team. "
+"You can join the national teams that translate program interfaces. You can "
+"provide graphics, themes, sounds, and improved documentation. You decide!"
+msgstr ""
+"Non hai que ser desenvolvedor para ser membro do Equipo de KDE Pode unirse "
+"ás equipas nacionais para traducir as interfaces dos programas Pode fornecer "
+"gráficos, temas, sons, e mellorar a documentación. Vostede decide!"
+
+#: mobileform/AboutKDE.qml:123 mobileform/AboutPage.qml:200
+#, kde-format
+msgid "Get Involved"
+msgstr "Involucrarse"
+
+#: mobileform/AboutKDE.qml:130
+#, kde-format
+msgid "Developer Documentation"
+msgstr "Documentación de desenvolvemento"
+
+#: mobileform/AboutKDE.qml:143
+#, kde-format
+msgid ""
+"KDE software is and will always be available free of charge, however "
+"creating it is not free.\n"
+msgstr ""
+"O software de KDE sempre estará dispoñíbel de balde, pero facelo non é "
+"gratis.\n"
+
+#: mobileform/AboutKDE.qml:154
+#, kde-format
+msgid "KDE e.V"
+msgstr "KDE e.V"
+
+#: mobileform/AboutKDE.qml:161 mobileform/AboutPage.qml:191
+#, kde-format
+msgid "Donate"
+msgstr "Doar"
+
+#: mobileform/AboutPage.qml:87
+#, kde-format
+msgid "About %1"
+msgstr "Sobre %1"
+
+#: mobileform/AboutPage.qml:138
+#, kde-format
+msgid "Copyright"
+msgstr "Dereitos de copia"
+
+#: mobileform/AboutPage.qml:145
+#, kde-format
+msgid "License"
+msgid_plural "Licenses"
+msgstr[0] "Licenza"
+msgstr[1] "Licenzas"
+
+#: mobileform/AboutPage.qml:234
+#, kde-format
+msgid "Libraries in use"
+msgstr "Bibliotecas usadas"
+
+#: mobileform/AboutPage.qml:265
+#, kde-format
+msgid "Authors"
+msgstr "Autoría"
+
+#: mobileform/AboutPage.qml:277
+#, kde-format
+msgid "Credits"
+msgstr "Recoñecementos"
+
+#: mobileform/AboutPage.qml:289
+#, kde-format
+msgid "Translators"
+msgstr "Tradución"
