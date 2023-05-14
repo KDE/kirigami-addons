@@ -209,7 +209,7 @@ AbstractMaximizeComponent {
     padding: 0
     background: Item {}
 
-    onOpened: {
+    onAboutToShow: {
         if (root.initialIndex != -1 && root.initialIndex >= 0) {
             view.currentIndex = initialIndex
         }
