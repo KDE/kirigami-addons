@@ -178,13 +178,22 @@ AbstractMaximizeComponent {
     }
 
     footer: QQC2.Control {
-        Layout.fillWidth: true
         visible: root.showCaption && view.currentItem.caption
+        width: root.width
+        contentItem: QQC2.ScrollView {
+            anchors.fill: parent
+            QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AlwaysOff
+            QQC2.ScrollBar.vertical.policy: QQC2.ScrollBar.AlwaysOn
+            QQC2.ScrollBar.horizontal.interactive: false
+            QQC2.ScrollBar.vertical.interactive: true
 
-        contentItem: QQC2.Label {
-            Layout.leftMargin: Kirigami.Units.largeSpacing
-            wrapMode: Text.WordWrap
-            text: view.currentItem.caption
+            QQC2.Label {
+                id: captionLabel
+                wrapMode: Text.WordWrap
+                text: view.currentItem.caption
+                padding: Kirigami.Units.largeSpacing
+                width: root.width - Kirigami.Units.largeSpacing * 2
+            }
         }
 
         background: Rectangle {
