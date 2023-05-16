@@ -184,8 +184,6 @@ AbstractMaximizeComponent {
             anchors.fill: parent
             QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AlwaysOff
             QQC2.ScrollBar.vertical.policy: QQC2.ScrollBar.AlwaysOn
-            QQC2.ScrollBar.horizontal.interactive: false
-            QQC2.ScrollBar.vertical.interactive: true
 
             QQC2.Label {
                 id: captionLabel
