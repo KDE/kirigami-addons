@@ -192,7 +192,7 @@ AbstractMaximizeComponent {
                 wrapMode: Text.WordWrap
                 text: view.currentItem.caption
                 padding: Kirigami.Units.largeSpacing
-                width: root.width - Kirigami.Units.largeSpacing * 2
+                width: root.width - padding * 2
             }
         }
 
