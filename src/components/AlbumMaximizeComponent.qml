@@ -179,13 +179,12 @@ AbstractMaximizeComponent {
 
     footer: QQC2.Control {
         visible: root.showCaption && view.currentItem.caption
-        width: root.width
         contentItem: QQC2.ScrollView {
             anchors.fill: parent
             QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AlwaysOff
             QQC2.ScrollBar.vertical.policy: QQC2.ScrollBar.AlwaysOn
 
-            QQC2.Label {
+            contentItem: QQC2.Label {
                 id: captionLabel
                 wrapMode: Text.WordWrap
                 text: view.currentItem.caption
