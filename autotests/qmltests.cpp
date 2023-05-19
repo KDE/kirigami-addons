@@ -9,6 +9,7 @@
 #include <QQmlContext>
 
 #include <KLocalizedContext>
+#include <KLocalizedString>
 
 #include "example_albummodel.h"
 
@@ -24,6 +25,7 @@ public:
 public Q_SLOTS:
     void qmlEngineAvailable(QQmlEngine *engine)
     {
+        KLocalizedString::setApplicationDomain("kirigami-addons");
         engine->rootContext()->setContextObject(new KLocalizedContext(engine));
 
         qmlRegisterType<ExampleAlbumModel>("test.artefacts", 1, 0, "ExampleAlbumModel");
