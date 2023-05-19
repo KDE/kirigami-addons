@@ -184,12 +184,11 @@ AbstractMaximizeComponent {
             QQC2.ScrollBar.vertical.policy: QQC2.ScrollBar.AlwaysOn
             QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AsNeeded
             contentWidth: captionLabel.width - captionLabel.padding * 2
-
             contentItem: Flickable {
                 width: root.width
                 height: parent.height
                 contentWidth: captionLabel.width
-                contentHeight: captionLabel.height
+                contentHeight: captionLabel.height - captionLabel.padding * 2 + Kirigami.Units.largeSpacing
 
                 QQC2.Label {
                     id: captionLabel
