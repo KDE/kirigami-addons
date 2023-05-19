@@ -181,15 +181,23 @@ AbstractMaximizeComponent {
         visible: root.showCaption && view.currentItem.caption
         contentItem: QQC2.ScrollView {
             anchors.fill: parent
-            QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AlwaysOff
             QQC2.ScrollBar.vertical.policy: QQC2.ScrollBar.AlwaysOn
+            QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AsNeeded
+            contentWidth: captionLabel.width - captionLabel.padding * 2
 
-            contentItem: QQC2.Label {
-                id: captionLabel
-                wrapMode: Text.WordWrap
-                text: view.currentItem.caption
-                padding: Kirigami.Units.largeSpacing
-                width: root.width - padding * 2
+            contentItem: Flickable {
+                width: root.width
+                height: parent.height
+                contentWidth: captionLabel.width
+                contentHeight: captionLabel.height
+
+                QQC2.Label {
+                    id: captionLabel
+                    wrapMode: Text.WordWrap
+                    text: view.currentItem.caption
+                    padding: Kirigami.Units.largeSpacing
+                    width: root.width - padding * 2
+                }
             }
         }
 
