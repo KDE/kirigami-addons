@@ -17,50 +17,78 @@ TestCase {
 
     when: windowShown
 
+    width: 800
+    height: 600
+
+    // Check that the AlbumMaximizeComponent fills the window.
+    function test_maximize() {
+        var testAlbum = createTemporaryObject(album, root);
+        testAlbum.open();
+
+        compare(testAlbum.width, root.width);
+        compare(testAlbum.height, root.height);
+
+        testAlbum.destroy();
+    }
+
     function test_hasItems() {
         var testAlbum = createTemporaryObject(album, root);
         testAlbum.open();
+
         compare(testAlbum.content.count == 3, true);
+
         testAlbum.destroy();
     }
 
     // Select the image item and check that the current delegate has the correct properties.
     function test_imageParams() {
         var testAlbum = createTemporaryObject(album, root);
+        testAlbum.open();
+
         testAlbum.content.currentIndex = 0;
         compare(testAlbum.content.currentItem.type, AlbumModelItem.Image)
-        compare(testAlbum.content.currentItem.source, root.testImage)
-        compare(testAlbum.content.currentItem.tempSource, root.testImage)
+        compare(testAlbum.content.currentItem.source, Qt.resolvedUrl(root.testImage))
+        compare(testAlbum.content.currentItem.tempSource, Qt.resolvedUrl(root.testImage))
         compare(testAlbum.content.currentItem.caption, "A test image")
+
         testAlbum.destroy();
     }
 
     // Select the video item and check that the current delegate has the correct properties.
     function test_videoParams() {
         var testAlbum = createTemporaryObject(album, root);
+        testAlbum.open();
+
         testAlbum.content.currentIndex = 1;
         compare(testAlbum.content.currentItem.type, AlbumModelItem.Video)
-        compare(testAlbum.content.currentItem.source, root.testVideo)
-        compare(testAlbum.content.currentItem.tempSource, root.testImage)
+        compare(testAlbum.content.currentItem.source, Qt.resolvedUrl(root.testVideo))
+        compare(testAlbum.content.currentItem.tempSource, Qt.resolvedUrl(root.testImage))
         compare(testAlbum.content.currentItem.caption, "A test video")
+
         testAlbum.destroy();
     }
 
     // Select the image item and check that the image only actions are visible.
     function test_imageActions() {
         var testAlbum = createTemporaryObject(album, root);
+        testAlbum.open();
+
         testAlbum.content.currentIndex = 0;
         compare(testAlbum.actions[2].visible, true)
         compare(testAlbum.actions[3].visible, true)
+
         testAlbum.destroy();
     }
 
     // Select the video item and check that the image only actions are not visible.
     function test_videoActions() {
         var testAlbum = createTemporaryObject(album, root);
+        testAlbum.open();
+
         testAlbum.content.currentIndex = 1;
         compare(testAlbum.actions[2].visible, false)
         compare(testAlbum.actions[3].visible, false)
+
         testAlbum.destroy();
     }
 
@@ -101,15 +129,14 @@ TestCase {
         // showCaption = false.
         testAlbum.content.currentIndex = 2;
         compare(testAlbum.footer.visible, false)
+
         testAlbum.destroy();
     }
 
     Component {
         id: album
         AlbumMaximizeComponent {
-            parent: undefined
-            width: 100
-            height: 100
+            parent: root
 
             initialIndex: 0
             model: root.model

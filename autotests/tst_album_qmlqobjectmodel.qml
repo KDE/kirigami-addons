@@ -13,21 +13,21 @@ BaseAlbumMaximizeComponentTestCase {
     property list<AlbumModelItem> items: [
         AlbumModelItem {
             type: AlbumModelItem.Image
-            source: root.testImage
-            tempSource: root.testImage
+            source: Qt.resolvedUrl(root.testImage)
+            tempSource: Qt.resolvedUrl(root.testImage)
             caption: "A test image"
         },
         AlbumModelItem {
             type: AlbumModelItem.Video
-            source: root.testVideo
-            tempSource: root.testImage
+            source: Qt.resolvedUrl(root.testVideo)
+            tempSource: Qt.resolvedUrl(root.testImage)
             caption: "A test video"
         },
         // This is just to test a blank caption.
         AlbumModelItem {
             type: AlbumModelItem.Image
-            source: root.testImage
-            tempSource: root.testImage
+            source: Qt.resolvedUrl(root.testImage)
+            tempSource: Qt.resolvedUrl(oot.testImage)
             caption: ""
         }
     ]

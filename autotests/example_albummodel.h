@@ -4,6 +4,79 @@
 #pragma once
 
 #include <QAbstractListModel>
+#include <QUrl>
+
+/**
+ * @class ItemObject
+ *
+ * An example QObject containing the minimum required properties for AlbumMaximizeComponent.
+ */
+class ItemObject : public QObject
+{
+    Q_OBJECT
+
+    /**
+     * @brief The source for the item.
+     */
+    Q_PROPERTY(QUrl source READ source CONSTANT)
+
+    /**
+     * @brief Source for the temporary content.
+     *
+     * Typically used when downloading the image to show a thumbnail or other
+     * temporary image while the main image downloads.
+     */
+    Q_PROPERTY(QUrl tempSource READ tempSource CONSTANT)
+
+    /**
+     * @brief The delegate type that should be shown for this item.
+     *
+     * @sa Type
+     */
+    Q_PROPERTY(Type type READ type CONSTANT)
+
+    /**
+     * @brief The caption for the item.
+     *
+     * Typically set to the filename if no caption is available.
+     */
+    Q_PROPERTY(QString caption READ caption CONSTANT)
+
+public:
+    /**
+     * @brief The media type for the album item.
+     */
+    enum Type {
+        Image = 0, /**< The media has an image or animated image mime type. */
+        Video, /**< The media has a video mime type. */
+    };
+    Q_ENUM(Type);
+
+    ItemObject(QObject *parent = nullptr,
+               QUrl source = {},
+               QUrl tempSource = {},
+               Type type = Type::Image,
+               QString caption = {})
+        : QObject(parent)
+        , m_source(source)
+        , m_tempSource(tempSource)
+        , m_type(type)
+        , m_caption(caption)
+    {
+    };
+
+    QUrl source () const {return m_source;}
+    QUrl tempSource () const {return m_tempSource;}
+    Type type () const {return m_type;}
+    QString caption () const {return m_caption;}
+
+private:
+    QUrl m_source;
+    QUrl m_tempSource;
+    Type m_type;
+    QString m_caption;
+};
+Q_DECLARE_METATYPE(ItemObject *)
 
 /**
  * @class ExampleAlbumModel
@@ -28,7 +101,7 @@ class ExampleAlbumModel : public QAbstractListModel
      * @note This is just an easy interface to allow the data to be set from QML for
      *       writing tests. In an actual implementation the data can come from anywhere.
      */
-    Q_PROPERTY(QString testImage READ testImage WRITE setTestImage NOTIFY testImageChanged)
+    Q_PROPERTY(QUrl testImage READ testImage WRITE setTestImage NOTIFY testImageChanged)
 
     /**
      * @brief The source for any videos in the model.
@@ -36,7 +109,7 @@ class ExampleAlbumModel : public QAbstractListModel
      * @note This is just an easy interface to allow the data to be set from QML for
      *       writing tests. In an actual implementation the data can come from anywhere.
      */
-    Q_PROPERTY(QString testVideo READ testVideo WRITE setTestVideo NOTIFY testVideoChanged)
+    Q_PROPERTY(QUrl testVideo READ testVideo WRITE setTestVideo NOTIFY testVideoChanged)
 
 public:
     /**
@@ -69,31 +142,22 @@ public:
     };
 
     /**
-     * @brief The media type for the album item.
-     */
-    enum Type {
-        Image = 0, /**< The media has an image or animated image mime type. */
-        Video, /**< The media has a video mime type. */
-    };
-
-    /**
      * @brief Define the data required to represent a model item.
      */
     struct Item {
-        QString source; /**< The source for the item. */
-        QString tempSource; /**< Source for the temporary content. */
-        Type type; /**< The delegate type that should be shown for this item. */
+        QUrl source; /**< The source for the item. */
+        QUrl tempSource; /**< Source for the temporary content. */
+        ItemObject::Type type; /**< The delegate type that should be shown for this item. */
         QString caption; /**< The caption for the item. */
     };
 
     ExampleAlbumModel(QObject *parent = nullptr);
-    ~ExampleAlbumModel() override;
 
-    QString testImage() const;
-    void setTestImage(QString image);
+    QUrl testImage() const;
+    void setTestImage(QUrl image);
 
-    QString testVideo() const;
-    void setTestVideo(QString image);
+    QUrl testVideo() const;
+    void setTestVideo(QUrl image);
 
     /**
      * @brief Get the given role value at the given index.
@@ -121,10 +185,10 @@ Q_SIGNALS:
     void testVideoChanged();
 
 private:
-    QList<Item> m_items;
+    QList<ItemObject *> m_items;
 
-    QString m_testImage;
-    QString m_testVideo;
+    QUrl m_testImage;
+    QUrl m_testVideo;
 
     void resetModel();
 };

@@ -10,14 +10,12 @@ ExampleAlbumModel::ExampleAlbumModel(QObject *parent)
 {
 }
 
-ExampleAlbumModel::~ExampleAlbumModel() = default;
-
-QString ExampleAlbumModel::testImage() const
+QUrl ExampleAlbumModel::testImage() const
 {
     return m_testImage;
 }
 
-void ExampleAlbumModel::setTestImage(QString image)
+void ExampleAlbumModel::setTestImage(QUrl image)
 {
     if (image == m_testImage) {
         return;
@@ -28,12 +26,12 @@ void ExampleAlbumModel::setTestImage(QString image)
     resetModel();
 }
 
-QString ExampleAlbumModel::testVideo() const
+QUrl ExampleAlbumModel::testVideo() const
 {
     return m_testVideo;
 }
 
-void ExampleAlbumModel::setTestVideo(QString video)
+void ExampleAlbumModel::setTestVideo(QUrl video)
 {
     if (video == m_testVideo) {
         return;
@@ -56,16 +54,16 @@ QVariant ExampleAlbumModel::data(const QModelIndex &index, int role) const
     }
 
     if (role == SourceRole) {
-        return m_items.at(index.row()).source;
+        return m_items.at(index.row())->source();
     }
     if (role == TempSourceRole) {
-        return m_items.at(index.row()).tempSource;
+        return m_items.at(index.row())->tempSource();
     }
     if (role == TypeRole) {
-        return m_items.at(index.row()).type;
+        return m_items.at(index.row())->type();
     }
     if (role == CaptionRole) {
-        return m_items.at(index.row()).caption;
+        return m_items.at(index.row())->caption();
     }
 
     return {};
@@ -93,24 +91,9 @@ void ExampleAlbumModel::resetModel()
     m_items.clear();
 
     // Create dummy data using latest image and video sources.
-    m_items.append(Item {
-        m_testImage,
-        m_testImage,
-        Type::Image,
-        QStringLiteral("A test image"),
-    });
-    m_items.append(Item {
-        m_testVideo,
-        m_testImage,
-        Type::Video,
-        QStringLiteral("A test video"),
-    });
-    m_items.append(Item {
-        m_testImage,
-        m_testImage,
-        Type::Image,
-        QString(),
-    });
+    m_items.append(new ItemObject(this, m_testImage, m_testImage, ItemObject::Type::Image, QStringLiteral("A test image")));
+    m_items.append(new ItemObject(this, m_testVideo, m_testImage, ItemObject::Type::Video, QStringLiteral("A test video")));
+    m_items.append(new ItemObject(this, m_testImage, m_testImage, ItemObject::Type::Image, QStringLiteral("")));
 
     endResetModel();
 }
