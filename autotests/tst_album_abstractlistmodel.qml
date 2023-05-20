@@ -4,8 +4,6 @@
 import QtQuick 2.15
 import QtTest 1.2
 
-import org.kde.kirigami 2.15 as Kirigami
-import org.kde.kirigamiaddons.labs.components 1.0
 import test.artefacts 1.0
 
 BaseAlbumMaximizeComponentTestCase {

@@ -4,7 +4,6 @@
 import QtQuick 2.15
 import QtTest 1.2
 
-import org.kde.kirigami 2.15 as Kirigami
 import org.kde.kirigamiaddons.labs.components 1.0
 
 BaseAlbumMaximizeComponentTestCase {
@@ -27,7 +26,7 @@ BaseAlbumMaximizeComponentTestCase {
         AlbumModelItem {
             type: AlbumModelItem.Image
             source: Qt.resolvedUrl(root.testImage)
-            tempSource: Qt.resolvedUrl(oot.testImage)
+            tempSource: Qt.resolvedUrl(root.testImage)
             caption: ""
         }
     ]
