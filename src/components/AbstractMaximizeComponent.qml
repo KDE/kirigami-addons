@@ -156,7 +156,7 @@ QQC2.Popup {
             id: footerParent
             Layout.fillWidth: true
             Layout.preferredHeight: root.footer ? root.footer.implicitHeight > Kirigami.Units.gridUnit * 12 ? Kirigami.Units.gridUnit * 12 : root.footer.implicitHeight : 0
-            visible: root.footer
+            visible: root.footer && !root.hideCaption
         }
     }
 
