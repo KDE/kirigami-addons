@@ -67,6 +67,11 @@ AbstractMaximizeComponent {
     property bool showCaption: true
 
     /**
+     * @brief Whether the caption is hidden by the user.
+     */
+    property bool hideCaption: false
+
+    /**
      * @brief Emitted when the content image is right clicked.
      */
     signal itemRightClicked()
@@ -101,6 +106,12 @@ AbstractMaximizeComponent {
             text: i18n("Rotate right")
             icon.name: "image-rotate-right-symbolic"
             onTriggered: view.currentItem.rotationAngle = view.currentItem.rotationAngle + 90
+        },
+        Kirigami.Action {
+            text: hideCaption ? i18nc("@action:intoolbar", "Show caption") : i18nc("@action:intoolbar", "Hide caption")
+            icon.name: "add-subtitle"
+            visible: root.showCaption && view.currentItem.caption
+            onTriggered: hideCaption = !hideCaption
         },
         Kirigami.Action {
             text: i18n("Save as")
@@ -178,7 +189,7 @@ AbstractMaximizeComponent {
     }
 
     footer: QQC2.Control {
-        visible: root.showCaption && view.currentItem.caption
+        visible: root.showCaption && view.currentItem.caption && !root.hideCaption
         contentItem: QQC2.ScrollView {
             anchors.fill: parent
             QQC2.ScrollBar.vertical.policy: QQC2.ScrollBar.AlwaysOn
