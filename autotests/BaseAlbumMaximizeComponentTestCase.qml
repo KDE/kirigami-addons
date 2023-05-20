@@ -141,7 +141,41 @@ TestCase {
         tryCompare(testAlbum.content.currentItem.children[0], "status", Image.Ready)
         wait(100) // Let the image resize animation happen.
         mouseClick(root, 400, 300, Qt.RightButton)
-        compare(testAlbum.signalSpy.count, 1)
+        compare(testAlbum.signalSpyItemRightClick.count, 1)
+
+        testAlbum.destroy();
+    }
+
+    function test_saveItem() {
+        var testAlbum = createTemporaryObject(album, root);
+        testAlbum.open();
+
+        // Make sure the item delegate is ready.
+        tryCompare(testAlbum.content.currentItem.children[0], "status", Image.Ready)
+        wait(200) // Let the image resize animation happen.
+        mouseClick(root, 738, 18, Qt.LeftButton)
+        compare(testAlbum.signalSpySaveItem.count, 1)
+
+        testAlbum.destroy();
+    }
+
+    function test_userCaption() {
+        var testAlbum = createTemporaryObject(album, root);
+        testAlbum.open();
+
+        // Check that caption will be visible for the first item with
+        // showCaption = true.
+        testAlbum.showCaption = true
+        testAlbum.content.currentIndex = 0;
+
+        // Make sure the item delegate is ready.
+        tryCompare(testAlbum.content.currentItem.children[0], "status", Image.Ready)
+        wait(200) // Let the image resize animation happen.
+
+        mouseClick(root, 702, 18, Qt.LeftButton)
+        compare(testAlbum.footer.visible, false)
+        mouseClick(root, 702, 18, Qt.LeftButton)
+        compare(testAlbum.footer.visible, true)
 
         testAlbum.destroy();
     }
@@ -150,16 +184,22 @@ TestCase {
         id: album
         AlbumMaximizeComponent {
             id: albumComponent
-            property alias signalSpy: spy
+            property alias signalSpyItemRightClick: spyItemRightClick
+            property alias signalSpySaveItem: spySaveItem
 
             parent: root
             initialIndex: 0
             model: root.model
 
             SignalSpy {
-                id: spy
+                id: spyItemRightClick
                 target: albumComponent
                 signalName: "itemRightClicked"
+            }
+            SignalSpy {
+                id: spySaveItem
+                target: albumComponent
+                signalName: "saveItem"
             }
         }
     }
