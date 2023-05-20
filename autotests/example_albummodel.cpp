@@ -8,28 +8,41 @@
 ExampleAlbumModel::ExampleAlbumModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    // Create some dummy data.
-    m_items.append(Item {
-        QStringLiteral("https://kde.org/stuff/clipart/logo/kde-logo-white-blue-rounded-source.svg"),
-        QStringLiteral("https://kde.org/stuff/clipart/logo/kde-logo-white-gray-rounded-source.svg"),
-        Type::Image,
-        QStringLiteral("A test image"),
-    });
-    m_items.append(Item {
-        QStringLiteral("https://cdn.kde.org/promo/Announcements/Plasma/5.27/discover_hl_720p.webm"),
-        QStringLiteral("https://kde.org/stuff/clipart/logo/kde-logo-white-gray-rounded-source.svg"),
-        Type::Video,
-        QStringLiteral("A test video"),
-    });
-    m_items.append(Item {
-        QStringLiteral("https://kde.org/stuff/clipart/logo/kde-logo-white-blue-rounded-source.svg"),
-        QStringLiteral("https://kde.org/stuff/clipart/logo/kde-logo-white-gray-rounded-source.svg"),
-        Type::Image,
-        QString(),
-    });
 }
 
 ExampleAlbumModel::~ExampleAlbumModel() = default;
+
+QString ExampleAlbumModel::testImage() const
+{
+    return m_testImage;
+}
+
+void ExampleAlbumModel::setTestImage(QString image)
+{
+    if (image == m_testImage) {
+        return;
+    }
+    m_testImage = image;
+    testImageChanged();
+
+    resetModel();
+}
+
+QString ExampleAlbumModel::testVideo() const
+{
+    return m_testVideo;
+}
+
+void ExampleAlbumModel::setTestVideo(QString video)
+{
+    if (video == m_testVideo) {
+        return;
+    }
+    m_testVideo = video;
+    testVideoChanged();
+
+    resetModel();
+}
 
 QVariant ExampleAlbumModel::data(const QModelIndex &index, int role) const
 {
@@ -72,4 +85,32 @@ QHash<int, QByteArray> ExampleAlbumModel::roleNames() const
         {TypeRole, QByteArrayLiteral("type")},
         {CaptionRole, QByteArrayLiteral("caption")},
     };
+}
+
+void ExampleAlbumModel::resetModel()
+{
+    beginResetModel();
+    m_items.clear();
+
+    // Create dummy data using latest image and video sources.
+    m_items.append(Item {
+        m_testImage,
+        m_testImage,
+        Type::Image,
+        QStringLiteral("A test image"),
+    });
+    m_items.append(Item {
+        m_testVideo,
+        m_testImage,
+        Type::Video,
+        QStringLiteral("A test video"),
+    });
+    m_items.append(Item {
+        m_testImage,
+        m_testImage,
+        Type::Image,
+        QString(),
+    });
+
+    endResetModel();
 }

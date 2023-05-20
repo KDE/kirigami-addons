@@ -22,6 +22,22 @@ class ExampleAlbumModel : public QAbstractListModel
 {
     Q_OBJECT
 
+    /**
+     * @brief The source for any images in the model.
+     *
+     * @note This is just an easy interface to allow the data to be set from QML for
+     *       writing tests. In an actual implementation the data can come from anywhere.
+     */
+    Q_PROPERTY(QString testImage READ testImage WRITE setTestImage NOTIFY testImageChanged)
+
+    /**
+     * @brief The source for any videos in the model.
+     *
+     * @note This is just an easy interface to allow the data to be set from QML for
+     *       writing tests. In an actual implementation the data can come from anywhere.
+     */
+    Q_PROPERTY(QString testVideo READ testVideo WRITE setTestVideo NOTIFY testVideoChanged)
+
 public:
     /**
      * @brief Defines the model roles.
@@ -73,6 +89,12 @@ public:
     ExampleAlbumModel(QObject *parent = nullptr);
     ~ExampleAlbumModel() override;
 
+    QString testImage() const;
+    void setTestImage(QString image);
+
+    QString testVideo() const;
+    void setTestVideo(QString image);
+
     /**
      * @brief Get the given role value at the given index.
      *
@@ -94,6 +116,15 @@ public:
      */
     QHash<int, QByteArray> roleNames() const override;
 
+Q_SIGNALS:
+    void testImageChanged();
+    void testVideoChanged();
+
 private:
     QList<Item> m_items;
+
+    QString m_testImage;
+    QString m_testVideo;
+
+    void resetModel();
 };

@@ -1,6 +1,8 @@
 # SPDX-FileCopyrightText: 2021 Arjen Hiemstra <ahiemstra@heimr.nl>
 # SPDX-License-Identifier: BSD-2-Clause
 
+add_definitions(-DDATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data")
+
 if(NOT Qt${QT_MAJOR_VERSION}QuickTest_FOUND)
     message(STATUS "QtQuickTest not found, autotests will not be built.")
     return()

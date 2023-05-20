@@ -29,6 +29,8 @@ public Q_SLOTS:
         engine->rootContext()->setContextObject(new KLocalizedContext(engine));
 
         qmlRegisterType<ExampleAlbumModel>("test.artefacts", 1, 0, "ExampleAlbumModel");
+
+        engine->rootContext()->setContextProperty(QLatin1String("dataDir"), QVariant(QLatin1String(DATA_DIR)));
     }
 };
 
