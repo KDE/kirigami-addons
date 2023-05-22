@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-21 00:44+0000\n"
-"PO-Revision-Date: 2023-04-14 10:31+0300\n"
+"PO-Revision-Date: 2023-05-21 20:32+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -46,13 +46,13 @@ msgstr "Sağa Döndür"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
-msgstr ""
+msgstr "Alt yazıyı göster"
 
 #: components/AlbumMaximizeComponent.qml:111
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
-msgstr ""
+msgstr "Alt yazıyı gizle"
 
 #: components/AlbumMaximizeComponent.qml:117
 #, kde-format
