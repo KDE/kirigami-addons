@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-15 00:47+0000\n"
-"PO-Revision-Date: 2023-04-16 14:14+0200\n"
+"POT-Creation-Date: 2023-05-21 00:44+0000\n"
+"PO-Revision-Date: 2023-05-23 02:46+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -19,44 +19,56 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.07.70\n"
+"X-Generator: Lokalize 23.07.70\n"
 
 #: components/AbstractMaximizeComponent.qml:126
 #, kde-format
 msgid "Close"
 msgstr "Schließen"
 
-#: components/AlbumMaximizeComponent.qml:84
+#: components/AlbumMaximizeComponent.qml:89
 #, kde-format
 msgid "Zoom in"
 msgstr "Vergrößern"
 
-#: components/AlbumMaximizeComponent.qml:89
+#: components/AlbumMaximizeComponent.qml:94
 #, kde-format
 msgid "Zoom out"
 msgstr "Verkleinern"
 
-#: components/AlbumMaximizeComponent.qml:95
+#: components/AlbumMaximizeComponent.qml:100
 #, kde-format
 msgid "Rotate left"
 msgstr "Nach links drehen"
 
-#: components/AlbumMaximizeComponent.qml:101
+#: components/AlbumMaximizeComponent.qml:106
 #, kde-format
 msgid "Rotate right"
 msgstr "Nach rechts drehen"
 
-#: components/AlbumMaximizeComponent.qml:106
+#: components/AlbumMaximizeComponent.qml:111
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "Show caption"
+msgstr "Beschriftung anzeigen"
+
+#: components/AlbumMaximizeComponent.qml:111
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "Hide caption"
+msgstr "Beschriftung ausblenden"
+
+#: components/AlbumMaximizeComponent.qml:117
 #, kde-format
 msgid "Save as"
 msgstr "Speichern unter"
 
-#: components/AlbumMaximizeComponent.qml:161
+#: components/AlbumMaximizeComponent.qml:172
 #, kde-format
 msgid "Previous image"
 msgstr "Vorheriges Bild"
 
-#: components/AlbumMaximizeComponent.qml:175
+#: components/AlbumMaximizeComponent.qml:186
 #, kde-format
 msgid "Next image"
 msgstr "Nächstes Bild"

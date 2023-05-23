@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-15 00:47+0000\n"
-"PO-Revision-Date: 2023-04-14 09:48+0200\n"
+"POT-Creation-Date: 2023-05-21 00:44+0000\n"
+"PO-Revision-Date: 2023-05-21 16:32+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,44 +15,56 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.1\n"
 
 #: components/AbstractMaximizeComponent.qml:126
 #, kde-format
 msgid "Close"
 msgstr "Sluiten"
 
-#: components/AlbumMaximizeComponent.qml:84
+#: components/AlbumMaximizeComponent.qml:89
 #, kde-format
 msgid "Zoom in"
 msgstr "Inzoomen"
 
-#: components/AlbumMaximizeComponent.qml:89
+#: components/AlbumMaximizeComponent.qml:94
 #, kde-format
 msgid "Zoom out"
 msgstr "Uitzoomen"
 
-#: components/AlbumMaximizeComponent.qml:95
+#: components/AlbumMaximizeComponent.qml:100
 #, kde-format
 msgid "Rotate left"
 msgstr "Linksom draaien"
 
-#: components/AlbumMaximizeComponent.qml:101
+#: components/AlbumMaximizeComponent.qml:106
 #, kde-format
 msgid "Rotate right"
 msgstr "Rechtsom draaien"
 
-#: components/AlbumMaximizeComponent.qml:106
+#: components/AlbumMaximizeComponent.qml:111
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "Show caption"
+msgstr "Opschrift tonen"
+
+#: components/AlbumMaximizeComponent.qml:111
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "Hide caption"
+msgstr "Opschrift verbergen"
+
+#: components/AlbumMaximizeComponent.qml:117
 #, kde-format
 msgid "Save as"
 msgstr "Opslaan als"
 
-#: components/AlbumMaximizeComponent.qml:161
+#: components/AlbumMaximizeComponent.qml:172
 #, kde-format
 msgid "Previous image"
 msgstr "Vorige afbeelding"
 
-#: components/AlbumMaximizeComponent.qml:175
+#: components/AlbumMaximizeComponent.qml:186
 #, kde-format
 msgid "Next image"
 msgstr "Volgende afbeelding"

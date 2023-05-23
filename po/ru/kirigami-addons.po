@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-15 00:47+0000\n"
+"POT-Creation-Date: 2023-05-21 00:44+0000\n"
 "PO-Revision-Date: 2021-08-11 15:18+0300\n"
 "Last-Translator: Дронова Юлия <juliette.tux@gmail.com>\n"
 "Language-Team: RU\n"
@@ -23,38 +23,50 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
-#: components/AlbumMaximizeComponent.qml:84
+#: components/AlbumMaximizeComponent.qml:89
 #, kde-format
 msgid "Zoom in"
 msgstr ""
 
-#: components/AlbumMaximizeComponent.qml:89
+#: components/AlbumMaximizeComponent.qml:94
 #, kde-format
 msgid "Zoom out"
 msgstr ""
 
-#: components/AlbumMaximizeComponent.qml:95
+#: components/AlbumMaximizeComponent.qml:100
 #, kde-format
 msgid "Rotate left"
 msgstr ""
 
-#: components/AlbumMaximizeComponent.qml:101
+#: components/AlbumMaximizeComponent.qml:106
 #, kde-format
 msgid "Rotate right"
 msgstr ""
 
-#: components/AlbumMaximizeComponent.qml:106
+#: components/AlbumMaximizeComponent.qml:111
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "Show caption"
+msgstr ""
+
+#: components/AlbumMaximizeComponent.qml:111
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "Hide caption"
+msgstr ""
+
+#: components/AlbumMaximizeComponent.qml:117
 #, kde-format
 msgid "Save as"
 msgstr ""
 
-#: components/AlbumMaximizeComponent.qml:161
+#: components/AlbumMaximizeComponent.qml:172
 #, fuzzy, kde-format
 #| msgid "Previous"
 msgid "Previous image"
 msgstr "Назад"
 
-#: components/AlbumMaximizeComponent.qml:175
+#: components/AlbumMaximizeComponent.qml:186
 #, kde-format
 msgid "Next image"
 msgstr ""
