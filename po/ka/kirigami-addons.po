@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-21 00:44+0000\n"
-"PO-Revision-Date: 2023-04-15 05:26+0200\n"
+"PO-Revision-Date: 2023-05-23 05:32+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.1\n"
 
 #: components/AbstractMaximizeComponent.qml:126
 #, kde-format
@@ -47,13 +47,13 @@ msgstr "მარჯვნივ მოტრიალება"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
-msgstr ""
+msgstr "წარწერის ჩვენება"
 
 #: components/AlbumMaximizeComponent.qml:111
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
-msgstr ""
+msgstr "წარწერის დამალვა"
 
 #: components/AlbumMaximizeComponent.qml:117
 #, kde-format
