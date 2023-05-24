@@ -62,4 +62,18 @@ QtObject {
      * Typically set to the filename if no caption is available.
      */
     property string caption: ""
+
+    /**
+     * @brief The height of the source image.
+     *
+     * Used to calculate the aspect ratio of the image.
+     */
+    property real sourceHeight: 0
+
+    /**
+     * @brief The width of the source image.
+     *
+     * Used to calculate the aspect ratio of the image.
+     */
+    property real sourceWidth: 0
 }

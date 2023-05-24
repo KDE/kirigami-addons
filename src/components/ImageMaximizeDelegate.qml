@@ -17,6 +17,20 @@ Item {
     required property string source
 
     /**
+     * @brief The size of the source image.
+     *
+     * This is used to calculate the maximum size of the content and temporary image.
+     */
+    required property real sourceWidth
+
+    /**
+     * @brief The size of the source image.
+     *
+     * This is used to calculate the maximum size of the content and temporary image.
+     */
+    required property real sourceHeight
+
+    /**
      * @brief Source for the temporary content.
      *
      * Typically used when downloading the image to show a thumbnail or other
@@ -78,8 +92,20 @@ Item {
     AnimatedImage {
         id: image
 
-        property var rotationInsensitiveWidth: Math.min(sourceSize.width, root.width - root.padding * 2)
-        property var rotationInsensitiveHeight: Math.min(sourceSize.height, root.height - root.padding * 2)
+        property var rotationInsensitiveWidth: {
+            if (sourceWidth > 0) {
+                return Math.min(root.sourceWidth, root.width - root.padding * 2);
+            } else {
+                return Math.min(sourceSize.width, root.width - root.padding * 2);
+            }
+        }
+        property var rotationInsensitiveHeight: {
+            if (sourceHeight > 0) {
+                return Math.min(root.sourceHeight, root.height - root.padding * 2)
+            } else {
+                return Math.min(sourceSize.height, root.height - root.padding * 2)
+            }
+        }
 
         anchors.centerIn: parent
 
@@ -101,7 +127,8 @@ Item {
             id: tempImage
             anchors.centerIn: parent
             visible: source && status === Image.Ready && image.status !== Image.Ready
-
+            width:  root.sourceWidth > 0 || image.sourceSize.width > 0 ? root.sourceWidth : tempImage.sourceSize.width
+            height: root.sourceHeight > 0 || image.sourceSize.height > 0 ? root.sourceHeight : tempImage.sourceSize.height
             source: root.tempSource
         }
 

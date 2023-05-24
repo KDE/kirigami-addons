@@ -26,6 +26,20 @@ Item {
     required property string tempSource
 
     /**
+     * @brief The size of the source image.
+     *
+     * This is used to calculate the maximum size of the content and temporary image.
+     */
+    required property real sourceWidth
+
+    /**
+     * @brief The size of the source image.
+     *
+     * This is used to calculate the maximum size of the content and temporary image.
+     */
+    required property real sourceHeight
+
+    /**
      * @brief The caption for the item.
      *
      * Typically set to the filename if no caption is available.
@@ -73,14 +87,18 @@ Item {
 
         anchors.centerIn: parent
         width: {
-            if (metaData.resolution && metaData.resolution.width) {
+            if (root.sourceWidth > 0 ) {
+                return Math.min(root.sourceWidth, root.width - root.padding * 2)
+            } else if (metaData.resolution && metaData.resolution.width) {
                 return Math.min(metaData.resolution.width, root.width - root.padding * 2)
             } else {
                 return 0
             }
         }
         height: {
-            if (metaData.resolution && metaData.resolution.height) {
+            if (root.sourceHeight > 0 ) {
+                return Math.min(root.sourceHeight, root.height - root.padding * 2)
+            } else if (metaData.resolution && metaData.resolution.height) {
                 return Math.min(metaData.resolution.height, root.height - root.padding * 2)
             } else {
                 return 0
@@ -103,8 +121,8 @@ Item {
         Image {
             id: tempImage
             anchors.centerIn: parent
-            width: videoItem.width
-            height: videoItem.height
+            width: root.sourceWidth > 0 || (videoItem.metaData.resolution && videoItem.metaData.resolution.width > 0) ? root.sourceWidth : tempSource.sourceSize.width
+            height: root.sourceHeight > 0 || (videoItem.metaData.resolution && videoItem.metaData.resolution.height > 0) ? root.sourceHeight : tempSource.sourceSize.height
             visible: source && status === Image.Ready && videoItem.status === MediaPlayer.Loading
 
             source: root.tempSource
