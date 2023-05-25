@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-21 00:44+0000\n"
+"POT-Creation-Date: 2023-05-25 00:45+0000\n"
 "PO-Revision-Date: 2023-04-20 11:36+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -69,7 +69,7 @@ msgstr "Edellinen kuva"
 msgid "Next image"
 msgstr "Seuraava kuva"
 
-#: components/VideoMaximizeDelegate.qml:163
+#: components/VideoMaximizeDelegate.qml:181
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
