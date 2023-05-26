@@ -82,29 +82,28 @@ TreeView.AbstractTreeItem {
 
     contentItem: RowLayout {
         id: layout
-        spacing: LayoutMirroring.enabled ? listItem.rightPadding : listItem.leftPadding
+        spacing: Kirigami.Units.smallSpacing
         Icon {
             id: iconItem
+
+            property int size: visible ? Units.iconSizes.smallMedium : 0
+
             source: {
-                if (!listItem.icon) {
-                    return undefined
+                if (listItem.icon.name.length > 0) {
+                    return listItem.icon.name;
                 }
-                if (listItem.icon.hasOwnProperty) {
-                    if (listItem.icon.hasOwnProperty("name") && listItem.icon.name !== "")
-                        return listItem.icon.name;
-                    if (listItem.icon.hasOwnProperty("source"))
-                        return listItem.icon.source;
-                }
-                return listItem.icon;
+
+                return listItem.icon.source;
             }
-            property int size: Units.iconSizes.smallMedium
+            selected: (listItem.highlighted || listItem.checked || (listItem.pressed && listItem.supportsMouseEvents))
+            visible: listItem.icon.name.length > 0 || listItem.icon.source.length > 0
+
             Layout.minimumHeight: size
             Layout.maximumHeight: size
             Layout.minimumWidth: size
-            selected: (listItem.highlighted || listItem.checked || (listItem.pressed && listItem.supportsMouseEvents))
-            opacity: 1
-            visible: source != undefined
+            Layout.maximumWidth: size
         }
+
         ColumnLayout {
             spacing: 0
             Layout.fillWidth: true
