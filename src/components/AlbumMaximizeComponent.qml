@@ -72,6 +72,15 @@ AbstractMaximizeComponent {
     property bool hideCaption: false
 
     /**
+     * @brief The internal ListView item.
+     *
+     * Available for easy access to the ListView properties so that custom leading
+     * items can access properties in the same way as the actions here,
+     * i.e, viewItem.currentItem.property.
+     */
+    property alias viewItem: view
+
+    /**
      * @brief Emitted when the content image is right clicked.
      */
     signal itemRightClicked()
