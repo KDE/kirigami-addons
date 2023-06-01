@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-25 00:45+0000\n"
-"PO-Revision-Date: 2023-02-28 10:40-0300\n"
+"PO-Revision-Date: 2023-05-31 14:36-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
-"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,61 +21,60 @@ msgstr ""
 #: components/AbstractMaximizeComponent.qml:126
 #, kde-format
 msgid "Close"
-msgstr ""
+msgstr "Fechar"
 
 #: components/AlbumMaximizeComponent.qml:89
 #, kde-format
 msgid "Zoom in"
-msgstr ""
+msgstr "Ampliar"
 
 #: components/AlbumMaximizeComponent.qml:94
 #, kde-format
 msgid "Zoom out"
-msgstr ""
+msgstr "Reduzir"
 
 #: components/AlbumMaximizeComponent.qml:100
 #, kde-format
 msgid "Rotate left"
-msgstr ""
+msgstr "Girar à esquerda"
 
 #: components/AlbumMaximizeComponent.qml:106
 #, kde-format
 msgid "Rotate right"
-msgstr ""
+msgstr "Girar à direita"
 
 #: components/AlbumMaximizeComponent.qml:111
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
-msgstr ""
+msgstr "Mostrar legenda"
 
 #: components/AlbumMaximizeComponent.qml:111
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
-msgstr ""
+msgstr "Ocultar legenda"
 
 #: components/AlbumMaximizeComponent.qml:117
 #, kde-format
 msgid "Save as"
-msgstr ""
+msgstr "Salvar como"
 
 #: components/AlbumMaximizeComponent.qml:172
-#, fuzzy, kde-format
-#| msgid "Previous"
+#, kde-format
 msgid "Previous image"
-msgstr "Anterior"
+msgstr "Imagem anterior"
 
 #: components/AlbumMaximizeComponent.qml:186
 #, kde-format
 msgid "Next image"
-msgstr ""
+msgstr "Próxima imagem"
 
 #: components/VideoMaximizeDelegate.qml:181
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
-msgstr ""
+msgstr "Volume"
 
 #: dateandtime/DatePicker.qml:141
 #, kde-format
