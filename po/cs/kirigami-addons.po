@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-25 00:45+0000\n"
-"PO-Revision-Date: 2023-04-14 21:56+0200\n"
+"PO-Revision-Date: 2023-05-31 09:50+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.1\n"
 
 #: components/AbstractMaximizeComponent.qml:126
 #, kde-format
@@ -46,13 +46,13 @@ msgstr "Otočit doprava"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
-msgstr ""
+msgstr "Zobrazit titulek"
 
 #: components/AlbumMaximizeComponent.qml:111
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
-msgstr ""
+msgstr "Skrýt titulek"
 
 #: components/AlbumMaximizeComponent.qml:117
 #, kde-format
