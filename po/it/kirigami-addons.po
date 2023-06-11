@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-25 00:45+0000\n"
-"PO-Revision-Date: 2023-04-16 09:25+0200\n"
+"PO-Revision-Date: 2023-06-02 08:40+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.1\n"
 
 #: components/AbstractMaximizeComponent.qml:126
 #, kde-format
@@ -46,13 +46,13 @@ msgstr "Ruota a destra"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
-msgstr ""
+msgstr "Mostra didascalia"
 
 #: components/AlbumMaximizeComponent.qml:111
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
-msgstr ""
+msgstr "Nascondi didascalia"
 
 #: components/AlbumMaximizeComponent.qml:117
 #, kde-format
