@@ -115,6 +115,11 @@ AbstractFormDelegate {
     }
 
     focusPolicy: Qt.NoFocus // supplied by text field
+    onActiveFocusChanged: { // propagate focus to the text field
+        if (activeFocus) {
+            textField.forceActiveFocus();
+        }
+    }
 
     onClicked: textField.forceActiveFocus()
     background: Item {}
