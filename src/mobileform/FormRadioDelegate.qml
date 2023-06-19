@@ -13,33 +13,62 @@ import org.kde.kirigami 2.19 as Kirigami
 import "private" as Private
 
 /**
- * Form delegate that corresponds to a radio button.
+ * @brief A Form delegate that corresponds to a radio button.
+ *
+ * This component is used for creating multiple on/off toggles for the same
+ * setting. In other words, by grouping multiple radio buttons under the same
+ * parent, only one of the radio buttons should be checkable and applied to a
+ * setting.
+ *
+ * Use the inherited QtQuick.Controls.AbstractButton.text property to define
+ * the main text of the radio button.
+ *
+ * If you need multiple values for the same setting, use a
+ * FormComboBoxDelegate instead.
+ *
+ * If you need a purely on/off toggle for a single setting, use a
+ * FormSwitchDelegate instead.
+ *
+ * If you need an on/off/tristate toggle, use a FormCheckDelegate instead.
+ *
+ * @since org.kde.kirigamiaddons.labs.mobileform 0.1
+ *
+ * @see QtQuick.Controls.AbstractButton
+ * @see FormSwitchDelegate
+ * @see FormCheckDelegate
+ * @see FormComboBoxDelegate
+ *
+ * @inherit QtQuick.Controls.RadioDelegate
  */
 T.RadioDelegate {
     id: root
 
     /**
-     * Label that appears under the main text, that provides additional information about the delegate.
+     * @brief A label containing secondary text that appears under the
+     * inherited text property.
+     *
+     * This provides additional information shown in a faint gray color.
      */
     property string description: ""
     
     /**
-     * This property holds an item that will be displayed before the delegate's contents.
+     * @brief This property holds an item that will be displayed to the left of the delegate's contents.
      */
     property var leading: null
     
     /**
-     * This property holds the padding after the leading item.
+     * @brief This property holds the padding after the leading item.
      */
     property real leadingPadding: Kirigami.Units.smallSpacing
     
     /**
-     * This property holds an item that will be displayed after the delegate's contents.
+     * @brief This property holds an item that will be displayed after the
+     * delegate's contents.
      */
     property var trailing: null
     
     /**
-     * This property holds the padding before the trailing item.
+     * @brief This property holds the padding before the trailing item.
      */
     property real trailingPadding: Kirigami.Units.smallSpacing
     

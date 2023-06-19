@@ -10,19 +10,29 @@ import QtQuick.Layouts 1.15
 import org.kde.kirigami 2.19 as Kirigami
 
 /**
- * A header for a form card.
+ * @brief A header for a FormCard.
+ *
+ * The FormCardHeader consists of a label with bold text, an optional subtitle,
+ * and an additional separator to make it visually distinguishable as a
+ * FormCard title/header.
+ *
+ * @since org.kde.kirigamiaddons.labs.mobileform 0.1
  */
 ColumnLayout {
     id: root
     spacing: 0
     
     /**
-     * This property holds the header title.
+     * @brief This property holds the header title.
+     *
+     * The title is displayed in bold.
      */
     property string title: ""
     
     /**
-     * This property holds the header subtitle.
+     * @brief This property holds the header subtitle.
+     *
+     * The subtitle is displayed in a faint gray color.
      */
     property string subtitle: ""
     

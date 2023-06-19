@@ -10,10 +10,18 @@ import QtQuick.Layouts 1.15
 import org.kde.kirigami 2.12 as Kirigami
 
 /**
- * Base item for delegates in a form card.
+ * @brief A base item for delegates to be used in a FormCard.
  * 
+ * This component can be used to create your own custom FormCard delegates.
+ *
  * By default, it includes a background with hover and click feedback.
  * Set the `background` property to Item {} to remove it.
+ *
+ * @since org.kde.kirigamiaddons.labs.mobileform 0.1
+ *
+ * @see FormDelegateBackground
+ *
+ * @inherits QtQuick.Controls.ItemDelegate
  */
 T.ItemDelegate {
     id: root

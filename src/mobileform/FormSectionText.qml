@@ -9,6 +9,21 @@ import QtQuick.Layouts 1.15
 
 import org.kde.kirigami 2.19 as Kirigami
 
+/**
+ * @brief A standard delegate label.
+ *
+ * This is a simple label containing secondary text that was modified to fit
+ * the role of Form delegate.
+ *
+ * If you need a primary text label with optional secondary text, use
+ * FormTextDelegate instead.
+ *
+ * @since org.kde.kirigamiaddons.labs.mobileform 0.1
+ *
+ * @see FormTextDelegate
+ *
+ * @inherits QtQuick.Controls.Label
+ */
 Label {
     color: Kirigami.Theme.disabledTextColor
     wrapMode: Label.Wrap

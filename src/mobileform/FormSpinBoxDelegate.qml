@@ -9,10 +9,12 @@ import org.kde.kirigami 2.19 as Kirigami
 import 'private' as P
 
 /**
- * Form delegate that corresponds to a spinbox.
+ * @brief A Form delegate that corresponds to a spinbox.
  *
- * Use this component for when you want the user to select a number.
+ * This component is used to select a number. By default, the spinbox will be
+ * initialized with a minimum of 0 and a maximum of 99.
  *
+ * Example code:
  * ```qml
  * MobileForm.FormCard {
  *     contentItem: ColumnLayout {
@@ -28,60 +30,69 @@ import 'private' as P
  *     }
  * }
  * ```
+ *
+ * @since org.kde.kirigamiaddons.labs.mobileform 0.1
+ *
+ * @inherit AbstractFormDelegate
  */
 AbstractFormDelegate {
     id: root
 
     /**
-     * This propery holds the label that appears above the spinbox.
+     * @brief A label that appears above the spinbox.
+     *
      */
     required property string label
 
     /**
-     * This property holds the value of the internal spinbox.
+     * @brief This property holds the `value` of the internal spinbox.
      */
     property alias value: spinbox.value
 
     /**
-     * This property holds the from of the internal spinbox.
+     * @brief This property holds the `from` of the internal spinbox.
      */
     property alias from: spinbox.from
 
     /**
-     * This property holds the to of the internal spinbox.
+     * @brief This property holds the `to` of the internal spinbox.
      */
     property alias to: spinbox.to
 
     /**
-     * This property holds the stepSize of the internal spinbox.
+     * @brief This property holds the `stepSize` of the internal spinbox.
      */
     property alias stepSize: spinbox.stepSize
 
     /**
-     * This property holds the textFromValue of the internal spinbox.
+     * @brief This property holds the `textFromValue` of the internal spinbox.
      */
     property alias textFromValue: spinbox.textFromValue
 
     /**
-     * This property holds the valueFromText of the internal spinbox.
+     * @brief This property holds the `valueFromText` of the internal spinbox.
      */
     property alias valueFromText: spinbox.valueFromText
 
     /**
-     * This property holds the displayText of the internal spinbox.
+     * @brief This property holds the `displayText` of the internal spinbox.
      */
     property alias displayText: spinbox.displayText
 
     /**
-     * This property holds the current status of the text field.
+     * @brief This property holds the current type of status displayed in
+     * the text field.
      *
-     * Depending on the status of the textField the statusMessage property will look different
+     * Depending on the status of the text field, the statusMessage property
+     * will look different
      *
      * Accepted values:
      * - Kirigami.MessageType.Information
      * - Kirigami.MessageType.Positive
      * - Kirigami.MessageType.Warning
      * - Kirigami.MessageType.Error
+     *
+     * @see Kirigami.MessageType
      */
     property var status: Kirigami.MessageType.Information
 

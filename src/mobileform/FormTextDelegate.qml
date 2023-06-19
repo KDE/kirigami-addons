@@ -12,18 +12,35 @@ import org.kde.kirigami 2.19 as Kirigami
 import "private" as Private
 
 /**
- * Form delegate that corresponds to a text label.
+ * @brief A Form delegate that corresponds to a text label and a description.
+ *
+ * This component is used to create primary text with the inherited
+ * QtQuick.Controls.AbstractButton.text property, with an optional
+ * ::description that serves as secondary text/subtitle.
+ *
+ * If you need just a secondary text component, use a FormSectionText
+ * instead.
+ *
+ * @since org.kde.kirigamiaddons.labs.mobileform 0.1
+ *
+ * @see FormSectionText
+ * @see QtQuick.Controls.AbstractButton
+ *
+ * @inherits AbstractFormDelegate
  */
 AbstractFormDelegate {
     id: root
 
     /**
-     * Label that appears under the text, providing the value of the label.
+     * @brief A label containing secondary text that appears under the
+     * inherited text property.
+     *
+     * This provides additional information shown in a faint gray color.
      */
     property string description: ""
 
     /**
-     * This property holds allows for access to the description label item.
+     * @brief This property allows for access to the description label item.
      */
     property alias descriptionItem: internalDescriptionItem
     

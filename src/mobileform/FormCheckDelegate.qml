@@ -13,38 +13,65 @@ import org.kde.kirigami 2.19 as Kirigami
 import "private" as Private
 
 /**
- * Form delegate that corresponds to a checkbox.
+ * @brief A Form delegate that corresponds to a checkbox.
+ *
+ * This component is used for individual settings that can be toggled on, off, or tristate, typically in conjunction with multiple other checkboxes.
+ *
+ * Use the inherited QtQuick.Controls.AbstractButton.text property to define the main text of the checkbox.
+ *
+ * If you need a purely on/off toggle for a single setting, consider using a FormSwitchDelegate.
+ *
+ * If you need multiple toggles for the same setting, use a FormRadioDelegate
+ * instead.
+ *
+ * If you need multiple values for the same setting, use a
+ * FormComboBoxDelegate instead.
+ *
+ * @since org.kde.kirigamiaddons.labs.mobileform 0.1
+ *
+ * @see QtQuick.Controls.AbstractButton
+ * @see FormSwitchDelegate
+ * @see FormComboBoxDelegate
+ * @see FormRadioDelegate
+ *
+ * @inherits QtQuick.Controls.CheckDelegate
  */
 T.CheckDelegate {
     id: root
 
     /**
-     * Label that appears under the text, providing the value of the label.
+     * @brief A label containing secondary text that appears under the
+     * inherited text property.
+     *
+     * This provides additional information shown in a faint gray color.
      */
     property string description: ""
 
     /**
-     * This property holds an item that will be displayed before the delegate's contents.
+     * @brief This property holds an item that will be displayed to the left
+     * of the delegate's contents.
      */
     property var leading: null
 
     /**
-     * This property holds the padding after the leading item.
+     * @brief This property holds the padding after the leading item.
      */
     property real leadingPadding: Kirigami.Units.smallSpacing
 
     /**
-     * This property holds an item that will be displayed after the delegate's contents.
+     * @brief This property holds an item that will be displayed to the right
+     * of the delegate's contents.
      */
     property var trailing: null
 
     /**
-     * This property holds the padding before the trailing item.
+     * @brief This property holds the padding before the trailing item.
      */
     property real trailingPadding: Kirigami.Units.smallSpacing
 
     /**
-     * This property allows for access to the description label item.
+     * @brief This property allows to override the internal description
+     * item (a QtQuick.Controls.Label) with a custom component.
      */
     property alias descriptionItem: internalDescriptionItem
 

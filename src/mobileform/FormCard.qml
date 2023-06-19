@@ -12,24 +12,64 @@ import org.kde.kirigami 2.19 as Kirigami
 import "private" as Private
 
 /**
- * A single card that is contained in a form.
+ * @brief A single card that follows a form style.
  *
- * The height will take the implicit height of the contentItem, while the width
- * is expected to be given by the parent.
+ * This is the entrypoint component for MobileForm.
+ *
+ * A FormCard consists of a container that can be used to create your
+ * own Settings pages. It has a different color than the background.
+ *
+ * Each FormCard can contain one or more Form delegates in its ::contentItem.
+ * To add more than one Form delegate to a FormCard, use a
+ * QtQuick.Layouts.ColumnLayout to group them.
+ *
+ * Multiple FormCards can be grouped with a QtQuick.Layouts.ColumnLayout to
+ * represent different Settings sections.
+ *
+ * Each section is expected to contain a FormCardHeader as the first
+ * delegate, which serves the role of a section title.
+ *
+ * The height of the FormCard matches the implicit height of the
+ * ::contentItem and does not need to be set, while the width is expected
+ * to be given by the parent, for example, via a Layout.fillWidth.
+ *
+ * @note Do not add your delegates as direct children of the FormCard.
+ *
+ * @since org.kde.kirigamiaddons.labs.mobileform 0.1
+ *
+ * @inherits QtQuick.Item
  */
 Item {
     id: root
 
     /**
-     * The contents of the form card.
+     * @brief The contents of the Form card.
+     *
+     * This is where you should add new Form delegates.
+     *
+     * A QtQuick.Layouts.ColumnLayout may be set as the contentItem's direct
+     * child so that multiple delegates can be added to a FormCard.
+     * Typically, the first delegate would then be a FormCardHeader.
      */
     property Item contentItem: Item {}
 
     /**
-     * The maximum width of the card.
+     * @brief The maximum width of the card.
+     *
+     * This can be set to a specific value to force its delegates to wrap
+     * instead of using the entire width of the parent.
+     *
+     * default: `Kirigami.Units.gridUnit * 30`
+     *
+     * @see cardWidthRestricted
      */
     property real maximumWidth: Kirigami.Units.gridUnit * 30
 
+    /**
+     * @brief The padding used around the content edges.
+     *
+     * default: `0`
+     */
     property real padding: 0
     property real verticalPadding: padding
     property real horizontalPadding: padding

@@ -11,13 +11,17 @@ import org.kde.kirigami 2.20 as Kirigami
 import "private" as Private
 
 /**
- * @brief An AboutPage that displays the about data using the form components
+ * @brief An AboutPage that displays the about data using Form components.
  *
- * Allows to show the copyright notice of the application
- * together with the contributors and some information of which platform it's
- * running on.
+ * This component consists of an internationalized "About" page with the
+ * metadata of your program.
+ *
+ * It allows to show the copyright notice of the application together with
+ * the contributors and some information of which platform it's running on.
  *
  * @since org.kde.kirigamiaddons.labs.mobileform 0.1
+ *
+ * @inherits Kirigami.ScrollablePage
  */
 
 Kirigami.ScrollablePage {
@@ -25,6 +29,8 @@ Kirigami.ScrollablePage {
 
     /**
      * @brief This property holds an object with the same shape as KAboutData.
+     *
+     * Set this property to either a KAboutData instance exposed from C++, or directly via a JSON object.
      *
      * Example usage:
      * @code{json}
@@ -67,14 +73,15 @@ Kirigami.ScrollablePage {
     /**
      * @brief This property holds a link to a "Get Involved" page.
      *
-     * default: `"https://community.kde.org/Get_Involved" when application id stard with "org.kde.", otherwise is empty.`
+     * default: `"https://community.kde.org/Get_Involved" when the
+     * application ID starts with "org.kde.", otherwise empty.`
      */
     property url getInvolvedUrl: aboutData.desktopFileName.startsWith("org.kde.") ? "https://community.kde.org/Get_Involved" : ""
 
     /**
      * @brief This property holds a link to a "Donate" page.
      *
-     * default: `"https://www.kde.org/community/donations" when application id starts with "org.kde.", otherwise it is empty.`
+     * default: `"https://www.kde.org/community/donations" when the application ID starts with "org.kde.", otherwise empty.`
      */
     property url donateUrl: aboutData.desktopFileName.startsWith("org.kde.") ? "https://www.kde.org/community/donations" : ""
 

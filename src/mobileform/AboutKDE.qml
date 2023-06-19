@@ -8,9 +8,14 @@ import QtQuick.Layouts 1.15
 import org.kde.kirigami 2.20 as Kirigami
 
 /**
- * @brief Standard "About KDE" page using the form components.
+ * @brief An "About KDE" page using Form components.
+ *
+ * This component consists of a full, internationalized "About KDE" page
+ * that can be instantiated directly without passing any properties.
  *
  * @since org.kde.kirigamiaddons.labs.mobileform 0.1
+ *
+ * @inherits Kirigami.ScrollablePage
  */
 Kirigami.ScrollablePage {
     id: page

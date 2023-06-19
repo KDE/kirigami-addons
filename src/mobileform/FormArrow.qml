@@ -10,17 +10,41 @@ import QtQuick.Layouts 1.15
 import org.kde.kirigami 2.19 as Kirigami
 
 /**
- * Arrow UI component used in form delegates.
+ * @brief An arrow UI component used in Form delegates.
+ *
+ * This component can be used to decorate existing or custom Form delegates.
+ * It is used, for instance, as the trailing property of FormButtonDelegate.
+ *
+ * Each FormArrow instance corresponds to a single arrow that may point
+ * upwards, downwards, to the left or to the right.
+ *
+ * @since org.kde.kirigamiaddons.labs.mobileform 0.1
+ *
+ * @inherits Kirigami.Icon
  */
 
 Kirigami.Icon {
+    /**
+     * @brief The ::direction of the FormArrow.
+     */
     enum Direction {
+        /** The arrow icon will point upwards. */
         Up,
+        /** The arrow icon will point downwards. */
         Down,
+        /** The arrow icon will point to the left. */
         Left,
+        /** The arrow icon will point to the right. */
         Right
     }
     
+    /**
+     * @brief The direction the FormArrow will point towards.
+     *
+     * Set this to any ::Direction enum value.
+     *
+     * default: `FormArrow.Right`
+     */
     property int direction: Right
     
     source: {

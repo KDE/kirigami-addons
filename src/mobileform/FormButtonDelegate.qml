@@ -12,32 +12,52 @@ import org.kde.kirigami 2.19 as Kirigami
 import "private" as Private
 
 /**
- * Form delegate that corresponds to a clickable button.
+ * @brief A Form delegate that corresponds to a clickable button.
+ *
+ * Use the inherited QtQuick.Controls.AbstractButton.text property to define
+ * the main text of the button.
+ *
+ * The trailing property (right-most side of the button) includes an arrow
+ * pointing to the right by default and cannot be overridden.
+ *
+ * @since org.kde.kirigamiaddons.labs.mobileform 0.1
+ *
+ * @inherits AbstractFormDelegate
  */
 AbstractFormDelegate {
     id: root
 
     /**
-     * This property holds the secondary text that appears under the main text.
-     * This provides additional information about the delegate.
+     * @brief A label containing secondary text that appears under the
+     * inherited text property.
      *
-     * This is supposed to be a short text and user of this API should avoid to make
-     * it longer than two lines.
+     * This provides additional information shown in a faint gray color.
+     *
+     * This is supposed to be a short text and the API user should avoid
+     * making it longer than two lines.
      */
     property string description: ""
 
     /**
-     * This property holds the interal description item.
+     * @brief This property allows to override the internal description
+     * item (a QtQuick.Controls.Label) with a custom component.
      */
     property alias descriptionItem: internalDescriptionItem
 
     /**
-     * This property holds an item that will be displayed before the delegate's contents.
+     * @brief This property holds an item that will be displayed to the
+     * left of the delegate's contents.
+     *
+     * default: `null`
      */
     property var leading: null
     
     /**
-     * This property holds the padding after the leading item.
+     * @brief This property holds the padding after the leading item.
+     *
+     * It is recommended to use Kirigami.Units here instead of direct values.
+     *
+     * @see Kirigami.Units
      */
     property real leadingPadding: Kirigami.Units.smallSpacing
     
