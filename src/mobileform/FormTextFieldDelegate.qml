@@ -98,10 +98,10 @@ AbstractFormDelegate {
      * The status property will affect the color of ::statusMessage used.
      *
      * Accepted values:
-     * - Kirigami.MessageType.Information (blue color)
-     * - Kirigami.MessageType.Positive (green color)
-     * - Kirigami.MessageType.Warning (orange color)
-     * - Kirigami.MessageType.Error (red color)
+     * - `Kirigami.MessageType.Information` (blue color)
+     * - `Kirigami.MessageType.Positive` (green color)
+     * - `Kirigami.MessageType.Warning` (orange color)
+     * - `Kirigami.MessageType.Error` (red color)
      *
      * default: `Kirigami.MessageType.Information` if ::statusMessage is set,
      * nothing otherwise.

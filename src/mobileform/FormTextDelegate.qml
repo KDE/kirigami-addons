@@ -45,27 +45,29 @@ AbstractFormDelegate {
     property alias descriptionItem: internalDescriptionItem
     
     /**
-     * This property holds allows for access to the text label item.
+     * @brief This property holds allows for access to the text label item.
      */
     property alias textItem: internalTextItem
 
     /**
-     * This property holds an item that will be displayed before the delegate's contents.
+     * @brief This property holds an item that will be displayed before
+     * the delegate's contents.
      */
     property var leading: null
     
     /**
-     * This property holds the padding after the leading item.
+     * @brief This property holds the padding after the leading item.
      */
     property real leadingPadding: Kirigami.Units.smallSpacing
     
     /**
-     * This property holds an item that will be displayed after the delegate's contents.
+     * @brief This property holds an item that will be displayed after
+     * the delegate's contents.
      */
     property var trailing: null
     
     /**
-     * This property holds the padding before the trailing item.
+     * @brief This property holds the padding before the trailing item.
      */
     property real trailingPadding: Kirigami.Units.smallSpacing
     
