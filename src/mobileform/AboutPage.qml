@@ -81,9 +81,9 @@ Kirigami.ScrollablePage {
     /**
      * @brief This property holds a link to a "Donate" page.
      *
-     * default: `"https://www.kde.org/community/donations" when the application ID starts with "org.kde.", otherwise empty.`
+     * default: `"https://www.kde.org/donate" when the application ID starts with "org.kde.", otherwise empty.`
      */
-    property url donateUrl: aboutData.desktopFileName.startsWith("org.kde.") ? "https://www.kde.org/community/donations" : ""
+    property url donateUrl: aboutData.desktopFileName.startsWith("org.kde.") ? "https://www.kde.org/donate" : ""
 
     leftPadding: 0
     rightPadding: 0
@@ -196,7 +196,7 @@ Kirigami.ScrollablePage {
                 FormButtonDelegate {
                     id: donateDelegate
                     text: i18nd("kirigami-addons", "Donate")
-                    onClicked: Qt.openUrlExternally(donateUrl)
+                    onClicked: Qt.openUrlExternally(donateUrl + "?app=" + page.aboutData.componentName)
                     visible: donateUrl
                 }
 

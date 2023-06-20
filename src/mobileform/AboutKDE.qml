@@ -164,7 +164,7 @@ Thank you very much in advance for your support.")
 
                 FormButtonDelegate {
                     text: i18nd("kirigami-addons", "Donate")
-                    onClicked: Qt.openUrlExternally("https://www.kde.org/community/donations/")
+                    onClicked: Qt.openUrlExternally("https://www.kde.org/donate")
                 }
             }
         }
