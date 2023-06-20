@@ -22,7 +22,7 @@ import org.kde.kirigami 2.19 as Kirigami
  *
  * @see FormTextDelegate
  *
- * @inherits QtQuick.Controls.Label
+ * @inherit QtQuick.Controls.Label
  */
 Label {
     color: Kirigami.Theme.disabledTextColor

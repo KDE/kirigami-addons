@@ -34,7 +34,7 @@ import "private" as Private
  * @see FormComboBoxDelegate
  * @see FormRadioDelegate
  *
- * @inherits QtQuick.Controls.CheckDelegate
+ * @inherit QtQuick.Controls.CheckDelegate
  */
 T.CheckDelegate {
     id: root

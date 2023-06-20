@@ -15,7 +15,7 @@ import org.kde.kirigami 2.20 as Kirigami
  *
  * @since org.kde.kirigamiaddons.labs.mobileform 0.1
  *
- * @inherits Kirigami.ScrollablePage
+ * @inherit Kirigami.ScrollablePage
  */
 Kirigami.ScrollablePage {
     id: page

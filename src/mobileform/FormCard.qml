@@ -37,7 +37,7 @@ import "private" as Private
  *
  * @since org.kde.kirigamiaddons.labs.mobileform 0.1
  *
- * @inherits QtQuick.Item
+ * @inherit QtQuick.Item
  */
 Item {
     id: root

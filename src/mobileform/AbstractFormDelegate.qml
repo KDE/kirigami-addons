@@ -21,7 +21,7 @@ import org.kde.kirigami 2.12 as Kirigami
  *
  * @see FormDelegateBackground
  *
- * @inherits QtQuick.Controls.ItemDelegate
+ * @inherit QtQuick.Controls.ItemDelegate
  */
 T.ItemDelegate {
     id: root

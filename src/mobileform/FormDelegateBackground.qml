@@ -21,7 +21,7 @@ import org.kde.kirigami 2.20 as Kirigami
  *
  * @see AbstractFormDelegate
  *
- * @inherits QtQuick.Rectangle
+ * @inherit QtQuick.Rectangle
  */
 Rectangle {
     /**

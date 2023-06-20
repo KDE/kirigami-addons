@@ -20,7 +20,7 @@ import org.kde.kirigami 2.19 as Kirigami
  *
  * @since org.kde.kirigamiaddons.labs.mobileform 0.1
  *
- * @inherits Kirigami.Icon
+ * @inherit Kirigami.Icon
  */
 
 Kirigami.Icon {

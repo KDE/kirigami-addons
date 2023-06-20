@@ -21,7 +21,7 @@ import "private" as Private
  *
  * @since org.kde.kirigamiaddons.labs.mobileform 0.1
  *
- * @inherits Kirigami.ScrollablePage
+ * @inherit Kirigami.ScrollablePage
  */
 
 Kirigami.ScrollablePage {

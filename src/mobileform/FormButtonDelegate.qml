@@ -22,7 +22,7 @@ import "private" as Private
  *
  * @since org.kde.kirigamiaddons.labs.mobileform 0.1
  *
- * @inherits AbstractFormDelegate
+ * @inherit AbstractFormDelegate
  */
 AbstractFormDelegate {
     id: root

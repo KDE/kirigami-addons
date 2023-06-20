@@ -26,7 +26,7 @@ import "private" as Private
  * @see FormSectionText
  * @see QtQuick.Controls.AbstractButton
  *
- * @inherits AbstractFormDelegate
+ * @inherit AbstractFormDelegate
  */
 AbstractFormDelegate {
     id: root

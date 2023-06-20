@@ -20,7 +20,7 @@ import org.kde.kirigami 2.4 as Kirigami
  *
  * @see Kirigami.Separator
  *
- * @inherits Kirigami.Separator
+ * @inherit Kirigami.Separator
  */
 Kirigami.Separator {
     /**
