@@ -91,8 +91,27 @@ Kirigami.ApplicationWindow {
                 spacing: 0
                 width: page.width
 
+                // Form Grid
+                MobileForm.FormGridContainer {
+                    id: container
+
+                    Layout.fillWidth: true
+
+                    infoCards: [
+                        MobileForm.FormGridContainer.InfoCard {
+                            title: "42"
+                            subtitle: "Posts"
+                        },
+                        MobileForm.FormGridContainer.InfoCard {
+                            title: "42"
+                            subtitle: "Followers"
+                        }
+                    ]
+                }
+
                 MobileForm.FormCard {
                     Layout.fillWidth: true
+                    Layout.topMargin: Kirigami.Units.largeSpacing
 
                     contentItem: ColumnLayout {
                         spacing: 0

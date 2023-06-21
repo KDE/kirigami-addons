@@ -27,6 +27,7 @@ ecm_target_qml_sources(mobileformplugin SOURCES
     FormSwitchDelegate.qml
     FormTextDelegate.qml
     FormTextFieldDelegate.qml
+    FormGridContainer.qml
 )
 
 ecm_target_qml_sources(mobileformplugin PATH private SOURCES
