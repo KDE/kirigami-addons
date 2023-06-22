@@ -89,6 +89,11 @@ AbstractFormDelegate {
     property alias placeholderText: textField.placeholderText
 
     /**
+     * @brief This property holds the `validator` of the internal TextField.
+     */
+    property alias validator: textField.validator
+
+    /**
      * @brief This property holds the current status message type of
      * the text field.
      *
