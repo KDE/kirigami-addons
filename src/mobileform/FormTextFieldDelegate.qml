@@ -94,6 +94,11 @@ AbstractFormDelegate {
     property alias validator: textField.validator
 
     /**
+     * @brief This property holds the `acceptableInput` of the internal TextField.
+     */
+    property alias acceptableInput: textField.acceptableInput
+
+    /**
      * @brief This property holds the current status message type of
      * the text field.
      *
@@ -158,6 +163,13 @@ AbstractFormDelegate {
      */
     function clear() {
         textField.clear();
+    }
+
+    /**
+     * Inserts text into the TextInput at position.
+     */
+    function insert(position: int, text: string) {
+        textField.insert(position, text);
     }
 
     focusPolicy: Qt.NoFocus // supplied by text field
