@@ -101,7 +101,7 @@ Item {
     property list<InfoCard> infoCards
 
     component InfoCard: QtObject {
-        required property string title
+        property string title
         property string subtitle
         property Kirigami.Action action
     }
@@ -126,16 +126,6 @@ Item {
             id: grid
 
             readonly property int cellWidth: Kirigami.Units.gridUnit * 10
-            readonly property int cellHeight: {
-                let max = 0;
-                for (let i in children) {
-                    let child = children[i];
-                    if (child.implicitHeight > max) {
-                        max = child.implicitHeight;
-                    }
-                }
-                return max;
-            }
 
             anchors {
                 fill: parent
@@ -179,7 +169,7 @@ Item {
                     Layout.preferredWidth: grid.cellWidth
                     Layout.columnSpan: cardRepeater.count % grid.columns !== 0 && index === cardRepeater.count - 1 ? 2 : 1
                     Layout.fillWidth: true
-                    Layout.preferredHeight: grid.cellHeight
+                    Layout.fillHeight: true
 
                     background: Rectangle {
                         radius: root.cardWidthRestricted ? Kirigami.Units.smallSpacing : 0
@@ -195,19 +185,19 @@ Item {
                             radius: root.cardWidthRestricted ? Kirigami.Units.smallSpacing : 0
 
                             color: {
-                                let colorOpacity = 0;
+                                let alpha = 0;
 
                                 if (!infoCardDelegate.enabled || !infoCardDelegate.action) {
-                                    colorOpacity = 0;
+                                    alpha = 0;
                                 } else if (infoCardDelegate.pressed) {
-                                    colorOpacity = 0.2;
+                                    alpha = 0.2;
                                 } else if (infoCardDelegate.visualFocus) {
-                                    colorOpacity = 0.1;
+                                    alpha = 0.1;
                                 } else if (!Kirigami.Settings.tabletMode && infoCardDelegate.hovered) {
-                                    colorOpacity = 0.07;
+                                    alpha = 0.07;
                                 }
 
-                                return Qt.rgba(Kirigami.Theme.textColor.r, Kirigami.Theme.textColor.g, Kirigami.Theme.textColor.b, colorOpacity)
+                                return Qt.rgba(Kirigami.Theme.textColor.r, Kirigami.Theme.textColor.g, Kirigami.Theme.textColor.b, alpha)
                             }
 
                             Behavior on color {

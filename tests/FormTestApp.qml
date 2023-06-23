@@ -86,10 +86,8 @@ Kirigami.ApplicationWindow {
             topPadding: Kirigami.Units.gridUnit
             bottomPadding: Kirigami.Units.gridUnit
 
-
             ColumnLayout {
                 spacing: 0
-                width: page.width
 
                 // Form Grid
                 MobileForm.FormGridContainer {
@@ -105,6 +103,13 @@ Kirigami.ApplicationWindow {
                         MobileForm.FormGridContainer.InfoCard {
                             title: "42"
                             subtitle: "Followers"
+                        },
+                        MobileForm.FormGridContainer.InfoCard {
+                            title: "42"
+                            subtitle: "Follows"
+                            action: Kirigami.Action {
+                                onTriggered: applicationWindow().showPassiveNotification("42 Follows")
+                            }
                         }
                     ]
                 }
