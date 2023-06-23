@@ -87,6 +87,12 @@ Item {
      *         },
      *         MobileForm.FormGridContainer.InfoCard {
      *             title: "42"
+     *         },
+     *         MobileForm.FormGridContainer.InfoCard {
+     *             title: "Details"
+     *             action: Kirigami.Action {
+     *                 onClicked: pageStack.push("Details.qml")
+     *             }
      *         }
      *     ]
      * }
@@ -97,6 +103,7 @@ Item {
     component InfoCard: QtObject {
         required property string title
         property string subtitle
+        property Kirigami.Action action
     }
 
     Kirigami.Theme.colorSet: Kirigami.Theme.View
@@ -111,8 +118,8 @@ Item {
             left: parent.left
             right: parent.right
 
-            leftMargin: root.cardWidthRestricted ? Math.round((root.width - root.maximumWidth) / 2) : -1
-            rightMargin: root.cardWidthRestricted ? Math.round((root.width - root.maximumWidth) / 2) : -1
+            leftMargin: root.cardWidthRestricted ? Math.round((root.width - root.maximumWidth) / 2) : 0
+            rightMargin: root.cardWidthRestricted ? Math.round((root.width - root.maximumWidth) / 2) : 0
         }
 
         GridLayout {
@@ -138,29 +145,39 @@ Item {
                 bottomMargin: root.bottomPadding
             }
 
-            columns: 3
+            columns: root.cardWidthRestricted && cardRepeater.count % 3 === 0 ? 3 : 2
             columnSpacing: Kirigami.Units.smallSpacing
             rowSpacing: Kirigami.Units.smallSpacing
 
             Repeater {
+                id: cardRepeater
+
                 model: root.infoCards
 
-                QQC2.Control {
+                QQC2.AbstractButton {
                     id: infoCardDelegate
 
+                    required property int index
                     required property var modelData
 
                     readonly property string title: modelData.title
                     readonly property string subtitle: modelData.subtitle
+
+                    action: modelData.action
 
                     leftPadding: Kirigami.Units.largeSpacing
                     rightPadding: Kirigami.Units.largeSpacing
                     topPadding: Kirigami.Units.largeSpacing
                     bottomPadding: Kirigami.Units.largeSpacing
 
+                    leftInset: root.cardWidthRestricted ? 0 : -1
+                    rightInset: root.cardWidthRestricted ? 0 : -1
+
                     Accessible.name: title + " " + subtitle
+                    Accessible.role: action ? Accessible.Button : Accessible.Note
 
                     Layout.preferredWidth: grid.cellWidth
+                    Layout.columnSpan: cardRepeater.count % grid.columns !== 0 && index === cardRepeater.count - 1 ? 2 : 1
                     Layout.fillWidth: true
                     Layout.preferredHeight: grid.cellHeight
 
@@ -171,6 +188,31 @@ Item {
                         border {
                             color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.15)
                             width: 1
+                        }
+
+                        Rectangle {
+                            anchors.fill: parent
+                            radius: root.cardWidthRestricted ? Kirigami.Units.smallSpacing : 0
+
+                            color: {
+                                let colorOpacity = 0;
+
+                                if (!infoCardDelegate.enabled || !infoCardDelegate.action) {
+                                    colorOpacity = 0;
+                                } else if (infoCardDelegate.pressed) {
+                                    colorOpacity = 0.2;
+                                } else if (infoCardDelegate.visualFocus) {
+                                    colorOpacity = 0.1;
+                                } else if (!Kirigami.Settings.tabletMode && infoCardDelegate.hovered) {
+                                    colorOpacity = 0.07;
+                                }
+
+                                return Qt.rgba(Kirigami.Theme.textColor.r, Kirigami.Theme.textColor.g, Kirigami.Theme.textColor.b, colorOpacity)
+                            }
+
+                            Behavior on color {
+                                ColorAnimation { duration: Kirigami.Units.shortDuration }
+                            }
                         }
                     }
 
