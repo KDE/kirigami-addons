@@ -337,7 +337,7 @@ AbstractFormDelegate {
             visible: controlRoot.displayMode == FormComboBoxDelegate.ComboBox
             delegate: controlRoot.comboBoxDelegate
             currentIndex: controlRoot.currentIndex
-            onActivated: controlRoot.activated(index)
+            onActivated: index => controlRoot.activated(index)
             onAccepted: controlRoot.accepted()
         }
 
