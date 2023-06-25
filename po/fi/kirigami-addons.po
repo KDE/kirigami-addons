@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-20 00:48+0000\n"
-"PO-Revision-Date: 2023-04-20 11:36+0300\n"
+"PO-Revision-Date: 2023-06-02 20:07+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.1\n"
 
 #: components/AbstractMaximizeComponent.qml:126
 #, kde-format
@@ -46,13 +46,13 @@ msgstr "Kierrä oikealle"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
-msgstr ""
+msgstr "Näytä selite"
 
 #: components/AlbumMaximizeComponent.qml:111
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
-msgstr ""
+msgstr "Piilota selite"
 
 #: components/AlbumMaximizeComponent.qml:117
 #, kde-format
