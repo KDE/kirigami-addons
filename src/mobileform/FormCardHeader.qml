@@ -21,32 +21,32 @@ import org.kde.kirigami 2.19 as Kirigami
 ColumnLayout {
     id: root
     spacing: 0
-    
+
     /**
      * @brief This property holds the header title.
      *
      * The title is displayed in bold.
      */
     property string title: ""
-    
+
     /**
      * @brief This property holds the header subtitle.
      *
      * The subtitle is displayed in a faint gray color.
      */
     property string subtitle: ""
-    
+
     ColumnLayout {
         visible: title !== "" || subtitle !== ""
-        
+
         Layout.fillWidth: true
         Layout.bottomMargin: Kirigami.Units.largeSpacing
         Layout.topMargin: Kirigami.Units.largeSpacing
         Layout.leftMargin: Kirigami.Units.gridUnit
         Layout.rightMargin: Kirigami.Units.gridUnit
-        
+
         spacing: Kirigami.Units.smallSpacing
-        
+
         Label {
             Layout.fillWidth: true
             font.weight: Font.Bold
@@ -55,7 +55,7 @@ ColumnLayout {
             wrapMode: Text.Wrap
             Accessible.ignored: !visible
         }
-        
+
         Label {
             color: Kirigami.Theme.disabledTextColor
             text: subtitle
@@ -65,8 +65,8 @@ ColumnLayout {
             Accessible.ignored: !visible
         }
     }
-    
-    Kirigami.Separator { 
+
+    Kirigami.Separator {
         opacity: 0.5
         Layout.fillWidth: true
         Accessible.ignored: true
