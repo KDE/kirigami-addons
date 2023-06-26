@@ -85,15 +85,20 @@ Kirigami.ScrollablePage {
      */
     property url donateUrl: aboutData.desktopFileName.startsWith("org.kde.") ? "https://www.kde.org/donate" : ""
 
+    /**
+     * @brief This property holds extra content that is added at the end of the AboutPage
+     */
+    property alias extraContent: column.children
+
     leftPadding: 0
     rightPadding: 0
     topPadding: Kirigami.Units.gridUnit
     bottomPadding: Kirigami.Units.gridUnit
 
-
     title: i18n("About %1", page.aboutData.displayName)
 
     ColumnLayout {
+        id: column
         width: parent.width
 
         FormCard {
