@@ -148,7 +148,7 @@ Item {
                     id: infoCardDelegate
 
                     required property int index
-                    required property var modelData
+                    required property QtObject modelData
 
                     readonly property string title: modelData.title
                     readonly property string subtitle: modelData.subtitle
