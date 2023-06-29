@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 00:48+0000\n"
+"POT-Creation-Date: 2023-06-29 00:45+0000\n"
 "PO-Revision-Date: 2023-05-21 08:25+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -160,7 +160,7 @@ msgstr ""
 "середовища Плазми, сотень програм та багатьох бібліотек програмного "
 "забезпечення, які лежать в основі усього цього.\n"
 
-#: mobileform/AboutKDE.qml:86 mobileform/AboutPage.qml:189
+#: mobileform/AboutKDE.qml:86 mobileform/AboutPage.qml:194
 #, kde-format
 msgid "Homepage"
 msgstr "Домашня сторінка"
@@ -176,7 +176,7 @@ msgstr ""
 "— користувач — маєте повідомити нам, якщо щось не працює, як слід, або може "
 "бути зроблене краще.\n"
 
-#: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:228
+#: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:233
 #, kde-format
 msgid "Report a bug"
 msgstr "Повідомити про помилку"
@@ -193,7 +193,7 @@ msgstr ""
 "Можете забезпечувати користувачів графікою, темами, звуками та вдосконаленою "
 "документацію. Вам вирішувати!"
 
-#: mobileform/AboutKDE.qml:128 mobileform/AboutPage.qml:207
+#: mobileform/AboutKDE.qml:128 mobileform/AboutPage.qml:212
 #, kde-format
 msgid "Get Involved"
 msgstr "Приєднатися до команди"
@@ -217,22 +217,22 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: mobileform/AboutKDE.qml:166 mobileform/AboutPage.qml:198
+#: mobileform/AboutKDE.qml:166 mobileform/AboutPage.qml:203
 #, kde-format
 msgid "Donate"
 msgstr "Підтримати фінансово"
 
-#: mobileform/AboutPage.qml:94
+#: mobileform/AboutPage.qml:98
 #, kde-format
 msgid "About %1"
 msgstr "Про %1"
 
-#: mobileform/AboutPage.qml:145
+#: mobileform/AboutPage.qml:150
 #, kde-format
 msgid "Copyright"
 msgstr "Авторські права"
 
-#: mobileform/AboutPage.qml:152
+#: mobileform/AboutPage.qml:157
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
@@ -241,22 +241,22 @@ msgstr[1] "Ліцензування"
 msgstr[2] "Ліцензування"
 msgstr[3] "Ліцензування"
 
-#: mobileform/AboutPage.qml:241
+#: mobileform/AboutPage.qml:246
 #, kde-format
 msgid "Libraries in use"
 msgstr "Використані бібліотеки"
 
-#: mobileform/AboutPage.qml:272
+#: mobileform/AboutPage.qml:277
 #, kde-format
 msgid "Authors"
 msgstr "Автори"
 
-#: mobileform/AboutPage.qml:284
+#: mobileform/AboutPage.qml:289
 #, kde-format
 msgid "Credits"
 msgstr "Подяки"
 
-#: mobileform/AboutPage.qml:296
+#: mobileform/AboutPage.qml:301
 #, kde-format
 msgid "Translators"
 msgstr "Перекладачі"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 00:48+0000\n"
+"POT-Creation-Date: 2023-06-29 00:45+0000\n"
 "PO-Revision-Date: 2023-05-22 17:47+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -160,7 +160,7 @@ msgstr ""
 "Plasma, centenas de aplicações e uma enorme quantidade bibliotecas de "
 "'software' que dão suporte às mesmas.\n"
 
-#: mobileform/AboutKDE.qml:86 mobileform/AboutPage.qml:189
+#: mobileform/AboutKDE.qml:86 mobileform/AboutPage.qml:194
 #, kde-format
 msgid "Homepage"
 msgstr "Página Web"
@@ -177,7 +177,7 @@ msgstr ""
 "quando algo não funciona como seria de esperar ou como poderia funcionar "
 "melhor.\n"
 
-#: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:228
+#: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:233
 #, kde-format
 msgid "Report a bug"
 msgstr "Comunicar um erro"
@@ -194,7 +194,7 @@ msgstr ""
 "programas. Poderá fornecer gráficos, temas, sons e melhoras na documentação. "
 "Você decide!"
 
-#: mobileform/AboutKDE.qml:128 mobileform/AboutPage.qml:207
+#: mobileform/AboutKDE.qml:128 mobileform/AboutPage.qml:212
 #, kde-format
 msgid "Get Involved"
 msgstr "Envolva-se"
@@ -218,44 +218,44 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: mobileform/AboutKDE.qml:166 mobileform/AboutPage.qml:198
+#: mobileform/AboutKDE.qml:166 mobileform/AboutPage.qml:203
 #, kde-format
 msgid "Donate"
 msgstr "Doar"
 
-#: mobileform/AboutPage.qml:94
+#: mobileform/AboutPage.qml:98
 #, kde-format
 msgid "About %1"
 msgstr "Acerca do %1"
 
-#: mobileform/AboutPage.qml:145
+#: mobileform/AboutPage.qml:150
 #, kde-format
 msgid "Copyright"
 msgstr "Copyright"
 
-#: mobileform/AboutPage.qml:152
+#: mobileform/AboutPage.qml:157
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "Licença"
 msgstr[1] "Licenças"
 
-#: mobileform/AboutPage.qml:241
+#: mobileform/AboutPage.qml:246
 #, kde-format
 msgid "Libraries in use"
 msgstr "Bibliotecas em uso"
 
-#: mobileform/AboutPage.qml:272
+#: mobileform/AboutPage.qml:277
 #, kde-format
 msgid "Authors"
 msgstr "Autores"
 
-#: mobileform/AboutPage.qml:284
+#: mobileform/AboutPage.qml:289
 #, kde-format
 msgid "Credits"
 msgstr "Créditos"
 
-#: mobileform/AboutPage.qml:296
+#: mobileform/AboutPage.qml:301
 #, kde-format
 msgid "Translators"
 msgstr "Tradutores"

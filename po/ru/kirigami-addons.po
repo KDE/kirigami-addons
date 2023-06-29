@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 00:48+0000\n"
+"POT-Creation-Date: 2023-06-29 00:45+0000\n"
 "PO-Revision-Date: 2023-05-26 15:39+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -161,7 +161,7 @@ msgstr ""
 "прикладных программ, а также множество необходимых для них программных "
 "библиотек.\n"
 
-#: mobileform/AboutKDE.qml:86 mobileform/AboutPage.qml:189
+#: mobileform/AboutKDE.qml:86 mobileform/AboutPage.qml:194
 #, kde-format
 msgid "Homepage"
 msgstr "Домашняя страница"
@@ -177,7 +177,7 @@ msgstr ""
 "заняться. Но для этого Вы, новый пользователь, должны нам сообщить, если что-"
 "то идёт не так как предполагалось или может быть улучшено.\n"
 
-#: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:228
+#: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:233
 #, kde-format
 msgid "Report a bug"
 msgstr "Сообщить об ошибке"
@@ -193,7 +193,7 @@ msgstr ""
 "присоединиться к национальной группе для перевода интерфейсов программ. "
 "Можно присылать графику, стили, звуки и улучшать документацию. Вам решать!"
 
-#: mobileform/AboutKDE.qml:128 mobileform/AboutPage.qml:207
+#: mobileform/AboutKDE.qml:128 mobileform/AboutPage.qml:212
 #, kde-format
 msgid "Get Involved"
 msgstr "Принять участие"
@@ -217,22 +217,22 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: mobileform/AboutKDE.qml:166 mobileform/AboutPage.qml:198
+#: mobileform/AboutKDE.qml:166 mobileform/AboutPage.qml:203
 #, kde-format
 msgid "Donate"
 msgstr "Сделать пожертвование"
 
-#: mobileform/AboutPage.qml:94
+#: mobileform/AboutPage.qml:98
 #, kde-format
 msgid "About %1"
 msgstr "О программе %1"
 
-#: mobileform/AboutPage.qml:145
+#: mobileform/AboutPage.qml:150
 #, kde-format
 msgid "Copyright"
 msgstr "Авторские права"
 
-#: mobileform/AboutPage.qml:152
+#: mobileform/AboutPage.qml:157
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
@@ -241,22 +241,22 @@ msgstr[1] "Лицензии"
 msgstr[2] "Лицензии"
 msgstr[3] "Лицензия"
 
-#: mobileform/AboutPage.qml:241
+#: mobileform/AboutPage.qml:246
 #, kde-format
 msgid "Libraries in use"
 msgstr "Используемые библиотеки"
 
-#: mobileform/AboutPage.qml:272
+#: mobileform/AboutPage.qml:277
 #, kde-format
 msgid "Authors"
 msgstr "Авторы"
 
-#: mobileform/AboutPage.qml:284
+#: mobileform/AboutPage.qml:289
 #, kde-format
 msgid "Credits"
 msgstr "Благодарности"
 
-#: mobileform/AboutPage.qml:296
+#: mobileform/AboutPage.qml:301
 #, kde-format
 msgid "Translators"
 msgstr "Переводчики"

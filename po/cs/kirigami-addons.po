@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 00:48+0000\n"
+"POT-Creation-Date: 2023-06-29 00:45+0000\n"
 "PO-Revision-Date: 2023-05-31 09:50+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -154,7 +154,7 @@ msgid ""
 "many software libraries that support them.\n"
 msgstr ""
 
-#: mobileform/AboutKDE.qml:86 mobileform/AboutPage.qml:189
+#: mobileform/AboutKDE.qml:86 mobileform/AboutPage.qml:194
 #, kde-format
 msgid "Homepage"
 msgstr "Domovská stránka"
@@ -167,7 +167,7 @@ msgid ""
 "expected or could be done better.\n"
 msgstr ""
 
-#: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:228
+#: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:233
 #, kde-format
 msgid "Report a bug"
 msgstr "Nahlásit chybu"
@@ -183,7 +183,7 @@ msgstr ""
 "softwaru. Můžete se připojit k národním týmům, které překládají programy. "
 "Můžete vytvářet grafiku, motivy, zvuky a lepší dokumentaci. Vy se rozhodněte!"
 
-#: mobileform/AboutKDE.qml:128 mobileform/AboutPage.qml:207
+#: mobileform/AboutKDE.qml:128 mobileform/AboutPage.qml:212
 #, kde-format
 msgid "Get Involved"
 msgstr "Zapojte se"
@@ -205,22 +205,22 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: mobileform/AboutKDE.qml:166 mobileform/AboutPage.qml:198
+#: mobileform/AboutKDE.qml:166 mobileform/AboutPage.qml:203
 #, kde-format
 msgid "Donate"
 msgstr "Přispět"
 
-#: mobileform/AboutPage.qml:94
+#: mobileform/AboutPage.qml:98
 #, kde-format
 msgid "About %1"
 msgstr "O aplikaci %1"
 
-#: mobileform/AboutPage.qml:145
+#: mobileform/AboutPage.qml:150
 #, kde-format
 msgid "Copyright"
 msgstr "Autorská práva"
 
-#: mobileform/AboutPage.qml:152
+#: mobileform/AboutPage.qml:157
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
@@ -228,22 +228,22 @@ msgstr[0] "Licence"
 msgstr[1] "Licence"
 msgstr[2] "Licencí"
 
-#: mobileform/AboutPage.qml:241
+#: mobileform/AboutPage.qml:246
 #, kde-format
 msgid "Libraries in use"
 msgstr "Použité knihovny"
 
-#: mobileform/AboutPage.qml:272
+#: mobileform/AboutPage.qml:277
 #, kde-format
 msgid "Authors"
 msgstr "Autoři"
 
-#: mobileform/AboutPage.qml:284
+#: mobileform/AboutPage.qml:289
 #, kde-format
 msgid "Credits"
 msgstr "Poděkování"
 
-#: mobileform/AboutPage.qml:296
+#: mobileform/AboutPage.qml:301
 #, kde-format
 msgid "Translators"
 msgstr "Překladatelé"
