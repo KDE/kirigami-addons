@@ -163,6 +163,8 @@ Item {
                     leftInset: root.cardWidthRestricted ? 0 : -infoCardDelegate.background.border.width
                     rightInset: root.cardWidthRestricted ? 0 : -infoCardDelegate.background.border.width
 
+                    hoverEnabled: true
+
                     Accessible.name: title + " " + subtitle
                     Accessible.role: action ? Accessible.Button : Accessible.Note
 
