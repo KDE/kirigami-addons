@@ -8,8 +8,9 @@ import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
 import QtQuick.Layouts 1.15
 
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kirigamiaddons.labs.mobileform 0.1 as MobileForm
+import org.kde.kirigamiaddons.labs.components 1.0 as Components
 
 Kirigami.ApplicationWindow {
     id: appwindow
@@ -31,6 +32,10 @@ Kirigami.ApplicationWindow {
 
     function i18ndp(context, text1, text2, number) {
         return number === 1 ? text1 : text2;
+    }
+
+    function i18nc(context, text) {
+        return text;
     }
     
     LayoutMirroring.enabled: false
@@ -85,6 +90,22 @@ Kirigami.ApplicationWindow {
             rightPadding: 0
             topPadding: Kirigami.Units.gridUnit
             bottomPadding: Kirigami.Units.gridUnit
+
+            header: Components.Banner {
+                title: "My title"
+                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inde sermone vario sex illa a Dipylo stadia confecimus. In eo enim positum est id, quod dicimus esse expetendum.
+
+Duo Reges: constructio interrete. Primum Theophrasti, Strato, physicum se voluit; Aliter enim explicari, quod quaeritur, non potest. Quamquam id quidem, infinitum est in hac urbe;"
+                type: Kirigami.MessageType.Warning
+                width: page.width
+                visible: true
+
+                showCloseButton: true
+
+                actions: Kirigami.Action {
+                    text: "Do something"
+                }
+            }
 
             ColumnLayout {
                 spacing: 0
