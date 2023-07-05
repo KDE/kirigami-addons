@@ -70,6 +70,13 @@ ecm_setup_version(${PROJECT_VERSION}
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF${KF_MAJOR_VERSION}KirigamiAddonsConfigVersion.cmake"
 )
 
+
+if(QT_MAJOR_VERSION STREQUAL "6")
+    set(QTGRAPHICALEFFECTS_MODULE "Qt5Compat.GraphicalEffects")
+else()
+    set(QTGRAPHICALEFFECTS_MODULE "QtGraphicalEffects 1.0")
+endif()
+
 add_subdirectory(src)
 
 if (BUILD_TESTING AND BUILD_SHARED_LIBS)
