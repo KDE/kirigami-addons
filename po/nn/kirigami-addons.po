@@ -1,13 +1,13 @@
 # Translation of kirigami-addons to Norwegian Nynorsk
 #
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2022.
-# Karl Ove Hufthammer <karl@huftis.org>, 2022.
+# Karl Ove Hufthammer <karl@huftis.org>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-29 00:45+0000\n"
-"PO-Revision-Date: 2022-06-19 13:50+0200\n"
+"PO-Revision-Date: 2023-07-04 12:59+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 23.04.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -23,60 +23,60 @@ msgstr ""
 #: components/AbstractMaximizeComponent.qml:126
 #, kde-format
 msgid "Close"
-msgstr ""
+msgstr "Lukk"
 
 #: components/AlbumMaximizeComponent.qml:89
 #, kde-format
 msgid "Zoom in"
-msgstr ""
+msgstr "Forstørr"
 
 #: components/AlbumMaximizeComponent.qml:94
 #, kde-format
 msgid "Zoom out"
-msgstr ""
+msgstr "Forminsk"
 
 #: components/AlbumMaximizeComponent.qml:100
 #, kde-format
 msgid "Rotate left"
-msgstr ""
+msgstr "Drei til venstre"
 
 #: components/AlbumMaximizeComponent.qml:106
 #, kde-format
 msgid "Rotate right"
-msgstr ""
+msgstr "Drei til høgre"
 
 #: components/AlbumMaximizeComponent.qml:111
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
-msgstr ""
+msgstr "Vis tekst"
 
 #: components/AlbumMaximizeComponent.qml:111
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
-msgstr ""
+msgstr "Gøym tekst"
 
 #: components/AlbumMaximizeComponent.qml:117
 #, kde-format
 msgid "Save as"
-msgstr ""
+msgstr "Lagra som"
 
 #: components/AlbumMaximizeComponent.qml:172
 #, kde-format
 msgid "Previous image"
-msgstr ""
+msgstr "Førre bilete"
 
 #: components/AlbumMaximizeComponent.qml:186
 #, kde-format
 msgid "Next image"
-msgstr ""
+msgstr "Neste bilete"
 
 #: components/VideoMaximizeDelegate.qml:181
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
-msgstr ""
+msgstr "Lydstyrke"
 
 #: dateandtime/DatePicker.qml:141
 #, kde-format
@@ -88,19 +88,19 @@ msgstr "%1 %2"
 #, kde-format
 msgctxt "kirigami-addons"
 msgid "Days"
-msgstr ""
+msgstr "Dagar"
 
 #: dateandtime/DatePicker.qml:190
 #, kde-format
 msgctxt "kirigami-addons"
 msgid "Months"
-msgstr ""
+msgstr "Månadar"
 
 #: dateandtime/DatePicker.qml:196
 #, kde-format
 msgctxt "kirigami-addons"
 msgid "Years"
-msgstr ""
+msgstr "År"
 
 #: dateandtime/DatePopup.qml:55
 #, kde-format
@@ -131,22 +131,22 @@ msgstr "Godta"
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: mobileform/AboutKDE.qml:28
 #, kde-format
 msgid "About KDE"
-msgstr ""
+msgstr "Om KDE"
 
 #: mobileform/AboutKDE.qml:60
 #, kde-format
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: mobileform/AboutKDE.qml:69
 #, kde-format
 msgid "Be Free!"
-msgstr ""
+msgstr "Ver fri!"
 
 #: mobileform/AboutKDE.qml:78
 #, kde-format
@@ -156,11 +156,15 @@ msgid ""
 "produces the Plasma desktop environment, hundreds of applications, and the "
 "many software libraries that support them.\n"
 msgstr ""
+"KDE er eit verds­femnande felles­skap av eldsjeler som programmerer, "
+"teiknar, komponerer, dokumenterer, set om eller hjelper til på andre måtar "
+"med utvikling av fri programvare. Me har laga brukarflata Plasma, hundrevis "
+"av program og dei mange programbiblioteka desse byggjer på.\n"
 
 #: mobileform/AboutKDE.qml:86 mobileform/AboutPage.qml:194
 #, kde-format
 msgid "Homepage"
-msgstr ""
+msgstr "Heimeside"
 
 #: mobileform/AboutKDE.qml:99
 #, kde-format
@@ -169,11 +173,14 @@ msgid ""
 "However, you - the user - must tell us when something does not work as "
 "expected or could be done better.\n"
 msgstr ""
+"Ein kan alltid forbetra programvare, og KDE-gruppa arbeider heile tida for "
+"det. Men du, som brukar, må melda frå til oss når noko ikkje verkar slik du "
+"forventar, eller når noko kunne vore gjort betre.\n"
 
 #: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:233
 #, kde-format
 msgid "Report a bug"
-msgstr ""
+msgstr "Meld frå om feil"
 
 #: mobileform/AboutKDE.qml:121
 #, kde-format
@@ -182,16 +189,19 @@ msgid ""
 "You can join the national teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
+"Du treng ikkje vera program­utviklar for å hjelpa til med KDE. Du kan "
+"arbeida med omsetjingar, laga grafikk, tema, lydar eller betre "
+"hjelpetekstar. Her er noko for alle!"
 
 #: mobileform/AboutKDE.qml:128 mobileform/AboutPage.qml:212
 #, kde-format
 msgid "Get Involved"
-msgstr ""
+msgstr "Vert med"
 
 #: mobileform/AboutKDE.qml:135
 #, kde-format
 msgid "Developer Documentation"
-msgstr ""
+msgstr "Dokumentasjon for utviklarar"
 
 #: mobileform/AboutKDE.qml:148
 #, kde-format
@@ -199,50 +209,52 @@ msgid ""
 "KDE software is and will always be available free of charge, however "
 "creating it is not free.\n"
 msgstr ""
+"KDE-programma er, og vil alltid vera, gratis, men det er slett ikkje gratis "
+"å laga eller vedlikehalda dei.\n"
 
 #: mobileform/AboutKDE.qml:159
 #, kde-format
 msgid "KDE e.V"
-msgstr ""
+msgstr "KDE e.V."
 
 #: mobileform/AboutKDE.qml:166 mobileform/AboutPage.qml:203
 #, kde-format
 msgid "Donate"
-msgstr ""
+msgstr "Gje pengegåve"
 
 #: mobileform/AboutPage.qml:98
 #, kde-format
 msgid "About %1"
-msgstr ""
+msgstr "Om %1"
 
 #: mobileform/AboutPage.qml:150
 #, kde-format
 msgid "Copyright"
-msgstr ""
+msgstr "Opphavsrett"
 
 #: mobileform/AboutPage.qml:157
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Lisens"
+msgstr[1] "Lisensar"
 
 #: mobileform/AboutPage.qml:246
 #, kde-format
 msgid "Libraries in use"
-msgstr ""
+msgstr "Brukte bibliotek"
 
 #: mobileform/AboutPage.qml:277
 #, kde-format
 msgid "Authors"
-msgstr ""
+msgstr "Utviklarar"
 
 #: mobileform/AboutPage.qml:289
 #, kde-format
 msgid "Credits"
-msgstr ""
+msgstr "Bidragsytarar"
 
 #: mobileform/AboutPage.qml:301
 #, kde-format
 msgid "Translators"
-msgstr ""
+msgstr "Omsetjarar"
