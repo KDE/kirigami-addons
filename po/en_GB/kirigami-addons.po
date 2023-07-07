@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-29 00:45+0000\n"
+"POT-Creation-Date: 2023-07-07 00:49+0000\n"
 "PO-Revision-Date: 2023-05-21 14:55+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -68,6 +68,13 @@ msgstr "Previous image"
 #, kde-format
 msgid "Next image"
 msgstr "Next image"
+
+#: components/Banner.qml:181
+#, fuzzy, kde-format
+#| msgid "Close"
+msgctxt "@action:button"
+msgid "Close"
+msgstr "Close"
 
 #: components/VideoMaximizeDelegate.qml:181
 #, kde-format
