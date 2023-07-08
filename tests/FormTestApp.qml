@@ -86,9 +86,9 @@ Kirigami.ApplicationWindow {
             Kirigami.Theme.colorSet: Kirigami.Theme.Window
             Kirigami.Theme.inherit: false
 
+            topPadding: Kirigami.Units.gridUnit
             leftPadding: 0
             rightPadding: 0
-            topPadding: Kirigami.Units.gridUnit
             bottomPadding: Kirigami.Units.gridUnit
 
             header: Components.Banner {
@@ -135,16 +135,16 @@ Duo Reges: constructio interrete. Primum Theophrasti, Strato, physicum se voluit
                     ]
                 }
 
+                MobileForm.FormHeader {
+                    Layout.fillWidth: true
+                    title: "About"
+                }
                 MobileForm.FormCard {
                     Layout.fillWidth: true
                     Layout.topMargin: Kirigami.Units.largeSpacing
 
                     contentItem: ColumnLayout {
                         spacing: 0
-
-                        MobileForm.FormCardHeader {
-                            title: "About"
-                        }
 
                         MobileForm.FormButtonDelegate {
                             id: aboutDelegate
@@ -154,16 +154,15 @@ Duo Reges: constructio interrete. Primum Theophrasti, Strato, physicum se voluit
                     }
                 }
                 
+                MobileForm.FormHeader {
+                    Layout.fillWidth: true
+                    title: "Buttons"
+                }
                 MobileForm.FormCard {
                     Layout.fillWidth: true
-                    Layout.topMargin: Kirigami.Units.largeSpacing
 
                     contentItem: ColumnLayout {
                         spacing: 0
-
-                        MobileForm.FormCardHeader {
-                            title: "Buttons"
-                        }
 
                         MobileForm.FormButtonDelegate {
                             id: delegate1
@@ -194,16 +193,15 @@ Duo Reges: constructio interrete. Primum Theophrasti, Strato, physicum se voluit
                 }
 
                 // checkboxes
+                MobileForm.FormHeader {
+                    Layout.fillWidth: true
+                    title: "Checkboxes"
+                }
                 MobileForm.FormCard {
                     Layout.fillWidth: true
-                    Layout.topMargin: Kirigami.Units.largeSpacing
 
                     contentItem: ColumnLayout {
                         spacing: 0
-
-                        MobileForm.FormCardHeader {
-                            title: "Checkboxes"
-                        }
 
                         MobileForm.FormCheckDelegate {
                             id: checkbox1
@@ -227,17 +225,15 @@ Duo Reges: constructio interrete. Primum Theophrasti, Strato, physicum se voluit
                 }
 
                 // switches
+                MobileForm.FormHeader {
+                    Layout.fillWidth: true
+                    title: "Switches"
+                }
                 MobileForm.FormCard {
                     Layout.fillWidth: true
-                    Layout.topMargin: Kirigami.Units.largeSpacing
 
                     contentItem: ColumnLayout {
                         spacing: 0
-
-                        MobileForm.FormCardHeader {
-                            title: "Switches"
-                            subtitle: "This card contains switches."
-                        }
 
                         MobileForm.FormSwitchDelegate {
                             id: switch1
@@ -275,16 +271,15 @@ Duo Reges: constructio interrete. Primum Theophrasti, Strato, physicum se voluit
                 // dropdowns
                 // large amount of options -> push a new page
                 // small amount of options -> open dialog
+                MobileForm.FormHeader {
+                    Layout.fillWidth: true
+                    title: "Dropdowns"
+                }
                 MobileForm.FormCard {
                     Layout.fillWidth: true
-                    Layout.topMargin: Kirigami.Units.largeSpacing
 
                     contentItem: ColumnLayout {
                         spacing: 0
-
-                        MobileForm.FormCardHeader {
-                            title: "Dropdowns"
-                        }
 
                         MobileForm.FormComboBoxDelegate {
                             id: dropdown1
@@ -325,16 +320,15 @@ Duo Reges: constructio interrete. Primum Theophrasti, Strato, physicum se voluit
                 }
 
                 // radio buttons
+                MobileForm.FormHeader {
+                    Layout.fillWidth: true
+                    title: "Radio buttons"
+                }
                 MobileForm.FormCard {
                     Layout.fillWidth: true
-                    Layout.topMargin: Kirigami.Units.largeSpacing
 
                     contentItem: ColumnLayout {
                         spacing: 0
-
-                        MobileForm.FormCardHeader {
-                            title: "Radio buttons"
-                        }
 
                         MobileForm.FormRadioDelegate {
                             id: radio1
@@ -426,16 +420,15 @@ Duo Reges: constructio interrete. Primum Theophrasti, Strato, physicum se voluit
                 }
 
                 // info block
+                MobileForm.FormHeader {
+                    Layout.fillWidth: true
+                    title: "Information"
+                }
                 MobileForm.FormCard {
                     Layout.fillWidth: true
-                    Layout.topMargin: Kirigami.Units.largeSpacing
 
                     contentItem: ColumnLayout {
                         spacing: 0
-
-                        MobileForm.FormCardHeader {
-                            title: "Information"
-                        }
 
                         MobileForm.FormTextDelegate {
                             id: info1
@@ -470,16 +463,15 @@ Duo Reges: constructio interrete. Primum Theophrasti, Strato, physicum se voluit
                 }
                 
                 // text fields
+                MobileForm.FormHeader {
+                    Layout.fillWidth: true
+                    title: "Text Fields"
+                }
                 MobileForm.FormCard {
                     Layout.fillWidth: true
-                    Layout.topMargin: Kirigami.Units.largeSpacing
 
                     contentItem: ColumnLayout {
                         spacing: 0
-
-                        MobileForm.FormCardHeader {
-                            title: "Text Fields"
-                        }
                         
                         MobileForm.FormTextFieldDelegate {
                             id: account
@@ -510,15 +502,14 @@ Duo Reges: constructio interrete. Primum Theophrasti, Strato, physicum se voluit
                 }
 
                 // spin boxes fields
+                MobileForm.FormHeader {
+                    Layout.fillWidth: true
+                    title: "Spin boxes"
+                }
                 MobileForm.FormCard {
                     Layout.fillWidth: true
-                    Layout.topMargin: Kirigami.Units.largeSpacing
 
                     contentItem: ColumnLayout {
-                        MobileForm.FormCardHeader {
-                            title: "Spin boxes"
-                        }
-
                         MobileForm.FormSpinBoxDelegate {
                             label: "Amount"
                             value: 42

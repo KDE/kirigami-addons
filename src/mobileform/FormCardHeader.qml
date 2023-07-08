@@ -17,6 +17,7 @@ import org.kde.kirigami 2.19 as Kirigami
  * FormCard title/header.
  *
  * @since org.kde.kirigamiaddons.labs.mobileform 0.1
+ * @deprecated Since 0.9, FormHeader replaces this component.
  */
 ColumnLayout {
     id: root
