@@ -58,6 +58,26 @@ Item {
     readonly property int type: AlbumModelItem.Video
 
     /**
+     * @brief Whether the source video should auto-load.
+     */
+    property alias autoLoad: videoItem.autoLoad
+
+    /**
+     * @brief Whether the source video should auto-play.
+     */
+    property alias autoPlay: videoItem.autoPlay
+
+    /**
+     * @brief The default action triggered when the download button is pressed.
+     *
+     * This exists as a property so that the action can be overridden. The most common
+     * use case for this is where a custom URI scheme is used.
+     */
+    property DownloadAction downloadAction: DownloadAction {
+        onTriggered: videoItem.play()
+    }
+
+    /**
      * @brief The padding around the content image.
      *
      * The padding is factored in when calculating the maximum size of the content
@@ -79,6 +99,20 @@ Item {
      * @brief Emitted when the content image is right clicked.
      */
     signal itemRightClicked()
+
+    /**
+     * @brief Start media playback.
+     */
+    function play() {
+        videoItem.play()
+    }
+
+    /**
+     * @brief Pause media playback.
+     */
+    function pause() {
+        videoItem.pause()
+    }
 
     clip: true
 
@@ -108,7 +142,6 @@ Item {
         source: root.source
 
         clip: true
-        autoPlay: true
         flushMode: VideoOutput.FirstFrame
 
         Behavior on width {
@@ -126,6 +159,25 @@ Item {
             visible: source && status === Image.Ready && videoItem.status === MediaPlayer.Loading
 
             source: root.tempSource
+        }
+
+        QQC2.ProgressBar {
+            anchors.centerIn: parent
+            visible: root.downloadAction.started && !root.downloadAction.completed
+            width: videoItem.width * 0.8
+
+            from: 0.0
+            to: 100.0
+            value: root.downloadAction.progress
+        }
+
+        QQC2.Button {
+            anchors.centerIn: parent
+            icon.width: Kirigami.Units.iconSizes.large
+            icon.height: Kirigami.Units.iconSizes.large
+            visible: videoItem.autoLoad === false && videoItem.status === MediaPlayer.NoMedia && !root.downloadAction.started && videoItem.bufferProgress == 0.0
+            display: QQC2.AbstractButton.IconOnly
+            action: root.downloadAction
         }
 
         transform: [

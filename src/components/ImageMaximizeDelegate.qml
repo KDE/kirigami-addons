@@ -86,6 +86,20 @@ Item {
      */
     signal itemRightClicked()
 
+    /**
+     * @brief Start media playback.
+     */
+    function play() {
+        image.paused = false
+    }
+
+    /**
+     * @brief Pause media playback.
+     */
+    function pause() {
+        image.paused = true
+    }
+
     clip: true
 
     // AnimatedImage so we can handle GIFs.

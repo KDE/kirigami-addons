@@ -19,6 +19,7 @@ ecm_target_qml_sources(componentsplugin SOURCES
     VideoMaximizeDelegate.qml
     AlbumModelItem.qml
     Banner.qml
+    DownloadAction.qml
 )
 
 target_link_libraries(componentsplugin

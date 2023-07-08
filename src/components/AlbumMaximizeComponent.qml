@@ -72,6 +72,29 @@ AbstractMaximizeComponent {
     property bool hideCaption: false
 
     /**
+     * @brief Whether any video media should auto-load.
+     */
+    property bool autoLoad: true
+
+    /**
+     * @brief Whether any video media should auto-play.
+     */
+    property bool autoPlay: true
+
+    /**
+     * @brief The default action triggered when the video download button is pressed.
+     *
+     * The download button is only available when autoLoad is false and the video
+     * media has not downloaded.
+     *
+     * This exists as a property so that the default action can be overridden. The most
+     * common use case for this is where a custom URI scheme is used for example.
+     *
+     * @sa DownloadAction
+     */
+    property DownloadAction downloadAction
+
+    /**
      * @brief Emitted when the content image is right clicked.
      */
     signal itemRightClicked()
@@ -152,6 +175,11 @@ AbstractMaximizeComponent {
                     width: ListView.view.width
                     height: ListView.view.height
 
+                    autoLoad: root.autoLoad
+                    autoPlay: root.autoPlay
+                    // Make sure that the default action in the delegate is used if not overridden
+                    downloadAction: root.downloadAction ? root.downloadAction : undefined
+
                     onItemRightClicked: root.itemRightClicked()
                     onBackgroundClicked: root.close()
                 }
@@ -170,7 +198,11 @@ AbstractMaximizeComponent {
             visible: !Kirigami.Settings.isMobile && view.currentIndex > 0
             Keys.forwardTo: view
             Accessible.name: i18n("Previous image")
-            onClicked: view.currentIndex -= 1
+            onClicked: {
+                view.currentItem.pause()
+                view.currentIndex -= 1
+                view.currentItem.play()
+            }
         }
         QQC2.RoundButton {
             anchors {
@@ -184,7 +216,11 @@ AbstractMaximizeComponent {
             visible: !Kirigami.Settings.isMobile && view.currentIndex < view.count - 1
             Keys.forwardTo: view
             Accessible.name: i18n("Next image")
-            onClicked: view.currentIndex += 1
+            onClicked: {
+                view.currentItem.pause()
+                view.currentIndex += 1
+                view.currentItem.play()
+            }
         }
     }
 
