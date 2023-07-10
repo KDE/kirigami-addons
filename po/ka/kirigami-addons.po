@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-07 00:49+0000\n"
-"PO-Revision-Date: 2023-05-23 05:32+0200\n"
+"POT-Creation-Date: 2023-07-09 00:58+0000\n"
+"PO-Revision-Date: 2023-07-08 06:10+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,68 +16,72 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: components/AbstractMaximizeComponent.qml:126
 #, kde-format
 msgid "Close"
 msgstr "დახურვა"
 
-#: components/AlbumMaximizeComponent.qml:89
+#: components/AlbumMaximizeComponent.qml:112
 #, kde-format
 msgid "Zoom in"
 msgstr "გადიდება"
 
-#: components/AlbumMaximizeComponent.qml:94
+#: components/AlbumMaximizeComponent.qml:117
 #, kde-format
 msgid "Zoom out"
 msgstr "დაპატარავება"
 
-#: components/AlbumMaximizeComponent.qml:100
+#: components/AlbumMaximizeComponent.qml:123
 #, kde-format
 msgid "Rotate left"
 msgstr "მარცხნივ მოტრიალება"
 
-#: components/AlbumMaximizeComponent.qml:106
+#: components/AlbumMaximizeComponent.qml:129
 #, kde-format
 msgid "Rotate right"
 msgstr "მარჯვნივ მოტრიალება"
 
-#: components/AlbumMaximizeComponent.qml:111
+#: components/AlbumMaximizeComponent.qml:134
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
 msgstr "წარწერის ჩვენება"
 
-#: components/AlbumMaximizeComponent.qml:111
+#: components/AlbumMaximizeComponent.qml:134
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
 msgstr "წარწერის დამალვა"
 
-#: components/AlbumMaximizeComponent.qml:117
+#: components/AlbumMaximizeComponent.qml:140
 #, kde-format
 msgid "Save as"
 msgstr "შენახვა, როგორც"
 
-#: components/AlbumMaximizeComponent.qml:172
+#: components/AlbumMaximizeComponent.qml:200
 #, kde-format
 msgid "Previous image"
 msgstr "წინა გამოსახულება"
 
-#: components/AlbumMaximizeComponent.qml:186
+#: components/AlbumMaximizeComponent.qml:218
 #, kde-format
 msgid "Next image"
 msgstr "შემდეგი გამოსახულება"
 
 #: components/Banner.qml:181
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button"
 msgid "Close"
 msgstr "დახურვა"
 
-#: components/VideoMaximizeDelegate.qml:181
+#: components/DownloadAction.qml:37
+#, kde-format
+msgid "Download"
+msgstr ""
+
+#: components/VideoMaximizeDelegate.qml:233
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"

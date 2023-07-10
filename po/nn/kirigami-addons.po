@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-29 00:45+0000\n"
+"POT-Creation-Date: 2023-07-09 00:58+0000\n"
 "PO-Revision-Date: 2023-07-04 12:59+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -25,54 +25,65 @@ msgstr ""
 msgid "Close"
 msgstr "Lukk"
 
-#: components/AlbumMaximizeComponent.qml:89
+#: components/AlbumMaximizeComponent.qml:112
 #, kde-format
 msgid "Zoom in"
 msgstr "Forstørr"
 
-#: components/AlbumMaximizeComponent.qml:94
+#: components/AlbumMaximizeComponent.qml:117
 #, kde-format
 msgid "Zoom out"
 msgstr "Forminsk"
 
-#: components/AlbumMaximizeComponent.qml:100
+#: components/AlbumMaximizeComponent.qml:123
 #, kde-format
 msgid "Rotate left"
 msgstr "Drei til venstre"
 
-#: components/AlbumMaximizeComponent.qml:106
+#: components/AlbumMaximizeComponent.qml:129
 #, kde-format
 msgid "Rotate right"
 msgstr "Drei til høgre"
 
-#: components/AlbumMaximizeComponent.qml:111
+#: components/AlbumMaximizeComponent.qml:134
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
 msgstr "Vis tekst"
 
-#: components/AlbumMaximizeComponent.qml:111
+#: components/AlbumMaximizeComponent.qml:134
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
 msgstr "Gøym tekst"
 
-#: components/AlbumMaximizeComponent.qml:117
+#: components/AlbumMaximizeComponent.qml:140
 #, kde-format
 msgid "Save as"
 msgstr "Lagra som"
 
-#: components/AlbumMaximizeComponent.qml:172
+#: components/AlbumMaximizeComponent.qml:200
 #, kde-format
 msgid "Previous image"
 msgstr "Førre bilete"
 
-#: components/AlbumMaximizeComponent.qml:186
+#: components/AlbumMaximizeComponent.qml:218
 #, kde-format
 msgid "Next image"
 msgstr "Neste bilete"
 
-#: components/VideoMaximizeDelegate.qml:181
+#: components/Banner.qml:181
+#, kde-format
+msgctxt "@action:button"
+msgid "Close"
+msgstr ""
+
+#: components/DownloadAction.qml:37
+#, kde-format
+msgid "Download"
+msgstr ""
+
+#: components/VideoMaximizeDelegate.qml:233
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
@@ -156,10 +167,10 @@ msgid ""
 "produces the Plasma desktop environment, hundreds of applications, and the "
 "many software libraries that support them.\n"
 msgstr ""
-"KDE er eit verds­femnande felles­skap av eldsjeler som programmerer, "
-"teiknar, komponerer, dokumenterer, set om eller hjelper til på andre måtar "
-"med utvikling av fri programvare. Me har laga brukarflata Plasma, hundrevis "
-"av program og dei mange programbiblioteka desse byggjer på.\n"
+"KDE er eit verds­femnande felles­skap av eldsjeler som programmerer, teiknar, "
+"komponerer, dokumenterer, set om eller hjelper til på andre måtar med "
+"utvikling av fri programvare. Me har laga brukarflata Plasma, hundrevis av "
+"program og dei mange programbiblioteka desse byggjer på.\n"
 
 #: mobileform/AboutKDE.qml:86 mobileform/AboutPage.qml:194
 #, kde-format
@@ -189,9 +200,9 @@ msgid ""
 "You can join the national teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
-"Du treng ikkje vera program­utviklar for å hjelpa til med KDE. Du kan "
-"arbeida med omsetjingar, laga grafikk, tema, lydar eller betre "
-"hjelpetekstar. Her er noko for alle!"
+"Du treng ikkje vera program­utviklar for å hjelpa til med KDE. Du kan arbeida "
+"med omsetjingar, laga grafikk, tema, lydar eller betre hjelpetekstar. Her er "
+"noko for alle!"
 
 #: mobileform/AboutKDE.qml:128 mobileform/AboutPage.qml:212
 #, kde-format

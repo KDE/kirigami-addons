@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-07 00:49+0000\n"
+"POT-Creation-Date: 2023-07-09 00:58+0000\n"
 "PO-Revision-Date: 2023-05-22 17:17+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
@@ -23,49 +23,49 @@ msgstr ""
 msgid "Close"
 msgstr "Fermer"
 
-#: components/AlbumMaximizeComponent.qml:89
+#: components/AlbumMaximizeComponent.qml:112
 #, kde-format
 msgid "Zoom in"
 msgstr "Zoom avant"
 
-#: components/AlbumMaximizeComponent.qml:94
+#: components/AlbumMaximizeComponent.qml:117
 #, kde-format
 msgid "Zoom out"
 msgstr "Zoom arrière"
 
-#: components/AlbumMaximizeComponent.qml:100
+#: components/AlbumMaximizeComponent.qml:123
 #, kde-format
 msgid "Rotate left"
 msgstr "Tourner vers la gauche"
 
-#: components/AlbumMaximizeComponent.qml:106
+#: components/AlbumMaximizeComponent.qml:129
 #, kde-format
 msgid "Rotate right"
 msgstr "Tourner vers la droite"
 
-#: components/AlbumMaximizeComponent.qml:111
+#: components/AlbumMaximizeComponent.qml:134
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
 msgstr "Afficher une légende"
 
-#: components/AlbumMaximizeComponent.qml:111
+#: components/AlbumMaximizeComponent.qml:134
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
 msgstr "Masquer la légende"
 
-#: components/AlbumMaximizeComponent.qml:117
+#: components/AlbumMaximizeComponent.qml:140
 #, kde-format
 msgid "Save as"
 msgstr "Enregistrer sous"
 
-#: components/AlbumMaximizeComponent.qml:172
+#: components/AlbumMaximizeComponent.qml:200
 #, kde-format
 msgid "Previous image"
 msgstr "Image précédente"
 
-#: components/AlbumMaximizeComponent.qml:186
+#: components/AlbumMaximizeComponent.qml:218
 #, kde-format
 msgid "Next image"
 msgstr "Image suivante"
@@ -77,7 +77,12 @@ msgctxt "@action:button"
 msgid "Close"
 msgstr "Fermer"
 
-#: components/VideoMaximizeDelegate.qml:181
+#: components/DownloadAction.qml:37
+#, kde-format
+msgid "Download"
+msgstr ""
+
+#: components/VideoMaximizeDelegate.qml:233
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"

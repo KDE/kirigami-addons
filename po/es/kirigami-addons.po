@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-07 00:49+0000\n"
-"PO-Revision-Date: 2023-05-23 19:14+0200\n"
+"POT-Creation-Date: 2023-07-09 00:58+0000\n"
+"PO-Revision-Date: 2023-07-09 12:32+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,68 +17,72 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: components/AbstractMaximizeComponent.qml:126
 #, kde-format
 msgid "Close"
 msgstr "Cerrar"
 
-#: components/AlbumMaximizeComponent.qml:89
+#: components/AlbumMaximizeComponent.qml:112
 #, kde-format
 msgid "Zoom in"
 msgstr "Ampliar"
 
-#: components/AlbumMaximizeComponent.qml:94
+#: components/AlbumMaximizeComponent.qml:117
 #, kde-format
 msgid "Zoom out"
 msgstr "Reducir"
 
-#: components/AlbumMaximizeComponent.qml:100
+#: components/AlbumMaximizeComponent.qml:123
 #, kde-format
 msgid "Rotate left"
 msgstr "Rotar a la izquierda"
 
-#: components/AlbumMaximizeComponent.qml:106
+#: components/AlbumMaximizeComponent.qml:129
 #, kde-format
 msgid "Rotate right"
 msgstr "Rotar a la derecha"
 
-#: components/AlbumMaximizeComponent.qml:111
+#: components/AlbumMaximizeComponent.qml:134
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
 msgstr "Mostrar leyenda"
 
-#: components/AlbumMaximizeComponent.qml:111
+#: components/AlbumMaximizeComponent.qml:134
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
 msgstr "Ocultar leyenda"
 
-#: components/AlbumMaximizeComponent.qml:117
+#: components/AlbumMaximizeComponent.qml:140
 #, kde-format
 msgid "Save as"
 msgstr "Guardar como"
 
-#: components/AlbumMaximizeComponent.qml:172
+#: components/AlbumMaximizeComponent.qml:200
 #, kde-format
 msgid "Previous image"
 msgstr "Anterior imagen"
 
-#: components/AlbumMaximizeComponent.qml:186
+#: components/AlbumMaximizeComponent.qml:218
 #, kde-format
 msgid "Next image"
 msgstr "Siguiente imagen"
 
 #: components/Banner.qml:181
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button"
 msgid "Close"
 msgstr "Cerrar"
 
-#: components/VideoMaximizeDelegate.qml:181
+#: components/DownloadAction.qml:37
+#, kde-format
+msgid "Download"
+msgstr "Descargar"
+
+#: components/VideoMaximizeDelegate.qml:233
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
