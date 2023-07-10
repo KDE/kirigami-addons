@@ -93,8 +93,7 @@ Kirigami.ApplicationWindow {
 
             header: Components.Banner {
                 title: "My title"
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inde sermone vario sex illa a Dipylo stadia confecimus. In eo enim positum est id, quod dicimus esse expetendum.
-
+                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inde sermone vario sex illa a Dipylo stadia confecimus. In eo enim positum est id, quod dicimus esse expetendum.\n\n\
 Duo Reges: constructio interrete. Primum Theophrasti, Strato, physicum se voluit; Aliter enim explicari, quod quaeritur, non potest. Quamquam id quidem, infinitum est in hac urbe;"
                 type: Kirigami.MessageType.Warning
                 width: page.width
