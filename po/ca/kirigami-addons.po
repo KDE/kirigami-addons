@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-11 00:45+0000\n"
-"PO-Revision-Date: 2023-07-09 10:49+0200\n"
+"PO-Revision-Date: 2023-07-11 10:24+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -147,7 +147,7 @@ msgstr ":"
 #: mobileform/AboutKDE.qml:28
 #, kde-format
 msgid "About KDE"
-msgstr "Quant al KDE"
+msgstr "Quant a KDE"
 
 #: mobileform/AboutKDE.qml:60
 #, kde-format
@@ -160,12 +160,7 @@ msgid "Be Free!"
 msgstr "Sigues lliure!"
 
 #: mobileform/AboutKDE.qml:78
-#, fuzzy, kde-format
-#| msgid ""
-#| "KDE is a world-wide community of software engineers, artists, writers, "
-#| "translators and creators who are committed to Free Software development. "
-#| "KDE produces the Plasma desktop environment, hundreds of applications, "
-#| "and the many software libraries that support them.\n"
+#, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
 "translators and creators who are committed to Free Software development. KDE "
@@ -182,6 +177,12 @@ msgstr ""
 "desenvolupament de programari lliure. KDE produeix l'entorn d'escriptori "
 "Plasma, centenars d'aplicacions i moltes biblioteques de programari que els "
 "donen suport.\n"
+"\n"
+"KDE és una iniciativa cooperativa: cap entitat individual controla la seva "
+"direcció ni els seus productes. Tanmateix, treballem conjuntament per a "
+"aconseguir l'objectiu comú de crear el programari lliure més refinat del "
+"món. Donem la benvinguda a tothom a afegir-se i col·laborar amb KDE, "
+"incloent-vos-hi."
 
 #: mobileform/AboutKDE.qml:86 mobileform/AboutPage.qml:194
 #, kde-format
@@ -202,6 +203,17 @@ msgid ""
 "tracking system to register your wish. Make sure you use the severity called "
 "\"Wishlist\"."
 msgstr ""
+"El programari sempre es pot millorar, i l'equip de KDE està preparat per a "
+"fer-ho. En canvi, vós -l'usuari- heu de dir-nos quan alguna cosa no funciona "
+"tal com s'espera o si es pot fer millor.\n"
+"\n"
+"KDE té un sistema de seguiment d'errors. Utilitzeu el botó de sota per a "
+"informar d'un error, o utilitzeu la pàgina «Quant a» del programa per a "
+"informar d'un error específic d'aquesta aplicació.\n"
+"\n"
+"Si teniu un suggeriment de millora, us convidem a usar el sistema de "
+"seguiment d'errors per a registrar la vostra petició. Assegureu-vos d'usar "
+"el nivell de severitat anomenat «Llista de desitjos» (Wishlist)."
 
 #: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:233
 #, kde-format
@@ -250,6 +262,21 @@ msgid ""
 "\n"
 "Thank you very much in advance for your support."
 msgstr ""
+"KDE és i sempre serà disponible sense càrrecs, però la seva creació no és de "
+"franc.\n"
+"\n"
+"Per a donar suport al desenvolupament la comunitat KDE va formar la KDE e."
+"V., una organització sense ànim de lucre, fundada legalment a Alemanya. La "
+"KDE e.V. representa la comunitat KDE en qüestions legals i financeres.\n"
+"\n"
+"KDE es beneficia de molts tipus de col·laboracions, inclosa la financera. "
+"Els fons obtinguts s'empren per a tornar als seus membres i altres persones "
+"les despeses incorregudes en col·laborar amb KDE. Altres fons s'empren per "
+"al suport legal i per a organitzar conferències i reunions.\n"
+"\n"
+"Us animem a ajudar a els nostres esforços mitjançant una donació monetària.\n"
+"\n"
+"Moltes gràcies per endavant per la vostra ajuda."
 
 #: mobileform/AboutKDE.qml:159
 #, kde-format
@@ -297,19 +324,3 @@ msgstr "Atribucions"
 #, kde-format
 msgid "Translators"
 msgstr "Traductors"
-
-#~ msgid ""
-#~ "Software can always be improved, and the KDE team is ready to do so. "
-#~ "However, you - the user - must tell us when something does not work as "
-#~ "expected or could be done better.\n"
-#~ msgstr ""
-#~ "El programari sempre es pot millorar, i l'equip del KDE està preparat per "
-#~ "a fer-ho. No obstant això, vós -l'usuari- ha de dir-nos quan alguna cosa "
-#~ "no funciona com s'espera o podria fer-se millor.\n"
-
-#~ msgid ""
-#~ "KDE software is and will always be available free of charge, however "
-#~ "creating it is not free.\n"
-#~ msgstr ""
-#~ "El programari de KDE està i sempre estarà disponible de franc, però crear-"
-#~ "lo no és gratuït.\n"
