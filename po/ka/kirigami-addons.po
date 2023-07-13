@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-11 00:45+0000\n"
-"PO-Revision-Date: 2023-07-10 07:23+0200\n"
+"PO-Revision-Date: 2023-07-12 06:20+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -158,12 +158,7 @@ msgid "Be Free!"
 msgstr "იყავით თავისუფალი!"
 
 #: mobileform/AboutKDE.qml:78
-#, fuzzy, kde-format
-#| msgid ""
-#| "KDE is a world-wide community of software engineers, artists, writers, "
-#| "translators and creators who are committed to Free Software development. "
-#| "KDE produces the Plasma desktop environment, hundreds of applications, "
-#| "and the many software libraries that support them.\n"
+#, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
 "translators and creators who are committed to Free Software development. KDE "
@@ -180,6 +175,11 @@ msgstr ""
 "უფასო პროგრამული უზრუნველყოფის განვითარებისთვის. KDE აწარმოებს პლაზმური "
 "დესკტოპის გარემოს, ასობით აპლიკაციას და ბევრ პროგრამულ ბიბლიოთეკს, რომლებიც "
 "მხარს უჭერენ მათ.\n"
+"\n"
+"KDE კოოპერატიული საწარმოა: პროდუქტების მიმართულებას ერთი ადამიანი არ "
+"აკონტროლებს. პირიქით, ჩვენ ერთად ვმუშაობთ, რათა მსოფლიოში საუკეთესო "
+"თავისუფალი პროგრამები შევქმნათ. KDE-ის საზოგადოებაში ყველას მივესალმებით, "
+"თქვენი ჩათვლით."
 
 #: mobileform/AboutKDE.qml:86 mobileform/AboutPage.qml:194
 #, kde-format

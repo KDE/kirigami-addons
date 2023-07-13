@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-11 00:45+0000\n"
-"PO-Revision-Date: 2023-05-22 17:47+0100\n"
+"PO-Revision-Date: 2023-07-13 00:52+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -79,7 +79,7 @@ msgstr "Fechar"
 #: components/DownloadAction.qml:37
 #, kde-format
 msgid "Download"
-msgstr ""
+msgstr "Obter"
 
 #: components/VideoMaximizeDelegate.qml:233
 #, kde-format
@@ -158,12 +158,7 @@ msgid "Be Free!"
 msgstr "Seja Livre!"
 
 #: mobileform/AboutKDE.qml:78
-#, fuzzy, kde-format
-#| msgid ""
-#| "KDE is a world-wide community of software engineers, artists, writers, "
-#| "translators and creators who are committed to Free Software development. "
-#| "KDE produces the Plasma desktop environment, hundreds of applications, "
-#| "and the many software libraries that support them.\n"
+#, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
 "translators and creators who are committed to Free Software development. KDE "
@@ -179,7 +174,12 @@ msgstr ""
 "escritores, tradutores e criadores que estão comprometidos com o "
 "desenvolvimento de 'software' livre. O KDE produz o ambiente de trabalho "
 "Plasma, centenas de aplicações e uma enorme quantidade bibliotecas de "
-"'software' que dão suporte às mesmas.\n"
+"'software' que dão suporte às mesmas\n"
+"\n"
+"O KDE é uma empresa corporativa: nenhuma entidade única controla a sua "
+"direcção ou produtos. Em vez disso, trabalhamos em conjunto para obter o "
+"objectivo comum de criar o melhor Software Livre do mundo. Todos são bem-"
+"vindos para se juntarem e contribuírem para o KDE, incluindo-o a si."
 
 #: mobileform/AboutKDE.qml:86 mobileform/AboutPage.qml:194
 #, kde-format
@@ -200,6 +200,17 @@ msgid ""
 "tracking system to register your wish. Make sure you use the severity called "
 "\"Wishlist\"."
 msgstr ""
+"As aplicações podem sempre ser melhoradas, e a equipa do KDE está disponível "
+"para fazê-lo. Contudo você - o utilizador - deve-nos indicar quando algo não "
+"faz o que seria esperado ou que poderia ser feito de melhor forma.\n"
+"\n"
+"O KDE tem um sistema de registo de erros. Use o botão abaixo para comunicar "
+"um erro ou use a página 'Acerca' do programa para comunicar um erro "
+"específico desta aplicação.\n"
+"\n"
+"Se tiver uma sugestão de melhoria, então é bem-vindo para usar o sistema de "
+"registo de erros para registar o seu pedido. Certifique-se que usa o nível "
+"de criticidade \"Pedido\"."
 
 #: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:233
 #, kde-format
@@ -248,6 +259,22 @@ msgid ""
 "\n"
 "Thank you very much in advance for your support."
 msgstr ""
+"As aplicações do KDE são e sempre serão disponíveis sem quaisquer encargos; "
+"contudo, a sua criação não é gratuita.\n"
+"\n"
+"Para apoiar o desenvolvimento, a comunidade do KDE criou o KDE e.V., uma "
+"organização sem fins lucrativos, criada legalmente na Alemanha. O KDE e.V. "
+"representa a comunidade do KDE a nível legal e financeiro.\n"
+"\n"
+"O KDE benefiicia com vários tipos de contribuições, incluindo as "
+"financeiras. Usamos o financiamento para reembolsar os membros e outras "
+"pessoas pelas despesas na contribuição. Alguns dos fundos são usados para "
+"apoio legal e para organizar conferências e reuniões.\n"
+"\n"
+"Gostaríamos de o encorajar a apoiar os nossos esforços com uma doação "
+"financeira.\n"
+"\n"
+"Desde já, muito obrigado pelo seu apoio."
 
 #: mobileform/AboutKDE.qml:159
 #, kde-format
@@ -295,20 +322,3 @@ msgstr "Créditos"
 #, kde-format
 msgid "Translators"
 msgstr "Tradutores"
-
-#~ msgid ""
-#~ "Software can always be improved, and the KDE team is ready to do so. "
-#~ "However, you - the user - must tell us when something does not work as "
-#~ "expected or could be done better.\n"
-#~ msgstr ""
-#~ "As aplicações poderão sempre ser melhoradas, e a equipa do KDE está "
-#~ "disponível para o fazer. Contudo, você - o utilizador - deve-nos indicar "
-#~ "quando algo não funciona como seria de esperar ou como poderia funcionar "
-#~ "melhor.\n"
-
-#~ msgid ""
-#~ "KDE software is and will always be available free of charge, however "
-#~ "creating it is not free.\n"
-#~ msgstr ""
-#~ "As aplicações do KDE são e sempre serão disponíveis sem qualquer encargo; "
-#~ "contudo, a sua criação não é de graça.\n"
