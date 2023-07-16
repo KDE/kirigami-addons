@@ -5,6 +5,7 @@ ecm_add_qml_module(componentsplugin URI "org.kde.kirigamiaddons.labs.components"
 
 configure_file(AbstractMaximizeComponent.qml ${CMAKE_CURRENT_BINARY_DIR}/AbstractMaximizeComponent.qml)
 configure_file(AlbumMaximizeComponent.qml ${CMAKE_CURRENT_BINARY_DIR}/AlbumMaximizeComponent.qml)
+configure_file(Avatar.qml ${CMAKE_CURRENT_BINARY_DIR}/Avatar.qml)
 
 
 target_sources(componentsplugin PRIVATE
@@ -12,7 +13,7 @@ target_sources(componentsplugin PRIVATE
 )
 
 ecm_target_qml_sources(componentsplugin SOURCES
-    SearchPopupField.qml
+    ${CMAKE_CURRENT_BINARY_DIR}/Avatar.qml
     ${CMAKE_CURRENT_BINARY_DIR}/AbstractMaximizeComponent.qml
     ${CMAKE_CURRENT_BINARY_DIR}/AlbumMaximizeComponent.qml
     ImageMaximizeDelegate.qml
@@ -20,6 +21,7 @@ ecm_target_qml_sources(componentsplugin SOURCES
     AlbumModelItem.qml
     Banner.qml
     DownloadAction.qml
+    SearchPopupField.qml
 )
 
 target_link_libraries(componentsplugin
