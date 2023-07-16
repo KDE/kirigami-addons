@@ -113,3 +113,5 @@ void AndroidIntegration::showTimePicker(qint64 initialTime)
     QAndroidJniObject picker("org/kde/kirigamiaddons/dateandtime/TimePicker", "(Landroid/app/Activity;J)V", activity.object(), initialTime);
     picker.callMethod<void>("doShow");
 }
+
+#include "moc_androidintegration.cpp"

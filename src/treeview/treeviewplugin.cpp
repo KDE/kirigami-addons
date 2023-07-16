@@ -58,3 +58,5 @@ void TreeViewPlugin::registerTypes(const char *uri)
 }
 
 #include "treeviewplugin.moc"
+
+#include "moc_treeviewplugin.cpp"

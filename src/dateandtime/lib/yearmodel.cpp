@@ -58,3 +58,5 @@ QVariant YearModel::data(const QModelIndex &index, int role) const
     return QVariant();
 }
 
+
+#include "moc_yearmodel.cpp"

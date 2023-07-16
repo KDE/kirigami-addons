@@ -159,3 +159,5 @@ void SoundsPickerModel::rearrangeRingtoneOrder()
         }
     }
 }
+
+#include "moc_soundspickermodel.cpp"

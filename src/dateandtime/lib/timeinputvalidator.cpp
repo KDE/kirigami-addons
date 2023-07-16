@@ -101,3 +101,5 @@ void TimeInputValidator::setFormat(const QString &format)
     d->format = format;
     Q_EMIT formatChanged();
 }
+
+#include "moc_timeinputvalidator.cpp"

@@ -239,3 +239,5 @@ void InfiniteCalendarViewModel::setScale(int scale)
 
     endResetModel();
 }
+
+#include "moc_infinitecalendarviewmodel.cpp"
