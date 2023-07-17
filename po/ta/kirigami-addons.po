@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-11 00:45+0000\n"
-"PO-Revision-Date: 2023-05-21 15:12+0530\n"
+"PO-Revision-Date: 2023-07-16 14:43+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: components/AbstractMaximizeComponent.qml:126
 #, kde-format
@@ -70,8 +70,7 @@ msgid "Next image"
 msgstr "அடுத்த படம்"
 
 #: components/Banner.qml:181
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button"
 msgid "Close"
 msgstr "மூடு"
@@ -79,7 +78,7 @@ msgstr "மூடு"
 #: components/DownloadAction.qml:37
 #, kde-format
 msgid "Download"
-msgstr ""
+msgstr "பதிவிறக்கு"
 
 #: components/VideoMaximizeDelegate.qml:233
 #, kde-format
@@ -158,12 +157,7 @@ msgid "Be Free!"
 msgstr "சுதந்திரமாக இரு"
 
 #: mobileform/AboutKDE.qml:78
-#, fuzzy, kde-format
-#| msgid ""
-#| "KDE is a world-wide community of software engineers, artists, writers, "
-#| "translators and creators who are committed to Free Software development. "
-#| "KDE produces the Plasma desktop environment, hundreds of applications, "
-#| "and the many software libraries that support them.\n"
+#, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
 "translators and creators who are committed to Free Software development. KDE "
@@ -175,10 +169,14 @@ msgid ""
 "the world's finest Free Software. Everyone is welcome to join and contribute "
 "to KDE, including you."
 msgstr ""
-"கே.டீ.யீ. என்பது, கட்டற்ற மென்பொருளின்பால் ஆர்வங்கொண்ட நிரலாளர்களின், கலைஞர்களின், "
-"எழுத்தாளர்களின், மற்றும் மொழிபெயர்ப்பாளர்களின் உலகலாவிய சமூகம் ஆகும். பிளாஸ்மா "
-"பணிமேடையையும், நூற்றுக்கணக்கான செயலிகளையும், அவற்றுக்குத் தேவையான நிரலகங்களையும் கே.டீ."
-"யீ. உருவாக்குகிறது.\n"
+"கே.டீ.யீ. என்பது,  கட்டற்ற மென்பொருள் உருவாக்கத்திற்கு அர்பணிப்புக் கொண்ட மென்பொருள் "
+"பொறிஞர்கள், கலைஞர்கள், எழுத்தாளர்கள், மொழிபெயர்ப்பாளர்கள் மற்றும் படைப்பாலிகளைக் கொண்ட "
+"உலகளாவிய குழு ஆகும். பிளாஸ்மா பணிமேடை சூழல், நூற்றுக்கணக்கான செயலிகள், மற்றும் அவற்றை "
+"ஆதரிக்கும் பல நிரலகங்களை கே.டீ.யீ. உருவாக்குகிறது.\n"
+"\n"
+" கே.டீ.யீ. ஒரு கூட்டுறவு அமைப்பாகும்: எந்தவொரு தனிப்பட்ட நிறுவனமோ நபரோ அதன் நோக்கத்தையோ "
+"படைப்புக்களையோ கட்டுப்படுத்துவதில்லை. கே.டீ.யீ.-யில் நீங்கள் உட்பட எவரேனும் இணைந்து "
+"பங்களிக்கலாம்."
 
 #: mobileform/AboutKDE.qml:86 mobileform/AboutPage.qml:194
 #, kde-format
@@ -199,6 +197,14 @@ msgid ""
 "tracking system to register your wish. Make sure you use the severity called "
 "\"Wishlist\"."
 msgstr ""
+"எந்த மென்பொருளும் மேம்படுத்தத் தக்கதே. கே.டீ.யீ. குழு அதனைச் செய்ய தயாராக உள்ளது. ஆயினும் "
+"பயனராகிய நீங்கள், எதிர்பார்த்தப்படி வேலை செய்யாதவை குறித்தும், இன்னும் சிறப்பாகச் "
+"செய்யக்கூடியவை குறித்தும் எங்களுக்கு தெரியப்படுத்த வேண்டும்.\n"
+"\n"
+"கே.டீ.யீ.க்கு, பிழைகளை கண்காணிக்கும் அமைப்பொன்று உள்ளது. கீழுள்ள பட்டனைக் கொண்டோ, "
+"குறிப்பிட்ட நிரலின் 'பற்றி' பக்கத்தையோ கொண்டு பிழையறிக்கைகளை பதிவுசெய்யலாம்.நீங்கள் "
+"விரும்பும் மாற்றங்களை பரிந்துரைக்கக் கூட பிழைகளை கண்காணிக்கும் அமைப்பினைப் பயன்படுத்தலாம். "
+"அப்படி தெரிவிக்கும்போது, \"Wishlist\" என்ற முக்கியத்துவத்தை தேர்ந்தெடுங்கள்."
 
 #: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:233
 #, kde-format
@@ -246,6 +252,19 @@ msgid ""
 "\n"
 "Thank you very much in advance for your support."
 msgstr ""
+"கேடீயீ. மென்பொருட்கள் இலவசமாகக் கிடைக்கிறது, மேலும் எப்பொழுதும் இலவசமாகவே கிடைக்கும். "
+"ஆனால் அதனை உருவாக்குவது இலவசமல்ல.\n"
+"\n"
+"உருவாக்கத்தினை தொடர்ந்து ஆதரிக்க, கே.டீ.யீ. சமூகம், KDE e.V. எனும் லாப நோக்கற்ற அமைப்பை "
+"ஜெர்மனியில் சட்டபூர்வமாக தொடங்கியுள்ளது. KDE e.V. ஆனது கே.டீ.யீ. சமூகத்தை சட்ட பூர்வமான "
+"மற்றும் நிதி ரீதியான விஷயங்களில் பிரதிபலிக்கிறது.\n"
+"\n"
+"நிதி உள்ளிட்ட பல்வேறு பங்களிப்புகளால் கே.டீ.யீ. பயனடைகிறது. நாங்கள் இந்நிதியினை, "
+"பங்களிக்கும் போது ஏற்படும் செலவுகளுக்காக உறுப்பினர்களுக்கும் மற்றோருக்கும் வழங்குகிறோம். "
+"எஞ்சியிருக்கும் நிதி, சட்ட ஆதரவிற்கும் மாநாடுகளை நடத்தவும் பயன்படுத்தப்படுகிறது. <br /> "
+"எங்களது முயற்சிகளுக்கு நிதியளித்து ஆதரிக்க உங்களை ஊக்குவிக்க விரும்புகிறோம்.\n"
+"\n"
+"உங்களுடைய ஆதரவிற்கு முன்கூட்டியே நன்றி."
 
 #: mobileform/AboutKDE.qml:159
 #, kde-format
