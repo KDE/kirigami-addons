@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-11 00:45+0000\n"
-"PO-Revision-Date: 2023-07-03 11:39\n"
+"PO-Revision-Date: 2023-07-18 11:12\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -70,8 +70,7 @@ msgid "Next image"
 msgstr "下一张图像"
 
 #: components/Banner.qml:181
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button"
 msgid "Close"
 msgstr "关闭"
@@ -79,7 +78,7 @@ msgstr "关闭"
 #: components/DownloadAction.qml:37
 #, kde-format
 msgid "Download"
-msgstr ""
+msgstr "下载"
 
 #: components/VideoMaximizeDelegate.qml:233
 #, kde-format
@@ -158,12 +157,7 @@ msgid "Be Free!"
 msgstr "为自由而生！"
 
 #: mobileform/AboutKDE.qml:78
-#, fuzzy, kde-format
-#| msgid ""
-#| "KDE is a world-wide community of software engineers, artists, writers, "
-#| "translators and creators who are committed to Free Software development. "
-#| "KDE produces the Plasma desktop environment, hundreds of applications, "
-#| "and the many software libraries that support them.\n"
+#, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
 "translators and creators who are committed to Free Software development. KDE "
@@ -175,10 +169,14 @@ msgid ""
 "the world's finest Free Software. Everyone is welcome to join and contribute "
 "to KDE, including you."
 msgstr ""
-"KDE 是由一群致力于自由软件的人们所组成的全球性协作社区。它的成员包括了来自世"
-"界各地的软件工程师、艺术工作者、文字工作者、翻译人员和其他创意人员。KDE 社区"
-"开发了 Plasma 桌面环境、数百款功能各异的应用软件、以及用于支持它们的大量程序"
-"库。\n"
+"KDE 是由一群致力于自由软件事业的人们所组成的全球性协作社区。它的成员包括了来"
+"自世界各地的软件工程师、艺术工作者、文字工作者、翻译人员和其他创意人员。KDE "
+"社区开发了 Plasma 桌面环境、数百款功能各异的应用软件、以及用于支持它们的大量"
+"程序库。\n"
+"\n"
+"KDE 是一项立足于协作精神的事业，它的运作和产出不受任何单一个人或者机构的控"
+"制。我们的共同目标是为全世界带来高品质的自由软件。不管您来自何方，我们都欢迎"
+"您加入 KDE 并做出贡献。"
 
 #: mobileform/AboutKDE.qml:86 mobileform/AboutPage.qml:194
 #, kde-format
@@ -199,6 +197,15 @@ msgid ""
 "tracking system to register your wish. Make sure you use the severity called "
 "\"Wishlist\"."
 msgstr ""
+"KDE 团队一直致力于改进软件的品质。为了做到这一点，倾听来自用户的反馈非常重"
+"要。如果您遇到了软件不能正常工作的情况，请务必告诉我们。如果您有关于改进软件"
+"的想法，也请与我们分享。\n"
+"\n"
+"Krita 的程序缺陷报告由 KDE 的程序缺陷跟踪系统负责管理。请点击下面的按钮，或者"
+"通过应用程序的“帮助”菜单中的“报告缺陷”对程序话框填写报告。\n"
+"\n"
+"如果您想要提出改进建议而不是报告程序缺陷，请确保在表格的 Severity (严重程度) "
+"选单中选择“Wishlist (需求)”。"
 
 #: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:233
 #, kde-format
@@ -246,6 +253,18 @@ msgid ""
 "\n"
 "Thank you very much in advance for your support."
 msgstr ""
+"KDE 开发的软件是自由且免费的，但是开发这些软件必须投入大量人力物力。\n"
+"\n"
+"为了支持软件的开发工作，KDE 社区成立了非营利机构 KDE e.V. ，它是在德国合法注"
+"册的协会组织。KDE e.V. 代表 KDE 社区进行法务和财务工作。\n"
+"\n"
+"KDE 的正常运作需要来自各方面的支持，其中资金支持也是必不可少的。我们的经费主"
+"要用于补贴团队成员和其他人员在为 KDE 进行贡献时的开支，其次则是满足法务支持和"
+"组织活动所需的开支。\n"
+"\n"
+"我们期待您能通过捐助资金的方式来支持 KDE 的运作和发展。\n"
+"\n"
+"您的慷慨支持，我们必当涌泉相报。"
 
 #: mobileform/AboutKDE.qml:159
 #, kde-format
@@ -292,18 +311,3 @@ msgstr "鸣谢"
 #, kde-format
 msgid "Translators"
 msgstr "翻译人员"
-
-#~ msgid ""
-#~ "Software can always be improved, and the KDE team is ready to do so. "
-#~ "However, you - the user - must tell us when something does not work as "
-#~ "expected or could be done better.\n"
-#~ msgstr ""
-#~ "KDE 团队一直致力于改进软件的品质。为了做到这一点，倾听来自用户的反馈非常重"
-#~ "要。如果遇到软件不能正常工作，请务必告诉我们。如果您有关于改进软件的想法，"
-#~ "也请与我们分享。\n"
-
-#~ msgid ""
-#~ "KDE software is and will always be available free of charge, however "
-#~ "creating it is not free.\n"
-#~ msgstr ""
-#~ "KDE 开发的软件是自由且免费的，但是开发这些软件必须投入大量人力物力。\n"
