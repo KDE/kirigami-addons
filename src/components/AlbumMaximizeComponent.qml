@@ -121,13 +121,13 @@ AbstractMaximizeComponent {
         Kirigami.Action {
             visible: view.currentItem.type === AlbumModelItem.Image
             text: i18n("Rotate left")
-            icon.name: "image-rotate-left-symbolic"
+            icon.name: "object-rotate-left"
             onTriggered: view.currentItem.rotationAngle = view.currentItem.rotationAngle - 90
         },
         Kirigami.Action {
             visible: view.currentItem.type === AlbumModelItem.Image
             text: i18n("Rotate right")
-            icon.name: "image-rotate-right-symbolic"
+            icon.name: "object-rotate-right"
             onTriggered: view.currentItem.rotationAngle = view.currentItem.rotationAngle + 90
         },
         Kirigami.Action {
