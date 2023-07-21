@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-11 00:45+0000\n"
+"POT-Creation-Date: 2023-07-20 00:47+0000\n"
 "PO-Revision-Date: 2023-07-12 13:05+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -72,7 +72,7 @@ msgstr "Førre bilete"
 msgid "Next image"
 msgstr "Neste bilete"
 
-#: components/Banner.qml:181
+#: components/Banner.qml:185
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
