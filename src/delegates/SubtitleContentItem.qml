@@ -14,20 +14,31 @@ RowLayout {
     required property string subtitle
     property bool bold: false
 
+    readonly property alias labelItem: labelItem
+    readonly property alias subtitleItem: subtitleItem
+    readonly property alias iconItem: iconItem
+
     spacing: Kirigami.Units.smallSpacing
 
     Kirigami.Icon {
+        id: iconItem
         Layout.alignment: Qt.AlignVCenter
         visible: itemDelegate.icon.name.length > 0 || itemDelegate.icon.source.toString().length > 0
         source: itemDelegate.icon.name.length > 0 ? itemDelegate.icon.name : itemDelegate.icon.source
+
         Layout.preferredHeight: itemDelegate.icon.width
         Layout.preferredWidth: itemDelegate.icon.height
+        Layout.leftMargin: Kirigami.Units.smallSpacing
+        Layout.rightMargin: Kirigami.Units.smallSpacing
     }
 
     ColumnLayout {
         Layout.fillWidth: true
+        spacing: 0
 
         QQC2.Label {
+            id: labelItem
+
             leftPadding: itemDelegate.mirrored ? (itemDelegate.indicator ? itemDelegate.indicator.width : 0) + itemDelegate.spacing : 0
             rightPadding: !itemDelegate.mirrored ? (itemDelegate.indicator ? itemDelegate.indicator.width : 0) + itemDelegate.spacing : 0
 
