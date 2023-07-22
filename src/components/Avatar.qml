@@ -7,7 +7,7 @@
 
 import QtQuick 2.15
 import QtQuick.Window 2.15
-import @QTGRAPHICALEFFECTS_MODULE@
+import @QTGRAPHICALEFFECTS_MODULE@ as GE
 import org.kde.kirigami 2.15 as Kirigami
 import org.kde.kirigami.private 2.14 as KP
 
@@ -166,7 +166,7 @@ Item {
                 color: root.color
             }
 
-            color: Qt.rgba(border.color.r, border.color.g, border.color.b, 0.07)
+            color: Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, border.color, 0.07)
         }
 
         // contentItem
