@@ -172,7 +172,7 @@ T.ToolBar {
             Layout.fillWidth: true
             Layout.fillHeight: true
             Layout.minimumHeight: closeButton.visible ? closeButton.implicitWidth : Kirigami.Units.iconSizes.medium
-            Layout.alignment: heading.text.length > 0 || label.lineCount > 1 ? Qt.AlignTop : Qt.Baseline
+            Layout.alignment: heading.text.length > 0 || label.lineCount > 1 ? Qt.AlignTop : Qt.AlignBaseline
 
             Layout.row: heading.visible ? 1 : 0
             Layout.column: 1
