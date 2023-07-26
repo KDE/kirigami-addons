@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-20 00:47+0000\n"
-"PO-Revision-Date: 2023-06-02 08:40+0200\n"
+"PO-Revision-Date: 2023-07-13 21:37+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: components/AbstractMaximizeComponent.qml:126
 #, kde-format
@@ -70,8 +70,7 @@ msgid "Next image"
 msgstr "Immagine successiva"
 
 #: components/Banner.qml:185
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button"
 msgid "Close"
 msgstr "Chiudi"
@@ -79,7 +78,7 @@ msgstr "Chiudi"
 #: components/DownloadAction.qml:37
 #, kde-format
 msgid "Download"
-msgstr ""
+msgstr "Scarica"
 
 #: components/VideoMaximizeDelegate.qml:233
 #, kde-format
@@ -158,12 +157,7 @@ msgid "Be Free!"
 msgstr "Vivi libero."
 
 #: mobileform/AboutKDE.qml:78
-#, fuzzy, kde-format
-#| msgid ""
-#| "KDE is a world-wide community of software engineers, artists, writers, "
-#| "translators and creators who are committed to Free Software development. "
-#| "KDE produces the Plasma desktop environment, hundreds of applications, "
-#| "and the many software libraries that support them.\n"
+#, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
 "translators and creators who are committed to Free Software development. KDE "
@@ -179,6 +173,11 @@ msgstr ""
 "traduttori e autori che si dedicano allo sviluppo di software libero. KDE "
 "produce l'ambiente desktop Plasma, centinaia di applicazioni e le varie "
 "librerie software che li supportano.\n"
+"\n"
+"KDE è un'impresa cooperativa: nessuna singola entità controlla la sua "
+"direzione o i prodotti. Lavoriamo invece insieme per raggiungere l'obiettivo "
+"comune di costruire il miglior software libero del mondo. Chiunque è "
+"invitato a unirsi e contribuire a KDE, incluso tu."
 
 #: mobileform/AboutKDE.qml:86 mobileform/AboutPage.qml:194
 #, kde-format
@@ -199,6 +198,17 @@ msgid ""
 "tracking system to register your wish. Make sure you use the severity called "
 "\"Wishlist\"."
 msgstr ""
+"Il software può sempre essere migliorato. La squadra di KDE è pronta a farlo "
+"tuttavia, tu, l'utente, dovresti dirci quando qualcosa non funziona come "
+"previsto, oppure quando potrebbe essere migliorata.\n"
+"\n"
+"KDE ha un sistema di tracciamento dei bug. Usa il pulsante qui sotto per "
+"segnalare un bug, oppure la pagina Informazioni su per riportarne uno "
+"specifico di questa applicazione.\n"
+"\n"
+"Se hai un suggerimento migliorativo, allora sei incoraggiato a utilizzare il "
+"sistema di tracciamento dei bug per registrarlo. Assicurati di utilizzare il "
+"livello di gravità (severity) chiamato «Wishlist»."
 
 #: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:233
 #, kde-format
@@ -247,6 +257,21 @@ msgid ""
 "\n"
 "Thank you very much in advance for your support."
 msgstr ""
+"Il software di KDE è e sarà sempre gratuitamente disponibile, ma scriverlo "
+"costa.\n"
+"\n"
+"Per supportarne lo sviluppo, la comunità di KDE ha formato la KDE e.V., "
+"un'organizzazione senza fini di lucro con sede legale in Germania. La KDE e."
+"V. rappresenta la comunità di KDE nelle questioni legali ed economiche.\n"
+"\n"
+"Consulta  per maggiori informazioni al riguardo.<br/><br/>KDE beneficia di "
+"diverse fonti di contributi, anche economiche. Usiamo i fondi per rimborsare "
+"i membri, e altri delle spese sostenute per il loro contributo. Altri fondi "
+"sono usati per il supporto legale, e per organizzare conferenze e incontri.\n"
+"\n"
+"Vorremmo incoraggiarti a sostenere i nostri sforzi con una donazione.\n"
+"\n"
+"Grazie in anticipo per il tuo supporto."
 
 #: mobileform/AboutKDE.qml:159
 #, kde-format
