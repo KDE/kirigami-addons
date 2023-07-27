@@ -35,7 +35,7 @@ QQC2.ItemDelegate {
 
     padding: Kirigami.Units.mediumSpacing
 
-    horizontalPadding: padding + Kirigami.Units.smallSpacing / 2
+    horizontalPadding: padding + Math.round(Kirigami.Units.smallSpacing / 2)
     leftPadding: horizontalPadding
     rightPadding: horizontalPadding
 
@@ -43,8 +43,8 @@ QQC2.ItemDelegate {
     topPadding: verticalPadding
     bottomPadding: verticalPadding
 
-    topInset: Kirigami.Units.smallSpacing / 2
-    bottomInset: Kirigami.Units.smallSpacing / 2
+    topInset: Math.round(Kirigami.Units.smallSpacing / 2)
+    bottomInset: Math.round(Kirigami.Units.smallSpacing / 2)
     rightInset: Kirigami.Units.smallSpacing
     leftInset: Kirigami.Units.smallSpacing
 

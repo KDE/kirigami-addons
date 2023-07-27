@@ -188,7 +188,7 @@ Item {
                 font {
                     // this ensures we don't get a both point and pixel size are set warning
                     pointSize: -1
-                    pixelSize: (root.height - Kirigami.Units.largeSpacing) / 2
+                    pixelSize: Math.round((root.height - Kirigami.Units.largeSpacing) / 2)
                 }
                 fontSizeMode: Text.Fit
                 verticalAlignment: Text.AlignVCenter
