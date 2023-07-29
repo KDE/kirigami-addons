@@ -70,8 +70,7 @@ msgid "Next image"
 msgstr "Následující obrázek"
 
 #: components/Banner.qml:185
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button"
 msgid "Close"
 msgstr "Zavřít"
@@ -79,7 +78,7 @@ msgstr "Zavřít"
 #: components/DownloadAction.qml:37
 #, kde-format
 msgid "Download"
-msgstr ""
+msgstr "Stáhnout"
 
 #: components/VideoMaximizeDelegate.qml:233
 #, kde-format
