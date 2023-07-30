@@ -41,6 +41,8 @@ RowLayout {
     spacing: Kirigami.Units.smallSpacing
 
     Kirigami.Icon {
+        id: iconItem
+
         Layout.alignment: Qt.AlignVCenter
         visible: itemDelegate.icon.name.length > 0 || itemDelegate.icon.source.toString().length > 0
         source: itemDelegate.icon.name.length > 0 ? itemDelegate.icon.name : itemDelegate.icon.source
