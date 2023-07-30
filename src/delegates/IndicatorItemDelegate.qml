@@ -55,7 +55,12 @@ QQC2.ItemDelegate {
 
     background: Rectangle {
         color: if (root.highlighted || root.checked || (root.down && !root.checked) || root.visualFocus) {
-            Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.highlightColor, 0.15)
+            const highlight = Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.highlightColor, 0.15);
+            if (root.hovered) {
+                Kirigami.ColorUtils.tintWithAlpha(highlight, Kirigami.Theme.textColor, 0.10)
+            } else {
+                highlight
+            }
         } else if (root.hovered) {
             Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.10)
         } else {
