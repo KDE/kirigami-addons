@@ -1,92 +1,91 @@
-# Copyright (C) YEAR This file is copyright:
+# translation of kirigami-addons.pot to esperanto
+# Copyright (C) 2023 Free Software Foundation, Inc.
 # This file is distributed under the same license as the kirigami-addons package.
+# Oliver Kellogg <okellogg@users.sourceforge.net, 2023.
 #
-# Thiago Masato Costa Sueto <herzenschein@gmail.com>, 2021.
-# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2021, 2022, 2023.
-# Geraldo Simiao <geraldosimiao@fedoraproject.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-20 00:47+0000\n"
-"PO-Revision-Date: 2023-07-29 13:29-0300\n"
-"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
-"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
-"Language: pt_BR\n"
+"PO-Revision-Date: 2023-07-29 12:25+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
+"Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: components/AbstractMaximizeComponent.qml:126
 #, kde-format
 msgid "Close"
-msgstr "Fechar"
+msgstr "Fermi"
 
 #: components/AlbumMaximizeComponent.qml:112
 #, kde-format
 msgid "Zoom in"
-msgstr "Ampliar"
+msgstr "Zomi"
 
 #: components/AlbumMaximizeComponent.qml:117
 #, kde-format
 msgid "Zoom out"
-msgstr "Reduzir"
+msgstr "Malzomi"
 
 #: components/AlbumMaximizeComponent.qml:123
 #, kde-format
 msgid "Rotate left"
-msgstr "Girar à esquerda"
+msgstr "Rotacii maldekstren"
 
 #: components/AlbumMaximizeComponent.qml:129
 #, kde-format
 msgid "Rotate right"
-msgstr "Girar à direita"
+msgstr "Rotacii dekstren"
 
 #: components/AlbumMaximizeComponent.qml:134
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
-msgstr "Mostrar legenda"
+msgstr "Montri bildotekston"
 
 #: components/AlbumMaximizeComponent.qml:134
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
-msgstr "Ocultar legenda"
+msgstr "Kaŝi bildotekston"
 
 #: components/AlbumMaximizeComponent.qml:140
 #, kde-format
 msgid "Save as"
-msgstr "Salvar como"
+msgstr "Konservi kiel"
 
 #: components/AlbumMaximizeComponent.qml:200
 #, kde-format
 msgid "Previous image"
-msgstr "Imagem anterior"
+msgstr "Antaŭa bildo"
 
 #: components/AlbumMaximizeComponent.qml:218
 #, kde-format
 msgid "Next image"
-msgstr "Próxima imagem"
+msgstr "Sekva bildo"
 
 #: components/Banner.qml:185
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr "Fechar"
+msgstr "Fermi"
 
 #: components/DownloadAction.qml:37
 #, kde-format
 msgid "Download"
-msgstr "Baixar"
+msgstr "Elŝuti"
 
 #: components/VideoMaximizeDelegate.qml:233
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
-msgstr "Volume"
+msgstr "Laŭteco"
 
 #: dateandtime/DatePicker.qml:141
 #, kde-format
@@ -98,44 +97,44 @@ msgstr "%1 %2"
 #, kde-format
 msgctxt "kirigami-addons"
 msgid "Days"
-msgstr "Dias"
+msgstr "Tagoj"
 
 #: dateandtime/DatePicker.qml:190
 #, kde-format
 msgctxt "kirigami-addons"
 msgid "Months"
-msgstr "Meses"
+msgstr "Monatoj"
 
 #: dateandtime/DatePicker.qml:196
 #, kde-format
 msgctxt "kirigami-addons"
 msgid "Years"
-msgstr "Anos"
+msgstr "Jaroj"
 
 #: dateandtime/DatePopup.qml:55
 #, kde-format
 msgid "Previous"
-msgstr "Anterior"
+msgstr "Antaŭa"
 
 #: dateandtime/DatePopup.qml:64
 #, kde-format
 msgid "Today"
-msgstr "Hoje"
+msgstr "Hodiaŭ"
 
 #: dateandtime/DatePopup.qml:73
 #, kde-format
 msgid "Next"
-msgstr "Próximo"
+msgstr "Poste"
 
 #: dateandtime/DatePopup.qml:92
 #, kde-format
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Nuligi"
 
 #: dateandtime/DatePopup.qml:101
 #, kde-format
 msgid "Accept"
-msgstr "Aceitar"
+msgstr "Akcepti"
 
 #: dateandtime/private/TumblerTimePicker.qml:88
 #, kde-format
@@ -146,7 +145,7 @@ msgstr ":"
 #: mobileform/AboutKDE.qml:28
 #, kde-format
 msgid "About KDE"
-msgstr "Sobre o KDE"
+msgstr "Pri KDE"
 
 #: mobileform/AboutKDE.qml:60
 #, kde-format
@@ -156,7 +155,7 @@ msgstr "KDE"
 #: mobileform/AboutKDE.qml:69
 #, kde-format
 msgid "Be Free!"
-msgstr "Seja livre!"
+msgstr "Estu libera!"
 
 #: mobileform/AboutKDE.qml:78
 #, kde-format
@@ -171,20 +170,20 @@ msgid ""
 "the world's finest Free Software. Everyone is welcome to join and contribute "
 "to KDE, including you."
 msgstr ""
-"O KDE é uma comunidade mundial de engenheiros de software, artistas, "
-"escritores, tradutores e criadores comprometidos com o desenvolvimento de "
-"Software Livre. O KDE produz o ambiente de desktop Plasma, centenas de "
-"aplicativos e muitas bibliotecas de software que os suportam.\n"
+"KDE estas tutmonda komunumo de programaro-inĝenieroj, artistoj, verkistoj, "
+"tradukistoj kaj kreintoj, kiuj engaĝiĝas al la disvolviĝo de Libera "
+"Programaro. KDE produktas la Plasma labortablan medion, centojn da "
+"aplikaĵoj, kaj la multajn programarajn bibliotekojn kiuj subtenas ilin.\n"
 "\n"
-"O KDE é uma empresa cooperativa: nenhuma entidade controla sua direção ou "
-"produtos. Em vez disso, trabalhamos juntos para alcançar o objetivo comum de "
-"construir o melhor Software Livre do mundo. Todos são bem-vindos para "
-"participar e contribuir com o KDE, inclusive você."
+"KDE estas kunlabora entrepreno: neniu unuopa ento kontrolas ĝian direkton aŭ "
+"produktojn. Anstataŭe, ni kunlaboras por atingi la komunan celon konstrui la "
+"plej bonan Liberan Programaron de la mondo. Ĉiuj bonvenas aliĝi kaj "
+"kontribui al KDE, inkluzive de vi."
 
 #: mobileform/AboutKDE.qml:86 mobileform/AboutPage.qml:194
 #, kde-format
 msgid "Homepage"
-msgstr "Site"
+msgstr "Hejmpaĝo"
 
 #: mobileform/AboutKDE.qml:99
 #, kde-format
@@ -200,22 +199,22 @@ msgid ""
 "tracking system to register your wish. Make sure you use the severity called "
 "\"Wishlist\"."
 msgstr ""
-"O software sempre pode ser melhorado e a equipe do KDE está pronta para "
-"isso. No entanto, você - o usuário - deve nos informar quando algo não "
-"funcionar conforme o esperado ou puder ser feito melhor.\n"
+"Programaro ĉiam estas plibonigebla, kaj la KDE-teamo pretas fari tion. "
+"Tamen, vi - la uzanto - devas diri al ni kiam io ne funkcias kiel atendite "
+"aŭ povus esti farita pli bone.\n"
 "\n"
-"O KDE possui um sistema de rastreamento de bugs. Use o botão abaixo para "
-"registrar um bug ou use a página Sobre do programa para relatar um bug "
-"específico para este aplicativo.\n"
+"KDE havas cimspuran sistemon. Uzu la suban butonon por registri cimon, aŭ "
+"uzu la paĝon Pri de la programo por raporti cimon specifa por ĉi tiu "
+"aplikaĵo.\n"
 "\n"
-"Se você tiver uma sugestão de melhoria, poderá usar o sistema de "
-"rastreamento de bugs para registrar seu desejo. Certifique-se de usar a "
-"gravidade (severity) chamada \"Wishlist\"."
+"Se vi havas sugeston por plibonigo, vi bonvenas uzi la cimspuran sistemon "
+"por registri vian deziron. Certigu, ke vi uzas la severecon nomatan "
+"\"Dezirlisto\"."
 
 #: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:233
 #, kde-format
 msgid "Report a bug"
-msgstr "Relate um erro"
+msgstr "Raportu cimon"
 
 #: mobileform/AboutKDE.qml:121
 #, kde-format
@@ -224,20 +223,19 @@ msgid ""
 "You can join the national teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
-"Não é necessário ser um desenvolvedor de software para ser um membro da "
-"equipe do KDE. Você pode tornar-se um membro das equipes nacionais que "
-"traduzem as interfaces dos programas. Você pode fornecer gráficos, temas, "
-"sons e melhorar a documentação. Você decide!"
+"Vi ne devas esti programisto por esti membro de la KDE-teamo. Vi povas aliĝi "
+"al la naciaj teamoj, kiuj tradukas programinterfacojn. Vi povas provizi "
+"grafikojn, etosojn, sonojn kaj plibonigitan dokumentadon. Vi decidu!"
 
 #: mobileform/AboutKDE.qml:128 mobileform/AboutPage.qml:212
 #, kde-format
 msgid "Get Involved"
-msgstr "Participe"
+msgstr "Implikiĝi"
 
 #: mobileform/AboutKDE.qml:135
 #, kde-format
 msgid "Developer Documentation"
-msgstr "Documentação do desenvolvedor"
+msgstr "Dokumentaro por programistoj"
 
 #: mobileform/AboutKDE.qml:148
 #, kde-format
@@ -259,22 +257,21 @@ msgid ""
 "\n"
 "Thank you very much in advance for your support."
 msgstr ""
-"O software do KDE é e sempre estará disponível gratuitamente, mas criá-lo "
-"não é gratuito.\n"
+"KDE-programaro estas kaj estos ĉiam senpage havebla, tamen krei ĝin ne estas "
+"senpaga.\n"
 "\n"
-"Para apoiar o desenvolvimento, a comunidade KDE formou o KDE e.V., uma "
-"organização sem fins lucrativos fundada legalmente na Alemanha. KDE e.V. "
-"representa a comunidade KDE em questões jurídicas e financeiras.\n"
+"Por subteni disvolviĝon la KDE-komunumo formis la KDE e.V., neprofitcela "
+"organizaĵo laŭleĝe fondita en Germanio. KDE e.V. reprezentas la KDE-"
+"komunumon en juraj kaj financaj aferoj.\n"
 "\n"
-"O KDE se beneficia de muitos tipos de contribuições, inclusive financeiras. "
-"Usamos os fundos para reembolsar os membros e outros pelas despesas em que "
-"incorrem ao contribuir. Outros fundos são usados para apoio jurídico e "
-"organização de conferências e reuniões.\n"
+"KDE profitas de multaj specoj de kontribuoj, inkluzive de financaj. Ni uzas "
+"la financon por repagi membrojn kaj aliajn por elspezoj, kiujn ili faras "
+"kiam ili kontribuas. Pliaj monrimedoj estas uzataj por jura subteno kaj "
+"organizado de konferencoj kaj renkontiĝoj.\n"
 "\n"
-"Gostaríamos de incentivá-lo a apoiar nossos esforços com uma doação "
-"financeira.\n"
+"Ni ŝatus instigi vin subteni niajn klopodojn per financa donaco.\n"
 "\n"
-"Muito obrigado antecipadamente por seu apoio."
+"Antikan dankon pro via subteno."
 
 #: mobileform/AboutKDE.qml:159
 #, kde-format
@@ -284,57 +281,41 @@ msgstr "KDE e.V"
 #: mobileform/AboutKDE.qml:166 mobileform/AboutPage.qml:203
 #, kde-format
 msgid "Donate"
-msgstr "Doar"
+msgstr "Doni"
 
 #: mobileform/AboutPage.qml:98
 #, kde-format
 msgid "About %1"
-msgstr "Sobre o %1"
+msgstr "Pri %1"
 
 #: mobileform/AboutPage.qml:150
 #, kde-format
 msgid "Copyright"
-msgstr "Direitos autorais"
+msgstr "Kopirajto"
 
 #: mobileform/AboutPage.qml:157
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
-msgstr[0] "Licença"
-msgstr[1] "Licenças"
+msgstr[0] "Permesilo"
+msgstr[1] "Permesiloj"
 
 #: mobileform/AboutPage.qml:246
 #, kde-format
 msgid "Libraries in use"
-msgstr "Bibliotecas em uso"
+msgstr "Bibliotekoj en uzo"
 
 #: mobileform/AboutPage.qml:277
 #, kde-format
 msgid "Authors"
-msgstr "Autores"
+msgstr "Aŭtoroj"
 
 #: mobileform/AboutPage.qml:289
 #, kde-format
 msgid "Credits"
-msgstr "Créditos"
+msgstr "Kreditigoj"
 
 #: mobileform/AboutPage.qml:301
 #, kde-format
 msgid "Translators"
-msgstr "Tradutores"
-
-#~ msgid ""
-#~ "Software can always be improved, and the KDE team is ready to do so. "
-#~ "However, you - the user - must tell us when something does not work as "
-#~ "expected or could be done better.\n"
-#~ msgstr ""
-#~ "O software sempre pode ser melhorado e a equipe do KDE está pronta para "
-#~ "isso. No entanto, você - o usuário - deve nos informar quando algo não "
-#~ "funcionar conforme o esperado ou puder ser melhorado.\n"
-
-#~ msgid ""
-#~ "KDE software is and will always be available free of charge, however "
-#~ "creating it is not free.\n"
-#~ msgstr ""
-#~ "O software do KDE é e sempre estará disponível gratuitamente, no entando, "
-#~ "criá-lo não é gratuito.\n"
+msgstr "Tradukistoj"
