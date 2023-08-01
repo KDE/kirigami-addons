@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-20 00:47+0000\n"
-"PO-Revision-Date: 2023-01-23 08:14+0100\n"
+"PO-Revision-Date: 2023-07-31 14:17+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,77 +18,76 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: components/AbstractMaximizeComponent.qml:126
 #, kde-format
 msgid "Close"
-msgstr ""
+msgstr "Itxi"
 
 #: components/AlbumMaximizeComponent.qml:112
 #, kde-format
 msgid "Zoom in"
-msgstr ""
+msgstr "Zooma gerturatu"
 
 #: components/AlbumMaximizeComponent.qml:117
 #, kde-format
 msgid "Zoom out"
-msgstr ""
+msgstr "Zooma urrundu"
 
 #: components/AlbumMaximizeComponent.qml:123
 #, kde-format
 msgid "Rotate left"
-msgstr ""
+msgstr "Biratu ezkerrera"
 
 #: components/AlbumMaximizeComponent.qml:129
 #, kde-format
 msgid "Rotate right"
-msgstr ""
+msgstr "Biratu eskuinera"
 
 #: components/AlbumMaximizeComponent.qml:134
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
-msgstr ""
+msgstr "Erakutsi epigrafea"
 
 #: components/AlbumMaximizeComponent.qml:134
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
-msgstr ""
+msgstr "Ezkutatu epigrafea"
 
 #: components/AlbumMaximizeComponent.qml:140
 #, kde-format
 msgid "Save as"
-msgstr ""
+msgstr "Gorde honela"
 
 #: components/AlbumMaximizeComponent.qml:200
-#, fuzzy, kde-format
-#| msgid "Previous"
+#, kde-format
 msgid "Previous image"
-msgstr "Aurrekoa"
+msgstr "Aurreko irudia"
 
 #: components/AlbumMaximizeComponent.qml:218
 #, kde-format
 msgid "Next image"
-msgstr ""
+msgstr "Hurrengo irudia"
 
 #: components/Banner.qml:185
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "Itxi"
 
 #: components/DownloadAction.qml:37
 #, kde-format
 msgid "Download"
-msgstr ""
+msgstr "Zama-jaitsi"
 
 #: components/VideoMaximizeDelegate.qml:233
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
-msgstr ""
+msgstr "Bolumena"
 
 #: dateandtime/DatePicker.qml:141
 #, kde-format
@@ -161,12 +160,7 @@ msgid "Be Free!"
 msgstr "Izan aske!"
 
 #: mobileform/AboutKDE.qml:78
-#, fuzzy, kde-format
-#| msgid ""
-#| "KDE is a world-wide community of software engineers, artists, writers, "
-#| "translators and creators who are committed to Free Software development. "
-#| "KDE produces the Plasma desktop environment, hundreds of applications, "
-#| "and the many software libraries that support them.\n"
+#, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
 "translators and creators who are committed to Free Software development. KDE "
@@ -178,10 +172,15 @@ msgid ""
 "the world's finest Free Software. Everyone is welcome to join and contribute "
 "to KDE, including you."
 msgstr ""
-"KDE Software Askearen garapenarekin engaiatutako mundu osoko software "
+"KDE Software Askearen garapenarekin engaiatuta dauden  mundu osoko software "
 "ingeniari, artista, idazle, itzultzaile eta sortzaile komunitate bat da. "
 "KDEk Plasma mahaigain ingurunea, ehunka aplikazio, eta haiei sostengua "
 "ematen dieten liburutegi ugariak ekoizten ditu.\n"
+"\n"
+"KDE lantegi kooperatibo bat da: inongo erakundek ez ditu kontrolatzen bere "
+"norabidea edo produktuak. Aitzitik, elkarrekin lan egiten dugu munduko "
+"software aske onena eraikitzeko helburu berarekin. Mundu guztia ongi "
+"etorriada KDErekin elkartu eta laguntzera, baita zu ere."
 
 #: mobileform/AboutKDE.qml:86 mobileform/AboutPage.qml:194
 #, kde-format
@@ -202,6 +201,17 @@ msgid ""
 "tracking system to register your wish. Make sure you use the severity called "
 "\"Wishlist\"."
 msgstr ""
+"Softwarea beti hobetu daiteke, eta KDE taldea hobekuntza horiek egiteko "
+"prestu dago. Hala ere, zuk -erabiltzaileak-, esan behar diguzu noiz zerbait "
+"behar bezala ez dabilen edo hobetu daitekeen.\n"
+"\n"
+"KDEk akatsei jarraipena egiteko sistema bat du. Erabili beheko botoia akats "
+"baten berri emateko, edo erabili programaren «Honi buruz» orria aplikazio "
+"horren berariazko akats bat jakinarazteko.\n"
+"\n"
+"Hobekuntzarako iradokizunik bazenu, akatsen jarraipenerako sisteman zure "
+"nahia erregistratzera ongi etorria zara. Erabili \"desio-zerrenda"
+"\" (\"Wishlist\") larritasun-kategoria gisa."
 
 #: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:233
 #, kde-format
@@ -249,6 +259,22 @@ msgid ""
 "\n"
 "Thank you very much in advance for your support."
 msgstr ""
+"KDE softwarea doan eskura daiteke eta beti hala izango da; aitzitik, "
+"hurasortzea ez da doakoa.\n"
+"\n"
+"Garapenari sostengua emateko KDE elkarteak KDE eV. sortu du, irabazi asmorik "
+"gabeko erakunde bat, legez Alemanian sortua. KDE e.V. erakundeak KDE "
+"komunitatea ordezkatzen du gai legal eta finantzakoetan.\n"
+"\n"
+"KDE laguntza mota askoren onuradun da, finantzetakoa barne. Funtsak "
+"erabiltzen ditugu partaideek eta bestelakoek ekarpenak egitean sortzen "
+"zaizkien gastuak ordaintzeko. Funtsen beste zati bat laguntza juridikorako "
+"eta konferentziak eta topaketak antolatzeko erabiltzen da.\n"
+"\n"
+"Gure ahaleginei finantza-dohaintza baten bidez babes ematera animatu nahi "
+"zaitugu.\n"
+"\n"
+"Mila esker aldez aurretik zure laguntzagatik."
 
 #: mobileform/AboutKDE.qml:159
 #, kde-format

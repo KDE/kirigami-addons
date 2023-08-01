@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2021, 2022.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-20 00:47+0000\n"
-"PO-Revision-Date: 2022-03-23 18:44+0100\n"
+"PO-Revision-Date: 2023-07-31 09:45+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -20,72 +20,71 @@ msgstr ""
 #: components/AbstractMaximizeComponent.qml:126
 #, kde-format
 msgid "Close"
-msgstr ""
+msgstr "Stäng"
 
 #: components/AlbumMaximizeComponent.qml:112
 #, kde-format
 msgid "Zoom in"
-msgstr ""
+msgstr "Zooma in"
 
 #: components/AlbumMaximizeComponent.qml:117
 #, kde-format
 msgid "Zoom out"
-msgstr ""
+msgstr "Zooma ut"
 
 #: components/AlbumMaximizeComponent.qml:123
 #, kde-format
 msgid "Rotate left"
-msgstr ""
+msgstr "Rotera åt vänster"
 
 #: components/AlbumMaximizeComponent.qml:129
 #, kde-format
 msgid "Rotate right"
-msgstr ""
+msgstr "Rotera åt höger"
 
 #: components/AlbumMaximizeComponent.qml:134
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
-msgstr ""
+msgstr "Visa rubrik"
 
 #: components/AlbumMaximizeComponent.qml:134
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
-msgstr ""
+msgstr "Dölj rubrik"
 
 #: components/AlbumMaximizeComponent.qml:140
 #, kde-format
 msgid "Save as"
-msgstr ""
+msgstr "Spara som"
 
 #: components/AlbumMaximizeComponent.qml:200
-#, fuzzy, kde-format
-#| msgid "Previous"
+#, kde-format
 msgid "Previous image"
-msgstr "Föregående"
+msgstr "Föregående bild"
 
 #: components/AlbumMaximizeComponent.qml:218
 #, kde-format
 msgid "Next image"
-msgstr ""
+msgstr "Nästa bild"
 
 #: components/Banner.qml:185
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "Stäng"
 
 #: components/DownloadAction.qml:37
 #, kde-format
 msgid "Download"
-msgstr ""
+msgstr "Ladda ner"
 
 #: components/VideoMaximizeDelegate.qml:233
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
-msgstr ""
+msgstr "Volym"
 
 #: dateandtime/DatePicker.qml:141
 #, kde-format
@@ -94,22 +93,19 @@ msgid "%1 %2"
 msgstr "%1 %2"
 
 #: dateandtime/DatePicker.qml:182
-#, fuzzy, kde-format
-#| msgid "Days"
+#, kde-format
 msgctxt "kirigami-addons"
 msgid "Days"
 msgstr "Dagar"
 
 #: dateandtime/DatePicker.qml:190
-#, fuzzy, kde-format
-#| msgid "Months"
+#, kde-format
 msgctxt "kirigami-addons"
 msgid "Months"
 msgstr "Månader"
 
 #: dateandtime/DatePicker.qml:196
-#, fuzzy, kde-format
-#| msgid "Years"
+#, kde-format
 msgctxt "kirigami-addons"
 msgid "Years"
 msgstr "År"
@@ -143,22 +139,22 @@ msgstr "Acceptera"
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: mobileform/AboutKDE.qml:28
 #, kde-format
 msgid "About KDE"
-msgstr ""
+msgstr "Om KDE"
 
 #: mobileform/AboutKDE.qml:60
 #, kde-format
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: mobileform/AboutKDE.qml:69
 #, kde-format
 msgid "Be Free!"
-msgstr ""
+msgstr "Lev fri!"
 
 #: mobileform/AboutKDE.qml:78
 #, kde-format
@@ -173,11 +169,20 @@ msgid ""
 "the world's finest Free Software. Everyone is welcome to join and contribute "
 "to KDE, including you."
 msgstr ""
+"KDE är ett världsomspännande nätverk av programvaruingenjörer, grafiker, "
+"författare, översättare och kreatörer som är engagerade i utveckling av fri "
+"programvara. KDE producerar skrivbordsmiljön Plasma, hundratals program, och "
+"de talrika programvarubibliotek som stöder dem.\n"
+"\n"
+"KDE är ett kooperativ, där ingen enskild person styr inriktningen eller "
+"produkterna. Istället arbetar vi tillsammans för att uppnå det gemensamma "
+"målet att skapa värdens finaste fria programvara. Alla är välkomna att gå "
+"med och bidra till KDE, inklusive du själv."
 
 #: mobileform/AboutKDE.qml:86 mobileform/AboutPage.qml:194
 #, kde-format
 msgid "Homepage"
-msgstr ""
+msgstr "Hemsida"
 
 #: mobileform/AboutKDE.qml:99
 #, kde-format
@@ -193,11 +198,22 @@ msgid ""
 "tracking system to register your wish. Make sure you use the severity called "
 "\"Wishlist\"."
 msgstr ""
+"Programvara kan alltid förbättras, och KDE-gruppen är redo att göra det Dock "
+"måste du, som användare, tala om för oss när någonting inte fungerar som "
+"förväntat eller kan göras bättre.\n"
+"\n"
+"KDE har ett felspårningssystem. Använd knappen nedan för att skicka in en "
+"felrapport, eller använd sidan om programmet för att rapportera ett fel som "
+"gäller det här programmet.\n"
+"\n"
+"Om du har ett förslag på en förbättring, är du också välkommen att använda "
+"felspårningssystemet för att registrera ditt önskemål. Försäkra dig om att "
+"du använder svårighetsgraden \"Wishlist\"."
 
 #: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:233
 #, kde-format
 msgid "Report a bug"
-msgstr ""
+msgstr "Rapportera ett fel"
 
 #: mobileform/AboutKDE.qml:121
 #, kde-format
@@ -206,16 +222,20 @@ msgid ""
 "You can join the national teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
+"Du behöver inte vara en programutvecklare för att bli medlem i KDE-gruppen "
+"Du kan gå med i de nationella grupperna som översätter programmens "
+"gränssnitt. Du kan bidra med grafik, teman, ljud och förbättrad "
+"dokumentation. Det är upp till dig!"
 
 #: mobileform/AboutKDE.qml:128 mobileform/AboutPage.qml:212
 #, kde-format
 msgid "Get Involved"
-msgstr ""
+msgstr "Engagera dig"
 
 #: mobileform/AboutKDE.qml:135
 #, kde-format
 msgid "Developer Documentation"
-msgstr ""
+msgstr "Utvecklingsdokumentation"
 
 #: mobileform/AboutKDE.qml:148
 #, kde-format
@@ -237,50 +257,65 @@ msgid ""
 "\n"
 "Thank you very much in advance for your support."
 msgstr ""
+"KDE är och kommer alltid att vara tillgängligt utan avgift, dock är det inte "
+"gratis att ta fram det.\n"
+"\n"
+"För att stödja utvecklingen upprättade KDE-gruppen KDE eV, en ideell "
+"organisation som juridiskt grundats i Tyskland. KDE e.V. representerar KDE-"
+"gemenskapen i juridiska och ekonomiska angelägenheter.\n"
+"\n"
+"KDE gagnas av många olika typer av bidrag, inklusive ekonomiska. Medlen "
+"används för att ersätta medlemmar och andra för utgifter som de åsamkas när "
+"de bidrar till KDE. Ytterligare medel används för juridiskt stöd och för att "
+"organisera konferenser och möten.\n"
+"\n"
+"Vi vill gärna uppmuntra dig att stödja vårt arbete med en donation.\n"
+"\n"
+"Tack på förhand för ditt stöd."
 
 #: mobileform/AboutKDE.qml:159
 #, kde-format
 msgid "KDE e.V"
-msgstr ""
+msgstr "KDE e.V"
 
 #: mobileform/AboutKDE.qml:166 mobileform/AboutPage.qml:203
 #, kde-format
 msgid "Donate"
-msgstr ""
+msgstr "Ge ett bidrag"
 
 #: mobileform/AboutPage.qml:98
 #, kde-format
 msgid "About %1"
-msgstr ""
+msgstr "Om %1"
 
 #: mobileform/AboutPage.qml:150
 #, kde-format
 msgid "Copyright"
-msgstr ""
+msgstr "Copyright"
 
 #: mobileform/AboutPage.qml:157
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Licens"
+msgstr[1] "Licenser"
 
 #: mobileform/AboutPage.qml:246
 #, kde-format
 msgid "Libraries in use"
-msgstr ""
+msgstr "Använda bibliotek"
 
 #: mobileform/AboutPage.qml:277
 #, kde-format
 msgid "Authors"
-msgstr ""
+msgstr "Upphovsmän"
 
 #: mobileform/AboutPage.qml:289
 #, kde-format
 msgid "Credits"
-msgstr ""
+msgstr "Tack till"
 
 #: mobileform/AboutPage.qml:301
 #, kde-format
 msgid "Translators"
-msgstr ""
+msgstr "Översättare"
