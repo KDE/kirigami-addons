@@ -193,28 +193,43 @@ Kirigami.ScrollablePage {
                     id: getInvolvedDelegate
                     text: i18nd("kirigami-addons", "Homepage")
                     onClicked: Qt.openUrlExternally(aboutData.homepage)
-                    visible: aboutData.homepage
+                    visible: aboutData.homepage.length > 0
                 }
 
-                FormDelegateSeparator { above: getInvolvedDelegate; below: donateDelegate; visible: aboutData.homepage }
+                FormDelegateSeparator { above: getInvolvedDelegate
+                    ;
+                    below: donateDelegate
+                    ;
+                    visible: getInvolvedDelegate.visible
+                }
 
                 FormButtonDelegate {
                     id: donateDelegate
                     text: i18nd("kirigami-addons", "Donate")
                     onClicked: Qt.openUrlExternally(donateUrl + "?app=" + page.aboutData.componentName)
-                    visible: donateUrl
+                    visible: donateUrl.length > 0
                 }
 
-                FormDelegateSeparator { above: donateDelegate; below: homepageDelegate; visible: donateUrl }
+                FormDelegateSeparator { above: donateDelegate
+                    ;
+                    below: homepageDelegate
+                    ;
+                    visible: donateDelegate.visible
+                }
 
                 FormButtonDelegate {
                     id: homepageDelegate
                     text: i18nd("kirigami-addons", "Get Involved")
                     onClicked: Qt.openUrlExternally(page.getInvolvedUrl)
-                    visible: page.getInvolvedUrl
+                    visible: page.getInvolvedUrl > 0
                 }
 
-                FormDelegateSeparator { above: homepageDelegate; below: bugDelegate; visible: page.getInvolvedUrl }
+                FormDelegateSeparator { above: homepageDelegate
+                    ;
+                    below: bugDelegate
+                    ;
+                    visible: homepageDelegate.visible
+                }
 
                 FormButtonDelegate {
                     id: bugDelegate
@@ -232,7 +247,7 @@ Kirigami.ScrollablePage {
 
                     text: i18nd("kirigami-addons", "Report a bug")
                     onClicked: Qt.openUrlExternally(theUrl)
-                    visible: theUrl !== ''
+                    visible: theUrl.length > 0
                 }
             }
         }
@@ -358,7 +373,7 @@ Kirigami.ScrollablePage {
                         color: Kirigami.Theme.disabledTextColor
                         font: Kirigami.Theme.smallFont
                         elide: Text.ElideRight
-                        visible: text !== ""
+                        visible: text.length > 0
                     }
                 }
 
