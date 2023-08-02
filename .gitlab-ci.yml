@@ -15,7 +15,7 @@ include:
 
 qml-check-i18n:
   stage: build
-  image: kdeorg/ci-suse-qt515:latest
+  image: invent-registry.kde.org/sysadmin/ci-images/suse-qt515:latest
   needs: []
   rules:
     - changes:
@@ -24,11 +24,10 @@ qml-check-i18n:
     - Linux
   script:
     - git config --global --add safe.directory $CI_PROJECT_DIR
-    - bash -c "find src -iname '*.qml' -exec sed -i 's/i18n(/i18nd(\"kirigami-addons\", /' {} \;"
-    - bash -c "find src -iname '*.qml' -exec sed -i 's/i18nc(/i18ndc(\"kirigami-addons\", /' {} \;"
-    - bash -c "find src -iname '*.qml' -exec sed -i 's/i18np(/i18ndp(\"kirigami-addons\", /' {} \;"
-    - bash -c "find src -iname '*.qml' -exec sed -i 's/i18npc(/i18ndpc(\"kirigami-addons\", /' {} \;"
-    - bash -c "[[ ! \"`git status --porcelain `\" ]] || (echo \"Please run find -iname '*.qml' -exec sed -i 's/i18n(/i18nd(\"kirigami-addons\", /' {} \; \\;\" && exit 1)"
+    - bash -c "find src -iname '*.qml' -exec sed -i 's/^\([^*]*\)i18n(\(.*\)/\1i18nd(\"kirigami-addons\", \2/' {} \;"
+    - bash -c "find src -iname '*.qml' -exec sed -i 's/^\([^*]*\)i18nc(\(.*\)/\1i18ndc(\"kirigami-addons\", \2/' {} \;"
+    - bash -c "find src -iname '*.qml' -exec sed -i 's/^\([^*]*\)i18np(\(.*\)/\1i18ndp(\"kirigami-addons\", \2/' {} \;"
+    - bash -c "find src -iname '*.qml' -exec sed -i 's/^\([^*]*\)i18npc(\(.*\)/\1i18ndpc(\"kirigami-addons\", \2/' {} \;"
 
   after_script:
    - >

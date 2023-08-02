@@ -179,7 +179,7 @@ QQC2.Control {
             QQC2.TabButton {
                 id: daysViewCheck
                 Layout.fillWidth: true
-                text: i18nc("kirigami-addons", "Days")
+                text: i18ndc("kirigami-addons", "@title:tab", "Days")
                 onClicked: pickerView.currentIndex = 0 // dayGrid is first item in pickerView
                 visible: datepicker.showDays
                 width: visible ? implicitWidth : 0
@@ -187,13 +187,13 @@ QQC2.Control {
             QQC2.TabButton {
                 id: monthsViewCheck
                 Layout.fillWidth: true
-                text: i18nc("kirigami-addons", "Months")
+                text: i18ndc("kirigami-addons", "@title:tab", "Months")
                 onClicked: pickerView.currentIndex = 1
             }
             QQC2.TabButton {
                 id: yearsViewCheck
                 Layout.fillWidth: true
-                text: i18nc("kirigami-addons", "Years")
+                text: i18ndc("kirigami-addons", "@title:tab", "Years")
                 onClicked: pickerView.currentIndex = 2
             }
         }

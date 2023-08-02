@@ -131,7 +131,7 @@ AbstractMaximizeComponent {
             onTriggered: view.currentItem.rotationAngle = view.currentItem.rotationAngle + 90
         },
         Kirigami.Action {
-            text: hideCaption ? i18nc("@action:intoolbar", "Show caption") : i18nc("@action:intoolbar", "Hide caption")
+            text: hideCaption ? i18ndc("kirigami-addons", "@action:intoolbar", "Show caption") : i18ndc("kirigami-addons", "@action:intoolbar", "Hide caption")
             icon.name: "add-subtitle"
             visible: root.showCaption && view.currentItem.caption
             onTriggered: hideCaption = !hideCaption
