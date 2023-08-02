@@ -109,24 +109,24 @@ AbstractMaximizeComponent {
 
     actions: [
         Kirigami.Action {
-            text: i18n("Zoom in")
+            text: i18nd("kirigami-addons", "Zoom in")
             icon.name: "zoom-in"
             onTriggered: view.currentItem.scaleFactor = Math.min(view.currentItem.scaleFactor + 0.25, 3)
         },
         Kirigami.Action {
-            text: i18n("Zoom out")
+            text: i18nd("kirigami-addons", "Zoom out")
             icon.name: "zoom-out"
             onTriggered: view.currentItem.scaleFactor = Math.max(view.currentItem.scaleFactor - 0.25, 0.25)
         },
         Kirigami.Action {
             visible: view.currentItem.type === AlbumModelItem.Image
-            text: i18n("Rotate left")
+            text: i18nd("kirigami-addons", "Rotate left")
             icon.name: "object-rotate-left"
             onTriggered: view.currentItem.rotationAngle = view.currentItem.rotationAngle - 90
         },
         Kirigami.Action {
             visible: view.currentItem.type === AlbumModelItem.Image
-            text: i18n("Rotate right")
+            text: i18nd("kirigami-addons", "Rotate right")
             icon.name: "object-rotate-right"
             onTriggered: view.currentItem.rotationAngle = view.currentItem.rotationAngle + 90
         },
@@ -137,7 +137,7 @@ AbstractMaximizeComponent {
             onTriggered: hideCaption = !hideCaption
         },
         Kirigami.Action {
-            text: i18n("Save as")
+            text: i18nd("kirigami-addons", "Save as")
             icon.name: "document-save"
             onTriggered: saveItem()
         }
@@ -197,7 +197,7 @@ AbstractMaximizeComponent {
             icon.name: "arrow-left"
             visible: !Kirigami.Settings.isMobile && view.currentIndex > 0
             Keys.forwardTo: view
-            Accessible.name: i18n("Previous image")
+            Accessible.name: i18nd("kirigami-addons", "Previous image")
             onClicked: {
                 view.currentItem.pause()
                 view.currentIndex -= 1
@@ -215,7 +215,7 @@ AbstractMaximizeComponent {
             icon.name: "arrow-right"
             visible: !Kirigami.Settings.isMobile && view.currentIndex < view.count - 1
             Keys.forwardTo: view
-            Accessible.name: i18n("Next image")
+            Accessible.name: i18nd("kirigami-addons", "Next image")
             onClicked: {
                 view.currentItem.pause()
                 view.currentIndex += 1

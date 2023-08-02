@@ -123,7 +123,7 @@ QQC2.Popup {
                     display: QQC2.AbstractButton.IconOnly
 
                     action: Kirigami.Action {
-                        text: i18n("Close")
+                        text: i18nd("kirigami-addons", "Close")
                         icon.name: "dialog-close"
                         onTriggered: root.close()
                     }

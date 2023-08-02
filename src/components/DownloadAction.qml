@@ -34,6 +34,6 @@ Kirigami.Action {
      */
     readonly property bool completed: progress >= 100.0
 
-    text: i18n("Download")
+    text: i18nd("kirigami-addons", "Download")
     icon.name: "download"
 }

@@ -95,7 +95,7 @@ Kirigami.ScrollablePage {
     topPadding: Kirigami.Units.gridUnit
     bottomPadding: Kirigami.Units.gridUnit
 
-    title: i18n("About %1", page.aboutData.displayName)
+    title: i18nd("kirigami-addons", "About %1", page.aboutData.displayName)
 
     ColumnLayout {
         id: column
