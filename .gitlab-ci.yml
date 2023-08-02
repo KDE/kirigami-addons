@@ -12,3 +12,27 @@ include:
   - https://invent.kde.org/sysadmin/ci-utilities/raw/master/gitlab-templates/freebsd-qt6.yml
   - https://invent.kde.org/sysadmin/ci-utilities/raw/master/gitlab-templates/android-qt6.yml
   - https://invent.kde.org/sysadmin/ci-utilities/raw/master/gitlab-templates/windows-qt6.yml
+
+qml-check-i18n:
+  stage: build
+  image: kdeorg/ci-suse-qt515:latest
+  needs: []
+  rules:
+    - changes:
+      - "**/*.qml"
+  tags:
+    - Linux
+  script:
+    - git config --global --add safe.directory $CI_PROJECT_DIR
+    - bash -c "find src -iname '*.qml' -exec sed -i 's/i18n(/i18nd(\"kirigami-addons\", /' {} \;"
+    - bash -c "find src -iname '*.qml' -exec sed -i 's/i18nc(/i18ndc(\"kirigami-addons\", /' {} \;"
+    - bash -c "find src -iname '*.qml' -exec sed -i 's/i18np(/i18ndp(\"kirigami-addons\", /' {} \;"
+    - bash -c "find src -iname '*.qml' -exec sed -i 's/i18npc(/i18ndpc(\"kirigami-addons\", /' {} \;"
+    - bash -c "[[ ! \"`git status --porcelain `\" ]] || (echo \"Please run find -iname '*.qml' -exec sed -i 's/i18n(/i18nd(\"kirigami-addons\", /' {} \; \\;\" && exit 1)"
+
+  after_script:
+   - >
+     if [ $CI_JOB_STATUS != 'success' ]; then
+         git --no-pager diff
+     fi
+
