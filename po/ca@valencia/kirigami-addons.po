@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-20 00:47+0000\n"
+"POT-Creation-Date: 2023-08-04 00:44+0000\n"
 "PO-Revision-Date: 2023-07-11 10:24+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -96,20 +96,26 @@ msgid "%1 %2"
 msgstr "%1 %2"
 
 #: dateandtime/DatePicker.qml:182
-#, kde-format
-msgctxt "kirigami-addons"
+#, fuzzy, kde-format
+#| msgctxt "kirigami-addons"
+#| msgid "Days"
+msgctxt "@title:tab"
 msgid "Days"
 msgstr "Dies"
 
 #: dateandtime/DatePicker.qml:190
-#, kde-format
-msgctxt "kirigami-addons"
+#, fuzzy, kde-format
+#| msgctxt "kirigami-addons"
+#| msgid "Months"
+msgctxt "@title:tab"
 msgid "Months"
 msgstr "Mesos"
 
 #: dateandtime/DatePicker.qml:196
-#, kde-format
-msgctxt "kirigami-addons"
+#, fuzzy, kde-format
+#| msgctxt "kirigami-addons"
+#| msgid "Years"
+msgctxt "@title:tab"
 msgid "Years"
 msgstr "Anys"
 
@@ -215,7 +221,7 @@ msgstr ""
 "seguiment d'errors per a registrar la vostra petició. Assegureu-vos "
 "d'utilitzar el nivell de gravetat anomenat «Llista de desitjos» (Wishlist)."
 
-#: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:233
+#: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:248
 #, kde-format
 msgid "Report a bug"
 msgstr "Informeu d'un error"
@@ -232,7 +238,7 @@ msgstr ""
 "dels programes. Podeu proporcionar gràfics, temes, sons i millorar la "
 "documentació. Vós decidiu!"
 
-#: mobileform/AboutKDE.qml:128 mobileform/AboutPage.qml:212
+#: mobileform/AboutKDE.qml:128 mobileform/AboutPage.qml:222
 #, kde-format
 msgid "Get Involved"
 msgstr "Col·laboreu-hi"
@@ -283,7 +289,7 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: mobileform/AboutKDE.qml:166 mobileform/AboutPage.qml:203
+#: mobileform/AboutKDE.qml:166 mobileform/AboutPage.qml:208
 #, kde-format
 msgid "Donate"
 msgstr "Donatius"
@@ -305,22 +311,22 @@ msgid_plural "Licenses"
 msgstr[0] "Llicència"
 msgstr[1] "Llicències"
 
-#: mobileform/AboutPage.qml:246
+#: mobileform/AboutPage.qml:261
 #, kde-format
 msgid "Libraries in use"
 msgstr "Biblioteques en ús"
 
-#: mobileform/AboutPage.qml:277
+#: mobileform/AboutPage.qml:292
 #, kde-format
 msgid "Authors"
 msgstr "Autoria"
 
-#: mobileform/AboutPage.qml:289
+#: mobileform/AboutPage.qml:304
 #, kde-format
 msgid "Credits"
 msgstr "Atribucions"
 
-#: mobileform/AboutPage.qml:301
+#: mobileform/AboutPage.qml:316
 #, kde-format
 msgid "Translators"
 msgstr "Equip de traducció"

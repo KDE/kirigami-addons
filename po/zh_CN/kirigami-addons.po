@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-20 00:47+0000\n"
+"POT-Creation-Date: 2023-08-04 00:44+0000\n"
 "PO-Revision-Date: 2023-08-02 12:41\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -93,20 +93,26 @@ msgid "%1 %2"
 msgstr "%2 年 %1"
 
 #: dateandtime/DatePicker.qml:182
-#, kde-format
-msgctxt "kirigami-addons"
+#, fuzzy, kde-format
+#| msgctxt "kirigami-addons"
+#| msgid "Days"
+msgctxt "@title:tab"
 msgid "Days"
 msgstr "日"
 
 #: dateandtime/DatePicker.qml:190
-#, kde-format
-msgctxt "kirigami-addons"
+#, fuzzy, kde-format
+#| msgctxt "kirigami-addons"
+#| msgid "Months"
+msgctxt "@title:tab"
 msgid "Months"
 msgstr "月"
 
 #: dateandtime/DatePicker.qml:196
-#, kde-format
-msgctxt "kirigami-addons"
+#, fuzzy, kde-format
+#| msgctxt "kirigami-addons"
+#| msgid "Years"
+msgctxt "@title:tab"
 msgid "Years"
 msgstr "年"
 
@@ -207,7 +213,7 @@ msgstr ""
 "如果您想要提出改进建议而不是报告程序缺陷，请确保在表格的 Severity (严重程度) "
 "选单中选择“Wishlist (需求)”。"
 
-#: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:233
+#: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:248
 #, kde-format
 msgid "Report a bug"
 msgstr "报告程序缺陷"
@@ -223,7 +229,7 @@ msgstr ""
 "团队来翻译软件的界面，您还可以制作图像、主题、音效，或者改进软件配套的文档……"
 "您的角色您来定！"
 
-#: mobileform/AboutKDE.qml:128 mobileform/AboutPage.qml:212
+#: mobileform/AboutKDE.qml:128 mobileform/AboutPage.qml:222
 #, kde-format
 msgid "Get Involved"
 msgstr "参与贡献"
@@ -271,7 +277,7 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: mobileform/AboutKDE.qml:166 mobileform/AboutPage.qml:203
+#: mobileform/AboutKDE.qml:166 mobileform/AboutPage.qml:208
 #, kde-format
 msgid "Donate"
 msgstr "捐款"
@@ -292,22 +298,22 @@ msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "许可证"
 
-#: mobileform/AboutPage.qml:246
+#: mobileform/AboutPage.qml:261
 #, kde-format
 msgid "Libraries in use"
 msgstr "使用的程序库"
 
-#: mobileform/AboutPage.qml:277
+#: mobileform/AboutPage.qml:292
 #, kde-format
 msgid "Authors"
 msgstr "作者"
 
-#: mobileform/AboutPage.qml:289
+#: mobileform/AboutPage.qml:304
 #, kde-format
 msgid "Credits"
 msgstr "鸣谢"
 
-#: mobileform/AboutPage.qml:301
+#: mobileform/AboutPage.qml:316
 #, kde-format
 msgid "Translators"
 msgstr "翻译人员"

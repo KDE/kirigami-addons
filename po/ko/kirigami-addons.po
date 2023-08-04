@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-20 00:47+0000\n"
+"POT-Creation-Date: 2023-08-04 00:44+0000\n"
 "PO-Revision-Date: 2023-07-23 00:54+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -93,20 +93,26 @@ msgid "%1 %2"
 msgstr "%2년 %1"
 
 #: dateandtime/DatePicker.qml:182
-#, kde-format
-msgctxt "kirigami-addons"
+#, fuzzy, kde-format
+#| msgctxt "kirigami-addons"
+#| msgid "Days"
+msgctxt "@title:tab"
 msgid "Days"
 msgstr "일"
 
 #: dateandtime/DatePicker.qml:190
-#, kde-format
-msgctxt "kirigami-addons"
+#, fuzzy, kde-format
+#| msgctxt "kirigami-addons"
+#| msgid "Months"
+msgctxt "@title:tab"
 msgid "Months"
 msgstr "월"
 
 #: dateandtime/DatePicker.qml:196
-#, kde-format
-msgctxt "kirigami-addons"
+#, fuzzy, kde-format
+#| msgctxt "kirigami-addons"
+#| msgid "Years"
+msgctxt "@title:tab"
 msgid "Years"
 msgstr "년"
 
@@ -198,7 +204,7 @@ msgid ""
 "\"Wishlist\"."
 msgstr ""
 
-#: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:233
+#: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:248
 #, kde-format
 msgid "Report a bug"
 msgstr "버그 보고"
@@ -214,7 +220,7 @@ msgstr ""
 "를 번역하는 각 나라 번역팀을 도울 수도 있습니다. 또한 그래픽, 테마, 소리, 더 "
 "나은 문서 등을 기여할 수도 있습니다. 직접 결정하십시오!"
 
-#: mobileform/AboutKDE.qml:128 mobileform/AboutPage.qml:212
+#: mobileform/AboutKDE.qml:128 mobileform/AboutPage.qml:222
 #, kde-format
 msgid "Get Involved"
 msgstr "참여하기"
@@ -250,7 +256,7 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: mobileform/AboutKDE.qml:166 mobileform/AboutPage.qml:203
+#: mobileform/AboutKDE.qml:166 mobileform/AboutPage.qml:208
 #, kde-format
 msgid "Donate"
 msgstr "기부하기"
@@ -271,22 +277,22 @@ msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "라이선스"
 
-#: mobileform/AboutPage.qml:246
+#: mobileform/AboutPage.qml:261
 #, kde-format
 msgid "Libraries in use"
 msgstr "사용하는 라이브러리"
 
-#: mobileform/AboutPage.qml:277
+#: mobileform/AboutPage.qml:292
 #, kde-format
 msgid "Authors"
 msgstr "작성자"
 
-#: mobileform/AboutPage.qml:289
+#: mobileform/AboutPage.qml:304
 #, kde-format
 msgid "Credits"
 msgstr "제작진"
 
-#: mobileform/AboutPage.qml:301
+#: mobileform/AboutPage.qml:316
 #, kde-format
 msgid "Translators"
 msgstr "번역자"

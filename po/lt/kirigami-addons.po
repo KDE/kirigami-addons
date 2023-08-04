@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-20 00:47+0000\n"
+"POT-Creation-Date: 2023-08-04 00:44+0000\n"
 "PO-Revision-Date: 2023-01-22 00:55+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -95,19 +95,19 @@ msgstr ""
 
 #: dateandtime/DatePicker.qml:182
 #, kde-format
-msgctxt "kirigami-addons"
+msgctxt "@title:tab"
 msgid "Days"
 msgstr ""
 
 #: dateandtime/DatePicker.qml:190
 #, kde-format
-msgctxt "kirigami-addons"
+msgctxt "@title:tab"
 msgid "Months"
 msgstr ""
 
 #: dateandtime/DatePicker.qml:196
 #, kde-format
-msgctxt "kirigami-addons"
+msgctxt "@title:tab"
 msgid "Years"
 msgstr ""
 
@@ -191,7 +191,7 @@ msgid ""
 "\"Wishlist\"."
 msgstr ""
 
-#: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:233
+#: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:248
 #, kde-format
 msgid "Report a bug"
 msgstr ""
@@ -204,7 +204,7 @@ msgid ""
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
 
-#: mobileform/AboutKDE.qml:128 mobileform/AboutPage.qml:212
+#: mobileform/AboutKDE.qml:128 mobileform/AboutPage.qml:222
 #, kde-format
 msgid "Get Involved"
 msgstr ""
@@ -240,7 +240,7 @@ msgstr ""
 msgid "KDE e.V"
 msgstr ""
 
-#: mobileform/AboutKDE.qml:166 mobileform/AboutPage.qml:203
+#: mobileform/AboutKDE.qml:166 mobileform/AboutPage.qml:208
 #, kde-format
 msgid "Donate"
 msgstr ""
@@ -263,22 +263,22 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: mobileform/AboutPage.qml:246
+#: mobileform/AboutPage.qml:261
 #, kde-format
 msgid "Libraries in use"
 msgstr ""
 
-#: mobileform/AboutPage.qml:277
+#: mobileform/AboutPage.qml:292
 #, kde-format
 msgid "Authors"
 msgstr ""
 
-#: mobileform/AboutPage.qml:289
+#: mobileform/AboutPage.qml:304
 #, kde-format
 msgid "Credits"
 msgstr ""
 
-#: mobileform/AboutPage.qml:301
+#: mobileform/AboutPage.qml:316
 #, kde-format
 msgid "Translators"
 msgstr ""

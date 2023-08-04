@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-20 00:47+0000\n"
+"POT-Creation-Date: 2023-08-04 00:44+0000\n"
 "PO-Revision-Date: 2023-07-29 12:25+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -94,20 +94,26 @@ msgid "%1 %2"
 msgstr "%1 %2"
 
 #: dateandtime/DatePicker.qml:182
-#, kde-format
-msgctxt "kirigami-addons"
+#, fuzzy, kde-format
+#| msgctxt "kirigami-addons"
+#| msgid "Days"
+msgctxt "@title:tab"
 msgid "Days"
 msgstr "Tagoj"
 
 #: dateandtime/DatePicker.qml:190
-#, kde-format
-msgctxt "kirigami-addons"
+#, fuzzy, kde-format
+#| msgctxt "kirigami-addons"
+#| msgid "Months"
+msgctxt "@title:tab"
 msgid "Months"
 msgstr "Monatoj"
 
 #: dateandtime/DatePicker.qml:196
-#, kde-format
-msgctxt "kirigami-addons"
+#, fuzzy, kde-format
+#| msgctxt "kirigami-addons"
+#| msgid "Years"
+msgctxt "@title:tab"
 msgid "Years"
 msgstr "Jaroj"
 
@@ -211,7 +217,7 @@ msgstr ""
 "por registri vian deziron. Certigu, ke vi uzas la severecon nomatan "
 "\"Dezirlisto\"."
 
-#: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:233
+#: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:248
 #, kde-format
 msgid "Report a bug"
 msgstr "Raportu cimon"
@@ -227,7 +233,7 @@ msgstr ""
 "al la naciaj teamoj, kiuj tradukas programinterfacojn. Vi povas provizi "
 "grafikojn, etosojn, sonojn kaj plibonigitan dokumentadon. Vi decidu!"
 
-#: mobileform/AboutKDE.qml:128 mobileform/AboutPage.qml:212
+#: mobileform/AboutKDE.qml:128 mobileform/AboutPage.qml:222
 #, kde-format
 msgid "Get Involved"
 msgstr "Implikiĝi"
@@ -278,7 +284,7 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: mobileform/AboutKDE.qml:166 mobileform/AboutPage.qml:203
+#: mobileform/AboutKDE.qml:166 mobileform/AboutPage.qml:208
 #, kde-format
 msgid "Donate"
 msgstr "Doni"
@@ -300,22 +306,22 @@ msgid_plural "Licenses"
 msgstr[0] "Permesilo"
 msgstr[1] "Permesiloj"
 
-#: mobileform/AboutPage.qml:246
+#: mobileform/AboutPage.qml:261
 #, kde-format
 msgid "Libraries in use"
 msgstr "Bibliotekoj en uzo"
 
-#: mobileform/AboutPage.qml:277
+#: mobileform/AboutPage.qml:292
 #, kde-format
 msgid "Authors"
 msgstr "Aŭtoroj"
 
-#: mobileform/AboutPage.qml:289
+#: mobileform/AboutPage.qml:304
 #, kde-format
 msgid "Credits"
 msgstr "Kreditigoj"
 
-#: mobileform/AboutPage.qml:301
+#: mobileform/AboutPage.qml:316
 #, kde-format
 msgid "Translators"
 msgstr "Tradukistoj"
