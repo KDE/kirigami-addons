@@ -16,6 +16,8 @@ ecm_target_qml_sources(componentsplugin SOURCES
     ${CMAKE_CURRENT_BINARY_DIR}/Avatar.qml
     ${CMAKE_CURRENT_BINARY_DIR}/AbstractMaximizeComponent.qml
     ${CMAKE_CURRENT_BINARY_DIR}/AlbumMaximizeComponent.qml
+    ActionButton.qml
+    DoubleActionButton.qml
     ImageMaximizeDelegate.qml
     VideoMaximizeDelegate.qml
     AlbumModelItem.qml

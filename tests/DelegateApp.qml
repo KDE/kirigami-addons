@@ -11,6 +11,7 @@ import QtQuick.Layouts 1.15
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kirigamiaddons.labs.mobileform 0.1 as MobileForm
 import org.kde.kirigamiaddons.delegates 1.0 as Delegates
+import org.kde.kirigamiaddons.labs.components 1.0 as Components
 
 Kirigami.ApplicationWindow {
     id: appwindow
@@ -62,6 +63,25 @@ Kirigami.ApplicationWindow {
                     icon.name: "kde"
                     text: "Item " + modelData
                 }
+
+                Components.DoubleActionButton {
+                    anchors {
+                        right: parent.right
+                        rightMargin: Kirigami.Units.largeSpacing
+                        bottom: parent.bottom
+                        bottomMargin: Kirigami.Units.largeSpacing
+                    }
+
+                    leftAction: Kirigami.Action {
+                        text: "Hello"
+                        icon.name: "list-add"
+                    }
+
+                    rightAction: Kirigami.Action {
+                        text: "Hello"
+                        icon.name: "list-add"
+                    }
+                }
             }
         }
     }
@@ -85,6 +105,20 @@ Kirigami.ApplicationWindow {
                     contentItem: Delegates.SubtitleContentItem {
                         itemDelegate: delegate
                         subtitle: "Subtitle " + delegate.modelData
+                    }
+                }
+
+                Components.ActionButton {
+                    anchors {
+                        right: parent.right
+                        rightMargin: Kirigami.Units.largeSpacing
+                        bottom: parent.bottom
+                        bottomMargin: Kirigami.Units.largeSpacing
+                    }
+
+                    action: Kirigami.Action {
+                        text: "Hello"
+                        icon.name: "list-add"
                     }
                 }
             }
