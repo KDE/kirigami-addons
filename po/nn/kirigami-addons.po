@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-20 00:47+0000\n"
+"POT-Creation-Date: 2023-08-04 00:44+0000\n"
 "PO-Revision-Date: 2023-07-12 13:05+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -97,21 +97,21 @@ msgstr "%1 %2"
 
 #: dateandtime/DatePicker.qml:182
 #, kde-format
-msgctxt "kirigami-addons"
+msgctxt "@title:tab"
 msgid "Days"
-msgstr "Dagar"
+msgstr ""
 
 #: dateandtime/DatePicker.qml:190
 #, kde-format
-msgctxt "kirigami-addons"
+msgctxt "@title:tab"
 msgid "Months"
-msgstr "Månadar"
+msgstr ""
 
 #: dateandtime/DatePicker.qml:196
 #, kde-format
-msgctxt "kirigami-addons"
+msgctxt "@title:tab"
 msgid "Years"
-msgstr "År"
+msgstr ""
 
 #: dateandtime/DatePopup.qml:55
 #, kde-format
@@ -213,7 +213,7 @@ msgstr ""
 "feilsporings­systemet. Sjå då til at du har markert feil­rapporten med "
 "«Wishlist»."
 
-#: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:233
+#: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:248
 #, kde-format
 msgid "Report a bug"
 msgstr "Meld frå om feil"
@@ -229,7 +229,7 @@ msgstr ""
 "med omsetjingar, laga grafikk, tema, lydar eller betre hjelpetekstar. Her er "
 "noko for alle!"
 
-#: mobileform/AboutKDE.qml:128 mobileform/AboutPage.qml:212
+#: mobileform/AboutKDE.qml:128 mobileform/AboutPage.qml:222
 #, kde-format
 msgid "Get Involved"
 msgstr "Vert med"
@@ -277,7 +277,7 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V."
 
-#: mobileform/AboutKDE.qml:166 mobileform/AboutPage.qml:203
+#: mobileform/AboutKDE.qml:166 mobileform/AboutPage.qml:208
 #, kde-format
 msgid "Donate"
 msgstr "Gje pengegåve"
@@ -299,22 +299,22 @@ msgid_plural "Licenses"
 msgstr[0] "Lisens"
 msgstr[1] "Lisensar"
 
-#: mobileform/AboutPage.qml:246
+#: mobileform/AboutPage.qml:261
 #, kde-format
 msgid "Libraries in use"
 msgstr "Brukte bibliotek"
 
-#: mobileform/AboutPage.qml:277
+#: mobileform/AboutPage.qml:292
 #, kde-format
 msgid "Authors"
 msgstr "Utviklarar"
 
-#: mobileform/AboutPage.qml:289
+#: mobileform/AboutPage.qml:304
 #, kde-format
 msgid "Credits"
 msgstr "Bidragsytarar"
 
-#: mobileform/AboutPage.qml:301
+#: mobileform/AboutPage.qml:316
 #, kde-format
 msgid "Translators"
 msgstr "Omsetjarar"

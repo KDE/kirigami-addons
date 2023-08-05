@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-04 00:44+0000\n"
-"PO-Revision-Date: 2023-07-31 09:45+0200\n"
+"PO-Revision-Date: 2023-08-04 08:11+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -93,25 +93,19 @@ msgid "%1 %2"
 msgstr "%1 %2"
 
 #: dateandtime/DatePicker.qml:182
-#, fuzzy, kde-format
-#| msgctxt "kirigami-addons"
-#| msgid "Days"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Days"
 msgstr "Dagar"
 
 #: dateandtime/DatePicker.qml:190
-#, fuzzy, kde-format
-#| msgctxt "kirigami-addons"
-#| msgid "Months"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Months"
 msgstr "Månader"
 
 #: dateandtime/DatePicker.qml:196
-#, fuzzy, kde-format
-#| msgctxt "kirigami-addons"
-#| msgid "Years"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Years"
 msgstr "År"
