@@ -12,14 +12,14 @@ import org.kde.kirigami 2.20 as Kirigami
  * This component is a button that can be displayed at the bottom of a page.
  *
  * @code{.qml}
- * import org.kde.Kirigamiaddons.labs.components 1.0 as Components
+ * import org.kde.Kirigamiaddons.components 1.0 as Components
  *
  * Kirigami.ScrollablePage {
  *     ListView {
  *         model: []
  *         delegate: QQC2.ItemDelegate { ... }
  *
- *         Components.ActionButton {
+ *         Components.Floating {
  *             anchors {
  *                 right: parent.right
  *                 rightMargin: Kirigami.Units.largeSpacing

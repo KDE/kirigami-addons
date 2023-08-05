@@ -11,7 +11,7 @@ import QtQuick.Layouts 1.15
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kirigamiaddons.labs.mobileform 0.1 as MobileForm
 import org.kde.kirigamiaddons.delegates 1.0 as Delegates
-import org.kde.kirigamiaddons.labs.components 1.0 as Components
+import org.kde.kirigamiaddons.components 1.0 as Components
 
 Kirigami.ApplicationWindow {
     id: appwindow
@@ -64,7 +64,7 @@ Kirigami.ApplicationWindow {
                     text: "Item " + modelData
                 }
 
-                Components.DoubleActionButton {
+                Components.DoubleFloatingButton {
                     anchors {
                         right: parent.right
                         rightMargin: Kirigami.Units.largeSpacing
@@ -108,7 +108,7 @@ Kirigami.ApplicationWindow {
                     }
                 }
 
-                Components.ActionButton {
+                Components.FloatingButton {
                     anchors {
                         right: parent.right
                         rightMargin: Kirigami.Units.largeSpacing
