@@ -41,6 +41,10 @@ Kirigami.ApplicationWindow {
         return number === 1 ? text1 : text2;
     }
 
+    function i18ndc(context, text) {
+        return text
+    }
+
     function i18nc(context, text) {
         return text;
     }
@@ -52,6 +56,11 @@ Kirigami.ApplicationWindow {
 
         Kirigami.ScrollablePage {
             title: "RoundedItemDelegate"
+
+            header: Components.Banner {
+                text: "Hello"
+                visible: true
+            }
 
             ListView {
                 model: 50
@@ -92,8 +101,15 @@ Kirigami.ApplicationWindow {
         Kirigami.ScrollablePage {
             title: "RoundedItemDelegate with subtitle"
 
+            header: Components.Banner {
+                title: "Hello"
+                text: "Hello world"
+                visible: true
+            }
+
             ListView {
                 model: 50
+
                 delegate: Delegates.RoundedItemDelegate {
                     id: delegate
 

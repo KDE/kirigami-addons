@@ -120,6 +120,7 @@ T.ToolBar {
     contentItem: GridLayout {
         columns: 3
         columnSpacing: Kirigami.Units.mediumSpacing
+        rowSpacing: 0
 
         Item {
             Layout.preferredWidth: closeButton.visible ? closeButton.implicitWidth : Kirigami.Units.iconSizes.medium
@@ -228,15 +229,13 @@ T.ToolBar {
         }
 
         Rectangle {
-            opacity: 0.2
-            color: backgroundItem.color
+            color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, backgroundItem.color, 0.2)
             anchors.fill: parent
         }
 
         Rectangle {
-            color: backgroundItem.color
+            color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, backgroundItem.color, 0.7)
             height: 1
-            opacity: 0.7
 
             anchors {
                 left: parent.left
