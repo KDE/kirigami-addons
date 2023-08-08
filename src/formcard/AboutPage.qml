@@ -20,10 +20,8 @@ import "private" as Private
  * the contributors and some information of which platform it's running on.
  *
  * @since KirigamiAddons 0.11.0
- *
- * @inherit Kirigami.ScrollablePage
+ * @inherit org:kde::kirigami::ScrollablePage
  */
-
 Kirigami.ScrollablePage {
     id: page
 
