@@ -17,7 +17,7 @@ import org.kde.kirigami 2.20 as Kirigami
  * This is used in AbstractFormDelegate so that new delegates provide this
  * feedback by default, and can be easily overriden with a QtQuick.Item.
  *
- * @since org.kde.kirigamiaddons.labs.mobileform 0.1
+ * @since KirigamiAddons 0.11.0
  *
  * @see AbstractFormDelegate
  *

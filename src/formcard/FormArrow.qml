@@ -18,7 +18,7 @@ import org.kde.kirigami 2.19 as Kirigami
  * Each FormArrow instance corresponds to a single arrow that may point
  * upwards, downwards, to the left or to the right.
  *
- * @since org.kde.kirigamiaddons.labs.mobileform 0.1
+ * @since KirigamiAddons 0.11.0
  *
  * @inherit Kirigami.Icon
  */

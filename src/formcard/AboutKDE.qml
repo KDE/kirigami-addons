@@ -13,7 +13,7 @@ import org.kde.kirigami 2.20 as Kirigami
  * This component consists of a full, internationalized "About KDE" page
  * that can be instantiated directly without passing any properties.
  *
- * @since org.kde.kirigamiaddons.labs.mobileform 0.1
+ * @since KirigamiAddons 0.11.0
  *
  * @inherit Kirigami.ScrollablePage
  */

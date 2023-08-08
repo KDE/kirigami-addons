@@ -44,7 +44,7 @@ import org.kde.kirigami 2.19 as Kirigami
  * }
  * ```
  *
- * @since org.kde.kirigamiaddons.labs.mobileform 0.1
+ * @since KirigamiAddons 0.11.0
  *
  * @inherit AbstractFormDelegate
  */

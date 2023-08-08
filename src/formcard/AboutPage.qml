@@ -19,7 +19,7 @@ import "private" as Private
  * It allows to show the copyright notice of the application together with
  * the contributors and some information of which platform it's running on.
  *
- * @since org.kde.kirigamiaddons.labs.mobileform 0.1
+ * @since KirigamiAddons 0.11.0
  *
  * @inherit Kirigami.ScrollablePage
  */

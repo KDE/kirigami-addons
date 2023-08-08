@@ -29,7 +29,7 @@ import "private" as Private
  * If you need multiple toggles for the same setting, use a FormRadioDelegate
  * instead.
  *
- * @since org.kde.kirigamiaddons.labs.mobileform 0.1
+ * @since KirigamiAddons 0.11.0
  *
  * @see QtQuick.Controls.AbstractButton
  * @see FormCheckDelegate

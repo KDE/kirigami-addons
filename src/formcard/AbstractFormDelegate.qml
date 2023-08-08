@@ -17,7 +17,7 @@ import org.kde.kirigami 2.12 as Kirigami
  * By default, it includes a background with hover and click feedback.
  * Set the `background` property to Item {} to remove it.
  *
- * @since org.kde.kirigamiaddons.labs.mobileform 0.1
+ * @since KirigamiAddons 0.11.0
  *
  * @see FormDelegateBackground
  *

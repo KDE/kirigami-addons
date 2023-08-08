@@ -15,19 +15,11 @@ class MobileFormPlugin : public QQmlExtensionPlugin
 public:
     MobileFormPlugin() = default;
     ~MobileFormPlugin() = default;
-    void initializeEngine(QQmlEngine *engine, const char *uri) override;
-    void registerTypes(const char *uri) override;
+    void registerTypes(const char *uri) override
+    {
+        Q_ASSERT(QLatin1String(uri) == QLatin1String("org.kde.kirigamiaddons.labs.mobileform"));
+        qmlRegisterModule(uri, 0, 1);
+    }
 };
 
-void MobileFormPlugin::initializeEngine(QQmlEngine *engine, const char *uri)
-{
-    Q_UNUSED(engine)
-    Q_UNUSED(uri)
-}
-
-void MobileFormPlugin::registerTypes(const char *uri)
-{
-    qmlRegisterModule(uri, 0, 1);
-}
-
-#include "plugin.moc"
+#include "labplugin.moc"

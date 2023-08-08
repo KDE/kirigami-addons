@@ -33,9 +33,7 @@ import "private" as Private
  * ::contentItem and does not need to be set, while the width is expected
  * to be given by the parent, for example, via a Layout.fillWidth.
  *
- * @note Do not add your delegates as direct children of the FormCard.
- *
- * @since org.kde.kirigamiaddons.labs.mobileform 0.1
+ * @since KirigamiAddons 0.11.0
  *
  * @inherit QtQuick.Item
  */
@@ -43,15 +41,11 @@ Item {
     id: root
 
     /**
-     * @brief The contents of the Form card.
+     * @brief The delegates inside the Form card.
      *
      * This is where you should add new Form delegates.
-     *
-     * A QtQuick.Layouts.ColumnLayout may be set as the contentItem's direct
-     * child so that multiple delegates can be added to a FormCard.
-     * Typically, the first delegate would then be a FormCardHeader.
      */
-    property Item contentItem: Item {}
+    default property alias delegates: internalColumn.children
 
     /**
      * @brief The maximum width of the card.
@@ -86,7 +80,7 @@ Item {
     Kirigami.Theme.colorSet: Kirigami.Theme.View
     Kirigami.Theme.inherit: false
 
-    implicitHeight: topPadding + bottomPadding + contentItem.implicitHeight + rectangle.borderWidth * 2
+    implicitHeight: topPadding + bottomPadding + internalColumn.implicitHeight + rectangle.borderWidth * 2
 
     Rectangle {
         id: rectangle
@@ -111,9 +105,10 @@ Item {
             width: borderWidth
         }
 
-        Private.ContentItemLoader {
-            id: contentItemLoader
-            contentItem: root.contentItem
+        ColumnLayout {
+            id: internalColumn
+
+            spacing: 0
 
             // add 1 to margins to account for the border (so content doesn't overlap it)
             anchors {

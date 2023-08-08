@@ -41,7 +41,7 @@ import "private" as Private
  * @endcode
  *
  *
- * @since org.kde.kirigamiaddons.labs.mobileform 0.1
+ * @since KirigamiAddons 0.11.0
  *
  * @inherit QtQuick.Item
  */

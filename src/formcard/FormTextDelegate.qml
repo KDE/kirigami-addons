@@ -21,7 +21,7 @@ import "private" as Private
  * If you need just a secondary text component, use a FormSectionText
  * instead.
  *
- * @since org.kde.kirigamiaddons.labs.mobileform 0.1
+ * @since KirigamiAddons 0.11.0
  *
  * @see FormSectionText
  * @see QtQuick.Controls.AbstractButton
