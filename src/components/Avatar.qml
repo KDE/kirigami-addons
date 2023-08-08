@@ -10,6 +10,7 @@ import QtQuick.Window 2.15
 import @QTGRAPHICALEFFECTS_MODULE@ as GE
 import org.kde.kirigami 2.15 as Kirigami
 import org.kde.kirigami.private 2.14 as KP
+import org.kde.kirigamiaddons.components 1.0 as Components
 
 /**
  * @brief An element that represents a user, either with initials, an icon, or a profile image.
@@ -63,9 +64,9 @@ Item {
      * * ``Avatar.InitialsMode.UseInitials``: Show the user's initials.
      * * ``Avatar.InitialsMode.UseIcon``: Show a generic icon.
      *
-     * @see org::kde::kirigami::Avatar::InitialsMode
+     * @see org::kde::kirigamiaddons::components::Avatar::InitialsMode
      */
-    property int initialsMode: Kirigami.Avatar.InitialsMode.UseInitials
+    property int initialsMode: Components.Avatar.InitialsMode.UseInitials
 
     /**
      * @brief This property holds how the avatar should be shown.
@@ -78,9 +79,9 @@ Item {
      * * ``Avatar.ImageMode.AdaptiveImageOrInitals``: Show the image if it is valid; or show initials if it is not
      * * ``Avatar.ImageMode.AlwaysShowInitials``: Always show initials
      *
-     * @see org::kde::kirigami::Avatar::ImageMode
+     * @see org::kde::kirigamiaddons::components::Avatar::ImageMode
      */
-    property int imageMode: Kirigami.Avatar.ImageMode.AdaptiveImageOrInitals
+    property int imageMode: Components.Avatar.ImageMode.AdaptiveImageOrInitals
 
     /**
      * @brief This property sets whether the provided image should be cached.
@@ -103,7 +104,7 @@ Item {
      *
      * @property color color
      */
-    property color color: Kirigami.NameUtils.colorsFromString(name)
+    property color color: Components.NameUtils.colorsFromString(name)
 
     /**
      * @brief This property holds the color of the avatar's initials.
@@ -138,11 +139,11 @@ Item {
 
     readonly property bool __showImage: {
         switch (root.imageMode) {
-        case Kirigami.Avatar.ImageMode.AlwaysShowImage:
+        case Components.Avatar.ImageMode.AlwaysShowImage:
             return true;
-        case Kirigami.Avatar.ImageMode.AdaptiveImageOrInitals:
+        case Components.Avatar.ImageMode.AdaptiveImageOrInitals:
             return avatarImage.status === Image.Ready;
-        case Kirigami.Avatar.ImageMode.AlwaysShowInitials:
+        case Components.Avatar.ImageMode.AlwaysShowInitials:
         default:
             return false;
         }
@@ -177,12 +178,12 @@ Item {
             Text {
                 anchors.fill: parent
 
-                visible: root.initialsMode === Kirigami.Avatar.InitialsMode.UseInitials &&
+                visible: root.initialsMode === Components.Avatar.InitialsMode.UseInitials &&
                         !root.__showImage &&
-                        !Kirigami.NameUtils.isStringUnsuitableForInitials(root.name) &&
+                        !Components.NameUtils.isStringUnsuitableForInitials(root.name) &&
                         root.width > Kirigami.Units.gridUnit
 
-                text: Kirigami.NameUtils.initialsFromString(root.name)
+                text: Components.NameUtils.initialsFromString(root.name)
                 color: root.color
 
                 font {
@@ -202,8 +203,8 @@ Item {
                 anchors.margins: Kirigami.Units.largeSpacing
 
                 visible: !root.__showImage
-                    && (root.initialsMode === Kirigami.Avatar.InitialsMode.UseIcon
-                        || Kirigami.NameUtils.isStringUnsuitableForInitials(root.name))
+                    && (root.initialsMode === Components.Avatar.InitialsMode.UseIcon
+                        || Components.NameUtils.isStringUnsuitableForInitials(root.name))
 
                 color: root.__textColor
                 source: "user"

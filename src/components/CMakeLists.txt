@@ -10,6 +10,8 @@ configure_file(AlbumMaximizeComponent.qml ${CMAKE_CURRENT_BINARY_DIR}/AlbumMaxim
 configure_file(Avatar.qml ${CMAKE_CURRENT_BINARY_DIR}/Avatar.qml)
 
 target_sources(componentslabsplugin PRIVATE
+    nameutils.h
+    nameutils.cpp
     componentslabsplugin.cpp
 )
 
@@ -38,6 +40,8 @@ ecm_finalize_qml_module(componentslabsplugin DESTINATION ${KDE_INSTALL_QMLDIR})
 ecm_add_qml_module(componentsplugin URI "org.kde.kirigamiaddons.components" VERSION 1.0)
 
 target_sources(componentsplugin PRIVATE
+    nameutils.h
+    nameutils.cpp
     componentsplugin.cpp
 )
 

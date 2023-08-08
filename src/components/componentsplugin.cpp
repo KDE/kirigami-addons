@@ -4,6 +4,7 @@
 
 #include <QQmlExtensionPlugin>
 #include <QQmlEngine>
+#include "nameutils.h"
 
 class ComponentsPlugin : public QQmlExtensionPlugin
 {
@@ -26,6 +27,9 @@ void ComponentsPlugin::initializeEngine(QQmlEngine *engine, const char *uri)
 void ComponentsPlugin::registerTypes(const char *uri)
 {
     qmlRegisterModule(uri, 1, 0);
+    qmlRegisterSingletonType<NameUtils>(uri, 1, 0, "NameUtils", [](QQmlEngine*, QJSEngine*) -> QObject* {
+        return new NameUtils;
+    });
 }
 
 #include "componentsplugin.moc"

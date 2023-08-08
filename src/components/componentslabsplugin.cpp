@@ -4,6 +4,7 @@
 
 #include <QQmlExtensionPlugin>
 #include <QQmlEngine>
+#include "nameutils.h"
 
 class ComponentsLabsPlugin : public QQmlExtensionPlugin
 {
@@ -16,6 +17,9 @@ public:
     void registerTypes(const char *uri) override
     {
         qmlRegisterModule(uri, 1, 0);
+        qmlRegisterSingletonType<NameUtils>(uri, 1, 0, "NameUtils", [](QQmlEngine*, QJSEngine*) -> QObject* {
+            return new NameUtils;
+        });
     }
 };
 
