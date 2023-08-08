@@ -215,27 +215,37 @@ T.ToolBar {
     }
 
     background: Item {
-        id: backgroundItem
-
-        readonly property color color: switch (root.type) {
-        case Kirigami.MessageType.Positive:
-            return Kirigami.Theme.positiveTextColor;
-        case Kirigami.MessageType.Warning:
-            return Kirigami.Theme.neutralTextColor;
-        case Kirigami.MessageType.Error:
-            return Kirigami.Theme.negativeTextColor;
-        default:
-            return Kirigami.Theme.activeTextColor;
-        }
 
         Rectangle {
-            color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, backgroundItem.color, 0.2)
+            color: {
+                switch (root.type) {
+                case Kirigami.MessageType.Positive:
+                    return Kirigami.Theme.positiveBackgroundColor;
+                case Kirigami.MessageType.Warning:
+                    return Kirigami.Theme.neutralBackgroundColor;
+                case Kirigami.MessageType.Error:
+                    return Kirigami.Theme.negativeBackgroundColor;
+                default:
+                    return Kirigami.Theme.activeBackgroundColor;
+                }
+            }
             anchors.fill: parent
         }
 
         Rectangle {
-            color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, backgroundItem.color, 0.7)
             height: 1
+            color: {
+                switch (root.type) {
+                case Kirigami.MessageType.Positive:
+                    return Kirigami.Theme.positiveTextColor;
+                case Kirigami.MessageType.Warning:
+                    return Kirigami.Theme.neutralTextColor;
+                case Kirigami.MessageType.Error:
+                    return Kirigami.Theme.negativeTextColor;
+                default:
+                    return Kirigami.Theme.activeTextColor;
+                }
+            }
 
             anchors {
                 left: parent.left
