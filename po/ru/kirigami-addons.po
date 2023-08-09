@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-08 00:44+0000\n"
+"POT-Creation-Date: 2023-08-09 00:44+0000\n"
 "PO-Revision-Date: 2023-05-26 15:39+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -304,6 +304,18 @@ msgstr "Благодарности"
 #, kde-format
 msgid "Translators"
 msgstr "Переводчики"
+
+#: settings/CategorizedSettings.qml:44
+#, kde-format
+msgctxt "@title:window"
+msgid "Settings"
+msgstr ""
+
+#: settings/CategorizedSettings.qml:44
+#, kde-format
+msgctxt "@title:window"
+msgid "Settings — %1"
+msgstr ""
 
 #~ msgid ""
 #~ "Software can always be improved, and the KDE team is ready to do so. "
