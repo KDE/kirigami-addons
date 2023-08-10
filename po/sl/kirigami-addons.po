@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-09 00:44+0000\n"
+"POT-Creation-Date: 2023-08-10 00:44+0000\n"
 "PO-Revision-Date: 2023-08-04 14:26+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -142,22 +142,22 @@ msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: mobileform/AboutKDE.qml:28
+#: formcard/AboutKDE.qml:28
 #, kde-format
 msgid "About KDE"
 msgstr "O KDE"
 
-#: mobileform/AboutKDE.qml:60
+#: formcard/AboutKDE.qml:60
 #, kde-format
 msgid "KDE"
 msgstr "KDE"
 
-#: mobileform/AboutKDE.qml:69
+#: formcard/AboutKDE.qml:69
 #, kde-format
 msgid "Be Free!"
 msgstr "Bodite svobodni!"
 
-#: mobileform/AboutKDE.qml:78
+#: formcard/AboutKDE.qml:78
 #, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
@@ -180,12 +180,12 @@ msgstr ""
 "cilj izgradnje najboljše proste programske opreme na svetu. Vsi so "
 "dobrodošli, vključno z vami, da se pridružite in prispevate k KDE."
 
-#: mobileform/AboutKDE.qml:86 mobileform/AboutPage.qml:194
+#: formcard/AboutKDE.qml:86 formcard/AboutPage.qml:192
 #, kde-format
 msgid "Homepage"
 msgstr "Domača stran"
 
-#: mobileform/AboutKDE.qml:99
+#: formcard/AboutKDE.qml:99
 #, kde-format
 msgid ""
 "Software can always be improved, and the KDE team is ready to do so. "
@@ -211,12 +211,12 @@ msgstr ""
 "da registrirate svojo željo. Prepričajte se, da uporabite resnost, imenovano "
 "\"Seznam želja - Wishlist\"."
 
-#: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:248
+#: formcard/AboutKDE.qml:108 formcard/AboutPage.qml:246
 #, kde-format
 msgid "Report a bug"
 msgstr "Poročaj o napaki"
 
-#: mobileform/AboutKDE.qml:121
+#: formcard/AboutKDE.qml:121
 #, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
@@ -228,17 +228,17 @@ msgstr ""
 "lahko zagotavljate grafiko, teme, zvoke in izboljšano dokumentacijo. Vi "
 "odločate!"
 
-#: mobileform/AboutKDE.qml:128 mobileform/AboutPage.qml:222
+#: formcard/AboutKDE.qml:128 formcard/AboutPage.qml:220
 #, kde-format
 msgid "Get Involved"
 msgstr "Bodite vpleteni"
 
-#: mobileform/AboutKDE.qml:135
+#: formcard/AboutKDE.qml:135
 #, kde-format
 msgid "Developer Documentation"
 msgstr "Razvojna dokumentacija"
 
-#: mobileform/AboutKDE.qml:148
+#: formcard/AboutKDE.qml:148
 #, kde-format
 msgid ""
 "KDE software is and will always be available free of charge, however "
@@ -274,27 +274,27 @@ msgstr ""
 "\n"
 "Že vnaprej se vam najlepše zahvaljujemo za vašo podporo."
 
-#: mobileform/AboutKDE.qml:159
+#: formcard/AboutKDE.qml:159
 #, kde-format
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: mobileform/AboutKDE.qml:166 mobileform/AboutPage.qml:208
+#: formcard/AboutKDE.qml:166 formcard/AboutPage.qml:206
 #, kde-format
 msgid "Donate"
 msgstr "Donirajte"
 
-#: mobileform/AboutPage.qml:98
+#: formcard/AboutPage.qml:96
 #, kde-format
 msgid "About %1"
 msgstr "O %1"
 
-#: mobileform/AboutPage.qml:150
+#: formcard/AboutPage.qml:148
 #, kde-format
 msgid "Copyright"
 msgstr "Copyright"
 
-#: mobileform/AboutPage.qml:157
+#: formcard/AboutPage.qml:155
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
@@ -303,22 +303,22 @@ msgstr[1] "Licenci"
 msgstr[2] "Licence"
 msgstr[3] "Licence"
 
-#: mobileform/AboutPage.qml:261
+#: formcard/AboutPage.qml:259
 #, kde-format
 msgid "Libraries in use"
 msgstr "Knjižnice v rabi"
 
-#: mobileform/AboutPage.qml:292
+#: formcard/AboutPage.qml:290
 #, kde-format
 msgid "Authors"
 msgstr "Avtorji"
 
-#: mobileform/AboutPage.qml:304
+#: formcard/AboutPage.qml:302
 #, kde-format
 msgid "Credits"
 msgstr "Zasluge"
 
-#: mobileform/AboutPage.qml:316
+#: formcard/AboutPage.qml:314
 #, kde-format
 msgid "Translators"
 msgstr "Prevajalci"

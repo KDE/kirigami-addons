@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-09 00:44+0000\n"
+"POT-Creation-Date: 2023-08-10 00:44+0000\n"
 "PO-Revision-Date: 2023-05-21 14:55+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -148,22 +148,22 @@ msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: mobileform/AboutKDE.qml:28
+#: formcard/AboutKDE.qml:28
 #, kde-format
 msgid "About KDE"
 msgstr "About KDE"
 
-#: mobileform/AboutKDE.qml:60
+#: formcard/AboutKDE.qml:60
 #, kde-format
 msgid "KDE"
 msgstr "KDE"
 
-#: mobileform/AboutKDE.qml:69
+#: formcard/AboutKDE.qml:69
 #, kde-format
 msgid "Be Free!"
 msgstr "Be Free!"
 
-#: mobileform/AboutKDE.qml:78
+#: formcard/AboutKDE.qml:78
 #, fuzzy, kde-format
 #| msgid ""
 #| "KDE is a world-wide community of software engineers, artists, writers, "
@@ -186,12 +186,12 @@ msgstr ""
 "produces the Plasma desktop environment, hundreds of applications, and the "
 "many software libraries that support them.\n"
 
-#: mobileform/AboutKDE.qml:86 mobileform/AboutPage.qml:194
+#: formcard/AboutKDE.qml:86 formcard/AboutPage.qml:192
 #, kde-format
 msgid "Homepage"
 msgstr "Homepage"
 
-#: mobileform/AboutKDE.qml:99
+#: formcard/AboutKDE.qml:99
 #, kde-format
 msgid ""
 "Software can always be improved, and the KDE team is ready to do so. "
@@ -206,12 +206,12 @@ msgid ""
 "\"Wishlist\"."
 msgstr ""
 
-#: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:248
+#: formcard/AboutKDE.qml:108 formcard/AboutPage.qml:246
 #, kde-format
 msgid "Report a bug"
 msgstr "Report a bug"
 
-#: mobileform/AboutKDE.qml:121
+#: formcard/AboutKDE.qml:121
 #, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
@@ -222,17 +222,17 @@ msgstr ""
 "You can join the national teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 
-#: mobileform/AboutKDE.qml:128 mobileform/AboutPage.qml:222
+#: formcard/AboutKDE.qml:128 formcard/AboutPage.qml:220
 #, kde-format
 msgid "Get Involved"
 msgstr "Get Involved"
 
-#: mobileform/AboutKDE.qml:135
+#: formcard/AboutKDE.qml:135
 #, kde-format
 msgid "Developer Documentation"
 msgstr "Developer Documentation"
 
-#: mobileform/AboutKDE.qml:148
+#: formcard/AboutKDE.qml:148
 #, kde-format
 msgid ""
 "KDE software is and will always be available free of charge, however "
@@ -253,49 +253,49 @@ msgid ""
 "Thank you very much in advance for your support."
 msgstr ""
 
-#: mobileform/AboutKDE.qml:159
+#: formcard/AboutKDE.qml:159
 #, kde-format
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: mobileform/AboutKDE.qml:166 mobileform/AboutPage.qml:208
+#: formcard/AboutKDE.qml:166 formcard/AboutPage.qml:206
 #, kde-format
 msgid "Donate"
 msgstr "Donate"
 
-#: mobileform/AboutPage.qml:98
+#: formcard/AboutPage.qml:96
 #, kde-format
 msgid "About %1"
 msgstr "About %1"
 
-#: mobileform/AboutPage.qml:150
+#: formcard/AboutPage.qml:148
 #, kde-format
 msgid "Copyright"
 msgstr "Copyright"
 
-#: mobileform/AboutPage.qml:157
+#: formcard/AboutPage.qml:155
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "Licence"
 msgstr[1] "Licences"
 
-#: mobileform/AboutPage.qml:261
+#: formcard/AboutPage.qml:259
 #, kde-format
 msgid "Libraries in use"
 msgstr "Libraries in use"
 
-#: mobileform/AboutPage.qml:292
+#: formcard/AboutPage.qml:290
 #, kde-format
 msgid "Authors"
 msgstr "Authors"
 
-#: mobileform/AboutPage.qml:304
+#: formcard/AboutPage.qml:302
 #, kde-format
 msgid "Credits"
 msgstr "Credits"
 
-#: mobileform/AboutPage.qml:316
+#: formcard/AboutPage.qml:314
 #, kde-format
 msgid "Translators"
 msgstr "Translators"
