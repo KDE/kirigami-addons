@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-04 00:44+0000\n"
-"PO-Revision-Date: 2023-08-05 23:16+0200\n"
+"POT-Creation-Date: 2023-08-10 00:44+0000\n"
+"PO-Revision-Date: 2023-08-10 18:41+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -72,7 +72,7 @@ msgstr "Førre bilete"
 msgid "Next image"
 msgstr "Neste bilete"
 
-#: components/Banner.qml:185
+#: components/Banner.qml:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -144,22 +144,22 @@ msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: mobileform/AboutKDE.qml:28
+#: formcard/AboutKDE.qml:28
 #, kde-format
 msgid "About KDE"
 msgstr "Om KDE"
 
-#: mobileform/AboutKDE.qml:60
+#: formcard/AboutKDE.qml:60
 #, kde-format
 msgid "KDE"
 msgstr "KDE"
 
-#: mobileform/AboutKDE.qml:69
+#: formcard/AboutKDE.qml:69
 #, kde-format
 msgid "Be Free!"
 msgstr "Ver fri!"
 
-#: mobileform/AboutKDE.qml:78
+#: formcard/AboutKDE.qml:78
 #, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
@@ -182,12 +182,12 @@ msgstr ""
 "i. Derimot arbeider me saman om å oppnå vårt felles mål om å laga fri "
 "programvare i verdsklasse. Alle er velkomne til å bidra – du òg."
 
-#: mobileform/AboutKDE.qml:86 mobileform/AboutPage.qml:194
+#: formcard/AboutKDE.qml:86 formcard/AboutPage.qml:192
 #, kde-format
 msgid "Homepage"
 msgstr "Heimeside"
 
-#: mobileform/AboutKDE.qml:99
+#: formcard/AboutKDE.qml:99
 #, kde-format
 msgid ""
 "Software can always be improved, and the KDE team is ready to do so. "
@@ -213,12 +213,12 @@ msgstr ""
 "feilsporings­systemet. Sjå då til at du har markert feil­rapporten med "
 "«Wishlist»."
 
-#: mobileform/AboutKDE.qml:108 mobileform/AboutPage.qml:248
+#: formcard/AboutKDE.qml:108 formcard/AboutPage.qml:246
 #, kde-format
 msgid "Report a bug"
 msgstr "Meld frå om feil"
 
-#: mobileform/AboutKDE.qml:121
+#: formcard/AboutKDE.qml:121
 #, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
@@ -229,17 +229,17 @@ msgstr ""
 "med omsetjingar, laga grafikk, tema, lydar eller betre hjelpetekstar. Her er "
 "noko for alle!"
 
-#: mobileform/AboutKDE.qml:128 mobileform/AboutPage.qml:222
+#: formcard/AboutKDE.qml:128 formcard/AboutPage.qml:220
 #, kde-format
 msgid "Get Involved"
 msgstr "Vert med"
 
-#: mobileform/AboutKDE.qml:135
+#: formcard/AboutKDE.qml:135
 #, kde-format
 msgid "Developer Documentation"
 msgstr "Dokumentasjon for utviklarar"
 
-#: mobileform/AboutKDE.qml:148
+#: formcard/AboutKDE.qml:148
 #, kde-format
 msgid ""
 "KDE software is and will always be available free of charge, however "
@@ -272,49 +272,61 @@ msgstr ""
 "\n"
 "På førehand tusen takk for støtta di."
 
-#: mobileform/AboutKDE.qml:159
+#: formcard/AboutKDE.qml:159
 #, kde-format
 msgid "KDE e.V"
 msgstr "KDE e.V."
 
-#: mobileform/AboutKDE.qml:166 mobileform/AboutPage.qml:208
+#: formcard/AboutKDE.qml:166 formcard/AboutPage.qml:206
 #, kde-format
 msgid "Donate"
 msgstr "Gje pengegåve"
 
-#: mobileform/AboutPage.qml:98
+#: formcard/AboutPage.qml:96
 #, kde-format
 msgid "About %1"
 msgstr "Om %1"
 
-#: mobileform/AboutPage.qml:150
+#: formcard/AboutPage.qml:148
 #, kde-format
 msgid "Copyright"
 msgstr "Opphavsrett"
 
-#: mobileform/AboutPage.qml:157
+#: formcard/AboutPage.qml:155
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "Lisens"
 msgstr[1] "Lisensar"
 
-#: mobileform/AboutPage.qml:261
+#: formcard/AboutPage.qml:259
 #, kde-format
 msgid "Libraries in use"
 msgstr "Brukte bibliotek"
 
-#: mobileform/AboutPage.qml:292
+#: formcard/AboutPage.qml:290
 #, kde-format
 msgid "Authors"
 msgstr "Utviklarar"
 
-#: mobileform/AboutPage.qml:304
+#: formcard/AboutPage.qml:302
 #, kde-format
 msgid "Credits"
 msgstr "Bidragsytarar"
 
-#: mobileform/AboutPage.qml:316
+#: formcard/AboutPage.qml:314
 #, kde-format
 msgid "Translators"
 msgstr "Omsetjarar"
+
+#: settings/CategorizedSettings.qml:44
+#, kde-format
+msgctxt "@title:window"
+msgid "Settings"
+msgstr "Innstillingar"
+
+#: settings/CategorizedSettings.qml:44
+#, kde-format
+msgctxt "@title:window"
+msgid "Settings — %1"
+msgstr "Innstillingar – %1"
