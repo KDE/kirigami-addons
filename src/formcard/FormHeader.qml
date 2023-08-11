@@ -6,6 +6,7 @@
 
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
+import QtQuick.Templates 2.15 as T
 import QtQuick.Layouts 1.15
 
 import org.kde.kirigami 2.19 as Kirigami
@@ -23,12 +24,14 @@ Item {
      *
      * @property string title
      */
-    property alias title: header.text
+    property alias title: headerContent.text
 
     /**
      * @brief The maximum width of the header.
      */
     property real maximumWidth: Kirigami.Units.gridUnit * 30
+
+    property list<T.Action> actions
 
     /**
      * @brief These properties hold the padding around the heading.
@@ -49,19 +52,37 @@ Item {
     implicitHeight: header.implicitHeight
     implicitWidth: header.implicitWidth + header.anchors.leftMargin + header.anchors.rightMargin
 
-    QQC2.Label {
+    RowLayout {
         id: header
+
         anchors {
             fill: parent
             leftMargin: root.cardWidthRestricted ? Math.round((root.width - root.maximumWidth) / 2) : 0
             rightMargin: root.cardWidthRestricted ? Math.round((root.width - root.maximumWidth) / 2) : 0
         }
-        topPadding: root.topPadding
-        bottomPadding: root.bottomPadding
-        leftPadding: root.leftPadding
-        rightPadding: root.rightPadding
 
-        font.weight: Font.DemiBold
-        Accessible.role: Accessible.Heading
+        QQC2.Label {
+            id: headerContent
+
+            topPadding: root.topPadding
+            bottomPadding: root.bottomPadding
+            leftPadding: root.leftPadding
+            rightPadding: root.rightPadding
+
+            font.weight: Font.DemiBold
+            Accessible.role: Accessible.Heading
+            Layout.fillWidth: true
+        }
+
+        Repeater {
+            model: root.actions
+
+            QQC2.ToolButton {
+                required property var modelData
+
+                action: modelData
+                visible: modelData
+            }
+        }
     }
 }
