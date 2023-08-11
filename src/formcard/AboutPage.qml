@@ -205,7 +205,7 @@ Kirigami.ScrollablePage {
                     id: donateDelegate
                     text: i18nd("kirigami-addons", "Donate")
                     onClicked: Qt.openUrlExternally(donateUrl + "?app=" + page.aboutData.componentName)
-                    visible: donateUrl.length > 0
+                    visible: donateUrl.toString().length > 0
                 }
 
                 FormDelegateSeparator {
@@ -219,7 +219,7 @@ Kirigami.ScrollablePage {
                     id: homepageDelegate
                     text: i18nd("kirigami-addons", "Get Involved")
                     onClicked: Qt.openUrlExternally(page.getInvolvedUrl)
-                    visible: page.getInvolvedUrl > 0
+                    visible: page.getInvolvedUrl.toString().length > 0
                 }
 
                 FormDelegateSeparator {
