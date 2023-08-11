@@ -364,6 +364,8 @@ Kirigami.ScrollablePage {
                     Kirigami.OverlaySheet {
                         id: licenseSheet
 
+                        title: modelData.licenses.name
+
                         contentItem: Kirigami.SelectableLabel {
                             Layout.preferredWidth: Kirigami.Units.gridUnit * 15
 
