@@ -161,8 +161,10 @@ Kirigami.ScrollablePage {
 
                     contentItem: Kirigami.SelectableLabel {
                         id: bodyLabel
+
+                        Layout.preferredWidth: Kirigami.Units.gridUnit * 15
+
                         text: licenseSheet.text
-                        wrapMode: Text.Wrap
                     }
                 }
 
@@ -363,9 +365,9 @@ Kirigami.ScrollablePage {
                         id: licenseSheet
 
                         contentItem: Kirigami.SelectableLabel {
-                            id: bodyLabel
+                            Layout.preferredWidth: Kirigami.Units.gridUnit * 15
+
                             text: modelData.licenses.text
-                            wrapMode: Text.Wrap
                         }
                     }
 
