@@ -272,10 +272,7 @@ Kirigami.ScrollablePage {
 
                 Repeater {
                     model: aboutData.components
-                    delegate: FormTextDelegate {
-                        Layout.fillWidth: true
-                        text: modelData.name + (modelData.version === "" ? "" : " " + modelData.version)
-                    }
+                    delegate: libraryDelegate
                 }
             }
         }
@@ -320,6 +317,68 @@ Kirigami.ScrollablePage {
                     id: repTranslators
                     model: aboutData.translators
                     delegate: personDelegate
+                }
+            }
+        }
+    }
+
+    Component {
+        id: libraryDelegate
+
+        AbstractFormDelegate {
+            Layout.fillWidth: true
+            background: Item {}
+            contentItem: RowLayout {
+                spacing: Kirigami.Units.smallSpacing * 2
+
+                ColumnLayout {
+                    Layout.fillWidth: true
+                    spacing: Kirigami.Units.smallSpacing
+
+                    QQC2.Label {
+                        Layout.fillWidth: true
+                        text: modelData.name + ' ' + modelData.version
+                        elide: Text.ElideRight
+                    }
+
+                    QQC2.Label {
+                        id: internalDescriptionItem
+                        Layout.fillWidth: true
+                        text: modelData.description
+                        color: Kirigami.Theme.disabledTextColor
+                        font: Kirigami.Theme.smallFont
+                        elide: Text.ElideRight
+                        visible: text.length > 0
+                    }
+                }
+
+                QQC2.ToolButton {
+                    visible: modelData.licenses !== 0
+                    icon.name: "license"
+                    QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                    QQC2.ToolTip.visible: hovered
+                    QQC2.ToolTip.text: !visible ? "" : modelData.licenses.name
+
+                    Kirigami.OverlaySheet {
+                        id: licenseSheet
+
+                        contentItem: Kirigami.SelectableLabel {
+                            id: bodyLabel
+                            text: modelData.licenses.text
+                            wrapMode: Text.Wrap
+                        }
+                    }
+
+                    onClicked: licenseSheet.open()
+                }
+
+                QQC2.ToolButton {
+                    visible: typeof(modelData.webAddress) !== "undefined" && modelData.webAddress.length > 0
+                    icon.name: "globe"
+                    QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                    QQC2.ToolTip.visible: hovered
+                    QQC2.ToolTip.text: (typeof(modelData.webAddress) === "undefined" && modelData.webAddress.length > 0) ? "" : modelData.webAddress
+                    onClicked: Qt.openUrlExternally(modelData.webAddress)
                 }
             }
         }
