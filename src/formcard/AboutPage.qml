@@ -194,10 +194,10 @@ Kirigami.ScrollablePage {
                     visible: aboutData.homepage.length > 0
                 }
 
-                FormDelegateSeparator { above: getInvolvedDelegate
-                    ;
+                FormDelegateSeparator {
+                    above: getInvolvedDelegate
                     below: donateDelegate
-                    ;
+
                     visible: getInvolvedDelegate.visible
                 }
 
@@ -208,10 +208,10 @@ Kirigami.ScrollablePage {
                     visible: donateUrl.length > 0
                 }
 
-                FormDelegateSeparator { above: donateDelegate
-                    ;
+                FormDelegateSeparator {
+                    above: donateDelegate
                     below: homepageDelegate
-                    ;
+
                     visible: donateDelegate.visible
                 }
 
@@ -222,10 +222,10 @@ Kirigami.ScrollablePage {
                     visible: page.getInvolvedUrl > 0
                 }
 
-                FormDelegateSeparator { above: homepageDelegate
-                    ;
+                FormDelegateSeparator {
+                    above: homepageDelegate
                     below: bugDelegate
-                    ;
+
                     visible: homepageDelegate.visible
                 }
 
