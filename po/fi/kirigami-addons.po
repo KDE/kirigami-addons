@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-10 00:44+0000\n"
-"PO-Revision-Date: 2023-06-02 20:07+0300\n"
+"PO-Revision-Date: 2023-07-27 15:01+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: components/AbstractMaximizeComponent.qml:126
 #, kde-format
@@ -70,8 +70,7 @@ msgid "Next image"
 msgstr "Seuraava kuva"
 
 #: components/Banner.qml:186
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button"
 msgid "Close"
 msgstr "Sulje"
@@ -79,7 +78,7 @@ msgstr "Sulje"
 #: components/DownloadAction.qml:37
 #, kde-format
 msgid "Download"
-msgstr ""
+msgstr "Lataa"
 
 #: components/VideoMaximizeDelegate.qml:233
 #, kde-format
@@ -164,12 +163,7 @@ msgid "Be Free!"
 msgstr "Ole vapaa!"
 
 #: formcard/AboutKDE.qml:78
-#, fuzzy, kde-format
-#| msgid ""
-#| "KDE is a world-wide community of software engineers, artists, writers, "
-#| "translators and creators who are committed to Free Software development. "
-#| "KDE produces the Plasma desktop environment, hundreds of applications, "
-#| "and the many software libraries that support them.\n"
+#, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
 "translators and creators who are committed to Free Software development. KDE "
@@ -185,6 +179,11 @@ msgstr ""
 "kansainvälinen vapaiden ohjelmien kehittämiseen omistautunut yhteisö. KDE "
 "valmistaa Plasma-työpöytäympäristöä, satoja sovelluksia ja monia niitä "
 "tukevia ohjelmakirjastoja.\n"
+"\n"
+"KDE on kuin osuuskunta: mikään yksittäinen taho ei hallitse sen suuntaa tai "
+"tuotteita. Sen sijaan teemme työtä yhdessä koostaaksemme maailman hienointa "
+"vapaata ohjelmistoa. Kaikki ovat tervetulleita liittymään ja avustamaan KDE:"
+"tä – myös sinä."
 
 #: formcard/AboutKDE.qml:86 formcard/AboutPage.qml:192
 #, kde-format
@@ -205,6 +204,16 @@ msgid ""
 "tracking system to register your wish. Make sure you use the severity called "
 "\"Wishlist\"."
 msgstr ""
+"Ohjelmia voi aina parantaa, mihin KDE-työryhmä onkin valmis. Sinun – "
+"käyttäjän – on kuitenkin kerrottava meille, jollei jokin toimi odotetusti "
+"tai voisi toimia paremmin.\n"
+"\n"
+"KDE:n on vianjäljitysjärjestelmä. Ilmoita ongelmasta joko alla olevalla "
+"painikkeella tai ohjelmakohtaisesti käyttämällä ohjelman Tietoa-sivua.\n"
+"\n"
+"Parannusehdotuksetkin ovat toivottavia ja voi ilmoittaa "
+"vianjäljitysjärjestelmään. Varmista, että ongelman vakavuus on ”Wishlist”, "
+"toivelista."
 
 #: formcard/AboutKDE.qml:108 formcard/AboutPage.qml:246
 #, kde-format
@@ -252,6 +261,20 @@ msgid ""
 "\n"
 "Thank you very much in advance for your support."
 msgstr ""
+"KDE-ohjelmisto on ja tulee aina olemaan ilmaista, mutta sen luominen ei sitä "
+"ole.\n"
+"\n"
+"Kehitystyön tueksi KDE-yhteisö on muodostanut KDE e.V:n, Saksassa perustetun "
+"voittoa tuottamattoman järjestön. KDE e.V. edustaa KDE-yhteisö laki- ja "
+"talousasioissa.\n"
+"\n"
+"KDE hyötyy kaikenlaisista lahjoituksista, myös rahallisista. Varoja "
+"käytetään jäsenten ja muiden avustajien avustuskulujen kattamiseen, "
+"lakitukeen sekä konferenssien ja tapaamisten järjestämiseen.\n"
+"\n"
+"Kannustamme sinua tukemaan työtämme rahalahjoituksella.\n"
+"\n"
+"Kiitokset etukäteen tuestasi."
 
 #: formcard/AboutKDE.qml:159
 #, kde-format
