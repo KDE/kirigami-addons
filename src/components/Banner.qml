@@ -233,18 +233,26 @@ T.ToolBar {
         }
 
         Rectangle {
+            id: separator
+
             height: 1
             color: {
+                let separatorColor = Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.15);
+                let textColor = Kirigami.Theme.activeTextColor;
+
                 switch (root.type) {
                 case Kirigami.MessageType.Positive:
-                    return Kirigami.Theme.positiveTextColor;
+                    textColor = Kirigami.Theme.positiveTextColor;
+                    break;
                 case Kirigami.MessageType.Warning:
-                    return Kirigami.Theme.neutralTextColor;
+                    textColor = Kirigami.Theme.neutralTextColor;
+                    break;
                 case Kirigami.MessageType.Error:
-                    return Kirigami.Theme.negativeTextColor;
-                default:
-                    return Kirigami.Theme.activeTextColor;
+                    textColor = Kirigami.Theme.negativeTextColor;
+                    break;
                 }
+
+                return Qt.hsla(textColor.hslHue, textColor.hslSaturation, separatorColor.hslLightness, 1);
             }
 
             anchors {
