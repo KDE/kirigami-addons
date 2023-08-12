@@ -123,6 +123,14 @@ T.ToolBar {
         rowSpacing: 0
 
         Item {
+            // Account for separator height when footer
+            Layout.preferredHeight: root.position === QQC2.ToolBar.Footer ? separator.height : 0
+            Layout.column: 0
+            Layout.columnSpan: 3
+            Layout.row: 0
+        }
+
+        Item {
             Layout.preferredWidth: closeButton.visible ? closeButton.implicitWidth : Kirigami.Units.iconSizes.medium
             Layout.preferredHeight: closeButton.visible ? closeButton.implicitWidth : Kirigami.Units.iconSizes.medium
             Layout.alignment: Qt.AlignTop
@@ -153,7 +161,7 @@ T.ToolBar {
             text: root.title
             visible: text.length > 0
 
-            Layout.row: visible ? 0 : 1
+            Layout.row: visible ? 1 : 2
             Layout.column: 1
         }
 
@@ -175,7 +183,7 @@ T.ToolBar {
             Layout.minimumHeight: closeButton.visible ? closeButton.implicitWidth : Kirigami.Units.iconSizes.medium
             Layout.alignment: heading.text.length > 0 || label.lineCount > 1 ? Qt.AlignTop : Qt.AlignBaseline
 
-            Layout.row: heading.visible ? 1 : 0
+            Layout.row: heading.visible ? 2 : 1
             Layout.column: 1
         }
 
@@ -196,6 +204,7 @@ T.ToolBar {
             QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
             QQC2.ToolTip.text: text
 
+            Layout.row: heading.visible ? 1 : 2
             Layout.rowSpan: 2
             Layout.column: 2
         }
@@ -210,7 +219,15 @@ T.ToolBar {
 
             Layout.column: 0
             Layout.columnSpan: 3
-            Layout.row: 2
+            Layout.row: 3
+        }
+
+        Item {
+            // Account for separator height when header
+            Layout.preferredHeight: root.position === QQC2.ToolBar.Header ? separator.height : 0
+            Layout.column: 0
+            Layout.columnSpan: 3
+            Layout.row: 4
         }
     }
 
@@ -250,8 +267,8 @@ T.ToolBar {
             anchors {
                 left: parent.left
                 right: parent.right
-                top: root.position === QQC2.ToolBar.Header ? parent.bottom : undefined
-                bottom: root.position === QQC2.ToolBar.Header ? undefined : parent.top
+                top: root.position === QQC2.ToolBar.Header ? undefined : parent.top
+                bottom: root.position === QQC2.ToolBar.Header ? parent.bottom : undefined
             }
         }
     }
