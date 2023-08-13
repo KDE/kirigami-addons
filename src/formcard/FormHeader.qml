@@ -49,6 +49,8 @@ Item {
     Kirigami.Theme.colorSet: Kirigami.Theme.View
     Kirigami.Theme.inherit: false
 
+    Layout.fillWidth: true
+
     implicitHeight: header.implicitHeight
     implicitWidth: header.implicitWidth + header.anchors.leftMargin + header.anchors.rightMargin
 
