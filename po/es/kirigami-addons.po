@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-10 00:44+0000\n"
-"PO-Revision-Date: 2023-07-14 11:54+0200\n"
+"PO-Revision-Date: 2023-08-13 00:49+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -95,25 +95,19 @@ msgid "%1 %2"
 msgstr "%1 de %2"
 
 #: dateandtime/DatePicker.qml:182
-#, fuzzy, kde-format
-#| msgctxt "kirigami-addons"
-#| msgid "Days"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Days"
 msgstr "Días"
 
 #: dateandtime/DatePicker.qml:190
-#, fuzzy, kde-format
-#| msgctxt "kirigami-addons"
-#| msgid "Months"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Months"
 msgstr "Meses"
 
 #: dateandtime/DatePicker.qml:196
-#, fuzzy, kde-format
-#| msgctxt "kirigami-addons"
-#| msgid "Years"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Years"
 msgstr "Años"
@@ -333,13 +327,13 @@ msgstr "Traductores"
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings"
-msgstr ""
+msgstr "Preferencias"
 
 #: settings/CategorizedSettings.qml:44
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings — %1"
-msgstr ""
+msgstr "Preferencias — %1"
 
 #~ msgid ""
 #~ "Software can always be improved, and the KDE team is ready to do so. "
