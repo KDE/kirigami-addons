@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-10 00:44+0000\n"
-"PO-Revision-Date: 2023-07-09 00:55+0200\n"
+"PO-Revision-Date: 2023-08-13 16:36+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.07.70\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #: components/AbstractMaximizeComponent.qml:126
 #, kde-format
@@ -82,7 +82,7 @@ msgstr "Schließen"
 #: components/DownloadAction.qml:37
 #, kde-format
 msgid "Download"
-msgstr ""
+msgstr "Herunterladen"
 
 #: components/VideoMaximizeDelegate.qml:233
 #, kde-format
@@ -97,25 +97,19 @@ msgid "%1 %2"
 msgstr "%1 %2"
 
 #: dateandtime/DatePicker.qml:182
-#, fuzzy, kde-format
-#| msgctxt "kirigami-addons"
-#| msgid "Days"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Days"
 msgstr "Tage"
 
 #: dateandtime/DatePicker.qml:190
-#, fuzzy, kde-format
-#| msgctxt "kirigami-addons"
-#| msgid "Months"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Months"
 msgstr "Monate"
 
 #: dateandtime/DatePicker.qml:196
-#, fuzzy, kde-format
-#| msgctxt "kirigami-addons"
-#| msgid "Years"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Years"
 msgstr "Jahre"
@@ -179,6 +173,15 @@ msgid ""
 "the world's finest Free Software. Everyone is welcome to join and contribute "
 "to KDE, including you."
 msgstr ""
+"KDE ist ein weltweite Gemeinschaft von Programmierern, Künstlern, Autoren, "
+"Übersetzern und Unterstützern, die sich der Entwicklung von  Freier Software "
+"verschrieben haben. KDE veröffentlicht die Plasma-Arbeitsumgebung, hunderte "
+"von Anwendungen und viele Bibliotheken als Grundlage.\n"
+"\n"
+"KDE ist ein Gemeinschaftsprojekt und wird nicht von einer einzelnen Gruppe, "
+"Firma oder Organisation kontrolliert. Statt dessen wird zusammen die beste "
+"freie Software erstellt. Jeder ist eingeladen, bei  KDE mit zu machen. Auch "
+"Sie."
 
 #: formcard/AboutKDE.qml:86 formcard/AboutPage.qml:192
 #, kde-format
@@ -299,10 +302,10 @@ msgstr "Übersetzer"
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings"
-msgstr ""
+msgstr "Einstellungen"
 
 #: settings/CategorizedSettings.qml:44
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings — %1"
-msgstr ""
+msgstr "Einstellungen — %1"
