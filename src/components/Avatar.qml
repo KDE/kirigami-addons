@@ -66,7 +66,7 @@ Item {
      *
      * @see org::kde::kirigamiaddons::components::Avatar::InitialsMode
      */
-    property int initialsMode: Components.Avatar.InitialsMode.UseInitials
+    property int initialsMode: Avatar.InitialsMode.UseInitials
 
     /**
      * @brief This property holds how the avatar should be shown.
@@ -81,7 +81,7 @@ Item {
      *
      * @see org::kde::kirigamiaddons::components::Avatar::ImageMode
      */
-    property int imageMode: Components.Avatar.ImageMode.AdaptiveImageOrInitals
+    property int imageMode: Avatar.ImageMode.AdaptiveImageOrInitals
 
     /**
      * @brief This property sets whether the provided image should be cached.
@@ -139,11 +139,11 @@ Item {
 
     readonly property bool __showImage: {
         switch (root.imageMode) {
-        case Components.Avatar.ImageMode.AlwaysShowImage:
+        case Avatar.ImageMode.AlwaysShowImage:
             return true;
-        case Components.Avatar.ImageMode.AdaptiveImageOrInitals:
+        case Avatar.ImageMode.AdaptiveImageOrInitals:
             return avatarImage.status === Image.Ready;
-        case Components.Avatar.ImageMode.AlwaysShowInitials:
+        case Avatar.ImageMode.AlwaysShowInitials:
         default:
             return false;
         }
@@ -178,7 +178,7 @@ Item {
             Text {
                 anchors.fill: parent
 
-                visible: root.initialsMode === Components.Avatar.InitialsMode.UseInitials &&
+                visible: root.initialsMode === Avatar.InitialsMode.UseInitials &&
                         !root.__showImage &&
                         !Components.NameUtils.isStringUnsuitableForInitials(root.name) &&
                         root.width > Kirigami.Units.gridUnit
@@ -203,7 +203,7 @@ Item {
                 anchors.margins: Kirigami.Units.largeSpacing
 
                 visible: !root.__showImage
-                    && (root.initialsMode === Components.Avatar.InitialsMode.UseIcon
+                    && (root.initialsMode === Avatar.InitialsMode.UseIcon
                         || Components.NameUtils.isStringUnsuitableForInitials(root.name))
 
                 color: root.__textColor
