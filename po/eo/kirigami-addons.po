@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-10 00:44+0000\n"
+"POT-Creation-Date: 2023-08-15 00:43+0000\n"
 "PO-Revision-Date: 2023-08-11 10:45+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -180,7 +180,7 @@ msgstr ""
 "plej bonan Liberan Programaron de la mondo. Ĉiuj bonvenas aliĝi kaj "
 "kontribui al KDE, inkluzive de vi."
 
-#: formcard/AboutKDE.qml:86 formcard/AboutPage.qml:192
+#: formcard/AboutKDE.qml:86 formcard/AboutPage.qml:194
 #, kde-format
 msgid "Homepage"
 msgstr "Hejmpaĝo"
@@ -211,7 +211,7 @@ msgstr ""
 "por registri vian deziron. Certigu, ke vi uzas la severecon nomatan "
 "\"Dezirlisto\"."
 
-#: formcard/AboutKDE.qml:108 formcard/AboutPage.qml:246
+#: formcard/AboutKDE.qml:108 formcard/AboutPage.qml:248
 #, kde-format
 msgid "Report a bug"
 msgstr "Raportu cimon"
@@ -227,7 +227,7 @@ msgstr ""
 "al la naciaj teamoj, kiuj tradukas programinterfacojn. Vi povas provizi "
 "grafikojn, etosojn, sonojn kaj plibonigitan dokumentadon. Vi decidu!"
 
-#: formcard/AboutKDE.qml:128 formcard/AboutPage.qml:220
+#: formcard/AboutKDE.qml:128 formcard/AboutPage.qml:222
 #, kde-format
 msgid "Get Involved"
 msgstr "Implikiĝi"
@@ -278,7 +278,7 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDE.qml:166 formcard/AboutPage.qml:206
+#: formcard/AboutKDE.qml:166 formcard/AboutPage.qml:208
 #, kde-format
 msgid "Donate"
 msgstr "Doni"
@@ -300,22 +300,22 @@ msgid_plural "Licenses"
 msgstr[0] "Permesilo"
 msgstr[1] "Permesiloj"
 
-#: formcard/AboutPage.qml:259
+#: formcard/AboutPage.qml:261
 #, kde-format
 msgid "Libraries in use"
 msgstr "Bibliotekoj en uzo"
 
-#: formcard/AboutPage.qml:290
+#: formcard/AboutPage.qml:289
 #, kde-format
 msgid "Authors"
 msgstr "Aŭtoroj"
 
-#: formcard/AboutPage.qml:302
+#: formcard/AboutPage.qml:301
 #, kde-format
 msgid "Credits"
 msgstr "Kreditigoj"
 
-#: formcard/AboutPage.qml:314
+#: formcard/AboutPage.qml:313
 #, kde-format
 msgid "Translators"
 msgstr "Tradukistoj"

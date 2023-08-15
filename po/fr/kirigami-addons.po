@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-10 00:44+0000\n"
+"POT-Creation-Date: 2023-08-15 00:43+0000\n"
 "PO-Revision-Date: 2023-05-22 17:17+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
@@ -188,7 +188,7 @@ msgstr ""
 "Plasma, des centaines d'applications et les nombreuses bibliothèques "
 "logicielles qui les supportent. \n"
 
-#: formcard/AboutKDE.qml:86 formcard/AboutPage.qml:192
+#: formcard/AboutKDE.qml:86 formcard/AboutPage.qml:194
 #, kde-format
 msgid "Homepage"
 msgstr "Page d'accueil"
@@ -208,7 +208,7 @@ msgid ""
 "\"Wishlist\"."
 msgstr ""
 
-#: formcard/AboutKDE.qml:108 formcard/AboutPage.qml:246
+#: formcard/AboutKDE.qml:108 formcard/AboutPage.qml:248
 #, kde-format
 msgid "Report a bug"
 msgstr "Signaler un bogue"
@@ -225,7 +225,7 @@ msgstr ""
 "interfaces de programmes. Vous pouvez fournir des graphiques, des thèmes, "
 "des sons et une documentation améliorée. C'est vous qui décidez !"
 
-#: formcard/AboutKDE.qml:128 formcard/AboutPage.qml:220
+#: formcard/AboutKDE.qml:128 formcard/AboutPage.qml:222
 #, kde-format
 msgid "Get Involved"
 msgstr "Impliquez-vous"
@@ -261,7 +261,7 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDE.qml:166 formcard/AboutPage.qml:206
+#: formcard/AboutKDE.qml:166 formcard/AboutPage.qml:208
 #, kde-format
 msgid "Donate"
 msgstr "Faire un don"
@@ -283,22 +283,22 @@ msgid_plural "Licenses"
 msgstr[0] "Licence"
 msgstr[1] "Licences"
 
-#: formcard/AboutPage.qml:259
+#: formcard/AboutPage.qml:261
 #, kde-format
 msgid "Libraries in use"
 msgstr "Bibliothèques en cours d'utilisation"
 
-#: formcard/AboutPage.qml:290
+#: formcard/AboutPage.qml:289
 #, kde-format
 msgid "Authors"
 msgstr "Auteurs"
 
-#: formcard/AboutPage.qml:302
+#: formcard/AboutPage.qml:301
 #, kde-format
 msgid "Credits"
 msgstr "Remerciements"
 
-#: formcard/AboutPage.qml:314
+#: formcard/AboutPage.qml:313
 #, kde-format
 msgid "Translators"
 msgstr "Équipe de traduction"

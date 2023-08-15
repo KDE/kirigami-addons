@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-10 00:44+0000\n"
+"POT-Creation-Date: 2023-08-15 00:43+0000\n"
 "PO-Revision-Date: 2023-08-02 12:41\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -184,7 +184,7 @@ msgstr ""
 "制。我们的共同目标是为全世界带来高品质的自由软件。不管您来自何方，我们都欢迎"
 "您加入 KDE 并做出贡献。"
 
-#: formcard/AboutKDE.qml:86 formcard/AboutPage.qml:192
+#: formcard/AboutKDE.qml:86 formcard/AboutPage.qml:194
 #, kde-format
 msgid "Homepage"
 msgstr "主页"
@@ -213,7 +213,7 @@ msgstr ""
 "如果您想要提出改进建议而不是报告程序缺陷，请确保在表格的 Severity (严重程度) "
 "选单中选择“Wishlist (需求)”。"
 
-#: formcard/AboutKDE.qml:108 formcard/AboutPage.qml:246
+#: formcard/AboutKDE.qml:108 formcard/AboutPage.qml:248
 #, kde-format
 msgid "Report a bug"
 msgstr "报告程序缺陷"
@@ -229,7 +229,7 @@ msgstr ""
 "团队来翻译软件的界面，您还可以制作图像、主题、音效，或者改进软件配套的文档……"
 "您的角色您来定！"
 
-#: formcard/AboutKDE.qml:128 formcard/AboutPage.qml:220
+#: formcard/AboutKDE.qml:128 formcard/AboutPage.qml:222
 #, kde-format
 msgid "Get Involved"
 msgstr "参与贡献"
@@ -277,7 +277,7 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDE.qml:166 formcard/AboutPage.qml:206
+#: formcard/AboutKDE.qml:166 formcard/AboutPage.qml:208
 #, kde-format
 msgid "Donate"
 msgstr "捐款"
@@ -298,22 +298,22 @@ msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "许可证"
 
-#: formcard/AboutPage.qml:259
+#: formcard/AboutPage.qml:261
 #, kde-format
 msgid "Libraries in use"
 msgstr "使用的程序库"
 
-#: formcard/AboutPage.qml:290
+#: formcard/AboutPage.qml:289
 #, kde-format
 msgid "Authors"
 msgstr "作者"
 
-#: formcard/AboutPage.qml:302
+#: formcard/AboutPage.qml:301
 #, kde-format
 msgid "Credits"
 msgstr "鸣谢"
 
-#: formcard/AboutPage.qml:314
+#: formcard/AboutPage.qml:313
 #, kde-format
 msgid "Translators"
 msgstr "翻译人员"

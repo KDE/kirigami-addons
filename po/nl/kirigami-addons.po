@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-10 00:44+0000\n"
+"POT-Creation-Date: 2023-08-15 00:43+0000\n"
 "PO-Revision-Date: 2023-08-09 10:41+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -180,7 +180,7 @@ msgstr ""
 "bereiken. Iedereen is welkom om mee te doen en bij te dragen aan KDE, "
 "inclusief u."
 
-#: formcard/AboutKDE.qml:86 formcard/AboutPage.qml:192
+#: formcard/AboutKDE.qml:86 formcard/AboutPage.qml:194
 #, kde-format
 msgid "Homepage"
 msgstr "Homepagina"
@@ -211,7 +211,7 @@ msgstr ""
 "volgsysteem voor bugs te gebruiken om uw wens te registreren. Ga na dat u de "
 "ernst genaamd \"Wishlist\" gebruikt."
 
-#: formcard/AboutKDE.qml:108 formcard/AboutPage.qml:246
+#: formcard/AboutKDE.qml:108 formcard/AboutPage.qml:248
 #, kde-format
 msgid "Report a bug"
 msgstr "Een bug rapporteren"
@@ -228,7 +228,7 @@ msgstr ""
 "documentatie vertalen. U kunt afbeeldingen, thema's, geluiden en verbeterde "
 "documentatie leveren. Aan u de keuze!"
 
-#: formcard/AboutKDE.qml:128 formcard/AboutPage.qml:220
+#: formcard/AboutKDE.qml:128 formcard/AboutPage.qml:222
 #, kde-format
 msgid "Get Involved"
 msgstr "Doe mee"
@@ -278,7 +278,7 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDE.qml:166 formcard/AboutPage.qml:206
+#: formcard/AboutKDE.qml:166 formcard/AboutPage.qml:208
 #, kde-format
 msgid "Donate"
 msgstr "Doneren"
@@ -300,22 +300,22 @@ msgid_plural "Licenses"
 msgstr[0] "Licentie"
 msgstr[1] "Licenties"
 
-#: formcard/AboutPage.qml:259
+#: formcard/AboutPage.qml:261
 #, kde-format
 msgid "Libraries in use"
 msgstr "Bibliotheken in gebruik"
 
-#: formcard/AboutPage.qml:290
+#: formcard/AboutPage.qml:289
 #, kde-format
 msgid "Authors"
 msgstr "Auteurs"
 
-#: formcard/AboutPage.qml:302
+#: formcard/AboutPage.qml:301
 #, kde-format
 msgid "Credits"
 msgstr "Dankbetuigingen"
 
-#: formcard/AboutPage.qml:314
+#: formcard/AboutPage.qml:313
 #, kde-format
 msgid "Translators"
 msgstr "Vertalers"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-10 00:44+0000\n"
+"POT-Creation-Date: 2023-08-15 00:43+0000\n"
 "PO-Revision-Date: 2023-05-21 14:55+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -186,7 +186,7 @@ msgstr ""
 "produces the Plasma desktop environment, hundreds of applications, and the "
 "many software libraries that support them.\n"
 
-#: formcard/AboutKDE.qml:86 formcard/AboutPage.qml:192
+#: formcard/AboutKDE.qml:86 formcard/AboutPage.qml:194
 #, kde-format
 msgid "Homepage"
 msgstr "Homepage"
@@ -206,7 +206,7 @@ msgid ""
 "\"Wishlist\"."
 msgstr ""
 
-#: formcard/AboutKDE.qml:108 formcard/AboutPage.qml:246
+#: formcard/AboutKDE.qml:108 formcard/AboutPage.qml:248
 #, kde-format
 msgid "Report a bug"
 msgstr "Report a bug"
@@ -222,7 +222,7 @@ msgstr ""
 "You can join the national teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 
-#: formcard/AboutKDE.qml:128 formcard/AboutPage.qml:220
+#: formcard/AboutKDE.qml:128 formcard/AboutPage.qml:222
 #, kde-format
 msgid "Get Involved"
 msgstr "Get Involved"
@@ -258,7 +258,7 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDE.qml:166 formcard/AboutPage.qml:206
+#: formcard/AboutKDE.qml:166 formcard/AboutPage.qml:208
 #, kde-format
 msgid "Donate"
 msgstr "Donate"
@@ -280,22 +280,22 @@ msgid_plural "Licenses"
 msgstr[0] "Licence"
 msgstr[1] "Licences"
 
-#: formcard/AboutPage.qml:259
+#: formcard/AboutPage.qml:261
 #, kde-format
 msgid "Libraries in use"
 msgstr "Libraries in use"
 
-#: formcard/AboutPage.qml:290
+#: formcard/AboutPage.qml:289
 #, kde-format
 msgid "Authors"
 msgstr "Authors"
 
-#: formcard/AboutPage.qml:302
+#: formcard/AboutPage.qml:301
 #, kde-format
 msgid "Credits"
 msgstr "Credits"
 
-#: formcard/AboutPage.qml:314
+#: formcard/AboutPage.qml:313
 #, kde-format
 msgid "Translators"
 msgstr "Translators"

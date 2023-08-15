@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-10 00:44+0000\n"
+"POT-Creation-Date: 2023-08-15 00:43+0000\n"
 "PO-Revision-Date: 2023-08-06 21:22+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -178,7 +178,7 @@ msgstr ""
 "께 힘을 모으고 있습니다. KDE에는 이 글을 읽는 여러분과 같은 누구나 참여하고 "
 "기여할 수 있습니다."
 
-#: formcard/AboutKDE.qml:86 formcard/AboutPage.qml:192
+#: formcard/AboutKDE.qml:86 formcard/AboutPage.qml:194
 #, kde-format
 msgid "Homepage"
 msgstr "홈페이지"
@@ -207,7 +207,7 @@ msgstr ""
 "개선 사항 제안을 하고 싶으시다면 버그 보고 시스템을 통해서 알려 주십시오. 이 "
 "경우 심각성 항목에서 \"Wishlist\"를 선택하셔야 합니다."
 
-#: formcard/AboutKDE.qml:108 formcard/AboutPage.qml:246
+#: formcard/AboutKDE.qml:108 formcard/AboutPage.qml:248
 #, kde-format
 msgid "Report a bug"
 msgstr "버그 보고"
@@ -223,7 +223,7 @@ msgstr ""
 "를 번역하는 각 나라 번역팀을 도울 수도 있습니다. 또한 그래픽, 테마, 소리, 더 "
 "나은 문서 등을 기여할 수도 있습니다. 직접 결정하십시오!"
 
-#: formcard/AboutKDE.qml:128 formcard/AboutPage.qml:220
+#: formcard/AboutKDE.qml:128 formcard/AboutPage.qml:222
 #, kde-format
 msgid "Get Involved"
 msgstr "참여하기"
@@ -271,7 +271,7 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDE.qml:166 formcard/AboutPage.qml:206
+#: formcard/AboutKDE.qml:166 formcard/AboutPage.qml:208
 #, kde-format
 msgid "Donate"
 msgstr "기부하기"
@@ -292,22 +292,22 @@ msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "라이선스"
 
-#: formcard/AboutPage.qml:259
+#: formcard/AboutPage.qml:261
 #, kde-format
 msgid "Libraries in use"
 msgstr "사용하는 라이브러리"
 
-#: formcard/AboutPage.qml:290
+#: formcard/AboutPage.qml:289
 #, kde-format
 msgid "Authors"
 msgstr "작성자"
 
-#: formcard/AboutPage.qml:302
+#: formcard/AboutPage.qml:301
 #, kde-format
 msgid "Credits"
 msgstr "제작진"
 
-#: formcard/AboutPage.qml:314
+#: formcard/AboutPage.qml:313
 #, kde-format
 msgid "Translators"
 msgstr "번역자"

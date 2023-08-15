@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-10 00:44+0000\n"
+"POT-Creation-Date: 2023-08-15 00:43+0000\n"
 "PO-Revision-Date: 2023-07-27 15:01+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -185,7 +185,7 @@ msgstr ""
 "vapaata ohjelmistoa. Kaikki ovat tervetulleita liittymään ja avustamaan KDE:"
 "tä – myös sinä."
 
-#: formcard/AboutKDE.qml:86 formcard/AboutPage.qml:192
+#: formcard/AboutKDE.qml:86 formcard/AboutPage.qml:194
 #, kde-format
 msgid "Homepage"
 msgstr "Kotisivu"
@@ -215,7 +215,7 @@ msgstr ""
 "vianjäljitysjärjestelmään. Varmista, että ongelman vakavuus on ”Wishlist”, "
 "toivelista."
 
-#: formcard/AboutKDE.qml:108 formcard/AboutPage.qml:246
+#: formcard/AboutKDE.qml:108 formcard/AboutPage.qml:248
 #, kde-format
 msgid "Report a bug"
 msgstr "Ilmoita viasta"
@@ -231,7 +231,7 @@ msgstr ""
 "liittyä käyttöliittymiä kääntävään kansalliseen ryhmään. Voit myös tehdä "
 "grafiikkaa, teemoja, ääniä tai parantaa dokumentaatiota. Päätä itse!"
 
-#: formcard/AboutKDE.qml:128 formcard/AboutPage.qml:220
+#: formcard/AboutKDE.qml:128 formcard/AboutPage.qml:222
 #, kde-format
 msgid "Get Involved"
 msgstr "Ota osaa"
@@ -281,7 +281,7 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V."
 
-#: formcard/AboutKDE.qml:166 formcard/AboutPage.qml:206
+#: formcard/AboutKDE.qml:166 formcard/AboutPage.qml:208
 #, kde-format
 msgid "Donate"
 msgstr "Lahjoita"
@@ -303,22 +303,22 @@ msgid_plural "Licenses"
 msgstr[0] "Lisenssi"
 msgstr[1] "Lisenssit"
 
-#: formcard/AboutPage.qml:259
+#: formcard/AboutPage.qml:261
 #, kde-format
 msgid "Libraries in use"
 msgstr "Käytetyt kirjastot"
 
-#: formcard/AboutPage.qml:290
+#: formcard/AboutPage.qml:289
 #, kde-format
 msgid "Authors"
 msgstr "Tekijät"
 
-#: formcard/AboutPage.qml:302
+#: formcard/AboutPage.qml:301
 #, kde-format
 msgid "Credits"
 msgstr "Kiitokset"
 
-#: formcard/AboutPage.qml:314
+#: formcard/AboutPage.qml:313
 #, kde-format
 msgid "Translators"
 msgstr "Kääntäjät"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-10 00:44+0000\n"
+"POT-Creation-Date: 2023-08-15 00:43+0000\n"
 "PO-Revision-Date: 2023-05-21 10:31+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -186,7 +186,7 @@ msgstr ""
 "والمبدعون الملتزمين بتطوير البرمجيات الحرة. تنتج كِيدِي بيئة سطح مكتب "
 "البلازما، ومئات التطبيقات، والعديد من مكتبات البرامج التي تدعمها.\n"
 
-#: formcard/AboutKDE.qml:86 formcard/AboutPage.qml:192
+#: formcard/AboutKDE.qml:86 formcard/AboutPage.qml:194
 #, kde-format
 msgid "Homepage"
 msgstr "الصّفحة الرئيسة"
@@ -206,7 +206,7 @@ msgid ""
 "\"Wishlist\"."
 msgstr ""
 
-#: formcard/AboutKDE.qml:108 formcard/AboutPage.qml:246
+#: formcard/AboutKDE.qml:108 formcard/AboutPage.qml:248
 #, kde-format
 msgid "Report a bug"
 msgstr "بلغ عن علة"
@@ -222,7 +222,7 @@ msgstr ""
 "الفِرق المحليّة التي تترجم واجهات البرامج. ويمكنك توفير الرّسوميّات، والسّمات، "
 "والأصوات وكتابة التّوثيق. أنت تقرّر ذلك!"
 
-#: formcard/AboutKDE.qml:128 formcard/AboutPage.qml:220
+#: formcard/AboutKDE.qml:128 formcard/AboutPage.qml:222
 #, kde-format
 msgid "Get Involved"
 msgstr "شاركنا"
@@ -258,7 +258,7 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "كِيدِي e.V."
 
-#: formcard/AboutKDE.qml:166 formcard/AboutPage.qml:206
+#: formcard/AboutKDE.qml:166 formcard/AboutPage.qml:208
 #, kde-format
 msgid "Donate"
 msgstr "تبرّع"
@@ -284,22 +284,22 @@ msgstr[3] "الرّخص"
 msgstr[4] "الرّخص"
 msgstr[5] "الرّخص"
 
-#: formcard/AboutPage.qml:259
+#: formcard/AboutPage.qml:261
 #, kde-format
 msgid "Libraries in use"
 msgstr "المكتبات المستخدمة"
 
-#: formcard/AboutPage.qml:290
+#: formcard/AboutPage.qml:289
 #, kde-format
 msgid "Authors"
 msgstr "المؤلفين"
 
-#: formcard/AboutPage.qml:302
+#: formcard/AboutPage.qml:301
 #, kde-format
 msgid "Credits"
 msgstr "إشادات"
 
-#: formcard/AboutPage.qml:314
+#: formcard/AboutPage.qml:313
 #, kde-format
 msgid "Translators"
 msgstr "المترجمون"
