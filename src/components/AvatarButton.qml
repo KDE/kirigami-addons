@@ -65,6 +65,8 @@ QQC2.AbstractButton {
 
     padding: 1
 
+    hoverEnabled: true // so the tooltip works
+
     contentItem: Avatar {
         id: avatar
     }
