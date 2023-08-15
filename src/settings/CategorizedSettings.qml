@@ -62,6 +62,7 @@ Kirigami.PageRow {
         readonly property QtObject contextDrawer: null
         readonly property double width: root.width
         readonly property double height: root.height
+        readonly property var overlay: root
     }
 
     globalToolBar {

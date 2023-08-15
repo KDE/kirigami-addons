@@ -12,13 +12,13 @@ target_sources(mobileformplugin PRIVATE
 
 ecm_target_qml_sources(mobileformplugin SOURCES
     labs/FormCard.qml
+    labs/AboutPage.qml
+    labs/AboutKDE.qml
 
     AbstractFormDelegate.qml
     FormArrow.qml
     FormButtonDelegate.qml
     FormHeader.qml
-    AboutPage.qml
-    AboutKDE.qml
     FormCardHeader.qml
     FormCheckDelegate.qml
     FormComboBoxDelegate.qml
