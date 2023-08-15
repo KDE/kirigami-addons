@@ -47,6 +47,7 @@ target_sources(componentsplugin PRIVATE
 
 ecm_target_qml_sources(componentsplugin SOURCES
     ${CMAKE_CURRENT_BINARY_DIR}/Avatar.qml
+    AvatarButton.qml
     FloatingButton.qml
     DoubleFloatingButton.qml
     Banner.qml
