@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-15 00:43+0000\n"
+"POT-Creation-Date: 2023-08-16 00:44+0000\n"
 "PO-Revision-Date: 2023-08-10 22:01+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -141,22 +141,22 @@ msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: formcard/AboutKDE.qml:28
+#: formcard/AboutKDE.qml:23 formcard/labs/AboutKDE.qml:28
 #, kde-format
 msgid "About KDE"
 msgstr "KDE Hakkında"
 
-#: formcard/AboutKDE.qml:60
+#: formcard/AboutKDE.qml:50 formcard/labs/AboutKDE.qml:60
 #, kde-format
 msgid "KDE"
 msgstr "KDE"
 
-#: formcard/AboutKDE.qml:69
+#: formcard/AboutKDE.qml:59 formcard/labs/AboutKDE.qml:69
 #, kde-format
 msgid "Be Free!"
 msgstr "Özgür Olun!"
 
-#: formcard/AboutKDE.qml:78
+#: formcard/AboutKDE.qml:68 formcard/labs/AboutKDE.qml:78
 #, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
@@ -180,12 +180,19 @@ msgstr ""
 "Yazılımını oluşturma ortak hedefine ulaşmak için birlikte çalışıyoruz. Siz "
 "de dahil olmak üzere herkes KDE'ye katılabilir ve katkıda bulunabilir."
 
-#: formcard/AboutKDE.qml:86 formcard/AboutPage.qml:194
+#: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:179
+#: formcard/labs/AboutKDE.qml:86 formcard/labs/AboutPage.qml:194
 #, kde-format
 msgid "Homepage"
 msgstr "Ana Sayfa"
 
-#: formcard/AboutKDE.qml:99
+#: formcard/AboutKDE.qml:82
+#, fuzzy, kde-format
+#| msgid "Report a bug"
+msgid "Report bugs"
+msgstr "Hata Bildir"
+
+#: formcard/AboutKDE.qml:87 formcard/labs/AboutKDE.qml:99
 #, kde-format
 msgid ""
 "Software can always be improved, and the KDE team is ready to do so. "
@@ -211,12 +218,18 @@ msgstr ""
 "Bir iyileştirme önerisinde bulunmak için de hata izleme sistemini "
 "kullanabilirsiniz. \"Wishlist\" önceliğini seçtiğinizden emin olun."
 
-#: formcard/AboutKDE.qml:108 formcard/AboutPage.qml:248
+#: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:230
+#: formcard/labs/AboutKDE.qml:108 formcard/labs/AboutPage.qml:248
 #, kde-format
 msgid "Report a bug"
 msgstr "Hata Bildir"
 
-#: formcard/AboutKDE.qml:121
+#: formcard/AboutKDE.qml:102
+#, kde-format
+msgid "Join us"
+msgstr ""
+
+#: formcard/AboutKDE.qml:107 formcard/labs/AboutKDE.qml:121
 #, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
@@ -228,17 +241,23 @@ msgstr ""
 "katılabilirsiniz. İsterseniz grafikler, temalar, sesler yaratabilir ve "
 "yardım belgeleri yazıp var olanları geliştirebilirsiniz. Karar sizin!"
 
-#: formcard/AboutKDE.qml:128 formcard/AboutPage.qml:222
+#: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:205
+#: formcard/labs/AboutKDE.qml:128 formcard/labs/AboutPage.qml:222
 #, kde-format
 msgid "Get Involved"
 msgstr "Katıl"
 
-#: formcard/AboutKDE.qml:135
+#: formcard/AboutKDE.qml:123 formcard/labs/AboutKDE.qml:135
 #, kde-format
 msgid "Developer Documentation"
 msgstr "Geliştirici Belgelendirmesi"
 
-#: formcard/AboutKDE.qml:148
+#: formcard/AboutKDE.qml:129
+#, kde-format
+msgid "Support us"
+msgstr ""
+
+#: formcard/AboutKDE.qml:134 formcard/labs/AboutKDE.qml:148
 #, kde-format
 msgid ""
 "KDE software is and will always be available free of charge, however "
@@ -274,52 +293,63 @@ msgstr ""
 "\n"
 "Desteğiniz için şimdiden teşekkürler."
 
-#: formcard/AboutKDE.qml:159
+#: formcard/AboutKDE.qml:146 formcard/labs/AboutKDE.qml:159
 #, kde-format
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDE.qml:166 formcard/AboutPage.qml:208
+#: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:192
+#: formcard/labs/AboutKDE.qml:166 formcard/labs/AboutPage.qml:208
 #, kde-format
 msgid "Donate"
 msgstr "Bağış Yap"
 
-#: formcard/AboutPage.qml:96
+#: formcard/AboutPage.qml:87 formcard/labs/AboutPage.qml:96
 #, kde-format
 msgid "About %1"
 msgstr "%1 Hakkında"
 
-#: formcard/AboutPage.qml:148
+#: formcard/AboutPage.qml:133 formcard/labs/AboutPage.qml:148
 #, kde-format
 msgid "Copyright"
 msgstr "Telif Hakkı"
 
-#: formcard/AboutPage.qml:155
+#: formcard/AboutPage.qml:141 formcard/labs/AboutPage.qml:155
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "Lisans"
 msgstr[1] "Lisanslar"
 
-#: formcard/AboutPage.qml:261
+#: formcard/AboutPage.qml:237 formcard/labs/AboutPage.qml:261
 #, kde-format
 msgid "Libraries in use"
 msgstr "Kullanılan kitaplıklar"
 
-#: formcard/AboutPage.qml:289
+#: formcard/AboutPage.qml:260 formcard/labs/AboutPage.qml:289
 #, kde-format
 msgid "Authors"
 msgstr "Yazarlar"
 
-#: formcard/AboutPage.qml:301
+#: formcard/AboutPage.qml:275 formcard/labs/AboutPage.qml:301
 #, kde-format
 msgid "Credits"
 msgstr "Emeği Geçenler"
 
-#: formcard/AboutPage.qml:313
+#: formcard/AboutPage.qml:290 formcard/labs/AboutPage.qml:313
 #, kde-format
 msgid "Translators"
 msgstr "Çeviriler"
+
+#: formcard/AboutPage.qml:359
+#, kde-format
+msgid "Visit %1's KDE Store page"
+msgstr ""
+
+#: formcard/AboutPage.qml:368
+#, kde-format
+msgid "Send an email to %1"
+msgstr ""
 
 #: settings/CategorizedSettings.qml:44
 #, kde-format

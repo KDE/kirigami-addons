@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-15 00:43+0000\n"
+"POT-Creation-Date: 2023-08-16 00:44+0000\n"
 "PO-Revision-Date: 2023-08-06 21:50+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -141,22 +141,22 @@ msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: formcard/AboutKDE.qml:28
+#: formcard/AboutKDE.qml:23 formcard/labs/AboutKDE.qml:28
 #, kde-format
 msgid "About KDE"
 msgstr "Informazioni su KDE"
 
-#: formcard/AboutKDE.qml:60
+#: formcard/AboutKDE.qml:50 formcard/labs/AboutKDE.qml:60
 #, kde-format
 msgid "KDE"
 msgstr "KDE"
 
-#: formcard/AboutKDE.qml:69
+#: formcard/AboutKDE.qml:59 formcard/labs/AboutKDE.qml:69
 #, kde-format
 msgid "Be Free!"
 msgstr "Vivi libero."
 
-#: formcard/AboutKDE.qml:78
+#: formcard/AboutKDE.qml:68 formcard/labs/AboutKDE.qml:78
 #, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
@@ -179,12 +179,19 @@ msgstr ""
 "comune di costruire il miglior software libero del mondo. Chiunque è "
 "invitato a unirsi e contribuire a KDE, incluso tu."
 
-#: formcard/AboutKDE.qml:86 formcard/AboutPage.qml:194
+#: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:179
+#: formcard/labs/AboutKDE.qml:86 formcard/labs/AboutPage.qml:194
 #, kde-format
 msgid "Homepage"
 msgstr "Pagina iniziale"
 
-#: formcard/AboutKDE.qml:99
+#: formcard/AboutKDE.qml:82
+#, fuzzy, kde-format
+#| msgid "Report a bug"
+msgid "Report bugs"
+msgstr "Segnala un bug"
+
+#: formcard/AboutKDE.qml:87 formcard/labs/AboutKDE.qml:99
 #, kde-format
 msgid ""
 "Software can always be improved, and the KDE team is ready to do so. "
@@ -210,12 +217,18 @@ msgstr ""
 "sistema di tracciamento dei bug per registrarlo. Assicurati di utilizzare il "
 "livello di gravità (severity) chiamato «Wishlist»."
 
-#: formcard/AboutKDE.qml:108 formcard/AboutPage.qml:248
+#: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:230
+#: formcard/labs/AboutKDE.qml:108 formcard/labs/AboutPage.qml:248
 #, kde-format
 msgid "Report a bug"
 msgstr "Segnala un bug"
 
-#: formcard/AboutKDE.qml:121
+#: formcard/AboutKDE.qml:102
+#, kde-format
+msgid "Join us"
+msgstr ""
+
+#: formcard/AboutKDE.qml:107 formcard/labs/AboutKDE.qml:121
 #, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
@@ -227,17 +240,23 @@ msgstr ""
 "interfacce dei programmi. Puoi fornire lavori grafici, temi, suoni e "
 "migliorare la documentazione. Decidi tu!"
 
-#: formcard/AboutKDE.qml:128 formcard/AboutPage.qml:222
+#: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:205
+#: formcard/labs/AboutKDE.qml:128 formcard/labs/AboutPage.qml:222
 #, kde-format
 msgid "Get Involved"
 msgstr "Partecipa"
 
-#: formcard/AboutKDE.qml:135
+#: formcard/AboutKDE.qml:123 formcard/labs/AboutKDE.qml:135
 #, kde-format
 msgid "Developer Documentation"
 msgstr "Documentazione per gli sviluppatori"
 
-#: formcard/AboutKDE.qml:148
+#: formcard/AboutKDE.qml:129
+#, kde-format
+msgid "Support us"
+msgstr ""
+
+#: formcard/AboutKDE.qml:134 formcard/labs/AboutKDE.qml:148
 #, kde-format
 msgid ""
 "KDE software is and will always be available free of charge, however "
@@ -273,52 +292,63 @@ msgstr ""
 "\n"
 "Grazie in anticipo per il tuo supporto."
 
-#: formcard/AboutKDE.qml:159
+#: formcard/AboutKDE.qml:146 formcard/labs/AboutKDE.qml:159
 #, kde-format
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDE.qml:166 formcard/AboutPage.qml:208
+#: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:192
+#: formcard/labs/AboutKDE.qml:166 formcard/labs/AboutPage.qml:208
 #, kde-format
 msgid "Donate"
 msgstr "Fai una donazione"
 
-#: formcard/AboutPage.qml:96
+#: formcard/AboutPage.qml:87 formcard/labs/AboutPage.qml:96
 #, kde-format
 msgid "About %1"
 msgstr "Informazioni su %1"
 
-#: formcard/AboutPage.qml:148
+#: formcard/AboutPage.qml:133 formcard/labs/AboutPage.qml:148
 #, kde-format
 msgid "Copyright"
 msgstr "Copyright"
 
-#: formcard/AboutPage.qml:155
+#: formcard/AboutPage.qml:141 formcard/labs/AboutPage.qml:155
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "Licenza"
 msgstr[1] "Licenze"
 
-#: formcard/AboutPage.qml:261
+#: formcard/AboutPage.qml:237 formcard/labs/AboutPage.qml:261
 #, kde-format
 msgid "Libraries in use"
 msgstr "Librerie in uso"
 
-#: formcard/AboutPage.qml:289
+#: formcard/AboutPage.qml:260 formcard/labs/AboutPage.qml:289
 #, kde-format
 msgid "Authors"
 msgstr "Autori"
 
-#: formcard/AboutPage.qml:301
+#: formcard/AboutPage.qml:275 formcard/labs/AboutPage.qml:301
 #, kde-format
 msgid "Credits"
 msgstr "Riconoscimenti"
 
-#: formcard/AboutPage.qml:313
+#: formcard/AboutPage.qml:290 formcard/labs/AboutPage.qml:313
 #, kde-format
 msgid "Translators"
 msgstr "Traduttori"
+
+#: formcard/AboutPage.qml:359
+#, kde-format
+msgid "Visit %1's KDE Store page"
+msgstr ""
+
+#: formcard/AboutPage.qml:368
+#, kde-format
+msgid "Send an email to %1"
+msgstr ""
 
 #: settings/CategorizedSettings.qml:44
 #, kde-format
