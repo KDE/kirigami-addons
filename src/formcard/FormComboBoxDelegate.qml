@@ -164,7 +164,7 @@ AbstractFormDelegate {
         Page
     }
 
-    /** 
+    /**
      * @brief This property holds what display mode the delegate should show as.
      *
      * Set this property to the desired ::DisplayMode.
@@ -244,7 +244,7 @@ AbstractFormDelegate {
 
     /**
      * @brief The dialog component used for the combobox.
-     * 
+     *
      * This property allows to override the internal dialog
      * with a custom component.
      */
@@ -272,7 +272,7 @@ AbstractFormDelegate {
 
     /**
      * @brief The page component used for the combobox, if applicable.
-     * 
+     *
      * This property allows to override the internal
      * Kirigami.ScrollablePage with a custom component.
      */
