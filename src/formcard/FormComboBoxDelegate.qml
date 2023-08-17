@@ -253,6 +253,7 @@ AbstractFormDelegate {
         showCloseButton: false
         title: controlRoot.text
         preferredWidth: Kirigami.Units.gridUnit * 16
+        parent: QQC2.Overlay.overlay
 
         ColumnLayout {
             spacing: 0
