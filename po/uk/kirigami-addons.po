@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-16 00:44+0000\n"
-"PO-Revision-Date: 2023-08-09 08:13+0300\n"
+"PO-Revision-Date: 2023-08-16 07:51+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -189,8 +189,7 @@ msgid "Homepage"
 msgstr "Домашня сторінка"
 
 #: formcard/AboutKDE.qml:82
-#, fuzzy, kde-format
-#| msgid "Report a bug"
+#, kde-format
 msgid "Report bugs"
 msgstr "Повідомити про помилку"
 
@@ -229,7 +228,7 @@ msgstr "Повідомити про помилку"
 #: formcard/AboutKDE.qml:102
 #, kde-format
 msgid "Join us"
-msgstr ""
+msgstr "Долучитися до нас"
 
 #: formcard/AboutKDE.qml:107 formcard/labs/AboutKDE.qml:121
 #, kde-format
@@ -257,7 +256,7 @@ msgstr "Документація для розробників"
 #: formcard/AboutKDE.qml:129
 #, kde-format
 msgid "Support us"
-msgstr ""
+msgstr "Підтримати нас"
 
 #: formcard/AboutKDE.qml:134 formcard/labs/AboutKDE.qml:148
 #, kde-format
@@ -348,12 +347,12 @@ msgstr "Перекладачі"
 #: formcard/AboutPage.qml:359
 #, kde-format
 msgid "Visit %1's KDE Store page"
-msgstr ""
+msgstr "Відвідайте сторінку %1 у KDE Store"
 
 #: formcard/AboutPage.qml:368
 #, kde-format
 msgid "Send an email to %1"
-msgstr ""
+msgstr "Надіслати повідомлення ел. пошти до %1"
 
 #: settings/CategorizedSettings.qml:44
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-16 00:44+0000\n"
-"PO-Revision-Date: 2023-08-09 10:41+0200\n"
+"PO-Revision-Date: 2023-08-16 11:14+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: components/AbstractMaximizeComponent.qml:126
 #, kde-format
@@ -187,10 +187,9 @@ msgid "Homepage"
 msgstr "Homepagina"
 
 #: formcard/AboutKDE.qml:82
-#, fuzzy, kde-format
-#| msgid "Report a bug"
+#, kde-format
 msgid "Report bugs"
-msgstr "Een bug rapporteren"
+msgstr "Bugs rapporteren"
 
 #: formcard/AboutKDE.qml:87 formcard/labs/AboutKDE.qml:99
 #, kde-format
@@ -227,7 +226,7 @@ msgstr "Een bug rapporteren"
 #: formcard/AboutKDE.qml:102
 #, kde-format
 msgid "Join us"
-msgstr ""
+msgstr "Doe mee"
 
 #: formcard/AboutKDE.qml:107 formcard/labs/AboutKDE.qml:121
 #, kde-format
@@ -255,7 +254,7 @@ msgstr "Documentatie voor ontwikkelaars"
 #: formcard/AboutKDE.qml:129
 #, kde-format
 msgid "Support us"
-msgstr ""
+msgstr "Ondersteun ons"
 
 #: formcard/AboutKDE.qml:134 formcard/labs/AboutKDE.qml:148
 #, kde-format
@@ -343,12 +342,12 @@ msgstr "Vertalers"
 #: formcard/AboutPage.qml:359
 #, kde-format
 msgid "Visit %1's KDE Store page"
-msgstr ""
+msgstr "Bezoek de KDE Store-pagina van %1"
 
 #: formcard/AboutPage.qml:368
 #, kde-format
 msgid "Send an email to %1"
-msgstr ""
+msgstr "Een e-mail sturen naar %1"
 
 #: settings/CategorizedSettings.qml:44
 #, kde-format
