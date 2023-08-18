@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-16 00:44+0000\n"
-"PO-Revision-Date: 2023-08-10 06:56+0200\n"
+"PO-Revision-Date: 2023-08-17 06:28+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -188,8 +188,7 @@ msgid "Homepage"
 msgstr "Homepage"
 
 #: formcard/AboutKDE.qml:82
-#, fuzzy, kde-format
-#| msgid "Report a bug"
+#, kde-format
 msgid "Report bugs"
 msgstr "შეცდომის პატაკი"
 
@@ -227,7 +226,7 @@ msgstr "შეცდომის პატაკი"
 #: formcard/AboutKDE.qml:102
 #, kde-format
 msgid "Join us"
-msgstr ""
+msgstr "შემოგვიერთდით"
 
 #: formcard/AboutKDE.qml:107 formcard/labs/AboutKDE.qml:121
 #, kde-format
@@ -255,7 +254,7 @@ msgstr "პროგრამისტის დოკუმენტაცი�
 #: formcard/AboutKDE.qml:129
 #, kde-format
 msgid "Support us"
-msgstr ""
+msgstr "მხარი დაგვიჭირეთ"
 
 #: formcard/AboutKDE.qml:134 formcard/labs/AboutKDE.qml:148
 #, kde-format
@@ -342,12 +341,12 @@ msgstr "მთარგმნელები"
 #: formcard/AboutPage.qml:359
 #, kde-format
 msgid "Visit %1's KDE Store page"
-msgstr ""
+msgstr "ეწვიეთ %1-ის KDE მაღაზიის გვერდს"
 
 #: formcard/AboutPage.qml:368
 #, kde-format
 msgid "Send an email to %1"
-msgstr ""
+msgstr "%1-სთვის ელფოსტის გაგზავნა"
 
 #: settings/CategorizedSettings.qml:44
 #, kde-format
