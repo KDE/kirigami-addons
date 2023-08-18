@@ -5,7 +5,7 @@
  */
 
 import QtQuick 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg 1.0 as KSvg
 import "private"
 
 Item {
@@ -23,12 +23,12 @@ Item {
         _seconds = time.getSeconds();
     }
 
-    PlasmaCore.Svg {
+    KSvg.Svg {
         id: clockSvg
         imagePath: "widgets/clock"
     }
 
-    PlasmaCore.SvgItem {
+    KSvg.SvgItem {
         id: face
         anchors.centerIn: parent
         width: Math.min(parent.width, parent.height)
@@ -76,7 +76,7 @@ Item {
         svgScale: face.width / face.naturalSize.width
     }
 
-    PlasmaCore.SvgItem {
+    KSvg.SvgItem {
         id: center
         width: naturalSize.width * face.width / face.naturalSize.width
         height: naturalSize.height * face.width / face.naturalSize.width
@@ -86,7 +86,7 @@ Item {
         z: 1000
     }
 
-    PlasmaCore.SvgItem {
+    KSvg.SvgItem {
         anchors.fill: face
         svg: clockSvg
         elementId: "Glass"

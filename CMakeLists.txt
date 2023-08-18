@@ -38,6 +38,14 @@ if (QT_MAJOR_VERSION STREQUAL "6")
     set(QT_REQUIRED_VERSION "6.4")
     set(KF_MIN_VERSION "5.240.0")
     set(KF_MAJOR_VERSION "6")
+
+    find_package(KSvg CONFIG)
+    set_package_properties(KSvg PROPERTIES
+        DESCRIPTION "Svg rendering library with theme support"
+        PURPOSE "Required at runtime for rendering Svg items in some controls"
+        TYPE RUNTIME
+    )
+
 endif()
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick QuickControls2)
