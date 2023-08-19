@@ -185,8 +185,12 @@ AbstractFormDelegate {
 
     contentItem: ColumnLayout {
         Label {
-            text: label
             Layout.fillWidth: true
+            text: label
+            elide: Text.ElideRight
+            color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
+            wrapMode: Text.Wrap
+            maximumLineCount: 2
         }
         TextField {
             id: textField
