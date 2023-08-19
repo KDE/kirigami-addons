@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2021 Han Young <hanyoung@protonmail.com>
+# SPDX-License-Identifier: BSD-2-Clause
+
 ecm_add_qml_module(soundsplugin URI "org.kde.kirigamiaddons.sounds" VERSION 0.1)
 
 target_compile_definitions(soundsplugin PRIVATE -DTRANSLATION_DOMAIN=\"kirigami_sounds\")
