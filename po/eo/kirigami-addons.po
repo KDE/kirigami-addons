@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-16 00:44+0000\n"
-"PO-Revision-Date: 2023-08-11 10:45+0100\n"
+"PO-Revision-Date: 2023-08-18 23:49+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -187,10 +187,9 @@ msgid "Homepage"
 msgstr "Hejmpaĝo"
 
 #: formcard/AboutKDE.qml:82
-#, fuzzy, kde-format
-#| msgid "Report a bug"
+#, kde-format
 msgid "Report bugs"
-msgstr "Raportu cimon"
+msgstr "Raporti cimojn"
 
 #: formcard/AboutKDE.qml:87 formcard/labs/AboutKDE.qml:99
 #, kde-format
@@ -227,7 +226,7 @@ msgstr "Raportu cimon"
 #: formcard/AboutKDE.qml:102
 #, kde-format
 msgid "Join us"
-msgstr ""
+msgstr "Kuniĝu al ni"
 
 #: formcard/AboutKDE.qml:107 formcard/labs/AboutKDE.qml:121
 #, kde-format
@@ -254,7 +253,7 @@ msgstr "Dokumentaro por programistoj"
 #: formcard/AboutKDE.qml:129
 #, kde-format
 msgid "Support us"
-msgstr ""
+msgstr "Subtenu nin"
 
 #: formcard/AboutKDE.qml:134 formcard/labs/AboutKDE.qml:148
 #, kde-format
@@ -343,12 +342,12 @@ msgstr "Tradukistoj"
 #: formcard/AboutPage.qml:359
 #, kde-format
 msgid "Visit %1's KDE Store page"
-msgstr ""
+msgstr "Viziti la KDE-magazenan paĝon de %1"
 
 #: formcard/AboutPage.qml:368
 #, kde-format
 msgid "Send an email to %1"
-msgstr ""
+msgstr "Sendi retpoŝton al %1"
 
 #: settings/CategorizedSettings.qml:44
 #, kde-format
