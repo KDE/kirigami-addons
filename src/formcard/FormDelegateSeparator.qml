@@ -31,11 +31,11 @@ Kirigami.Separator {
      * @brief The delegate immediately below the separator.
      */
     property var below
-    
+
     Layout.leftMargin: Kirigami.Units.largeSpacing
     Layout.rightMargin: Kirigami.Units.largeSpacing
     Layout.fillWidth: true
-    
-    opacity: (!above || !(above.enabled && ((above.hovered && !Kirigami.Settings.tabletMode) || above.pressed))) && 
-             (!below || !(below.enabled && ((below.hovered && !Kirigami.Settings.tabletMode) || below.pressed))) ? 0.5 : 0
+
+    opacity: (!above || !(above.enabled && ((above.visualFocus || above.hovered && !Kirigami.Settings.tabletMode) || above.pressed))) &&
+        (!below || !(below.enabled && ((below.visualFocus || below.hovered && !Kirigami.Settings.tabletMode) || below.pressed))) ? 0.5 : 0
 }
