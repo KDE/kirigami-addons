@@ -1,11 +1,11 @@
-# Xavier Besnard <xavier.besnard@neuf.fr>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Xavier Besnard <xavier.besnard@neuf.fr>
 # Xavier BESNARD <xavier.besnard@neuf.fr>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-16 00:44+0000\n"
-"PO-Revision-Date: 2023-05-22 17:17+0200\n"
+"PO-Revision-Date: 2023-08-18 10:51+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.07.90\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -71,8 +71,7 @@ msgid "Next image"
 msgstr "Image suivante"
 
 #: components/Banner.qml:186
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button"
 msgid "Close"
 msgstr "Fermer"
@@ -80,7 +79,7 @@ msgstr "Fermer"
 #: components/DownloadAction.qml:37
 #, kde-format
 msgid "Download"
-msgstr ""
+msgstr "Télécharger"
 
 #: components/VideoMaximizeDelegate.qml:233
 #, kde-format
@@ -95,25 +94,19 @@ msgid "%1 %2"
 msgstr "%1 %2"
 
 #: dateandtime/DatePicker.qml:182
-#, fuzzy, kde-format
-#| msgctxt "kirigami-addons"
-#| msgid "Days"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Days"
 msgstr "Jours"
 
 #: dateandtime/DatePicker.qml:190
-#, fuzzy, kde-format
-#| msgctxt "kirigami-addons"
-#| msgid "Months"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Months"
 msgstr "Mois"
 
 #: dateandtime/DatePicker.qml:196
-#, fuzzy, kde-format
-#| msgctxt "kirigami-addons"
-#| msgid "Years"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Years"
 msgstr "Années"
@@ -165,12 +158,7 @@ msgid "Be Free!"
 msgstr "Soyez libre !"
 
 #: formcard/AboutKDE.qml:68 formcard/labs/AboutKDE.qml:78
-#, fuzzy, kde-format
-#| msgid ""
-#| "KDE is a world-wide community of software engineers, artists, writers, "
-#| "translators and creators who are committed to Free Software development. "
-#| "KDE produces the Plasma desktop environment, hundreds of applications, "
-#| "and the many software libraries that support them.\n"
+#, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
 "translators and creators who are committed to Free Software development. KDE "
@@ -187,6 +175,12 @@ msgstr ""
 "développement du Logiciel Libre. KDE produit l'environnement de bureau "
 "Plasma, des centaines d'applications et les nombreuses bibliothèques "
 "logicielles qui les supportent. \n"
+"\n"
+"KDE est une entreprise collaborative : aucune entité ne contrôle sa "
+"stratégie ou ses produits. Au lieu de cela, chacun travaille avec la "
+"communauté pour atteindre l’objectif commun de construire les meilleurs "
+"logiciels libres au monde. Tout le monde est invité à se joindre et à "
+"contribuer à KDE, y compris vous."
 
 #: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:179
 #: formcard/labs/AboutKDE.qml:86 formcard/labs/AboutPage.qml:194
@@ -195,10 +189,9 @@ msgid "Homepage"
 msgstr "Page d'accueil"
 
 #: formcard/AboutKDE.qml:82
-#, fuzzy, kde-format
-#| msgid "Report a bug"
+#, kde-format
 msgid "Report bugs"
-msgstr "Signaler un bogue"
+msgstr "Signaler des bogues"
 
 #: formcard/AboutKDE.qml:87 formcard/labs/AboutKDE.qml:99
 #, kde-format
@@ -224,7 +217,7 @@ msgstr "Signaler un bogue"
 #: formcard/AboutKDE.qml:102
 #, kde-format
 msgid "Join us"
-msgstr ""
+msgstr "Rejoignez-nous"
 
 #: formcard/AboutKDE.qml:107 formcard/labs/AboutKDE.qml:121
 #, kde-format
@@ -252,7 +245,7 @@ msgstr "Documentation pour équipe de développement"
 #: formcard/AboutKDE.qml:129
 #, kde-format
 msgid "Support us"
-msgstr ""
+msgstr "Soutenez nous"
 
 #: formcard/AboutKDE.qml:134 formcard/labs/AboutKDE.qml:148
 #, kde-format
@@ -326,24 +319,24 @@ msgstr "Équipe de traduction"
 #: formcard/AboutPage.qml:359
 #, kde-format
 msgid "Visit %1's KDE Store page"
-msgstr ""
+msgstr "Consulter la page %1 de la boutique de KDE"
 
 #: formcard/AboutPage.qml:368
 #, kde-format
 msgid "Send an email to %1"
-msgstr ""
+msgstr "Envoyer un courriel vers %1"
 
 #: settings/CategorizedSettings.qml:44
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings"
-msgstr ""
+msgstr "Configuration"
 
 #: settings/CategorizedSettings.qml:44
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings — %1"
-msgstr ""
+msgstr "Configuration — %1"
 
 #~ msgid ""
 #~ "Software can always be improved, and the KDE team is ready to do so. "
