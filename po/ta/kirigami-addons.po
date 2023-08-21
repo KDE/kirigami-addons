@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-16 00:44+0000\n"
-"PO-Revision-Date: 2023-08-06 14:17+0530\n"
+"PO-Revision-Date: 2023-08-20 15:21+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -185,10 +185,9 @@ msgid "Homepage"
 msgstr "முகப்புப்பக்கம்"
 
 #: formcard/AboutKDE.qml:82
-#, fuzzy, kde-format
-#| msgid "Report a bug"
+#, kde-format
 msgid "Report bugs"
-msgstr "பிழையைத் தெரிவிப்பது"
+msgstr "பிழைகளைத் தெரிவிப்பது"
 
 #: formcard/AboutKDE.qml:87 formcard/labs/AboutKDE.qml:99
 #, kde-format
@@ -222,7 +221,7 @@ msgstr "பிழையைத் தெரிவிப்பது"
 #: formcard/AboutKDE.qml:102
 #, kde-format
 msgid "Join us"
-msgstr ""
+msgstr "எங்களுடன் சேருங்கள்"
 
 #: formcard/AboutKDE.qml:107 formcard/labs/AboutKDE.qml:121
 #, kde-format
@@ -249,7 +248,7 @@ msgstr "நிரலாளர்களுக்கான கையேடு"
 #: formcard/AboutKDE.qml:129
 #, kde-format
 msgid "Support us"
-msgstr ""
+msgstr "எங்களை ஆதரிப்பது"
 
 #: formcard/AboutKDE.qml:134 formcard/labs/AboutKDE.qml:148
 #, kde-format
@@ -336,24 +335,24 @@ msgstr "மொழிபெயர்ப்பாளர்கள்"
 #: formcard/AboutPage.qml:359
 #, kde-format
 msgid "Visit %1's KDE Store page"
-msgstr ""
+msgstr "%1-இன் கே.டீ.யீ. களஞ்சியப் பக்கத்தை பாருங்கள்"
 
 #: formcard/AboutPage.qml:368
 #, kde-format
 msgid "Send an email to %1"
-msgstr ""
+msgstr "%1 என்பவருக்கு மின்னஞ்சல் அனுப்பு"
 
 #: settings/CategorizedSettings.qml:44
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings"
-msgstr ""
+msgstr "அமைப்புகள்"
 
 #: settings/CategorizedSettings.qml:44
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings — %1"
-msgstr ""
+msgstr "அமைப்புகள் — %1"
 
 #~ msgid ""
 #~ "Software can always be improved, and the KDE team is ready to do so. "
