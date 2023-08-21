@@ -181,6 +181,7 @@ AbstractFormDelegate {
 
     onClicked: textField.forceActiveFocus()
     background: Item {}
+    Accessible.role: Accessible.EditableText
 
     contentItem: ColumnLayout {
         Label {
