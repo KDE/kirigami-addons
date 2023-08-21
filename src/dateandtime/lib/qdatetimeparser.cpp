@@ -12,11 +12,14 @@
 #include "qplatformdefs.h"
 #include "qdatetimeparser_p.h"
 
+#include <QBasicMutex>
 #include <QDataStream>
-#include <QSet>
 #include <QDateTime>
-#include <QTimeZone>
 #include <QDebug>
+#include <QSet>
+#include <QTimeZone>
+
+#include <mutex>
 
 //#define QDATETIMEPARSER_DEBUG
 #if defined (QDATETIMEPARSER_DEBUG) && !defined(QT_NO_DEBUG_STREAM)
@@ -26,6 +29,8 @@
 #  define QDTPDEBUG if (false) qDebug()
 #  define QDTPDEBUGN if (false) qDebug
 #endif
+
+static QBasicMutex environmentMutex;
 
 QT_BEGIN_NAMESPACE
 
@@ -1177,11 +1182,7 @@ QDateTimeParser::scanString(const QDateTime &defaultValue,
                 const QByteArray latinZone(zoneName == QLatin1String("Z")
                                            ? QByteArray("UTC") : zoneName.toLatin1());
                 timeZone = QTimeZone(latinZone);
-                tspec = timeZone.isValid()
-                    ? (QTimeZone::isTimeZoneIdAvailable(latinZone)
-                       ? Qt::TimeZone
-                       : Qt::OffsetFromUTC)
-                    : (Q_ASSERT(startsWithLocalTimeZone(zoneName)), Qt::LocalTime);
+                tspec = timeZone.isValid() ? (QTimeZone::isTimeZoneIdAvailable(latinZone) ? Qt::TimeZone : Qt::OffsetFromUTC) : Qt::LocalTime;
 #else
                 tspec = Qt::LocalTime;
 #endif
@@ -1628,7 +1629,11 @@ QDateTimeParser::findTimeZone(QStringView str, const QDateTime &when,
 #endif
 {
 #if QT_CONFIG(timezone)
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     int index = startsWithLocalTimeZone(str);
+#else
+    int index = startsWithLocalTimeZone(str, when);
+#endif
     int offset;
 
     if (index > 0) {
@@ -2059,6 +2064,46 @@ QString QDateTimeParser::getAmPmText(AmPm ap, Case cs) const
     QString raw = ap == AmText ? loc.amText() : loc.pmText();
     return cs == UpperCase ? raw.toUpper() : raw.toLower();
 }
+
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+QString qTzName(int dstIndex)
+{
+    char name[512];
+    bool ok;
+#if defined(Q_CC_MSVC)
+    size_t s = 0;
+    {
+        const auto locker = std::scoped_lock(environmentMutex);
+        ok = _get_tzname(&s, name, 512, dstIndex) != 0;
+    }
+#else
+    {
+        const auto locker = std::scoped_lock(environmentMutex);
+        const char *const src = tzname[dstIndex];
+        ok = src != nullptr;
+        if (ok)
+            memcpy(name, src, std::min(sizeof(name), strlen(src) + 1));
+    }
+#endif // Q_OS_WIN
+    return ok ? QString::fromLocal8Bit(name) : QString();
+}
+
+int QDateTimeParser::startsWithLocalTimeZone(QStringView name, const QDateTime &when)
+{
+    // On MS-Win, at least when system zone is UTC, the tzname[]s may be empty.
+    for (int i = 0; i < 2; ++i) {
+        const QString zone(qTzName(i));
+        if (!zone.isEmpty() && name.startsWith(zone))
+            return zone.size();
+    }
+    // Mimic what QLocale::toString() would have used, to ensure round-trips
+    // work:
+    const QString local = QDateTime(when.date(), when.time()).timeZoneAbbreviation();
+    if (name.startsWith(local))
+        return local.size();
+    return 0;
+}
+#endif
 
 /*
   \internal

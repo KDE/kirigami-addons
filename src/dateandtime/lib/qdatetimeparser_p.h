@@ -194,11 +194,10 @@ private:
                                int maxVal, int minVal) const;
 #endif
 #if QT_CONFIG(timezone)
-    // Implemented in qdatetime.cpp:
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     static int startsWithLocalTimeZone(const QStringRef name);
 #else
-    static int startsWithLocalTimeZone(const QStringView name);
+    static int startsWithLocalTimeZone(const QStringView name, const QDateTime &when);
 #endif
 #endif
 
