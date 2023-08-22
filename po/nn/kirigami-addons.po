@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-16 00:44+0000\n"
-"PO-Revision-Date: 2023-08-10 18:41+0200\n"
+"PO-Revision-Date: 2023-08-21 19:52+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -191,7 +191,7 @@ msgstr "Heimeside"
 #: formcard/AboutKDE.qml:82
 #, kde-format
 msgid "Report bugs"
-msgstr ""
+msgstr "Meld frå om feil"
 
 #: formcard/AboutKDE.qml:87 formcard/labs/AboutKDE.qml:99
 #, kde-format
@@ -228,7 +228,7 @@ msgstr "Meld frå om feil"
 #: formcard/AboutKDE.qml:102
 #, kde-format
 msgid "Join us"
-msgstr ""
+msgstr "Vert med"
 
 #: formcard/AboutKDE.qml:107 formcard/labs/AboutKDE.qml:121
 #, kde-format
@@ -255,7 +255,7 @@ msgstr "Dokumentasjon for utviklarar"
 #: formcard/AboutKDE.qml:129
 #, kde-format
 msgid "Support us"
-msgstr ""
+msgstr "Støtt oss"
 
 #: formcard/AboutKDE.qml:134 formcard/labs/AboutKDE.qml:148
 #, kde-format
@@ -341,12 +341,12 @@ msgstr "Omsetjarar"
 #: formcard/AboutPage.qml:359
 #, kde-format
 msgid "Visit %1's KDE Store page"
-msgstr ""
+msgstr "Gå til %1-sida i KDE-butikken"
 
 #: formcard/AboutPage.qml:368
 #, kde-format
 msgid "Send an email to %1"
-msgstr ""
+msgstr "Send e-post til %1"
 
 #: settings/CategorizedSettings.qml:44
 #, kde-format
