@@ -13,3 +13,7 @@ Dependencies:
     'frameworks/extra-cmake-modules': '@stable'
     'frameworks/kirigami': '@stable'
     'frameworks/ki18n': '@stable'
+
+Options:
+  require-passing-tests-on: [ 'Linux/Qt5' ]
+
