@@ -73,6 +73,10 @@ AbstractMaximizeComponent {
 
     /**
      * @brief Whether any video media should auto-load.
+     *
+     * @deprecated due to changes in the Video API this will be removed in KF6. It
+     *             currently does nothing but is kept to avoid breakage. The loss
+     *             of this API has been worked around in a way that doesn't break KF5.
      */
     property bool autoLoad: true
 
@@ -84,8 +88,8 @@ AbstractMaximizeComponent {
     /**
      * @brief The default action triggered when the video download button is pressed.
      *
-     * The download button is only available when autoLoad is false and the video
-     * media has not downloaded.
+     * The download button is only available when the video source is empty (i.e. QUrl()
+     * or "")
      *
      * This exists as a property so that the default action can be overridden. The most
      * common use case for this is where a custom URI scheme is used for example.
@@ -175,7 +179,6 @@ AbstractMaximizeComponent {
                     width: ListView.view.width
                     height: ListView.view.height
 
-                    autoLoad: root.autoLoad
                     autoPlay: root.autoPlay
                     // Make sure that the default action in the delegate is used if not overridden
                     downloadAction: root.downloadAction ? root.downloadAction : undefined

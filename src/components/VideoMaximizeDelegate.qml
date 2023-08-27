@@ -59,13 +59,17 @@ Item {
 
     /**
      * @brief Whether the source video should auto-load.
+     *
+     * @deprecated due to changes in the Video API this will be removed in KF6. It
+     *             currently does nothing but is kept to avoid breakage. The loss
+     *             of this API has been worked around in a way that doesn't break KF5.
      */
-    property alias autoLoad: videoItem.autoLoad
+    property bool autoLoad
 
     /**
      * @brief Whether the source video should auto-play.
      */
-    property alias autoPlay: videoItem.autoPlay
+    property bool autoPlay
 
     /**
      * @brief The default action triggered when the download button is pressed.
@@ -140,9 +144,13 @@ Item {
         }
 
         source: root.source
+        onSourceChanged: {
+            if (source.toString().length > 0 && root.autoPlay) {
+                videoItem.play()
+            }
+        }
 
         clip: true
-        flushMode: VideoOutput.FirstFrame
 
         Behavior on width {
             NumberAnimation {duration: Kirigami.Units.longDuration; easing.type: Easing.InOutCubic}
@@ -156,7 +164,7 @@ Item {
             anchors.centerIn: parent
             width: root.sourceWidth > 0 || (videoItem.metaData.resolution && videoItem.metaData.resolution.width > 0) ? root.sourceWidth : tempSource.sourceSize.width
             height: root.sourceHeight > 0 || (videoItem.metaData.resolution && videoItem.metaData.resolution.height > 0) ? root.sourceHeight : tempSource.sourceSize.height
-            visible: source && status === Image.Ready && videoItem.status === MediaPlayer.Loading
+            visible: source && status === Image.Ready && !videoItem.source.toString().length > 0
 
             source: root.tempSource
         }
@@ -175,7 +183,7 @@ Item {
             anchors.centerIn: parent
             icon.width: Kirigami.Units.iconSizes.large
             icon.height: Kirigami.Units.iconSizes.large
-            visible: videoItem.autoLoad === false && videoItem.status === MediaPlayer.NoMedia && !root.downloadAction.started && videoItem.bufferProgress == 0.0
+            visible: !videoItem.source.toString().length > 0 && !root.downloadAction.started
             display: QQC2.AbstractButton.IconOnly
             action: root.downloadAction
         }
