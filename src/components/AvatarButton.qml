@@ -10,7 +10,7 @@ import org.kde.kirigami 2.15 as Kirigami
  */
 QQC2.AbstractButton {
     id: root
-    
+
     /**
      * @brief This property holds the given name of a user.
      * @see org:kde::kirigamiaddons::components::Avatar::source
@@ -60,6 +60,9 @@ QQC2.AbstractButton {
      * @brief This property holds the default color of the avatar's initials.
      */
     readonly property alias defaultInitialsColor: avatar.defaultInitialsColor
+
+    Kirigami.Theme.colorSet: Kirigami.Theme.Button
+    Kirigami.Theme.inherit: false
 
     text: name
 
