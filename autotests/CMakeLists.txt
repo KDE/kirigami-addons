@@ -43,9 +43,9 @@ macro(kirigami_add_tests)
 endmacro()
 
 kirigami_add_tests(
+    tst_avatar.qml
     tst_sounds.qml
     tst_album_qmllistmodel.qml
     tst_album_abstractlistmodel.qml
     tst_album_qmlqobjectmodel.qml
 )
-
