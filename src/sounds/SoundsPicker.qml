@@ -9,7 +9,7 @@ import QtQuick 2.12
 import QtQuick.Controls 2.5 as Controls2
 import org.kde.kirigami 2.0 as Kirigami
 import QtQuick.Layouts 1.11
-import QtMultimedia 5.15
+import QtMultimedia as Multimedia
 import org.kde.kirigamiaddons.sounds 0.1
 
 /**
@@ -46,21 +46,21 @@ ListView {
         id: soundsModel
         notification: listView.notification
     }
-    
+
     delegate: Kirigami.BasicListItem {
         text: ringtoneName
-        icon: ListView.isCurrentItem ? "object-select-symbolic" : ""
+        icon.name: ListView.isCurrentItem ? "object-select-symbolic" : ""
         onClicked: {
             selectedUrl = sourceUrl;
-            if (playMusic.playbackState === MediaPlayer.PlayingState) {
+            if (playMusic.playbackState === Multimedia.MediaPlayer.PlayingState) {
                 playMusic.pause();
             } else {
                 playMusic.play();
             }
         }
     }
-    
-    Audio {
+
+    Multimedia.MediaPlayer {
         id: playMusic
         source: selectedUrl
     }

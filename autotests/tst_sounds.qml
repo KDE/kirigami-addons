@@ -8,7 +8,7 @@
 import QtQuick 2.0
 import QtTest 1.2
 import org.kde.kirigamiaddons.sounds 0.1
-import QtMultimedia 5.15
+import QtMultimedia as Multimedia
 
 SoundsPicker {
     id: soundsPicker
@@ -26,9 +26,9 @@ SoundsPicker {
 
         function test_click() {
             mouseClick(soundsPicker, 5, 5);
-            compare(soundsPicker.audioPlayer.playbackState, MediaPlayer.PlayingState)
+            compare(soundsPicker.audioPlayer.playbackState, Multimedia.MediaPlayer.PlayingState)
             mouseClick(soundsPicker, 5, 5);
-            compare(soundsPicker.audioPlayer.playbackState, MediaPlayer.PausedState)
+            compare(soundsPicker.audioPlayer.playbackState, Multimedia.MediaPlayer.PausedState)
         }
     }
 }
