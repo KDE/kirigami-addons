@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-16 00:44+0000\n"
+"POT-Creation-Date: 2023-08-28 00:44+0000\n"
 "PO-Revision-Date: 2023-08-16 14:11+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -22,49 +22,49 @@ msgstr ""
 msgid "Close"
 msgstr "Kapat"
 
-#: components/AlbumMaximizeComponent.qml:112
+#: components/AlbumMaximizeComponent.qml:116
 #, kde-format
 msgid "Zoom in"
 msgstr "Yakınlaştır"
 
-#: components/AlbumMaximizeComponent.qml:117
+#: components/AlbumMaximizeComponent.qml:121
 #, kde-format
 msgid "Zoom out"
 msgstr "Uzaklaştır"
 
-#: components/AlbumMaximizeComponent.qml:123
+#: components/AlbumMaximizeComponent.qml:127
 #, kde-format
 msgid "Rotate left"
 msgstr "Sola Döndür"
 
-#: components/AlbumMaximizeComponent.qml:129
+#: components/AlbumMaximizeComponent.qml:133
 #, kde-format
 msgid "Rotate right"
 msgstr "Sağa Döndür"
 
-#: components/AlbumMaximizeComponent.qml:134
+#: components/AlbumMaximizeComponent.qml:138
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
 msgstr "Alt yazıyı göster"
 
-#: components/AlbumMaximizeComponent.qml:134
+#: components/AlbumMaximizeComponent.qml:138
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
 msgstr "Alt yazıyı gizle"
 
-#: components/AlbumMaximizeComponent.qml:140
+#: components/AlbumMaximizeComponent.qml:144
 #, kde-format
 msgid "Save as"
 msgstr "Farklı Kaydet"
 
-#: components/AlbumMaximizeComponent.qml:200
+#: components/AlbumMaximizeComponent.qml:203
 #, kde-format
 msgid "Previous image"
 msgstr "Önceki Görsel"
 
-#: components/AlbumMaximizeComponent.qml:218
+#: components/AlbumMaximizeComponent.qml:221
 #, kde-format
 msgid "Next image"
 msgstr "Sonraki Görsel"
@@ -80,7 +80,7 @@ msgstr "Kapat"
 msgid "Download"
 msgstr "İndir"
 
-#: components/VideoMaximizeDelegate.qml:233
+#: components/VideoMaximizeDelegate.qml:241
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"

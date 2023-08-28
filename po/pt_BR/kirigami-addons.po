@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-16 00:44+0000\n"
+"POT-Creation-Date: 2023-08-28 00:44+0000\n"
 "PO-Revision-Date: 2023-08-04 01:26-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -24,49 +24,49 @@ msgstr ""
 msgid "Close"
 msgstr "Fechar"
 
-#: components/AlbumMaximizeComponent.qml:112
+#: components/AlbumMaximizeComponent.qml:116
 #, kde-format
 msgid "Zoom in"
 msgstr "Ampliar"
 
-#: components/AlbumMaximizeComponent.qml:117
+#: components/AlbumMaximizeComponent.qml:121
 #, kde-format
 msgid "Zoom out"
 msgstr "Reduzir"
 
-#: components/AlbumMaximizeComponent.qml:123
+#: components/AlbumMaximizeComponent.qml:127
 #, kde-format
 msgid "Rotate left"
 msgstr "Girar à esquerda"
 
-#: components/AlbumMaximizeComponent.qml:129
+#: components/AlbumMaximizeComponent.qml:133
 #, kde-format
 msgid "Rotate right"
 msgstr "Girar à direita"
 
-#: components/AlbumMaximizeComponent.qml:134
+#: components/AlbumMaximizeComponent.qml:138
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
 msgstr "Mostrar legenda"
 
-#: components/AlbumMaximizeComponent.qml:134
+#: components/AlbumMaximizeComponent.qml:138
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
 msgstr "Ocultar legenda"
 
-#: components/AlbumMaximizeComponent.qml:140
+#: components/AlbumMaximizeComponent.qml:144
 #, kde-format
 msgid "Save as"
 msgstr "Salvar como"
 
-#: components/AlbumMaximizeComponent.qml:200
+#: components/AlbumMaximizeComponent.qml:203
 #, kde-format
 msgid "Previous image"
 msgstr "Imagem anterior"
 
-#: components/AlbumMaximizeComponent.qml:218
+#: components/AlbumMaximizeComponent.qml:221
 #, kde-format
 msgid "Next image"
 msgstr "Próxima imagem"
@@ -82,7 +82,7 @@ msgstr "Fechar"
 msgid "Download"
 msgstr "Baixar"
 
-#: components/VideoMaximizeDelegate.qml:233
+#: components/VideoMaximizeDelegate.qml:241
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"

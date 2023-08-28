@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-16 00:44+0000\n"
-"PO-Revision-Date: 2023-08-02 12:41\n"
+"POT-Creation-Date: 2023-08-28 00:44+0000\n"
+"PO-Revision-Date: 2023-08-27 03:41\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -22,49 +22,49 @@ msgstr ""
 msgid "Close"
 msgstr "关闭"
 
-#: components/AlbumMaximizeComponent.qml:112
+#: components/AlbumMaximizeComponent.qml:116
 #, kde-format
 msgid "Zoom in"
 msgstr "放大"
 
-#: components/AlbumMaximizeComponent.qml:117
+#: components/AlbumMaximizeComponent.qml:121
 #, kde-format
 msgid "Zoom out"
 msgstr "缩小"
 
-#: components/AlbumMaximizeComponent.qml:123
+#: components/AlbumMaximizeComponent.qml:127
 #, kde-format
 msgid "Rotate left"
 msgstr "向左旋转"
 
-#: components/AlbumMaximizeComponent.qml:129
+#: components/AlbumMaximizeComponent.qml:133
 #, kde-format
 msgid "Rotate right"
 msgstr "向右旋转"
 
-#: components/AlbumMaximizeComponent.qml:134
+#: components/AlbumMaximizeComponent.qml:138
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
 msgstr "显示标题"
 
-#: components/AlbumMaximizeComponent.qml:134
+#: components/AlbumMaximizeComponent.qml:138
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
 msgstr "隐藏标题"
 
-#: components/AlbumMaximizeComponent.qml:140
+#: components/AlbumMaximizeComponent.qml:144
 #, kde-format
 msgid "Save as"
 msgstr "另存为"
 
-#: components/AlbumMaximizeComponent.qml:200
+#: components/AlbumMaximizeComponent.qml:203
 #, kde-format
 msgid "Previous image"
 msgstr "上一张图像"
 
-#: components/AlbumMaximizeComponent.qml:218
+#: components/AlbumMaximizeComponent.qml:221
 #, kde-format
 msgid "Next image"
 msgstr "下一张图像"
@@ -80,7 +80,7 @@ msgstr "关闭"
 msgid "Download"
 msgstr "下载"
 
-#: components/VideoMaximizeDelegate.qml:233
+#: components/VideoMaximizeDelegate.qml:241
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
@@ -93,25 +93,19 @@ msgid "%1 %2"
 msgstr "%2 年 %1"
 
 #: dateandtime/DatePicker.qml:182
-#, fuzzy, kde-format
-#| msgctxt "kirigami-addons"
-#| msgid "Days"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Days"
 msgstr "日"
 
 #: dateandtime/DatePicker.qml:190
-#, fuzzy, kde-format
-#| msgctxt "kirigami-addons"
-#| msgid "Months"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Months"
 msgstr "月"
 
 #: dateandtime/DatePicker.qml:196
-#, fuzzy, kde-format
-#| msgctxt "kirigami-addons"
-#| msgid "Years"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Years"
 msgstr "年"
@@ -191,8 +185,7 @@ msgid "Homepage"
 msgstr "主页"
 
 #: formcard/AboutKDE.qml:82
-#, fuzzy, kde-format
-#| msgid "Report a bug"
+#, kde-format
 msgid "Report bugs"
 msgstr "报告程序缺陷"
 
@@ -229,7 +222,7 @@ msgstr "报告程序缺陷"
 #: formcard/AboutKDE.qml:102
 #, kde-format
 msgid "Join us"
-msgstr ""
+msgstr "贡献力量"
 
 #: formcard/AboutKDE.qml:107 formcard/labs/AboutKDE.qml:121
 #, kde-format
@@ -256,7 +249,7 @@ msgstr "开发者文档"
 #: formcard/AboutKDE.qml:129
 #, kde-format
 msgid "Support us"
-msgstr ""
+msgstr "捐款支持"
 
 #: formcard/AboutKDE.qml:134 formcard/labs/AboutKDE.qml:148
 #, kde-format
@@ -341,21 +334,21 @@ msgstr "翻译人员"
 #: formcard/AboutPage.qml:359
 #, kde-format
 msgid "Visit %1's KDE Store page"
-msgstr ""
+msgstr "访问 %1 的 KDE 商店页面"
 
 #: formcard/AboutPage.qml:368
 #, kde-format
 msgid "Send an email to %1"
-msgstr ""
+msgstr "发送电子邮件到 %1"
 
 #: settings/CategorizedSettings.qml:44
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings"
-msgstr ""
+msgstr "设置"
 
 #: settings/CategorizedSettings.qml:44
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings — %1"
-msgstr ""
+msgstr "设置 — %1"
