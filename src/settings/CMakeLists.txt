@@ -12,7 +12,7 @@ ecm_target_qml_sources(settingsplugin SOURCES
     CategorizedSettings.qml
 )
 
-target_link_libraries(settingsplugin
+target_link_libraries(settingsplugin PRIVATE
     Qt${QT_MAJOR_VERSION}::Quick
     Qt${QT_MAJOR_VERSION}::Qml
 )

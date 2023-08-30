@@ -30,7 +30,7 @@ ecm_target_qml_sources(treeviewplugin
     qml/private/InternalTreeTableView.qml
 )
 
-target_link_libraries(treeviewplugin
+target_link_libraries(treeviewplugin PRIVATE
     Qt${QT_MAJOR_VERSION}::Quick
     Qt${QT_MAJOR_VERSION}::Qml
     Qt${QT_MAJOR_VERSION}::QuickControls2

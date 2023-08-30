@@ -14,7 +14,7 @@ ecm_target_qml_sources(soundsplugin SOURCES
     SoundsPicker.qml
 )
 
-target_link_libraries(soundsplugin
+target_link_libraries(soundsplugin PRIVATE
     Qt${QT_MAJOR_VERSION}::Quick
     Qt${QT_MAJOR_VERSION}::Qml
     KF${KF_MAJOR_VERSION}::I18n

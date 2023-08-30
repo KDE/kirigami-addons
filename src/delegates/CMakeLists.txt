@@ -14,7 +14,7 @@ ecm_target_qml_sources(delegatesplugin SOURCES
     SubtitleContentItem.qml
 )
 
-target_link_libraries(delegatesplugin
+target_link_libraries(delegatesplugin PRIVATE
     Qt${QT_MAJOR_VERSION}::Quick
     Qt${QT_MAJOR_VERSION}::Qml
 )

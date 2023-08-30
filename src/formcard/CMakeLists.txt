@@ -38,7 +38,7 @@ ecm_target_qml_sources(mobileformplugin PATH private SOURCES
     private/SpinButton.qml
 )
 
-target_link_libraries(mobileformplugin
+target_link_libraries(mobileformplugin PRIVATE
     Qt${QT_MAJOR_VERSION}::Quick
     Qt${QT_MAJOR_VERSION}::Qml
     KF${KF_MAJOR_VERSION}::I18n
@@ -81,7 +81,7 @@ ecm_target_qml_sources(formcardplugin PATH private SOURCES
     private/SpinButton.qml
 )
 
-target_link_libraries(formcardplugin
+target_link_libraries(formcardplugin PRIVATE
     Qt${QT_MAJOR_VERSION}::Quick
     Qt${QT_MAJOR_VERSION}::Qml
     KF${KF_MAJOR_VERSION}::I18n

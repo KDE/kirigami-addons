@@ -47,13 +47,13 @@ ecm_target_qml_sources(dateandtimeplugin PATH private SOURCES
     private/TumblerTimePicker.qml
 )
 
-target_link_libraries(dateandtimeplugin
+target_link_libraries(dateandtimeplugin PRIVATE
     Qt${QT_MAJOR_VERSION}::Quick
     Qt${QT_MAJOR_VERSION}::Qml
     KF${KF_MAJOR_VERSION}::I18n
 )
 if (TARGET KF${KF_MAJOR_VERSION}KirigamiDateAndTime)
-    target_link_libraries(dateandtimeplugin KF${KF_MAJOR_VERSION}KirigamiDateAndTime)
+    target_link_libraries(dateandtimeplugin PRIVATE KF${KF_MAJOR_VERSION}KirigamiDateAndTime)
 endif()
 
 ecm_finalize_qml_module(dateandtimeplugin DESTINATION ${KDE_INSTALL_QMLDIR})

@@ -27,7 +27,7 @@ ecm_target_qml_sources(componentslabsplugin SOURCES
     SearchPopupField.qml
 )
 
-target_link_libraries(componentslabsplugin
+target_link_libraries(componentslabsplugin PRIVATE
     Qt${QT_MAJOR_VERSION}::Quick
     Qt${QT_MAJOR_VERSION}::Qml
     Qt${QT_MAJOR_VERSION}::QuickControls2
@@ -53,7 +53,7 @@ ecm_target_qml_sources(componentsplugin SOURCES
     Banner.qml
 )
 
-target_link_libraries(componentsplugin
+target_link_libraries(componentsplugin PRIVATE
     Qt${QT_MAJOR_VERSION}::Quick
     Qt${QT_MAJOR_VERSION}::Qml
     Qt${QT_MAJOR_VERSION}::QuickControls2
