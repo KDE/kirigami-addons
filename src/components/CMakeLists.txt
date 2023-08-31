@@ -5,8 +5,6 @@
 
 ecm_add_qml_module(componentslabsplugin URI "org.kde.kirigamiaddons.labs.components" VERSION 1.0)
 
-configure_file(Avatar.qml ${CMAKE_CURRENT_BINARY_DIR}/Avatar.qml)
-
 target_sources(componentslabsplugin PRIVATE
     nameutils.h
     nameutils.cpp
@@ -14,7 +12,7 @@ target_sources(componentslabsplugin PRIVATE
 )
 
 ecm_target_qml_sources(componentslabsplugin SOURCES
-    ${CMAKE_CURRENT_BINARY_DIR}/Avatar.qml
+    Avatar.qml
     AbstractMaximizeComponent.qml
     AlbumMaximizeComponent.qml
     ImageMaximizeDelegate.qml
@@ -44,7 +42,7 @@ target_sources(componentsplugin PRIVATE
 )
 
 ecm_target_qml_sources(componentsplugin SOURCES
-    ${CMAKE_CURRENT_BINARY_DIR}/Avatar.qml
+    Avatar.qml
     AvatarButton.qml
     FloatingButton.qml
     DoubleFloatingButton.qml

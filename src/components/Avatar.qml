@@ -7,7 +7,6 @@
 
 import QtQuick 2.15
 import QtQuick.Window 2.15
-import @QTGRAPHICALEFFECTS_MODULE@ as GE
 import org.kde.kirigami 2.15 as Kirigami
 import org.kde.kirigamiaddons.components 1.0 as Components
 
@@ -148,93 +147,73 @@ Item {
         }
     }
 
-    // sized and centered container
     Item {
         anchors.centerIn: parent
 
         width: root.__diameter
         height: root.__diameter
 
-        // background
-        Rectangle {
+        Text {
             anchors.fill: parent
-            radius: root.__diameter
-            z: 0
 
-            border {
-                width: root.__showImage ? 0 : 1.25
-                color: root.color
+            visible: root.initialsMode === Avatar.InitialsMode.UseInitials &&
+                    !root.__showImage &&
+                    !Components.NameUtils.isStringUnsuitableForInitials(root.name) &&
+                    root.width > Kirigami.Units.gridUnit
+
+            text: Components.NameUtils.initialsFromString(root.name)
+            color: root.color
+
+            font {
+                // this ensures we don't get a both point and pixel size are set warning
+                pointSize: -1
+                pixelSize: Math.round((root.height - Kirigami.Units.largeSpacing) / 2)
             }
-
-            color: Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, border.color, 0.07)
+            fontSizeMode: Text.Fit
+            verticalAlignment: Text.AlignVCenter
+            horizontalAlignment: Text.AlignHCenter
         }
 
-        // contentItem
-        Item {
+        Kirigami.Icon {
+            id: avatarIcon
+
             anchors.fill: parent
-            z: 1
+            anchors.margins: Kirigami.Units.largeSpacing
 
-            Text {
-                anchors.fill: parent
+            visible: !root.__showImage
+                && (root.initialsMode === Avatar.InitialsMode.UseIcon
+                    || Components.NameUtils.isStringUnsuitableForInitials(root.name))
 
-                visible: root.initialsMode === Avatar.InitialsMode.UseInitials &&
-                        !root.__showImage &&
-                        !Components.NameUtils.isStringUnsuitableForInitials(root.name) &&
-                        root.width > Kirigami.Units.gridUnit
+            color: root.__textColor
+            source: "user"
+        }
 
-                text: Components.NameUtils.initialsFromString(root.name)
-                color: root.color
+        Image {
+            id: avatarImage
 
-                font {
-                    // this ensures we don't get a both point and pixel size are set warning
-                    pointSize: -1
-                    pixelSize: Math.round((root.height - Kirigami.Units.largeSpacing) / 2)
-                }
-                fontSizeMode: Text.Fit
-                verticalAlignment: Text.AlignVCenter
-                horizontalAlignment: Text.AlignHCenter
+            anchors.fill: parent
+
+            visible: root.__showImage
+
+            fillMode: Image.PreserveAspectCrop
+            mipmap: true
+            sourceSize {
+                width: root.__diameter * root.Screen.devicePixelRatio
+                height: root.__diameter * root.Screen.devicePixelRatio
             }
+        }
 
-            Kirigami.Icon {
-                id: avatarIcon
+        layer {
+            enabled: true
+            effect: Kirigami.ShadowedTexture {
+                radius: root.__diameter
 
-                anchors.fill: parent
-                anchors.margins: Kirigami.Units.largeSpacing
-
-                visible: !root.__showImage
-                    && (root.initialsMode === Avatar.InitialsMode.UseIcon
-                        || Components.NameUtils.isStringUnsuitableForInitials(root.name))
-
-                color: root.__textColor
-                source: "user"
-            }
-
-            Image {
-                id: avatarImage
-
-                anchors.fill: parent
-
-                visible: root.__showImage
-
-                fillMode: Image.PreserveAspectCrop
-                mipmap: true
-                sourceSize {
-                    width: root.__diameter * root.Screen.devicePixelRatio
-                    height: root.__diameter * root.Screen.devicePixelRatio
+                border {
+                    width: root.__showImage ? 0 : 1.25
+                    color: root.color
                 }
-            }
 
-            layer {
-                enabled: true
-                effect: GE.OpacityMask {
-                    maskSource: Rectangle {
-                        width: root.__diameter
-                        height: root.__diameter
-                        radius: root.__diameter
-                        color: "black"
-                        visible: false
-                    }
-                }
+                color: Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, border.color, 0.07)
             }
         }
     }
