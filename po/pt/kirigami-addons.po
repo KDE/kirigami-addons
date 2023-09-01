@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-28 00:44+0000\n"
+"POT-Creation-Date: 2023-09-01 00:44+0000\n"
 "PO-Revision-Date: 2023-07-13 00:52+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -18,54 +18,54 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-POFile-SpellExtra: aplicaçlões\n"
 
-#: components/AbstractMaximizeComponent.qml:126
+#: components/AbstractMaximizeComponent.qml:125
 #, kde-format
 msgid "Close"
 msgstr "Fechar"
 
-#: components/AlbumMaximizeComponent.qml:116
+#: components/AlbumMaximizeComponent.qml:115
 #, kde-format
 msgid "Zoom in"
 msgstr "Ampliar"
 
-#: components/AlbumMaximizeComponent.qml:121
+#: components/AlbumMaximizeComponent.qml:120
 #, kde-format
 msgid "Zoom out"
 msgstr "Reduzir"
 
-#: components/AlbumMaximizeComponent.qml:127
+#: components/AlbumMaximizeComponent.qml:126
 #, kde-format
 msgid "Rotate left"
 msgstr "Rodar para a esquerda"
 
-#: components/AlbumMaximizeComponent.qml:133
+#: components/AlbumMaximizeComponent.qml:132
 #, kde-format
 msgid "Rotate right"
 msgstr "Rodar para a direita"
 
-#: components/AlbumMaximizeComponent.qml:138
+#: components/AlbumMaximizeComponent.qml:137
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
 msgstr "Mostrar a legenda"
 
-#: components/AlbumMaximizeComponent.qml:138
+#: components/AlbumMaximizeComponent.qml:137
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
 msgstr "Esconder a legenda"
 
-#: components/AlbumMaximizeComponent.qml:144
+#: components/AlbumMaximizeComponent.qml:143
 #, kde-format
 msgid "Save as"
 msgstr "Gravar como"
 
-#: components/AlbumMaximizeComponent.qml:203
+#: components/AlbumMaximizeComponent.qml:202
 #, kde-format
 msgid "Previous image"
 msgstr "Imagem anterior"
 
-#: components/AlbumMaximizeComponent.qml:221
+#: components/AlbumMaximizeComponent.qml:220
 #, kde-format
 msgid "Next image"
 msgstr "Imagem seguinte"

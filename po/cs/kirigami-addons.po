@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-28 00:44+0000\n"
+"POT-Creation-Date: 2023-09-01 00:44+0000\n"
 "PO-Revision-Date: 2023-05-31 09:50+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -17,54 +17,54 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.1\n"
 
-#: components/AbstractMaximizeComponent.qml:126
+#: components/AbstractMaximizeComponent.qml:125
 #, kde-format
 msgid "Close"
 msgstr "Zavřít"
 
-#: components/AlbumMaximizeComponent.qml:116
+#: components/AlbumMaximizeComponent.qml:115
 #, kde-format
 msgid "Zoom in"
 msgstr "Přiblížit"
 
-#: components/AlbumMaximizeComponent.qml:121
+#: components/AlbumMaximizeComponent.qml:120
 #, kde-format
 msgid "Zoom out"
 msgstr "Oddálit"
 
-#: components/AlbumMaximizeComponent.qml:127
+#: components/AlbumMaximizeComponent.qml:126
 #, kde-format
 msgid "Rotate left"
 msgstr "Otočit doleva"
 
-#: components/AlbumMaximizeComponent.qml:133
+#: components/AlbumMaximizeComponent.qml:132
 #, kde-format
 msgid "Rotate right"
 msgstr "Otočit doprava"
 
-#: components/AlbumMaximizeComponent.qml:138
+#: components/AlbumMaximizeComponent.qml:137
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
 msgstr "Zobrazit titulek"
 
-#: components/AlbumMaximizeComponent.qml:138
+#: components/AlbumMaximizeComponent.qml:137
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
 msgstr "Skrýt titulek"
 
-#: components/AlbumMaximizeComponent.qml:144
+#: components/AlbumMaximizeComponent.qml:143
 #, kde-format
 msgid "Save as"
 msgstr "Uložit jako"
 
-#: components/AlbumMaximizeComponent.qml:203
+#: components/AlbumMaximizeComponent.qml:202
 #, kde-format
 msgid "Previous image"
 msgstr "Předchozí obrázek"
 
-#: components/AlbumMaximizeComponent.qml:221
+#: components/AlbumMaximizeComponent.qml:220
 #, kde-format
 msgid "Next image"
 msgstr "Následující obrázek"
