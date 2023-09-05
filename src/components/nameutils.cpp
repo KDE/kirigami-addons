@@ -22,11 +22,12 @@ bool contains(const QString &str, QChar::Script s)
 QString NameUtils::initialsFromString(const QString &string)
 {
     // "" -> ""
-    if (string.trimmed().isEmpty()) {
+    QString normalized = string.trimmed();
+    if (normalized.isEmpty()) {
         return {};
     }
 
-    QString normalized = string.normalized(QString::NormalizationForm_D);
+    normalized = string.normalized(QString::NormalizationForm_D);
 
     if (normalized.startsWith(QLatin1Char('#')) || normalized.startsWith(QLatin1Char('@'))) {
         normalized.remove(0, 1);
