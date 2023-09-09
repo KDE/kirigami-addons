@@ -58,6 +58,21 @@ AbstractFormDelegate {
     required property string label
 
     /**
+     * @brief set the maximum length of the text inside the TextField if maxLength > 0
+     */
+    property alias maximumLength: textField.maximumLength
+
+    /**
+     * @brief This hold the activeFocus state of the internal TextField.
+    */
+    property alias fieldActiveFocus: textField.activeFocus
+
+    /**
+     * @brief This hold the `readOnly` state of the internal TextField.
+     */
+    property alias readOnly: textField.readOnly
+
+    /**
      * @brief This property holds the `echoMode` of the internal TextField.
      *
      * This consists of how the text inside the text field will be
@@ -184,13 +199,39 @@ AbstractFormDelegate {
     Accessible.role: Accessible.EditableText
 
     contentItem: ColumnLayout {
-        Label {
-            Layout.fillWidth: true
-            text: label
-            elide: Text.ElideRight
-            color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
-            wrapMode: Text.Wrap
-            maximumLineCount: 2
+        spacing: Kirigami.Units.smallSpacing
+        RowLayout {
+            spacing: Kirigami.Units.largeSpacing
+            Label {
+                Layout.fillWidth: true
+                text: label
+                elide: Text.ElideRight
+                color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
+                wrapMode: Text.Wrap
+                maximumLineCount: 2
+            }
+            Label {
+                TextMetrics {
+                    id: metrics
+                    text: label(root.maximumLength, root.maximumLength)
+                    font: Kirigami.Theme.smallFont
+
+                    function label(current: int, maximum: int): string {
+                        return i18nc("@label %1 is current text length, %2 is maximum length of text field", "%1/%2", current, maximum)
+                    }
+                }
+                // 32767 is the default value for TextField.maximumLength
+                visible: root.maximumLength < 32767
+                text: metrics.label(textField.text.length, root.maximumLength)
+                font: Kirigami.Theme.smallFont
+                color: textField.text.length === root.maximumLength
+                    ? Kirigami.Theme.neutralTextColor
+                    : Kirigami.Theme.textColor
+                horizontalAlignment: Text.AlignRight
+
+                Layout.margins: Kirigami.Units.smallSpacing
+                Layout.preferredWidth: metrics.advanceWidth
+            }
         }
         TextField {
             id: textField
