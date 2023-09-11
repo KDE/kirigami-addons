@@ -123,6 +123,14 @@ Item {
      */
     readonly property alias defaultInitialsColor: root.__textColor
 
+    /**
+     * @brief This item holds the parent item on the clipped circle.
+     *
+     * Implementations may add custom graphics which will be clipped along with
+     * the rest of the avatar content.
+     */
+    readonly property alias clippedContent: clippedContent
+
     implicitWidth: Kirigami.Units.iconSizes.large
     implicitHeight: Kirigami.Units.iconSizes.large
 
@@ -148,6 +156,8 @@ Item {
     }
 
     Item {
+        id: clippedContent
+
         anchors.centerIn: parent
 
         width: root.__diameter

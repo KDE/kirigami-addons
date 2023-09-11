@@ -61,6 +61,14 @@ QQC2.AbstractButton {
      */
     readonly property alias defaultInitialsColor: avatar.defaultInitialsColor
 
+    /**
+     * @brief This item holds the parent item on the clipped circle.
+     *
+     * Implementations may add custom graphics which will be clipped along with
+     * the rest of the avatar content.
+     */
+    readonly property alias clippedContent: avatar.clippedContent
+
     Kirigami.Theme.colorSet: Kirigami.Theme.Button
     Kirigami.Theme.inherit: false
 
