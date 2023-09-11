@@ -258,11 +258,11 @@ FormCardPage {
 
     FormHeader {
         title: i18nd("kirigami-addons", "Authors")
-        visible: aboutData.authors.length > 0
+        visible: aboutData.authors !== undefined && aboutData.authors.length > 0
     }
 
     FormCard {
-        visible: aboutData.authors.length > 0
+        visible: aboutData.authors !== undefined && aboutData.authors.length > 0
 
         Repeater {
             id: authorsRepeater
@@ -273,11 +273,11 @@ FormCardPage {
 
     FormHeader {
         title: i18nd("kirigami-addons", "Credits")
-        visible: aboutData.credits.length > 0
+        visible: aboutData.credits !== undefined && aboutData.credits.length > 0
     }
 
     FormCard {
-        visible: aboutData.credits.length > 0
+        visible: aboutData.credits !== undefined && aboutData.credits.length > 0
 
         Repeater {
             id: repCredits
@@ -288,11 +288,11 @@ FormCardPage {
 
     FormHeader {
         title: i18nd("kirigami-addons", "Translators")
-        visible: aboutData.translators.length > 0
+        visible: aboutData.translators !== undefined && aboutData.translators.length > 0
     }
 
     FormCard {
-        visible: aboutData.translators.length > 0
+        visible: aboutData.translators !== undefined && aboutData.translators.length > 0
 
         Repeater {
             id: repTranslators
