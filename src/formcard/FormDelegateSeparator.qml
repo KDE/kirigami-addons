@@ -43,7 +43,7 @@ Kirigami.Separator {
     // will return the element itself
     Timer {
         interval: 500
-        running: true
+        running: !root.above || !root.below
         onTriggered: {
             if (!root.above) {
                 root.above = root.nextItemInFocusChain(true);

@@ -187,7 +187,6 @@ AbstractFormDelegate {
         textField.insert(position, text);
     }
 
-    focusPolicy: Qt.NoFocus // supplied by text field
     onActiveFocusChanged: { // propagate focus to the text field
         if (activeFocus) {
             textField.forceActiveFocus();
@@ -243,6 +242,7 @@ AbstractFormDelegate {
             onAccepted: root.accepted()
             onEditingFinished: root.editingFinished()
             onTextEdited: root.textEdited()
+            activeFocusOnTab: false
         }
 
         Kirigami.InlineMessage {
