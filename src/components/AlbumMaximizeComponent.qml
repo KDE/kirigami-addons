@@ -156,7 +156,7 @@ AbstractMaximizeComponent {
         highlightMoveDuration: 0
         focus: true
         keyNavigationEnabled: true
-        keyNavigationWraps: true
+        keyNavigationWraps: false
         model: root.model
         orientation: ListView.Horizontal
         clip: true
