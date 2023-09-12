@@ -36,6 +36,6 @@ Kirigami.Separator {
     Layout.rightMargin: Kirigami.Units.largeSpacing
     Layout.fillWidth: true
 
-    opacity: (!above || !(above.enabled && ((above.visualFocus || above.hovered && !Kirigami.Settings.tabletMode) || above.pressed))) &&
-        (!below || !(below.enabled && ((below.visualFocus || below.hovered && !Kirigami.Settings.tabletMode) || below.pressed))) ? 0.5 : 0
+    opacity: (!above || above.background === null || !(above.enabled && ((above.visualFocus || above.hovered && !Kirigami.Settings.tabletMode) || above.pressed))) &&
+        (!below || below.background === null || !(below.enabled && ((below.visualFocus || below.hovered && !Kirigami.Settings.tabletMode) || below.pressed))) ? 0.5 : 0
 }
