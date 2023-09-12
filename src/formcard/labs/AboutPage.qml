@@ -107,7 +107,7 @@ Kirigami.ScrollablePage {
                 AbstractFormDelegate {
                     id: generalDelegate
                     Layout.fillWidth: true
-                    background: Item{}
+                    background: null
                     contentItem: RowLayout {
                         spacing: Kirigami.Units.smallSpacing * 2
 
@@ -329,7 +329,7 @@ Kirigami.ScrollablePage {
 
         AbstractFormDelegate {
             Layout.fillWidth: true
-            background: Item {}
+            background: null
             contentItem: RowLayout {
                 spacing: Kirigami.Units.smallSpacing * 2
 
@@ -393,7 +393,7 @@ Kirigami.ScrollablePage {
 
         AbstractFormDelegate {
             Layout.fillWidth: true
-            background: Item {}
+            background: null
             contentItem: RowLayout {
                 spacing: Kirigami.Units.smallSpacing * 2
 

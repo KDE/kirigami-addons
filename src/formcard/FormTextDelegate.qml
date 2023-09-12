@@ -75,7 +75,7 @@ AbstractFormDelegate {
 
     focusPolicy: Qt.NoFocus
 
-    background: Item {}
+    background: null
 
     contentItem: RowLayout {
         spacing: 0
