@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
+import QtQml 2.15
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import org.kde.kirigami 2.4 as Kirigami
@@ -23,18 +24,35 @@ import org.kde.kirigami 2.4 as Kirigami
  * @inherit Kirigami.Separator
  */
 Kirigami.Separator {
+    id: root
+
     /**
      * @brief The delegate immediately above the separator.
      */
-    property var above
+    property Item above
     /**
      * @brief The delegate immediately below the separator.
      */
-    property var below
+    property Item below
 
     Layout.leftMargin: Kirigami.Units.largeSpacing
     Layout.rightMargin: Kirigami.Units.largeSpacing
     Layout.fillWidth: true
+
+    // We need to initialize above and below later otherwise nextItemInFocusChain
+    // will return the element itself
+    Timer {
+        interval: 500
+        running: true
+        onTriggered: {
+            if (!root.above) {
+                root.above = root.nextItemInFocusChain(true);
+            }
+            if (!root.below) {
+                root.below = root.nextItemInFocusChain(false);
+            }
+        }
+    }
 
     opacity: (!above || above.background === null || !(above.enabled && ((above.visualFocus || above.hovered && !Kirigami.Settings.tabletMode) || above.pressed))) &&
         (!below || below.background === null || !(below.enabled && ((below.visualFocus || below.hovered && !Kirigami.Settings.tabletMode) || below.pressed))) ? 0.5 : 0
