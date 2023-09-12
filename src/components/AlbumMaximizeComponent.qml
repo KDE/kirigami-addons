@@ -150,7 +150,7 @@ AbstractMaximizeComponent {
         id: view
         Layout.fillWidth: true
         Layout.fillHeight: true
-        interactive: count > 1
+        interactive: !hoverHandler.hovered && count > 1
         snapMode: ListView.SnapOneItem
         highlightRangeMode: ListView.StrictlyEnforceRange
         highlightMoveDuration: 0
@@ -223,6 +223,10 @@ AbstractMaximizeComponent {
                 view.currentIndex += 1
                 view.currentItem.play()
             }
+        }
+        HoverHandler {
+            id: hoverHandler
+            acceptedDevices: PointerDevice.Mouse
         }
     }
 
