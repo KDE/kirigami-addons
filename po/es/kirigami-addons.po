@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-10 00:44+0000\n"
+"POT-Creation-Date: 2023-09-14 00:43+0000\n"
 "PO-Revision-Date: 2023-09-10 19:32+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -352,7 +352,7 @@ msgstr "Visitar la página de la tienda de KDE de %1"
 msgid "Send an email to %1"
 msgstr "Enviar un mensaje a %1"
 
-#: formcard/FormTextFieldDelegate.qml:220
+#: formcard/FormTextFieldDelegate.qml:219
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
