@@ -9,39 +9,55 @@
 InfiniteCalendarViewModel::InfiniteCalendarViewModel(QObject *parent)
     : QAbstractListModel(parent)
 {
+}
+
+void InfiniteCalendarViewModel::classBegin()
+{
+
+}
+
+void InfiniteCalendarViewModel::componentComplete()
+{
+    m_isCompleted = true;
     setup();
 }
 
 void InfiniteCalendarViewModel::setup()
 {
-    const QDate today = QDate::currentDate();
+    if (!m_isCompleted) {
+        return;
+    }
+
+    if (!m_currentDate.isValid()) {
+        return;
+    }
 
     switch (m_scale) {
     case WeekScale: {
-        QDate firstDay = today.addDays(-today.dayOfWeek() + m_locale.firstDayOfWeek());
-        // We create dates before and after where our view will start from (which is today)
+        QDate firstDay = m_currentDate.addDays(-m_currentDate.dayOfWeek() + m_locale.firstDayOfWeek());
+        // We create dates before and after where our view will start from (which is m_currentDate)
         firstDay = firstDay.addDays((-m_datesToAdd * 7) / 2);
 
         addWeekDates(true, firstDay);
         break;
     }
-    case MonthScale: {
-        QDate firstDay(today.year(), today.month(), 1);
+    case MonthScale: {file:///home/carl/kde6/src/log/2023-10-02-06/kirigami-addons/build.log
+        QDate firstDay(m_currentDate.year(), m_currentDate.month(), 1);
         firstDay = firstDay.addMonths(-m_datesToAdd / 2);
 
         addMonthDates(true, firstDay);
         break;
     }
     case YearScale: {
-        QDate firstDay(today.year(), today.month(), 1);
+        QDate firstDay(m_currentDate.year(), m_currentDate.month(), 1);
         firstDay = firstDay.addYears(-m_datesToAdd / 2);
 
         addYearDates(true, firstDay);
         break;
     }
     case DecadeScale: {
-        const int firstYear = ((floor(today.year() / 10)) * 10) - 1; // E.g. For 2020 have view start at 2019...
-        QDate firstDay(firstYear, today.month(), 1);
+        const int firstYear = ((floor(m_currentDate.year() / 10)) * 10) - 1; // E.g. For 2020 have view start at 2019...
+        QDate firstDay(firstYear, m_currentDate.month(), 1);
         firstDay = firstDay.addYears(((-m_datesToAdd * 12) / 2) + 10); // 3 * 4 grid so 12 years, end at 2030, and align for mid index to be current decade
 
         addDecadeDates(true, firstDay);
@@ -101,6 +117,16 @@ QHash<int, QByteArray> InfiniteCalendarViewModel::roleNames() const
         {SelectedMonthRole, QByteArrayLiteral("selectedMonth")},
         {SelectedYearRole, QByteArrayLiteral("selectedYear")},
     };
+}
+
+QDate InfiniteCalendarViewModel::currentDate() const
+{
+    return m_currentDate;
+}
+
+void InfiniteCalendarViewModel::setCurrentDate(const QDate &currentDate)
+{
+    m_currentDate = currentDate;
 }
 
 void InfiniteCalendarViewModel::addDates(bool atEnd, const QDate startFrom)

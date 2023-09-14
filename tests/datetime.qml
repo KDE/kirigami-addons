@@ -42,12 +42,6 @@ Kirigami.ApplicationWindow {
                         timeInput.value = new Date();
                     }
                 }
-
-                Addon.ClockFace {
-                    implicitWidth: 400
-                    implicitHeight: implicitWidth
-                    time: timeInput.value
-                }
             }
         }
     }

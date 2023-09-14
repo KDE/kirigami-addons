@@ -73,6 +73,7 @@ ecm_target_qml_sources(formcardplugin SOURCES
     FormSwitchDelegate.qml
     FormTextDelegate.qml
     FormTextFieldDelegate.qml
+    FormDateTimeDelegate.qml
     FormGridContainer.qml
 )
 

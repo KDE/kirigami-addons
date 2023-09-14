@@ -22,7 +22,7 @@ RowLayout {
      *
      * @since KirigamiAddons 0.10.0
      */
-    required property T.ItemDelegate itemDelegate
+    required property T.AbstractButton itemDelegate
 
     /**
      * This property holds the Label containing the text of the item delegate.
@@ -56,11 +56,11 @@ RowLayout {
         leftPadding: itemDelegate.mirrored ? (itemDelegate.indicator ? itemDelegate.indicator.width : 0) + itemDelegate.spacing : 0
         rightPadding: !itemDelegate.mirrored ? (itemDelegate.indicator ? itemDelegate.indicator.width : 0) + itemDelegate.spacing : 0
 
-        text: itemDelegate.text
-        font: itemDelegate.font
-        color: itemDelegate.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
+        text: root.itemDelegate.text
+        font: root.itemDelegate.font
+        color: root.itemDelegate.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
         elide: Text.ElideRight
-        visible: itemDelegate.text
+        visible: itemDelegate.text && itemDelegate.display !== QQC2.AbstractButton.IconOnly
         horizontalAlignment: Text.AlignLeft
         verticalAlignment: Text.AlignVCenter
         Layout.alignment: Qt.AlignLeft

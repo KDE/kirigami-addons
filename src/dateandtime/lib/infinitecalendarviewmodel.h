@@ -7,13 +7,15 @@
 #include <QCalendar>
 #include <QDateTime>
 #include <QLocale>
+#include <QQmlParserStatus>
 
-class InfiniteCalendarViewModel : public QAbstractListModel
+class InfiniteCalendarViewModel : public QAbstractListModel, public QQmlParserStatus
 {
     Q_OBJECT
     // Amount of dates to add each time the model adds more dates
     Q_PROPERTY(int datesToAdd READ datesToAdd WRITE setDatesToAdd NOTIFY datesToAddChanged)
     Q_PROPERTY(int scale READ scale WRITE setScale NOTIFY scaleChanged)
+    Q_PROPERTY(QDate currentDate READ currentDate WRITE setCurrentDate NOTIFY currentDateChanged)
 
 public:
     // The decade scale is designed to be used in a 4x3 grid, so shows 12 years at a time
@@ -36,6 +38,12 @@ public:
     QHash<int, QByteArray> roleNames() const override;
     int rowCount(const QModelIndex &parent = {}) const override;
 
+    void classBegin() override;
+    void componentComplete() override;
+
+    QDate currentDate() const;
+    void setCurrentDate(const QDate &currentDate);
+
     Q_INVOKABLE void addDates(bool atEnd, const QDate startFrom = QDate());
     void addWeekDates(bool atEnd, const QDate &startFrom);
     void addMonthDates(bool atEnd, const QDate &startFrom);
@@ -51,11 +59,14 @@ public:
 Q_SIGNALS:
     void datesToAddChanged();
     void scaleChanged();
+    void currentDateChanged();
 
 private:
+    QDate m_currentDate;
     QVector<QDate> m_startDates;
     QVector<QDate> m_firstDayOfMonthDates;
     QLocale m_locale;
     int m_datesToAdd = 10;
     int m_scale = MonthScale;
+    bool m_isCompleted = true;
 };

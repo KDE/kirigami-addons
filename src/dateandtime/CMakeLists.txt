@@ -35,16 +35,14 @@ ecm_target_qml_sources(dateandtimeplugin SOURCES
     DatePicker.qml
     DatePopup.qml
     TimeInput.qml
-
-    # deprecated
-    TimePicker.qml
+    TumblerTimePicker.qml
 )
 ecm_target_qml_sources(dateandtimeplugin PATH private SOURCES
     private/ClockElement.qml
     private/DesktopDateInput.qml
     private/Hand.qml
     private/MobileDateInput.qml
-    private/TumblerTimePicker.qml
+    private/DatePickerDelegate.qml
 )
 
 target_link_libraries(dateandtimeplugin PRIVATE

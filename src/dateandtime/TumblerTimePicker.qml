@@ -59,11 +59,23 @@ RowLayout {
     Component {
         id: delegateComponent
         Label {
+            id: delegate
+
             text: formatText(Tumbler.tumbler.count, modelData)
             opacity: 1.0 - Math.abs(Tumbler.displacement) / (Tumbler.tumbler.visibleItemCount / 2)
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             font.pixelSize: fontMetrics.font.pixelSize * 1.25
+
+            Rectangle {
+                anchors.fill: parent
+                color: 'transparent'
+                radius: Kirigami.Units.mediumSpacing
+                border {
+                    width: delegate === Tumbler.tumbler.currentItem ? 1 : 0
+                    color: Kirigami.Theme.highlightColor
+                }
+            }
         }
     }
 
@@ -78,9 +90,16 @@ RowLayout {
         delegate: delegateComponent
         visibleItemCount: 5
         onCurrentIndexChanged: if (_init) {
-            console.error(_isAmPm, _pm, currentIndex)
             hours = currentIndex + (_isAmPm && _pm ? 12 : 0)
         }
+        Accessible.name: if (!_isAmPm) {
+            i18ndc("kirigami-addons", "time in hour in 24h format", "%1 hours", root.hours)
+        } else if (_isAmPm && _pm) {
+            i18ndc("kirigami-addons", "time in hour (PM)", "%1 PM", currentIndex + 12)
+        } else {
+            i18ndc("kirigami-addons", "time in hour (AM)", "%1 AM", currentIndex)
+        }
+        focus: true
     }
 
     Label {
@@ -98,6 +117,8 @@ RowLayout {
         onCurrentIndexChanged: if (_init) {
             minutes = currentIndex;
         }
+
+        Accessible.name: i18ndc("kirigami-addons", "number of minutes", "%1 minutes", root.hours)
     }
 
     Tumbler {
@@ -105,6 +126,7 @@ RowLayout {
         visible: _isAmPm
         Layout.preferredHeight: Kirigami.Units.gridUnit * 10
         model: [Qt.locale().amText, Qt.locale().pmText]
+        Accessible.name: currentItem.text
         delegate: delegateComponent
         visibleItemCount: 5
         onCurrentIndexChanged: if (_isAmPm && _init) {

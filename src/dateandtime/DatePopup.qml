@@ -5,26 +5,20 @@
 import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQuick.Layouts 1.15
-import QtQuick.Controls 2.15 as Controls
+import QtQuick.Controls 2.15 as QQC2
 import org.kde.kirigami 2.19 as Kirigami
+import org.kde.kirigamiaddons.components 1.0 as Components
 
 /**
  * A popup that prompts the user to select a date
  */
-Kirigami.OverlaySheet {
+QQC2.Dialog {
     id: root
+
     /**
-     * The year of the selected date
+     * @brief The current date and time selected by the user.
      */
-    property alias year: datePicker.year
-    /**
-     * The month of the selected date
-     */
-    property alias month: datePicker.month
-    /**
-     * The selected date
-     */
-    property alias selectedDate: datePicker.selectedDate
+    property date value: new Date()
 
     /**
      * Emitted when the user accepts the dialog.
@@ -37,78 +31,65 @@ Kirigami.OverlaySheet {
      */
     signal cancelled()
 
-    header: RowLayout {
-        implicitWidth: datePicker.width
-        Kirigami.Heading {
-            level: 2
-            text: datePicker.selectedDate.toLocaleDateString(Qt.locale(), "<b>MMMM</b>")
-        }
-        Kirigami.Heading {
-            level: 3
-            text: datePicker.selectedDate.getFullYear()
-            opacity: 0.8
+    /**
+     * This property holds the minimum date (inclusive) that the user can select.
+     *
+     * By default, no limit is applied to the date selection.
+     */
+    property var minimumDate: null
+
+    /**
+     * This property holds the maximum date (inclusive) that the user can select.
+     *
+     * By default, no limit is applied to the date selection.
+     */
+    property var maximumDate: null
+
+    padding: 0
+    topPadding: undefined
+    leftPadding: undefined
+    rightPadding: undefined
+    bottomPadding: undefined
+    verticalPadding: undefined
+    horizontalPadding: undefined
+
+    contentItem: DatePicker {
+        id: datePicker
+        selectedDate: root.value
+        minimumDate: root.minimumDate
+        maximumDate: root.maximumDate
+        focus: true
+    }
+
+    footer: RowLayout {
+        spacing: Kirigami.Units.mediumSpacing
+
+        Item {
             Layout.fillWidth: true
         }
 
-        Controls.Button {
-            icon.name: "go-previous"
-            text: i18nd("kirigami-addons", "Previous")
-            display: Controls.AbstractButton.IconOnly
-            Controls.ToolTip {
-                text: parent.text
-            }
-            onClicked: datePicker.prevMonth()
-        }
-        Controls.Button {
-            icon.name: "go-jump-today"
-            text: i18nd("kirigami-addons", "Today")
-            display: Controls.AbstractButton.IconOnly
-            Controls.ToolTip {
-                text: parent.text
-            }
-            onClicked: datePicker.goToday()
-        }
-        Controls.Button {
-            icon.name: "go-next"
-            text: i18nd("kirigami-addons", "Next")
-            display: Controls.AbstractButton.IconOnly
-            Controls.ToolTip {
-                text: parent.text
-            }
-            onClicked: datePicker.nextMonth()
-        }
-    }
-    contentItem: DatePicker {
-        id: datePicker
-        implicitWidth: Math.min(Window.width, Kirigami.Units.gridUnit * 25)
-        implicitHeight: width * 0.8
-    }
-    footer: RowLayout {
-        Controls.Label {
-            text: datePicker.selectedDate.toLocaleDateString();
-            Layout.fillWidth: true
-        }
-        Controls.Button {
-            text: i18nd("kirigami-addons", "Cancel")
+        QQC2.Button {
+            text: i18ndc("kirigami-addons", "@action:button", "Cancel")
             icon.name: "dialog-cancel"
+            Layout.bottomMargin: Kirigami.Units.largeSpacing
             onClicked: {
                 root.cancelled()
                 root.close()
             }
-
         }
-        Controls.Button {
-            text: i18nd("kirigami-addons", "Accept")
+
+        QQC2.Button {
+            text: i18ndc("kirigami-addons", "@action:button", "Accept")
             icon.name: "dialog-ok-apply"
+            Layout.rightMargin: Kirigami.Units.largeSpacing
+            Layout.bottomMargin: Kirigami.Units.largeSpacing
             onClicked: {
-                root.selectedDate = datePicker.selectedDate
+                root.value = datePicker.selectedDate;
                 root.accepted()
                 root.close()
             }
         }
     }
-    leftPadding: 0
-    rightPadding: 0
-    topPadding: 0
-    bottomPadding: 0
+
+    background: Components.DialogRoundedBackground {}
 }
