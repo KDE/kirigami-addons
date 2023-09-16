@@ -78,8 +78,8 @@ Kirigami.ShadowedRectangle {
             Kirigami.Theme.colorSet: Kirigami.Theme.Window
 
             corners {
-                topLeftRadius: 10
-                bottomLeftRadius: 10
+                topLeftRadius: root.radius
+                bottomLeftRadius: root.radius
             }
 
             border {
@@ -156,8 +156,8 @@ Kirigami.ShadowedRectangle {
             Kirigami.Theme.colorSet: Kirigami.Theme.Window
 
             corners {
-                topRightRadius: 10
-                bottomRightRadius: 10
+                topRightRadius: root.radius
+                bottomRightRadius: root.radius
             }
 
             border {
