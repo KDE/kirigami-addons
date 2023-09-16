@@ -71,6 +71,8 @@ Kirigami.ShadowedRectangle {
     QQC2.Button {
         id: rightButton
 
+        z: (down || visualFocus || hovered) ? 2 : rightButtonBorderAnimation.running ? 1 : 0
+
         background: Kirigami.ShadowedRectangle {
             Kirigami.Theme.inherit: false
             Kirigami.Theme.colorSet: Kirigami.Theme.Window
@@ -108,6 +110,7 @@ Kirigami.ShadowedRectangle {
             }
 
             Behavior on border.color {
+                id: rightButtonBorderAnimation
                 enabled: true
                 ColorAnimation {
                     duration: Kirigami.Units.longDuration
@@ -146,6 +149,8 @@ Kirigami.ShadowedRectangle {
 
     QQC2.Button {
         id: leftButton
+
+        z: (down || visualFocus || hovered) ? 2 : leftButtonBorderAnimation.running ? 1 : 0
 
         background: Kirigami.ShadowedRectangle {
             Kirigami.Theme.inherit: false
@@ -186,6 +191,7 @@ Kirigami.ShadowedRectangle {
             Behavior on border.color {
                 enabled: true
                 ColorAnimation {
+                    id: leftButtonBorderAnimation
                     duration: Kirigami.Units.longDuration
                     easing.type: Easing.OutCubic
                 }
