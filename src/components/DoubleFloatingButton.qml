@@ -38,12 +38,12 @@ import org.kde.kirigami 2.20 as Kirigami
  *             }
  *         }
  *     }
- *}
+ * }
  * @endcode
  *
  * @since Kirigami Addons 0.11
  */
-Kirigami.ShadowedRectangle{
+Kirigami.ShadowedRectangle {
     id: root
 
     /**
@@ -71,7 +71,7 @@ Kirigami.ShadowedRectangle{
     QQC2.Button {
         id: rightButton
 
-        background: Kirigami.ShadowedRectangle{
+        background: Kirigami.ShadowedRectangle {
             Kirigami.Theme.inherit: false
             Kirigami.Theme.colorSet: Kirigami.Theme.Window
 
@@ -93,7 +93,7 @@ Kirigami.ShadowedRectangle{
 
             color: if (parent.down || parent.visualFocus) {
                 Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.6)
-            } else if(parent.hovered) {
+            } else if (parent.hovered) {
                 Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.8)
             } else {
                 Kirigami.Theme.backgroundColor
@@ -146,7 +146,8 @@ Kirigami.ShadowedRectangle{
 
     QQC2.Button {
         id: leftButton
-        background: Kirigami.ShadowedRectangle{
+
+        background: Kirigami.ShadowedRectangle {
             Kirigami.Theme.inherit: false
             Kirigami.Theme.colorSet: Kirigami.Theme.Window
 
@@ -168,7 +169,7 @@ Kirigami.ShadowedRectangle{
 
             color: if (parent.down || parent.visualFocus) {
                 Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.6)
-            } else if(parent.hovered) {
+            } else if (parent.hovered) {
                 Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.8)
             } else {
                 Kirigami.Theme.backgroundColor
