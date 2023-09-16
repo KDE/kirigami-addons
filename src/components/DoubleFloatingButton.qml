@@ -27,12 +27,12 @@ import org.kde.kirigami 2.20 as Kirigami
  *                 bottomMargin: Kirigami.Units.largeSpacing
  *             }
  *
- *             leftAction: Kirigami.Action {
+ *             leadingAction: Kirigami.Action {
  *                 text: "Zoom In"
  *                 icon.name: "list-add"
  *             }
  *
- *             rightAction: Kirigami.Action {
+ *             trailingAction: Kirigami.Action {
  *                 text: "Zoom Out"
  *                 icon.name: "list-minus"
  *             }
@@ -47,14 +47,26 @@ Kirigami.ShadowedRectangle {
     id: root
 
     /**
-     * This property holds the left action
+     * This property holds the leading action.
+     * @deprecated Set leadingAction instead.
      */
-    property Kirigami.Action leftAction
+    property alias leftAction: root.leadingAction
 
     /**
-     * This property holds the right action
+     * This property holds the trailing action.
+     * @deprecated Set trailingAction instead.
      */
-    property Kirigami.Action rightAction
+    property alias rightAction: root.trailingAction
+
+    /**
+     * This property holds the leading action.
+     */
+    property Kirigami.Action leadingAction
+
+    /**
+     * This property holds the trailing action.
+     */
+    property Kirigami.Action trailingAction
 
     radius: Kirigami.Units.largeSpacing
     color: "transparent"
@@ -69,9 +81,9 @@ Kirigami.ShadowedRectangle {
     }
 
     QQC2.Button {
-        id: leftButton
+        id: leadingButton
 
-        z: (down || visualFocus || hovered) ? 2 : leftButtonBorderAnimation.running ? 1 : 0
+        z: (down || visualFocus || hovered) ? 2 : leadingButtonBorderAnimation.running ? 1 : 0
 
         background: Kirigami.ShadowedRectangle {
             Kirigami.Theme.inherit: false
@@ -112,7 +124,7 @@ Kirigami.ShadowedRectangle {
             Behavior on border.color {
                 enabled: true
                 ColorAnimation {
-                    id: leftButtonBorderAnimation
+                    id: leadingButtonBorderAnimation
                     duration: Kirigami.Units.longDuration
                     easing.type: Easing.OutCubic
                 }
@@ -121,25 +133,25 @@ Kirigami.ShadowedRectangle {
 
         contentItem: Item {
             Kirigami.Icon {
-                implicitHeight: if (root.leftAction.icon.height) {
-                    root.leftAction.icon.height
+                implicitHeight: if (root.leadingAction.icon.height) {
+                    root.leadingAction.icon.height
                 } else {
                     Kirigami.Units.iconSizes.medium
                 }
-                implicitWidth: if (root.leftAction.icon.width) {
-                    root.leftAction.icon.width
+                implicitWidth: if (root.leadingAction.icon.width) {
+                    root.leadingAction.icon.width
                 } else {
                     Kirigami.Units.iconSizes.medium
                 }
-                source: if (root.leftAction.icon.name) {
-                    root.leftAction.icon.name
+                source: if (root.leadingAction.icon.name) {
+                    root.leadingAction.icon.name
                 } else {
-                    root.leftAction.icon.source
+                    root.leadingAction.icon.source
                 }
                 anchors.centerIn: parent
             }
         }
-        action: root.leftAction
+        action: root.leadingAction
         anchors.left: root.left
         height: root.height
         width: root.height
@@ -147,9 +159,9 @@ Kirigami.ShadowedRectangle {
     }
 
     QQC2.Button {
-        id: rightButton
+        id: trailingButton
 
-        z: (down || visualFocus || hovered) ? 2 : rightButtonBorderAnimation.running ? 1 : 0
+        z: (down || visualFocus || hovered) ? 2 : trailingButtonBorderAnimation.running ? 1 : 0
 
         background: Kirigami.ShadowedRectangle {
             Kirigami.Theme.inherit: false
@@ -188,7 +200,7 @@ Kirigami.ShadowedRectangle {
             }
 
             Behavior on border.color {
-                id: rightButtonBorderAnimation
+                id: trailingButtonBorderAnimation
                 enabled: true
                 ColorAnimation {
                     duration: Kirigami.Units.longDuration
@@ -199,26 +211,26 @@ Kirigami.ShadowedRectangle {
 
         contentItem: Item {
             Kirigami.Icon {
-                implicitHeight: if (root.rightAction.icon.height) {
-                    root.rightAction.icon.height
+                implicitHeight: if (root.trailingAction.icon.height) {
+                    root.trailingAction.icon.height
                 } else {
                     Kirigami.Units.iconSizes.medium
                 }
-                implicitWidth: if (root.rightAction.icon.width) {
-                    root.rightAction.icon.width
+                implicitWidth: if (root.trailingAction.icon.width) {
+                    root.trailingAction.icon.width
                 } else {
                     Kirigami.Units.iconSizes.medium
                 }
-                source: if (root.rightAction.icon.name) {
-                    root.rightAction.icon.name
+                source: if (root.trailingAction.icon.name) {
+                    root.trailingAction.icon.name
                 } else {
-                    root.rightAction.icon.source
+                    root.trailingAction.icon.source
                 }
                 anchors.centerIn: parent
             }
         }
 
-        action: root.rightAction
+        action: root.trailingAction
         anchors.right: root.right
         height: root.height
         width: root.height
