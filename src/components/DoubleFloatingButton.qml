@@ -49,12 +49,12 @@ Kirigami.ShadowedRectangle {
     /**
      * This property holds the left action
      */
-    required property Kirigami.Action leftAction
+    property Kirigami.Action leftAction
 
     /**
      * This property holds the right action
      */
-    required property Kirigami.Action rightAction
+    property Kirigami.Action rightAction
 
     radius: Kirigami.Units.largeSpacing
     color: "transparent"
