@@ -12,29 +12,31 @@ import org.kde.kirigami 2.20 as Kirigami
  * This component allows to display two buttons at the bottom of a page.
  *
  * @code{.qml}
- * import org.kde.Kirigamiaddons.components 1.0 as Components
+ * import QtQuick 2.15
+ * import QtQuick.Controls 2.15 as QQC2
+ * import org.kde.kirigami 2.20 as Kirigami
+ * import org.kde.kirigamiaddons.components 1.0 as KirigamiComponents
  *
  * Kirigami.ScrollablePage {
  *     ListView {
  *         model: []
- *         delegate: QQC2.ItemDelegate { ... }
+ *         delegate: QQC2.ItemDelegate {}
  *
- *         Components.DoubleFloatingButton {
+ *         KirigamiComponents.DoubleFloatingButton {
  *             anchors {
  *                 right: parent.right
- *                 rightMargin: Kirigami.Units.largeSpacing
  *                 bottom: parent.bottom
- *                 bottomMargin: Kirigami.Units.largeSpacing
+ *                 margins: Kirigami.Units.largeSpacing
  *             }
  *
  *             leadingAction: Kirigami.Action {
- *                 text: "Zoom In"
- *                 icon.name: "list-add"
+ *                 text: "Zoom Out"
+ *                 icon.name: "list-remove"
  *             }
  *
  *             trailingAction: Kirigami.Action {
- *                 text: "Zoom Out"
- *                 icon.name: "list-minus"
+ *                 text: "Zoom In"
+ *                 icon.name: "list-add"
  *             }
  *         }
  *     }
