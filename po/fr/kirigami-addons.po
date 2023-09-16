@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-14 00:43+0000\n"
-"PO-Revision-Date: 2023-09-09 16:28+0200\n"
+"PO-Revision-Date: 2023-09-14 15:37+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -358,7 +358,7 @@ msgstr "Envoyer un courriel vers %1"
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
-msgstr ""
+msgstr "%1 / %2"
 
 #: settings/CategorizedSettings.qml:44
 #, kde-format
