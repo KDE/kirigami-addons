@@ -69,6 +69,84 @@ Kirigami.ShadowedRectangle {
     }
 
     QQC2.Button {
+        id: leftButton
+
+        z: (down || visualFocus || hovered) ? 2 : leftButtonBorderAnimation.running ? 1 : 0
+
+        background: Kirigami.ShadowedRectangle {
+            Kirigami.Theme.inherit: false
+            Kirigami.Theme.colorSet: Kirigami.Theme.Window
+
+            corners {
+                topLeftRadius: 10
+                bottomLeftRadius: 10
+            }
+
+            border {
+                width: 1
+                color: if (parent.down || parent.visualFocus) {
+                    Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.4)
+                } else if (parent.hovered) {
+                    Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.6)
+                } else {
+                    Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.2)
+                }
+            }
+
+            color: if (parent.down || parent.visualFocus) {
+                Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.6)
+            } else if (parent.hovered) {
+                Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.8)
+            } else {
+                Kirigami.Theme.backgroundColor
+            }
+
+            Behavior on color {
+                enabled: true
+                ColorAnimation {
+                    duration: Kirigami.Units.longDuration
+                    easing.type: Easing.OutCubic
+                }
+            }
+
+            Behavior on border.color {
+                enabled: true
+                ColorAnimation {
+                    id: leftButtonBorderAnimation
+                    duration: Kirigami.Units.longDuration
+                    easing.type: Easing.OutCubic
+                }
+            }
+        }
+
+        contentItem: Item {
+            Kirigami.Icon {
+                implicitHeight: if (root.leftAction.icon.height) {
+                    root.leftAction.icon.height
+                } else {
+                    Kirigami.Units.iconSizes.medium
+                }
+                implicitWidth: if (root.leftAction.icon.width) {
+                    root.leftAction.icon.width
+                } else {
+                    Kirigami.Units.iconSizes.medium
+                }
+                source: if (root.leftAction.icon.name) {
+                    root.leftAction.icon.name
+                } else {
+                    root.leftAction.icon.source
+                }
+                anchors.centerIn: parent
+            }
+        }
+        action: root.leftAction
+        anchors.left: root.left
+        height: root.height
+        width: root.height
+        display: QQC2.AbstractButton.IconOnly
+    }
+
+    QQC2.Button {
         id: rightButton
 
         z: (down || visualFocus || hovered) ? 2 : rightButtonBorderAnimation.running ? 1 : 0
@@ -142,84 +220,6 @@ Kirigami.ShadowedRectangle {
 
         action: root.rightAction
         anchors.right: root.right
-        height: root.height
-        width: root.height
-        display: QQC2.AbstractButton.IconOnly
-    }
-
-    QQC2.Button {
-        id: leftButton
-
-        z: (down || visualFocus || hovered) ? 2 : leftButtonBorderAnimation.running ? 1 : 0
-
-        background: Kirigami.ShadowedRectangle {
-            Kirigami.Theme.inherit: false
-            Kirigami.Theme.colorSet: Kirigami.Theme.Window
-
-            corners {
-                topLeftRadius: 10
-                bottomLeftRadius: 10
-            }
-
-            border {
-                width: 1
-                color: if (parent.down || parent.visualFocus) {
-                    Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.4)
-                } else if (parent.hovered) {
-                    Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.6)
-                } else {
-                    Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.2)
-                }
-            }
-
-            color: if (parent.down || parent.visualFocus) {
-                Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.6)
-            } else if (parent.hovered) {
-                Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.8)
-            } else {
-                Kirigami.Theme.backgroundColor
-            }
-
-            Behavior on color {
-                enabled: true
-                ColorAnimation {
-                    duration: Kirigami.Units.longDuration
-                    easing.type: Easing.OutCubic
-                }
-            }
-
-            Behavior on border.color {
-                enabled: true
-                ColorAnimation {
-                    id: leftButtonBorderAnimation
-                    duration: Kirigami.Units.longDuration
-                    easing.type: Easing.OutCubic
-                }
-            }
-        }
-
-        contentItem: Item {
-            Kirigami.Icon {
-                implicitHeight: if (root.leftAction.icon.height) {
-                    root.leftAction.icon.height
-                } else {
-                    Kirigami.Units.iconSizes.medium
-                }
-                implicitWidth: if (root.leftAction.icon.width) {
-                    root.leftAction.icon.width
-                } else {
-                    Kirigami.Units.iconSizes.medium
-                }
-                source: if (root.leftAction.icon.name) {
-                    root.leftAction.icon.name
-                } else {
-                    root.leftAction.icon.source
-                }
-                anchors.centerIn: parent
-            }
-        }
-        action: root.leftAction
-        anchors.left: root.left
         height: root.height
         width: root.height
         display: QQC2.AbstractButton.IconOnly
