@@ -101,7 +101,7 @@ Kirigami.ShadowedRectangle {
 
         LayoutMirroring.enabled: root.LayoutMirroring.enabled
 
-        z: (down || visualFocus || hovered) ? 2 : leadingButtonBorderAnimation.running ? 1 : 0
+        z: (down || visualFocus || (enabled && hovered)) ? 2 : leadingButtonBorderAnimation.running ? 1 : 0
 
         background: Kirigami.ShadowedRectangle {
             id: leadingButtonBackground
@@ -120,7 +120,7 @@ Kirigami.ShadowedRectangle {
                 width: 1
                 color: if (parent.down || parent.visualFocus) {
                     Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.4)
-                } else if (parent.hovered) {
+                } else if (enabled && parent.hovered) {
                     Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.6)
                 } else {
                     Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.2)
@@ -129,7 +129,7 @@ Kirigami.ShadowedRectangle {
 
             color: if (parent.down || parent.visualFocus) {
                 Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.6)
-            } else if (parent.hovered) {
+            } else if (enabled && parent.hovered) {
                 Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.8)
             } else {
                 Kirigami.Theme.backgroundColor
@@ -186,7 +186,7 @@ Kirigami.ShadowedRectangle {
 
         LayoutMirroring.enabled: root.LayoutMirroring.enabled
 
-        z: (down || visualFocus || hovered) ? 2 : trailingButtonBorderAnimation.running ? 1 : 0
+        z: (down || visualFocus || (enabled && hovered)) ? 2 : trailingButtonBorderAnimation.running ? 1 : 0
 
         background: Kirigami.ShadowedRectangle {
             Kirigami.Theme.inherit: false
@@ -203,7 +203,7 @@ Kirigami.ShadowedRectangle {
                 width: 1
                 color: if (parent.down || parent.visualFocus) {
                     Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.4)
-                } else if (parent.hovered) {
+                } else if (enabled && parent.hovered) {
                     Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.6)
                 } else {
                     Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.2)
@@ -212,7 +212,7 @@ Kirigami.ShadowedRectangle {
 
             color: if (parent.down || parent.visualFocus) {
                 Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.6)
-            } else if (parent.hovered) {
+            } else if (enabled && parent.hovered) {
                 Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.8)
             } else {
                 Kirigami.Theme.backgroundColor
