@@ -68,6 +68,20 @@ Kirigami.ShadowedRectangle {
      */
     property Kirigami.Action trailingAction
 
+    // Note: binding corners to each other results in binding loops, because
+    // they share one common NOTIFY signal. Storing properties wastes memory.
+    // So these two expressions are implemented as little helper functions.
+
+    // Left for leading and right for trailing buttons
+    function __radiusA(): bool {
+        return LayoutMirroring.enabled ? 0 : radius;
+    }
+
+    // and vice-versa
+    function __radiusB(): bool {
+        return LayoutMirroring.enabled ? radius : 0;
+    }
+
     radius: Kirigami.Units.largeSpacing
     color: "transparent"
     height: Math.round(Kirigami.Units.gridUnit * 2.5)
@@ -75,7 +89,7 @@ Kirigami.ShadowedRectangle {
 
     shadow {
         size: 10
-        xOffset: 2
+        xOffset: 0
         yOffset: 2
         color: Qt.rgba(0, 0, 0, 0.2)
     }
@@ -83,15 +97,21 @@ Kirigami.ShadowedRectangle {
     QQC2.Button {
         id: leadingButton
 
+        LayoutMirroring.enabled: root.LayoutMirroring.enabled
+
         z: (down || visualFocus || hovered) ? 2 : leadingButtonBorderAnimation.running ? 1 : 0
 
         background: Kirigami.ShadowedRectangle {
+            id: leadingButtonBackground
+
             Kirigami.Theme.inherit: false
             Kirigami.Theme.colorSet: Kirigami.Theme.Window
 
             corners {
-                topLeftRadius: root.radius
-                bottomLeftRadius: root.radius
+                topLeftRadius: root.__radiusA()
+                bottomLeftRadius: root.__radiusA()
+                topRightRadius: root.__radiusB()
+                bottomRightRadius: root.__radiusB()
             }
 
             border {
@@ -161,6 +181,8 @@ Kirigami.ShadowedRectangle {
     QQC2.Button {
         id: trailingButton
 
+        LayoutMirroring.enabled: root.LayoutMirroring.enabled
+
         z: (down || visualFocus || hovered) ? 2 : trailingButtonBorderAnimation.running ? 1 : 0
 
         background: Kirigami.ShadowedRectangle {
@@ -168,8 +190,10 @@ Kirigami.ShadowedRectangle {
             Kirigami.Theme.colorSet: Kirigami.Theme.Window
 
             corners {
-                topRightRadius: root.radius
-                bottomRightRadius: root.radius
+                topLeftRadius: root.__radiusB()
+                bottomLeftRadius: root.__radiusB()
+                topRightRadius: root.__radiusA()
+                bottomRightRadius: root.__radiusA()
             }
 
             border {
