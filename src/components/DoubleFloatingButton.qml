@@ -155,20 +155,20 @@ Kirigami.ShadowedRectangle {
 
         contentItem: Item {
             Kirigami.Icon {
-                implicitHeight: if (root.leadingAction.icon.height) {
-                    root.leadingAction.icon.height
+                implicitHeight: if (leadingButton.icon.height) {
+                    leadingButton.icon.height
                 } else {
                     Kirigami.Units.iconSizes.medium
                 }
-                implicitWidth: if (root.leadingAction.icon.width) {
-                    root.leadingAction.icon.width
+                implicitWidth: if (leadingButton.icon.width) {
+                    leadingButton.icon.width
                 } else {
                     Kirigami.Units.iconSizes.medium
                 }
-                source: if (root.leadingAction.icon.name) {
-                    root.leadingAction.icon.name
+                source: if (leadingButton.icon.name) {
+                    leadingButton.icon.name
                 } else {
-                    root.leadingAction.icon.source
+                    leadingButton.icon.source
                 }
                 anchors.centerIn: parent
             }
@@ -237,20 +237,20 @@ Kirigami.ShadowedRectangle {
 
         contentItem: Item {
             Kirigami.Icon {
-                implicitHeight: if (root.trailingAction.icon.height) {
-                    root.trailingAction.icon.height
+                implicitHeight: if (trailingButton.icon.height) {
+                    trailingButton.icon.height
                 } else {
                     Kirigami.Units.iconSizes.medium
                 }
-                implicitWidth: if (root.trailingAction.icon.width) {
-                    root.trailingAction.icon.width
+                implicitWidth: if (trailingButton.icon.width) {
+                    trailingButton.icon.width
                 } else {
                     Kirigami.Units.iconSizes.medium
                 }
-                source: if (root.trailingAction.icon.name) {
-                    root.trailingAction.icon.name
+                source: if (trailingButton.icon.name) {
+                    trailingButton.icon.name
                 } else {
-                    root.trailingAction.icon.source
+                    trailingButton.icon.source
                 }
                 anchors.centerIn: parent
             }
