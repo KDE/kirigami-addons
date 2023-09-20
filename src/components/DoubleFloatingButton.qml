@@ -177,7 +177,7 @@ Kirigami.ShadowedRectangle {
         anchors.left: root.left
         height: root.height
         width: root.height
-        enabled: action?.enabled ?? false
+        enabled: action ? action.enabled : false
         display: QQC2.AbstractButton.IconOnly
     }
 
@@ -261,7 +261,7 @@ Kirigami.ShadowedRectangle {
         anchors.right: root.right
         height: root.height
         width: root.height
-        enabled: action?.enabled ?? false
+        enabled: action ? action.enabled : false
         display: QQC2.AbstractButton.IconOnly
     }
 }
