@@ -25,37 +25,24 @@ import org.kde.kirigami 2.19 as Kirigami
 
 Kirigami.Icon {
     /**
-     * @brief The ::direction of the FormArrow.
-     */
-    enum Direction {
-        /** The arrow icon will point upwards. */
-        Up,
-        /** The arrow icon will point downwards. */
-        Down,
-        /** The arrow icon will point to the left. */
-        Left,
-        /** The arrow icon will point to the right. */
-        Right
-    }
-    
-    /**
      * @brief The direction the FormArrow will point towards.
      *
-     * Set this to any ::Direction enum value.
+     * Set this to any Qt::ArrowType enum value.
      *
-     * default: `FormArrow.Right`
+     * default: `Qt.RightArrow`
      */
-    property int direction: Right
+    property int direction: Qt.RightArrow
     
     source: {
-        if (direction === FormArrow.Up) {
-            return "arrow-up";
-        } else if (direction === FormArrow.Down) {
-            return "arrow-down";
-        } else if (direction === FormArrow.Left) {
-            return "arrow-left";
-        } else {
-            return "arrow-right";
+        switch (direction) {
+            case Qt.UpArrow:
+                return "arrow-up";
+            case Qt.DownArrow:
+                return "arrow-down";
+            case Qt.LeftArrow:
+                return "arrow-left";
+            case Qt.RightArrow:
+                return "arrow-right";
         }
     }
     implicitWidth: Math.round(Kirigami.Units.iconSizes.small * 0.75)

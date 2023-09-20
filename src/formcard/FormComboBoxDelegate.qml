@@ -344,7 +344,7 @@ AbstractFormDelegate {
 
         FormArrow {
             Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-            direction: FormArrow.Down
+            direction: Qt.DownArrow
             visible: controlRoot.displayMode === FormComboBoxDelegate.Dialog || controlRoot.displayMode === FormComboBoxDelegate.Page
         }
     }

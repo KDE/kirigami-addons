@@ -112,7 +112,7 @@ AbstractFormDelegate {
         FormArrow {
             Layout.leftMargin: Kirigami.Units.smallSpacing
             Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-            direction: FormArrow.Right
+            direction: Qt.RightArrow
         }
     }
 
