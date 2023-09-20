@@ -120,13 +120,12 @@ Kirigami.PageRow {
                 initDone = true;
             }
             model: {
-                if (filterText.length === 0) {
-                    return root.actions;
-                }
-                var filteredActions = [];
+                const isFiltering = filterText.length !== 0;
+                let filteredActions = [];
                 for (let i in actions) {
                     const action = actions[i];
-                    if (action.text.toLowerCase().includes(filterText)) {
+                    const actionPassesFilter = action.text.toLowerCase().includes(filterText);
+                    if (action.visible && (isFiltering ? actionPassesFilter : true)) {
                         filteredActions.push(action);
                     }
                 }
@@ -139,7 +138,6 @@ Kirigami.PageRow {
                 required property var modelData
 
                 action: modelData
-                visible: modelData.visible
                 checked: ListView.view.currentIndex === settingDelegate.index
 
                 onClicked: {
