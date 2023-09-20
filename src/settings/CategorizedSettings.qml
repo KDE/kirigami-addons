@@ -140,9 +140,9 @@ Kirigami.PageRow {
 
                 action: modelData
                 visible: modelData.visible
+                checked: ListView.view.currentIndex === settingDelegate.index
 
                 onClicked: {
-                    checked = true;
                     ListView.view.currentIndex = settingDelegate.index;
                     if (root.currentItem.title.length === 0) {
                         root.currentItem.title = text;
