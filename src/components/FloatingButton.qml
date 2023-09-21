@@ -12,19 +12,21 @@ import org.kde.kirigami 2.20 as Kirigami
  * This component is a button that can be displayed at the bottom of a page.
  *
  * @code{.qml}
- * import org.kde.kirigamiaddons.components 1.0 as Components
+ * import QtQuick 2.15
+ * import QtQuick.Controls 2.15 as QQC2
+ * import org.kde.kirigami 2.20 as Kirigami
+ * import org.kde.kirigamiaddons.components 1.0 as KirigamiComponents
  *
  * Kirigami.ScrollablePage {
  *     ListView {
  *         model: []
- *         delegate: QQC2.ItemDelegate { ... }
+ *         delegate: QQC2.ItemDelegate {}
  *
- *         Components.FloatingButton {
+ *         KirigamiComponents.FloatingButton {
  *             anchors {
  *                 right: parent.right
- *                 rightMargin: Kirigami.Units.largeSpacing
  *                 bottom: parent.bottom
- *                 bottomMargin: Kirigami.Units.largeSpacing
+ *                 margins: Kirigami.Units.largeSpacing
  *             }
  *
  *             action: Kirigami.Action {
@@ -33,7 +35,7 @@ import org.kde.kirigami 2.20 as Kirigami
  *             }
  *         }
  *     }
- *}
+ * }
  * @endcode
  *
  * @since Kirigami Addons 0.11
@@ -44,7 +46,7 @@ QQC2.Button {
     height: Math.round(Kirigami.Units.gridUnit * 2.5)
     width: height
 
-    background: Kirigami.ShadowedRectangle{
+    background: Kirigami.ShadowedRectangle {
         Kirigami.Theme.inherit: false
         Kirigami.Theme.colorSet: Kirigami.Theme.Window
 
@@ -61,9 +63,9 @@ QQC2.Button {
             width: 1
             color: if (parent.down || parent.visualFocus) {
                 Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.4)
-            } else if(parent.hovered) {
+            } else if (parent.hovered) {
                 Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.6)
-            } else{
+            } else {
                 Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.2)
             }
         }
@@ -92,6 +94,7 @@ QQC2.Button {
 
     contentItem: Item {
         Kirigami.Icon {
+            anchors.centerIn: parent
             implicitHeight: if (root.icon.height) {
                 root.icon.height
             } else {
@@ -107,7 +110,6 @@ QQC2.Button {
             } else {
                 root.icon.source
             }
-            anchors.centerIn: parent
         }
     }
 }
