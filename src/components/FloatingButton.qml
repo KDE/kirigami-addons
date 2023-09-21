@@ -6,6 +6,7 @@
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15 as QQC2
+import QtQuick.Templates 2.15 as T
 import org.kde.kirigami 2.20 as Kirigami
 
 /**
@@ -40,11 +41,24 @@ import org.kde.kirigami 2.20 as Kirigami
  *
  * @since Kirigami Addons 0.11
  */
-QQC2.Button {
+T.Button {
     id: root
+
+    Kirigami.Theme.colorSet: Kirigami.Theme.Button
+    Kirigami.Theme.inherit: false
+
+    implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
+                            implicitContentWidth + leftPadding + rightPadding)
+    implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
+                             implicitContentHeight + topPadding + bottomPadding)
 
     height: Math.round(Kirigami.Units.gridUnit * 2.5)
     width: height
+
+    // Text is not supported anyway
+    spacing: 0
+
+    hoverEnabled: !Kirigami.Settings.hasTransientTouchInput
 
     background: Kirigami.ShadowedRectangle {
         Kirigami.Theme.inherit: false
