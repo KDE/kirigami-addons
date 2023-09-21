@@ -1,5 +1,6 @@
 // SPDX-FileCopyrightText: 2023 Mathis Brüchert <mbb@kaidan.im>
 // SPDX-FileCopyrightText: 2023 Carl Schwan <carl@carlschwan.eu>
+// SPDX-FileCopyrightText: 2023 ivan tkachenko <me@ratijas.tk>
 //
 // SPDX-License-Identifier: LGPL-2.0-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 
@@ -27,8 +28,8 @@ import org.kde.kirigami 2.20 as Kirigami
  *             anchors {
  *                 right: parent.right
  *                 bottom: parent.bottom
- *                 margins: Kirigami.Units.largeSpacing
  *             }
+ *             margins: Kirigami.Units.largeSpacing
  *
  *             action: Kirigami.Action {
  *                 text: "Add new item"
@@ -41,7 +42,7 @@ import org.kde.kirigami 2.20 as Kirigami
  *
  * @since Kirigami Addons 0.11
  */
-T.Button {
+T.RoundButton {
     id: controlRoot
 
     Kirigami.Theme.colorSet: Kirigami.Theme.Button
@@ -52,13 +53,39 @@ T.Button {
     implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
                              implicitContentHeight + topPadding + bottomPadding)
 
-    height: Math.round(Kirigami.Units.gridUnit * 2.5)
-    width: height
-
     readonly property size __effectiveIconSize: Qt.size(
         icon.height > 0 ? icon.height : Kirigami.Units.iconSizes.medium,
         icon.width > 0 ? icon.width : Kirigami.Units.iconSizes.medium,
     )
+
+    // Property is needed to prevent binding loops on insets
+    readonly property real __padding: radius === Infinity
+        ? Math.round(Math.max(__effectiveIconSize.width, __effectiveIconSize.height) * (Math.sqrt(2) - 1))
+        : Kirigami.Units.largeSpacing
+
+    // Extra clickable area that adjusts both paddings and insets.
+    property real margins: 0
+    property real topMargin: margins
+    property real leftMargin: margins
+    property real rightMargin: margins
+    property real bottomMargin: margins
+
+    // Fit icon into a square bounded by a circle bounded by button
+    padding: __padding
+
+    topPadding: padding + topMargin
+    leftPadding: padding + leftMargin
+    rightPadding: padding + rightMargin
+    bottomPadding: padding + bottomMargin
+
+    // If user overrides individual padding value, we should adjust background. By default all insets will be 0.
+    topInset: topMargin
+    leftInset: leftMargin
+    rightInset: rightMargin
+    bottomInset: bottomMargin
+
+    // Set to Infinity to get extra padding for round button style.
+    radius: Kirigami.Units.largeSpacing
 
     // Text is not supported anyway
     spacing: 0
@@ -70,56 +97,67 @@ T.Button {
         implicitHeight: controlRoot.__effectiveIconSize.height
 
         Kirigami.Icon {
-            anchors.centerIn: parent
-            width: controlRoot.__effectiveIconSize.width
-            height: controlRoot.__effectiveIconSize.height
+            anchors.fill: parent
             color: controlRoot.icon.color
             source: controlRoot.icon.name !== "" ? controlRoot.icon.name : controlRoot.icon.source
         }
     }
 
-    background: Kirigami.ShadowedRectangle {
-        Kirigami.Theme.inherit: false
-        Kirigami.Theme.colorSet: Kirigami.Theme.Window
+    background: Item {
+        Kirigami.ShadowedRectangle {
+            anchors.centerIn: parent
+            width: Math.min(parent.width, parent.height)
+            height: width
+            radius: controlRoot.radius
 
-        color: if (parent.down || parent.visualFocus) {
-            Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.6)
-        } else if (parent.hovered) {
-            Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.8)
-        } else {
-            Kirigami.Theme.backgroundColor
-        }
+            Kirigami.Theme.inherit: false
+            Kirigami.Theme.colorSet: Kirigami.Theme.Window
 
-        radius: Kirigami.Units.largeSpacing
-        border {
-            width: 1
-            color: if (parent.down || parent.visualFocus) {
-                Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.4)
-            } else if (parent.hovered) {
-                Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.6)
-            } else {
-                Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.2)
+            shadow {
+                size: 10
+                xOffset: 0
+                yOffset: 2
+                color: Qt.rgba(0, 0, 0, 0.2)
             }
-        }
 
-        shadow {
-            size: 10
-            xOffset: 2
-            yOffset: 2
-            color: Qt.rgba(0, 0, 0, 0.2)
-        }
-
-        Behavior on color {
-            ColorAnimation {
-                duration: Kirigami.Units.longDuration
-                easing.type: Easing.OutCubic
+            border {
+                width: 1
+                color: if (controlRoot.visualFocus
+                    || (controlRoot.focusPolicy !== Qt.NoFocus
+                        && controlRoot.enabled
+                        && (controlRoot.down || controlRoot.hovered))) {
+                    return controlRoot.Kirigami.Theme.highlightColor;
+                } else {
+                    // TODO KF6: Port to Qt.alpha(controlRoot.Kirigami.Theme.highlightColor, 0);
+                    const c = controlRoot.Kirigami.Theme.highlightColor;
+                    return Qt.rgba(c.r, c.g, c.b, 0);
+                }
             }
-        }
 
-        Behavior on border.color {
-            ColorAnimation {
-                duration: Kirigami.Units.longDuration
-                easing.type: Easing.OutCubic
+            color: {
+                if (controlRoot.down && controlRoot.enabled) {
+                    if (controlRoot.activeFocus) {
+                        return Kirigami.ColorUtils.tintWithAlpha(controlRoot.Kirigami.Theme.backgroundColor, controlRoot.Kirigami.Theme.highlightColor, 0.333);
+                    } else {
+                        // TODO KF6: Port to Qt.alpha(controlRoot.Kirigami.Theme.textColor, 0.1)
+                        const c = controlRoot.Kirigami.Theme.textColor;
+                        return Qt.tint(controlRoot.Kirigami.Theme.backgroundColor, Qt.rgba(c.r, c.g, c.b, 0.1));
+                    }
+                } else {
+                    return controlRoot.Kirigami.Theme.backgroundColor;
+                }
+            }
+
+            Behavior on border.color {
+                ColorAnimation {
+                    duration: Kirigami.Units.veryShortDuration
+                }
+            }
+
+            Behavior on color {
+                ColorAnimation {
+                    duration: Kirigami.Units.veryShortDuration
+                }
             }
         }
     }
