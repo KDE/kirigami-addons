@@ -42,7 +42,7 @@ import org.kde.kirigami 2.20 as Kirigami
  * @since Kirigami Addons 0.11
  */
 T.Button {
-    id: root
+    id: controlRoot
 
     Kirigami.Theme.colorSet: Kirigami.Theme.Button
     Kirigami.Theme.inherit: false
@@ -55,10 +55,28 @@ T.Button {
     height: Math.round(Kirigami.Units.gridUnit * 2.5)
     width: height
 
+    readonly property size __effectiveIconSize: Qt.size(
+        icon.height > 0 ? icon.height : Kirigami.Units.iconSizes.medium,
+        icon.width > 0 ? icon.width : Kirigami.Units.iconSizes.medium,
+    )
+
     // Text is not supported anyway
     spacing: 0
 
     hoverEnabled: !Kirigami.Settings.hasTransientTouchInput
+
+    contentItem: Item {
+        implicitWidth: controlRoot.__effectiveIconSize.width
+        implicitHeight: controlRoot.__effectiveIconSize.height
+
+        Kirigami.Icon {
+            anchors.centerIn: parent
+            width: controlRoot.__effectiveIconSize.width
+            height: controlRoot.__effectiveIconSize.height
+            color: controlRoot.icon.color
+            source: controlRoot.icon.name !== "" ? controlRoot.icon.name : controlRoot.icon.source
+        }
+    }
 
     background: Kirigami.ShadowedRectangle {
         Kirigami.Theme.inherit: false
@@ -102,27 +120,6 @@ T.Button {
             ColorAnimation {
                 duration: Kirigami.Units.longDuration
                 easing.type: Easing.OutCubic
-            }
-        }
-    }
-
-    contentItem: Item {
-        Kirigami.Icon {
-            anchors.centerIn: parent
-            implicitHeight: if (root.icon.height) {
-                root.icon.height
-            } else {
-                Kirigami.Units.iconSizes.medium
-            }
-            implicitWidth: if (root.icon.width) {
-                root.icon.width
-            } else {
-                Kirigami.Units.iconSizes.medium
-            }
-            source: if (root.icon.name) {
-                root.icon.name
-            } else {
-                root.icon.source
             }
         }
     }
