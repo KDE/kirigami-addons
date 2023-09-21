@@ -75,12 +75,12 @@ Kirigami.ShadowedRectangle {
     // So these two expressions are implemented as little helper functions.
 
     // Left for leading and right for trailing buttons
-    function __radiusA(): bool {
+    function __radiusA(): real {
         return LayoutMirroring.enabled ? 0 : radius;
     }
 
     // and vice-versa
-    function __radiusB(): bool {
+    function __radiusB(): real {
         return LayoutMirroring.enabled ? radius : 0;
     }
 
