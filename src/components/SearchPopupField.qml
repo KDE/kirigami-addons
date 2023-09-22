@@ -102,6 +102,11 @@ QQC2.Control {
     property bool spaceAvailableRight: true
 
     /**
+     * @brief This hold the focus state of the internal SearchField.
+    */
+    property alias fieldFocus: searchField.focus
+
+    /**
      * This signal is triggered when the user trigger a search.
      */
     signal accepted()
@@ -109,6 +114,7 @@ QQC2.Control {
     property alias popup: popup
 
     property Kirigami.SearchField searchField: Kirigami.SearchField {
+        id: searchField
         // HACK: anchor searchField to (changing) parent; this is done to
         // guarantee that it resizes properly and timely
         anchors.left: parent.left
