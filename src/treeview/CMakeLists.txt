@@ -10,17 +10,27 @@ target_sources(treeviewplugin PRIVATE
 ecm_target_qml_sources(treeviewplugin SOURCES
     qml/BasicTreeItem.qml
     qml/TreeTableView.qml
-    qml/TreeViewDecoration.qml
     qml/TreeListView.qml
     qml/AbstractTreeItem.qml
+    qml/TreeViewDecoration.qml
 )
 
-ecm_target_qml_sources(treeviewplugin
-    PRIVATE PATH
-    styles/org.kde.desktop
-    SOURCES
-    qml/styles/org.kde.desktop/TreeViewDecoration.qml
-)
+if (QT_MAJOR_VERSION EQUAL "5")
+    ecm_target_qml_sources(treeviewplugin
+        PRIVATE PATH
+        styles/org.kde.desktop
+        SOURCES
+        qml5/styles/org.kde.desktop/TreeViewDecoration.qml
+    )
+else()
+    ecm_target_qml_sources(treeviewplugin
+        PRIVATE PATH
+        styles/org.kde.desktop
+        SOURCES
+        qml/styles/org.kde.desktop/TreeViewDecoration.qml
+    )
+endif()
+
 
 ecm_target_qml_sources(treeviewplugin
     PRIVATE PATH

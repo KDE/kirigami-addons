@@ -9,7 +9,7 @@ import QtQuick.Layouts 1.4
 import QtQuick.Controls 2.2 as QQC2
 import QtQuick.Templates 2.2 as T2
 import org.kde.kitemmodels 1.0 
-import org.kde.qqc2desktopstyle.private as StylePrivate
+import org.kde.qqc2desktopstyle.private 1.0 as StylePrivate
 
 RowLayout {
     property T2.ItemDelegate parentDelegate
