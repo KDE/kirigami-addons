@@ -43,8 +43,16 @@ QQC2.ItemDelegate {
     topPadding: verticalPadding
     bottomPadding: verticalPadding
 
-    topInset: Math.round(Kirigami.Units.smallSpacing / 2)
-    bottomInset: Math.round(Kirigami.Units.smallSpacing / 2)
+    topInset: if (root.index !== undefined && index === 0 && ListView.view && ListView.view.topMargin === 0) {
+        Kirigami.Units.smallSpacing;
+    } else {
+        Math.round(Kirigami.Units.smallSpacing / 2);
+    }
+    bottomInset: if (root.index !== undefined && ListView.view && index === ListView.view.count - 1 && ListView.view.bottomMargin === 0) {
+        Kirigami.Units.smallSpacing;
+    } else {
+        Math.round(Kirigami.Units.smallSpacing / 2)
+    }
     rightInset: Kirigami.Units.smallSpacing
     leftInset: Kirigami.Units.smallSpacing
 
