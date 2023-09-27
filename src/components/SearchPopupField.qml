@@ -173,7 +173,7 @@ QQC2.Control {
             playCloseHeight.running = true
         }
 
-        background: DialogRounedBackground {}
+        background: DialogRoundedBackground {}
 
         NumberAnimation on height {
             id: playOpenHeight
