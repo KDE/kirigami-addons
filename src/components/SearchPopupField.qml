@@ -173,20 +173,9 @@ QQC2.Control {
             playCloseHeight.running = true
         }
 
-        background: Kirigami.ShadowedRectangle{
-            Kirigami.Theme.inherit: false
-            Kirigami.Theme.colorSet: Kirigami.Theme.View
-            color: Kirigami.Theme.backgroundColor
-            radius: 7
-            shadow.size: 20
-            shadow.yOffset: 5
-            shadow.color: Qt.rgba(0, 0, 0, 0.2)
+        background: DialogRounedBackground {}
 
-            border.width: 1
-            border.color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.3);
-        }
-
-        NumberAnimation on height{
+        NumberAnimation on height {
             id: playOpenHeight
             easing.type: Easing.OutCubic
             from: 40

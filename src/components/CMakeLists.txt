@@ -21,6 +21,7 @@ ecm_target_qml_sources(componentslabsplugin SOURCES
     Banner.qml
     DownloadAction.qml
     SearchPopupField.qml
+    DialogRoundedBackground.qml
 )
 
 target_link_libraries(componentslabsplugin PRIVATE
@@ -47,6 +48,7 @@ ecm_target_qml_sources(componentsplugin SOURCES
     FloatingButton.qml
     DoubleFloatingButton.qml
     Banner.qml
+    DialogRoundedBackground.qml
 )
 
 target_link_libraries(componentsplugin PRIVATE
