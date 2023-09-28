@@ -10,7 +10,7 @@ BaseAlbumMaximizeComponentTestCase {
     id: root
     name: "AlbumAbstractListModelTest"
     model: ExampleAlbumModel {
-        testImage: root.testImage
-        testVideo: root.testVideo
+        testImage: Qt.resolvedUrl(root.testImage)
+        testVideo: Qt.resolvedUrl(root.testVideo)
     }
 }

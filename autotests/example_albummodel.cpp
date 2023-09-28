@@ -4,6 +4,7 @@
 #include "example_albummodel.h"
 
 #include <QDebug>
+#include <QImage>
 
 ExampleAlbumModel::ExampleAlbumModel(QObject *parent)
     : QAbstractListModel(parent)
@@ -54,7 +55,15 @@ QVariant ExampleAlbumModel::data(const QModelIndex &index, int role) const
     }
 
     if (role == SourceRole) {
+        auto url = m_items.at(index.row())->source();
+        qWarning() << url;
         return m_items.at(index.row())->source();
+    }
+    if (role == SourceWidthRole) {
+        return m_items.at(index.row())->sourceWidth();
+    }
+    if (role == SourceHeightRole) {
+        return m_items.at(index.row())->sourceHeight();
     }
     if (role == TempSourceRole) {
         return m_items.at(index.row())->tempSource();
@@ -79,6 +88,8 @@ QHash<int, QByteArray> ExampleAlbumModel::roleNames() const
 {
     return {
         {SourceRole, QByteArrayLiteral("source")},
+        {SourceWidthRole, QByteArrayLiteral("sourceWidth")},
+        {SourceHeightRole, QByteArrayLiteral("sourceHeight")},
         {TempSourceRole, QByteArrayLiteral("tempSource")},
         {TypeRole, QByteArrayLiteral("type")},
         {CaptionRole, QByteArrayLiteral("caption")},
@@ -91,9 +102,9 @@ void ExampleAlbumModel::resetModel()
     m_items.clear();
 
     // Create dummy data using latest image and video sources.
-    m_items.append(new ItemObject(this, m_testImage, m_testImage, ItemObject::Type::Image, QStringLiteral("A test image")));
-    m_items.append(new ItemObject(this, m_testVideo, m_testImage, ItemObject::Type::Video, QStringLiteral("A test video")));
-    m_items.append(new ItemObject(this, m_testImage, m_testImage, ItemObject::Type::Image, QStringLiteral("")));
+    m_items.append(new ItemObject(this, m_testImage, 200, 100, m_testImage, ItemObject::Type::Image, QStringLiteral("A test image")));
+    m_items.append(new ItemObject(this, m_testVideo, 300, 150, m_testImage, ItemObject::Type::Video, QStringLiteral("A test video")));
+    m_items.append(new ItemObject(this, m_testImage, 400, 200, m_testImage, ItemObject::Type::Image, QStringLiteral("")));
 
     endResetModel();
 }

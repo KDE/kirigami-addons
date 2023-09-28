@@ -14,6 +14,7 @@ add_library(test-artefacts STATIC
 
 target_link_libraries(test-artefacts
     Qt${QT_MAJOR_VERSION}::Core
+    Qt${QT_MAJOR_VERSION}::Gui
 )
 
 add_executable(qmltest qmltests.cpp)

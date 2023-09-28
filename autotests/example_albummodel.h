@@ -21,6 +21,16 @@ class ItemObject : public QObject
     Q_PROPERTY(QUrl source READ source CONSTANT)
 
     /**
+     * @brief The width of the item.
+     */
+    Q_PROPERTY(qreal sourceWidth READ sourceWidth CONSTANT)
+
+    /**
+     * @brief The height of the item.
+     */
+    Q_PROPERTY(qreal sourceHeight READ sourceHeight CONSTANT)
+
+    /**
      * @brief Source for the temporary content.
      *
      * Typically used when downloading the image to show a thumbnail or other
@@ -54,11 +64,15 @@ public:
 
     ItemObject(QObject *parent = nullptr,
                QUrl source = {},
+               qreal sourceWidth = {},
+               qreal sourceHeight = {},
                QUrl tempSource = {},
                Type type = Type::Image,
                QString caption = {})
         : QObject(parent)
         , m_source(source)
+        , m_sourceWidth(sourceWidth)
+        , m_sourceHeight(sourceHeight)
         , m_tempSource(tempSource)
         , m_type(type)
         , m_caption(caption)
@@ -66,12 +80,16 @@ public:
     };
 
     QUrl source () const {return m_source;}
+    qreal sourceWidth() const {return m_sourceWidth;}
+    qreal sourceHeight() const {return m_sourceHeight;}
     QUrl tempSource () const {return m_tempSource;}
     Type type () const {return m_type;}
     QString caption () const {return m_caption;}
 
 private:
     QUrl m_source;
+    qreal m_sourceWidth;
+    qreal m_sourceHeight;
     QUrl m_tempSource;
     Type m_type;
     QString m_caption;
@@ -119,7 +137,9 @@ public:
         /**
          * @brief The source for the item.
          */
-        SourceRole = Qt::UserRole + 1,
+        SourceRole = Qt::DisplayRole,
+        SourceWidthRole,
+        SourceHeightRole,
         /**
          * @brief Source for the temporary content.
          *

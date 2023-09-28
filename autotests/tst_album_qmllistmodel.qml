@@ -16,14 +16,20 @@ BaseAlbumMaximizeComponentTestCase {
     Component.onCompleted: {
         listModel.append({"type": AlbumModelItem.Image,
                          "source": Qt.resolvedUrl(root.testImage),
+                         "sourceWidth": 0,
+                         "sourceHeight": 0,
                          "tempSource": Qt.resolvedUrl(root.testImage),
                          "caption": "A test image"})
         listModel.append({"type": AlbumModelItem.Video,
                          "source": Qt.resolvedUrl(root.testVideo),
+                         "sourceWidth": 0,
+                         "sourceHeight": 0,
                          "tempSource": Qt.resolvedUrl(root.testImage),
                          "caption": "A test video"})
         listModel.append({"type": AlbumModelItem.Image,
                          "source": Qt.resolvedUrl(root.testImage),
+                         "sourceWidth": 0,
+                         "sourceHeight": 0,
                          "tempSource": Qt.resolvedUrl(root.testImage),
                          "caption": ""})
     }
