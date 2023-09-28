@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: 2021 Jonah Brüchert <jbb@kaidan.im>
 // SPDX-FileCopyrightText: 2023 Mathis Brüchert <mbb@kaidan.im>
 // SPDX-FileCopyrightText: 2023 Carl Schwan <carl@carlschwan.eu>
+// SPDX-FileCopyrightText: 2023 ivan tkachenko <me@ratijas.tk>
 //
 // SPDX-License-Identifier: LGPL-2.0-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
@@ -9,7 +10,7 @@ import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Templates 2.15 as T
 import QtQuick.Layouts 1.15
 import Qt.labs.qmlmodels 1.0
-import org.kde.kirigami 2.19 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 
 /**
  * SearchField with a Popup to show autocompletion entries or search results
@@ -89,6 +90,7 @@ QQC2.Control {
      * This is used by the left shadow.
      *
      * @since KirigamiAddons.labs.components 1.0
+     * @deprecated Was not really used by anything.
      */
     property bool spaceAvailableLeft: true
 
@@ -98,6 +100,7 @@ QQC2.Control {
      * This is used by the right shadow.
      *
      * @since KirigamiAddons.labs.components 1.0
+     * @deprecated Was not really used by anything.
      */
     property bool spaceAvailableRight: true
 
@@ -115,17 +118,26 @@ QQC2.Control {
 
     property Kirigami.SearchField searchField: Kirigami.SearchField {
         id: searchField
-        // HACK: anchor searchField to (changing) parent; this is done to
-        // guarantee that it resizes properly and timely
-        anchors.left: parent.left
-        anchors.right: parent.right
+        anchors.left: parent ? parent.left : undefined
+        anchors.right: parent ? parent.right : undefined
         selectByMouse: true
 
         KeyNavigation.tab: scrollView.contentItem
         KeyNavigation.down: scrollView.contentItem
 
-        onFocusChanged: if (focus) {
-            root.popup.open()
+        onActiveFocusChanged: if (activeFocus) {
+            // Don't mess with popups and reparenting inside focus change handler.
+            // Especially nested popups hate that: it may break all focus management
+            // on a scene until restart.
+            Qt.callLater(() => {
+                // TODO: Kirigami.OverlayZStacking fails to find and bind to
+                // parent logical popup when parent item is itself reparented
+                // on the fly.
+                if (typeof Kirigami.OverlayZStacking !== "undefined") {
+                    root.popup.z = Qt.binding(() => root.popup.Kirigami.OverlayZStacking.z);
+                }
+                root.popup.open();
+            });
         }
 
         onAccepted: {
@@ -141,76 +153,232 @@ QQC2.Control {
         }
     }
 
-    contentItem: searchField
+    contentItem: Item {
+        implicitHeight: searchField.implicitHeight
+        implicitWidth: searchField.implicitWidth
+        children: searchField
+    }
 
-    leftPadding: 0
-    topPadding: 0
-    bottomPadding: 0
-    rightPadding: 0
+    padding: 0
+    topPadding: undefined
+    leftPadding: undefined
+    rightPadding: undefined
+    bottomPadding: undefined
+    verticalPadding: undefined
+    horizontalPadding: undefined
+
+    focusPolicy: Qt.NoFocus
+    activeFocusOnTab: true
+
+    onActiveFocusChanged: {
+        if (activeFocus) {
+            searchField.forceActiveFocus();
+        }
+    }
+
+    onVisibleChanged: {
+        if (!visible) {
+            popup.close();
+        }
+    }
+
+    function __handoverChild(child: Item, oldParent: Item, newParent: Item) {
+        // It used to be more complicated with QQC2.Control::contentItem
+        // handover. But plain Items are very simple to deal with, and they
+        // don't attempt to hide old contentItem by setting their visible=false.
+        child.parent = newParent;
+    }
 
     T.Popup {
         id: popup
 
-        rightMargin: root.spaceAvailableRight ? Kirigami.Units.gridUnit * 2 : 3
-        leftMargin: root.spaceAvailableLeft ? Kirigami.Units.gridUnit * 2 : 3
-        topMargin: 0
+        Component.onCompleted: {
+            // TODO KF6: port to declarative bindings.
+            if (typeof Kirigami.OverlayZStacking !== "undefined") {
+                Kirigami.OverlayZStacking.layer = Kirigami.OverlayZStacking.Dialog;
+                z = Qt.binding(() => Kirigami.OverlayZStacking.z);
+            }
+        }
 
-        width: root.width
-        height: Kirigami.Units.gridUnit * 20
+        readonly property real collapsedHeight: searchField.implicitHeight
+            + topMargin + bottomMargin + topPadding + bottomPadding
 
-        onAboutToShow: {
-            searchField.parent = fieldContainer
-            fieldContainer.contentItem = searchField
-            searchField.background.visible = false
-            playCloseHeight.stop();
-            playOpenHeight.restart();
+        // How much vertical space this popup is actually going to take,
+        // considering that margins will push it inside and shrink if needed.
+        readonly property real realisticHeight: {
+            const wantedHeight = searchField.implicitHeight + Kirigami.Units.gridUnit * 20;
+            const overlay = root.QQC2.Overlay.overlay;
+            if (!overlay) {
+                return 0;
+            }
+            return Math.min(wantedHeight, overlay.height - topMargin - bottomMargin);
+        }
+
+        readonly property real realisticContentHeight: realisticHeight - topPadding - bottomPadding
+
+        // y offset from parent/root control if there's not enough space on
+        // the bottom, so popup is being pushed upward.
+        readonly property real yOffset: {
+            const overlay = root.QQC2.Overlay.overlay;
+            if (!overlay) {
+                return 0;
+            }
+            return Math.max(-root.Kirigami.ScenePosition.y, Math.min(0, overlay.height - root.Kirigami.ScenePosition.y - realisticHeight));
+        }
+
+        clip: false
+        parent: root
+
+        // make sure popup is being pushed in-bounds if it is too large or root control is (partially) out of bounds
+        margins: 0
+
+        leftPadding: dialogRoundedBackground.border.width
+        rightPadding: dialogRoundedBackground.border.width
+        bottomPadding: dialogRoundedBackground.border.width
+        x: -leftPadding
+        y: 0 // initial value, will be managed by enter/exit transitions
+
+        implicitWidth: root.width + leftPadding + rightPadding
+        height: popup.collapsedHeight // initial binding, will be managed by enter/exit transitions
+
+        onVisibleChanged: {
+            searchField.QQC2.ToolTip.hide();
+            if (visible) {
+                root.__handoverChild(searchField, root.contentItem, fieldContainer);
+                searchField.forceActiveFocus();
+            } else {
+                root.__handoverChild(searchField, fieldContainer, root.contentItem);
+            }
         }
 
         onAboutToHide: {
-            root.contentItem = searchField;
-            searchField.parent = root;
-            searchField.background.visible = true
-            searchField.focus = false
-            playOpenHeight.stop();
-            playCloseHeight.restart();
+            searchField.focus = false;
         }
 
-        background: DialogRoundedBackground {}
-
-        NumberAnimation on height {
-            id: playOpenHeight
-            running: false
-            easing.type: Easing.OutCubic
-            duration: Kirigami.Units.longDuration
-            from: 40
-            to: Kirigami.Units.gridUnit * 20 + 40
+        enter: Transition {
+            SequentialAnimation {
+                // cross-fade search field's background with popup's bigger rounded background
+                ParallelAnimation {
+                    NumberAnimation {
+                        target: searchField.background
+                        property: "opacity"
+                        to: 0
+                        easing.type: Easing.OutCubic
+                        duration: Kirigami.Units.shortDuration
+                    }
+                    NumberAnimation {
+                        target: dialogRoundedBackground
+                        property: "opacity"
+                        to: 1
+                        easing.type: Easing.OutCubic
+                        duration: Kirigami.Units.shortDuration
+                    }
+                }
+                // push Y upward (if needed) and expand at the same time
+                ParallelAnimation {
+                    NumberAnimation {
+                        property: "y"
+                        easing.type: Easing.OutCubic
+                        duration: Kirigami.Units.longDuration
+                        to: popup.yOffset
+                    }
+                    NumberAnimation {
+                        property: "height"
+                        easing.type: Easing.OutCubic
+                        duration: Kirigami.Units.longDuration
+                        to: popup.realisticHeight
+                    }
+                }
+            }
         }
 
-        NumberAnimation on height {
-            id: playCloseHeight
-            running: false
-            easing.type: Easing.OutCubic
-            duration: Kirigami.Units.longDuration
-            from: Kirigami.Units.gridUnit * 20 + 40
-            to: searchField.heigth + 40
+        // Rebind animated properties in case enter/exit transition was skipped.
+        onOpened: {
+            searchField.background.opacity = 0;
+            dialogRoundedBackground.opacity = 1;
+            // Make sure height stays sensible if window is resized while popup is open.
+            popup.y = Qt.binding(() => popup.yOffset);
+            popup.height = Qt.binding(() => popup.realisticHeight);
+        }
+
+        exit: Transition {
+            SequentialAnimation {
+                // return Y back to root control's position (if needed) and collapse at the same time
+                ParallelAnimation {
+                    NumberAnimation {
+                        property: "y"
+                        easing.type: Easing.OutCubic
+                        duration: Kirigami.Units.longDuration
+                        to: 0
+                    }
+                    NumberAnimation {
+                        property: "height"
+                        easing.type: Easing.OutCubic
+                        duration: Kirigami.Units.longDuration
+                        to: popup.collapsedHeight
+                    }
+                }
+                // cross-fade search field's background with popup's bigger rounded background
+                ParallelAnimation {
+                    NumberAnimation {
+                        target: searchField.background
+                        property: "opacity"
+                        to: 1
+                        easing.type: Easing.OutCubic
+                        duration: Kirigami.Units.shortDuration
+                    }
+                    NumberAnimation {
+                        target: dialogRoundedBackground
+                        property: "opacity"
+                        to: 0
+                        easing.type: Easing.OutCubic
+                        duration: Kirigami.Units.shortDuration
+                    }
+                }
+            }
+        }
+
+        // Rebind animated properties in case enter/exit transition was skipped.
+        onClosed: {
+            searchField.background.opacity = 1;
+            dialogRoundedBackground.opacity = 0;
+            // Make sure height stays sensible if search field is resized while popup is closed.
+            popup.y = 0;
+            popup.height = Qt.binding(() => popup.collapsedHeight);
+        }
+
+        background: DialogRoundedBackground {
+            id: dialogRoundedBackground
+
+            // initial value, will be managed by enter/exit transitions
+            opacity: 0
         }
 
         contentItem: Item {
+            // clip with rounded corners
+            layer.enabled: popup.enter.running || popup.exit.running
+            layer.effect: Kirigami.ShadowedTexture {
+                // color is not needed, we are here for the clipping only.
+                color: "transparent"
+                // border is not needed, as is is already accounted by
+                // padding. But radius has to be adjusted for that padding.
+                radius: dialogRoundedBackground.radius - popup.leftPadding - popup.bottomPadding
+            }
+
             ColumnLayout {
-                id: content
-                anchors.fill: parent
+                anchors {
+                    top: parent.top
+                    left: parent.left
+                    right: parent.right
+                }
+                height: popup.realisticContentHeight
                 spacing: 0
 
-                QQC2.Control{
+                Item {
                     id: fieldContainer
-
-                    topPadding: 0
-                    leftPadding: 0
-                    rightPadding: 0
-                    bottomPadding: 0
-
+                    implicitWidth: searchField.implicitWidth
+                    implicitHeight: searchField.implicitHeight
                     Layout.fillWidth: true
-                    Layout.topMargin: 2
                 }
 
                 Kirigami.Separator {
