@@ -1,0 +1,8 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Kirigami Addons
+Upstream-Contact: Carl Schwan <carl@carlschwan.eu>
+Source: https://invent.kde.org/libraries/kirigami-addons
+
+Files: autotests/data/*
+Copyright: none
+License: CC0-1.0
