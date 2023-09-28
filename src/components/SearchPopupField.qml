@@ -162,7 +162,8 @@ QQC2.Control {
             searchField.parent = fieldContainer
             fieldContainer.contentItem = searchField
             searchField.background.visible = false
-            playOpenHeight.running = true
+            playCloseHeight.stop();
+            playOpenHeight.restart();
         }
 
         onAboutToHide: {
@@ -170,24 +171,27 @@ QQC2.Control {
             searchField.parent = root;
             searchField.background.visible = true
             searchField.focus = false
-            playCloseHeight.running = true
+            playOpenHeight.stop();
+            playCloseHeight.restart();
         }
 
         background: DialogRoundedBackground {}
 
         NumberAnimation on height {
             id: playOpenHeight
+            running: false
             easing.type: Easing.OutCubic
-            from: 40
             duration: Kirigami.Units.longDuration
+            from: 40
             to: Kirigami.Units.gridUnit * 20 + 40
         }
 
-        NumberAnimation on height{
+        NumberAnimation on height {
             id: playCloseHeight
+            running: false
             easing.type: Easing.OutCubic
-            from: Kirigami.Units.gridUnit * 20 + 40
             duration: Kirigami.Units.longDuration
+            from: Kirigami.Units.gridUnit * 20 + 40
             to: searchField.heigth + 40
         }
 
