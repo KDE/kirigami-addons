@@ -147,87 +147,95 @@ AbstractMaximizeComponent {
         }
     ]
 
-    content: ListView {
-        id: view
-        Layout.fillWidth: true
-        Layout.fillHeight: true
-        interactive: !hoverHandler.hovered && count > 1
-        snapMode: ListView.SnapOneItem
-        highlightRangeMode: ListView.StrictlyEnforceRange
-        highlightMoveDuration: 0
-        focus: true
-        keyNavigationEnabled: true
-        keyNavigationWraps: false
-        model: root.model
-        orientation: ListView.Horizontal
-        clip: true
-        delegate: DelegateChooser {
-            role: "type"
-            DelegateChoice {
-                roleValue: AlbumModelItem.Image
-                ImageMaximizeDelegate {
-                    width: ListView.view.width
-                    height: ListView.view.height
+    content: ColumnLayout {
+        spacing: 0
+        ListView {
+            id: view
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            interactive: !hoverHandler.hovered && count > 1
+            snapMode: ListView.SnapOneItem
+            highlightRangeMode: ListView.StrictlyEnforceRange
+            highlightMoveDuration: 0
+            focus: true
+            keyNavigationEnabled: true
+            keyNavigationWraps: false
+            model: root.model
+            orientation: ListView.Horizontal
+            clip: true
+            delegate: DelegateChooser {
+                role: "type"
+                DelegateChoice {
+                    roleValue: AlbumModelItem.Image
+                    ImageMaximizeDelegate {
+                        width: ListView.view.width
+                        height: ListView.view.height
 
-                    onItemRightClicked: root.itemRightClicked()
-                    onBackgroundClicked: root.close()
+                        onItemRightClicked: root.itemRightClicked()
+                        onBackgroundClicked: root.close()
+                    }
+                }
+                DelegateChoice {
+                    roleValue: AlbumModelItem.Video
+                    VideoMaximizeDelegate {
+                        width: ListView.view.width
+                        height: ListView.view.height
+
+                        autoPlay: root.autoPlay
+                        // Make sure that the default action in the delegate is used if not overridden
+                        downloadAction: root.downloadAction ? root.downloadAction : undefined
+
+                        onItemRightClicked: root.itemRightClicked()
+                        onBackgroundClicked: root.close()
+                    }
                 }
             }
-            DelegateChoice {
-                roleValue: AlbumModelItem.Video
-                VideoMaximizeDelegate {
-                    width: ListView.view.width
-                    height: ListView.view.height
 
-                    autoPlay: root.autoPlay
-                    // Make sure that the default action in the delegate is used if not overridden
-                    downloadAction: root.downloadAction ? root.downloadAction : undefined
-
-                    onItemRightClicked: root.itemRightClicked()
-                    onBackgroundClicked: root.close()
+            KirigamiComponents.FloatingButton {
+                anchors {
+                    left: parent.left
+                    leftMargin: Kirigami.Units.largeSpacing
+                    verticalCenter: parent.verticalCenter
+                }
+                width: Kirigami.Units.gridUnit * 2
+                height: width
+                icon.name: "arrow-left"
+                visible: !Kirigami.Settings.isMobile && view.currentIndex > 0
+                Keys.forwardTo: view
+                Accessible.name: i18nd("kirigami-addons6", "Previous image")
+                onClicked: {
+                    view.currentItem.pause()
+                    view.currentIndex -= 1
+                    view.currentItem.play()
                 }
             }
-        }
-
-        KirigamiComponents.FloatingButton {
-            anchors {
-                left: parent.left
-                leftMargin: Kirigami.Units.largeSpacing
-                verticalCenter: parent.verticalCenter
+            KirigamiComponents.FloatingButton {
+                anchors {
+                    right: parent.right
+                    rightMargin: Kirigami.Units.largeSpacing
+                    verticalCenter: parent.verticalCenter
+                }
+                width: Kirigami.Units.gridUnit * 2
+                height: width
+                icon.name: "arrow-right"
+                visible: !Kirigami.Settings.isMobile && view.currentIndex < view.count - 1
+                Keys.forwardTo: view
+                Accessible.name: i18nd("kirigami-addons6", "Next image")
+                onClicked: {
+                    view.currentItem.pause()
+                    view.currentIndex += 1
+                    view.currentItem.play()
+                }
             }
-            width: Kirigami.Units.gridUnit * 2
-            height: width
-            icon.name: "arrow-left"
-            visible: !Kirigami.Settings.isMobile && view.currentIndex > 0
-            Keys.forwardTo: view
-            Accessible.name: i18nd("kirigami-addons6", "Previous image")
-            onClicked: {
-                view.currentItem.pause()
-                view.currentIndex -= 1
-                view.currentItem.play()
-            }
-        }
-        KirigamiComponents.FloatingButton {
-            anchors {
-                right: parent.right
-                rightMargin: Kirigami.Units.largeSpacing
-                verticalCenter: parent.verticalCenter
-            }
-            width: Kirigami.Units.gridUnit * 2
-            height: width
-            icon.name: "arrow-right"
-            visible: !Kirigami.Settings.isMobile && view.currentIndex < view.count - 1
-            Keys.forwardTo: view
-            Accessible.name: i18nd("kirigami-addons6", "Next image")
-            onClicked: {
-                view.currentItem.pause()
-                view.currentIndex += 1
-                view.currentItem.play()
+            HoverHandler {
+                id: hoverHandler
+                acceptedDevices: PointerDevice.Mouse
             }
         }
-        HoverHandler {
-            id: hoverHandler
-            acceptedDevices: PointerDevice.Mouse
+        QQC2.PageIndicator {
+            Layout.alignment: Qt.AlignHCenter
+            currentIndex: view.currentIndex
+            count: view.count
         }
     }
 
