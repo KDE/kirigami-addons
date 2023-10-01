@@ -15,7 +15,7 @@ Item {
     /**
      * @brief The source for the image to be viewed.
      */
-    required property string source
+    required property url source
 
     /**
      * @brief Source for the temporary content.
@@ -23,7 +23,7 @@ Item {
      * Typically used when downloading the image to show a thumbnail or other
      * temporary image while the main image downloads.
      */
-    required property string tempSource
+    required property url tempSource
 
     /**
      * @brief The size of the source image.
@@ -125,21 +125,21 @@ Item {
 
         anchors.centerIn: parent
         width: {
-            if (root.sourceWidth > 0 ) {
-                return Math.min(root.sourceWidth, root.width - root.padding * 2)
-            } else if (metaData.resolution && metaData.resolution.width) {
-                return Math.min(metaData.resolution.width, root.width - root.padding * 2)
+            if (root.sourceWidth > 0) {
+                return Math.min(root.sourceWidth, root.width - root.padding * 2);
+            } else if (implicitWidth > 0){
+                return Math.min(implicitWidth, root.width - root.padding * 2);
             } else {
-                return 0
+                return root.width - root.padding * 2;
             }
         }
         height: {
-            if (root.sourceHeight > 0 ) {
+            if (root.sourceHeight > 0) {
                 return Math.min(root.sourceHeight, root.height - root.padding * 2)
-            } else if (metaData.resolution && metaData.resolution.height) {
-                return Math.min(metaData.resolution.height, root.height - root.padding * 2)
+            } else if (implicitHeight > 0) {
+                return Math.min(implicitWidth, root.height - root.padding * 2)
             } else {
-                return 0
+                return root.height - root.padding * 2;
             }
         }
 
@@ -161,11 +161,8 @@ Item {
 
         Image {
             id: tempImage
-            anchors.centerIn: parent
-            width: root.sourceWidth > 0 || (videoItem.metaData.resolution && videoItem.metaData.resolution.width > 0) ? root.sourceWidth : tempSource.sourceSize.width
-            height: root.sourceHeight > 0 || (videoItem.metaData.resolution && videoItem.metaData.resolution.height > 0) ? root.sourceHeight : tempSource.sourceSize.height
+            anchors.fill: parent
             visible: source && status === Image.Ready && !videoItem.source.toString().length > 0
-
             source: root.tempSource
         }
 
