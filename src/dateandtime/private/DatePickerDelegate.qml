@@ -23,6 +23,8 @@ Delegates.RoundedItemDelegate {
 
     leftInset: 0
     rightInset: 0
+    topInset: 0
+    bottomInset: 0
 
     focusPolicy: inScope ? Qt.TabFocus : Qt.NoFocus
     enabled: inScope

@@ -41,7 +41,7 @@ void InfiniteCalendarViewModel::setup()
         addWeekDates(true, firstDay);
         break;
     }
-    case MonthScale: {file:///home/carl/kde6/src/log/2023-10-02-06/kirigami-addons/build.log
+    case MonthScale: {
         QDate firstDay(m_currentDate.year(), m_currentDate.month(), 1);
         firstDay = firstDay.addMonths(-m_datesToAdd / 2);
 

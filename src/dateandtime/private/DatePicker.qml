@@ -5,10 +5,9 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.15
 import org.kde.kirigami 2.15 as Kirigami
-import org.kde.kirigamiaddons.dateandtime 0.1
+import org.kde.kirigamiaddons.dateandtime 1.0
 import org.kde.kirigamiaddons.components 1.0 as Components
 import org.kde.kirigamiaddons.delegates 1.0 as Delegates
-import './private' as P
 
 QQC2.Control {
     id: datepicker
@@ -384,7 +383,7 @@ QQC2.Control {
 
                             model: dayGrid.modelLoader.item
 
-                            delegate: P.DatePickerDelegate {
+                            delegate: DatePickerDelegate {
                                 id: dayDelegate
 
                                 required property bool isToday
@@ -403,6 +402,10 @@ QQC2.Control {
                                     date.toLocaleDateString(locale, Locale.ShortFormat)
                                 } else {
                                     dayNumber
+                                }
+
+                                background {
+                                    visible: sameMonth
                                 }
 
                                 highlighted: isToday
@@ -496,7 +499,7 @@ QQC2.Control {
 
                             model: yearGrid.columns * yearGrid.rows
 
-                            delegate: P.DatePickerDelegate {
+                            delegate: DatePickerDelegate {
                                 id: monthDelegate
 
                                 date: new Date(yearViewLoader.startDate.getFullYear(), index)
@@ -601,7 +604,7 @@ QQC2.Control {
 
                             model: decadeGrid.columns * decadeGrid.rows
 
-                            delegate: P.DatePickerDelegate {
+                            delegate: DatePickerDelegate {
                                 id: yearDelegate
 
                                 readonly property bool sameDecade: Math.floor(date.getFullYear() / 10) == Math.floor(year / 10)

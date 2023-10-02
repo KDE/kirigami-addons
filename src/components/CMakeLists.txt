@@ -50,6 +50,10 @@ ecm_target_qml_sources(componentsplugin SOURCES
     Banner.qml
     DialogRoundedBackground.qml
     SegmentedButton.qml
+
+    MessageDialog.qml
+    MessageDialogButton.qml
+    MessageDialogButtonBox.qml
 )
 
 target_link_libraries(componentsplugin PRIVATE

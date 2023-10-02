@@ -5,7 +5,7 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15 as QQC2
 import org.kde.kirigami 2.20 as Kirigami
-import org.kde.kirigamiaddons.dateandtime 0.1 as DateTime
+import org.kde.kirigamiaddons.dateandtime 1.0 as DateTime
 import org.kde.kirigamiaddons.components 1.0 as Components
 
 /**
@@ -260,37 +260,18 @@ AbstractFormDelegate {
 
                 Component {
                     id: timePopup
-                    QQC2.Dialog {
+                    DateTime.TimePopup {
                         id: popup
 
                         x: parent ? Math.round((parent.width - width) / 2) : 0
                         y: parent ? Math.round((parent.height - height) / 2) : 0
 
-                        modal: true
-
-                        property date value
-
-                        onValueChanged: () => {
-                            root.value.setHours(popup.value.getHours(), popup.value.getMinutes());
-                        }
-
                         onClosed: popup.destroy();
 
-                        contentItem: DateTime.TumblerTimePicker {
-                            id: popupContent
-                            implicitWidth: applicationWindow().width
-                            minutes: popup.value.getMinutes()
-                            hours: popup.value.getHours()
-                            onMinutesChanged: {
-                                popup.value.setHours(hours, minutes);
-                            }
-                            onHoursChanged: {
-                                popup.value.setHours(hours, minutes);
-                            }
-                        }
+                        parent: applicationWindow().overlay
+                        modal: true
 
-
-                        background: Components.DialogRoundedBackground {}
+                        onAccepted: root.value.setHours(popup.value.getHours(), popup.value.getMinutes());
                     }
                 }
 

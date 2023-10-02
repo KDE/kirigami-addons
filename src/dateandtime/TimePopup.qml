@@ -1,18 +1,13 @@
-// SPDX-FileCopyrightText: 2019 David Edmundson <davidedmundson@kde.org>
-// SPDX-FileCopyrightText: 2021 Carl Schwan <carlschwan@kde.org>
+// SPDX-FileCopyrightText: 2023 Carl Schwan <carl@carlschwan.eu>
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
 import QtQuick 2.15
-import QtQuick.Window 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15 as QQC2
-import org.kde.kirigami 2.19 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kirigamiaddons.components 1.0 as Components
-import './private/' as P
+import './private'
 
-/**
- * A popup that prompts the user to select a date
- */
 QQC2.Dialog {
     id: root
 
@@ -32,37 +27,26 @@ QQC2.Dialog {
      */
     signal cancelled()
 
-    /**
-     * This property holds the minimum date (inclusive) that the user can select.
-     *
-     * By default, no limit is applied to the date selection.
-     */
-    property var minimumDate: null
+    property date _value: new Date()
 
-    /**
-     * This property holds the maximum date (inclusive) that the user can select.
-     *
-     * By default, no limit is applied to the date selection.
-     */
-    property var maximumDate: null
+    modal: true
 
-    padding: 0
-    topPadding: undefined
-    leftPadding: undefined
-    rightPadding: undefined
-    bottomPadding: undefined
-    verticalPadding: undefined
-    horizontalPadding: undefined
+    onClosed: root.destroy();
 
-    header: null
-
-    contentItem: P.DatePicker {
-        id: datePicker
-        selectedDate: root.value
-        minimumDate: root.minimumDate
-        maximumDate: root.maximumDate
-        focus: true
+    contentItem: TumblerTimePicker {
+        id: popupContent
+        implicitWidth: applicationWindow().width
+        minutes: root.value.getMinutes()
+        hours: root.value.getHours()
+        onMinutesChanged: {
+            root._value.setHours(hours, minutes);
+        }
+        onHoursChanged: {
+            root._value.setHours(hours, minutes);
+        }
     }
+
+    background: Components.DialogRoundedBackground {}
 
     footer: Components.MessageDialogButtonBox {
         id: box
@@ -85,14 +69,12 @@ QQC2.Dialog {
             Layout.rightMargin: Kirigami.Units.largeSpacing
             Layout.bottomMargin: Kirigami.Units.largeSpacing
             onClicked: {
-                root.value = datePicker.selectedDate;
+                root.value = root._value;
                 root.accepted()
                 root.close()
             }
         }
     }
-
-    background: Components.DialogRoundedBackground {}
 
     // black background, fades in and out
     QQC2.Overlay.modal: Rectangle {

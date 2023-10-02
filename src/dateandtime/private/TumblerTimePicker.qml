@@ -6,7 +6,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import org.kde.kirigami 2.20 as Kirigami
 import QtQuick.Layouts 1.15
-import org.kde.kirigamiaddons.dateandtime 0.1
+import org.kde.kirigamiaddons.dateandtime 1.0
 
 /**
  * A large time picker

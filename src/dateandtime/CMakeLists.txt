@@ -16,33 +16,25 @@ if (ANDROID)
     install(TARGETS KF${KF_MAJOR_VERSION}KirigamiDateAndTime ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 endif()
 
-ecm_add_qml_module(dateandtimeplugin URI "org.kde.kirigamiaddons.dateandtime" VERSION 0.1)
+ecm_add_qml_module(dateandtimeplugin URI "org.kde.kirigamiaddons.dateandtime" VERSION 1.0)
 
-target_compile_definitions(dateandtimeplugin PRIVATE -DTRANSLATION_DOMAIN=\"kirigami_dateandtime\")
+target_compile_definitions(dateandtimeplugin PRIVATE -DTRANSLATION_DOMAIN=\"kirigami-addons\")
 
 target_sources(dateandtimeplugin PRIVATE
     lib/yearmodel.cpp
     lib/monthmodel.cpp
     lib/plugin.cpp
-    lib/timeinputvalidator.cpp
-    lib/qdatetimeparser.cpp
     lib/infinitecalendarviewmodel.cpp
 )
 
 ecm_target_qml_sources(dateandtimeplugin SOURCES
-    ClockFace.qml
-    DateInput.qml
-    DatePicker.qml
     DatePopup.qml
-    TimeInput.qml
-    TumblerTimePicker.qml
+    TimePopup.qml
 )
 ecm_target_qml_sources(dateandtimeplugin PATH private SOURCES
-    private/ClockElement.qml
-    private/DesktopDateInput.qml
-    private/Hand.qml
-    private/MobileDateInput.qml
+    private/DatePicker.qml
     private/DatePickerDelegate.qml
+    private/TumblerTimePicker.qml
 )
 
 target_link_libraries(dateandtimeplugin PRIVATE
