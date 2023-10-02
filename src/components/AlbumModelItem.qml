@@ -46,7 +46,7 @@ QtObject {
     /**
      * @brief The source for the item.
      */
-    property url source
+    property string source
 
     /**
      * @brief Source for the temporary content.
@@ -54,7 +54,7 @@ QtObject {
      * Typically used when downloading the image to show a thumbnail or other
      * temporary image while the main image downloads.
      */
-    property url tempSource: ""
+    property string tempSource: ""
 
     /**
      * @brief The caption for the item.

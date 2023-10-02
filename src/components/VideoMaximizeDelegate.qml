@@ -15,7 +15,7 @@ Item {
     /**
      * @brief The source for the image to be viewed.
      */
-    required property url source
+    required property string source
 
     /**
      * @brief Source for the temporary content.
@@ -23,7 +23,7 @@ Item {
      * Typically used when downloading the image to show a thumbnail or other
      * temporary image while the main image downloads.
      */
-    required property url tempSource
+    required property string tempSource
 
     /**
      * @brief The size of the source image.
