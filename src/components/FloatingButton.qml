@@ -122,30 +122,21 @@ T.RoundButton {
 
             border {
                 width: 1
-                color: if (controlRoot.visualFocus
-                    || (controlRoot.focusPolicy !== Qt.NoFocus
-                        && controlRoot.enabled
-                        && (controlRoot.down || controlRoot.hovered))) {
-                    return controlRoot.Kirigami.Theme.highlightColor;
+                color: if (down || visualFocus) {
+                    Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.4)
+                } else if (enabled && hovered) {
+                    Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.6)
                 } else {
-                    // TODO KF6: Port to Qt.alpha(controlRoot.Kirigami.Theme.highlightColor, 0);
-                    const c = controlRoot.Kirigami.Theme.highlightColor;
-                    return Qt.rgba(c.r, c.g, c.b, 0);
+                    Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.2)
                 }
             }
 
-            color: {
-                if (controlRoot.down && controlRoot.enabled) {
-                    if (controlRoot.activeFocus) {
-                        return Kirigami.ColorUtils.tintWithAlpha(controlRoot.Kirigami.Theme.backgroundColor, controlRoot.Kirigami.Theme.highlightColor, 0.333);
-                    } else {
-                        // TODO KF6: Port to Qt.alpha(controlRoot.Kirigami.Theme.textColor, 0.1)
-                        const c = controlRoot.Kirigami.Theme.textColor;
-                        return Qt.tint(controlRoot.Kirigami.Theme.backgroundColor, Qt.rgba(c.r, c.g, c.b, 0.1));
-                    }
-                } else {
-                    return controlRoot.Kirigami.Theme.backgroundColor;
-                }
+            color: if (down || visualFocus) {
+                Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.6)
+            } else if (enabled && hovered) {
+                Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.8)
+            } else {
+                Kirigami.Theme.backgroundColor
             }
 
             Behavior on border.color {
