@@ -15,6 +15,7 @@ ecm_target_qml_sources(componentslabsplugin SOURCES
     Avatar.qml
     AbstractMaximizeComponent.qml
     AlbumMaximizeComponent.qml
+    MaximizeDelegate.qml
     ImageMaximizeDelegate.qml
     VideoMaximizeDelegate.qml
     AlbumModelItem.qml

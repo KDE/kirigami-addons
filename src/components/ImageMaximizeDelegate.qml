@@ -2,13 +2,10 @@
 // SPDX-License-Identifier: LGPL-2.0-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
 import QtQuick 2.15
-import QtQuick.Controls 2.15 as QQC2
-import QtQuick.Layouts 1.15
-import Qt.labs.platform 1.1
 
 import org.kde.kirigami 2.15 as Kirigami
 
-Item {
+MaximizeDelegate {
     id: root
 
     /**
@@ -49,14 +46,6 @@ Item {
     required property string caption
 
     /**
-     * @brief The delegate type for this item.
-     *
-     * @note Declared here so that parent components can access this parameter
-     *       when used as a listView delegate.
-     */
-    readonly property int type: AlbumModelItem.Image
-
-    /**
      * @brief The padding around the content image.
      *
      * The padding is factored in when calculating the maximum size of the content
@@ -77,16 +66,6 @@ Item {
     property int rotationAngle: 0
 
     /**
-     * @brief Emitted when the background space around the content item is clicked.
-     */
-    signal backgroundClicked()
-
-    /**
-     * @brief Emitted when the content image is right clicked.
-     */
-    signal itemRightClicked()
-
-    /**
      * @brief Start media playback.
      */
     function play() {
@@ -100,12 +79,32 @@ Item {
         image.paused = true
     }
 
-    clip: true
+    actions: [
+        Kirigami.Action {
+            text: i18nd("kirigami-addons", "Zoom in")
+            icon.name: "zoom-in"
+            onTriggered: root.scaleFactor = Math.min(root.scaleFactor + 0.25, 3)
+        },
+        Kirigami.Action {
+            text: i18nd("kirigami-addons", "Zoom out")
+            icon.name: "zoom-out"
+            onTriggered: root.scaleFactor = Math.max(root.scaleFactor - 0.25, 0.25)
+        },
+        Kirigami.Action {
+            text: i18nd("kirigami-addons", "Rotate left")
+            icon.name: "object-rotate-left"
+            onTriggered: root.rotationAngle = root.rotationAngle - 90
+        },
+        Kirigami.Action {
+            text: i18nd("kirigami-addons", "Rotate right")
+            icon.name: "object-rotate-right"
+            onTriggered: root.rotationAngle = root.rotationAngle + 90
+        }
+    ]
 
     // AnimatedImage so we can handle GIFs.
-    AnimatedImage {
+    contentItem: AnimatedImage {
         id: image
-
         property var rotationInsensitiveWidth: {
             if (sourceWidth > 0) {
                 return Math.min(root.sourceWidth, root.width - root.padding * 2);
@@ -120,8 +119,6 @@ Item {
                 return Math.min(sourceSize.height, root.height - root.padding * 2)
             }
         }
-
-        anchors.centerIn: parent
 
         source: root.source
 
@@ -176,15 +173,5 @@ Item {
             acceptedButtons: Qt.RightButton
             onClicked: root.itemRightClicked()
         }
-    }
-    QQC2.BusyIndicator {
-        anchors.centerIn: parent
-        visible: image.status !== Image.Ready && tempImage.status !== Image.Ready
-        running: visible
-    }
-    MouseArea {
-        anchors.fill: parent
-        acceptedButtons: Qt.LeftButton
-        onClicked: root.backgroundClicked()
     }
 }

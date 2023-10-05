@@ -4,12 +4,11 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.15
-import Qt.labs.platform 1.1
 import QtMultimedia 5.15
 
 import org.kde.kirigami 2.15 as Kirigami
 
-Item {
+MaximizeDelegate {
     id: root
 
     /**
@@ -50,14 +49,6 @@ Item {
     required property string caption
 
     /**
-     * @brief The delegate type for this item.
-     *
-     * @note Declared here so that parent components can access this parameter
-     *       when used as a listView delegate.
-     */
-    readonly property int type: AlbumModelItem.Video
-
-    /**
      * @brief Whether the source video should auto-load.
      *
      * @deprecated due to changes in the Video API this will be removed in KF6. It
@@ -95,16 +86,6 @@ Item {
     property var scaleFactor: 1
 
     /**
-     * @brief Emitted when the background space around the content item is clicked.
-     */
-    signal backgroundClicked()
-
-    /**
-     * @brief Emitted when the content image is right clicked.
-     */
-    signal itemRightClicked()
-
-    /**
      * @brief Start media playback.
      */
     function play() {
@@ -118,12 +99,21 @@ Item {
         videoItem.pause()
     }
 
-    clip: true
+    actions: [
+        Kirigami.Action {
+            text: i18nd("kirigami-addons", "Zoom in")
+            icon.name: "zoom-in"
+            onTriggered: root.scaleFactor = Math.min(root.scaleFactor + 0.25, 3)
+        },
+        Kirigami.Action {
+            text: i18nd("kirigami-addons", "Zoom out")
+            icon.name: "zoom-out"
+            onTriggered: root.scaleFactor = Math.max(root.scaleFactor - 0.25, 0.25)
+        }
+    ]
 
-    Video {
+    contentItem: Video {
         id: videoItem
-
-        anchors.centerIn: parent
         width: {
             if (root.sourceWidth > 0 ) {
                 return Math.min(root.sourceWidth, root.width - root.padding * 2)
@@ -350,10 +340,6 @@ Item {
                 }
             }
         }
-    }
-    TapHandler {
-        acceptedButtons: Qt.LeftButton
-        onTapped: root.backgroundClicked()
     }
 
     function formatTimer(time){

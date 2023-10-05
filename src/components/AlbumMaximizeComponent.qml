@@ -110,29 +110,7 @@ AbstractMaximizeComponent {
      */
     signal saveItem()
 
-    actions: [
-        Kirigami.Action {
-            text: i18nd("kirigami-addons", "Zoom in")
-            icon.name: "zoom-in"
-            onTriggered: view.currentItem.scaleFactor = Math.min(view.currentItem.scaleFactor + 0.25, 3)
-        },
-        Kirigami.Action {
-            text: i18nd("kirigami-addons", "Zoom out")
-            icon.name: "zoom-out"
-            onTriggered: view.currentItem.scaleFactor = Math.max(view.currentItem.scaleFactor - 0.25, 0.25)
-        },
-        Kirigami.Action {
-            visible: view.currentItem.type === AlbumModelItem.Image
-            text: i18nd("kirigami-addons", "Rotate left")
-            icon.name: "object-rotate-left"
-            onTriggered: view.currentItem.rotationAngle = view.currentItem.rotationAngle - 90
-        },
-        Kirigami.Action {
-            visible: view.currentItem.type === AlbumModelItem.Image
-            text: i18nd("kirigami-addons", "Rotate right")
-            icon.name: "object-rotate-right"
-            onTriggered: view.currentItem.rotationAngle = view.currentItem.rotationAngle + 90
-        },
+    property list<Kirigami.Action> genericActions: [
         Kirigami.Action {
             text: hideCaption ? i18ndc("kirigami-addons", "@action:intoolbar", "Show caption") : i18ndc("kirigami-addons", "@action:intoolbar", "Hide caption")
             icon.name: "add-subtitle"
@@ -228,6 +206,8 @@ AbstractMaximizeComponent {
             id: hoverHandler
             acceptedDevices: PointerDevice.Mouse
         }
+
+        onCurrentIndexChanged: _private.updateActions()
     }
 
     footer: QQC2.Control {
@@ -278,6 +258,14 @@ AbstractMaximizeComponent {
     onAboutToShow: {
         if (root.initialIndex != -1 && root.initialIndex >= 0) {
             view.currentIndex = initialIndex
+        }
+    }
+
+    QtObject {
+        id: _private
+
+        function updateActions() {
+            root.actions = [].concat(view.currentItem.actions, root.genericActions)
         }
     }
 }
