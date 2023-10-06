@@ -46,7 +46,6 @@ TestCase {
         testAlbum.open();
 
         testAlbum.content.currentIndex = 0;
-        compare(testAlbum.content.currentItem.type, AlbumModelItem.Image);
         compare(testAlbum.content.currentItem.source, Qt.resolvedUrl(root.testImage));
         compare(testAlbum.content.currentItem.tempSource, Qt.resolvedUrl(root.testImage));
         compare(testAlbum.content.currentItem.caption, "A test image");
@@ -60,7 +59,6 @@ TestCase {
         testAlbum.open();
 
         testAlbum.content.currentIndex = 1;
-        compare(testAlbum.content.currentItem.type, AlbumModelItem.Video);
         compare(testAlbum.content.currentItem.source, Qt.resolvedUrl(root.testVideo));
         compare(testAlbum.content.currentItem.tempSource, Qt.resolvedUrl(root.testImage));
         compare(testAlbum.content.currentItem.caption, "A test video");
@@ -74,8 +72,9 @@ TestCase {
         testAlbum.open();
 
         testAlbum.content.currentIndex = 0;
-        compare(testAlbum.actions[2].visible, true);
-        compare(testAlbum.actions[3].visible, true);
+        tryCompare(testAlbum.content.currentItem.contentItem, "status", Image.Ready)
+        wait(100) // Let the image resize animation happen.
+        compare(testAlbum.actions.length, 6);
 
         testAlbum.destroy();
     }
@@ -86,8 +85,7 @@ TestCase {
         testAlbum.open();
 
         testAlbum.content.currentIndex = 1;
-        compare(testAlbum.actions[2].visible, false);
-        compare(testAlbum.actions[3].visible, false);
+        compare(testAlbum.actions.length, 4);
 
         testAlbum.destroy();
     }
@@ -138,7 +136,7 @@ TestCase {
         testAlbum.open();
 
         // Make sure the item delegate is ready.
-        tryCompare(testAlbum.content.currentItem.children[0], "status", Image.Ready)
+        tryCompare(testAlbum.content.currentItem.contentItem, "status", Image.Ready)
         wait(100) // Let the image resize animation happen.
         mouseClick(root, 400, 300, Qt.RightButton)
         compare(testAlbum.signalSpyItemRightClick.count, 1)
@@ -151,8 +149,8 @@ TestCase {
         testAlbum.open();
 
         // Make sure the item delegate is ready.
-        tryCompare(testAlbum.content.currentItem.children[0], "status", Image.Ready)
-        wait(200) // Let the image resize animation happen.
+        tryCompare(testAlbum.content.currentItem.contentItem, "status", Image.Ready)
+        wait(300) // Let the image resize animation happen.
         mouseClick(root, 738, 18, Qt.LeftButton)
         compare(testAlbum.signalSpySaveItem.count, 1)
 
@@ -169,8 +167,8 @@ TestCase {
         testAlbum.content.currentIndex = 0;
 
         // Make sure the item delegate is ready.
-        tryCompare(testAlbum.content.currentItem.children[0], "status", Image.Ready)
-        wait(200) // Let the image resize animation happen.
+        tryCompare(testAlbum.content.currentItem.contentItem, "status", Image.Ready)
+        wait(300) // Let the image resize animation happen.
 
         mouseClick(root, 702, 18, Qt.LeftButton)
         compare(testAlbum.footer.visible, false)
