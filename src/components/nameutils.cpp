@@ -149,7 +149,7 @@ auto NameUtils::isStringUnsuitableForInitials(const QString &string) -> bool
         return true;
     }
 
-    const auto scripts = QList<QChar::Script>{QChar::Script_Common, QChar::Script_Inherited, QChar::Script_Latin, QChar::Script_Han, QChar::Script_Hangul};
+    const auto scripts = QList<QChar::Script>{QChar::Script_Common, QChar::Script_Inherited, QChar::Script_Latin, QChar::Script_Han, QChar::Script_Hangul, QChar::Script_Cyrillic};
 
     for (auto character : string) {
         if (!scripts.contains(character.script())) {
