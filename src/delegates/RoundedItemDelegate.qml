@@ -4,9 +4,10 @@
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15 as QQC2
+import QtQuick.Templates 2.15 as T
 import org.kde.kirigami 2.20 as Kirigami
 
-QQC2.ItemDelegate {
+T.ItemDelegate {
     id: root
 
     implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
