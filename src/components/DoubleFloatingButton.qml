@@ -118,18 +118,18 @@ Kirigami.ShadowedRectangle {
 
             border {
                 width: 1
-                color: if (parent.down || parent.visualFocus) {
+                color: if (leadingButton.down || leadingButton.visualFocus) {
                     Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.4)
-                } else if (enabled && parent.hovered) {
+                } else if (leadingButton.enabled && leadingButton.hovered) {
                     Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.6)
                 } else {
                     Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.2)
                 }
             }
 
-            color: if (parent.down || parent.visualFocus) {
+            color: if (leadingButton.down || leadingButton.visualFocus) {
                 Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.6)
-            } else if (enabled && parent.hovered) {
+            } else if (leadingButton.enabled && leadingButton.hovered) {
                 Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.8)
             } else {
                 Kirigami.Theme.backgroundColor
@@ -201,18 +201,18 @@ Kirigami.ShadowedRectangle {
 
             border {
                 width: 1
-                color: if (parent.down || parent.visualFocus) {
+                color: if (trailingButton.down || trailingButton.visualFocus) {
                     Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.4)
-                } else if (enabled && parent.hovered) {
+                } else if (trailingButton.enabled && trailingButton.hovered) {
                     Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.6)
                 } else {
                     Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.2)
                 }
             }
 
-            color: if (parent.down || parent.visualFocus) {
+            color: if (trailingButton.down || trailingButton.visualFocus) {
                 Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.6)
-            } else if (enabled && parent.hovered) {
+            } else if (trailingButton.enabled && trailingButton.hovered) {
                 Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.8)
             } else {
                 Kirigami.Theme.backgroundColor

@@ -122,18 +122,18 @@ T.RoundButton {
 
             border {
                 width: 1
-                color: if (down || visualFocus) {
+                color: if (controlRoot.down || controlRoot.visualFocus) {
                     Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.4)
-                } else if (enabled && hovered) {
+                } else if (controlRoot.enabled && controlRoot.hovered) {
                     Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.6)
                 } else {
                     Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.2)
                 }
             }
 
-            color: if (down || visualFocus) {
+            color: if (controlRoot.down || controlRoot.visualFocus) {
                 Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.6)
-            } else if (enabled && hovered) {
+            } else if (controlRoot.enabled && controlRoot.hovered) {
                 Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.8)
             } else {
                 Kirigami.Theme.backgroundColor
