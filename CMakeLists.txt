@@ -39,8 +39,8 @@ if (QT_MAJOR_VERSION STREQUAL "6")
     set(KF_MIN_VERSION "5.240.0")
     set(KF_MAJOR_VERSION "6")
 
-    find_package(KSvg CONFIG)
-    set_package_properties(KSvg PROPERTIES
+    find_package(KF6Svg CONFIG)
+    set_package_properties(KF6Svg PROPERTIES
         DESCRIPTION "Svg rendering library with theme support"
         PURPOSE "Required at runtime for rendering Svg items in some controls"
         TYPE RUNTIME
