@@ -107,7 +107,7 @@ QQC2.Control {
     /**
      * @brief This hold the focus state of the internal SearchField.
     */
-    property alias fieldFocus: searchField.focus
+    property alias fieldFocus: root.searchField.focus
 
     /**
      * This signal is triggered when the user trigger a search.
@@ -116,46 +116,28 @@ QQC2.Control {
 
     property alias popup: popup
 
-    property Kirigami.SearchField searchField: Kirigami.SearchField {
-        id: searchField
-        anchors.left: parent ? parent.left : undefined
-        anchors.right: parent ? parent.right : undefined
-
-        KeyNavigation.tab: scrollView.contentItem
-        KeyNavigation.down: scrollView.contentItem
-
-        onActiveFocusChanged: if (activeFocus) {
-            // Don't mess with popups and reparenting inside focus change handler.
-            // Especially nested popups hate that: it may break all focus management
-            // on a scene until restart.
-            Qt.callLater(() => {
-                // TODO: Kirigami.OverlayZStacking fails to find and bind to
-                // parent logical popup when parent item is itself reparented
-                // on the fly.
-                if (typeof Kirigami.OverlayZStacking !== "undefined") {
-                    root.popup.z = Qt.binding(() => root.popup.Kirigami.OverlayZStacking.z);
-                }
-                root.popup.open();
-            });
-        }
-
-        onAccepted: {
-            if (root.autoAccept) {
-                if (text.length > 2) {
-                    root.accepted()
-                }
-            } else if (text.length === 0) {
-                root.popup.close();
-            } else {
-                root.accepted();
-            }
-        }
-    }
+    property Kirigami.SearchField searchField: Kirigami.SearchField {}
 
     contentItem: Item {
-        implicitHeight: searchField.implicitHeight
-        implicitWidth: searchField.implicitWidth
-        children: searchField
+        implicitHeight: root.searchField ? root.searchField.implicitHeight : 0
+        implicitWidth: root.searchField ? root.searchField.implicitWidth : 0
+
+        // by default popup is hidden
+        children: [root.searchField]
+
+        states: State {
+            when: root.searchField !== null // one the the only, fallback, always active state
+            AnchorChanges {
+                target: root.searchField
+                anchors.left: root.searchField && root.searchField.parent ? root.searchField.parent.left : undefined
+                anchors.right: root.searchField && root.searchField.parent ? root.searchField.parent.right : undefined
+            }
+            PropertyChanges {
+                target: root.searchField ? root.searchField.KeyNavigation : null
+                tab: scrollView.contentItem
+                down: scrollView.contentItem
+            }
+        }
     }
 
     padding: 0
@@ -170,7 +152,7 @@ QQC2.Control {
     activeFocusOnTab: true
 
     onActiveFocusChanged: {
-        if (activeFocus) {
+        if (searchField && activeFocus) {
             searchField.forceActiveFocus();
         }
     }
@@ -181,11 +163,61 @@ QQC2.Control {
         }
     }
 
+    onSearchFieldChanged: {
+        __openPopupIfSearchFieldHasActiveFocus();
+    }
+
     function __handoverChild(child: Item, oldParent: Item, newParent: Item) {
         // It used to be more complicated with QQC2.Control::contentItem
         // handover. But plain Items are very simple to deal with, and they
         // don't attempt to hide old contentItem by setting their visible=false.
         child.parent = newParent;
+    }
+
+    function __openPopupIfSearchFieldHasActiveFocus() {
+        if (searchField && searchField.activeFocus && !popup.opened) {
+            // Don't mess with popups and reparenting inside focus change handler.
+            // Especially nested popups hate that: it may break all focus management
+            // on a scene until restart.
+            Qt.callLater(() => {
+                // TODO: Kirigami.OverlayZStacking fails to find and bind to
+                // parent logical popup when parent item is itself reparented
+                // on the fly.
+                //
+                // Catch a case of reopening during exit transition. But don't
+                // attempt to reorder a visible popup, it doesn't like that.
+                if (!popup.visible) {
+                    if (typeof popup.Kirigami.OverlayZStacking !== "undefined") {
+                        popup.z = Qt.binding(() => popup.Kirigami.OverlayZStacking.z);
+                    }
+                }
+                popup.open();
+            });
+        }
+    }
+
+    function __searchFieldWasAccepted() {
+        if (autoAccept) {
+            if (searchField.text.length > 2) {
+                accepted()
+            }
+        } else if (searchField.text.length === 0) {
+            popup.close();
+        } else {
+            accepted();
+        }
+    }
+
+    Connections {
+        target: root.searchField
+
+        function onActiveFocusChanged() {
+            root.__openPopupIfSearchFieldHasActiveFocus();
+        }
+
+        function onAccepted() {
+            root.__searchFieldWasAccepted();
+        }
     }
 
     T.Popup {
@@ -199,13 +231,13 @@ QQC2.Control {
             }
         }
 
-        readonly property real collapsedHeight: searchField.implicitHeight
+        readonly property real collapsedHeight: (root.searchField ? root.searchField.implicitHeight : 0)
             + topMargin + bottomMargin + topPadding + bottomPadding
 
         // How much vertical space this popup is actually going to take,
         // considering that margins will push it inside and shrink if needed.
         readonly property real realisticHeight: {
-            const wantedHeight = searchField.implicitHeight + Kirigami.Units.gridUnit * 20;
+            const wantedHeight = (root.searchField ? root.searchField.implicitHeight : 0) + Kirigami.Units.gridUnit * 20;
             const overlay = root.QQC2.Overlay.overlay;
             if (!overlay) {
                 return 0;
@@ -241,17 +273,17 @@ QQC2.Control {
         height: popup.collapsedHeight // initial binding, will be managed by enter/exit transitions
 
         onVisibleChanged: {
-            searchField.QQC2.ToolTip.hide();
+            root.searchField.QQC2.ToolTip.hide();
             if (visible) {
-                root.__handoverChild(searchField, root.contentItem, fieldContainer);
-                searchField.forceActiveFocus();
+                root.__handoverChild(root.searchField, root.contentItem, fieldContainer);
+                root.searchField.forceActiveFocus();
             } else {
-                root.__handoverChild(searchField, fieldContainer, root.contentItem);
+                root.__handoverChild(root.searchField, fieldContainer, root.contentItem);
             }
         }
 
         onAboutToHide: {
-            searchField.focus = false;
+            root.searchField.focus = false;
         }
 
         enter: Transition {
@@ -259,7 +291,7 @@ QQC2.Control {
                 // cross-fade search field's background with popup's bigger rounded background
                 ParallelAnimation {
                     NumberAnimation {
-                        target: searchField.background
+                        target: root.searchField.background
                         property: "opacity"
                         to: 0
                         easing.type: Easing.OutCubic
@@ -293,7 +325,7 @@ QQC2.Control {
 
         // Rebind animated properties in case enter/exit transition was skipped.
         onOpened: {
-            searchField.background.opacity = 0;
+            root.searchField.background.opacity = 0;
             dialogRoundedBackground.opacity = 1;
             // Make sure height stays sensible if window is resized while popup is open.
             popup.y = Qt.binding(() => popup.yOffset);
@@ -320,7 +352,7 @@ QQC2.Control {
                 // cross-fade search field's background with popup's bigger rounded background
                 ParallelAnimation {
                     NumberAnimation {
-                        target: searchField.background
+                        target: root.searchField.background
                         property: "opacity"
                         to: 1
                         easing.type: Easing.OutCubic
@@ -339,7 +371,7 @@ QQC2.Control {
 
         // Rebind animated properties in case enter/exit transition was skipped.
         onClosed: {
-            searchField.background.opacity = 1;
+            root.searchField.background.opacity = 1;
             dialogRoundedBackground.opacity = 0;
             // Make sure height stays sensible if search field is resized while popup is closed.
             popup.y = 0;
@@ -375,8 +407,8 @@ QQC2.Control {
 
                 Item {
                     id: fieldContainer
-                    implicitWidth: searchField.implicitWidth
-                    implicitHeight: searchField.implicitHeight
+                    implicitWidth: root.searchField ? root.searchField.implicitWidth : 0
+                    implicitHeight: root.searchField ? root.searchField.implicitHeight : 0
                     Layout.fillWidth: true
                 }
 
