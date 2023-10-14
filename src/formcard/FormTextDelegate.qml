@@ -71,7 +71,7 @@ AbstractFormDelegate {
      */
     property real trailingPadding: Kirigami.Units.smallSpacing
     
-    signal linkActivated(link: string)
+    signal linkActivated(string link)
 
     focusPolicy: Qt.NoFocus
 
