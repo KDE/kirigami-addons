@@ -120,7 +120,6 @@ QQC2.Control {
         id: searchField
         anchors.left: parent ? parent.left : undefined
         anchors.right: parent ? parent.right : undefined
-        selectByMouse: true
 
         KeyNavigation.tab: scrollView.contentItem
         KeyNavigation.down: scrollView.contentItem
