@@ -9,7 +9,47 @@ import org.kde.kirigamiaddons.dateandtime 1.0 as DateTime
 import org.kde.kirigamiaddons.components 1.0 as Components
 
 /**
- * @brief A Form delegate containing a date and time selector.
+ * FormDateTimeDelegate is a delegate for FormCard that lets the user enters either
+ * a date, a time or both.
+ *
+ * This component allow to define a minimumDate and maximumDate to restrict
+ * the date that the user is allowed to enters.
+ *
+ * Ideally for this FormDelegate, it is better to not add a label but to
+ * instead makes it clear from the above FormHeader to that the form delegate
+ * refers too.
+ *
+ * @code{.qml}
+ * import org.kde.kirigamiaddons.formcard 1.0 as FormCard
+ *
+ * FormCard.FormCardPage {
+ *     FormCard.FormHeader {
+ *         title: "Departure"
+ *     }
+ *
+ *     FormCard.FormCard {
+ *         FormCard.FormDateTimeDelegate {}
+ *
+ *         FormCard.FormDelegateSeparator {}
+ *
+ *         FormCard.FormTextFieldDelegate {
+ *             label: "Location"
+ *         }
+ *     }
+ * }
+ * @endcode
+ *
+ * @image html formdatetimedelegate.png The form card delegate
+ *
+ * @image html formdatetimedelegatedatepicker.png The date picker
+ *
+ * @image html formdatetimedelegatetimepicker.png The time picker
+ *
+ * @note This component can also be used in a read only mode to display a date.
+ *
+ * @warning This will use the native date and time picker from the platform if
+ * available. E.g. this happens on Android.
+ *
  * @since KirigamiAddons 0.12.0
  */
 AbstractFormDelegate {
@@ -19,9 +59,9 @@ AbstractFormDelegate {
      * Enum containing the different part of the date time that can be displayed.
      */
     enum DateTimeDisplay {
-        DateTime, /** Show the date and time */
-        Date, /** Show only the date */
-        Time /** Show only the time */
+        DateTime, ///< Show the date and time
+        Date, ///< Show only the date
+        Time ///< Show only the time
     }
 
     /**
