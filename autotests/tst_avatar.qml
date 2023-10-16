@@ -47,6 +47,19 @@ Item {
             compare(KirigamiComponents.NameUtils.isStringUnsuitableForInitials("蔣經國"), false)
             compare(KirigamiComponents.NameUtils.initialsFromString("蔣經國"), "蔣")
         }
+        function test_cyrillic_name() {
+            compare(KirigamiComponents.NameUtils.isStringUnsuitableForInitials("Нейт Мартин"), false)
+            compare(KirigamiComponents.NameUtils.initialsFromString("Нейт Мартин"), "НМ")
+
+            compare(KirigamiComponents.NameUtils.isStringUnsuitableForInitials("Каланока"), false)
+            compare(KirigamiComponents.NameUtils.initialsFromString("Каланока"), "К")
+
+            compare(KirigamiComponents.NameUtils.isStringUnsuitableForInitials("Зачем кому-то использовать такое длинное не имя в поле Имя"), false)
+            compare(KirigamiComponents.NameUtils.initialsFromString("Зачем кому-то использовать такое длинное не имя в поле Имя"), "ЗИ")
+
+            compare(KirigamiComponents.NameUtils.isStringUnsuitableForInitials("Пользователь Лайв-СИДИ"), false)
+            compare(KirigamiComponents.NameUtils.initialsFromString("Лайв-СИДИ Пользователь"), "ЛП")
+        }
         function test_bad_names() {
             compare(KirigamiComponents.NameUtils.isStringUnsuitableForInitials("151231023"), true)
         }
