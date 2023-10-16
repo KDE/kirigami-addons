@@ -35,8 +35,8 @@ Delegates.RoundedItemDelegate {
         itemDelegate: root
 
         labelItem {
-            rightPadding: Kirigami.Units.mediumSpacing
             leftPadding: Kirigami.Units.mediumSpacing
+            rightPadding: Kirigami.Units.mediumSpacing
             horizontalAlignment: Text.AlignHCenter
         }
     }

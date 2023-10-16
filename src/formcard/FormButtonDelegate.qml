@@ -51,7 +51,7 @@ AbstractFormDelegate {
      * default: `null`
      */
     property var leading: null
-    
+
     /**
      * @brief This property holds the padding after the leading item.
      *
@@ -60,12 +60,12 @@ AbstractFormDelegate {
      * @see Kirigami.Units
      */
     property real leadingPadding: Kirigami.Units.smallSpacing
-    
+
     focusPolicy: Qt.StrongFocus
 
     contentItem: RowLayout {
         spacing: 0
-        
+
         Private.ContentItemLoader {
             Layout.rightMargin: visible ? root.leadingPadding : 0
             visible: root.leading
@@ -73,7 +73,7 @@ AbstractFormDelegate {
             implicitWidth: visible ? root.leading.implicitWidth : 0
             contentItem: root.leading
         }
-        
+
         Kirigami.Icon {
             visible: root.icon.name !== ""
             source: root.icon.name
@@ -82,11 +82,11 @@ AbstractFormDelegate {
             implicitWidth: (root.icon.name !== "") ? Kirigami.Units.iconSizes.small : 0
             implicitHeight: (root.icon.name !== "") ? Kirigami.Units.iconSizes.small : 0
         }
-        
+
         ColumnLayout {
             Layout.fillWidth: true
             spacing: Kirigami.Units.smallSpacing
-            
+
             Label {
                 Layout.fillWidth: true
                 text: root.text
@@ -96,7 +96,7 @@ AbstractFormDelegate {
                 color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
                 Accessible.ignored: true // base class sets this text on root already
             }
-            
+
             Label {
                 id: internalDescriptionItem
                 Layout.fillWidth: true
@@ -108,7 +108,7 @@ AbstractFormDelegate {
                 Accessible.ignored: !visible
             }
         }
-        
+
         FormArrow {
             Layout.leftMargin: Kirigami.Units.smallSpacing
             Layout.alignment: Qt.AlignRight | Qt.AlignVCenter

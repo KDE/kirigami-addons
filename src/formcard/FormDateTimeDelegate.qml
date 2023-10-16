@@ -174,21 +174,22 @@ AbstractFormDelegate {
                 }
 
                 contentItem: RowLayout {
+                    spacing: 0
+
                     Kirigami.Icon {
                         source: "view-calendar"
                         Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
-                        Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium 
+                        Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium
+                        Layout.rightMargin: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
                     }
 
                     QQC2.Label {
                         id: dateLabel
 
                         text: root.text
-                        Layout.fillWidth: true
-                        padding: Kirigami.Units.gridUnit
-                        bottomPadding: Kirigami.Units.largeSpacing
-                        topPadding: Kirigami.Units.largeSpacing
                         visible: root.text.length > 0 && root.dateTimeDisplay === FormDateTimeDelegate.DateTimeDisplay.Date
+
+                        Layout.fillWidth: true
                     }
 
                     QQC2.Label {
@@ -277,9 +278,9 @@ AbstractFormDelegate {
                     const locale = Qt.locale();
                     const timeFormat = locale.timeFormat(Locale.ShortFormat)
                         .replace(':ss', '');
-                    root.value.toLocaleTimeString(locale, timeFormat);
+                    return root.value.toLocaleTimeString(locale, timeFormat);
                 } else {
-                    i18ndc("kirigami-addons", "Date is not set", "Not set")
+                    return i18ndc("kirigami-addons", "Date is not set", "Not set");
                 }
 
                 onClicked: {
@@ -329,20 +330,22 @@ AbstractFormDelegate {
                 }
 
                 contentItem: RowLayout {
+                    spacing: 0
+
                     Kirigami.Icon {
                         source: "clock"
+
                         Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
-                        Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium 
+                        Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium
+                        Layout.rightMargin: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
                     }
 
                     QQC2.Label {
                         id: timeLabel
                         text: root.text
-                        Layout.fillWidth: true
-                        padding: Kirigami.Units.gridUnit
-                        bottomPadding: Kirigami.Units.largeSpacing
-                        topPadding: Kirigami.Units.largeSpacing
                         visible: root.text.length > 0 && root.dateTimeDisplay === FormDateTimeDelegate.DateTimeDisplay.Time
+
+                        Layout.fillWidth: true
                     }
 
                     QQC2.Label {

@@ -12,19 +12,11 @@ import org.kde.kirigamiaddons.delegates as Delegates
 QQC2.AbstractButton {
     id: root
 
-    enum ButtonType {
-        Normal,
-        Informative,
-        Negative,
-        Positive
-    }
-
     required property T.DialogButtonBox buttonBox
-    property int buttonType: MessageDialogButton.Normal
+
     readonly property int index: {
         for (let i = 0; i < buttonBox.count; i++) {
-            if (buttonBox.itemAt(i) == root) {
-                console.log(i, buttonBox.itemAt(i), buttonBox.itemAt(i).text)
+            if (buttonBox.contentChildren[i] == root) {
                 return i;
             }
         }
@@ -59,11 +51,15 @@ QQC2.AbstractButton {
 
         color: {
             let backgroundColor;
-            switch (root.buttonType) {
-            case MessageDialogButton.Negative:
+            switch (root.QQC2.DialogButtonBox.buttonRole) {
+            case QQC2.DialogButtonBox.AcceptRole:
+            case QQC2.DialogButtonBox.ApplyRole:
+                backgroundColor = Kirigami.Theme.positiveBackgroundColor;
+                break;
+            case QQC2.DialogButtonBox.DestructiveRole:
                 backgroundColor = Kirigami.Theme.negativeBackgroundColor;
                 break;
-            case MessageDialogButton.Normal:
+            default:
                 backgroundColor = Kirigami.Theme.backgroundColor;
                 break;
             }

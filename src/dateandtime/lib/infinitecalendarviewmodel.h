@@ -15,7 +15,9 @@ class InfiniteCalendarViewModel : public QAbstractListModel, public QQmlParserSt
     // Amount of dates to add each time the model adds more dates
     Q_PROPERTY(int datesToAdd READ datesToAdd WRITE setDatesToAdd NOTIFY datesToAddChanged)
     Q_PROPERTY(int scale READ scale WRITE setScale NOTIFY scaleChanged)
-    Q_PROPERTY(QDate currentDate READ currentDate WRITE setCurrentDate NOTIFY currentDateChanged)
+    Q_PROPERTY(QDateTime currentDate READ currentDate WRITE setCurrentDate NOTIFY currentDateChanged)
+    Q_PROPERTY(QDateTime minimumDate READ minimumDate WRITE setMinimumDate NOTIFY minimumDateChanged)
+    Q_PROPERTY(QDateTime maximumDate READ maximumDate WRITE setMaximumDate NOTIFY maximumDateChanged)
 
 public:
     // The decade scale is designed to be used in a 4x3 grid, so shows 12 years at a time
@@ -41,14 +43,16 @@ public:
     void classBegin() override;
     void componentComplete() override;
 
-    QDate currentDate() const;
-    void setCurrentDate(const QDate &currentDate);
+    QDateTime currentDate() const;
+    void setCurrentDate(const QDateTime &currentDate);
 
-    Q_INVOKABLE void addDates(bool atEnd, const QDate startFrom = QDate());
-    void addWeekDates(bool atEnd, const QDate &startFrom);
-    void addMonthDates(bool atEnd, const QDate &startFrom);
-    void addYearDates(bool atEnd, const QDate &startFrom);
-    void addDecadeDates(bool atEnd, const QDate &startFrom);
+    QDateTime minimumDate() const;
+    void setMinimumDate(const QDateTime &minimumDate);
+
+    QDateTime maximumDate() const;
+    void setMaximumDate(const QDateTime &maximumDate);
+
+    Q_INVOKABLE void addDates(bool atEnd, const QDateTime startFrom = {});
 
     int datesToAdd() const;
     void setDatesToAdd(int datesToAdd);
@@ -60,13 +64,22 @@ Q_SIGNALS:
     void datesToAddChanged();
     void scaleChanged();
     void currentDateChanged();
+    void minimumDateChanged();
+    void maximumDateChanged();
 
 private:
-    QDate m_currentDate;
-    QVector<QDate> m_startDates;
-    QVector<QDate> m_firstDayOfMonthDates;
+    void addWeekDates(bool atEnd, const QDateTime &startFrom);
+    void addMonthDates(bool atEnd, const QDateTime &startFrom);
+    void addYearDates(bool atEnd, const QDateTime &startFrom);
+    void addDecadeDates(bool atEnd, const QDateTime &startFrom);
+
+    QDateTime m_currentDate;
+    QDateTime m_minimumDate;
+    QDateTime m_maximumDate;
+    QVector<QDateTime> m_startDates;
+    QVector<QDateTime> m_firstDayOfMonthDates;
     QLocale m_locale;
     int m_datesToAdd = 10;
     int m_scale = MonthScale;
-    bool m_isCompleted = true;
+    bool m_isCompleted = false;
 };

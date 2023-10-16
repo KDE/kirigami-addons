@@ -54,25 +54,26 @@ QQC2.Dialog {
         Components.MessageDialogButton {
             text: i18ndc("kirigami-addons", "@action:button", "Cancel")
             icon.name: "dialog-cancel"
-            Layout.bottomMargin: Kirigami.Units.largeSpacing
             buttonBox: box
             onClicked: {
                 root.cancelled()
                 root.close()
             }
+
+            QQC2.DialogButtonBox.buttonRole: QQC2.DialogButtonBox.RejectRole
         }
 
         Components.MessageDialogButton {
             text: i18ndc("kirigami-addons", "@action:button", "Select")
             icon.name: "dialog-ok-apply"
             buttonBox: box
-            Layout.rightMargin: Kirigami.Units.largeSpacing
-            Layout.bottomMargin: Kirigami.Units.largeSpacing
             onClicked: {
                 root.value = root._value;
                 root.accepted()
                 root.close()
             }
+
+            QQC2.DialogButtonBox.buttonRole: QQC2.DialogButtonBox.AcceptRole
         }
     }
 

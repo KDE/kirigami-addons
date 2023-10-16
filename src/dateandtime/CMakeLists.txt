@@ -32,6 +32,7 @@ ecm_target_qml_sources(dateandtimeplugin SOURCES
     TimePopup.qml
 )
 ecm_target_qml_sources(dateandtimeplugin PATH private SOURCES
+    private/DatePathView.qml
     private/DatePicker.qml
     private/DatePickerDelegate.qml
     private/TumblerTimePicker.qml
