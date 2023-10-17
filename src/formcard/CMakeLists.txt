@@ -59,6 +59,7 @@ ecm_target_qml_sources(formcardplugin SOURCES
     FormArrow.qml
     FormButtonDelegate.qml
     FormCard.qml
+    FormCardHeader.qml
     FormCardPage.qml
     FormHeader.qml
     AboutPage.qml
