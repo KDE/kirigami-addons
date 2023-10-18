@@ -25,7 +25,7 @@ Delegates.RoundedItemDelegate {
     required property bool kDescendantExpandable
     required property bool kDescendantExpanded
 
-    required property KDescendantsProxyModel model
+    required property KDescendantsProxyModel descendantsProxyModel
 
     leftInset: (Qt.application.layoutDirection !== Qt.RightToLeft ? decoration.width + root.padding * 2 : 0)
     leftPadding: (Qt.application.layoutDirection !== Qt.RightToLeft ? decoration.width + root.padding * 2 : 0) + Kirigami.Units.smallSpacing
@@ -38,7 +38,7 @@ Delegates.RoundedItemDelegate {
 
         parent: root
         parentDelegate: root
-        model: root.model
+        model: root.descendantsProxyModel
 
         index: root.index
         kDescendantLevel: root.kDescendantLevel
