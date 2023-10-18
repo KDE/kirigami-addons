@@ -6,3 +6,7 @@ Source: https://invent.kde.org/libraries/kirigami-addons
 Files: autotests/data/*
 Copyright: none
 License: CC0-1.0
+
+Files: docs/pics/*
+Copyright: none
+License: CC0-1.0
