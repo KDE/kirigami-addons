@@ -5,12 +5,13 @@
  * SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
-import QtQuick 2.12
-import QtQuick.Controls 2.5 as Controls2
-import org.kde.kirigami 2.0 as Kirigami
-import QtQuick.Layouts 1.11
-import QtMultimedia 5.15
-import org.kde.kirigamiaddons.sounds 0.1
+import QtQuick
+import QtQuick.Controls as Controls2
+import org.kde.kirigami as Kirigami
+import QtQuick.Layouts
+import QtMultimedia
+import org.kde.kirigamiaddons.sounds
+import org.kde.kirigamiaddons.delegates as Delegates
 
 /**
  * A sound picker component for picking ringtones and notifications.
@@ -45,11 +46,17 @@ ListView {
     model: SoundsModel {
         id: soundsModel
         notification: listView.notification
+        theme: 'freedesktop'
     }
-    
-    delegate: Kirigami.BasicListItem {
+
+    delegate: Delegates.RoundedItemDelegate {
+        required property string ringtoneName
+        required property url sourceUrl
+        required property int index
+
         text: ringtoneName
-        icon: ListView.isCurrentItem ? "object-select-symbolic" : ""
+
+        icon.name: ListView.isCurrentItem ? "object-select-symbolic" : ""
         onClicked: {
             selectedUrl = sourceUrl;
             if (playMusic.playbackState === MediaPlayer.PlayingState) {
@@ -59,9 +66,10 @@ ListView {
             }
         }
     }
-    
-    Audio {
+
+    MediaPlayer {
         id: playMusic
         source: selectedUrl
+        audioOutput: AudioOutput {}
     }
 }

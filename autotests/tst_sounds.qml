@@ -5,10 +5,10 @@
  * SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
-import QtQuick 2.0
-import QtTest 1.2
-import org.kde.kirigamiaddons.sounds 0.1
-import QtMultimedia 5.15
+import QtQuick
+import QtTest
+import org.kde.kirigamiaddons.sounds
+import QtMultimedia
 
 SoundsPicker {
     id: soundsPicker
