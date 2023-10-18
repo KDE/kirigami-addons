@@ -31,8 +31,6 @@ QQC2.Dialog {
 
     modal: true
 
-    onClosed: root.destroy();
-
     contentItem: TumblerTimePicker {
         id: popupContent
         implicitWidth: applicationWindow().width
