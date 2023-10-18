@@ -77,14 +77,14 @@ AbstractFormDelegate {
      *
      * By default, no limit is applied to the date selection.
      */
-    property var minimumDate: null
+    property date minimumDate
 
     /**
      * This property holds the maximum date (inclusive) that the user can select.
      *
      * By default, no limit is applied to the date selection.
      */
-    property var maximumDate: null
+    property date maximumDate
 
     /**
      * This property holds whether this delegate is readOnly or whether the user
@@ -140,14 +140,14 @@ AbstractFormDelegate {
 
                 text: if (!isNaN(root.value.valueOf())) {
                     const today = new Date();
-                    if (root.value.getYear() === today.getYear()
+                    if (root.value.getFullYear() === today.getFullYear()
                         && root.value.getDate() === today.getDate()
                         && root.value.getMonth() == today.getMonth()) {
                         return i18ndc("kirigami-addons", "Displayed in place of the date if the selected day is today", "Today");
                     }
                     const locale = Qt.locale();
                     const weekDay = root.value.toLocaleDateString(locale, "ddd, ");
-                    if (root.value.getYear() == today.getYear(Locale.ShortFormat)) {
+                    if (root.value.getFullYear() == today.getFullYear()) {
                         return weekDay + root.value.toLocaleDateString(locale, Locale.ShortFormat);
                     }
 
@@ -163,7 +163,7 @@ AbstractFormDelegate {
                     };
 
                     let dateFormat = locale.dateFormat(Locale.ShortFormat)
-                        .replace(root.value.getYear(), '')
+                        .replace(root.value.getFullYear(), '')
                         .replace('yyyy', ''); // I'll be long dead when this will break and this won't be my problem anymore
 
                     dateFormat = trimChar(trimChar(trimChar(dateFormat, '-'), '.'), '/')
@@ -225,7 +225,7 @@ AbstractFormDelegate {
                     item.accepted.connect(() => {
                         root.value.setDate(item.value.getDate());
                         root.value.setMonth(item.value.getMonth());
-                        root.value.setYear(item.value.getYear());
+                        root.value.setFullYear(item.value.getFullYear());
                     });
 
                     item.open();

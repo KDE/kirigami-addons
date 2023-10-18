@@ -37,14 +37,14 @@ QQC2.Dialog {
      *
      * By default, no limit is applied to the date selection.
      */
-    property var minimumDate: null
+    property date minimumDate
 
     /**
      * This property holds the maximum date (inclusive) that the user can select.
      *
      * By default, no limit is applied to the date selection.
      */
-    property var maximumDate: null
+    property date maximumDate
 
     padding: 0
     topPadding: undefined

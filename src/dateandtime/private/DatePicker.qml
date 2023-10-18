@@ -16,7 +16,6 @@ QQC2.Control {
     signal datePicked(date pickedDate)
 
     property date selectedDate: new Date() // Decides calendar span
-    property date clickedDate: new Date() // User's chosen date
     readonly property int year: selectedDate.getFullYear()
     readonly property int month: selectedDate.getMonth()
     readonly property int day: selectedDate.getDate()
@@ -28,14 +27,14 @@ QQC2.Control {
      *
      * By default, no limit is applied to the date selection.
      */
-    property var minimumDate: null
+    property date minimumDate
 
     /**
      * This property holds the maximum date (inclusive) that the user can select.
      *
      * By default, no limit is applied to the date selection.
      */
-    property var maximumDate: null
+    property date maximumDate
 
     topPadding: Kirigami.Units.largeSpacing
     rightPadding: Kirigami.Units.largeSpacing
@@ -67,14 +66,13 @@ QQC2.Control {
         }
         _runSetDate = true;
 
-        if (root.minimumDate && date.valueOf() < minimumDate.valueOf()) {
+        if (root.minimumDate.valueOf() && date.valueOf() < minimumDate.valueOf()) {
             date = minimumDate;
         }
 
-        if (root.maximumDate && date.valueOf() > maximumDate.valueOf()) {
+        if (root.maximumDate.valueOf() && date.valueOf() > maximumDate.valueOf()) {
             date = maximumDate;
         }
-
 
         const yearDiff = date.getFullYear() - yearPathView.currentItem.startDate.getFullYear();
         // For the decadeDiff we add one to the input date year so that we use e.g. 2021, making the pathview move to the grid that contains the 2020 decade
@@ -154,7 +152,7 @@ QQC2.Control {
 
     function prevMonth() {
         const newDate = new Date(selectedDate.getFullYear(), selectedDate.getMonth() - 1, selectedDate.getDate());
-        if (root.minimumDate && newDate.valueOf() < minimumDate.valueOf()) {
+        if (root.minimumDate.valueOf() && newDate.valueOf() < minimumDate.valueOf()) {
             if (selectedDate == minimumDate) {
                 return;
             }
@@ -166,7 +164,7 @@ QQC2.Control {
 
     function nextMonth() {
         const newDate = new Date(selectedDate.getFullYear(), selectedDate.getMonth() + 1, selectedDate.getDate());
-        if (root.maximumDate && newDate.valueOf() > maximumDate.valueOf()) {
+        if (root.maximumDate.valueOf() && newDate.valueOf() > maximumDate.valueOf()) {
             if (selectedDate == maximumDate) {
                 return;
             }
@@ -179,7 +177,7 @@ QQC2.Control {
 
     function prevYear() {
         const newDate = new Date(selectedDate.getFullYear() - 1, selectedDate.getMonth(), selectedDate.getDate())
-        if (root.minimumDate && newDate.valueOf() < minimumDate.valueOf()) {
+        if (root.minimumDate.valueOf() && newDate.valueOf() < minimumDate.valueOf()) {
             if (selectedDate == minimumDate) {
                 return;
             }
@@ -203,7 +201,7 @@ QQC2.Control {
 
     function prevDecade() {
         const newDate = new Date(selectedDate.getFullYear() - 10, selectedDate.getMonth(), selectedDate.getDate());
-        if (root.minimumDate && newDate.valueOf() < minimumDate.valueOf()) {
+        if (root.minimumDate.valueOf() && newDate.valueOf() < minimumDate.valueOf()) {
             if (selectedDate == minimumDate) {
                 return;
             }
@@ -397,13 +395,13 @@ QQC2.Control {
 
                                 highlighted: isToday
                                 checkable: true
-                                checked: date.getDate() === clickedDate.getDate() &&
-                                    date.getMonth() === clickedDate.getMonth() &&
-                                    date.getFullYear() === clickedDate.getFullYear()
+                                checked: date.getDate() === selectedDate.getDate() &&
+                                    date.getMonth() === selectedDate.getMonth() &&
+                                    date.getFullYear() === selectedDate.getFullYear()
                                 opacity: sameMonth && inScope ? 1 : 0.6
                                 text: dayNumber
                                 onClicked: {
-                                    clickedDate = date;
+                                    selectedDate = date;
                                     selectedDate = date;
                                     datePicked(date);
                                 }
@@ -467,8 +465,9 @@ QQC2.Control {
                                 id: monthDelegate
 
                                 date: new Date(yearViewLoader.startDate.getFullYear(), index)
-                                minimumDate: root.minimumDate ? new Date(root.minimumDate).setDate(0) : null
-                                maximumDate: root.maximumDate ? new Date(root.maximumDate.getFullYear(), root.maximumDate.getMonth() + 1, 0) : 0
+
+                                minimumDate: root.minimumDate.valueOf() ? new Date(root.minimumDate).setDate(0) : new Date("invalid")
+                                maximumDate: root.maximumDate.valueOf() ? new Date(root.maximumDate.getFullYear(), root.maximumDate.getMonth() + 1, 0) : new Date("invalid")
                                 repeater: monthRepeater
                                 previousAction: goPreviousAction
                                 nextAction: goNextAction
@@ -479,12 +478,11 @@ QQC2.Control {
                                 highlighted: date.getMonth() === new Date().getMonth() &&
                                     date.getFullYear() === new Date().getFullYear()
                                 checkable: true
-                                checked: date.getMonth() === clickedDate.getMonth() &&
-                                    date.getFullYear() === clickedDate.getFullYear()
+                                checked: date.getMonth() === selectedDate.getMonth() &&
+                                    date.getFullYear() === selectedDate.getFullYear()
                                 text: Qt.locale().standaloneMonthName(date.getMonth())
                                 onClicked: {
                                     selectedDate = new Date(date);
-                                    clickedDate = new Date(date);
                                     root.datePicked(date);
                                     if(root.showDays) pickerView.currentIndex = 0;
                                 }
@@ -552,8 +550,8 @@ QQC2.Control {
                                 readonly property bool sameDecade: Math.floor(date.getFullYear() / 10) == Math.floor(year / 10)
 
                                 date: new Date(startDate.getFullYear() + index, 0)
-                                minimumDate: root.minimumDate ? new Date(root.minimumDate.getFullYear(), 0, 0) : null
-                                maximumDate: root.maximumDate ? new Date(root.maximumDate.getFullYear(), 12, 0) : null
+                                minimumDate: root.minimumDate.valueOf() ? new Date(root.minimumDate.getFullYear(), 0, 0) : new Date("invalid")
+                                maximumDate: root.maximumDate.valueOf() ? new Date(root.maximumDate.getFullYear(), 12, 0) : new Date("invalid")
                                 repeater: decadeRepeater
                                 previousAction: goPreviousAction
                                 nextAction: goNextAction
@@ -564,12 +562,11 @@ QQC2.Control {
                                 rightPadding: undefined
                                 leftPadding: undefined
                                 checkable: true
-                                checked: date.getFullYear() === clickedDate.getFullYear()
+                                checked: date.getFullYear() === selectedDate.getFullYear()
                                 opacity: sameDecade ? 1 : 0.7
                                 text: date.getFullYear()
                                 onClicked: {
                                     selectedDate = new Date(date);
-                                    clickedDate = new Date(date);
                                     root.datePicked(date);
                                     pickerView.currentIndex = 1;
                                 }

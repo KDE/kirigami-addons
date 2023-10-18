@@ -12,14 +12,14 @@ Delegates.RoundedItemDelegate {
 
     required property int index
     required property date date
-    required property var minimumDate
-    required property var maximumDate
+    required property date minimumDate
+    required property date maximumDate
     required property Repeater repeater
     required property T.Action previousAction
     required property T.Action nextAction
 
-    readonly property bool inScope: (!minimumDate || minimumDate.valueOf() <= date.valueOf())
-        && (!maximumDate || maximumDate.valueOf() >= date.valueOf())
+    readonly property bool inScope: (!minimumDate.valueOf() || minimumDate.valueOf() <= date.valueOf())
+        && (!maximumDate.valueOf() || maximumDate.valueOf() >= date.valueOf())
 
     leftInset: 0
     rightInset: 0
