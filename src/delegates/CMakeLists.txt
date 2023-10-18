@@ -9,6 +9,7 @@ target_sources(delegatesplugin PRIVATE
 
 ecm_target_qml_sources(delegatesplugin SOURCES
     RoundedItemDelegate.qml
+    RoundedTreeDelegate.qml
     IndicatorItemDelegate.qml
     DefaultContentItem.qml
     SubtitleContentItem.qml

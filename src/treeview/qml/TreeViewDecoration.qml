@@ -16,24 +16,61 @@ import org.kde.kirigami 2.14 as Kirigami
  *
  * It will have a "> v" expander button graphics, and will have indentation on the left
  * depending on the level of the tree the item is in
+ *
+ * It is recommanded to directly use RoundedTreeDelegate instead of this component.
  */
 RowLayout {
     /**
      * This property holds the delegate there this decoration will live in.
      * It needs to be assigned explicitly by the developer.
      */
-    property T2.ItemDelegate parentDelegate
+    required property T2.ItemDelegate parentDelegate
 
     /**
      * This property holds the KDescendantsProxyModel the view is showing.
      * It needs to be assigned explicitly by the developer.
      */
-    property KDescendantsProxyModel model
+    required property KDescendantsProxyModel model
 
     /**
      * This property holds the color of the decoration highlight.
      */
     property color decorationHighlightColor
+
+    /**
+     * This property holds the index of the item.
+     *
+     * Provided by the model/ListView
+     */
+    required property int index
+
+    /**
+     * This property holds the descendant level of the item.
+     *
+     * Provided by the model/ListView
+     */
+    required property int kDescendantLevel
+
+    /**
+     * This property holds whether this item has siblings.
+     *
+     * Provided by the model/ListView
+     */
+    required property var kDescendantHasSiblings
+
+    /**
+     * This property holds whether the item is expandable.
+     *
+     * Provided by the model/ListView
+     */
+    required property bool kDescendantExpandable
+
+    /**
+     * This property holds whether the item is expanded.
+     *
+     * Provided by the model/ListView
+     */
+    required property bool kDescendantExpanded
 
     Layout.topMargin: -parentDelegate.topPadding
     Layout.bottomMargin: -parentDelegate.bottomPadding
@@ -61,7 +98,7 @@ RowLayout {
         Layout.preferredWidth: Kirigami.Units.gridUnit
         Layout.fillHeight: true
         enabled: kDescendantExpandable
-        onClicked: model.toggleChildren(index)
+        onClicked: model.toggleChildren(parentDelegate.index)
         contentItem: Item {
             id: styleitem
             implicitWidth: Kirigami.Units.gridUnit
