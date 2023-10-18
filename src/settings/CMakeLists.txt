@@ -13,8 +13,8 @@ ecm_target_qml_sources(settingsplugin SOURCES
 )
 
 target_link_libraries(settingsplugin PRIVATE
-    Qt${QT_MAJOR_VERSION}::Quick
-    Qt${QT_MAJOR_VERSION}::Qml
+    Qt6::Quick
+    Qt6::Qml
 )
 
 ecm_finalize_qml_module(settingsplugin DESTINATION ${KDE_INSTALL_QMLDIR})

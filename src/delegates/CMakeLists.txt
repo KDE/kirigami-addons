@@ -15,8 +15,8 @@ ecm_target_qml_sources(delegatesplugin SOURCES
 )
 
 target_link_libraries(delegatesplugin PRIVATE
-    Qt${QT_MAJOR_VERSION}::Quick
-    Qt${QT_MAJOR_VERSION}::Qml
+    Qt6::Quick
+    Qt6::Qml
 )
 
 ecm_finalize_qml_module(delegatesplugin DESTINATION ${KDE_INSTALL_QMLDIR})

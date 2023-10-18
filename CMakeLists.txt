@@ -9,12 +9,9 @@ include(FeatureSummary)
 
 set(AUTOMOC_MOC_OPTIONS -Muri=org.kde.kirigami)
 
-# QT_MAJOR_VERSION is defined automatically by QtVersionOption (since ECM 5.82)
-# which is included by KDEInstallDirs;
-# This variables are updated below if Qt6 is found by ECM
-set(QT_REQUIRED_VERSION "5.15.2")
-set(KF_MIN_VERSION "5.91.0")
-set(KF_MAJOR_VERSION "5")
+set(QT_REQUIRED_VERSION "6.4")
+set(KF_MIN_VERSION "5.240.0")
+set(KF_MAJOR_VERSION "6")
 
 find_package(ECM ${KF_MIN_VERSION} NO_MODULE)
 set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://projects.kde.org/projects/kdesupport/extra-cmake-modules")
@@ -34,56 +31,32 @@ include(ECMQtDeclareLoggingCategory)
 include(ECMAddQch)
 include(ECMQmlModule)
 
-if (QT_MAJOR_VERSION STREQUAL "6")
-    set(QT_REQUIRED_VERSION "6.4")
-    set(KF_MIN_VERSION "5.240.0")
-    set(KF_MAJOR_VERSION "6")
+find_package(Qt6 ${QT_REQUIRED_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick QuickControls2)
 
-    find_package(KF6Svg CONFIG)
-    set_package_properties(KF6Svg PROPERTIES
-        DESCRIPTION "Svg rendering library with theme support"
-        PURPOSE "Required at runtime for rendering Svg items in some controls"
-        TYPE RUNTIME
-    )
-
-endif()
-
-find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick QuickControls2)
-
-find_package(KF${KF_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED COMPONENTS Kirigami2 I18n)
+find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS Kirigami2 I18n)
 if (BUILD_TESTING)
-    find_package(Qt${QT_MAJOR_VERSION}QuickTest ${QT_REQUIRED_VERSION} CONFIG QUIET)
+    find_package(Qt6QuickTest ${QT_REQUIRED_VERSION} CONFIG QUIET)
 endif()
 if (ANDROID)
     find_package(Gradle REQUIRED)
-    if (QT_MAJOR_VERSION EQUAL "5")
-        find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} REQUIRED CONFIG COMPONENTS AndroidExtras)
-    endif()
 endif()
 
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF${KF_MAJOR_VERSION}KirigamiAddons")
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF6KirigamiAddons")
 
 option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)" OFF)
 add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)")
 
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KFKirigamiAddonsConfig.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/KF${KF_MAJOR_VERSION}KirigamiAddonsConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KF6KirigamiAddonsConfig.cmake"
     INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
     PATH_VARS CMAKE_INSTALL_PREFIX
 )
 ecm_setup_version(${PROJECT_VERSION}
     VARIABLE_PREFIX KIRIGAMIADDONS
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kirigamiaddons_version.h"
-    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF${KF_MAJOR_VERSION}KirigamiAddonsConfigVersion.cmake"
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF6KirigamiAddonsConfigVersion.cmake"
 )
-
-
-if(QT_MAJOR_VERSION STREQUAL "6")
-    set(QTGRAPHICALEFFECTS_MODULE "Qt5Compat.GraphicalEffects")
-else()
-    set(QTGRAPHICALEFFECTS_MODULE "QtGraphicalEffects 1.0")
-endif()
 
 add_subdirectory(src)
 
@@ -92,8 +65,8 @@ if (BUILD_TESTING AND BUILD_SHARED_LIBS)
 endif()
 
 install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KF${KF_MAJOR_VERSION}KirigamiAddonsConfig.cmake"
-    "${CMAKE_CURRENT_BINARY_DIR}/KF${KF_MAJOR_VERSION}KirigamiAddonsConfigVersion.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KF6KirigamiAddonsConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KF6KirigamiAddonsConfigVersion.cmake"
     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
     COMPONENT Devel
 )

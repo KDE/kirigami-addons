@@ -8,42 +8,20 @@ target_sources(treeviewplugin PRIVATE
 )
 
 ecm_target_qml_sources(treeviewplugin SOURCES
-    qml/BasicTreeItem.qml
-    qml/TreeTableView.qml
-    qml/TreeListView.qml
-    qml/AbstractTreeItem.qml
     qml/TreeViewDecoration.qml
 )
 
-if (QT_MAJOR_VERSION EQUAL "5")
-    ecm_target_qml_sources(treeviewplugin
-        PRIVATE PATH
-        styles/org.kde.desktop
-        SOURCES
-        qml5/styles/org.kde.desktop/TreeViewDecoration.qml
-    )
-else()
-    ecm_target_qml_sources(treeviewplugin
-        PRIVATE PATH
-        styles/org.kde.desktop
-        SOURCES
-        qml/styles/org.kde.desktop/TreeViewDecoration.qml
-    )
-endif()
-
-
 ecm_target_qml_sources(treeviewplugin
     PRIVATE PATH
-    private
+    styles/org.kde.desktop
     SOURCES
-    qml/private/InternalTreeListView.qml
-    qml/private/InternalTreeTableView.qml
+    qml/styles/org.kde.desktop/TreeViewDecoration.qml
 )
 
 target_link_libraries(treeviewplugin PRIVATE
-    Qt${QT_MAJOR_VERSION}::Quick
-    Qt${QT_MAJOR_VERSION}::Qml
-    Qt${QT_MAJOR_VERSION}::QuickControls2
+    Qt6::Quick
+    Qt6::Qml
+    Qt6::QuickControls2
 )
 
 ecm_finalize_qml_module(treeviewplugin DESTINATION ${KDE_INSTALL_QMLDIR})

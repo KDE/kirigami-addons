@@ -50,18 +50,6 @@ Kirigami.ShadowedRectangle {
 
     /**
      * This property holds the leading action.
-     * @deprecated Set leadingAction instead.
-     */
-    property alias leftAction: root.leadingAction
-
-    /**
-     * This property holds the trailing action.
-     * @deprecated Set trailingAction instead.
-     */
-    property alias rightAction: root.trailingAction
-
-    /**
-     * This property holds the leading action.
      */
     property Kirigami.Action leadingAction
 

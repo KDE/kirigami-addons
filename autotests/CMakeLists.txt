@@ -3,7 +3,7 @@
 
 add_definitions(-DDATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data")
 
-if(NOT Qt${QT_MAJOR_VERSION}QuickTest_FOUND)
+if(NOT Qt6QuickTest_FOUND)
     message(STATUS "QtQuickTest not found, autotests will not be built.")
     return()
 endif()
@@ -13,17 +13,17 @@ add_library(test-artefacts STATIC
 )
 
 target_link_libraries(test-artefacts
-    Qt${QT_MAJOR_VERSION}::Core
-    Qt${QT_MAJOR_VERSION}::Gui
+    Qt6::Core
+    Qt6::Gui
 )
 
 add_executable(qmltest qmltests.cpp)
 
 target_link_libraries(qmltest
     test-artefacts
-    Qt${QT_MAJOR_VERSION}::QuickTest
-    Qt${QT_MAJOR_VERSION}::Qml
-    KF${QT_MAJOR_VERSION}::I18n
+    Qt6::QuickTest
+    Qt6::Qml
+    KF6::I18n
 )
 
 macro(kirigami_add_tests)

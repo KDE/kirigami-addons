@@ -8,12 +8,6 @@ Dependencies:
     'frameworks/kirigami': '@latest-kf6'
     'frameworks/ki18n': '@latest-kf6'
 
-- 'on': ['Linux/Qt5', 'FreeBSD/Qt5', 'Windows/Qt5', 'Android/Qt5']
-  'require':
-    'frameworks/extra-cmake-modules': '@stable'
-    'frameworks/kirigami': '@stable'
-    'frameworks/ki18n': '@stable'
-
 Options:
-  require-passing-tests-on: [ 'Linux/Qt5' ]
+  require-passing-tests-on: [ 'Linux/Qt6' ]
 

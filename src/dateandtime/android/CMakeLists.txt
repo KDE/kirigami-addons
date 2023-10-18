@@ -7,5 +7,5 @@ gradle_install_aar(datetime_aar DESTINATION jar)
 install(
     FILES KF5KirigamiDateAndTime-android-dependencies.xml
     DESTINATION ${KDE_INSTALL_LIBDIR}
-    RENAME KF${KF_MAJOR_VERSION}KirigamiDateAndTime_${CMAKE_ANDROID_ARCH_ABI}-android-dependencies.xml
+    RENAME KF6KirigamiDateAndTime_${CMAKE_ANDROID_ARCH_ABI}-android-dependencies.xml
 )

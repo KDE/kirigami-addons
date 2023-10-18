@@ -25,9 +25,9 @@ ecm_target_qml_sources(componentslabsplugin SOURCES
 )
 
 target_link_libraries(componentslabsplugin PRIVATE
-    Qt${QT_MAJOR_VERSION}::Quick
-    Qt${QT_MAJOR_VERSION}::Qml
-    Qt${QT_MAJOR_VERSION}::QuickControls2
+    Qt6::Quick
+    Qt6::Qml
+    Qt6::QuickControls2
 )
 
 ecm_finalize_qml_module(componentslabsplugin DESTINATION ${KDE_INSTALL_QMLDIR})
@@ -57,9 +57,9 @@ ecm_target_qml_sources(componentsplugin SOURCES
 )
 
 target_link_libraries(componentsplugin PRIVATE
-    Qt${QT_MAJOR_VERSION}::Quick
-    Qt${QT_MAJOR_VERSION}::Qml
-    Qt${QT_MAJOR_VERSION}::QuickControls2
+    Qt6::Quick
+    Qt6::Qml
+    Qt6::QuickControls2
 )
 
 ecm_finalize_qml_module(componentsplugin DESTINATION ${KDE_INSTALL_QMLDIR})

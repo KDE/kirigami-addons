@@ -2,18 +2,15 @@
 # SPDX-License-Identifier: BSD-2-Clause
 
 if (ANDROID)
-    add_library(KF${KF_MAJOR_VERSION}KirigamiDateAndTime)
-    add_library(KF${KF_MAJOR_VERSION}::KirigamiDateAndTime ALIAS KF${KF_MAJOR_VERSION}KirigamiDateAndTime)
-    target_sources(KF${KF_MAJOR_VERSION}KirigamiDateAndTime PRIVATE
+    add_library(KF6KirigamiDateAndTime)
+    add_library(KF6::KirigamiDateAndTime ALIAS KF6KirigamiDateAndTime)
+    target_sources(KF6KirigamiDateAndTime PRIVATE
         lib/androidintegration.cpp
     )
-    generate_export_header(KF${KF_MAJOR_VERSION}KirigamiDateAndTime BASE_NAME KirigamiDateAndTime)
-    target_link_libraries(KF${KF_MAJOR_VERSION}KirigamiDateAndTime PUBLIC Qt${QT_MAJOR_VERSION}::Core)
-    if (QT_MAJOR_VERSION EQUAL "5")
-        target_link_libraries(KF${KF_MAJOR_VERSION}KirigamiDateAndTime PUBLIC Qt5::AndroidExtras)
-    endif()
+    generate_export_header(KF6KirigamiDateAndTime BASE_NAME KirigamiDateAndTime)
+    target_link_libraries(KF6KirigamiDateAndTime PUBLIC Qt6::Core)
     add_subdirectory(android)
-    install(TARGETS KF${KF_MAJOR_VERSION}KirigamiDateAndTime ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+    install(TARGETS KF6KirigamiDateAndTime ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 endif()
 
 ecm_add_qml_module(dateandtimeplugin URI "org.kde.kirigamiaddons.dateandtime" VERSION 1.0)
@@ -39,12 +36,12 @@ ecm_target_qml_sources(dateandtimeplugin PATH private SOURCES
 )
 
 target_link_libraries(dateandtimeplugin PRIVATE
-    Qt${QT_MAJOR_VERSION}::Quick
-    Qt${QT_MAJOR_VERSION}::Qml
-    KF${KF_MAJOR_VERSION}::I18n
+    Qt6::Quick
+    Qt6::Qml
+    KF6::I18n
 )
-if (TARGET KF${KF_MAJOR_VERSION}KirigamiDateAndTime)
-    target_link_libraries(dateandtimeplugin PRIVATE KF${KF_MAJOR_VERSION}KirigamiDateAndTime)
+if (TARGET KF6KirigamiDateAndTime)
+    target_link_libraries(dateandtimeplugin PRIVATE KF6KirigamiDateAndTime)
 endif()
 
 ecm_finalize_qml_module(dateandtimeplugin DESTINATION ${KDE_INSTALL_QMLDIR})
