@@ -205,7 +205,7 @@ AbstractFormDelegate {
 
                     let value = root.value;
 
-                    if (!value) {
+                    if (!value.valueOf()) {
                         value = new Date();
                     }
 
@@ -223,9 +223,9 @@ AbstractFormDelegate {
                     });
 
                     item.accepted.connect(() => {
-                        root.value.setDate(item.value.getDate());
-                        root.value.setMonth(item.value.getMonth());
                         root.value.setFullYear(item.value.getFullYear());
+                        root.value.setMonth(item.value.getMonth());
+                        root.value.setDate(item.value.getDate());
                     });
 
                     item.open();
