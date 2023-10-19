@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 00:43+0000\n"
+"POT-Creation-Date: 2023-10-19 00:41+0000\n"
 "PO-Revision-Date: 2023-09-10 08:28+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -87,77 +87,85 @@ msgctxt "@action:button"
 msgid "Volume"
 msgstr "Гучність"
 
-#: dateandtime/DatePicker.qml:141
-#, kde-format
-msgctxt "%1 is month name, %2 is year"
-msgid "%1 %2"
-msgstr "%1 %2"
-
-#: dateandtime/DatePicker.qml:182
-#, kde-format
-msgctxt "@title:tab"
-msgid "Days"
-msgstr "Дні"
-
-#: dateandtime/DatePicker.qml:190
-#, kde-format
-msgctxt "@title:tab"
-msgid "Months"
-msgstr "Місяці"
-
-#: dateandtime/DatePicker.qml:196
-#, kde-format
-msgctxt "@title:tab"
-msgid "Years"
-msgstr "Роки"
-
-#: dateandtime/DatePopup.qml:55
-#, kde-format
-msgid "Previous"
-msgstr "Назад"
-
-#: dateandtime/DatePopup.qml:64
-#, kde-format
-msgid "Today"
-msgstr "Сьогодні"
-
-#: dateandtime/DatePopup.qml:73
-#, kde-format
-msgid "Next"
-msgstr "Далі"
-
-#: dateandtime/DatePopup.qml:92
-#, kde-format
+#: dateandtime/DatePopup.qml:71 dateandtime/TimePopup.qml:53
+#, fuzzy, kde-format
+#| msgid "Cancel"
+msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: dateandtime/DatePopup.qml:101
+#: dateandtime/DatePopup.qml:83 dateandtime/TimePopup.qml:65
 #, kde-format
-msgid "Accept"
-msgstr "Прийняти"
+msgctxt "@action:button"
+msgid "Select"
+msgstr ""
 
-#: dateandtime/private/TumblerTimePicker.qml:88
+#: dateandtime/private/DatePicker.qml:266
+#, fuzzy, kde-format
+#| msgid "Previous"
+msgctxt "@action:button"
+msgid "Go Previous"
+msgstr "Назад"
+
+#: dateandtime/private/DatePicker.qml:279
+#, kde-format
+msgctxt "@action:button"
+msgid "Jump to today"
+msgstr ""
+
+#: dateandtime/private/DatePicker.qml:286
+#, fuzzy, kde-format
+#| msgid "Next"
+msgctxt "@action:button"
+msgid "Go Next"
+msgstr "Далі"
+
+#: dateandtime/private/TumblerTimePicker.qml:96
+#, kde-format
+msgctxt "time in hour in 24h format"
+msgid "%1 hours"
+msgstr ""
+
+#: dateandtime/private/TumblerTimePicker.qml:98
+#, kde-format
+msgctxt "time in hour (PM)"
+msgid "%1 PM"
+msgstr ""
+
+#: dateandtime/private/TumblerTimePicker.qml:100
+#, kde-format
+msgctxt "time in hour (AM)"
+msgid "%1 AM"
+msgstr ""
+
+#: dateandtime/private/TumblerTimePicker.qml:107
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: formcard/AboutKDE.qml:23 formcard/labs/AboutKDE.qml:28
+#: dateandtime/private/TumblerTimePicker.qml:121
+#, kde-format
+msgctxt "number of minutes"
+msgid "%1 minutes"
+msgstr ""
+
+#: formcard/AboutKDE.qml:23
 #, kde-format
 msgid "About KDE"
 msgstr "Про KDE"
 
-#: formcard/AboutKDE.qml:50 formcard/labs/AboutKDE.qml:60
+#: formcard/AboutKDE.qml:50
 #, kde-format
 msgid "KDE"
 msgstr "KDE"
 
-#: formcard/AboutKDE.qml:59 formcard/labs/AboutKDE.qml:69
+#: formcard/AboutKDE.qml:59
 #, kde-format
 msgid "Be Free!"
 msgstr "Будьте вільними!"
 
-#: formcard/AboutKDE.qml:68 formcard/labs/AboutKDE.qml:78
+#: formcard/AboutKDE.qml:68
 #, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
@@ -183,7 +191,6 @@ msgstr ""
 "внесок до KDE, зокрема це можете зробити ви."
 
 #: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:179
-#: formcard/labs/AboutKDE.qml:86 formcard/labs/AboutPage.qml:194
 #, kde-format
 msgid "Homepage"
 msgstr "Домашня сторінка"
@@ -193,7 +200,7 @@ msgstr "Домашня сторінка"
 msgid "Report bugs"
 msgstr "Повідомити про помилку"
 
-#: formcard/AboutKDE.qml:87 formcard/labs/AboutKDE.qml:99
+#: formcard/AboutKDE.qml:87
 #, kde-format
 msgid ""
 "Software can always be improved, and the KDE team is ready to do so. "
@@ -220,7 +227,6 @@ msgstr ""
 "встановлено у значення «Список побажань» («Wishlist»)."
 
 #: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:230
-#: formcard/labs/AboutKDE.qml:108 formcard/labs/AboutPage.qml:248
 #, kde-format
 msgid "Report a bug"
 msgstr "Повідомити про помилку"
@@ -230,7 +236,7 @@ msgstr "Повідомити про помилку"
 msgid "Join us"
 msgstr "Долучитися до нас"
 
-#: formcard/AboutKDE.qml:107 formcard/labs/AboutKDE.qml:121
+#: formcard/AboutKDE.qml:107
 #, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
@@ -243,12 +249,11 @@ msgstr ""
 "документацію. Вам вирішувати!"
 
 #: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:205
-#: formcard/labs/AboutKDE.qml:128 formcard/labs/AboutPage.qml:222
 #, kde-format
 msgid "Get Involved"
 msgstr "Приєднатися до команди"
 
-#: formcard/AboutKDE.qml:123 formcard/labs/AboutKDE.qml:135
+#: formcard/AboutKDE.qml:123
 #, kde-format
 msgid "Developer Documentation"
 msgstr "Документація для розробників"
@@ -258,7 +263,7 @@ msgstr "Документація для розробників"
 msgid "Support us"
 msgstr "Підтримати нас"
 
-#: formcard/AboutKDE.qml:134 formcard/labs/AboutKDE.qml:148
+#: formcard/AboutKDE.qml:134
 #, kde-format
 msgid ""
 "KDE software is and will always be available free of charge, however "
@@ -294,28 +299,27 @@ msgstr ""
 "\n"
 "Заздалегідь вдячні вам за допомогу."
 
-#: formcard/AboutKDE.qml:146 formcard/labs/AboutKDE.qml:159
+#: formcard/AboutKDE.qml:146
 #, kde-format
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
 #: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:192
-#: formcard/labs/AboutKDE.qml:166 formcard/labs/AboutPage.qml:208
 #, kde-format
 msgid "Donate"
 msgstr "Підтримати фінансово"
 
-#: formcard/AboutPage.qml:87 formcard/labs/AboutPage.qml:96
+#: formcard/AboutPage.qml:87
 #, kde-format
 msgid "About %1"
 msgstr "Про %1"
 
-#: formcard/AboutPage.qml:133 formcard/labs/AboutPage.qml:148
+#: formcard/AboutPage.qml:133
 #, kde-format
 msgid "Copyright"
 msgstr "Авторські права"
 
-#: formcard/AboutPage.qml:141 formcard/labs/AboutPage.qml:155
+#: formcard/AboutPage.qml:141
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
@@ -324,22 +328,22 @@ msgstr[1] "Ліцензування"
 msgstr[2] "Ліцензування"
 msgstr[3] "Ліцензування"
 
-#: formcard/AboutPage.qml:237 formcard/labs/AboutPage.qml:261
+#: formcard/AboutPage.qml:237
 #, kde-format
 msgid "Libraries in use"
 msgstr "Використані бібліотеки"
 
-#: formcard/AboutPage.qml:260 formcard/labs/AboutPage.qml:289
+#: formcard/AboutPage.qml:260
 #, kde-format
 msgid "Authors"
 msgstr "Автори"
 
-#: formcard/AboutPage.qml:275 formcard/labs/AboutPage.qml:301
+#: formcard/AboutPage.qml:275
 #, kde-format
 msgid "Credits"
 msgstr "Подяки"
 
-#: formcard/AboutPage.qml:290 formcard/labs/AboutPage.qml:313
+#: formcard/AboutPage.qml:290
 #, kde-format
 msgid "Translators"
 msgstr "Перекладачі"
@@ -353,6 +357,19 @@ msgstr "Відвідайте сторінку %1 у KDE Store"
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Надіслати повідомлення ел. пошти до %1"
+
+#: formcard/FormDateTimeDelegate.qml:146
+#, fuzzy, kde-format
+#| msgid "Today"
+msgctxt "Displayed in place of the date if the selected day is today"
+msgid "Today"
+msgstr "Сьогодні"
+
+#: formcard/FormDateTimeDelegate.qml:173 formcard/FormDateTimeDelegate.qml:283
+#, kde-format
+msgctxt "Date is not set"
+msgid "Not set"
+msgstr ""
 
 #: formcard/FormTextFieldDelegate.qml:219
 #, kde-format
@@ -371,6 +388,25 @@ msgstr "Параметри"
 msgctxt "@title:window"
 msgid "Settings — %1"
 msgstr "Параметри — %1"
+
+#~ msgctxt "%1 is month name, %2 is year"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgctxt "@title:tab"
+#~ msgid "Days"
+#~ msgstr "Дні"
+
+#~ msgctxt "@title:tab"
+#~ msgid "Months"
+#~ msgstr "Місяці"
+
+#~ msgctxt "@title:tab"
+#~ msgid "Years"
+#~ msgstr "Роки"
+
+#~ msgid "Accept"
+#~ msgstr "Прийняти"
 
 #~ msgid ""
 #~ "Software can always be improved, and the KDE team is ready to do so. "

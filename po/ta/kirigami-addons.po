@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 00:43+0000\n"
+"POT-Creation-Date: 2023-10-19 00:41+0000\n"
 "PO-Revision-Date: 2023-09-10 18:03+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -86,77 +86,85 @@ msgctxt "@action:button"
 msgid "Volume"
 msgstr "ஒலியளவு"
 
-#: dateandtime/DatePicker.qml:141
-#, kde-format
-msgctxt "%1 is month name, %2 is year"
-msgid "%1 %2"
-msgstr "%1 %2"
-
-#: dateandtime/DatePicker.qml:182
-#, kde-format
-msgctxt "@title:tab"
-msgid "Days"
-msgstr "நாட்கள்"
-
-#: dateandtime/DatePicker.qml:190
-#, kde-format
-msgctxt "@title:tab"
-msgid "Months"
-msgstr "மாதங்கள்"
-
-#: dateandtime/DatePicker.qml:196
-#, kde-format
-msgctxt "@title:tab"
-msgid "Years"
-msgstr "ஆண்டுகள்"
-
-#: dateandtime/DatePopup.qml:55
-#, kde-format
-msgid "Previous"
-msgstr "முந்தையது"
-
-#: dateandtime/DatePopup.qml:64
-#, kde-format
-msgid "Today"
-msgstr "இன்று"
-
-#: dateandtime/DatePopup.qml:73
-#, kde-format
-msgid "Next"
-msgstr "அடுத்தது"
-
-#: dateandtime/DatePopup.qml:92
-#, kde-format
+#: dateandtime/DatePopup.qml:71 dateandtime/TimePopup.qml:53
+#, fuzzy, kde-format
+#| msgid "Cancel"
+msgctxt "@action:button"
 msgid "Cancel"
 msgstr "ரத்து செய்"
 
-#: dateandtime/DatePopup.qml:101
+#: dateandtime/DatePopup.qml:83 dateandtime/TimePopup.qml:65
 #, kde-format
-msgid "Accept"
-msgstr "ஏற்றுக்கொள்"
+msgctxt "@action:button"
+msgid "Select"
+msgstr ""
 
-#: dateandtime/private/TumblerTimePicker.qml:88
+#: dateandtime/private/DatePicker.qml:266
+#, fuzzy, kde-format
+#| msgid "Previous"
+msgctxt "@action:button"
+msgid "Go Previous"
+msgstr "முந்தையது"
+
+#: dateandtime/private/DatePicker.qml:279
+#, kde-format
+msgctxt "@action:button"
+msgid "Jump to today"
+msgstr ""
+
+#: dateandtime/private/DatePicker.qml:286
+#, fuzzy, kde-format
+#| msgid "Next"
+msgctxt "@action:button"
+msgid "Go Next"
+msgstr "அடுத்தது"
+
+#: dateandtime/private/TumblerTimePicker.qml:96
+#, kde-format
+msgctxt "time in hour in 24h format"
+msgid "%1 hours"
+msgstr ""
+
+#: dateandtime/private/TumblerTimePicker.qml:98
+#, kde-format
+msgctxt "time in hour (PM)"
+msgid "%1 PM"
+msgstr ""
+
+#: dateandtime/private/TumblerTimePicker.qml:100
+#, kde-format
+msgctxt "time in hour (AM)"
+msgid "%1 AM"
+msgstr ""
+
+#: dateandtime/private/TumblerTimePicker.qml:107
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: formcard/AboutKDE.qml:23 formcard/labs/AboutKDE.qml:28
+#: dateandtime/private/TumblerTimePicker.qml:121
+#, kde-format
+msgctxt "number of minutes"
+msgid "%1 minutes"
+msgstr ""
+
+#: formcard/AboutKDE.qml:23
 #, kde-format
 msgid "About KDE"
 msgstr "கே.டீ.யீ. பற்றி"
 
-#: formcard/AboutKDE.qml:50 formcard/labs/AboutKDE.qml:60
+#: formcard/AboutKDE.qml:50
 #, kde-format
 msgid "KDE"
 msgstr "கே.டீ.யீ."
 
-#: formcard/AboutKDE.qml:59 formcard/labs/AboutKDE.qml:69
+#: formcard/AboutKDE.qml:59
 #, kde-format
 msgid "Be Free!"
 msgstr "சுதந்திரமாக இரு"
 
-#: formcard/AboutKDE.qml:68 formcard/labs/AboutKDE.qml:78
+#: formcard/AboutKDE.qml:68
 #, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
@@ -179,7 +187,6 @@ msgstr ""
 "பங்களிக்கலாம்."
 
 #: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:179
-#: formcard/labs/AboutKDE.qml:86 formcard/labs/AboutPage.qml:194
 #, kde-format
 msgid "Homepage"
 msgstr "முகப்புப்பக்கம்"
@@ -189,7 +196,7 @@ msgstr "முகப்புப்பக்கம்"
 msgid "Report bugs"
 msgstr "பிழைகளைத் தெரிவிப்பது"
 
-#: formcard/AboutKDE.qml:87 formcard/labs/AboutKDE.qml:99
+#: formcard/AboutKDE.qml:87
 #, kde-format
 msgid ""
 "Software can always be improved, and the KDE team is ready to do so. "
@@ -213,7 +220,6 @@ msgstr ""
 "அப்படி தெரிவிக்கும்போது, \"Wishlist\" என்ற முக்கியத்துவத்தை தேர்ந்தெடுங்கள்."
 
 #: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:230
-#: formcard/labs/AboutKDE.qml:108 formcard/labs/AboutPage.qml:248
 #, kde-format
 msgid "Report a bug"
 msgstr "பிழையைத் தெரிவிப்பது"
@@ -223,7 +229,7 @@ msgstr "பிழையைத் தெரிவிப்பது"
 msgid "Join us"
 msgstr "எங்களுடன் சேருங்கள்"
 
-#: formcard/AboutKDE.qml:107 formcard/labs/AboutKDE.qml:121
+#: formcard/AboutKDE.qml:107
 #, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
@@ -235,12 +241,11 @@ msgstr ""
 "கையேடுகளை எழுதலாம். முடிவு உங்களதே!"
 
 #: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:205
-#: formcard/labs/AboutKDE.qml:128 formcard/labs/AboutPage.qml:222
 #, kde-format
 msgid "Get Involved"
 msgstr "பங்களிப்பது"
 
-#: formcard/AboutKDE.qml:123 formcard/labs/AboutKDE.qml:135
+#: formcard/AboutKDE.qml:123
 #, kde-format
 msgid "Developer Documentation"
 msgstr "நிரலாளர்களுக்கான கையேடு"
@@ -250,7 +255,7 @@ msgstr "நிரலாளர்களுக்கான கையேடு"
 msgid "Support us"
 msgstr "எங்களை ஆதரிப்பது"
 
-#: formcard/AboutKDE.qml:134 formcard/labs/AboutKDE.qml:148
+#: formcard/AboutKDE.qml:134
 #, kde-format
 msgid ""
 "KDE software is and will always be available free of charge, however "
@@ -284,50 +289,49 @@ msgstr ""
 "\n"
 "உங்களுடைய ஆதரவிற்கு முன்கூட்டியே நன்றி."
 
-#: formcard/AboutKDE.qml:146 formcard/labs/AboutKDE.qml:159
+#: formcard/AboutKDE.qml:146
 #, kde-format
 msgid "KDE e.V"
 msgstr "கே.டீ.யீ. e.V"
 
 #: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:192
-#: formcard/labs/AboutKDE.qml:166 formcard/labs/AboutPage.qml:208
 #, kde-format
 msgid "Donate"
 msgstr "நன்கொடை அளிப்பது"
 
-#: formcard/AboutPage.qml:87 formcard/labs/AboutPage.qml:96
+#: formcard/AboutPage.qml:87
 #, kde-format
 msgid "About %1"
 msgstr "%1 பற்றி "
 
-#: formcard/AboutPage.qml:133 formcard/labs/AboutPage.qml:148
+#: formcard/AboutPage.qml:133
 #, kde-format
 msgid "Copyright"
 msgstr "பதிப்புரிமை"
 
-#: formcard/AboutPage.qml:141 formcard/labs/AboutPage.qml:155
+#: formcard/AboutPage.qml:141
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "உரிமம்"
 msgstr[1] "உரிமங்கள்"
 
-#: formcard/AboutPage.qml:237 formcard/labs/AboutPage.qml:261
+#: formcard/AboutPage.qml:237
 #, kde-format
 msgid "Libraries in use"
 msgstr "பயனிலுள்ள நிரலகங்கள்"
 
-#: formcard/AboutPage.qml:260 formcard/labs/AboutPage.qml:289
+#: formcard/AboutPage.qml:260
 #, kde-format
 msgid "Authors"
 msgstr "இயற்றியவர்கள்"
 
-#: formcard/AboutPage.qml:275 formcard/labs/AboutPage.qml:301
+#: formcard/AboutPage.qml:275
 #, kde-format
 msgid "Credits"
 msgstr "நன்றி"
 
-#: formcard/AboutPage.qml:290 formcard/labs/AboutPage.qml:313
+#: formcard/AboutPage.qml:290
 #, kde-format
 msgid "Translators"
 msgstr "மொழிபெயர்ப்பாளர்கள்"
@@ -341,6 +345,19 @@ msgstr "%1-இன் கே.டீ.யீ. களஞ்சியப் பக்
 #, kde-format
 msgid "Send an email to %1"
 msgstr "%1 என்பவருக்கு மின்னஞ்சல் அனுப்பு"
+
+#: formcard/FormDateTimeDelegate.qml:146
+#, fuzzy, kde-format
+#| msgid "Today"
+msgctxt "Displayed in place of the date if the selected day is today"
+msgid "Today"
+msgstr "இன்று"
+
+#: formcard/FormDateTimeDelegate.qml:173 formcard/FormDateTimeDelegate.qml:283
+#, kde-format
+msgctxt "Date is not set"
+msgid "Not set"
+msgstr ""
 
 #: formcard/FormTextFieldDelegate.qml:219
 #, kde-format
@@ -359,6 +376,25 @@ msgstr "அமைப்புகள்"
 msgctxt "@title:window"
 msgid "Settings — %1"
 msgstr "அமைப்புகள் — %1"
+
+#~ msgctxt "%1 is month name, %2 is year"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgctxt "@title:tab"
+#~ msgid "Days"
+#~ msgstr "நாட்கள்"
+
+#~ msgctxt "@title:tab"
+#~ msgid "Months"
+#~ msgstr "மாதங்கள்"
+
+#~ msgctxt "@title:tab"
+#~ msgid "Years"
+#~ msgstr "ஆண்டுகள்"
+
+#~ msgid "Accept"
+#~ msgstr "ஏற்றுக்கொள்"
 
 #~ msgid ""
 #~ "Software can always be improved, and the KDE team is ready to do so. "

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 00:43+0000\n"
+"POT-Creation-Date: 2023-10-19 00:41+0000\n"
 "PO-Revision-Date: 2023-10-08 23:17+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -86,77 +86,85 @@ msgctxt "@action:button"
 msgid "Volume"
 msgstr "음량"
 
-#: dateandtime/DatePicker.qml:141
-#, kde-format
-msgctxt "%1 is month name, %2 is year"
-msgid "%1 %2"
-msgstr "%2년 %1"
-
-#: dateandtime/DatePicker.qml:182
-#, kde-format
-msgctxt "@title:tab"
-msgid "Days"
-msgstr "일"
-
-#: dateandtime/DatePicker.qml:190
-#, kde-format
-msgctxt "@title:tab"
-msgid "Months"
-msgstr "월"
-
-#: dateandtime/DatePicker.qml:196
-#, kde-format
-msgctxt "@title:tab"
-msgid "Years"
-msgstr "년"
-
-#: dateandtime/DatePopup.qml:55
-#, kde-format
-msgid "Previous"
-msgstr "이전"
-
-#: dateandtime/DatePopup.qml:64
-#, kde-format
-msgid "Today"
-msgstr "오늘"
-
-#: dateandtime/DatePopup.qml:73
-#, kde-format
-msgid "Next"
-msgstr "다음"
-
-#: dateandtime/DatePopup.qml:92
-#, kde-format
+#: dateandtime/DatePopup.qml:71 dateandtime/TimePopup.qml:53
+#, fuzzy, kde-format
+#| msgid "Cancel"
+msgctxt "@action:button"
 msgid "Cancel"
 msgstr "취소"
 
-#: dateandtime/DatePopup.qml:101
+#: dateandtime/DatePopup.qml:83 dateandtime/TimePopup.qml:65
 #, kde-format
-msgid "Accept"
-msgstr "수락"
+msgctxt "@action:button"
+msgid "Select"
+msgstr ""
 
-#: dateandtime/private/TumblerTimePicker.qml:88
+#: dateandtime/private/DatePicker.qml:266
+#, fuzzy, kde-format
+#| msgid "Previous"
+msgctxt "@action:button"
+msgid "Go Previous"
+msgstr "이전"
+
+#: dateandtime/private/DatePicker.qml:279
+#, kde-format
+msgctxt "@action:button"
+msgid "Jump to today"
+msgstr ""
+
+#: dateandtime/private/DatePicker.qml:286
+#, fuzzy, kde-format
+#| msgid "Next"
+msgctxt "@action:button"
+msgid "Go Next"
+msgstr "다음"
+
+#: dateandtime/private/TumblerTimePicker.qml:96
+#, kde-format
+msgctxt "time in hour in 24h format"
+msgid "%1 hours"
+msgstr ""
+
+#: dateandtime/private/TumblerTimePicker.qml:98
+#, kde-format
+msgctxt "time in hour (PM)"
+msgid "%1 PM"
+msgstr ""
+
+#: dateandtime/private/TumblerTimePicker.qml:100
+#, kde-format
+msgctxt "time in hour (AM)"
+msgid "%1 AM"
+msgstr ""
+
+#: dateandtime/private/TumblerTimePicker.qml:107
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: formcard/AboutKDE.qml:23 formcard/labs/AboutKDE.qml:28
+#: dateandtime/private/TumblerTimePicker.qml:121
+#, kde-format
+msgctxt "number of minutes"
+msgid "%1 minutes"
+msgstr ""
+
+#: formcard/AboutKDE.qml:23
 #, kde-format
 msgid "About KDE"
 msgstr "KDE 정보"
 
-#: formcard/AboutKDE.qml:50 formcard/labs/AboutKDE.qml:60
+#: formcard/AboutKDE.qml:50
 #, kde-format
 msgid "KDE"
 msgstr "KDE"
 
-#: formcard/AboutKDE.qml:59 formcard/labs/AboutKDE.qml:69
+#: formcard/AboutKDE.qml:59
 #, kde-format
 msgid "Be Free!"
 msgstr "자유롭게!"
 
-#: formcard/AboutKDE.qml:68 formcard/labs/AboutKDE.qml:78
+#: formcard/AboutKDE.qml:68
 #, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
@@ -179,7 +187,6 @@ msgstr ""
 "기여할 수 있습니다."
 
 #: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:179
-#: formcard/labs/AboutKDE.qml:86 formcard/labs/AboutPage.qml:194
 #, kde-format
 msgid "Homepage"
 msgstr "홈페이지"
@@ -189,7 +196,7 @@ msgstr "홈페이지"
 msgid "Report bugs"
 msgstr "버그 보고"
 
-#: formcard/AboutKDE.qml:87 formcard/labs/AboutKDE.qml:99
+#: formcard/AboutKDE.qml:87
 #, kde-format
 msgid ""
 "Software can always be improved, and the KDE team is ready to do so. "
@@ -214,7 +221,6 @@ msgstr ""
 "경우 심각성 항목에서 \"Wishlist\"를 선택하셔야 합니다."
 
 #: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:230
-#: formcard/labs/AboutKDE.qml:108 formcard/labs/AboutPage.qml:248
 #, kde-format
 msgid "Report a bug"
 msgstr "버그 보고"
@@ -224,7 +230,7 @@ msgstr "버그 보고"
 msgid "Join us"
 msgstr "참여하기"
 
-#: formcard/AboutKDE.qml:107 formcard/labs/AboutKDE.qml:121
+#: formcard/AboutKDE.qml:107
 #, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
@@ -236,12 +242,11 @@ msgstr ""
 "나은 문서 등을 기여할 수도 있습니다. 직접 결정하십시오!"
 
 #: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:205
-#: formcard/labs/AboutKDE.qml:128 formcard/labs/AboutPage.qml:222
 #, kde-format
 msgid "Get Involved"
 msgstr "참여하기"
 
-#: formcard/AboutKDE.qml:123 formcard/labs/AboutKDE.qml:135
+#: formcard/AboutKDE.qml:123
 #, kde-format
 msgid "Developer Documentation"
 msgstr "개발자 문서"
@@ -251,7 +256,7 @@ msgstr "개발자 문서"
 msgid "Support us"
 msgstr "지원하기"
 
-#: formcard/AboutKDE.qml:134 formcard/labs/AboutKDE.qml:148
+#: formcard/AboutKDE.qml:134
 #, kde-format
 msgid ""
 "KDE software is and will always be available free of charge, however "
@@ -284,49 +289,48 @@ msgstr ""
 "\n"
 "여러분의 협조에  미리 감사드립니다."
 
-#: formcard/AboutKDE.qml:146 formcard/labs/AboutKDE.qml:159
+#: formcard/AboutKDE.qml:146
 #, kde-format
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
 #: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:192
-#: formcard/labs/AboutKDE.qml:166 formcard/labs/AboutPage.qml:208
 #, kde-format
 msgid "Donate"
 msgstr "기부하기"
 
-#: formcard/AboutPage.qml:87 formcard/labs/AboutPage.qml:96
+#: formcard/AboutPage.qml:87
 #, kde-format
 msgid "About %1"
 msgstr "%1 정보"
 
-#: formcard/AboutPage.qml:133 formcard/labs/AboutPage.qml:148
+#: formcard/AboutPage.qml:133
 #, kde-format
 msgid "Copyright"
 msgstr "저작권"
 
-#: formcard/AboutPage.qml:141 formcard/labs/AboutPage.qml:155
+#: formcard/AboutPage.qml:141
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "라이선스"
 
-#: formcard/AboutPage.qml:237 formcard/labs/AboutPage.qml:261
+#: formcard/AboutPage.qml:237
 #, kde-format
 msgid "Libraries in use"
 msgstr "사용하는 라이브러리"
 
-#: formcard/AboutPage.qml:260 formcard/labs/AboutPage.qml:289
+#: formcard/AboutPage.qml:260
 #, kde-format
 msgid "Authors"
 msgstr "작성자"
 
-#: formcard/AboutPage.qml:275 formcard/labs/AboutPage.qml:301
+#: formcard/AboutPage.qml:275
 #, kde-format
 msgid "Credits"
 msgstr "제작진"
 
-#: formcard/AboutPage.qml:290 formcard/labs/AboutPage.qml:313
+#: formcard/AboutPage.qml:290
 #, kde-format
 msgid "Translators"
 msgstr "번역자"
@@ -340,6 +344,19 @@ msgstr "%1의 KDE 스토어 페이지 방문"
 #, kde-format
 msgid "Send an email to %1"
 msgstr "%1(으)로 이메일 보내기"
+
+#: formcard/FormDateTimeDelegate.qml:146
+#, fuzzy, kde-format
+#| msgid "Today"
+msgctxt "Displayed in place of the date if the selected day is today"
+msgid "Today"
+msgstr "오늘"
+
+#: formcard/FormDateTimeDelegate.qml:173 formcard/FormDateTimeDelegate.qml:283
+#, kde-format
+msgctxt "Date is not set"
+msgid "Not set"
+msgstr ""
 
 #: formcard/FormTextFieldDelegate.qml:219
 #, kde-format
@@ -358,6 +375,25 @@ msgstr "설정"
 msgctxt "@title:window"
 msgid "Settings — %1"
 msgstr "설정 — %1"
+
+#~ msgctxt "%1 is month name, %2 is year"
+#~ msgid "%1 %2"
+#~ msgstr "%2년 %1"
+
+#~ msgctxt "@title:tab"
+#~ msgid "Days"
+#~ msgstr "일"
+
+#~ msgctxt "@title:tab"
+#~ msgid "Months"
+#~ msgstr "월"
+
+#~ msgctxt "@title:tab"
+#~ msgid "Years"
+#~ msgstr "년"
+
+#~ msgid "Accept"
+#~ msgstr "수락"
 
 #~ msgid ""
 #~ "Software can always be improved, and the KDE team is ready to do so. "
