@@ -158,16 +158,29 @@ FormCardPage {
             }
         }
 
-        data: Kirigami.OverlaySheet {
+        data: KirigamiComponents.MessageDialog {
             id: licenseSheet
-            property alias text: bodyLabel.text
-            parent: applicationWindow().overlay
 
-            contentItem: Kirigami.SelectableLabel {
-                id: bodyLabel
-                text: licenseSheet.text
-                Layout.preferredWidth: Kirigami.Units.gridUnit * 15
+            property alias text: bodyLabel.text
+
+            parent: applicationWindow().overlay
+            iconName: "license"
+
+            leftPadding: 0
+            rightPadding: 0
+            bottomPadding: 0
+
+            contentItem: QQC2.ScrollView {
+                leftPadding: Kirigami.Units.gridUnit
+                rightPadding: Kirigami.Units.gridUnit
+
+                Kirigami.SelectableLabel {
+                    id: bodyLabel
+                    text: licenseSheet.text
+                }
             }
+
+            footer: null
         }
     }
 
@@ -417,20 +430,34 @@ FormCardPage {
                     QQC2.ToolButton {
                         visible: modelData.licenses !== 0
                         icon.name: "license"
+
                         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                         QQC2.ToolTip.visible: hovered
                         QQC2.ToolTip.text: !visible ? "" : delegate.modelData.licenses.name
 
-                        Kirigami.OverlaySheet {
+                        KirigamiComponents.MessageDialog {
                             id: licenseSheet
+
+                            parent: applicationWindow().overlay
+                            iconName: "license"
+
+                            leftPadding: 0
+                            rightPadding: 0
+                            bottomPadding: 0
 
                             title: delegate.modelData.licenses.name
 
-                            contentItem: Kirigami.SelectableLabel {
-                                id: bodyLabel
-                                text: delegate.modelData.licenses.text
-                                Layout.preferredWidth: Kirigami.Units.gridUnit * 15
+                            contentItem: QQC2.ScrollView {
+                                leftPadding: Kirigami.Units.gridUnit
+                                rightPadding: Kirigami.Units.gridUnit
+
+                                Kirigami.SelectableLabel {
+                                    id: bodyLabel
+                                    text: delegate.modelData.licenses.text
+                                }
                             }
+
+                            footer: null
                         }
 
                         onClicked: licenseSheet.open()

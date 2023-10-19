@@ -22,12 +22,15 @@ T.Dialog {
 
     property int dialogType: MessageDialog.Sucess
 
+    property string iconName: ''
+
     x: Math.round((parent.width - width) / 2)
-    y: Math.round(parent.height / 3)
+    y: Math.round((parent.height - height) / 2)
 
     parent: applicationWindow().QQC2.Overlay.overlay
 
     width: Math.min(parent.width - Kirigami.Units.gridUnit * 4, Kirigami.Units.gridUnit * 30)
+    height: Math.min(parent.height - Kirigami.Units.gridUnit * 4, Kirigami.Units.gridUnit * 30)
 
     z: Kirigami.OverlayZStacking.z
 
@@ -45,17 +48,22 @@ T.Dialog {
     header: ColumnLayout {
         spacing: Kirigami.Units.largeSpacing
         Kirigami.Icon {
-            source: switch (root.dialogType) {
-            case MessageDialog.Sucess:
-                return "data-sucess";
-            case MessageDialog.Warning:
-                return "data-warning";
-            case MessageDialog.Error:
-                return "data-error";
-            case MessageDialog.Information:
-                return "data-information";
-            default:
-                return "data-warning";
+            source: {
+                if (root.iconName.length > 0) {
+                    return root.iconName
+                }
+                switch (root.dialogType) {
+                case MessageDialog.Sucess:
+                    return "data-sucess";
+                case MessageDialog.Warning:
+                    return "data-warning";
+                case MessageDialog.Error:
+                    return "data-error";
+                case MessageDialog.Information:
+                    return "data-information";
+                default:
+                    return "data-warning";
+                }
             }
             Layout.preferredWidth: Kirigami.Units.iconSizes.huge
             Layout.preferredHeight: Kirigami.Units.iconSizes.huge
@@ -99,4 +107,17 @@ T.Dialog {
 
     background: Components.DialogRoundedBackground {}
     footer: Components.MessageDialogButtonBox {}
+
+    // black background, fades in and out
+    QQC2.Overlay.modal: Rectangle {
+        color: Qt.rgba(0, 0, 0, 0.3)
+
+        // the opacity of the item is changed internally by QQuickPopup on open/close
+        Behavior on opacity {
+            OpacityAnimator {
+                duration: Kirigami.Units.longDuration
+                easing.type: Easing.InOutQuad
+            }
+        }
+    }
 }
