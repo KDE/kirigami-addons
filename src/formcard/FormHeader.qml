@@ -72,6 +72,7 @@ Item {
             rightPadding: root.rightPadding
 
             font.weight: Font.DemiBold
+            wrapMode: Text.WordWrap
             Accessible.role: Accessible.Heading
             Layout.fillWidth: true
         }
