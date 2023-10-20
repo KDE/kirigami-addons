@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-19 00:41+0000\n"
+"POT-Creation-Date: 2023-10-20 00:41+0000\n"
 "PO-Revision-Date: 2021-06-29 17:45+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -179,7 +179,7 @@ msgid ""
 "to KDE, including you."
 msgstr ""
 
-#: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:179
+#: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:192
 #, kde-format
 msgid "Homepage"
 msgstr ""
@@ -204,7 +204,7 @@ msgid ""
 "\"Wishlist\"."
 msgstr ""
 
-#: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:230
+#: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:243
 #, kde-format
 msgid "Report a bug"
 msgstr ""
@@ -222,7 +222,7 @@ msgid ""
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
 
-#: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:205
+#: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:218
 #, kde-format
 msgid "Get Involved"
 msgstr ""
@@ -263,7 +263,7 @@ msgstr ""
 msgid "KDE e.V"
 msgstr ""
 
-#: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:192
+#: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:205
 #, kde-format
 msgid "Donate"
 msgstr ""
@@ -285,32 +285,32 @@ msgid_plural "Licenses"
 msgstr[0] ""
 msgstr[1] ""
 
-#: formcard/AboutPage.qml:237
+#: formcard/AboutPage.qml:250
 #, kde-format
 msgid "Libraries in use"
 msgstr ""
 
-#: formcard/AboutPage.qml:260
+#: formcard/AboutPage.qml:273
 #, kde-format
 msgid "Authors"
 msgstr ""
 
-#: formcard/AboutPage.qml:275
+#: formcard/AboutPage.qml:288
 #, kde-format
 msgid "Credits"
 msgstr ""
 
-#: formcard/AboutPage.qml:290
+#: formcard/AboutPage.qml:303
 #, kde-format
 msgid "Translators"
 msgstr ""
 
-#: formcard/AboutPage.qml:359
+#: formcard/AboutPage.qml:372
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr ""
 
-#: formcard/AboutPage.qml:368
+#: formcard/AboutPage.qml:381
 #, kde-format
 msgid "Send an email to %1"
 msgstr ""

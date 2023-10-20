@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-19 00:41+0000\n"
-"PO-Revision-Date: 2023-09-10 10:35+0300\n"
+"POT-Creation-Date: 2023-10-20 00:41+0000\n"
+"PO-Revision-Date: 2023-10-19 06:06+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -87,8 +87,7 @@ msgid "Volume"
 msgstr "Ses Düzeyi"
 
 #: dateandtime/DatePopup.qml:71 dateandtime/TimePopup.qml:53
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "İptal"
@@ -97,45 +96,43 @@ msgstr "İptal"
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
-msgstr ""
+msgstr "Seç"
 
 #: dateandtime/private/DatePicker.qml:266
-#, fuzzy, kde-format
-#| msgid "Previous"
+#, kde-format
 msgctxt "@action:button"
 msgid "Go Previous"
-msgstr "Önceki"
+msgstr "Öncekine Git"
 
 #: dateandtime/private/DatePicker.qml:279
 #, kde-format
 msgctxt "@action:button"
 msgid "Jump to today"
-msgstr ""
+msgstr "Bugüne Atla"
 
 #: dateandtime/private/DatePicker.qml:286
-#, fuzzy, kde-format
-#| msgid "Next"
+#, kde-format
 msgctxt "@action:button"
 msgid "Go Next"
-msgstr "Sonraki"
+msgstr "Sonrakine Git"
 
 #: dateandtime/private/TumblerTimePicker.qml:96
 #, kde-format
 msgctxt "time in hour in 24h format"
 msgid "%1 hours"
-msgstr ""
+msgstr "%1 saat"
 
 #: dateandtime/private/TumblerTimePicker.qml:98
 #, kde-format
 msgctxt "time in hour (PM)"
 msgid "%1 PM"
-msgstr ""
+msgstr "%1 ÖS"
 
 #: dateandtime/private/TumblerTimePicker.qml:100
 #, kde-format
 msgctxt "time in hour (AM)"
 msgid "%1 AM"
-msgstr ""
+msgstr "%1 ÖÖ"
 
 #: dateandtime/private/TumblerTimePicker.qml:107
 #, kde-format
@@ -147,7 +144,7 @@ msgstr ":"
 #, kde-format
 msgctxt "number of minutes"
 msgid "%1 minutes"
-msgstr ""
+msgstr "%1 dakika"
 
 #: formcard/AboutKDE.qml:23
 #, kde-format
@@ -188,7 +185,7 @@ msgstr ""
 "Yazılımını oluşturma ortak hedefine ulaşmak için birlikte çalışıyoruz. Siz "
 "de dahil olmak üzere herkes KDE'ye katılabilir ve katkıda bulunabilir."
 
-#: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:179
+#: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:192
 #, kde-format
 msgid "Homepage"
 msgstr "Ana Sayfa"
@@ -224,7 +221,7 @@ msgstr ""
 "Bir iyileştirme önerisinde bulunmak için de hata izleme sistemini "
 "kullanabilirsiniz. \"Wishlist\" önceliğini seçtiğinizden emin olun."
 
-#: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:230
+#: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:243
 #, kde-format
 msgid "Report a bug"
 msgstr "Hata Bildir"
@@ -246,7 +243,7 @@ msgstr ""
 "katılabilirsiniz. İsterseniz grafikler, temalar, sesler yaratabilir ve "
 "yardım belgeleri yazıp var olanları geliştirebilirsiniz. Karar sizin!"
 
-#: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:205
+#: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:218
 #, kde-format
 msgid "Get Involved"
 msgstr "Katıl"
@@ -302,7 +299,7 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:192
+#: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:205
 #, kde-format
 msgid "Donate"
 msgstr "Bağış Yap"
@@ -324,39 +321,38 @@ msgid_plural "Licenses"
 msgstr[0] "Lisans"
 msgstr[1] "Lisanslar"
 
-#: formcard/AboutPage.qml:237
+#: formcard/AboutPage.qml:250
 #, kde-format
 msgid "Libraries in use"
 msgstr "Kullanılan kitaplıklar"
 
-#: formcard/AboutPage.qml:260
+#: formcard/AboutPage.qml:273
 #, kde-format
 msgid "Authors"
 msgstr "Yazarlar"
 
-#: formcard/AboutPage.qml:275
+#: formcard/AboutPage.qml:288
 #, kde-format
 msgid "Credits"
 msgstr "Emeği Geçenler"
 
-#: formcard/AboutPage.qml:290
+#: formcard/AboutPage.qml:303
 #, kde-format
 msgid "Translators"
 msgstr "Çeviriler"
 
-#: formcard/AboutPage.qml:359
+#: formcard/AboutPage.qml:372
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "KDE Store Sayfasına Git: %1"
 
-#: formcard/AboutPage.qml:368
+#: formcard/AboutPage.qml:381
 #, kde-format
 msgid "Send an email to %1"
 msgstr "E-posta Gönder: %1"
 
 #: formcard/FormDateTimeDelegate.qml:146
-#, fuzzy, kde-format
-#| msgid "Today"
+#, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
 msgid "Today"
 msgstr "Bugün"
@@ -365,7 +361,7 @@ msgstr "Bugün"
 #, kde-format
 msgctxt "Date is not set"
 msgid "Not set"
-msgstr ""
+msgstr "Ayarlanmadı"
 
 #: formcard/FormTextFieldDelegate.qml:219
 #, kde-format
