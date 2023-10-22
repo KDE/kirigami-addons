@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-20 00:41+0000\n"
-"PO-Revision-Date: 2023-10-13 16:34+0200\n"
+"PO-Revision-Date: 2023-10-20 12:41+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -88,8 +88,7 @@ msgid "Volume"
 msgstr "Volume"
 
 #: dateandtime/DatePopup.qml:71 dateandtime/TimePopup.qml:53
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Annuler"
@@ -98,45 +97,43 @@ msgstr "Annuler"
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
-msgstr ""
+msgstr "Sélectionner"
 
 #: dateandtime/private/DatePicker.qml:266
-#, fuzzy, kde-format
-#| msgid "Previous"
+#, kde-format
 msgctxt "@action:button"
 msgid "Go Previous"
-msgstr "Précédent"
+msgstr "Aller au précédent"
 
 #: dateandtime/private/DatePicker.qml:279
 #, kde-format
 msgctxt "@action:button"
 msgid "Jump to today"
-msgstr ""
+msgstr "Aller à aujourd'hui"
 
 #: dateandtime/private/DatePicker.qml:286
-#, fuzzy, kde-format
-#| msgid "Next"
+#, kde-format
 msgctxt "@action:button"
 msgid "Go Next"
-msgstr "Suivant"
+msgstr "Aller au suivant"
 
 #: dateandtime/private/TumblerTimePicker.qml:96
 #, kde-format
 msgctxt "time in hour in 24h format"
 msgid "%1 hours"
-msgstr ""
+msgstr "%1 heures"
 
 #: dateandtime/private/TumblerTimePicker.qml:98
 #, kde-format
 msgctxt "time in hour (PM)"
 msgid "%1 PM"
-msgstr ""
+msgstr "%1 PM"
 
 #: dateandtime/private/TumblerTimePicker.qml:100
 #, kde-format
 msgctxt "time in hour (AM)"
 msgid "%1 AM"
-msgstr ""
+msgstr "%1 AM"
 
 #: dateandtime/private/TumblerTimePicker.qml:107
 #, kde-format
@@ -148,7 +145,7 @@ msgstr ":"
 #, kde-format
 msgctxt "number of minutes"
 msgid "%1 minutes"
-msgstr ""
+msgstr "%1 minutes"
 
 #: formcard/AboutKDE.qml:23
 #, kde-format
@@ -359,8 +356,7 @@ msgid "Send an email to %1"
 msgstr "Envoyer un courriel vers %1"
 
 #: formcard/FormDateTimeDelegate.qml:146
-#, fuzzy, kde-format
-#| msgid "Today"
+#, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
 msgid "Today"
 msgstr "Aujourd'hui"
@@ -369,7 +365,7 @@ msgstr "Aujourd'hui"
 #, kde-format
 msgctxt "Date is not set"
 msgid "Not set"
-msgstr ""
+msgstr "Non défini"
 
 #: formcard/FormTextFieldDelegate.qml:219
 #, kde-format
