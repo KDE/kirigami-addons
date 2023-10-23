@@ -71,8 +71,6 @@ Item {
             leftPadding: root.leftPadding
             rightPadding: root.rightPadding
 
-            wrapMode: Text.WordWrap
-
             font.weight: Font.DemiBold
             wrapMode: Text.WordWrap
             Accessible.role: Accessible.Heading
