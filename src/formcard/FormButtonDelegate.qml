@@ -113,6 +113,7 @@ AbstractFormDelegate {
             Layout.leftMargin: Kirigami.Units.smallSpacing
             Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
             direction: Qt.RightArrow
+            visible: root.background.visible
         }
     }
 
