@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-20 00:41+0000\n"
-"PO-Revision-Date: 2023-09-10 18:03+0530\n"
+"PO-Revision-Date: 2023-10-22 17:05+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.0\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: components/AbstractMaximizeComponent.qml:125
 #, kde-format
@@ -87,8 +87,7 @@ msgid "Volume"
 msgstr "ஒலியளவு"
 
 #: dateandtime/DatePopup.qml:71 dateandtime/TimePopup.qml:53
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "ரத்து செய்"
@@ -97,45 +96,43 @@ msgstr "ரத்து செய்"
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
-msgstr ""
+msgstr "தேர்ந்தெடு"
 
 #: dateandtime/private/DatePicker.qml:266
-#, fuzzy, kde-format
-#| msgid "Previous"
+#, kde-format
 msgctxt "@action:button"
 msgid "Go Previous"
-msgstr "முந்தையது"
+msgstr "முந்தையதற்கு செல்"
 
 #: dateandtime/private/DatePicker.qml:279
 #, kde-format
 msgctxt "@action:button"
 msgid "Jump to today"
-msgstr ""
+msgstr "இன்றுக்கு செல்"
 
 #: dateandtime/private/DatePicker.qml:286
-#, fuzzy, kde-format
-#| msgid "Next"
+#, kde-format
 msgctxt "@action:button"
 msgid "Go Next"
-msgstr "அடுத்தது"
+msgstr "அடுத்ததற்கு செல்"
 
 #: dateandtime/private/TumblerTimePicker.qml:96
 #, kde-format
 msgctxt "time in hour in 24h format"
 msgid "%1 hours"
-msgstr ""
+msgstr "%1 மணிநேரம்"
 
 #: dateandtime/private/TumblerTimePicker.qml:98
 #, kde-format
 msgctxt "time in hour (PM)"
 msgid "%1 PM"
-msgstr ""
+msgstr "%1 பி.ப."
 
 #: dateandtime/private/TumblerTimePicker.qml:100
 #, kde-format
 msgctxt "time in hour (AM)"
 msgid "%1 AM"
-msgstr ""
+msgstr "%1 மு.ப."
 
 #: dateandtime/private/TumblerTimePicker.qml:107
 #, kde-format
@@ -147,7 +144,7 @@ msgstr ":"
 #, kde-format
 msgctxt "number of minutes"
 msgid "%1 minutes"
-msgstr ""
+msgstr "%1 நிமிடங்கள்"
 
 #: formcard/AboutKDE.qml:23
 #, kde-format
@@ -347,8 +344,7 @@ msgid "Send an email to %1"
 msgstr "%1 என்பவருக்கு மின்னஞ்சல் அனுப்பு"
 
 #: formcard/FormDateTimeDelegate.qml:146
-#, fuzzy, kde-format
-#| msgid "Today"
+#, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
 msgid "Today"
 msgstr "இன்று"
@@ -357,7 +353,7 @@ msgstr "இன்று"
 #, kde-format
 msgctxt "Date is not set"
 msgid "Not set"
-msgstr ""
+msgstr "அமைக்கப்படவில்லை"
 
 #: formcard/FormTextFieldDelegate.qml:219
 #, kde-format
