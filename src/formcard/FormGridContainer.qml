@@ -3,12 +3,13 @@
 // SPDX-FileCopyrightText: 2023 Carl Schwan <carl@carlschwan.eu>
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
-import QtQml 2.15
-import QtQuick 2.15
-import QtQuick.Controls 2.15 as QQC2
-import QtQuick.Layouts 1.15
+import QtQml
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Templates as T
+import QtQuick.Layouts
 
-import org.kde.kirigami 2.19 as Kirigami
+import org.kde.kirigami as Kirigami
 
 import "private" as Private
 
@@ -98,11 +99,15 @@ Item {
      * }
      * @endcode
      */
-    property list<InfoCard> infoCards
+    property list<QtObject> infoCards
 
     component InfoCard: QtObject {
+        property bool visible: true
         property string title
         property string subtitle
+        property string buttonIcon
+        property string tooltipText
+        property int subtitleTextFormat: Text.AutoText
         property Kirigami.Action action
     }
 
@@ -126,6 +131,7 @@ Item {
             id: grid
 
             readonly property int cellWidth: Kirigami.Units.gridUnit * 10
+            readonly property int visibleChildrenCount: visibleChildren.length - 1
 
             anchors {
                 fill: parent
@@ -135,7 +141,7 @@ Item {
                 bottomMargin: root.bottomPadding
             }
 
-            columns: root.cardWidthRestricted && cardRepeater.count % 3 === 0 ? 3 : 2
+            columns: root.cardWidthRestricted && grid.visibleChildrenCount % 3 === 0 ? 3 : 2
             columnSpacing: Kirigami.Units.smallSpacing
             rowSpacing: Kirigami.Units.smallSpacing
 
@@ -152,6 +158,11 @@ Item {
 
                     readonly property string title: modelData.title
                     readonly property string subtitle: modelData.subtitle
+                    readonly property string buttonIcon: modelData.buttonIcon
+                    readonly property string tooltipText: modelData.tooltipText
+                    readonly property int subtitleTextFormat: modelData.subtitleTextFormat
+
+                    visible: modelData.visible
 
                     action: modelData.action
 
@@ -169,9 +180,13 @@ Item {
                     Accessible.role: action ? Accessible.Button : Accessible.Note
 
                     Layout.preferredWidth: grid.cellWidth
-                    Layout.columnSpan: cardRepeater.count % grid.columns !== 0 && index === cardRepeater.count - 1 ? 2 : 1
+                    Layout.columnSpan: grid.visibleChildrenCount % grid.columns !== 0 && index === grid.visibleChildrenCount - 1 ? 2 : 1
                     Layout.fillWidth: true
                     Layout.fillHeight: true
+
+                    QQC2.ToolTip.text: tooltipText
+                    QQC2.ToolTip.visible: tooltipText && hovered
+                    QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
 
                     background: Rectangle {
                         radius: root.cardWidthRestricted ? Kirigami.Units.smallSpacing : 0
@@ -208,32 +223,44 @@ Item {
                         }
                     }
 
-                    contentItem: ColumnLayout {
-                        spacing: 0
+                    contentItem: RowLayout {
+                        Kirigami.Icon {
+                            id: icon
 
-                        // Title
-                        Kirigami.Heading {
-                            Layout.fillWidth: true
-                            level: 4
-                            text: infoCardDelegate.title
-                            verticalAlignment: Text.AlignVCenter
-                            horizontalAlignment: Text.AlignHCenter
-                            maximumLineCount: 2
-                            elide: Text.ElideRight
-                            wrapMode: Text.Wrap
+                            source: infoCardDelegate.buttonIcon
+                            visible: source
+                            Layout.alignment: Qt.AlignTop
                         }
 
-                        // Subtitle
-                        QQC2.Label {
-                            Layout.fillWidth: true
-                            Layout.fillHeight: true
-                            visible: infoCardDelegate.subtitle
-                            text: infoCardDelegate.subtitle
-                            horizontalAlignment: Text.AlignHCenter
-                            elide: Text.ElideRight
-                            wrapMode: Text.Wrap
-                            opacity: 0.6
-                            verticalAlignment: Text.AlignTop
+                        ColumnLayout {
+                            spacing: 0
+
+                            // Title
+                            Kirigami.Heading {
+                                Layout.fillWidth: true
+                                level: 4
+                                text: infoCardDelegate.title
+                                verticalAlignment: Text.AlignVCenter
+                                horizontalAlignment: icon.visible ? Text.AlignLeft : Text.AlignHCenter
+                                maximumLineCount: 2
+                                elide: Text.ElideRight
+                                wrapMode: Text.Wrap
+                            }
+
+                            // Subtitle
+                            QQC2.Label {
+                                Layout.fillWidth: true
+                                Layout.fillHeight: true
+                                visible: infoCardDelegate.subtitle
+                                text: infoCardDelegate.subtitle
+                                horizontalAlignment: icon.visible ? Text.AlignLeft : Text.AlignHCenter
+                                elide: Text.ElideRight
+                                wrapMode: Text.Wrap
+                                textFormat: infoCardDelegate.subtitleTextFormat
+                                opacity: 0.6
+                                verticalAlignment: Text.AlignTop
+                                onLinkActivated: (link) => modelData.linkActivated(link)
+                            }
                         }
                     }
                 }
