@@ -110,9 +110,6 @@ T.RoundButton {
             height: width
             radius: controlRoot.radius
 
-            Kirigami.Theme.inherit: false
-            Kirigami.Theme.colorSet: Kirigami.Theme.Window
-
             shadow {
                 size: 10
                 xOffset: 0
