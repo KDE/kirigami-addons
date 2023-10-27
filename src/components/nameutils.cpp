@@ -45,6 +45,10 @@ QString NameUtils::initialsFromString(const QString &string)
     // Remove stuff inside parantheses
     normalized = normalized.split(QLatin1Char('('))[0];
 
+    if (normalized.isEmpty()) {
+        return {};
+    }
+
     if (normalized.contains(QLatin1Char(' '))) {
         // "FirstName Name Name LastName" -> "FirstName" "Name" "Name" "LastName"
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
