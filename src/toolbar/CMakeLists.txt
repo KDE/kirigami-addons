@@ -12,11 +12,13 @@ target_sources(toolbarplugin PRIVATE
 
 ecm_target_qml_sources(toolbarplugin SOURCES
     ToolBar.qml
+    ButtonEditDialog.qml
 )
 
 target_link_libraries(toolbarplugin PRIVATE
     Qt::Quick
     Qt::Qml
+    Qt::QuickTemplates2Private
     KF6::I18n
     KF6::ConfigCore
 )

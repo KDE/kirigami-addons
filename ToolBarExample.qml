@@ -32,7 +32,7 @@ Kirigami.ApplicationWindow {
                 onTriggered: console.warn("alligator")
             }
         ]
-        defaultLayout: [ "neoChat", "kasts", "alligator", "kate" ]
+        defaultLayout: [ "neoChat", "kasts", "alligator", "kate", "alligator" ]
         width: parent.width
     }
 }

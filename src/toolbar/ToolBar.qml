@@ -19,11 +19,28 @@ QQC2.ToolBar {
             }
 
             delegate: QQC2.ToolButton {
+                id: button
                 text: model.text
                 icon.name: model.icon
-                onClicked: toolBar.actions[model.indexInAll].onTriggered()
-                onPressAndHold: manager.removeItem(model.index)
+                onClicked: toolBar.actions[model.indexInAll].triggered()
+                onPressAndHold: {
+                    let dialog = buttonEditDialog.createObject(applicationWindow().overlay, {
+                        manager: manager,
+                        index: model.index,
+                        text: button.text,
+                    })
+                    dialog.displayChanged.connect(mode => button.display = mode)
+                    dialog.textChanged.connect(() => button.text = dialog.text)
+                    dialog.open()
+                }
             }
+        }
+    }
+
+    Component {
+        id: buttonEditDialog
+        ButtonEditDialog {
+
         }
     }
 }

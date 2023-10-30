@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
 #include "toolbarstatemanager.h"
+
 #include <QDebug>
 #include <QMetaProperty>
 #include <QJsonObject>
@@ -127,6 +128,7 @@ void ToolBarStateManager::removeItem(int index)
     beginRemoveRows(QModelIndex(), index, index);
     m_items.removeAt(index);
     endRemoveRows();
+    // TODO state config
     KConfig config(QStringLiteral("toolbar-foo")); //TODO toolbar name;
     config.deleteGroup("actions");
     KConfigGroup actions(&config, "actions");
