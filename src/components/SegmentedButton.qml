@@ -26,6 +26,9 @@ RowLayout {
             required property int index
             required property T.Action modelData
 
+            property bool highlightBackground: down || checked
+            property bool highlightBorder: enabled && down || checked || highlighted || visualFocus || hovered
+
             padding: Kirigami.Units.mediumSpacing
 
             focus: index === 0
@@ -56,7 +59,13 @@ RowLayout {
             }
 
             background: Kirigami.ShadowedRectangle {
-                property bool highlightBackground: buttonDelegate.down || buttonDelegate.checked
+
+                property color flatColor: Qt.rgba(
+                    Kirigami.Theme.backgroundColor.r,
+                    Kirigami.Theme.backgroundColor.g,
+                    Kirigami.Theme.backgroundColor.b,
+                    0
+                )
 
                 corners {
                     topLeftRadius: buttonDelegate.index === 0 ? Kirigami.Units.mediumSpacing : 0
@@ -66,24 +75,68 @@ RowLayout {
                     topRightRadius: buttonDelegate.index === buttonRepeater.count - 1 ? Kirigami.Units.mediumSpacing : 0
                 }
 
-                color: if (highlightBackground) {
-                    return Kirigami.Theme.alternateBackgroundColor
-                } else if (buttonDelegate.highlighted || buttonDelegate.checked || (buttonDelegate.down && !buttonDelegate.checked) || buttonDelegate.visualFocus) {
-                    const highlight = Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.highlightColor, 0.3);
-                    if (buttonDelegate.hovered) {
-                        Kirigami.ColorUtils.tintWithAlpha(highlight, Kirigami.Theme.textColor, 0.10)
+                visible: !buttonDelegate.flat || buttonDelegate.editable || buttonDelegate.down || buttonDelegate.checked || buttonDelegate.highlighted || buttonDelegate.visualFocus || buttonDelegate.hovered
+
+                color: {
+                    if (buttonDelegate.highlightBackground) {
+                        return Kirigami.Theme.alternateBackgroundColor
+                    } else if (buttonDelegate.flat) {
+                        return flatColor
                     } else {
-                        highlight
+                        return Kirigami.Theme.backgroundColor
                     }
-                } else if (buttonDelegate.hovered) {
-                    Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.10)
-                } else {
-                   Kirigami.Theme.backgroundColor
                 }
 
                 border {
-                    width: buttonDelegate.down || buttonDelegate.visualFocus ? 1 :0
-                    color: Kirigami.Theme.highlightColor
+                    color: {
+                        if (buttonDelegate.highlightBorder) {
+                            return Kirigami.Theme.focusColor
+                        } else {
+                            return Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.15);
+                        }
+                    }
+                    width: 1
+                }
+
+                Behavior on color {
+                    enabled: buttonDelegate.highlightBackground
+                    ColorAnimation {
+                        duration: Kirigami.Units.shortDuration
+                        easing.type: Easing.OutCubic
+                    }
+                }
+                Behavior on border.color {
+                    enabled: buttonDelegate.highlightBorder
+                    ColorAnimation {
+                        duration: Kirigami.Units.shortDuration
+                        easing.type: Easing.OutCubic
+                    }
+                }
+
+                Kirigami.ShadowedRectangle {
+                    id: root
+
+                    height: buttonDelegate.height
+                    z: -1
+                    color: Qt.rgba(0, 0, 0, 0.1)
+
+                    opacity: buttonDelegate.down ? 0 : 1
+                    visible: !buttonDelegate.editable && !buttonDelegate.flat && buttonDelegate.enabled
+
+                    corners {
+                        topLeftRadius: buttonDelegate.index === 0 ? Kirigami.Units.mediumSpacing : 0
+                        bottomLeftRadius: buttonDelegate.index === 0 ? Kirigami.Units.mediumSpacing : 0
+
+                        bottomRightRadius: buttonDelegate.index === buttonRepeater.count - 1 ? Kirigami.Units.mediumSpacing : 0
+                        topRightRadius: buttonDelegate.index === buttonRepeater.count - 1 ? Kirigami.Units.mediumSpacing : 0
+                    }
+
+                    anchors {
+                        top: parent.top
+                        topMargin: 1
+                        left: parent.left
+                        right: parent.right
+                    }
                 }
             }
         }
