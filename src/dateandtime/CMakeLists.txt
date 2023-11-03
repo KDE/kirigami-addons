@@ -27,12 +27,13 @@ target_sources(dateandtimeplugin PRIVATE
 ecm_target_qml_sources(dateandtimeplugin SOURCES
     DatePopup.qml
     TimePopup.qml
+    TimePicker.qml
 )
+
 ecm_target_qml_sources(dateandtimeplugin PATH private SOURCES
     private/DatePathView.qml
     private/DatePicker.qml
     private/DatePickerDelegate.qml
-    private/TumblerTimePicker.qml
 )
 
 target_link_libraries(dateandtimeplugin PRIVATE
