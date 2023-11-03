@@ -10,6 +10,22 @@ import org.kde.kirigami 2.20 as Kirigami
 T.ItemDelegate {
     id: root
 
+    /**
+     * This property holds a ListView
+     *
+     * It is automatically set if the RoundedItemDelegate is the direct delegate
+     * of a ListView and must be set otherwise.
+     */
+    property var listView: ListView
+
+    /**
+     * This property holds a GridView
+     *
+     * It is automatically set if the RoundedItemDelegate is the direct delegate
+     * of a GridView and must be set otherwise.
+     */
+    property var gridView: GridView
+
     implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
                             implicitContentWidth + leftPadding + rightPadding,
                             implicitIndicatorWidth + leftPadding + rightPadding)
@@ -17,20 +33,20 @@ T.ItemDelegate {
                              implicitContentHeight + topPadding + bottomPadding,
                              implicitIndicatorHeight + topPadding + bottomPadding)
 
-    width: if (ListView.view) {
-        ListView.view.width
-    } else if (GridView.view) {
-        GridView.view.cellWidth
+    width: if (listView.view) {
+        return listView.view.width;
+    } else if (gridView.view) {
+        return gridView.view.cellWidth;
     } else {
         implicitWidth
     }
 
-    height: if (GridView.view) {
-        GridView.view.cellHeight
+    height: if (gridView.view) {
+        return gridView.view.cellHeight;
     } else {
-        implicitHeight
+        return implicitHeight;
     }
-    highlighted: ListView.isCurrentItem || GridView.isCurrentItem
+    highlighted: listView.isCurrentItem || gridView.isCurrentItem
 
     spacing: Kirigami.Units.mediumSpacing
 
@@ -44,12 +60,12 @@ T.ItemDelegate {
     topPadding: verticalPadding
     bottomPadding: verticalPadding
 
-    topInset: if (root.index !== undefined && index === 0 && ListView.view && ListView.view.topMargin === 0) {
+    topInset: if (root.index !== undefined && index === 0 && listView.view && listView.view.topMargin === 0) {
         Kirigami.Units.smallSpacing;
     } else {
         Math.round(Kirigami.Units.smallSpacing / 2);
     }
-    bottomInset: if (root.index !== undefined && ListView.view && index === ListView.view.count - 1 && ListView.view.bottomMargin === 0) {
+    bottomInset: if (root.index !== undefined && listView.view && index === listView.view.count - 1 && listView.view.bottomMargin === 0) {
         Kirigami.Units.smallSpacing;
     } else {
         Math.round(Kirigami.Units.smallSpacing / 2)
