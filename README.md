@@ -4,60 +4,61 @@ SPDX-FileCopyrightText: 2020 Nicolas Fella <nicolas.fella@gmx.de>
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
-# Kirigami Addons
+Kirigami Addons is an additional set of visual components that work well on mobile and desktop and are guaranteed to be cross-platform. It uses Kirigami under the hood to create its components and should look native with any QtQuick Controls style.
 
-A set of "widgets" i.e visual end user components along with a code to support them.
-Components are usable by both touch and desktop experiences providing a native experience on both,
-and look native with any QQC2 style (qqc2-desktop-theme, Material or Plasma).
+* [API Documentation](https://api.kde.org/frameworks/kirigami-addons/html/index.html).
+* [Tutorial](https://develop.kde.org/docs/getting-started/kirigami/mobile-about/)
 
-The API can be found in the [KDE API Reference website](https://api.kde.org/frameworks/kirigami-addons/html/index.html).
+## Structure
 
-## Components
+The [examples/](examples) folder contains full project examples that can be built individually using `-DBUILD_EXAMPLES=ON`. Each project can be built with a CMake target available in the [CMakeLists.txt](examples/CMakeLists.txt), e.g. `cmake --build build/ --target mobile-about`. Some examples, such as [MobileFormTutorial](examples/MobileFormTutorial), are used for the Kirigami tutorial.
 
-Kirigami Add-ons contains many components, which are set up like so:
+The [autotests/](autotests) folder contains tests done at build time.
 
-* General components that don't fit anywhere else, located under [src/components](src/components).
-* Date and Time components, located under [src/dateandtime](src/dateandtime).
-* Delegate components, located under [src/delegates](src/delegates).
-* FormCard components (formerly known as MobileForm), located under [src/formcard](src/formcard).
-* Categorized Settings components, located under [src/settings](src/settings).
-* Sound picker component for picking ringtones and notifications, located under [src/sounds](src/sounds).
-* TreeView component, located under [src/treeview](src/treeview).
+The [tests/](tests) folder contains individual QML files used for testing. It also serves as an up-do-date showcase of existing components.
 
-### See Also
+The [src/components/](src/components) folder contains minor standalone components.
 
-If you can't find what you're looking for, it may exist in another repository instead:
+The [src/dateandtime/](src/dateandtime) folder contains ready-to-use time components.
 
-* [Kirigami](https://invent.kde.org/frameworks/kirigami) is the QtQuick based components set that Kirigami Add-ons
-  builds on top of.
-* [Kirigami Gallery](https://invent.kde.org/sdk/kirigami-gallery) is a gallery application used to showcase and test
-  various Kirigami components.
+The [src/delegates/](src/delegates) folder contains base delegates to be used in ListViews following the Kirigami Addons style.
 
-## Scope and Structure
+The [src/formcard/](src/mobileform) folder contains components used to create your own About and Settings pages. They are ready to use and extensible. It depends on [Ki18n](https://api.kde.org/frameworks/ki18n/html/index.html).
 
-To avoid this module losing scope as we have seen in other generic addons modules before, Kirigami Addons
-has clearly defined rules for things to go in here:
+The [src/settings/](src/settings) folder contains categorized settings components, visually similar to the categorized sidebar of [Plasma System Settings](https://invent.kde.org/plasma/systemsettings).
 
-- Kirigami Addons is cross-platform, depending on other KF5 frameworks is fine, but things must still work on Android.
-  Components can use platform specializations, e.g. native dialogs, but a generic implementation for all platforms has
-  to exist.
+The [src/sounds/](src/sounds) folder contains a ready-to-use sound picker for picking ringtones and notifications.
 
-- Components are grouped according to some topic, e.g. 'dateandtime' or 'chat'.
-  Each group has its own source directory and QML import name. The name follows the scheme of
-  'org.kde.kirigamiaddons.topic', e.g. 'org.kde.kirigamiaddons.dateandtime'.
+The [src/treeview/](src/treeview) folder contains a ready-to-use Tree View implementation in QML. Note that Qt has a new [TreeView](https://doc.qt.io/qt-6/qml-qtquick-treeview.html) QML type available since Qt 6.4.
 
-- All user exposed QML items should have an example application in the tests folder.
+## Scope
 
-In particular, Kirigami Addons is not:
+Kirigami Addons must follow these rules:
 
-- A place for exposing non-visual QML bindings.
-- A place for QML bindings for other libraries.
-- A place for API for a specific platform.
+- It must be cross-platform: depending on other KDE Frameworks libraries is fine, but it must still work on Android. Components can use platform specializations, for example native dialogs, but a generic implementation for all platforms must exist.
+
+- Components must be grouped according to topic: for example, "dateandtime" or "chat". Each group should have its own source directory and QML import name. The name should follow the scheme of "org.kde.kirigamiaddons.topic", for example: "org.kde.kirigamiaddons.dateandtime".
+
+- All user-exposed QML items should have an examples implemented in the tests folder, not necessarily in a separate file.
+
+In particular, Kirigami Addons is not the right place for:
+
+- exposing non-visual QML bindings
+- QML bindings for other libraries
+- API for a specific platform
 
 ## Building
 
-The easiest way to make changes and test Kirigami Add-ons during development is
-to [build it with kdesrc-build](https://community.kde.org/Get_Involved/development/Build_software_with_kdesrc-build).
+To build locally and use it in your application:
+
+```bash
+cmake -B build/ -DCMAKE_INSTALL_PREFIX=$HOME/kde/usr/
+cmake --build build/
+cmake --install build/
+source build/prefix.sh
+```
+
+For development purposes, the best way to build Kirigami Addons is to [build it with kdesrc-build](https://community.kde.org/Get_Involved/development/Build_software_with_kdesrc-build).
 
 ## Contributing
 
@@ -78,4 +79,3 @@ If you get stuck or need help with anything at all, head over to
 the [KDE New Contributors room](https://go.kde.org/matrix/#/#kde-welcome:kde.org) on Matrix. For questions about
 Kirigami Add-ons, please ask in the [Kirigami room](https://go.kde.org/matrix/#/#kirigami:kde.org).
 See [Matrix](https://community.kde.org/Matrix) for more details.
-

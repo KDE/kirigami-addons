@@ -64,6 +64,12 @@ if (BUILD_TESTING AND BUILD_SHARED_LIBS)
     add_subdirectory(autotests)
 endif()
 
+option(BUILD_EXAMPLES OFF)
+
+if (BUILD_EXAMPLES)
+    add_subdirectory(examples)
+endif()
+
 install(FILES
     "${CMAKE_CURRENT_BINARY_DIR}/KF6KirigamiAddonsConfig.cmake"
     "${CMAKE_CURRENT_BINARY_DIR}/KF6KirigamiAddonsConfigVersion.cmake"
