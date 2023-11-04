@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-20 00:41+0000\n"
+"POT-Creation-Date: 2023-11-04 00:41+0000\n"
 "PO-Revision-Date: 2023-10-20 12:41+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
@@ -87,13 +87,13 @@ msgctxt "@action:button"
 msgid "Volume"
 msgstr "Volume"
 
-#: dateandtime/DatePopup.qml:71 dateandtime/TimePopup.qml:53
+#: dateandtime/DatePopup.qml:71 dateandtime/TimePopup.qml:52
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Annuler"
 
-#: dateandtime/DatePopup.qml:83 dateandtime/TimePopup.qml:65
+#: dateandtime/DatePopup.qml:83 dateandtime/TimePopup.qml:64
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
@@ -117,31 +117,31 @@ msgctxt "@action:button"
 msgid "Go Next"
 msgstr "Aller au suivant"
 
-#: dateandtime/private/TumblerTimePicker.qml:96
+#: dateandtime/TimePicker.qml:96
 #, kde-format
 msgctxt "time in hour in 24h format"
 msgid "%1 hours"
 msgstr "%1 heures"
 
-#: dateandtime/private/TumblerTimePicker.qml:98
+#: dateandtime/TimePicker.qml:98
 #, kde-format
 msgctxt "time in hour (PM)"
 msgid "%1 PM"
 msgstr "%1 PM"
 
-#: dateandtime/private/TumblerTimePicker.qml:100
+#: dateandtime/TimePicker.qml:100
 #, kde-format
 msgctxt "time in hour (AM)"
 msgid "%1 AM"
 msgstr "%1 AM"
 
-#: dateandtime/private/TumblerTimePicker.qml:107
+#: dateandtime/TimePicker.qml:107
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: dateandtime/private/TumblerTimePicker.qml:121
+#: dateandtime/TimePicker.qml:121
 #, kde-format
 msgctxt "number of minutes"
 msgid "%1 minutes"
