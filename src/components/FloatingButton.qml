@@ -61,7 +61,7 @@ T.RoundButton {
     // Property is needed to prevent binding loops on insets
     readonly property real __padding: radius === Infinity
         ? Math.round(Math.max(__effectiveIconSize.width, __effectiveIconSize.height) * (Math.sqrt(2) - 1))
-        : Kirigami.Units.largeSpacing
+        : Kirigami.Settings.hasTransientTouchInput ? (Kirigami.Units.largeSpacing * 2) : Kirigami.Units.largeSpacing
 
     // Extra clickable area that adjusts both paddings and insets.
     property real margins: 0

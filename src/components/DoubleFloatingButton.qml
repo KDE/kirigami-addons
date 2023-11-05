@@ -74,8 +74,10 @@ Kirigami.ShadowedRectangle {
 
     radius: Kirigami.Units.largeSpacing
     color: "transparent"
-    height: Math.round(Kirigami.Units.gridUnit * 2.5)
-    width: 2 * height - 1
+
+    implicitHeight: Math.round(Kirigami.Units.gridUnit * 2.5) + topPadding + bottomPadding
+    implicitWidth: 2 * implicitHeight - 1
+    padding: Kirigami.Settings.hasTransientTouchInput ? (Kirigami.Units.largeSpacing * 2) : Kirigami.Units.largeSpacing
 
     shadow {
         size: 10
