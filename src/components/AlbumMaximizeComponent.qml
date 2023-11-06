@@ -112,35 +112,35 @@ AbstractMaximizeComponent {
 
     actions: [
         Kirigami.Action {
-            text: i18nd("kirigami-addons", "Zoom in")
+            text: i18nd("kirigami-addons6", "Zoom in")
             icon.name: "zoom-in"
             onTriggered: view.currentItem.scaleFactor = Math.min(view.currentItem.scaleFactor + 0.25, 3)
         },
         Kirigami.Action {
-            text: i18nd("kirigami-addons", "Zoom out")
+            text: i18nd("kirigami-addons6", "Zoom out")
             icon.name: "zoom-out"
             onTriggered: view.currentItem.scaleFactor = Math.max(view.currentItem.scaleFactor - 0.25, 0.25)
         },
         Kirigami.Action {
             visible: view.currentItem.type === AlbumModelItem.Image
-            text: i18nd("kirigami-addons", "Rotate left")
+            text: i18nd("kirigami-addons6", "Rotate left")
             icon.name: "object-rotate-left"
             onTriggered: view.currentItem.rotationAngle = view.currentItem.rotationAngle - 90
         },
         Kirigami.Action {
             visible: view.currentItem.type === AlbumModelItem.Image
-            text: i18nd("kirigami-addons", "Rotate right")
+            text: i18nd("kirigami-addons6", "Rotate right")
             icon.name: "object-rotate-right"
             onTriggered: view.currentItem.rotationAngle = view.currentItem.rotationAngle + 90
         },
         Kirigami.Action {
-            text: hideCaption ? i18ndc("kirigami-addons", "@action:intoolbar", "Show caption") : i18ndc("kirigami-addons", "@action:intoolbar", "Hide caption")
+            text: hideCaption ? i18ndc("kirigami-addons6", "@action:intoolbar", "Show caption") : i18ndc("kirigami-addons6", "@action:intoolbar", "Hide caption")
             icon.name: "add-subtitle"
             visible: root.showCaption && view.currentItem.caption
             onTriggered: hideCaption = !hideCaption
         },
         Kirigami.Action {
-            text: i18nd("kirigami-addons", "Save as")
+            text: i18nd("kirigami-addons6", "Save as")
             icon.name: "document-save"
             onTriggered: saveItem()
         }
@@ -199,7 +199,7 @@ AbstractMaximizeComponent {
             icon.name: "arrow-left"
             visible: !Kirigami.Settings.isMobile && view.currentIndex > 0
             Keys.forwardTo: view
-            Accessible.name: i18nd("kirigami-addons", "Previous image")
+            Accessible.name: i18nd("kirigami-addons6", "Previous image")
             onClicked: {
                 view.currentItem.pause()
                 view.currentIndex -= 1
@@ -217,7 +217,7 @@ AbstractMaximizeComponent {
             icon.name: "arrow-right"
             visible: !Kirigami.Settings.isMobile && view.currentIndex < view.count - 1
             Keys.forwardTo: view
-            Accessible.name: i18nd("kirigami-addons", "Next image")
+            Accessible.name: i18nd("kirigami-addons6", "Next image")
             onClicked: {
                 view.currentItem.pause()
                 view.currentIndex += 1

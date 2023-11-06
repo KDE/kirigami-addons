@@ -238,7 +238,7 @@ Item {
                     QQC2.ToolTip.visible: hovered
                     QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                     QQC2.ToolTip.timeout: Kirigami.Units.toolTipDelay
-                    QQC2.ToolTip.text: i18ndc("kirigami-addons", "@action:button", "Volume")
+                    QQC2.ToolTip.text: i18ndc("kirigami-addons6", "@action:button", "Volume")
 
                     onClicked: {
                         if (videoItem.volume > 0) {

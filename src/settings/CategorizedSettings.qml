@@ -41,7 +41,7 @@ Kirigami.PageRow {
     property alias _stack: root
     property Kirigami.PagePool _pool: Kirigami.PagePool {}
 
-    readonly property string title: root.depth < 2 ? i18ndc("kirigami-addons", "@title:window", "Settings") :i18ndc("kirigami-addons", "@title:window", "Settings — %1", root.get(1).title)
+    readonly property string title: root.depth < 2 ? i18ndc("kirigami-addons6", "@title:window", "Settings") :i18ndc("kirigami-addons6", "@title:window", "Settings — %1", root.get(1).title)
 
     property bool completed: false
 

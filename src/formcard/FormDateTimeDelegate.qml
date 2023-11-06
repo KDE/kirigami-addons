@@ -143,7 +143,7 @@ AbstractFormDelegate {
                     if (root.value.getFullYear() === today.getFullYear()
                         && root.value.getDate() === today.getDate()
                         && root.value.getMonth() == today.getMonth()) {
-                        return i18ndc("kirigami-addons", "Displayed in place of the date if the selected day is today", "Today");
+                        return i18ndc("kirigami-addons6", "Displayed in place of the date if the selected day is today", "Today");
                     }
                     const locale = Qt.locale();
                     const weekDay = root.value.toLocaleDateString(locale, "ddd, ");
@@ -170,7 +170,7 @@ AbstractFormDelegate {
 
                     return weekDay + root.value.toLocaleDateString(locale, dateFormat);
                 } else {
-                    i18ndc("kirigami-addons", "Date is not set", "Not set")
+                    i18ndc("kirigami-addons6", "Date is not set", "Not set")
                 }
 
                 contentItem: RowLayout {
@@ -280,7 +280,7 @@ AbstractFormDelegate {
                         .replace(':ss', '');
                     return root.value.toLocaleTimeString(locale, timeFormat);
                 } else {
-                    return i18ndc("kirigami-addons", "Date is not set", "Not set");
+                    return i18ndc("kirigami-addons6", "Date is not set", "Not set");
                 }
 
                 onClicked: {

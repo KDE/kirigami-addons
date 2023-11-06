@@ -84,7 +84,7 @@ FormCardPage {
      */
     property url donateUrl: aboutData.desktopFileName.startsWith("org.kde.") ? "https://www.kde.org/donate" : ""
 
-    title: i18nd("kirigami-addons", "About %1", page.aboutData.displayName)
+    title: i18nd("kirigami-addons6", "About %1", page.aboutData.displayName)
 
     FormCard {
         Layout.topMargin: Kirigami.Units.gridUnit
@@ -130,7 +130,7 @@ FormCardPage {
 
         FormTextDelegate {
             id: copyrightDelegate
-            text: i18nd("kirigami-addons", "Copyright")
+            text: i18nd("kirigami-addons6", "Copyright")
             descriptionItem.textFormat: Text.PlainText
             description: aboutData.otherText + (aboutData.otherText.length > 0 ? '</br>' : '')
                 + aboutData.copyrightStatement
@@ -138,7 +138,7 @@ FormCardPage {
     }
 
     FormHeader {
-        title: i18ndp("kirigami-addons", "License", "Licenses", aboutData.licenses.length)
+        title: i18ndp("kirigami-addons6", "License", "Licenses", aboutData.licenses.length)
         visible: aboutData.licenses.length
     }
 
@@ -189,7 +189,7 @@ FormCardPage {
 
         FormButtonDelegate {
             id: getInvolvedDelegate
-            text: i18nd("kirigami-addons", "Homepage")
+            text: i18nd("kirigami-addons6", "Homepage")
             onClicked: Qt.openUrlExternally(aboutData.homepage)
             visible: aboutData.homepage.length > 0
         }
@@ -202,7 +202,7 @@ FormCardPage {
 
         FormButtonDelegate {
             id: donateDelegate
-            text: i18nd("kirigami-addons", "Donate")
+            text: i18nd("kirigami-addons6", "Donate")
             onClicked: Qt.openUrlExternally(donateUrl + "?app=" + page.aboutData.componentName)
             visible: donateUrl.toString().length > 0
         }
@@ -215,7 +215,7 @@ FormCardPage {
 
         FormButtonDelegate {
             id: homepageDelegate
-            text: i18nd("kirigami-addons", "Get Involved")
+            text: i18nd("kirigami-addons6", "Get Involved")
             onClicked: Qt.openUrlExternally(page.getInvolvedUrl)
             visible: page.getInvolvedUrl > 0
         }
@@ -240,14 +240,14 @@ FormCardPage {
                 return url;
             }
 
-            text: i18nd("kirigami-addons", "Report a bug")
+            text: i18nd("kirigami-addons6", "Report a bug")
             onClicked: Qt.openUrlExternally(theUrl)
             visible: theUrl.length > 0
         }
     }
 
     FormHeader {
-        title: i18nd("kirigami-addons", "Libraries in use")
+        title: i18nd("kirigami-addons6", "Libraries in use")
         visible: Kirigami.Settings.information
     }
 
@@ -270,7 +270,7 @@ FormCardPage {
     }
 
     FormHeader {
-        title: i18nd("kirigami-addons", "Authors")
+        title: i18nd("kirigami-addons6", "Authors")
         visible: aboutData.authors !== undefined && aboutData.authors.length > 0
     }
 
@@ -285,7 +285,7 @@ FormCardPage {
     }
 
     FormHeader {
-        title: i18nd("kirigami-addons", "Credits")
+        title: i18nd("kirigami-addons6", "Credits")
         visible: aboutData.credits !== undefined && aboutData.credits.length > 0
     }
 
@@ -300,7 +300,7 @@ FormCardPage {
     }
 
     FormHeader {
-        title: i18nd("kirigami-addons", "Translators")
+        title: i18nd("kirigami-addons6", "Translators")
         visible: aboutData.translators !== undefined && aboutData.translators.length > 0
     }
 
@@ -369,7 +369,7 @@ FormCardPage {
                         icon.name: "get-hot-new-stuff"
                         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                         QQC2.ToolTip.visible: hovered
-                        QQC2.ToolTip.text: i18nd("kirigami-addons", "Visit %1's KDE Store page", modelData.name)
+                        QQC2.ToolTip.text: i18nd("kirigami-addons6", "Visit %1's KDE Store page", modelData.name)
                         onClicked: Qt.openUrlExternally("https://store.kde.org/u/%1".arg(modelData.ocsUsername))
                     }
 
@@ -378,7 +378,7 @@ FormCardPage {
                         icon.name: "mail-sent"
                         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                         QQC2.ToolTip.visible: hovered
-                        QQC2.ToolTip.text: i18nd("kirigami-addons", "Send an email to %1", modelData.emailAddress)
+                        QQC2.ToolTip.text: i18nd("kirigami-addons6", "Send an email to %1", modelData.emailAddress)
                         onClicked: Qt.openUrlExternally("mailto:%1".arg(modelData.emailAddress))
                     }
 

@@ -68,7 +68,7 @@ QQC2.Dialog {
         id: box
 
         Components.MessageDialogButton {
-            text: i18ndc("kirigami-addons", "@action:button", "Cancel")
+            text: i18ndc("kirigami-addons6", "@action:button", "Cancel")
             icon.name: "dialog-cancel"
             buttonBox: box
             onClicked: {
@@ -80,7 +80,7 @@ QQC2.Dialog {
         }
 
         Components.MessageDialogButton {
-            text: i18ndc("kirigami-addons", "@action:button", "Select")
+            text: i18ndc("kirigami-addons6", "@action:button", "Select")
             icon.name: "dialog-ok-apply"
             buttonBox: box
 

@@ -93,18 +93,18 @@ RowLayout {
             hours = currentIndex + (_isAmPm && _pm ? 12 : 0)
         }
         Accessible.name: if (!_isAmPm) {
-            i18ndc("kirigami-addons", "time in hour in 24h format", "%1 hours", root.hours)
+            i18ndc("kirigami-addons6", "time in hour in 24h format", "%1 hours", root.hours)
         } else if (_isAmPm && _pm) {
-            i18ndc("kirigami-addons", "time in hour (PM)", "%1 PM", currentIndex + 12)
+            i18ndc("kirigami-addons6", "time in hour (PM)", "%1 PM", currentIndex + 12)
         } else {
-            i18ndc("kirigami-addons", "time in hour (AM)", "%1 AM", currentIndex)
+            i18ndc("kirigami-addons6", "time in hour (AM)", "%1 AM", currentIndex)
         }
         focus: true
     }
 
     Label {
         Layout.alignment: Qt.AlignCenter
-        text: i18ndc("kirigami-addons", "Time separator", ":")
+        text: i18ndc("kirigami-addons6", "Time separator", ":")
         font.pointSize: Kirigami.Theme.defaultFont.pointSize * 1.3
     }
 
@@ -118,7 +118,7 @@ RowLayout {
             minutes = currentIndex;
         }
 
-        Accessible.name: i18ndc("kirigami-addons", "number of minutes", "%1 minutes", root.hours)
+        Accessible.name: i18ndc("kirigami-addons6", "number of minutes", "%1 minutes", root.hours)
     }
 
     Tumbler {
