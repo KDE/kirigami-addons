@@ -1,0 +1,421 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kirigami-addons package.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2021, 2022, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: kirigami-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-11-08 08:47+0000\n"
+"PO-Revision-Date: 2023-10-19 09:04+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: components/AbstractMaximizeComponent.qml:125
+#, kde-format
+msgid "Close"
+msgstr "Закрити"
+
+#: components/AlbumMaximizeComponent.qml:115
+#, kde-format
+msgid "Zoom in"
+msgstr "Збільшити"
+
+#: components/AlbumMaximizeComponent.qml:120
+#, kde-format
+msgid "Zoom out"
+msgstr "Зменшити"
+
+#: components/AlbumMaximizeComponent.qml:126
+#, kde-format
+msgid "Rotate left"
+msgstr "Обернути ліворуч"
+
+#: components/AlbumMaximizeComponent.qml:132
+#, kde-format
+msgid "Rotate right"
+msgstr "Обернути праворуч"
+
+#: components/AlbumMaximizeComponent.qml:137
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "Show caption"
+msgstr "Показати підпис"
+
+#: components/AlbumMaximizeComponent.qml:137
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "Hide caption"
+msgstr "Приховати підпис"
+
+#: components/AlbumMaximizeComponent.qml:143
+#, kde-format
+msgid "Save as"
+msgstr "Зберегти як"
+
+#: components/AlbumMaximizeComponent.qml:202
+#, kde-format
+msgid "Previous image"
+msgstr "Попереднє зображення"
+
+#: components/AlbumMaximizeComponent.qml:220
+#, kde-format
+msgid "Next image"
+msgstr "Наступне зображення"
+
+#: components/Banner.qml:186
+#, kde-format
+msgctxt "@action:button"
+msgid "Close"
+msgstr "Закрити"
+
+#: components/DownloadAction.qml:37
+#, kde-format
+msgid "Download"
+msgstr "Отримати"
+
+#: components/VideoMaximizeDelegate.qml:241
+#, kde-format
+msgctxt "@action:button"
+msgid "Volume"
+msgstr "Гучність"
+
+#: dateandtime/DatePopup.qml:71 dateandtime/TimePopup.qml:52
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: dateandtime/DatePopup.qml:83 dateandtime/TimePopup.qml:64
+#, kde-format
+msgctxt "@action:button"
+msgid "Select"
+msgstr "Вибрати"
+
+#: dateandtime/private/DatePicker.qml:266
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Previous"
+msgstr "Перейти до попереднього"
+
+#: dateandtime/private/DatePicker.qml:279
+#, kde-format
+msgctxt "@action:button"
+msgid "Jump to today"
+msgstr "Перейти до поточного дня"
+
+#: dateandtime/private/DatePicker.qml:286
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Next"
+msgstr "Перейти до наступного"
+
+#: dateandtime/TimePicker.qml:96
+#, kde-format
+msgctxt "time in hour in 24h format"
+msgid "%1 hours"
+msgstr "%1 годин"
+
+#: dateandtime/TimePicker.qml:98
+#, kde-format
+msgctxt "time in hour (PM)"
+msgid "%1 PM"
+msgstr "%1 ПО"
+
+#: dateandtime/TimePicker.qml:100
+#, kde-format
+msgctxt "time in hour (AM)"
+msgid "%1 AM"
+msgstr "%1 ДО"
+
+#: dateandtime/TimePicker.qml:107
+#, kde-format
+msgctxt "Time separator"
+msgid ":"
+msgstr ":"
+
+#: dateandtime/TimePicker.qml:121
+#, kde-format
+msgctxt "number of minutes"
+msgid "%1 minutes"
+msgstr "%1 хвилин"
+
+#: formcard/AboutKDE.qml:23
+#, kde-format
+msgid "About KDE"
+msgstr "Про KDE"
+
+#: formcard/AboutKDE.qml:50
+#, kde-format
+msgid "KDE"
+msgstr "KDE"
+
+#: formcard/AboutKDE.qml:59
+#, kde-format
+msgid "Be Free!"
+msgstr "Будьте вільними!"
+
+#: formcard/AboutKDE.qml:68
+#, kde-format
+msgid ""
+"KDE is a world-wide community of software engineers, artists, writers, "
+"translators and creators who are committed to Free Software development. KDE "
+"produces the Plasma desktop environment, hundreds of applications, and the "
+"many software libraries that support them.\n"
+"\n"
+"KDE is a cooperative enterprise: no single entity controls its direction or "
+"products. Instead, we work together to achieve the common goal of building "
+"the world's finest Free Software. Everyone is welcome to join and contribute "
+"to KDE, including you."
+msgstr ""
+"KDE — це всесвітня спільнота програмістів, художників, авторів текстів, "
+"перекладачів та фахівців з полегшення користування програмами, які роблять "
+"свій внесок до розвитку вільного програмного забезпечення. Цією спільнотою "
+"створено стільничне середовище Плазма, сотні вільних програм і безліч "
+"програмних бібліотек, які є основою роботи програм.\n"
+"\n"
+"Розробка KDE є спільною працею, у якій жоден з учасників не має переважного "
+"контролю над зусиллями або результатами роботи інших розробників KDE. Ми "
+"працюємо разом заради спільної мети, якою є створення якомога якіснішого "
+"вільного програмного забезпечення. Кожен може долучитися і зробити свій "
+"внесок до KDE, зокрема це можете зробити ви."
+
+#: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:192
+#, kde-format
+msgid "Homepage"
+msgstr "Домашня сторінка"
+
+#: formcard/AboutKDE.qml:82
+#, kde-format
+msgid "Report bugs"
+msgstr "Повідомити про помилку"
+
+#: formcard/AboutKDE.qml:87
+#, kde-format
+msgid ""
+"Software can always be improved, and the KDE team is ready to do so. "
+"However, you - the user - must tell us when something does not work as "
+"expected or could be done better.\n"
+"\n"
+"KDE has a bug tracking system. Use the button below to file a bug, or use "
+"the program's About page to report a bug specific to this application.\n"
+"\n"
+"If you have a suggestion for improvement then you are welcome to use the bug "
+"tracking system to register your wish. Make sure you use the severity called "
+"\"Wishlist\"."
+msgstr ""
+"Програмне забезпечення завжди потребує вдосконалення, і команда KDE готова "
+"це робити Проте, вам (користувачеві) варто повідомити нам, якщо щось не "
+"працює, як слід, або щось можна покращити.\n"
+"\n"
+"KDE має систему стеження за вадами. Скористайтеся розташованою нижче кнопкою "
+"для створення звіту щодо вади або скористайтеся сторінкою «Про програму», "
+"щоб створити звіт щодо вади саме у цій програм.\n"
+"\n"
+"Якщо у вас є пропозиція щодо вдосконалення, за допомогою цієї системи можна "
+"зареєструвати ваше побажання. Переконайтеся, що поле «Важливість» "
+"встановлено у значення «Список побажань» («Wishlist»)."
+
+#: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:243
+#, kde-format
+msgid "Report a bug"
+msgstr "Повідомити про помилку"
+
+#: formcard/AboutKDE.qml:102
+#, kde-format
+msgid "Join us"
+msgstr "Долучитися до нас"
+
+#: formcard/AboutKDE.qml:107
+#, kde-format
+msgid ""
+"You do not have to be a software developer to be a member of the KDE team. "
+"You can join the national teams that translate program interfaces. You can "
+"provide graphics, themes, sounds, and improved documentation. You decide!"
+msgstr ""
+"Не обов'язково бути програмістом, щоб належати до Команди KDE. Можете "
+"приєднатися до національних команд, що перекладають інтерфейс програм. "
+"Можете забезпечувати користувачів графікою, темами, звуками та вдосконаленою "
+"документацію. Вам вирішувати!"
+
+#: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:218
+#, kde-format
+msgid "Get Involved"
+msgstr "Приєднатися до команди"
+
+#: formcard/AboutKDE.qml:123
+#, kde-format
+msgid "Developer Documentation"
+msgstr "Документація для розробників"
+
+#: formcard/AboutKDE.qml:129
+#, kde-format
+msgid "Support us"
+msgstr "Підтримати нас"
+
+#: formcard/AboutKDE.qml:134
+#, kde-format
+msgid ""
+"KDE software is and will always be available free of charge, however "
+"creating it is not free.\n"
+"\n"
+"To support development the KDE community has formed the KDE e.V., a non-"
+"profit organization legally founded in Germany. KDE e.V. represents the KDE "
+"community in legal and financial matters.\n"
+"\n"
+"KDE benefits from many kinds of contributions, including financial. We use "
+"the funds to reimburse members and others for expenses they incur when "
+"contributing. Further funds are used for legal support and organizing "
+"conferences and meetings.\n"
+"\n"
+"We would like to encourage you to support our efforts with a financial "
+"donation.\n"
+"\n"
+"Thank you very much in advance for your support."
+msgstr ""
+"Програмне забезпечення KDE розповсюджувалося і буде розповсюджуватися завжди "
+"безкоштовно, однак на його розробку потрібні гроші.\n"
+"\n"
+"Тому, команда KDE створила Спілку KDE  (KDE eV.) — неприбуткову організацію, "
+"яку юридично зареєстровано у Тюбінгені, Німеччина. Спілка KDE юридично та "
+"фінансово представляє спільноту KDE.\n"
+"\n"
+"Команда KDE потребує допомоги у багатьох аспектах, зокрема фінансових. В "
+"основному кошти витрачаються на відшкодування витрат людям, які працюють над "
+"розробкою KDE. Інші кошти буде витрачено на підтримку та організацію "
+"конференцій та зустрічей.\n"
+"\n"
+"Будемо раді вашій фінансовій підтримці наших зусиль.\n"
+"\n"
+"Заздалегідь вдячні вам за допомогу."
+
+#: formcard/AboutKDE.qml:146
+#, kde-format
+msgid "KDE e.V"
+msgstr "KDE e.V"
+
+#: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:205
+#, kde-format
+msgid "Donate"
+msgstr "Підтримати фінансово"
+
+#: formcard/AboutPage.qml:87
+#, kde-format
+msgid "About %1"
+msgstr "Про %1"
+
+#: formcard/AboutPage.qml:133
+#, kde-format
+msgid "Copyright"
+msgstr "Авторські права"
+
+#: formcard/AboutPage.qml:141
+#, kde-format
+msgid "License"
+msgid_plural "Licenses"
+msgstr[0] "Ліцензування"
+msgstr[1] "Ліцензування"
+msgstr[2] "Ліцензування"
+msgstr[3] "Ліцензування"
+
+#: formcard/AboutPage.qml:250
+#, kde-format
+msgid "Libraries in use"
+msgstr "Використані бібліотеки"
+
+#: formcard/AboutPage.qml:273
+#, kde-format
+msgid "Authors"
+msgstr "Автори"
+
+#: formcard/AboutPage.qml:288
+#, kde-format
+msgid "Credits"
+msgstr "Подяки"
+
+#: formcard/AboutPage.qml:303
+#, kde-format
+msgid "Translators"
+msgstr "Перекладачі"
+
+#: formcard/AboutPage.qml:372
+#, kde-format
+msgid "Visit %1's KDE Store page"
+msgstr "Відвідайте сторінку %1 у KDE Store"
+
+#: formcard/AboutPage.qml:381
+#, kde-format
+msgid "Send an email to %1"
+msgstr "Надіслати повідомлення ел. пошти до %1"
+
+#: formcard/FormDateTimeDelegate.qml:146
+#, kde-format
+msgctxt "Displayed in place of the date if the selected day is today"
+msgid "Today"
+msgstr "Сьогодні"
+
+#: formcard/FormDateTimeDelegate.qml:173 formcard/FormDateTimeDelegate.qml:283
+#, kde-format
+msgctxt "Date is not set"
+msgid "Not set"
+msgstr "Не встановлено"
+
+#: formcard/FormTextFieldDelegate.qml:219
+#, kde-format
+msgctxt "@label %1 is current text length, %2 is maximum length of text field"
+msgid "%1/%2"
+msgstr "%1/%2"
+
+#: settings/CategorizedSettings.qml:44
+#, kde-format
+msgctxt "@title:window"
+msgid "Settings"
+msgstr "Параметри"
+
+#: settings/CategorizedSettings.qml:44
+#, kde-format
+msgctxt "@title:window"
+msgid "Settings — %1"
+msgstr "Параметри — %1"
+
+#~ msgctxt "%1 is month name, %2 is year"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgctxt "@title:tab"
+#~ msgid "Days"
+#~ msgstr "Дні"
+
+#~ msgctxt "@title:tab"
+#~ msgid "Months"
+#~ msgstr "Місяці"
+
+#~ msgctxt "@title:tab"
+#~ msgid "Years"
+#~ msgstr "Роки"
+
+#~ msgid "Accept"
+#~ msgstr "Прийняти"
+
+#~ msgid ""
+#~ "Software can always be improved, and the KDE team is ready to do so. "
+#~ "However, you - the user - must tell us when something does not work as "
+#~ "expected or could be done better.\n"
+#~ msgstr ""
+#~ "Програми завжди можна удосконалити, і команда KDE готова це робити. Втім, "
+#~ "ви — користувач — маєте повідомити нам, якщо щось не працює, як слід, або "
+#~ "може бути зроблене краще.\n"
+
+#~ msgid ""
+#~ "KDE software is and will always be available free of charge, however "
+#~ "creating it is not free.\n"
+#~ msgstr ""
+#~ "Програмне забезпечення KDE є і завжди буде безкоштовним, але його "
+#~ "створення пов'язано із певними витратами.\n"

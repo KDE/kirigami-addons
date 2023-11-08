@@ -1,0 +1,422 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kirigami-addons package.
+#
+# Stelios <sstavra@gmail.com>, 2021.
+# Theofilos Intzoglou <int.teo@gmail.com>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: kirigami-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-11-08 08:47+0000\n"
+"PO-Revision-Date: 2023-07-26 15:54+0300\n"
+"Last-Translator: Theofilos Intzoglou <int.teo@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.04.3\n"
+
+#: components/AbstractMaximizeComponent.qml:125
+#, kde-format
+msgid "Close"
+msgstr "Κλείσιμο"
+
+#: components/AlbumMaximizeComponent.qml:115
+#, kde-format
+msgid "Zoom in"
+msgstr "Μεγέθυνση"
+
+#: components/AlbumMaximizeComponent.qml:120
+#, kde-format
+msgid "Zoom out"
+msgstr "Σμίκρυνση"
+
+#: components/AlbumMaximizeComponent.qml:126
+#, kde-format
+msgid "Rotate left"
+msgstr "Περιστροφή αριστερά"
+
+#: components/AlbumMaximizeComponent.qml:132
+#, kde-format
+msgid "Rotate right"
+msgstr "Περιστροφή δεξιά"
+
+#: components/AlbumMaximizeComponent.qml:137
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "Show caption"
+msgstr "Εμφάνιση τίτλου"
+
+#: components/AlbumMaximizeComponent.qml:137
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "Hide caption"
+msgstr "Απόκρυψη τίτλου"
+
+#: components/AlbumMaximizeComponent.qml:143
+#, kde-format
+msgid "Save as"
+msgstr "Αποθήκευση ως"
+
+#: components/AlbumMaximizeComponent.qml:202
+#, kde-format
+msgid "Previous image"
+msgstr "Προηγούμενη εικόνα"
+
+#: components/AlbumMaximizeComponent.qml:220
+#, kde-format
+msgid "Next image"
+msgstr "Επόμενη εικόνα"
+
+#: components/Banner.qml:186
+#, kde-format
+msgctxt "@action:button"
+msgid "Close"
+msgstr "Κλείσιμο"
+
+#: components/DownloadAction.qml:37
+#, kde-format
+msgid "Download"
+msgstr "Λήψη"
+
+#: components/VideoMaximizeDelegate.qml:241
+#, kde-format
+msgctxt "@action:button"
+msgid "Volume"
+msgstr "Ένταση"
+
+#: dateandtime/DatePopup.qml:71 dateandtime/TimePopup.qml:52
+#, fuzzy, kde-format
+#| msgid "Cancel"
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+#: dateandtime/DatePopup.qml:83 dateandtime/TimePopup.qml:64
+#, kde-format
+msgctxt "@action:button"
+msgid "Select"
+msgstr ""
+
+#: dateandtime/private/DatePicker.qml:266
+#, fuzzy, kde-format
+#| msgid "Previous"
+msgctxt "@action:button"
+msgid "Go Previous"
+msgstr "Προηγούμενη"
+
+#: dateandtime/private/DatePicker.qml:279
+#, kde-format
+msgctxt "@action:button"
+msgid "Jump to today"
+msgstr ""
+
+#: dateandtime/private/DatePicker.qml:286
+#, fuzzy, kde-format
+#| msgid "Next"
+msgctxt "@action:button"
+msgid "Go Next"
+msgstr "επόμενη"
+
+#: dateandtime/TimePicker.qml:96
+#, kde-format
+msgctxt "time in hour in 24h format"
+msgid "%1 hours"
+msgstr ""
+
+#: dateandtime/TimePicker.qml:98
+#, kde-format
+msgctxt "time in hour (PM)"
+msgid "%1 PM"
+msgstr ""
+
+#: dateandtime/TimePicker.qml:100
+#, kde-format
+msgctxt "time in hour (AM)"
+msgid "%1 AM"
+msgstr ""
+
+#: dateandtime/TimePicker.qml:107
+#, kde-format
+msgctxt "Time separator"
+msgid ":"
+msgstr ":"
+
+#: dateandtime/TimePicker.qml:121
+#, kde-format
+msgctxt "number of minutes"
+msgid "%1 minutes"
+msgstr ""
+
+#: formcard/AboutKDE.qml:23
+#, kde-format
+msgid "About KDE"
+msgstr "Σχετικά με το KDE"
+
+#: formcard/AboutKDE.qml:50
+#, kde-format
+msgid "KDE"
+msgstr "KDE"
+
+#: formcard/AboutKDE.qml:59
+#, kde-format
+msgid "Be Free!"
+msgstr "Ελευθερωθείτε!"
+
+#: formcard/AboutKDE.qml:68
+#, kde-format
+msgid ""
+"KDE is a world-wide community of software engineers, artists, writers, "
+"translators and creators who are committed to Free Software development. KDE "
+"produces the Plasma desktop environment, hundreds of applications, and the "
+"many software libraries that support them.\n"
+"\n"
+"KDE is a cooperative enterprise: no single entity controls its direction or "
+"products. Instead, we work together to achieve the common goal of building "
+"the world's finest Free Software. Everyone is welcome to join and contribute "
+"to KDE, including you."
+msgstr ""
+"Το KDE είναι μια παγκόσμια κοινότητα από προγραμματιστές, καλλιτέχνες, "
+"συγγραφείς, μεταφραστές και δημιουργούς που είναι αφοσιωμένοι στην ανάπτυξη "
+"Ελεύθερου Λογισμικού. Το KDE παράγει το περιβάλλον εργασίας Plasma, "
+"εκατοντάδες εφαρμογές, και τις πολλές βιβλιοθήκες λογισμικού που τις "
+"υποστηρίζουν.\n"
+"\n"
+"Το KDE είναι μια συνεταιριστική επιχείριση: δεν υπάρχει μία μοναδική "
+"οντότητα που να ελέγχει την κατεύθυνση της ή τα προϊόντα της. Αντιθέτως, "
+"δουλεύουμε μαζί για να πετύχουμε τον κοινό στόχο της δημιουργίας του "
+"καλύτερου Ελεύθερου Λογισμικού. Όλοι είναι ευπρόσδεκτοι να συμμετέχουν και "
+"να συμβάλλουν στο KDE, συμπεριλαμβανόμενου και εσένα."
+
+#: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:192
+#, kde-format
+msgid "Homepage"
+msgstr "Αρχική σελίδα"
+
+#: formcard/AboutKDE.qml:82
+#, fuzzy, kde-format
+#| msgid "Report a bug"
+msgid "Report bugs"
+msgstr "Αναφορά σφάλματος"
+
+#: formcard/AboutKDE.qml:87
+#, kde-format
+msgid ""
+"Software can always be improved, and the KDE team is ready to do so. "
+"However, you - the user - must tell us when something does not work as "
+"expected or could be done better.\n"
+"\n"
+"KDE has a bug tracking system. Use the button below to file a bug, or use "
+"the program's About page to report a bug specific to this application.\n"
+"\n"
+"If you have a suggestion for improvement then you are welcome to use the bug "
+"tracking system to register your wish. Make sure you use the severity called "
+"\"Wishlist\"."
+msgstr ""
+"Το λογισμικό μπορεί πάντα να βελτιωθεί, και η ομάδα του KDE είναι έτοιμη να "
+"το κάνει. Ωστόσο, εσείς - ο χρήστης - πρέπει να μας πείτε όταν κάτι δεν "
+"λειτουργεί σύμφωνα με τις προσδοκίες σας ή θα μπορούσε να βελτιωθεί.\n"
+"\n"
+"Το KDE έχει ένα σύστημα καταγραφής προβλημάτων. Χρησιμοποιήστε το κουμπί "
+"παρακάτω για την αναφορά προβλήματος, ή χρησιμοποιήστε την σελίδα Περί του "
+"προγράμματος  για να αναφέρετε προβλήματα σχετικά με την συγκεκριμένη "
+"εφαρμογή.\n"
+"\n"
+"Αν έχετε κάποια πρόταση για βελτίωση τότε είστε ευπρόσδεκτοι να "
+"χρησιμοποιήσετε το σύστημα αναφοράς προβλημάτων για να καταχωρήσετε την "
+"επιθυμία σας. Σιγουρευτείτε ότι επιλέξατε ως σοβαρότητα την επιλογή "
+"\"Wishlist\"."
+
+#: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:243
+#, kde-format
+msgid "Report a bug"
+msgstr "Αναφορά σφάλματος"
+
+#: formcard/AboutKDE.qml:102
+#, kde-format
+msgid "Join us"
+msgstr ""
+
+#: formcard/AboutKDE.qml:107
+#, kde-format
+msgid ""
+"You do not have to be a software developer to be a member of the KDE team. "
+"You can join the national teams that translate program interfaces. You can "
+"provide graphics, themes, sounds, and improved documentation. You decide!"
+msgstr ""
+"Δεν χρειάζεται να είσαστε προγραμματιστής για να είστε μέλος της ομάδας KDE. "
+"Μπορείτε να γίνετε μέλος των εθνικών ομάδω που μεταφράζουν τα γραφικά "
+"περιβάλλοντα των προγραμμάτων. Μπορείτε να συνεισφέρετε με γραφικά, θέματα, "
+"ήχους και βελτιωμένη τεκμηρίωση. Εσείς αποφασίζετε!"
+
+#: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:218
+#, kde-format
+msgid "Get Involved"
+msgstr "Ασχοληθείτε"
+
+#: formcard/AboutKDE.qml:123
+#, kde-format
+msgid "Developer Documentation"
+msgstr "Τεκμηρίωση προγραμματιστή"
+
+#: formcard/AboutKDE.qml:129
+#, kde-format
+msgid "Support us"
+msgstr ""
+
+#: formcard/AboutKDE.qml:134
+#, kde-format
+msgid ""
+"KDE software is and will always be available free of charge, however "
+"creating it is not free.\n"
+"\n"
+"To support development the KDE community has formed the KDE e.V., a non-"
+"profit organization legally founded in Germany. KDE e.V. represents the KDE "
+"community in legal and financial matters.\n"
+"\n"
+"KDE benefits from many kinds of contributions, including financial. We use "
+"the funds to reimburse members and others for expenses they incur when "
+"contributing. Further funds are used for legal support and organizing "
+"conferences and meetings.\n"
+"\n"
+"We would like to encourage you to support our efforts with a financial "
+"donation.\n"
+"\n"
+"Thank you very much in advance for your support."
+msgstr ""
+"Το λογισμικό KDE είναι και πάντα θα είναι διαθέσιμο χωρίς χρέωση, ωστόσο η "
+"δημιουργία του δεν είναι δωρεάν.\n"
+"\n"
+"Για να υποστηρίξει την ανάπτυξη η κοινότητα του KDE έχει δημιουργήσει την "
+"KDE e.V., μια μη κερδοσκοπική οργάνωση η οποία νομικά ιδρύθηκε στην "
+"Γερμανία. Η KDE e.V. εκπροσωπεί την κοινότητα του KDE σε νομικά και "
+"οικονομικά θέματα.\n"
+"\n"
+"Το KDE ωφελείται από πολλών ειδών συνεισφορές, συμπεριλαμβανομένης και "
+"οικονομικής. Χρησιμοποιούμε τα χρήματα για την αποζημίωση μελών και άλλων "
+"για έξοδα τα οποία θα επιβαρυνθούν κατά την συνεισφορά τους. Επιπροσθέτως "
+"χρήματα χρησιμοποιούνται για την νομική υποστήριξη και για την οργάνωση "
+"συνεδρίων και συναντήσεων.\n"
+"\n"
+"Θα θέλαμε να σας ενθαρρύνουμε να υποστηρίξετε τις προσπάθειές μας με μια "
+"δωρεά.\n"
+"\n"
+"Ευχαριστούμε πάρα πολύ εκ των προτέρων για την υποστήριξή σας."
+
+#: formcard/AboutKDE.qml:146
+#, kde-format
+msgid "KDE e.V"
+msgstr "KDE e.V"
+
+#: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:205
+#, kde-format
+msgid "Donate"
+msgstr "Δωρεά"
+
+#: formcard/AboutPage.qml:87
+#, kde-format
+msgid "About %1"
+msgstr "Σχετικά με το %1"
+
+#: formcard/AboutPage.qml:133
+#, kde-format
+msgid "Copyright"
+msgstr "Πνευματικά δικαιώματα"
+
+#: formcard/AboutPage.qml:141
+#, kde-format
+msgid "License"
+msgid_plural "Licenses"
+msgstr[0] "Άδεια χρήσης"
+msgstr[1] "Άδειες χρήσης"
+
+#: formcard/AboutPage.qml:250
+#, kde-format
+msgid "Libraries in use"
+msgstr "Βιβλιοθήκες σε χρήση"
+
+#: formcard/AboutPage.qml:273
+#, kde-format
+msgid "Authors"
+msgstr "Συγγραφείς"
+
+#: formcard/AboutPage.qml:288
+#, kde-format
+msgid "Credits"
+msgstr "Αναγνώριση"
+
+#: formcard/AboutPage.qml:303
+#, kde-format
+msgid "Translators"
+msgstr "Μεταφραστές"
+
+#: formcard/AboutPage.qml:372
+#, kde-format
+msgid "Visit %1's KDE Store page"
+msgstr ""
+
+#: formcard/AboutPage.qml:381
+#, kde-format
+msgid "Send an email to %1"
+msgstr ""
+
+#: formcard/FormDateTimeDelegate.qml:146
+#, fuzzy, kde-format
+#| msgid "Today"
+msgctxt "Displayed in place of the date if the selected day is today"
+msgid "Today"
+msgstr "Σήμερα"
+
+#: formcard/FormDateTimeDelegate.qml:173 formcard/FormDateTimeDelegate.qml:283
+#, kde-format
+msgctxt "Date is not set"
+msgid "Not set"
+msgstr ""
+
+#: formcard/FormTextFieldDelegate.qml:219
+#, kde-format
+msgctxt "@label %1 is current text length, %2 is maximum length of text field"
+msgid "%1/%2"
+msgstr ""
+
+#: settings/CategorizedSettings.qml:44
+#, kde-format
+msgctxt "@title:window"
+msgid "Settings"
+msgstr ""
+
+#: settings/CategorizedSettings.qml:44
+#, kde-format
+msgctxt "@title:window"
+msgid "Settings — %1"
+msgstr ""
+
+#~ msgctxt "%1 is month name, %2 is year"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#, fuzzy
+#~| msgctxt "kirigami-addons"
+#~| msgid "Days"
+#~ msgctxt "@title:tab"
+#~ msgid "Days"
+#~ msgstr "Ημέρες"
+
+#, fuzzy
+#~| msgctxt "kirigami-addons"
+#~| msgid "Months"
+#~ msgctxt "@title:tab"
+#~ msgid "Months"
+#~ msgstr "Μήνες"
+
+#, fuzzy
+#~| msgctxt "kirigami-addons"
+#~| msgid "Years"
+#~ msgctxt "@title:tab"
+#~ msgid "Years"
+#~ msgstr "Χρόνια"
+
+#~ msgid "Accept"
+#~ msgstr "Αποδοχή"

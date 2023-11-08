@@ -1,0 +1,417 @@
+# Copyright (C) 2023 This file is copyright:
+# This file is distributed under the same license as the kirigami-addons package.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Paolo Zamponi <feus73@gmail.com>
+# SPDX-FileCopyrightText: 2023 Vincenzo Reale <smart2128vr@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kirigami-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-11-08 08:47+0000\n"
+"PO-Revision-Date: 2023-10-26 18:04+0200\n"
+"Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 23.08.2\n"
+
+#: components/AbstractMaximizeComponent.qml:125
+#, kde-format
+msgid "Close"
+msgstr "Chiudi"
+
+#: components/AlbumMaximizeComponent.qml:115
+#, kde-format
+msgid "Zoom in"
+msgstr "Ingrandisci"
+
+#: components/AlbumMaximizeComponent.qml:120
+#, kde-format
+msgid "Zoom out"
+msgstr "Rimpicciolisci"
+
+#: components/AlbumMaximizeComponent.qml:126
+#, kde-format
+msgid "Rotate left"
+msgstr "Ruota a sinistra"
+
+#: components/AlbumMaximizeComponent.qml:132
+#, kde-format
+msgid "Rotate right"
+msgstr "Ruota a destra"
+
+#: components/AlbumMaximizeComponent.qml:137
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "Show caption"
+msgstr "Mostra didascalia"
+
+#: components/AlbumMaximizeComponent.qml:137
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "Hide caption"
+msgstr "Nascondi didascalia"
+
+#: components/AlbumMaximizeComponent.qml:143
+#, kde-format
+msgid "Save as"
+msgstr "Salva come"
+
+#: components/AlbumMaximizeComponent.qml:202
+#, kde-format
+msgid "Previous image"
+msgstr "Immagine precedente"
+
+#: components/AlbumMaximizeComponent.qml:220
+#, kde-format
+msgid "Next image"
+msgstr "Immagine successiva"
+
+#: components/Banner.qml:186
+#, kde-format
+msgctxt "@action:button"
+msgid "Close"
+msgstr "Chiudi"
+
+#: components/DownloadAction.qml:37
+#, kde-format
+msgid "Download"
+msgstr "Scarica"
+
+#: components/VideoMaximizeDelegate.qml:241
+#, kde-format
+msgctxt "@action:button"
+msgid "Volume"
+msgstr "Volume"
+
+#: dateandtime/DatePopup.qml:71 dateandtime/TimePopup.qml:52
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Annulla"
+
+#: dateandtime/DatePopup.qml:83 dateandtime/TimePopup.qml:64
+#, kde-format
+msgctxt "@action:button"
+msgid "Select"
+msgstr "Seleziona"
+
+#: dateandtime/private/DatePicker.qml:266
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Previous"
+msgstr "Vai al precedente"
+
+#: dateandtime/private/DatePicker.qml:279
+#, kde-format
+msgctxt "@action:button"
+msgid "Jump to today"
+msgstr "Salta a oggi"
+
+#: dateandtime/private/DatePicker.qml:286
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Next"
+msgstr "Vai al successivo"
+
+#: dateandtime/TimePicker.qml:96
+#, kde-format
+msgctxt "time in hour in 24h format"
+msgid "%1 hours"
+msgstr "%1 ore"
+
+#: dateandtime/TimePicker.qml:98
+#, kde-format
+msgctxt "time in hour (PM)"
+msgid "%1 PM"
+msgstr "%1 PM"
+
+#: dateandtime/TimePicker.qml:100
+#, kde-format
+msgctxt "time in hour (AM)"
+msgid "%1 AM"
+msgstr "%1 AM"
+
+#: dateandtime/TimePicker.qml:107
+#, kde-format
+msgctxt "Time separator"
+msgid ":"
+msgstr ":"
+
+#: dateandtime/TimePicker.qml:121
+#, kde-format
+msgctxt "number of minutes"
+msgid "%1 minutes"
+msgstr "%1 minuti"
+
+#: formcard/AboutKDE.qml:23
+#, kde-format
+msgid "About KDE"
+msgstr "Informazioni su KDE"
+
+#: formcard/AboutKDE.qml:50
+#, kde-format
+msgid "KDE"
+msgstr "KDE"
+
+#: formcard/AboutKDE.qml:59
+#, kde-format
+msgid "Be Free!"
+msgstr "Vivi libero."
+
+#: formcard/AboutKDE.qml:68
+#, kde-format
+msgid ""
+"KDE is a world-wide community of software engineers, artists, writers, "
+"translators and creators who are committed to Free Software development. KDE "
+"produces the Plasma desktop environment, hundreds of applications, and the "
+"many software libraries that support them.\n"
+"\n"
+"KDE is a cooperative enterprise: no single entity controls its direction or "
+"products. Instead, we work together to achieve the common goal of building "
+"the world's finest Free Software. Everyone is welcome to join and contribute "
+"to KDE, including you."
+msgstr ""
+"KDE è una comunità mondiale di ingegneri del software, artisti, scrittori, "
+"traduttori e autori che si dedicano allo sviluppo di software libero. KDE "
+"produce l'ambiente desktop Plasma, centinaia di applicazioni e le varie "
+"librerie software che li supportano.\n"
+"\n"
+"KDE è un'impresa cooperativa: nessuna singola entità controlla la sua "
+"direzione o i prodotti. Lavoriamo invece insieme per raggiungere l'obiettivo "
+"comune di costruire il miglior software libero del mondo. Chiunque è "
+"invitato a unirsi e contribuire a KDE, incluso tu."
+
+#: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:192
+#, kde-format
+msgid "Homepage"
+msgstr "Pagina iniziale"
+
+#: formcard/AboutKDE.qml:82
+#, kde-format
+msgid "Report bugs"
+msgstr "Segnala i bug"
+
+#: formcard/AboutKDE.qml:87
+#, kde-format
+msgid ""
+"Software can always be improved, and the KDE team is ready to do so. "
+"However, you - the user - must tell us when something does not work as "
+"expected or could be done better.\n"
+"\n"
+"KDE has a bug tracking system. Use the button below to file a bug, or use "
+"the program's About page to report a bug specific to this application.\n"
+"\n"
+"If you have a suggestion for improvement then you are welcome to use the bug "
+"tracking system to register your wish. Make sure you use the severity called "
+"\"Wishlist\"."
+msgstr ""
+"Il software può sempre essere migliorato. La squadra di KDE è pronta a farlo "
+"tuttavia, tu, l'utente, dovresti dirci quando qualcosa non funziona come "
+"previsto, oppure quando potrebbe essere migliorata.\n"
+"\n"
+"KDE ha un sistema di tracciamento dei bug. Usa il pulsante qui sotto per "
+"segnalare un bug, oppure la pagina Informazioni su per riportarne uno "
+"specifico di questa applicazione.\n"
+"\n"
+"Se hai un suggerimento migliorativo, allora sei incoraggiato a utilizzare il "
+"sistema di tracciamento dei bug per registrarlo. Assicurati di utilizzare il "
+"livello di gravità (severity) chiamato «Wishlist»."
+
+#: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:243
+#, kde-format
+msgid "Report a bug"
+msgstr "Segnala un bug"
+
+#: formcard/AboutKDE.qml:102
+#, kde-format
+msgid "Join us"
+msgstr "Unisciti a noi"
+
+#: formcard/AboutKDE.qml:107
+#, kde-format
+msgid ""
+"You do not have to be a software developer to be a member of the KDE team. "
+"You can join the national teams that translate program interfaces. You can "
+"provide graphics, themes, sounds, and improved documentation. You decide!"
+msgstr ""
+"Non devi essere uno sviluppatore di software per essere un membro della "
+"squadra di KDE. Puoi unirti alle squadre nazionali che traducono le "
+"interfacce dei programmi. Puoi fornire lavori grafici, temi, suoni e "
+"migliorare la documentazione. Decidi tu!"
+
+#: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:218
+#, kde-format
+msgid "Get Involved"
+msgstr "Partecipa"
+
+#: formcard/AboutKDE.qml:123
+#, kde-format
+msgid "Developer Documentation"
+msgstr "Documentazione per gli sviluppatori"
+
+#: formcard/AboutKDE.qml:129
+#, kde-format
+msgid "Support us"
+msgstr "Supportaci"
+
+#: formcard/AboutKDE.qml:134
+#, kde-format
+msgid ""
+"KDE software is and will always be available free of charge, however "
+"creating it is not free.\n"
+"\n"
+"To support development the KDE community has formed the KDE e.V., a non-"
+"profit organization legally founded in Germany. KDE e.V. represents the KDE "
+"community in legal and financial matters.\n"
+"\n"
+"KDE benefits from many kinds of contributions, including financial. We use "
+"the funds to reimburse members and others for expenses they incur when "
+"contributing. Further funds are used for legal support and organizing "
+"conferences and meetings.\n"
+"\n"
+"We would like to encourage you to support our efforts with a financial "
+"donation.\n"
+"\n"
+"Thank you very much in advance for your support."
+msgstr ""
+"Il software di KDE è e sarà sempre gratuitamente disponibile, ma scriverlo "
+"costa.\n"
+"\n"
+"Per supportarne lo sviluppo, la comunità di KDE ha formato la KDE e.V., "
+"un'organizzazione senza fini di lucro con sede legale in Germania. La KDE e."
+"V. rappresenta la comunità di KDE nelle questioni legali ed economiche.\n"
+"\n"
+"KDE beneficia di diverse fonti di contributi, anche economiche. Usiamo i "
+"fondi per rimborsare i membri, e altri delle spese sostenute per il loro "
+"contributo. Altri fondi sono usati per il supporto legale, e per organizzare "
+"conferenze e incontri.\n"
+"\n"
+"Vorremmo incoraggiarti a sostenere i nostri sforzi con una donazione.\n"
+"\n"
+"Grazie in anticipo per il tuo supporto."
+
+#: formcard/AboutKDE.qml:146
+#, kde-format
+msgid "KDE e.V"
+msgstr "KDE e.V"
+
+#: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:205
+#, kde-format
+msgid "Donate"
+msgstr "Fai una donazione"
+
+#: formcard/AboutPage.qml:87
+#, kde-format
+msgid "About %1"
+msgstr "Informazioni su %1"
+
+#: formcard/AboutPage.qml:133
+#, kde-format
+msgid "Copyright"
+msgstr "Copyright"
+
+#: formcard/AboutPage.qml:141
+#, kde-format
+msgid "License"
+msgid_plural "Licenses"
+msgstr[0] "Licenza"
+msgstr[1] "Licenze"
+
+#: formcard/AboutPage.qml:250
+#, kde-format
+msgid "Libraries in use"
+msgstr "Librerie in uso"
+
+#: formcard/AboutPage.qml:273
+#, kde-format
+msgid "Authors"
+msgstr "Autori"
+
+#: formcard/AboutPage.qml:288
+#, kde-format
+msgid "Credits"
+msgstr "Riconoscimenti"
+
+#: formcard/AboutPage.qml:303
+#, kde-format
+msgid "Translators"
+msgstr "Traduttori"
+
+#: formcard/AboutPage.qml:372
+#, kde-format
+msgid "Visit %1's KDE Store page"
+msgstr "Visita la pagina del KDE Store di %1"
+
+#: formcard/AboutPage.qml:381
+#, kde-format
+msgid "Send an email to %1"
+msgstr "Invia un messaggio di posta elettronica a %1"
+
+#: formcard/FormDateTimeDelegate.qml:146
+#, kde-format
+msgctxt "Displayed in place of the date if the selected day is today"
+msgid "Today"
+msgstr "Oggi"
+
+#: formcard/FormDateTimeDelegate.qml:173 formcard/FormDateTimeDelegate.qml:283
+#, kde-format
+msgctxt "Date is not set"
+msgid "Not set"
+msgstr "Non impostato"
+
+#: formcard/FormTextFieldDelegate.qml:219
+#, kde-format
+msgctxt "@label %1 is current text length, %2 is maximum length of text field"
+msgid "%1/%2"
+msgstr "%1/%2"
+
+#: settings/CategorizedSettings.qml:44
+#, kde-format
+msgctxt "@title:window"
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: settings/CategorizedSettings.qml:44
+#, kde-format
+msgctxt "@title:window"
+msgid "Settings — %1"
+msgstr "Impostazioni — %1"
+
+#~ msgctxt "%1 is month name, %2 is year"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgctxt "@title:tab"
+#~ msgid "Days"
+#~ msgstr "Giorni"
+
+#~ msgctxt "@title:tab"
+#~ msgid "Months"
+#~ msgstr "Mesi"
+
+#~ msgctxt "@title:tab"
+#~ msgid "Years"
+#~ msgstr "Anni"
+
+#~ msgid "Accept"
+#~ msgstr "Accetta"
+
+#~ msgid ""
+#~ "Software can always be improved, and the KDE team is ready to do so. "
+#~ "However, you - the user - must tell us when something does not work as "
+#~ "expected or could be done better.\n"
+#~ msgstr ""
+#~ "Il software può essere sempre migliorato, e la squadra di KDE è pronta a "
+#~ "farlo. Tuttavia tu, l'utente, dovresti dirci quando qualcosa non funziona "
+#~ "come previsto, oppure quando potrebbe essere fatta meglio.\n"
+
+#~ msgid ""
+#~ "KDE software is and will always be available free of charge, however "
+#~ "creating it is not free.\n"
+#~ msgstr ""
+#~ "Il software di KDE è e sarà sempre disponibile gratuitamente, tuttavia la "
+#~ "sua creazione non è gratuita.\n"
