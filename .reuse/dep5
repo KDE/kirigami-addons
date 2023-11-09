@@ -11,6 +11,6 @@ Files: docs/pics/*
 Copyright: none
 License: CC0-1.0
 
-Files: examples/MobileFormTutorial/*
+Files: examples/FormCardTutorial/*
 Copyright: 2023 by Thiago Masato Costa Sueto <thiago.sueto@kde.org>
 License: LGPL-2.1-or-later

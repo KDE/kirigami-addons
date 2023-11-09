@@ -6,8 +6,8 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 Kirigami Addons is an additional set of visual components that work well on mobile and desktop and are guaranteed to be cross-platform. It uses Kirigami under the hood to create its components and should look native with any QtQuick Controls style.
 
-* [API Documentation](https://api.kde.org/frameworks/kirigami-addons/html/index.html).
-* [Tutorial](https://develop.kde.org/docs/getting-started/kirigami/mobile-about/)
+* [API Documentation](https://api.kde.org/frameworks/kirigami-addons/html/index.html)
+* [Tutorial](https://develop.kde.org/docs/getting-started/kirigami/formcard-intro/)
 
 ## Structure
 

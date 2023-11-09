@@ -11,7 +11,7 @@
 
 Kirigami Addons is an additional set of visual components that work well on mobile and desktop and are guaranteed to be cross-platform. It uses Kirigami under the hood to create its components and should look native with any QtQuick Controls style.
 
-A tutorial for Kirigami Addons can be found over <a href="https://develop.kde.org/docs/getting-started/kirigami/mobile-about/">Develop</a>.
+A tutorial for Kirigami Addons can be found over <a href="https://develop.kde.org/docs/getting-started/kirigami/formcard-intro/">Develop</a>.
 
 @subsection common_components Most common components
 
@@ -19,66 +19,83 @@ Kirigami Addons provides several QML modules. Each module may contain one or mul
 
 The following components are either commonly used or serve as entrypoints for using other API in their respective modules:
 
-- @ref components "Components Module"
+- @ref addonscomponents "Components Module"
   - AlbumMaximizeComponent
   - SearchPopupField
 - @ref dateandtime "Date and Time Module"
-  - TimeInput
-  - DateInput
-- @ref mobileform "Mobile Form Module"
+  - TimePopup
+  - DatePopup
+- @ref delegate "Delegates Module"
+  - IndicatorItemDelegate
+  - RoundedItemDelegate
+  - RoundedTreeDelegate
+- @ref formcard "Form Card Module"
   - AboutKDE
   - AboutPage
   - FormCard
-  - FormCardHeader
+  - FormHeader
+  - FormCardPage
+- @ref categorizedsettings "Categorized Settings Module"
+  - CategorizedSettings
+  - SettingAction
 - @ref sounds "Sounds Module"
   - SoundsPicker
 - @ref treeview "TreeView Module"
-  - TreeListView
-  - TreeTableView
-  - BasicTreeItem
+  - TreeViewDecoration
 
 @subsection modules List of modules and components
 
 Each component can be used with an import statement following this pattern:
 
 ```
-import org.kde.kirigamiaddons.labs.<module_name> <version>
+import org.kde.kirigamiaddons.<module_name> <version>
 ```
 
 Starting with Qt6, the version is optional.
 
 The following list can be used to check which component belongs to which module:
 
-@subsubsection components org.kde.kirigamiaddons.labs.components
+@subsubsection addonscomponents org.kde.kirigamiaddons.components
 
 - AbstractMaximizeComponent
 - AlbumMaximizeComponent
 - AlbumModelItem
+- Avatar
+- AvatarButton
+- FloatingButton
+- DoubleFloatingButton
 - ImageMaximizeDelegate
 - VideoMaximizeDelegate
 - SearchPopupField
 
-@subsubsection dateandtime org.kde.kirigamiaddons.labs.dateandtime
+@subsubsection dateandtime org.kde.kirigamiaddons.dateandtime
 
-- ClockFace
-- DateInput
 - DatePicker
 - DatePopup
-- TimeInput
 - TimePicker
 
-@subsubsection mobileform org.kde.kirigamiaddons.labs.mobileform
+@subsubsection delegates org.kde.kirigamiaddons.delegates
+
+- IndicatorItemDelegate
+- RoundedItemDelegate
+- RoundedTreeDelegate
+
+@subsubsection formcard org.kde.kirigamiaddons.formcard
+
 - AboutKDE
 - AboutPage
 - AbstractFormDelegate
 - FormArrow
 - FormButtonDelegate
 - FormCard
-- FormCardHeader
+- FormCardPage
 - FormCheckDelegate
 - FormComboBoxDelegate
+- FormDateTimeDelegate
 - FormDelegateBackground
 - FormDelegateSeparator
+- FormGridContainer
+- FormHeader
 - FormRadioDelegate
 - FormSectionText
 - FormSpinBoxDelegate
@@ -86,16 +103,17 @@ The following list can be used to check which component belongs to which module:
 - FormTextDelegate
 - FormTextFieldDelegate
 
-@subsubsection sounds org.kde.kirigamiaddons.labs.sounds
+@subsubsection categorizedsettings org.kde.kirigamiaddons.settings
+
+- CategorizedSettings
+- SettingAction
+
+@subsubsection sounds org.kde.kirigamiaddons.sounds
 
 - SoundsPicker
 
-@subsubsection treeview org.kde.kirigamiaddons.labs.treeview
+@subsubsection treeview org.kde.kirigamiaddons.treeview
 
-- AbstractTreeItem
-- BasicTreeItem
-- TreeListView
-- TreeTableView
 - TreeViewDecoration
 
 @licenses
