@@ -11,7 +11,7 @@ import org.kde.kirigami 2.12 as Kirigami
 
 /**
  * @brief A base item for delegates to be used in a FormCard.
- * 
+ *
  * This component can be used to create your own custom FormCard delegates.
  *
  * By default, it includes a background with hover and click feedback.
@@ -35,7 +35,7 @@ T.ItemDelegate {
     focusPolicy: Qt.StrongFocus
     hoverEnabled: true
     background: FormDelegateBackground { control: root }
-    
+
     Layout.fillWidth: true
 }
 

@@ -43,7 +43,7 @@ AbstractFormDelegate {
      * @brief This property allows for access to the description label item.
      */
     property alias descriptionItem: internalDescriptionItem
-    
+
     /**
      * @brief This property holds allows for access to the text label item.
      */
@@ -54,23 +54,23 @@ AbstractFormDelegate {
      * the delegate's contents.
      */
     property var leading: null
-    
+
     /**
      * @brief This property holds the padding after the leading item.
      */
     property real leadingPadding: Kirigami.Units.smallSpacing
-    
+
     /**
      * @brief This property holds an item that will be displayed after
      * the delegate's contents.
      */
     property var trailing: null
-    
+
     /**
      * @brief This property holds the padding before the trailing item.
      */
     property real trailingPadding: Kirigami.Units.smallSpacing
-    
+
     signal linkActivated(string link)
 
     focusPolicy: Qt.NoFocus
@@ -79,7 +79,7 @@ AbstractFormDelegate {
 
     contentItem: RowLayout {
         spacing: 0
-        
+
         Private.ContentItemLoader {
             Layout.rightMargin: visible ? root.leadingPadding : 0
             visible: root.leading
@@ -87,7 +87,7 @@ AbstractFormDelegate {
             implicitWidth: visible ? root.leading.implicitWidth : 0
             contentItem: root.leading
         }
-        
+
         Kirigami.Icon {
             visible: root.icon.name !== ""
             source: root.icon.name
@@ -100,7 +100,7 @@ AbstractFormDelegate {
         ColumnLayout {
             Layout.fillWidth: true
             spacing: Kirigami.Units.smallSpacing
-            
+
             Label {
                 id: internalTextItem
                 Layout.fillWidth: true
@@ -110,7 +110,7 @@ AbstractFormDelegate {
                 visible: root.text
                 Accessible.ignored: true // base class sets this text on root already
             }
-            
+
             Label {
                 id: internalDescriptionItem
                 Layout.fillWidth: true
@@ -121,7 +121,7 @@ AbstractFormDelegate {
                 wrapMode: Text.Wrap
             }
         }
-        
+
         Private.ContentItemLoader {
             Layout.leftMargin: visible ? root.trailingPadding : 0
             visible: root.trailing

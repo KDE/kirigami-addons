@@ -32,7 +32,7 @@ Kirigami.Icon {
      * default: `Qt.RightArrow`
      */
     property int direction: Qt.RightArrow
-    
+
     source: {
         switch (direction) {
             case Qt.UpArrow:

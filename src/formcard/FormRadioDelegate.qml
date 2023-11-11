@@ -50,45 +50,45 @@ T.RadioDelegate {
      * This provides additional information shown in a faint gray color.
      */
     property string description: ""
-    
+
     /**
      * @brief This property holds an item that will be displayed to the left of the delegate's contents.
      */
     property var leading: null
-    
+
     /**
      * @brief This property holds the padding after the leading item.
      */
     property real leadingPadding: Kirigami.Units.smallSpacing
-    
+
     /**
      * @brief This property holds an item that will be displayed after the
      * delegate's contents.
      */
     property var trailing: null
-    
+
     /**
      * @brief This property holds the padding before the trailing item.
      */
     property real trailingPadding: Kirigami.Units.smallSpacing
-    
+
     leftPadding: Kirigami.Units.gridUnit
     topPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
     bottomPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
     rightPadding: Kirigami.Units.gridUnit
-    
+
     implicitWidth: contentItem.implicitWidth + leftPadding + rightPadding
     implicitHeight: contentItem.implicitHeight + topPadding + bottomPadding
-    
+
     focusPolicy: Qt.StrongFocus
     hoverEnabled: true
     background: FormDelegateBackground { control: root }
-    
+
     Layout.fillWidth: true
-    
+
     contentItem: RowLayout {
         spacing: 0
-        
+
         Private.ContentItemLoader {
             Layout.rightMargin: visible ? root.leadingPadding : 0
             visible: root.leading
@@ -96,20 +96,20 @@ T.RadioDelegate {
             implicitWidth: visible ? root.leading.implicitWidth : 0
             contentItem: root.leading
         }
-        
+
         Controls.RadioButton {
             id: radioButtonItem
             focusPolicy: Qt.NoFocus // provided by delegate
             Layout.rightMargin: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
-            
+
             enabled: root.enabled
             checked: root.checked
-            
+
             onToggled: root.toggled()
             onClicked: root.clicked()
             onPressAndHold: root.pressAndHold()
             onDoubleClicked: root.doubleClicked()
-            
+
             onCheckedChanged: {
                 root.checked = checked;
                 checked = Qt.binding(() => root.checked);
@@ -137,7 +137,7 @@ T.RadioDelegate {
                 wrapMode: Text.Wrap
             }
         }
-        
+
         Private.ContentItemLoader {
             Layout.leftMargin: visible ? root.trailingPadding : 0
             visible: root.trailing

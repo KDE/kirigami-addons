@@ -27,7 +27,7 @@ import org.kde.kirigami 2.19 as Kirigami
 Label {
     color: Kirigami.Theme.disabledTextColor
     wrapMode: Label.Wrap
-    
+
     Layout.maximumWidth: Kirigami.Units.gridUnit * 30
     Layout.alignment: Qt.AlignHCenter
     Layout.leftMargin: Kirigami.Units.gridUnit
