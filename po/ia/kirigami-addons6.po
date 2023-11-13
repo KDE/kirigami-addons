@@ -1,0 +1,342 @@
+# Copyright (C) 2023 This file is copyright:
+# This file is distributed under the same license as the kirigami-addons package.
+#
+# SPDX-FileCopyrightText: 2023 giovanni <g.sora@tiscali.it>
+msgid ""
+msgstr ""
+"Project-Id-Version: kirigami-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-11-08 08:47+0000\n"
+"PO-Revision-Date: 2023-11-12 22:39+0100\n"
+"Last-Translator: giovanni <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.08.3\n"
+
+#: components/AbstractMaximizeComponent.qml:125
+#, kde-format
+msgid "Close"
+msgstr "Claude"
+
+#: components/AlbumMaximizeComponent.qml:115
+#, kde-format
+msgid "Zoom in"
+msgstr "Zoom in (aggrandi)"
+
+#: components/AlbumMaximizeComponent.qml:120
+#, kde-format
+msgid "Zoom out"
+msgstr "Zoom out (diminue)"
+
+#: components/AlbumMaximizeComponent.qml:126
+#, kde-format
+msgid "Rotate left"
+msgstr "Rota a sinistra"
+
+#: components/AlbumMaximizeComponent.qml:132
+#, kde-format
+msgid "Rotate right"
+msgstr "Rota a dextera"
+
+#: components/AlbumMaximizeComponent.qml:137
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "Show caption"
+msgstr ""
+
+#: components/AlbumMaximizeComponent.qml:137
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "Hide caption"
+msgstr ""
+
+#: components/AlbumMaximizeComponent.qml:143
+#, kde-format
+msgid "Save as"
+msgstr "Salveguarda como"
+
+#: components/AlbumMaximizeComponent.qml:202
+#, kde-format
+msgid "Previous image"
+msgstr "Previe imagine"
+
+#: components/AlbumMaximizeComponent.qml:220
+#, kde-format
+msgid "Next image"
+msgstr "Proxime imagine"
+
+#: components/Banner.qml:186
+#, kde-format
+msgctxt "@action:button"
+msgid "Close"
+msgstr "Claude"
+
+#: components/DownloadAction.qml:37
+#, kde-format
+msgid "Download"
+msgstr "Discarga"
+
+#: components/VideoMaximizeDelegate.qml:241
+#, kde-format
+msgctxt "@action:button"
+msgid "Volume"
+msgstr "Volumine"
+
+#: dateandtime/DatePopup.qml:71 dateandtime/TimePopup.qml:52
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Non Cancella"
+
+#: dateandtime/DatePopup.qml:83 dateandtime/TimePopup.qml:64
+#, kde-format
+msgctxt "@action:button"
+msgid "Select"
+msgstr "Selige"
+
+#: dateandtime/private/DatePicker.qml:266
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Previous"
+msgstr "Vade a previe"
+
+#: dateandtime/private/DatePicker.qml:279
+#, kde-format
+msgctxt "@action:button"
+msgid "Jump to today"
+msgstr ""
+
+#: dateandtime/private/DatePicker.qml:286
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Next"
+msgstr "Vade a proxime"
+
+#: dateandtime/TimePicker.qml:96
+#, kde-format
+msgctxt "time in hour in 24h format"
+msgid "%1 hours"
+msgstr "%1 horas"
+
+#: dateandtime/TimePicker.qml:98
+#, kde-format
+msgctxt "time in hour (PM)"
+msgid "%1 PM"
+msgstr "%1 PM"
+
+#: dateandtime/TimePicker.qml:100
+#, kde-format
+msgctxt "time in hour (AM)"
+msgid "%1 AM"
+msgstr "%1 AM"
+
+#: dateandtime/TimePicker.qml:107
+#, kde-format
+msgctxt "Time separator"
+msgid ":"
+msgstr ":"
+
+#: dateandtime/TimePicker.qml:121
+#, kde-format
+msgctxt "number of minutes"
+msgid "%1 minutes"
+msgstr "%1 minutas"
+
+#: formcard/AboutKDE.qml:23
+#, kde-format
+msgid "About KDE"
+msgstr "A proposito de KDE"
+
+#: formcard/AboutKDE.qml:50
+#, kde-format
+msgid "KDE"
+msgstr "KDE"
+
+#: formcard/AboutKDE.qml:59
+#, kde-format
+msgid "Be Free!"
+msgstr "Sia Libere!"
+
+#: formcard/AboutKDE.qml:68
+#, kde-format
+msgid ""
+"KDE is a world-wide community of software engineers, artists, writers, "
+"translators and creators who are committed to Free Software development. KDE "
+"produces the Plasma desktop environment, hundreds of applications, and the "
+"many software libraries that support them.\n"
+"\n"
+"KDE is a cooperative enterprise: no single entity controls its direction or "
+"products. Instead, we work together to achieve the common goal of building "
+"the world's finest Free Software. Everyone is welcome to join and contribute "
+"to KDE, including you."
+msgstr ""
+
+#: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:192
+#, kde-format
+msgid "Homepage"
+msgstr "Pagina Domo o Principal"
+
+#: formcard/AboutKDE.qml:82
+#, kde-format
+msgid "Report bugs"
+msgstr ""
+
+#: formcard/AboutKDE.qml:87
+#, kde-format
+msgid ""
+"Software can always be improved, and the KDE team is ready to do so. "
+"However, you - the user - must tell us when something does not work as "
+"expected or could be done better.\n"
+"\n"
+"KDE has a bug tracking system. Use the button below to file a bug, or use "
+"the program's About page to report a bug specific to this application.\n"
+"\n"
+"If you have a suggestion for improvement then you are welcome to use the bug "
+"tracking system to register your wish. Make sure you use the severity called "
+"\"Wishlist\"."
+msgstr ""
+
+#: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:243
+#, kde-format
+msgid "Report a bug"
+msgstr "Reporta un bug"
+
+#: formcard/AboutKDE.qml:102
+#, kde-format
+msgid "Join us"
+msgstr ""
+
+#: formcard/AboutKDE.qml:107
+#, kde-format
+msgid ""
+"You do not have to be a software developer to be a member of the KDE team. "
+"You can join the national teams that translate program interfaces. You can "
+"provide graphics, themes, sounds, and improved documentation. You decide!"
+msgstr ""
+
+#: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:218
+#, kde-format
+msgid "Get Involved"
+msgstr "Sea involvite"
+
+#: formcard/AboutKDE.qml:123
+#, kde-format
+msgid "Developer Documentation"
+msgstr ""
+
+#: formcard/AboutKDE.qml:129
+#, kde-format
+msgid "Support us"
+msgstr "Supporta nos"
+
+#: formcard/AboutKDE.qml:134
+#, kde-format
+msgid ""
+"KDE software is and will always be available free of charge, however "
+"creating it is not free.\n"
+"\n"
+"To support development the KDE community has formed the KDE e.V., a non-"
+"profit organization legally founded in Germany. KDE e.V. represents the KDE "
+"community in legal and financial matters.\n"
+"\n"
+"KDE benefits from many kinds of contributions, including financial. We use "
+"the funds to reimburse members and others for expenses they incur when "
+"contributing. Further funds are used for legal support and organizing "
+"conferences and meetings.\n"
+"\n"
+"We would like to encourage you to support our efforts with a financial "
+"donation.\n"
+"\n"
+"Thank you very much in advance for your support."
+msgstr ""
+
+#: formcard/AboutKDE.qml:146
+#, kde-format
+msgid "KDE e.V"
+msgstr "KDE e.V"
+
+#: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:205
+#, kde-format
+msgid "Donate"
+msgstr "Dona"
+
+#: formcard/AboutPage.qml:87
+#, kde-format
+msgid "About %1"
+msgstr "A proposito de %1"
+
+#: formcard/AboutPage.qml:133
+#, kde-format
+msgid "Copyright"
+msgstr "Copyright"
+
+#: formcard/AboutPage.qml:141
+#, kde-format
+msgid "License"
+msgid_plural "Licenses"
+msgstr[0] "Licentia"
+msgstr[1] "Licentias"
+
+#: formcard/AboutPage.qml:250
+#, kde-format
+msgid "Libraries in use"
+msgstr "Bibliothecas in uso"
+
+#: formcard/AboutPage.qml:273
+#, kde-format
+msgid "Authors"
+msgstr "Autores"
+
+#: formcard/AboutPage.qml:288
+#, kde-format
+msgid "Credits"
+msgstr "Gratias"
+
+#: formcard/AboutPage.qml:303
+#, kde-format
+msgid "Translators"
+msgstr "Traductores"
+
+#: formcard/AboutPage.qml:372
+#, kde-format
+msgid "Visit %1's KDE Store page"
+msgstr "Visita pagina %1 de KDE Store"
+
+#: formcard/AboutPage.qml:381
+#, kde-format
+msgid "Send an email to %1"
+msgstr "Invia un message de e-posta a  %1"
+
+#: formcard/FormDateTimeDelegate.qml:146
+#, kde-format
+msgctxt "Displayed in place of the date if the selected day is today"
+msgid "Today"
+msgstr "Hodie"
+
+#: formcard/FormDateTimeDelegate.qml:173 formcard/FormDateTimeDelegate.qml:283
+#, kde-format
+msgctxt "Date is not set"
+msgid "Not set"
+msgstr "Non Fixa"
+
+#: formcard/FormTextFieldDelegate.qml:219
+#, kde-format
+msgctxt "@label %1 is current text length, %2 is maximum length of text field"
+msgid "%1/%2"
+msgstr "%1/%2"
+
+#: settings/CategorizedSettings.qml:44
+#, kde-format
+msgctxt "@title:window"
+msgid "Settings"
+msgstr "Preferentias"
+
+#: settings/CategorizedSettings.qml:44
+#, kde-format
+msgctxt "@title:window"
+msgid "Settings — %1"
+msgstr "Preferentias — %1"
