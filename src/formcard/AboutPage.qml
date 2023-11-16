@@ -204,13 +204,13 @@ FormCardPage {
             id: homepageDelegate
             text: i18nd("kirigami-addons", "Get Involved")
             onClicked: Qt.openUrlExternally(page.getInvolvedUrl)
-            visible: page.getInvolvedUrl > 0
+            visible: page.getInvolvedUrl != ""
         }
 
         FormDelegateSeparator {
             above: homepageDelegate
             below: bugDelegate
-            visible: page.getInvolvedUrl > 0
+            visible: page.getInvolvedUrl != ""
         }
 
         FormButtonDelegate {
