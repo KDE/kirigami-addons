@@ -34,7 +34,7 @@ QQC2.Button {
         implicitHeight: Kirigami.Units.gridUnit * 2
 
         Kirigami.Theme.colorSet: Kirigami.Theme.Button
-        color: Kirigami.Theme.backgroundColor
+        color: root.down ? Kirigami.Theme.alternateBackgroundColor: Kirigami.Theme.backgroundColor
 
         corners {
             topLeftRadius: (!root.mirrored && root.isStart) || (root.mirrored && root.isEnd) ? 4 : 0

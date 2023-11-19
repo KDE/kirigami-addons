@@ -145,10 +145,14 @@ AbstractFormDelegate {
 
             QQC2.Pane {
                 focusPolicy: Qt.NoFocus
+                topPadding: 0
+                bottomPadding: 0
                 leftPadding: Kirigami.Units.largeSpacing * 2
                 rightPadding: Kirigami.Units.largeSpacing * 2
                 visible: Kirigami.Settings.isMobile
                 contentItem: QQC2.Label {
+                    verticalAlignment: Text.AlignVCenter
+                    height: Kirigami.Units.gridUnit * 2
                     text: root.textFromValue(root.value, root.locale)
                 }
                 background: Item {
