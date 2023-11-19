@@ -1,4 +1,4 @@
-# Translation of kirigami-addons to Norwegian Nynorsk
+# Translation of kirigami-addons6 to Norwegian Nynorsk
 #
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2022.
 # Karl Ove Hufthammer <karl@huftis.org>, 2022, 2023.
