@@ -10,8 +10,9 @@ include(KDECompilerSettings)
 include(KDECMakeSettings)
 
 find_package(Qt${QT_MAJOR_VERSION} REQUIRED COMPONENTS
-    Widgets    # For QApplication
-    Quick      # For QML
+    Widgets        # For QApplication
+    Quick          # For QML
+    QuickControls2 # For QQuickStyle
 )
 find_package(KF${QT_MAJOR_VERSION} REQUIRED COMPONENTS
     CoreAddons # For KAboutData
@@ -25,6 +26,7 @@ target_sources(addonsexample PRIVATE main.cpp resources.qrc)
 target_link_libraries(addonsexample PRIVATE
     Qt::Widgets
     Qt::Quick
+    Qt::QuickControls2
     KF${QT_MAJOR_VERSION}::CoreAddons
     KF${QT_MAJOR_VERSION}::I18n
 )

@@ -2,6 +2,7 @@
 #include <QApplication>
 #include <QQmlApplicationEngine>
 #include <QIcon>
+#include <QQuickStyle>
 #include <KAboutData>
 #include <KLocalizedContext>
 #include <KLocalizedString>
@@ -26,6 +27,9 @@ int main(int argCount, char* argVector[])
 
     KAboutData::setApplicationData(aboutData);
 
+    if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE")) {
+        QQuickStyle::setStyle(QStringLiteral("org.kde.desktop"));
+    }
     QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("kde")));
 
     qmlRegisterSingletonType(
