@@ -2,12 +2,13 @@
 # This file is distributed under the same license as the kirigami-addons package.
 #
 # SPDX-FileCopyrightText: 2023 giovanni <g.sora@tiscali.it>
+# giovanni <g.sora@tiscali.it>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-08 08:47+0000\n"
-"PO-Revision-Date: 2023-11-12 22:39+0100\n"
+"PO-Revision-Date: 2023-11-21 10:37+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: components/AbstractMaximizeComponent.qml:125
 #, kde-format
@@ -46,13 +47,13 @@ msgstr "Rota a dextera"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
-msgstr ""
+msgstr "Monstra subtitulo"
 
 #: components/AlbumMaximizeComponent.qml:137
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
-msgstr ""
+msgstr "Cela subitulo"
 
 #: components/AlbumMaximizeComponent.qml:143
 #, kde-format
@@ -108,7 +109,7 @@ msgstr "Vade a previe"
 #, kde-format
 msgctxt "@action:button"
 msgid "Jump to today"
-msgstr ""
+msgstr "Salta a hodie"
 
 #: dateandtime/private/DatePicker.qml:286
 #, kde-format
@@ -183,7 +184,7 @@ msgstr "Pagina Domo o Principal"
 #: formcard/AboutKDE.qml:82
 #, kde-format
 msgid "Report bugs"
-msgstr ""
+msgstr "Reporta bugs "
 
 #: formcard/AboutKDE.qml:87
 #, kde-format
@@ -208,7 +209,7 @@ msgstr "Reporta un bug"
 #: formcard/AboutKDE.qml:102
 #, kde-format
 msgid "Join us"
-msgstr ""
+msgstr "Uni te a nos"
 
 #: formcard/AboutKDE.qml:107
 #, kde-format
@@ -226,7 +227,7 @@ msgstr "Sea involvite"
 #: formcard/AboutKDE.qml:123
 #, kde-format
 msgid "Developer Documentation"
-msgstr ""
+msgstr "Documentation de disveloppator"
 
 #: formcard/AboutKDE.qml:129
 #, kde-format
