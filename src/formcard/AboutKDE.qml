@@ -104,7 +104,7 @@ If you have a suggestion for improvement then you are welcome to use the bug tra
 
     FormCard {
         FormTextDelegate {
-            text: i18nd("kirigami-addons6", "You do not have to be a software developer to be a member of the KDE team. You can join the national teams that translate program interfaces. You can provide graphics, themes, sounds, and improved documentation. You decide!")
+            text: i18nd("kirigami-addons6", "You do not have to be a software developer to be a member of the KDE team. You can join the language teams that translate program interfaces. You can provide graphics, themes, sounds, and improved documentation. You decide!")
             textItem.wrapMode: Text.WordWrap
         }
 
