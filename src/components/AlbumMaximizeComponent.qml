@@ -7,6 +7,7 @@ import QtQuick.Layouts 1.15
 import Qt.labs.qmlmodels 1.0
 
 import org.kde.kirigami 2.15 as Kirigami
+import org.kde.kirigamiaddons.components as KirigamiComponents
 
 /**
  * @brief A popup that covers the entire window to show an album of 1 or more media items.
@@ -188,7 +189,7 @@ AbstractMaximizeComponent {
             }
         }
 
-        QQC2.RoundButton {
+        KirigamiComponents.FloatingButton {
             anchors {
                 left: parent.left
                 leftMargin: Kirigami.Units.largeSpacing
@@ -206,7 +207,7 @@ AbstractMaximizeComponent {
                 view.currentItem.play()
             }
         }
-        QQC2.RoundButton {
+        KirigamiComponents.FloatingButton {
             anchors {
                 right: parent.right
                 rightMargin: Kirigami.Units.largeSpacing
