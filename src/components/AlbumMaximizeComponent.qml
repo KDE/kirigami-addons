@@ -67,6 +67,16 @@ AbstractMaximizeComponent {
     property alias currentIndex: view.currentIndex
 
     /**
+     * @brief The current item.
+     */
+    property alias currentItem: view.currentItem
+
+    /**
+     * @brief The current number of items.
+     */
+    property alias count: view.count
+
+    /**
      * @brief Whether the caption should be shown.
      */
     property bool showCaption: true

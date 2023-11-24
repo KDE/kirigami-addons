@@ -35,7 +35,7 @@ TestCase {
         var testAlbum = createTemporaryObject(album, root);
         testAlbum.open();
 
-        compare(testAlbum.content.count == 3, true);
+        compare(testAlbum.count == 3, true);
 
         testAlbum.destroy();
     }
@@ -45,11 +45,11 @@ TestCase {
         var testAlbum = createTemporaryObject(album, root);
         testAlbum.open();
 
-        testAlbum.content.currentIndex = 0;
-        compare(testAlbum.content.currentItem.type, AlbumModelItem.Image);
-        compare(testAlbum.content.currentItem.source, Qt.resolvedUrl(root.testImage));
-        compare(testAlbum.content.currentItem.tempSource, Qt.resolvedUrl(root.testImage));
-        compare(testAlbum.content.currentItem.caption, "A test image");
+        testAlbum.currentIndex = 0;
+        compare(testAlbum.currentItem.type, AlbumModelItem.Image);
+        compare(testAlbum.currentItem.source, Qt.resolvedUrl(root.testImage));
+        compare(testAlbum.currentItem.tempSource, Qt.resolvedUrl(root.testImage));
+        compare(testAlbum.currentItem.caption, "A test image");
 
         testAlbum.destroy();
     }
@@ -59,11 +59,11 @@ TestCase {
         var testAlbum = createTemporaryObject(album, root);
         testAlbum.open();
 
-        testAlbum.content.currentIndex = 1;
-        compare(testAlbum.content.currentItem.type, AlbumModelItem.Video);
-        compare(testAlbum.content.currentItem.source, Qt.resolvedUrl(root.testVideo));
-        compare(testAlbum.content.currentItem.tempSource, Qt.resolvedUrl(root.testImage));
-        compare(testAlbum.content.currentItem.caption, "A test video");
+        testAlbum.currentIndex = 1;
+        compare(testAlbum.currentItem.type, AlbumModelItem.Video);
+        compare(testAlbum.currentItem.source, Qt.resolvedUrl(root.testVideo));
+        compare(testAlbum.currentItem.tempSource, Qt.resolvedUrl(root.testImage));
+        compare(testAlbum.currentItem.caption, "A test video");
 
         testAlbum.destroy();
     }
@@ -73,7 +73,7 @@ TestCase {
         var testAlbum = createTemporaryObject(album, root);
         testAlbum.open();
 
-        testAlbum.content.currentIndex = 0;
+        testAlbum.currentIndex = 0;
         compare(testAlbum.actions[2].visible, true);
         compare(testAlbum.actions[3].visible, true);
 
@@ -85,7 +85,7 @@ TestCase {
         var testAlbum = createTemporaryObject(album, root);
         testAlbum.open();
 
-        testAlbum.content.currentIndex = 1;
+        testAlbum.currentIndex = 1;
         compare(testAlbum.actions[2].visible, false);
         compare(testAlbum.actions[3].visible, false);
 
@@ -101,33 +101,33 @@ TestCase {
         // Check that caption will be visible for the first item with
         // showCaption = true.
         testAlbum.showCaption = true
-        testAlbum.content.currentIndex = 0;
+        testAlbum.currentIndex = 0;
         compare(testAlbum.footer.visible, true);
 
         // Check that caption will be visible for the second item with
         // showCaption = true.
-        testAlbum.content.currentIndex = 1;
+        testAlbum.currentIndex = 1;
         compare(testAlbum.footer.visible, true);
 
         // Check that caption will not be visible for the third item with
         // showCaption = true.
-        testAlbum.content.currentIndex = 2;
+        testAlbum.currentIndex = 2;
         compare(testAlbum.footer.visible, false);
 
         // Check that caption will not be visible for the first item with
         // showCaption = false.
         testAlbum.showCaption = false
-        testAlbum.content.currentIndex = 0;
+        testAlbum.currentIndex = 0;
         compare(testAlbum.footer.visible, false);
 
         // Check that caption will not be visible for the second item with
         // showCaption = false.
-        testAlbum.content.currentIndex = 1;
+        testAlbum.currentIndex = 1;
         compare(testAlbum.footer.visible, false);
 
         // Check that caption will not be visible for the third item with
         // showCaption = false.
-        testAlbum.content.currentIndex = 2;
+        testAlbum.currentIndex = 2;
         compare(testAlbum.footer.visible, false);
 
         testAlbum.destroy();
@@ -153,7 +153,7 @@ TestCase {
         testAlbum.open();
 
         // Make sure the item delegate is ready.
-        tryCompare(testAlbum.content.currentItem.children[0], "status", Image.Ready)
+        tryCompare(testAlbum.currentItem.children[0], "status", Image.Ready)
         wait(200) // Let the image resize animation happen.
         mouseClick(root, 738, 18, Qt.LeftButton)
         compare(testAlbum.signalSpySaveItem.count, 1)
@@ -168,10 +168,10 @@ TestCase {
         // Check that caption will be visible for the first item with
         // showCaption = true.
         testAlbum.showCaption = true
-        testAlbum.content.currentIndex = 0;
+        testAlbum.currentIndex = 0;
 
         // Make sure the item delegate is ready.
-        tryCompare(testAlbum.content.currentItem.children[0], "status", Image.Ready)
+        tryCompare(testAlbum.currentItem.children[0], "status", Image.Ready)
         wait(200) // Let the image resize animation happen.
 
         mouseClick(root, 702, 18, Qt.LeftButton)
