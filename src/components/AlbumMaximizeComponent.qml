@@ -62,6 +62,11 @@ AbstractMaximizeComponent {
     property int initialIndex: -1
 
     /**
+     * @brief The index of the current item.
+     */
+    property alias currentIndex: view.currentIndex
+
+    /**
      * @brief Whether the caption should be shown.
      */
     property bool showCaption: true
