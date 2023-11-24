@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-23 01:37+0000\n"
-"PO-Revision-Date: 2023-11-22 11:51+0100\n"
+"PO-Revision-Date: 2023-11-23 10:25+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -232,21 +232,16 @@ msgid "Join us"
 msgstr "Uni te a nos"
 
 #: formcard/AboutKDE.qml:107
-#, fuzzy, kde-format
-#| msgid ""
-#| "You do not have to be a software developer to be a member of the KDE "
-#| "team. You can join the national teams that translate program interfaces. "
-#| "You can provide graphics, themes, sounds, and improved documentation. You "
-#| "decide!"
+#, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
 "You can join the language teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
 "Tu non debe esser un  disveloppator de software per esser un membro del "
-"equipa de KDE. Tu pote uner te al equipos qui traduce interfacies de "
-"programma. Tu pote fornir grapiches, themas, sonos, e meliorar "
-"documentation. Tu decide!"
+"equipa de KDE. Tu pote uner te al equipos de linguage qui traduce "
+"interfacies de programma. Tu pote fornir grapiches, themas, sonos, e "
+"meliorar documentation. Tu decide!"
 
 #: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:218
 #, kde-format

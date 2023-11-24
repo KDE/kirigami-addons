@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-23 01:37+0000\n"
-"PO-Revision-Date: 2023-10-19 10:51+0200\n"
+"PO-Revision-Date: 2023-11-23 10:09+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: components/AbstractMaximizeComponent.qml:125
 #, kde-format
@@ -232,19 +232,14 @@ msgid "Join us"
 msgstr "Doe mee"
 
 #: formcard/AboutKDE.qml:107
-#, fuzzy, kde-format
-#| msgid ""
-#| "You do not have to be a software developer to be a member of the KDE "
-#| "team. You can join the national teams that translate program interfaces. "
-#| "You can provide graphics, themes, sounds, and improved documentation. You "
-#| "decide!"
+#, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
 "You can join the language teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
 "U hoeft geen softwareontwikkelaar te zijn om lid te worden van het KDE-team. "
-"U kunt bijv. deelnemen aan een van de nationale teams die de programma's en "
+"U kunt deelnemen aan een van de vertaalteams die de programma's en "
 "documentatie vertalen. U kunt afbeeldingen, thema's, geluiden en verbeterde "
 "documentatie leveren. Aan u de keuze!"
 
