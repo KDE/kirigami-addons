@@ -18,6 +18,7 @@ ecm_target_qml_sources(componentslabsplugin SOURCES
     ImageMaximizeDelegate.qml
     VideoMaximizeDelegate.qml
     AlbumModelItem.qml
+    AlbumPageIndicator.qml
     Banner.qml
     DownloadAction.qml
     SearchPopupField.qml

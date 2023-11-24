@@ -232,10 +232,19 @@ AbstractMaximizeComponent {
                 acceptedDevices: PointerDevice.Mouse
             }
         }
-        QQC2.PageIndicator {
+        AlbumPageIndicator {
             Layout.alignment: Qt.AlignHCenter
-            currentIndex: view.currentIndex
+            visible: count > 1
+            focusPolicy: Qt.NoFocus
+            interactive: true
             count: view.count
+
+            function bindCurrentIndex() {
+                currentIndex = Qt.binding(() => view.currentIndex);
+            }
+            onCurrentIndexChanged: {
+                view.currentIndex = currentIndex;
+            }
         }
     }
 
