@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-23 01:37+0000\n"
+"POT-Creation-Date: 2023-11-25 01:34+0000\n"
 "PO-Revision-Date: 2023-07-26 15:54+0300\n"
 "Last-Translator: Theofilos Intzoglou <int.teo@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -23,49 +23,49 @@ msgstr ""
 msgid "Close"
 msgstr "Κλείσιμο"
 
-#: components/AlbumMaximizeComponent.qml:115
+#: components/AlbumMaximizeComponent.qml:116
 #, kde-format
 msgid "Zoom in"
 msgstr "Μεγέθυνση"
 
-#: components/AlbumMaximizeComponent.qml:120
+#: components/AlbumMaximizeComponent.qml:121
 #, kde-format
 msgid "Zoom out"
 msgstr "Σμίκρυνση"
 
-#: components/AlbumMaximizeComponent.qml:126
+#: components/AlbumMaximizeComponent.qml:127
 #, kde-format
 msgid "Rotate left"
 msgstr "Περιστροφή αριστερά"
 
-#: components/AlbumMaximizeComponent.qml:132
+#: components/AlbumMaximizeComponent.qml:133
 #, kde-format
 msgid "Rotate right"
 msgstr "Περιστροφή δεξιά"
 
-#: components/AlbumMaximizeComponent.qml:137
+#: components/AlbumMaximizeComponent.qml:138
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
 msgstr "Εμφάνιση τίτλου"
 
-#: components/AlbumMaximizeComponent.qml:137
+#: components/AlbumMaximizeComponent.qml:138
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
 msgstr "Απόκρυψη τίτλου"
 
-#: components/AlbumMaximizeComponent.qml:143
+#: components/AlbumMaximizeComponent.qml:144
 #, kde-format
 msgid "Save as"
 msgstr "Αποθήκευση ως"
 
-#: components/AlbumMaximizeComponent.qml:202
+#: components/AlbumMaximizeComponent.qml:203
 #, kde-format
 msgid "Previous image"
 msgstr "Προηγούμενη εικόνα"
 
-#: components/AlbumMaximizeComponent.qml:220
+#: components/AlbumMaximizeComponent.qml:221
 #, kde-format
 msgid "Next image"
 msgstr "Επόμενη εικόνα"
