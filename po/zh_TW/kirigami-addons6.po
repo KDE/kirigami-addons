@@ -4,95 +4,93 @@
 # This file is distributed under the same license as the kirigami-addons package.
 #
 # Automatically generated, 2022.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
+# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-25 01:34+0000\n"
-"PO-Revision-Date: 2023-02-19 09:48+0900\n"
+"PO-Revision-Date: 2023-11-29 19:16+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: components/AbstractMaximizeComponent.qml:125
 #, kde-format
 msgid "Close"
-msgstr ""
+msgstr "關閉"
 
 #: components/AlbumMaximizeComponent.qml:116
 #, kde-format
 msgid "Zoom in"
-msgstr ""
+msgstr "放大"
 
 #: components/AlbumMaximizeComponent.qml:121
 #, kde-format
 msgid "Zoom out"
-msgstr ""
+msgstr "縮小"
 
 #: components/AlbumMaximizeComponent.qml:127
 #, kde-format
 msgid "Rotate left"
-msgstr ""
+msgstr "向左旋轉"
 
 #: components/AlbumMaximizeComponent.qml:133
 #, kde-format
 msgid "Rotate right"
-msgstr ""
+msgstr "向右旋轉"
 
 #: components/AlbumMaximizeComponent.qml:138
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
-msgstr ""
+msgstr "顯示標題"
 
 #: components/AlbumMaximizeComponent.qml:138
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
-msgstr ""
+msgstr "隱藏標題"
 
 #: components/AlbumMaximizeComponent.qml:144
 #, kde-format
 msgid "Save as"
-msgstr ""
+msgstr "另存新檔"
 
 #: components/AlbumMaximizeComponent.qml:203
-#, fuzzy, kde-format
-#| msgid "Previous"
+#, kde-format
 msgid "Previous image"
-msgstr "前一個"
+msgstr "前一個影像"
 
 #: components/AlbumMaximizeComponent.qml:221
 #, kde-format
 msgid "Next image"
-msgstr ""
+msgstr "下一個影像"
 
 #: components/Banner.qml:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "關閉"
 
 #: components/DownloadAction.qml:37
 #, kde-format
 msgid "Download"
-msgstr ""
+msgstr "下載"
 
 #: components/VideoMaximizeDelegate.qml:241
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
-msgstr ""
+msgstr "音量"
 
 #: dateandtime/DatePopup.qml:71 dateandtime/TimePopup.qml:52
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "取消"
@@ -101,11 +99,10 @@ msgstr "取消"
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
-msgstr ""
+msgstr "選取"
 
 #: dateandtime/private/DatePicker.qml:266
-#, fuzzy, kde-format
-#| msgid "Previous"
+#, kde-format
 msgctxt "@action:button"
 msgid "Go Previous"
 msgstr "前一個"
@@ -114,11 +111,10 @@ msgstr "前一個"
 #, kde-format
 msgctxt "@action:button"
 msgid "Jump to today"
-msgstr ""
+msgstr "跳到今天"
 
 #: dateandtime/private/DatePicker.qml:286
-#, fuzzy, kde-format
-#| msgid "Next"
+#, kde-format
 msgctxt "@action:button"
 msgid "Go Next"
 msgstr "下一個"
@@ -127,19 +123,19 @@ msgstr "下一個"
 #, kde-format
 msgctxt "time in hour in 24h format"
 msgid "%1 hours"
-msgstr ""
+msgstr "%1 小時"
 
 #: dateandtime/TimePicker.qml:98
 #, kde-format
 msgctxt "time in hour (PM)"
 msgid "%1 PM"
-msgstr ""
+msgstr "下午 %1"
 
 #: dateandtime/TimePicker.qml:100
 #, kde-format
 msgctxt "time in hour (AM)"
 msgid "%1 AM"
-msgstr ""
+msgstr "上午 %1"
 
 #: dateandtime/TimePicker.qml:107
 #, kde-format
@@ -151,7 +147,7 @@ msgstr ":"
 #, kde-format
 msgctxt "number of minutes"
 msgid "%1 minutes"
-msgstr ""
+msgstr "%1 分鐘"
 
 #: formcard/AboutKDE.qml:23
 #, kde-format
@@ -181,6 +177,12 @@ msgid ""
 "the world's finest Free Software. Everyone is welcome to join and contribute "
 "to KDE, including you."
 msgstr ""
+"KDE 是一個接受全世界的軟體工程師、美工畫家、寫作者、翻譯者與創造者提交各種服"
+"務與貢獻的自由軟體開發社群。KDE 做出了 Plasma 桌面環境、數百個應用程式和支援"
+"它們的軟體函式庫。\n"
+"\n"
+"KDE 是個合作企業：沒有任何人操控 KDE 的目標和產品，取而代之的是一起達到建立世"
+"界上最好自由軟體的共同目標。歡迎任何人 -- 包括您。"
 
 #: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:192
 #, kde-format
@@ -188,8 +190,7 @@ msgid "Homepage"
 msgstr "首頁"
 
 #: formcard/AboutKDE.qml:82
-#, fuzzy, kde-format
-#| msgid "Report a bug"
+#, kde-format
 msgid "Report bugs"
 msgstr "回報問題"
 
@@ -216,7 +217,7 @@ msgstr "回報問題"
 #: formcard/AboutKDE.qml:102
 #, kde-format
 msgid "Join us"
-msgstr ""
+msgstr "加入我們"
 
 #: formcard/AboutKDE.qml:107
 #, kde-format
@@ -225,6 +226,8 @@ msgid ""
 "You can join the language teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
+"您不需要是軟體工程師也可以成為 KDE 團隊的一份子。您可以加入翻譯團隊來翻譯程式"
+"的介面。您可以提供圖形、佈景主題、音效，或幫忙撰寫文件，看您喜歡做哪一項。"
 
 #: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:218
 #, kde-format
@@ -239,7 +242,7 @@ msgstr "開發者說明文件"
 #: formcard/AboutKDE.qml:129
 #, kde-format
 msgid "Support us"
-msgstr ""
+msgstr "支援我們"
 
 #: formcard/AboutKDE.qml:134
 #, kde-format
@@ -311,16 +314,15 @@ msgstr "翻譯者"
 #: formcard/AboutPage.qml:372
 #, kde-format
 msgid "Visit %1's KDE Store page"
-msgstr ""
+msgstr "造訪 %1 在 KDE Store 的頁面"
 
 #: formcard/AboutPage.qml:381
 #, kde-format
 msgid "Send an email to %1"
-msgstr ""
+msgstr "傳送電子郵件給 %1"
 
 #: formcard/FormDateTimeDelegate.qml:146
-#, fuzzy, kde-format
-#| msgid "Today"
+#, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
 msgid "Today"
 msgstr "今天"
@@ -329,25 +331,25 @@ msgstr "今天"
 #, kde-format
 msgctxt "Date is not set"
 msgid "Not set"
-msgstr ""
+msgstr "未設定"
 
 #: formcard/FormTextFieldDelegate.qml:219
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
-msgstr ""
+msgstr "%1/%2"
 
 #: settings/CategorizedSettings.qml:44
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings"
-msgstr ""
+msgstr "設定"
 
 #: settings/CategorizedSettings.qml:44
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings — %1"
-msgstr ""
+msgstr "設定 — %1"
 
 #~ msgctxt "%1 is month name, %2 is year"
 #~ msgid "%1 %2"
