@@ -3,6 +3,7 @@
 
 add_subdirectory(components)
 add_subdirectory(dateandtime)
+add_subdirectory(tableview)
 add_subdirectory(treeview)
 add_subdirectory(sounds)
 add_subdirectory(formcard)

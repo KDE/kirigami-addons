@@ -1,0 +1,12 @@
+<!--
+    SPDX-FileCopyrightText: 2023 Evgeny Chesnokov <echesnokov@astralinux.ru>
+    SPDX-License-Identifier: GPL-2.0-or-later
+-->
+<!DOCTYPE RCC>
+<RCC version="1.0">
+<qresource prefix="/">
+    <file alias="main.qml">contents/ui/main.qml</file>
+    <file alias="TableViewPage.qml">contents/ui/TableViewPage.qml</file>
+    <file alias="ListTableViewPage.qml">contents/ui/ListTableViewPage.qml</file>
+</qresource>
+</RCC>
