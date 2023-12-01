@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-25 01:34+0000\n"
-"PO-Revision-Date: 2023-11-23 12:45+0300\n"
+"PO-Revision-Date: 2023-11-30 17:41+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -325,7 +325,7 @@ msgstr[1] "Lisanslar"
 #: formcard/AboutPage.qml:250
 #, kde-format
 msgid "Libraries in use"
-msgstr "Kullanılan kitaplıklar"
+msgstr "Kullanılan Kitaplıklar"
 
 #: formcard/AboutPage.qml:273
 #, kde-format
