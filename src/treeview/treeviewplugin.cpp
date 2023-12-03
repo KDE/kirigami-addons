@@ -21,7 +21,7 @@ TreeViewPlugin::TreeViewPlugin(QObject *parent)
 
 QUrl TreeViewPlugin::componentUrl(const QString &fileName) const
 {
-    for (const QString &style : qAsConst(m_stylesFallbackChain)) {
+    for (const QString &style : std::as_const(m_stylesFallbackChain)) {
         const QString candidate = QStringLiteral("styles/") + style + QLatin1Char('/') + fileName;
         if (QFile::exists(resolveFilePath(candidate))) {
             return QUrl(resolveFileUrl(candidate));
