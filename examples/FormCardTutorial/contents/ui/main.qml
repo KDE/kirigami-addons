@@ -18,7 +18,7 @@ Kirigami.ApplicationWindow {
 
     Component {
         id: aboutpage
-        FormCard.AboutPage { aboutData: About }
+        MyAboutPage {}
     }
 
     Component {
