@@ -81,12 +81,12 @@ Kirigami.ApplicationWindow {
                         bottomMargin: Kirigami.Units.largeSpacing
                     }
 
-                    leftAction: Kirigami.Action {
+                    leadingAction: Kirigami.Action {
                         text: "Hello"
                         icon.name: "list-add"
                     }
 
-                    rightAction: Kirigami.Action {
+                    trailingAction: Kirigami.Action {
                         text: "Hello"
                         icon.name: "list-add"
                     }
