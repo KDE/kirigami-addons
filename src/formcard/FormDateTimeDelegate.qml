@@ -320,7 +320,7 @@ AbstractFormDelegate {
 
                     if (Qt.platform.os === 'android') {
                         androidPickerActive = true;
-                        DateTime.AndroidIntegration.showTimePicker(timeInput.value.getTime());
+                        DateTime.AndroidIntegration.showTimePicker(root.value.getTime());
                     } else {
                         const popup = timePopup.createObject(applicationWindow(), {
                             value: root.value,
