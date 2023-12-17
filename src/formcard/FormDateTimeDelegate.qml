@@ -97,6 +97,36 @@ AbstractFormDelegate {
      */
     property date value: new Date()
 
+    /**
+     * @brief This property holds the current status message type of
+     * the text field.
+     *
+     * This consists of an inline message with a colorful background
+     * and an appropriate icon.
+     *
+     * The status property will affect the color of ::statusMessage used.
+     *
+     * Accepted values:
+     * - `Kirigami.MessageType.Information` (blue color)
+     * - `Kirigami.MessageType.Positive` (green color)
+     * - `Kirigami.MessageType.Warning` (orange color)
+     * - `Kirigami.MessageType.Error` (red color)
+     *
+     * default: `Kirigami.MessageType.Information` if ::statusMessage is set,
+     * nothing otherwise.
+     *
+     * @see Kirigami.MessageType
+     */
+    property var status: Kirigami.MessageType.Information
+
+    /**
+     * @brief This property holds the current status message of
+     * the text field.
+     *
+     * If this property is not set, no ::status will be shown.
+     */
+    property string statusMessage: ""
+
     background: null
 
     focusPolicy: text.length > 0 ? Qt.TabFocus : Qt.NoFocus
@@ -359,6 +389,18 @@ AbstractFormDelegate {
                     visible: !root.readOnly
                 }
             }
+        }
+
+        Kirigami.InlineMessage {
+            id: formErrorHandler
+            visible: root.statusMessage.length > 0
+            Layout.topMargin: visible ? Kirigami.Units.smallSpacing : 0
+            Layout.bottomMargin: visible ? Kirigami.Units.smallSpacing : 0
+            Layout.leftMargin: Kirigami.Units.gridUnit
+            Layout.rightMargin: Kirigami.Units.gridUnit
+            Layout.fillWidth: true
+            text: root.statusMessage
+            type: root.status
         }
     }
 }

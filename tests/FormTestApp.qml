@@ -169,6 +169,8 @@ Duo Reges: constructio interrete. Primum Theophrasti, Strato, physicum se voluit
                     FormCard.FormDateTimeDelegate {
                         text: "Arrival time:"
                         dateTimeDisplay: FormCard.FormDateTimeDelegate.DateTimeDisplay.Time
+                        status: Kirigami.MessageType.Warning
+                        statusMessage: value.getHours() < 8 ? "Very early!" : ""
                     }
                 }
 
