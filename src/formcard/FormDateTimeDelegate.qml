@@ -353,7 +353,6 @@ AbstractFormDelegate {
                     function onTimePickerFinished(accepted, newDate) {
                         timeButton.androidPickerActive = false;
                         if (accepted) {
-                            timeInput.value = newDate;
                             root.value.setHours(newDate.getHours(), newDate.getMinutes());
                         }
                     }
