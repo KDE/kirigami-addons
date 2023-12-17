@@ -72,12 +72,13 @@ Kirigami.ShadowedRectangle {
         return LayoutMirroring.enabled ? radius : 0;
     }
 
+    readonly property real __padding: Kirigami.Settings.hasTransientTouchInput ? (Kirigami.Units.largeSpacing * 2) : Kirigami.Units.largeSpacing
+
     radius: Kirigami.Units.largeSpacing
     color: "transparent"
 
-    implicitHeight: Math.round(Kirigami.Units.gridUnit * 2.5) + topPadding + bottomPadding
+    implicitHeight: Math.round(Kirigami.Units.gridUnit * 2.5) + __padding * 2
     implicitWidth: 2 * implicitHeight - 1
-    padding: Kirigami.Settings.hasTransientTouchInput ? (Kirigami.Units.largeSpacing * 2) : Kirigami.Units.largeSpacing
 
     shadow {
         size: 10
