@@ -26,6 +26,8 @@ Item {
      */
     property alias title: headerContent.text
 
+    property alias trailing: header.data
+
     /**
      * @brief The maximum width of the header.
      */
