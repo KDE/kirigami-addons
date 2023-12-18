@@ -87,6 +87,14 @@ AbstractFormDelegate {
     property date maximumDate
 
     /**
+     * This property holds the the date to use as initial default when editing an
+     * an unset date.
+     *
+     * By default, this is the current date/time.
+     */
+    property date initialValue: new Date()
+
+    /**
      * This property holds whether this delegate is readOnly or whether the user
      * can select a new time and date.
      */
@@ -235,8 +243,8 @@ AbstractFormDelegate {
 
                     let value = root.value;
 
-                    if (!value.valueOf()) {
-                        value = new Date();
+                    if (isNaN(value.valueOf())) {
+                        value = root.initialValue;
                     }
 
                     if (root.minimumDate) {
@@ -253,6 +261,9 @@ AbstractFormDelegate {
                     });
 
                     item.accepted.connect(() => {
+                        if (isNaN(root.value.valueOf())) {
+                            root.value = root.initialValue;
+                        }
                         root.value.setFullYear(item.value.getFullYear());
                         root.value.setMonth(item.value.getMonth());
                         root.value.setDate(item.value.getDate());
@@ -318,12 +329,17 @@ AbstractFormDelegate {
                         return;
                     }
 
+                    let value = root.value;
+                    if (isNaN(value.valueOf())) {
+                        value = root.initialValue;
+                    }
+
                     if (Qt.platform.os === 'android') {
                         androidPickerActive = true;
-                        DateTime.AndroidIntegration.showTimePicker(root.value.getTime());
+                        DateTime.AndroidIntegration.showTimePicker(value.getTime());
                     } else {
                         const popup = timePopup.createObject(applicationWindow(), {
-                            value: root.value,
+                            value: value,
                         })
                         popup.open();
                     }
@@ -342,7 +358,12 @@ AbstractFormDelegate {
                         parent: applicationWindow().overlay
                         modal: true
 
-                        onAccepted: root.value.setHours(popup.value.getHours(), popup.value.getMinutes());
+                        onAccepted: {
+                            if (isNaN(root.value.valueOf())) {
+                                root.value = root.initialValue;
+                            }
+                            root.value.setHours(popup.value.getHours(), popup.value.getMinutes());
+                        }
                     }
                 }
 
@@ -353,6 +374,9 @@ AbstractFormDelegate {
                     function onTimePickerFinished(accepted, newDate) {
                         timeButton.androidPickerActive = false;
                         if (accepted) {
+                            if (isNaN(root.value.valueOf())) {
+                                root.value = root.initialValue;
+                            }
                             root.value.setHours(newDate.getHours(), newDate.getMinutes());
                         }
                     }
