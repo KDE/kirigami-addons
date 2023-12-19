@@ -5,9 +5,9 @@
 -->
 <rules>
     <dependencies>
-        <lib name="KF5KirigamiDateAndTime">
+        <lib name="KF6KirigamiDateAndTime">
             <depends>
-                <jar bundling="1" file="jar/KF5KirigamiDateAndTime.aar"/>
+                <jar bundling="1" file="jar/KF6KirigamiDateAndTime.aar"/>
             </depends>
         </lib>
     </dependencies>
