@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-18 01:57+0000\n"
+"POT-Creation-Date: 2023-12-19 01:33+0000\n"
 "PO-Revision-Date: 2023-12-17 11:26\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -342,13 +342,13 @@ msgstr "访问 %1 的 KDE 商店页面"
 msgid "Send an email to %1"
 msgstr "发送电子邮件到 %1"
 
-#: formcard/FormDateTimeDelegate.qml:176
+#: formcard/FormDateTimeDelegate.qml:184
 #, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
 msgid "Today"
 msgstr "今天"
 
-#: formcard/FormDateTimeDelegate.qml:203 formcard/FormDateTimeDelegate.qml:313
+#: formcard/FormDateTimeDelegate.qml:211 formcard/FormDateTimeDelegate.qml:324
 #, kde-format
 msgctxt "Date is not set"
 msgid "Not set"
