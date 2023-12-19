@@ -63,6 +63,11 @@ AbstractFormDelegate {
 
     focusPolicy: Qt.StrongFocus
 
+    icon {
+        width: Kirigami.Units.iconSizes.small
+        height: Kirigami.Units.iconSizes.small
+    }
+
     contentItem: RowLayout {
         spacing: 0
 
@@ -79,8 +84,8 @@ AbstractFormDelegate {
             source: root.icon.name
             color: root.icon.color
             Layout.rightMargin: (root.icon.name !== "") ? Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing : 0
-            implicitWidth: (root.icon.name !== "") ? Kirigami.Units.iconSizes.small : 0
-            implicitHeight: (root.icon.name !== "") ? Kirigami.Units.iconSizes.small : 0
+            implicitWidth: (root.icon.name !== "") ? root.icon.width : 0
+            implicitHeight: (root.icon.name !== "") ? root.icon.height : 0
         }
 
         ColumnLayout {
