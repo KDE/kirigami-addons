@@ -168,6 +168,8 @@ AbstractFormDelegate {
             QQC2.AbstractButton {
                 id: dateButton
 
+                property bool androidPickerActive: false
+
                 horizontalPadding: Kirigami.Units.gridUnit
                 verticalPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
 
@@ -254,22 +256,27 @@ AbstractFormDelegate {
                         root.maximumDate.setHours(0, 0, 0, 0);
                     }
 
-                    const item = datePopup.createObject(applicationWindow(), {
-                        value: value,
-                        minimumDate: root.minimumDate,
-                        maximumDate: root.maximumDate,
-                    });
+                    if (Qt.platform.os === 'android') {
+                        androidPickerActive = true;
+                        DateTime.AndroidIntegration.showDatePicker(value.getTime());
+                    } else {
+                        const item = datePopup.createObject(applicationWindow(), {
+                            value: value,
+                            minimumDate: root.minimumDate,
+                            maximumDate: root.maximumDate,
+                        });
 
-                    item.accepted.connect(() => {
-                        if (isNaN(root.value.valueOf())) {
-                            root.value = root.initialValue;
-                        }
-                        root.value.setFullYear(item.value.getFullYear());
-                        root.value.setMonth(item.value.getMonth());
-                        root.value.setDate(item.value.getDate());
-                    });
+                        item.accepted.connect(() => {
+                            if (isNaN(root.value.valueOf())) {
+                                root.value = root.initialValue;
+                            }
+                            root.value.setFullYear(item.value.getFullYear());
+                            root.value.setMonth(item.value.getMonth());
+                            root.value.setDate(item.value.getDate());
+                        });
 
-                    item.open();
+                        item.open();
+                    }
                 }
 
                 background: FormDelegateBackground {
@@ -290,6 +297,23 @@ AbstractFormDelegate {
                         modal: true
 
                         onClosed: destroy();
+                    }
+                }
+
+                Connections {
+                    enabled: Qt.platform.os === 'android' && dateButton.androidPickerActive
+                    ignoreUnknownSignals: !enabled
+                    target: enabled ? DateTime.AndroidIntegration : null
+                    function onDatePickerFinished(accepted, newDate) {
+                        dateButton.androidPickerActive = false;
+                        if (accepted) {
+                            if (isNaN(root.value.valueOf())) {
+                                root.value = root.initialValue;
+                            }
+                            root.value.setFullYear(newDate.getFullYear());
+                            root.value.setMonth(newDate.getMonth());
+                            root.value.setDate(newDate.getDate());
+                        }
                     }
                 }
             }
