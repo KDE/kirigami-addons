@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-19 01:33+0000\n"
+"POT-Creation-Date: 2023-12-22 01:38+0000\n"
 "PO-Revision-Date: 2023-11-30 17:41+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -352,13 +352,13 @@ msgstr "KDE Store Sayfasına Git: %1"
 msgid "Send an email to %1"
 msgstr "E-posta Gönder: %1"
 
-#: formcard/FormDateTimeDelegate.qml:184
+#: formcard/FormDateTimeDelegate.qml:186
 #, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
 msgid "Today"
 msgstr "Bugün"
 
-#: formcard/FormDateTimeDelegate.qml:211 formcard/FormDateTimeDelegate.qml:324
+#: formcard/FormDateTimeDelegate.qml:213 formcard/FormDateTimeDelegate.qml:348
 #, kde-format
 msgctxt "Date is not set"
 msgid "Not set"
