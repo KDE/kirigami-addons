@@ -1,10 +1,10 @@
-# SPDX-FileCopyrightText: 2021, 2022, 2023 Xavier Besnard <xavier.besnard@neuf.fr>
-# Xavier BESNARD <xavier.besnard@neuf.fr>, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Xavier Besnard <xavier.besnard@kde.org>
+# Xavier Besnard <xavier.besnard@kde.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-22 01:38+0000\n"
+"POT-Creation-Date: 2023-12-23 01:45+0000\n"
 "PO-Revision-Date: 2023-11-24 13:56+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: \n"
@@ -367,6 +367,7 @@ msgctxt "Date is not set"
 msgid "Not set"
 msgstr "Non défini"
 
+#: formcard/FormPasswordFieldDelegate.qml:218
 #: formcard/FormTextFieldDelegate.qml:219
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
