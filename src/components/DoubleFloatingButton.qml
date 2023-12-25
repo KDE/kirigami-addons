@@ -146,12 +146,12 @@ Kirigami.ShadowedRectangle {
 
         contentItem: Item {
             Kirigami.Icon {
-                implicitHeight: if (leadingButton.icon.height) {
+                implicitHeight: if (leadingAction.icon.height) {
                     leadingButton.icon.height
                 } else {
                     Kirigami.Units.iconSizes.medium
                 }
-                implicitWidth: if (leadingButton.icon.width) {
+                implicitWidth: if (leadingAction.icon.width) {
                     leadingButton.icon.width
                 } else {
                     Kirigami.Units.iconSizes.medium
@@ -229,12 +229,12 @@ Kirigami.ShadowedRectangle {
 
         contentItem: Item {
             Kirigami.Icon {
-                implicitHeight: if (trailingButton.icon.height) {
+                implicitHeight: if (trailingAction.icon.height) {
                     trailingButton.icon.height
                 } else {
                     Kirigami.Units.iconSizes.medium
                 }
-                implicitWidth: if (trailingButton.icon.width) {
+                implicitWidth: if (trailingAction.icon.width) {
                     trailingButton.icon.width
                 } else {
                     Kirigami.Units.iconSizes.medium
