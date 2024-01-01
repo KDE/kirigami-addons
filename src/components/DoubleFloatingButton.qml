@@ -77,7 +77,7 @@ Kirigami.ShadowedRectangle {
     radius: Kirigami.Units.largeSpacing
     color: "transparent"
 
-    implicitHeight: Math.round(Kirigami.Units.gridUnit * 2.5) + __padding * 2
+    implicitHeight: Math.max(leadingButton.implicitContentHeight, trailingButton.implicitContentHeight) + __padding * 2
     implicitWidth: 2 * implicitHeight - 1
 
     shadow {
@@ -145,7 +145,10 @@ Kirigami.ShadowedRectangle {
         }
 
         contentItem: Item {
+            implicitHeight: leadingIcon.implicitHeight
+            implicitWidth: leadingIcon.implicitWidth
             Kirigami.Icon {
+                id: leadingIcon
                 implicitHeight: if (leadingAction.icon.height) {
                     leadingButton.icon.height
                 } else {
@@ -228,7 +231,10 @@ Kirigami.ShadowedRectangle {
         }
 
         contentItem: Item {
+            implicitHeight: trailingIcon.implicitHeight
+            implicitWidth: trailingIcon.implicitWidth
             Kirigami.Icon {
+                id: trailingIcon
                 implicitHeight: if (trailingAction.icon.height) {
                     trailingButton.icon.height
                 } else {
