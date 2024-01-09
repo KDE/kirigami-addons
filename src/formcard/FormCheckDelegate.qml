@@ -119,6 +119,8 @@ T.CheckDelegate {
 
             enabled: root.enabled
             checked: root.checked
+
+            Accessible.ignored: true
         }
 
         ColumnLayout {
@@ -131,6 +133,7 @@ T.CheckDelegate {
                 wrapMode: Text.Wrap
                 maximumLineCount: 2
                 Layout.fillWidth: true
+                Accessible.ignored: true
             }
 
             Controls.Label {
