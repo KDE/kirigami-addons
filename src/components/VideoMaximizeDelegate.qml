@@ -161,8 +161,8 @@ Item {
         Image {
             id: tempImage
             anchors.centerIn: parent
-            width: root.sourceWidth > 0 || (videoItem.metaData.resolution && videoItem.metaData.resolution.width > 0) ? root.sourceWidth : tempSource.sourceSize.width
-            height: root.sourceHeight > 0 || (videoItem.metaData.resolution && videoItem.metaData.resolution.height > 0) ? root.sourceHeight : tempSource.sourceSize.height
+            width: root.sourceWidth > 0 || (videoItem.metaData.resolution && videoItem.metaData.resolution.width > 0) ? root.sourceWidth : tempImage.sourceSize.width
+            height: root.sourceHeight > 0 || (videoItem.metaData.resolution && videoItem.metaData.resolution.height > 0) ? root.sourceHeight : tempImage.sourceSize.height
             visible: source && status === Image.Ready && !videoItem.source.toString().length > 0
 
             source: root.tempSource
