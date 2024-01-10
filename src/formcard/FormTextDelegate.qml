@@ -105,10 +105,10 @@ AbstractFormDelegate {
                 id: internalTextItem
                 Layout.fillWidth: true
                 text: root.text
-                elide: Text.ElideRight
                 onLinkActivated: root.linkActivated(link)
                 visible: root.text
                 Accessible.ignored: true // base class sets this text on root already
+                wrapMode: Text.WordWrap
             }
 
             Label {
