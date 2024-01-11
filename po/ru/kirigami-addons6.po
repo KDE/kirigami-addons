@@ -1,15 +1,15 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
 #
 # Дронова Юлия <juliette.tux@gmail.com>, 2021.
 # Olesya Gerasimenko <translation-team@basealt.ru>, 2023.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2024.
+# SPDX-FileCopyrightText: 2024 Alexander Yavorsky <kekcuha@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-23 01:45+0000\n"
-"PO-Revision-Date: 2024-01-05 22:08+0300\n"
+"PO-Revision-Date: 2024-01-10 21:51+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: components/AbstractMaximizeComponent.qml:125
 #, kde-format
@@ -129,13 +129,13 @@ msgstr "%1 часа"
 #, kde-format
 msgctxt "time in hour (PM)"
 msgid "%1 PM"
-msgstr ""
+msgstr "%1 после полудня"
 
 #: dateandtime/TimePicker.qml:100
 #, kde-format
 msgctxt "time in hour (AM)"
 msgid "%1 AM"
-msgstr ""
+msgstr "%1 до полудня"
 
 #: dateandtime/TimePicker.qml:107
 #, kde-format
