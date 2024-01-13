@@ -1,16 +1,16 @@
 # Translation of kirigami-addons6.po to Catalan
-# Copyright (C) 2021-2023 This_file_is_part_of_KDE
+# Copyright (C) 2021-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2021, 2023.
-# Josep M. Ferrer <txemaq@gmail.com>, 2022, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-23 01:45+0000\n"
-"PO-Revision-Date: 2023-11-23 11:55+0100\n"
+"PO-Revision-Date: 2024-01-12 17:27+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -291,10 +291,10 @@ msgstr ""
 "\n"
 "KDE es beneficia de molts tipus de col·laboracions, inclosa la financera. "
 "Els fons obtinguts s'empren per a tornar als seus membres i altres persones "
-"les despeses incorregudes en col·laborar amb KDE. Altres fons s'empren per "
-"al suport legal i per a organitzar conferències i reunions.\n"
+"les despeses incorregudes a col·laborar amb KDE. Altres fons s'empren per al "
+"suport legal i per a organitzar conferències i reunions.\n"
 "\n"
-"Us animem a ajudar a els nostres esforços mitjançant una donació monetària.\n"
+"Us animem a ajudar els nostres esforços mitjançant una donació monetària.\n"
 "\n"
 "Moltes gràcies per endavant per la vostra ajuda."
 
