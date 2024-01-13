@@ -208,6 +208,7 @@ AbstractFormDelegate {
                 color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
                 wrapMode: Text.Wrap
                 maximumLineCount: 2
+                Accessible.ignored: true
             }
             Label {
                 TextMetrics {
@@ -234,7 +235,7 @@ AbstractFormDelegate {
         }
         TextField {
             id: textField
-            Accessible.description: label
+            Accessible.name: root.label
             Layout.fillWidth: true
             placeholderText: root.placeholderText
             text: root.text
