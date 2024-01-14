@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-23 01:45+0000\n"
+"POT-Creation-Date: 2024-01-14 00:37+0000\n"
 "PO-Revision-Date: 2023-11-23 20:31+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -366,7 +366,7 @@ msgid "Not set"
 msgstr "Sin definir"
 
 #: formcard/FormPasswordFieldDelegate.qml:218
-#: formcard/FormTextFieldDelegate.qml:219
+#: formcard/FormTextFieldDelegate.qml:220
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
