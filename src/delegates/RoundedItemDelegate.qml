@@ -32,7 +32,7 @@ T.ItemDelegate {
     implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
                              implicitContentHeight + topPadding + bottomPadding,
                              implicitIndicatorHeight + topPadding + bottomPadding,
-                             Kirigami.Settings.tabletMode || Kirigami.Settings.isMobile ? Kirigami.Units.gridUnit * 3 : Kirigami.Units.gridUnit * 2)
+                             Kirigami.Units.gridUnit * 2)
 
     width: if (listView.view) {
         return listView.view.width;
