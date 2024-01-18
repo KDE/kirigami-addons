@@ -299,6 +299,7 @@ AbstractFormDelegate {
 
     focusPolicy: Qt.StrongFocus
     Accessible.description: description
+    Accessible.onPressAction: controlRoot.clicked()
 
     contentItem: RowLayout {
         ColumnLayout {
@@ -312,6 +313,7 @@ AbstractFormDelegate {
                 color: controlRoot.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
                 wrapMode: Text.Wrap
                 maximumLineCount: 2
+                Accessible.ignored: true
             }
 
             QQC2.Label {
@@ -320,6 +322,7 @@ AbstractFormDelegate {
                 text: controlRoot.description
                 color: Kirigami.Theme.disabledTextColor
                 wrapMode: Text.Wrap
+                Accessible.ignored: true
             }
         }
 
