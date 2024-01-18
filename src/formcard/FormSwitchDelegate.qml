@@ -84,6 +84,11 @@ T.SwitchDelegate {
 
     Layout.fillWidth: true
 
+    Accessible.description: root.description
+    Accessible.role: Accessible.CheckBox
+    Accessible.onPressAction: switchItem.toggle()
+    Accessible.onToggleAction: switchItem.toggle()
+
     contentItem: RowLayout {
         spacing: 0
 
@@ -106,6 +111,7 @@ T.SwitchDelegate {
                 wrapMode: Text.Wrap
                 maximumLineCount: 2
                 color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
+                Accessible.ignored: true
             }
 
             Controls.Label {
@@ -114,6 +120,7 @@ T.SwitchDelegate {
                 text: root.description
                 wrapMode: Text.Wrap
                 color: Kirigami.Theme.disabledTextColor
+                Accessible.ignored: true
             }
         }
 
@@ -134,6 +141,8 @@ T.SwitchDelegate {
                 root.checked = checked;
                 checked = Qt.binding(() => root.checked);
             }
+
+            Accessible.ignored: true
         }
 
         Private.ContentItemLoader {
