@@ -37,6 +37,7 @@ QQC2.AbstractButton {
         itemDelegate: root
         labelItem {
             horizontalAlignment: Text.AlignHCenter
+            Accessible.ignored: true
         }
     }
 
