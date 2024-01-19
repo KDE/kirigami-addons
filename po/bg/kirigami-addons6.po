@@ -346,28 +346,3 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Settings — %1"
 msgstr ""
-
-#~ msgctxt "%1 is month name, %2 is year"
-#~ msgid "%1 %2"
-#~ msgstr "%1 %2"
-
-#, fuzzy
-#~| msgid "Days"
-#~ msgctxt "@title:tab"
-#~ msgid "Days"
-#~ msgstr "Дни"
-
-#, fuzzy
-#~| msgid "Months"
-#~ msgctxt "@title:tab"
-#~ msgid "Months"
-#~ msgstr "Месеци"
-
-#, fuzzy
-#~| msgid "Years"
-#~ msgctxt "@title:tab"
-#~ msgid "Years"
-#~ msgstr "Години"
-
-#~ msgid "Accept"
-#~ msgstr "Приемане"
