@@ -74,6 +74,9 @@ QQC2.Popup {
     padding: 0
     background: Item {}
 
+    Kirigami.OverlayZStacking.layer: Kirigami.OverlayZStacking.FullScreen
+    z: Kirigami.OverlayZStacking.z
+
     ColumnLayout {
         anchors.fill: parent
         spacing: 0
