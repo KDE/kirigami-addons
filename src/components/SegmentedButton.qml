@@ -55,6 +55,7 @@ RowLayout {
                     elide: Text.ElideRight
                     horizontalAlignment: Text.AlignHCenter
                     Layout.fillWidth: true
+                    Accessible.ignored: true
                 }
             }
 
