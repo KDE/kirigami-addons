@@ -1,127 +1,127 @@
-# SPDX-FileCopyrightText: 2021, 2022, 2023 Xavier Besnard <xavier.besnard@kde.org>
-# Xavier Besnard <xavier.besnard@kde.org>, 2023.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the kirigami-addons package.
+#
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-27 00:37+0000\n"
-"PO-Revision-Date: 2023-11-24 13:56+0100\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
-"Language: fr\n"
+"PO-Revision-Date: 2024-02-03 21:08+0200\n"
+"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.3\n"
-"X-Environment: kde\n"
-"X-Accelerator-Marker: &\n"
-"X-Text-Markup: kde4\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: components/AbstractMaximizeComponent.qml:128
 #, kde-format
 msgid "Close"
-msgstr "Fermer"
+msgstr "Aizvērt"
 
 #: components/AlbumMaximizeComponent.qml:116
 #, kde-format
 msgid "Zoom in"
-msgstr "Zoom avant"
+msgstr "Tuvināt"
 
 #: components/AlbumMaximizeComponent.qml:121
 #, kde-format
 msgid "Zoom out"
-msgstr "Zoom arrière"
+msgstr "Tālināt"
 
 #: components/AlbumMaximizeComponent.qml:127
 #, kde-format
 msgid "Rotate left"
-msgstr "Tourner vers la gauche"
+msgstr "Rotēt pa kreisi"
 
 #: components/AlbumMaximizeComponent.qml:133
 #, kde-format
 msgid "Rotate right"
-msgstr "Tourner vers la droite"
+msgstr "Rotēt pa labi"
 
 #: components/AlbumMaximizeComponent.qml:138
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
-msgstr "Afficher une légende"
+msgstr "Rādīt parakstu"
 
 #: components/AlbumMaximizeComponent.qml:138
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
-msgstr "Masquer la légende"
+msgstr "Slēpt parakstu"
 
 #: components/AlbumMaximizeComponent.qml:144
 #, kde-format
 msgid "Save as"
-msgstr "Enregistrer sous"
+msgstr "Saglabāt kā"
 
 #: components/AlbumMaximizeComponent.qml:203
 #, kde-format
 msgid "Previous image"
-msgstr "Image précédente"
+msgstr "Iepriekšējais attēls"
 
 #: components/AlbumMaximizeComponent.qml:221
 #, kde-format
 msgid "Next image"
-msgstr "Image suivante"
+msgstr "Nākamais attēls"
 
 #: components/Banner.qml:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr "Fermer"
+msgstr "Aizvērt"
 
 #: components/DownloadAction.qml:37
 #, kde-format
 msgid "Download"
-msgstr "Télécharger"
+msgstr "Lejupielādēt"
 
 #: components/VideoMaximizeDelegate.qml:240
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
-msgstr "Volume"
+msgstr "Skaļums"
 
 #: dateandtime/DatePopup.qml:71 dateandtime/TimePopup.qml:52
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr "Annuler"
+msgstr "Atcelt"
 
 #: dateandtime/DatePopup.qml:83 dateandtime/TimePopup.qml:64
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
-msgstr "Sélectionner"
+msgstr "Atlasīt"
 
 #: dateandtime/private/DatePicker.qml:266
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Previous"
-msgstr "Aller au précédent"
+msgstr "Iet uz iepriekšējo"
 
 #: dateandtime/private/DatePicker.qml:279
 #, kde-format
 msgctxt "@action:button"
 msgid "Jump to today"
-msgstr "Aller à aujourd'hui"
+msgstr "Iet uz šodienu"
 
 #: dateandtime/private/DatePicker.qml:286
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Next"
-msgstr "Aller au suivant"
+msgstr "Iet uz nākamo"
 
 #: dateandtime/TimePicker.qml:97
 #, kde-format
 msgctxt "time in hour in 24h format"
 msgid "%1 hours"
-msgstr "%1 heures"
+msgstr "%1 stundas"
 
 #: dateandtime/TimePicker.qml:99
 #, kde-format
@@ -145,12 +145,12 @@ msgstr ":"
 #, kde-format
 msgctxt "number of minutes"
 msgid "%1 minutes"
-msgstr "%1 minutes"
+msgstr "%1 minūtes"
 
 #: formcard/AboutKDE.qml:23
 #, kde-format
 msgid "About KDE"
-msgstr "À propos de KDE"
+msgstr "Par KDE"
 
 #: formcard/AboutKDE.qml:50
 #, kde-format
@@ -160,7 +160,7 @@ msgstr "KDE"
 #: formcard/AboutKDE.qml:59
 #, kde-format
 msgid "Be Free!"
-msgstr "Soyez libre !"
+msgstr "Baudi brīvību!"
 
 #: formcard/AboutKDE.qml:68
 #, kde-format
@@ -175,27 +175,25 @@ msgid ""
 "the world's finest Free Software. Everyone is welcome to join and contribute "
 "to KDE, including you."
 msgstr ""
-"KDE est une communauté mondiale d'ingénieurs en logiciels, d'artistes, "
-"d'écrivains, de traducteurs et de créateurs qui s'engagent dans le "
-"développement du Logiciel Libre. KDE produit l'environnement de bureau "
-"Plasma, des centaines d'applications et les nombreuses bibliothèques "
-"logicielles qui leur permettent d'exister. \n"
+"KDE ir starptautiska programmētāju, mākslinieku, rakstnieku un tulkotāju "
+"kopiena, kuri ir vienojušies brīvās programmatūras izstrādē. KDE izstrādā "
+"„Plasma“ darba vidi, simtiem programmu un daudzas programmatūras "
+"bibliotēkas, kas tām visām ir pamatā.\n"
 "\n"
-"KDE est une entreprise collaborative : aucune entité ne contrôle sa "
-"stratégie ou ses produits. Au lieu de cela, chacun travaille avec la "
-"communauté pour atteindre l'objectif commun de construire les meilleurs "
-"logiciels libres au monde. Tout le monde est invité à se joindre et à "
-"contribuer à KDE, y compris vous."
+"KDE ir uz sadarbību vērsts projekts: to vai tā kopējo virzienu nekontrolē "
+"kāda viena atsevišķa vienība. Tā vietā mēs strādājam visi kopā ar mērķi "
+"izveidot pasaulē labāko brīvo programmatūru. Aicinām ikkatru mums "
+"pievienoties no piedalīties KDE veidošanā — arī Tevi!"
 
 #: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:192
 #, kde-format
 msgid "Homepage"
-msgstr "Page d'accueil"
+msgstr "Mājaslapa"
 
 #: formcard/AboutKDE.qml:82
 #, kde-format
 msgid "Report bugs"
-msgstr "Signaler des bogues"
+msgstr "Ziņo par kļūdām"
 
 #: formcard/AboutKDE.qml:87
 #, kde-format
@@ -211,28 +209,27 @@ msgid ""
 "tracking system to register your wish. Make sure you use the severity called "
 "\"Wishlist\"."
 msgstr ""
-"Les logiciels peuvent toujours être améliorés et l'équipe de KDE est prête à "
-"le faire. Cependant, vous - les personnes utilisatrices - devez nous "
-"signaler quand quelque chose ne fonctionne pas comme prévu ou pourrait être "
-"mieux fait. \n"
+"Programmatūru vienmēr iespējams uzlabot, ko KDE komanda ir gatava darīt. "
+"Tomēr mēs vēlamies arī no Tevis, lietotāj, dzirdēt, kas nedarbojas tā, kā to "
+"vēlies, vai kas varētu darboties labāk.\n"
 "\n"
-"KDE dispose d'un système de suivi des bogues. Utilisez le bouton ci-dessous "
-"pour signaler un bogue ou utilisez la page « À propos » du programme pour "
-"signaler un bogue spécifique à cette application. \n"
+"KDE eksistē kļūdu izsekošanas sistēma. Spied uz zemāk esošās pogas, lai "
+"iesniegtu ziņojumu par kļūdu, vai izmanto programmas „Par“ lapu, lai ziņotu "
+"par konkrētās programmas kļūdu.\n"
 "\n"
-"Si vous avez une proposition d'amélioration, vous pouvez utiliser le système "
-"de suivi des bogues pour enregistrer celle-ci. Veuillez vous assurer "
-"d'utiliser un niveau de criticité dans la « Liste de souhaits »."
+"Tāpat arī aicinām izmantot kļūdu izsekošanas sistēmu, ja Tev ir kāds "
+"ieteikums par uzlabojumiem, tomēr tādā gadījumā neaizmirsti norādīt, ka tas "
+"ir lūgums („Wishlist“)."
 
 #: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:243
 #, kde-format
 msgid "Report a bug"
-msgstr "Signaler un bogue"
+msgstr "Ziņot par kļūdu"
 
 #: formcard/AboutKDE.qml:102
 #, kde-format
 msgid "Join us"
-msgstr "Rejoignez-nous"
+msgstr "Pievienojies mums"
 
 #: formcard/AboutKDE.qml:107
 #, kde-format
@@ -241,25 +238,25 @@ msgid ""
 "You can join the language teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
-"Vous n'avez pas besoin d'être un développeur de logiciels pour faire partie "
-"de l'équipe de KDE. Vous pouvez rejoindre les équipes nationales traduisant "
-"les interfaces de programmes. Vous pouvez fournir des illustrations, des "
-"thèmes, des sons et une documentation améliorée. C'est vous qui décidez !"
+"Lai būtu daļa no KDE komandas, Tev nav obligāti jābūt programmētājam. Vari "
+"pievienoties valodu komandām, kuru dalībnieki tulko programmu saskarni. Vai "
+"arī vari zīmēt attēlus, veidot tēmas, skaņas vai pilnveidot dokumentāciju. "
+"Lēmums ir Tavās rokās!"
 
 #: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:218
 #, kde-format
 msgid "Get Involved"
-msgstr "Impliquez-vous"
+msgstr "Iesaisties"
 
 #: formcard/AboutKDE.qml:123
 #, kde-format
 msgid "Developer Documentation"
-msgstr "Documentation pour équipe de développement"
+msgstr "Dokumentācija izstrādātājiem"
 
 #: formcard/AboutKDE.qml:129
 #, kde-format
 msgid "Support us"
-msgstr "Soutenez nous"
+msgstr "Atbalsti mūs"
 
 #: formcard/AboutKDE.qml:134
 #, kde-format
@@ -281,22 +278,22 @@ msgid ""
 "\n"
 "Thank you very much in advance for your support."
 msgstr ""
-"Le logiciel KDE est et sera toujours disponible gratuitement, mais sa "
-"création n'est pas gratuite. \n"
+"KDE programmatūra ir un vienmēr būs pieejama bez maksas, tomēr tās izveide "
+"nepaliek bez izdevumiem.\n"
 "\n"
-"Pour soutenir les développements, la communauté KDE a créé une organisation "
-"à but non lucratif nommée KDE e.V., légalement enregistrée en Allemagne. KDE "
-"e.V. représente la communauté KDE en matière juridique et financière. \n"
+"Lai atbalstītu KDE kopienas darbu, esam Vācijā reģistrējuši bezpeļņas "
+"organizācija „KDE e.V.“, kas pārstāv KDE kopienu juridiskos un finanšu "
+"jautājumos.\n"
 "\n"
-"KDE bénéficie de nombreux types de contributions, y compris financières. Les "
-"fonds sont utilisés pour rembourser les membres et d'autres personnes pour "
-"les dépenses qu'ils engagent lorsqu'ils contribuent. D'autres fonds sont "
-"utilisés pour le soutien juridique et l'organisation de conférences et de "
-"réunions. \n"
+"KDE gūst labumu no dažādas palīdzības — tostarp arī finansiālas. Ziedotos "
+"līdzekļus izmantojam, lai kompensētu dalībnieku darbu un segtu citus "
+"izdevumus, kas rodas, sniedzot projektam atbalstu. Tāpat līdzekļi tiek "
+"izmantoti juridiskam atbalstam un konferenču un sapulču organizēšanai.\n"
 "\n"
-"Nous vous encourageons à soutenir nos efforts par un don financier. \n"
+"Mēs mudināt arī Tevi atbalstīt mūsu pieliktās pūles ar finansiālu "
+"ziedojumu.\n"
 "\n"
-"Merci beaucoup d'avance pour votre soutien."
+"Jau iepriekš sirsnīgi pateicamies par atbalstu!"
 
 #: formcard/AboutKDE.qml:146
 #, kde-format
@@ -306,17 +303,17 @@ msgstr "KDE e.V"
 #: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:205
 #, kde-format
 msgid "Donate"
-msgstr "Faire un don"
+msgstr "Ziedot"
 
 #: formcard/AboutPage.qml:87
 #, kde-format
 msgid "About %1"
-msgstr "À propos de %1"
+msgstr "Par „%1“"
 
 #: formcard/AboutPage.qml:133
 #, kde-format
 msgid "Copyright"
-msgstr "Licence"
+msgstr "Autortiesības"
 
 #: formcard/AboutPage.qml:141
 #, kde-format
@@ -324,100 +321,65 @@ msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "Licence"
 msgstr[1] "Licences"
+msgstr[2] "Licences"
 
 #: formcard/AboutPage.qml:250
 #, kde-format
 msgid "Libraries in use"
-msgstr "Bibliothèques en cours d'utilisation"
+msgstr "Izmantotās bibliotēkas"
 
 #: formcard/AboutPage.qml:273
 #, kde-format
 msgid "Authors"
-msgstr "Auteurs"
+msgstr "Autori"
 
 #: formcard/AboutPage.qml:288
 #, kde-format
 msgid "Credits"
-msgstr "Remerciements"
+msgstr "Veidotāji"
 
 #: formcard/AboutPage.qml:303
 #, kde-format
 msgid "Translators"
-msgstr "Équipe de traduction"
+msgstr "Tulkotāji"
 
 #: formcard/AboutPage.qml:372
 #, kde-format
 msgid "Visit %1's KDE Store page"
-msgstr "Consulter la page %1 de la boutique de KDE"
+msgstr "Apmeklēt „%1“ KDE veikala lapu"
 
 #: formcard/AboutPage.qml:381
 #, kde-format
 msgid "Send an email to %1"
-msgstr "Envoyer un courriel vers %1"
+msgstr "Sūtīt e-pasta vēstuli „%1“"
 
 #: formcard/FormDateTimeDelegate.qml:187
 #, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
 msgid "Today"
-msgstr "Aujourd'hui"
+msgstr "Šodiena"
 
 #: formcard/FormDateTimeDelegate.qml:214 formcard/FormDateTimeDelegate.qml:351
 #, kde-format
 msgctxt "Date is not set"
 msgid "Not set"
-msgstr "Non défini"
+msgstr "Nav iestatīts"
 
 #: formcard/FormPasswordFieldDelegate.qml:218
 #: formcard/FormTextFieldDelegate.qml:220
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
-msgstr "%1 / %2"
+msgstr "%1/%2"
 
 #: settings/CategorizedSettings.qml:44
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings"
-msgstr "Configuration"
+msgstr "Iestatījumi"
 
 #: settings/CategorizedSettings.qml:44
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings — %1"
-msgstr "Configuration — %1"
-
-#~ msgctxt "%1 is month name, %2 is year"
-#~ msgid "%1 %2"
-#~ msgstr "%1 %2"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Days"
-#~ msgstr "Jours"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Months"
-#~ msgstr "Mois"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Years"
-#~ msgstr "Années"
-
-#~ msgid "Accept"
-#~ msgstr "Accepter"
-
-#~ msgid ""
-#~ "Software can always be improved, and the KDE team is ready to do so. "
-#~ "However, you - the user - must tell us when something does not work as "
-#~ "expected or could be done better.\n"
-#~ msgstr ""
-#~ "Les logiciels peuvent toujours être améliorés et l'équipe KDE est prête à "
-#~ "le faire. Cependant, vous - la personne utilisatrice - devez nous dire "
-#~ "quand quelque chose ne fonctionne pas comme prévu ou pourrait être fait "
-#~ "mieux.\n"
-
-#~ msgid ""
-#~ "KDE software is and will always be available free of charge, however "
-#~ "creating it is not free.\n"
-#~ msgstr ""
-#~ "Le logiciel KDE est et sera toujours disponible gratuitement, mais sa "
-#~ "production n'est pas gratuite.\n"
+msgstr "Iestatījumi — %1"
