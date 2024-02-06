@@ -305,8 +305,7 @@ Item {
                             color: Kirigami.Theme.backgroundColor
                             opacity: 0.8
 
-                            property color borderColor: Kirigami.Theme.textColor
-                            border.color: Qt.rgba(borderColor.r, borderColor.g, borderColor.b, 0.3)
+                            border.color:  Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, Kirigami.Theme.frameContrast)
                             border.width: 1
 
                             shadow.xOffset: 0
@@ -322,8 +321,7 @@ Item {
                 color: Kirigami.Theme.backgroundColor
                 opacity: 0.8
 
-                property color borderColor: Kirigami.Theme.textColor
-                border.color: Qt.rgba(borderColor.r, borderColor.g, borderColor.b, 0.3)
+                border.color:  Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, Kirigami.Theme.frameContrast)
                 border.width: 1
 
                 shadow.xOffset: 0

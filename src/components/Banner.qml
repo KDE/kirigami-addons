@@ -237,7 +237,7 @@ T.ToolBar {
 
             height: 1
             color: {
-                let separatorColor = Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.15);
+                let separatorColor = Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, Kirigami.Theme.frameContrast);
                 let textColor = Kirigami.Theme.activeTextColor;
 
                 switch (root.type) {

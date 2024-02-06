@@ -193,7 +193,7 @@ Item {
                         color: Kirigami.Theme.backgroundColor
 
                         border {
-                            color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.15)
+                            color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, Kirigami.Theme.frameContrast)
                             width: 1
                         }
 

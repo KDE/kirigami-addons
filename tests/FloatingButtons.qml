@@ -27,7 +27,7 @@ Kirigami.ScrollablePage {
             anchors.fill: parent
             z: -1
             color: "transparent"
-            border.color: Kirigami.Theme.textColor
+            border.color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, Kirigami.Theme.frameContrast)
             border.width: 1
             opacity: 0.3
         }
