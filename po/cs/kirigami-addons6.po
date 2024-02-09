@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
-# SPDX-FileCopyrightText: 2021, 2022, 2023 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-27 00:37+0000\n"
-"PO-Revision-Date: 2023-10-31 16:17+0100\n"
+"PO-Revision-Date: 2024-01-19 15:50+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: components/AbstractMaximizeComponent.qml:128
 #, kde-format
@@ -229,20 +229,16 @@ msgid "Join us"
 msgstr "Přidejte se k nám"
 
 #: formcard/AboutKDE.qml:107
-#, fuzzy, kde-format
-#| msgid ""
-#| "You do not have to be a software developer to be a member of the KDE "
-#| "team. You can join the national teams that translate program interfaces. "
-#| "You can provide graphics, themes, sounds, and improved documentation. You "
-#| "decide!"
+#, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
 "You can join the language teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
 "K tomu, abyste se stali členem KDE týmu, není zapotřebí být vývojářem "
-"softwaru. Můžete se připojit k národním týmům, které překládají programy. "
-"Můžete vytvářet grafiku, motivy, zvuky a lepší dokumentaci. Vy se rozhodněte!"
+"softwaru. Můžete se připojit k překladatelským týmům, které překládají "
+"programy. Můžete vytvářet grafiku, motivy, zvuky a lepší dokumentaci. Vy se "
+"rozhodněte!"
 
 #: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:218
 #, kde-format
