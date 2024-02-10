@@ -45,7 +45,7 @@ Item {
      *
      * This is where you should add new Form delegates.
      */
-    default property alias delegates: internalColumn.children
+    default property alias delegates: internalColumn.data
 
     /**
      * @brief The maximum width of the card.
