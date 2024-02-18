@@ -87,7 +87,7 @@ Kirigami.ShadowedRectangle {
     property real bottomMargin: margins
 
     radius: Kirigami.Units.largeSpacing
-    color: "transparent"
+    color: Kirigami.Theme.backgroundColor
 
     implicitHeight: Math.max(leadingButton.implicitBackgroundHeight + leadingButton.topInset + leadingButton.bottomInset,
                              leadingButton.implicitContentHeight + leadingButton.topPadding + leadingButton.bottomPadding)
