@@ -55,6 +55,7 @@ RowLayout {
                     elide: Text.ElideRight
                     horizontalAlignment: Text.AlignHCenter
                     Layout.fillWidth: true
+                    Accessible.ignored: true
                 }
             }
 
@@ -92,7 +93,7 @@ RowLayout {
                         if (buttonDelegate.highlightBorder) {
                             return Kirigami.Theme.focusColor
                         } else {
-                            return Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.15);
+                            return Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, Kirigami.Theme.frameContrast);
                         }
                     }
                     width: 1

@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
 #
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-23 01:45+0000\n"
-"PO-Revision-Date: 2023-05-21 10:31+0400\n"
+"POT-Creation-Date: 2024-01-27 00:37+0000\n"
+"PO-Revision-Date: 2024-02-15 18:40+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,9 +16,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
-#: components/AbstractMaximizeComponent.qml:125
+#: components/AbstractMaximizeComponent.qml:128
 #, kde-format
 msgid "Close"
 msgstr "أغلق"
@@ -71,8 +71,7 @@ msgid "Next image"
 msgstr "الصّورة التّالية"
 
 #: components/Banner.qml:186
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button"
 msgid "Close"
 msgstr "أغلق"
@@ -80,7 +79,7 @@ msgstr "أغلق"
 #: components/DownloadAction.qml:37
 #, kde-format
 msgid "Download"
-msgstr ""
+msgstr "نزّل"
 
 #: components/VideoMaximizeDelegate.qml:240
 #, kde-format
@@ -89,8 +88,7 @@ msgid "Volume"
 msgstr "الصوت"
 
 #: dateandtime/DatePopup.qml:71 dateandtime/TimePopup.qml:52
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "ألغِ"
@@ -99,57 +97,55 @@ msgstr "ألغِ"
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
-msgstr ""
+msgstr "اختر"
 
 #: dateandtime/private/DatePicker.qml:266
-#, fuzzy, kde-format
-#| msgid "Previous"
+#, kde-format
 msgctxt "@action:button"
 msgid "Go Previous"
-msgstr "السابق"
+msgstr "عد للسابق"
 
 #: dateandtime/private/DatePicker.qml:279
 #, kde-format
 msgctxt "@action:button"
 msgid "Jump to today"
-msgstr ""
+msgstr "اقفز إلى اليوم"
 
 #: dateandtime/private/DatePicker.qml:286
-#, fuzzy, kde-format
-#| msgid "Next"
+#, kde-format
 msgctxt "@action:button"
 msgid "Go Next"
-msgstr "التالي"
+msgstr "اذهب للتالي"
 
-#: dateandtime/TimePicker.qml:96
+#: dateandtime/TimePicker.qml:97
 #, kde-format
 msgctxt "time in hour in 24h format"
 msgid "%1 hours"
-msgstr ""
+msgstr "%1 ساعة"
 
-#: dateandtime/TimePicker.qml:98
+#: dateandtime/TimePicker.qml:99
 #, kde-format
 msgctxt "time in hour (PM)"
 msgid "%1 PM"
-msgstr ""
+msgstr "%1 ب‌ظ"
 
-#: dateandtime/TimePicker.qml:100
+#: dateandtime/TimePicker.qml:101
 #, kde-format
 msgctxt "time in hour (AM)"
 msgid "%1 AM"
-msgstr ""
+msgstr "%1 ق‌ظ"
 
-#: dateandtime/TimePicker.qml:107
+#: dateandtime/TimePicker.qml:111
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: dateandtime/TimePicker.qml:121
+#: dateandtime/TimePicker.qml:126
 #, kde-format
 msgctxt "number of minutes"
 msgid "%1 minutes"
-msgstr ""
+msgstr "%1 دقيقة"
 
 #: formcard/AboutKDE.qml:23
 #, kde-format
@@ -194,8 +190,7 @@ msgid "Homepage"
 msgstr "الصّفحة الرئيسة"
 
 #: formcard/AboutKDE.qml:82
-#, fuzzy, kde-format
-#| msgid "Report a bug"
+#, kde-format
 msgid "Report bugs"
 msgstr "بلغ عن علة"
 
@@ -330,44 +325,43 @@ msgstr "المترجمون"
 #: formcard/AboutPage.qml:372
 #, kde-format
 msgid "Visit %1's KDE Store page"
-msgstr ""
+msgstr "زر صفحة %1 في متجر كِيدِي"
 
 #: formcard/AboutPage.qml:381
 #, kde-format
 msgid "Send an email to %1"
-msgstr ""
+msgstr "أرسِل بريد الإلكتروني إلى %1"
 
-#: formcard/FormDateTimeDelegate.qml:186
-#, fuzzy, kde-format
-#| msgid "Today"
+#: formcard/FormDateTimeDelegate.qml:187
+#, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
 msgid "Today"
 msgstr "اليوم"
 
-#: formcard/FormDateTimeDelegate.qml:213 formcard/FormDateTimeDelegate.qml:348
+#: formcard/FormDateTimeDelegate.qml:214 formcard/FormDateTimeDelegate.qml:351
 #, kde-format
 msgctxt "Date is not set"
 msgid "Not set"
-msgstr ""
+msgstr "غير محدد"
 
 #: formcard/FormPasswordFieldDelegate.qml:218
-#: formcard/FormTextFieldDelegate.qml:219
+#: formcard/FormTextFieldDelegate.qml:220
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
-msgstr ""
+msgstr "%1/%2"
 
 #: settings/CategorizedSettings.qml:44
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings"
-msgstr ""
+msgstr "إعدادات"
 
 #: settings/CategorizedSettings.qml:44
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings — %1"
-msgstr ""
+msgstr "إعدادات — %1"
 
 #~ msgctxt "%1 is month name, %2 is year"
 #~ msgid "%1 %2"

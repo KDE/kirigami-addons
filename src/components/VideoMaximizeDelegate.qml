@@ -161,8 +161,8 @@ Item {
         Image {
             id: tempImage
             anchors.centerIn: parent
-            width: root.sourceWidth > 0 || (videoItem.metaData.resolution && videoItem.metaData.resolution.width > 0) ? root.sourceWidth : tempSource.sourceSize.width
-            height: root.sourceHeight > 0 || (videoItem.metaData.resolution && videoItem.metaData.resolution.height > 0) ? root.sourceHeight : tempSource.sourceSize.height
+            width: root.sourceWidth > 0 || (videoItem.metaData.resolution && videoItem.metaData.resolution.width > 0) ? root.sourceWidth : tempImage.sourceSize.width
+            height: root.sourceHeight > 0 || (videoItem.metaData.resolution && videoItem.metaData.resolution.height > 0) ? root.sourceHeight : tempImage.sourceSize.height
             visible: source && status === Image.Ready && !videoItem.source.toString().length > 0
 
             source: root.tempSource
@@ -305,8 +305,7 @@ Item {
                             color: Kirigami.Theme.backgroundColor
                             opacity: 0.8
 
-                            property color borderColor: Kirigami.Theme.textColor
-                            border.color: Qt.rgba(borderColor.r, borderColor.g, borderColor.b, 0.3)
+                            border.color:  Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, Kirigami.Theme.frameContrast)
                             border.width: 1
 
                             shadow.xOffset: 0
@@ -322,8 +321,7 @@ Item {
                 color: Kirigami.Theme.backgroundColor
                 opacity: 0.8
 
-                property color borderColor: Kirigami.Theme.textColor
-                border.color: Qt.rgba(borderColor.r, borderColor.g, borderColor.b, 0.3)
+                border.color:  Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, Kirigami.Theme.frameContrast)
                 border.width: 1
 
                 shadow.xOffset: 0

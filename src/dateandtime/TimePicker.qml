@@ -66,6 +66,7 @@ RowLayout {
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             font.pixelSize: fontMetrics.font.pixelSize * 1.25
+            Accessible.ignored: true
 
             Rectangle {
                 anchors.fill: parent
@@ -99,6 +100,9 @@ RowLayout {
         } else {
             i18ndc("kirigami-addons6", "time in hour (AM)", "%1 AM", currentIndex)
         }
+        Accessible.role: Accessible.Dial
+        Accessible.onDecreaseAction: hoursTumbler.currentIndex = (hoursTumbler.currentIndex + hoursTumbler.model - 1) % hoursTumbler.model
+        Accessible.onIncreaseAction: hoursTumbler.currentIndex = (hoursTumbler.currentIndex + 1) % hoursTumbler.model
         focus: true
     }
 
@@ -106,6 +110,7 @@ RowLayout {
         Layout.alignment: Qt.AlignCenter
         text: i18ndc("kirigami-addons6", "Time separator", ":")
         font.pointSize: Kirigami.Theme.defaultFont.pointSize * 1.3
+        Accessible.ignored: true
     }
 
     Tumbler {
@@ -118,7 +123,10 @@ RowLayout {
             minutes = currentIndex;
         }
 
-        Accessible.name: i18ndc("kirigami-addons6", "number of minutes", "%1 minutes", root.hours)
+        Accessible.name: i18ndc("kirigami-addons6", "number of minutes", "%1 minutes", root.minutes)
+        Accessible.role: Accessible.Dial
+        Accessible.onDecreaseAction: minutesTumbler.currentIndex = (minutesTumbler.currentIndex + 59) % 60
+        Accessible.onIncreaseAction: minutesTumbler.currentIndex = (minutesTumbler.currentIndex + 1) % 60
     }
 
     Tumbler {
@@ -127,6 +135,10 @@ RowLayout {
         Layout.preferredHeight: Kirigami.Units.gridUnit * 10
         model: [Qt.locale().amText, Qt.locale().pmText]
         Accessible.name: currentItem.text
+        Accessible.role: Accessible.CheckBox
+        Accessible.ignored: !_isAmPm
+        Accessible.onPressAction: amPmTumbler.currentIndex = (amPmTumbler.currentIndex + 1) % 2
+        Accessible.onToggleAction: amPmTumbler.currentIndex = (amPmTumbler.currentIndex + 1) % 2
         delegate: delegateComponent
         visibleItemCount: 5
         onCurrentIndexChanged: if (_isAmPm && _init) {

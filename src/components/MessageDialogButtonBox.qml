@@ -12,7 +12,7 @@ QQC2.DialogButtonBox {
     spacing: 1
 
     background: Kirigami.ShadowedRectangle {
-        color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.3);
+        color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, Kirigami.Theme.frameContrast);
 
         corners {
             topLeftRadius: 0

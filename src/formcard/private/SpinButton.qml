@@ -15,7 +15,7 @@ QQC2.Button {
     readonly property color borderColor: if (enabled && (visualFocus || hovered || down)) {
         return Kirigami.Theme.focusColor
     } else {
-        return Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.15)
+        return Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, Kirigami.Theme.frameContrast)
     }
 
     visible: Kirigami.Settings.isMobile

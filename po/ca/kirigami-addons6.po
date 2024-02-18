@@ -1,16 +1,16 @@
 # Translation of kirigami-addons6.po to Catalan
-# Copyright (C) 2021-2023 This_file_is_part_of_KDE
+# Copyright (C) 2021-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2021, 2023.
-# Josep M. Ferrer <txemaq@gmail.com>, 2022, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-23 01:45+0000\n"
-"PO-Revision-Date: 2023-11-23 11:55+0100\n"
+"POT-Creation-Date: 2024-01-27 00:37+0000\n"
+"PO-Revision-Date: 2024-01-12 17:27+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: components/AbstractMaximizeComponent.qml:125
+#: components/AbstractMaximizeComponent.qml:128
 #, kde-format
 msgid "Close"
 msgstr "Tanca"
@@ -119,31 +119,31 @@ msgctxt "@action:button"
 msgid "Go Next"
 msgstr "Ves a la següent"
 
-#: dateandtime/TimePicker.qml:96
+#: dateandtime/TimePicker.qml:97
 #, kde-format
 msgctxt "time in hour in 24h format"
 msgid "%1 hours"
 msgstr "%1 hores"
 
-#: dateandtime/TimePicker.qml:98
+#: dateandtime/TimePicker.qml:99
 #, kde-format
 msgctxt "time in hour (PM)"
 msgid "%1 PM"
 msgstr "%1 PM"
 
-#: dateandtime/TimePicker.qml:100
+#: dateandtime/TimePicker.qml:101
 #, kde-format
 msgctxt "time in hour (AM)"
 msgid "%1 AM"
 msgstr "%1 AM"
 
-#: dateandtime/TimePicker.qml:107
+#: dateandtime/TimePicker.qml:111
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: dateandtime/TimePicker.qml:121
+#: dateandtime/TimePicker.qml:126
 #, kde-format
 msgctxt "number of minutes"
 msgid "%1 minutes"
@@ -291,10 +291,10 @@ msgstr ""
 "\n"
 "KDE es beneficia de molts tipus de col·laboracions, inclosa la financera. "
 "Els fons obtinguts s'empren per a tornar als seus membres i altres persones "
-"les despeses incorregudes en col·laborar amb KDE. Altres fons s'empren per "
-"al suport legal i per a organitzar conferències i reunions.\n"
+"les despeses incorregudes a col·laborar amb KDE. Altres fons s'empren per al "
+"suport legal i per a organitzar conferències i reunions.\n"
 "\n"
-"Us animem a ajudar a els nostres esforços mitjançant una donació monetària.\n"
+"Us animem a ajudar els nostres esforços mitjançant una donació monetària.\n"
 "\n"
 "Moltes gràcies per endavant per la vostra ajuda."
 
@@ -355,20 +355,20 @@ msgstr "Visita la pàgina %1 de la KDE Store"
 msgid "Send an email to %1"
 msgstr "Envia un correu a %1"
 
-#: formcard/FormDateTimeDelegate.qml:186
+#: formcard/FormDateTimeDelegate.qml:187
 #, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
 msgid "Today"
 msgstr "Avui"
 
-#: formcard/FormDateTimeDelegate.qml:213 formcard/FormDateTimeDelegate.qml:348
+#: formcard/FormDateTimeDelegate.qml:214 formcard/FormDateTimeDelegate.qml:351
 #, kde-format
 msgctxt "Date is not set"
 msgid "Not set"
 msgstr "No establert"
 
 #: formcard/FormPasswordFieldDelegate.qml:218
-#: formcard/FormTextFieldDelegate.qml:219
+#: formcard/FormTextFieldDelegate.qml:220
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"

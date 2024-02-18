@@ -157,6 +157,7 @@ AbstractFormDelegate {
             bottomPadding: Kirigami.Units.largeSpacing
             topPadding: Kirigami.Units.largeSpacing
             visible: root.text.length > 0 && root.dateTimeDisplay === FormDateTimeDelegate.DateTimeDisplay.DateTime
+            Accessible.ignored: true
         }
 
         RowLayout {
@@ -230,12 +231,14 @@ AbstractFormDelegate {
                         visible: root.text.length > 0 && root.dateTimeDisplay === FormDateTimeDelegate.DateTimeDisplay.Date
 
                         Layout.fillWidth: true
+                        Accessible.ignored: true
                     }
 
                     QQC2.Label {
                         text: dateButton.text
 
                         Layout.fillWidth: !dateLabel.visible
+                        Accessible.ignored: true
                     }
                 }
                 onClicked: {
@@ -423,11 +426,13 @@ AbstractFormDelegate {
                         visible: root.text.length > 0 && root.dateTimeDisplay === FormDateTimeDelegate.DateTimeDisplay.Time
 
                         Layout.fillWidth: true
+                        Accessible.ignored: true
                     }
 
                     QQC2.Label {
                         text: timeButton.text
                         Layout.fillWidth: !timeLabel.visible
+                        Accessible.ignored: true
                     }
                 }
 

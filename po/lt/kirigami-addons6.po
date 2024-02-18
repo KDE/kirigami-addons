@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-23 01:45+0000\n"
-"PO-Revision-Date: 2023-01-22 00:55+0000\n"
+"POT-Creation-Date: 2024-01-27 00:37+0000\n"
+"PO-Revision-Date: 2024-01-31 18:00+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,150 +17,151 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.0.1\n"
 
-#: components/AbstractMaximizeComponent.qml:125
+#: components/AbstractMaximizeComponent.qml:128
 #, kde-format
 msgid "Close"
-msgstr ""
+msgstr "Užverti"
 
 #: components/AlbumMaximizeComponent.qml:116
 #, kde-format
 msgid "Zoom in"
-msgstr ""
+msgstr "Didinti"
 
 #: components/AlbumMaximizeComponent.qml:121
 #, kde-format
 msgid "Zoom out"
-msgstr ""
+msgstr "Mažinti"
 
 #: components/AlbumMaximizeComponent.qml:127
 #, kde-format
 msgid "Rotate left"
-msgstr ""
+msgstr "Pasukti kairėn"
 
 #: components/AlbumMaximizeComponent.qml:133
 #, kde-format
 msgid "Rotate right"
-msgstr ""
+msgstr "Pasukti dešinėn"
 
 #: components/AlbumMaximizeComponent.qml:138
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
-msgstr ""
+msgstr "Rodyti užrašą"
 
 #: components/AlbumMaximizeComponent.qml:138
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
-msgstr ""
+msgstr "Slėpti užrašą"
 
 #: components/AlbumMaximizeComponent.qml:144
 #, kde-format
 msgid "Save as"
-msgstr ""
+msgstr "Įrašyti kaip"
 
 #: components/AlbumMaximizeComponent.qml:203
 #, kde-format
 msgid "Previous image"
-msgstr ""
+msgstr "Ankstesnis paveikslas"
 
 #: components/AlbumMaximizeComponent.qml:221
 #, kde-format
 msgid "Next image"
-msgstr ""
+msgstr "Kitas paveikslas"
 
 #: components/Banner.qml:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "Užverti"
 
 #: components/DownloadAction.qml:37
 #, kde-format
 msgid "Download"
-msgstr ""
+msgstr "Atsisiųsti"
 
 #: components/VideoMaximizeDelegate.qml:240
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
-msgstr ""
+msgstr "Garsumas"
 
 #: dateandtime/DatePopup.qml:71 dateandtime/TimePopup.qml:52
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Atsisakyti"
 
 #: dateandtime/DatePopup.qml:83 dateandtime/TimePopup.qml:64
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
-msgstr ""
+msgstr "Pasirinkti"
 
 #: dateandtime/private/DatePicker.qml:266
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Previous"
-msgstr ""
+msgstr "Į ankstesnį"
 
 #: dateandtime/private/DatePicker.qml:279
 #, kde-format
 msgctxt "@action:button"
 msgid "Jump to today"
-msgstr ""
+msgstr "Eiti į šiandien"
 
 #: dateandtime/private/DatePicker.qml:286
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Next"
-msgstr ""
+msgstr "Į kitą"
 
-#: dateandtime/TimePicker.qml:96
+#: dateandtime/TimePicker.qml:97
 #, kde-format
 msgctxt "time in hour in 24h format"
 msgid "%1 hours"
-msgstr ""
+msgstr "%1 val."
 
-#: dateandtime/TimePicker.qml:98
+#: dateandtime/TimePicker.qml:99
 #, kde-format
 msgctxt "time in hour (PM)"
 msgid "%1 PM"
-msgstr ""
+msgstr "%1 PM"
 
-#: dateandtime/TimePicker.qml:100
+#: dateandtime/TimePicker.qml:101
 #, kde-format
 msgctxt "time in hour (AM)"
 msgid "%1 AM"
-msgstr ""
+msgstr "%1 AM"
 
-#: dateandtime/TimePicker.qml:107
+#: dateandtime/TimePicker.qml:111
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
-msgstr ""
+msgstr ":"
 
-#: dateandtime/TimePicker.qml:121
+#: dateandtime/TimePicker.qml:126
 #, kde-format
 msgctxt "number of minutes"
 msgid "%1 minutes"
-msgstr ""
+msgstr "%1 min."
 
 #: formcard/AboutKDE.qml:23
 #, kde-format
 msgid "About KDE"
-msgstr ""
+msgstr "Apie KDE"
 
 #: formcard/AboutKDE.qml:50
 #, kde-format
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: formcard/AboutKDE.qml:59
 #, kde-format
 msgid "Be Free!"
-msgstr ""
+msgstr "Būkite laisvi!"
 
 #: formcard/AboutKDE.qml:68
 #, kde-format
@@ -175,16 +176,25 @@ msgid ""
 "the world's finest Free Software. Everyone is welcome to join and contribute "
 "to KDE, including you."
 msgstr ""
+"KDE yra pasaulinio masto bendruomenė, kurią sudaro programinės įrangos "
+"inžinieriai, dailininkai, rašytojai, vertėjai bei kūrėjai, kurie yra "
+"pasišventę laisvosios programinės įrangos plėtojimui. KDE kuria Plasma "
+"darbalaukio aplinką, šimtus programų ir daugybę jas palaikančių bibliotekų.\n"
+"\n"
+"KDE yra bendradarbiavimo organizacija: jokia esybė nevaldo jos krypties ar "
+"produktų. Vietoj to, mes kartu dirbame, kad pasiektume bendrą tikslą – "
+"sukurtume geriausią pasaulyje laisvąją programinę įrangą. Visi, įskaitant ir "
+"jus, yra kviečiami prisijungti ir talkinti KDE."
 
 #: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:192
 #, kde-format
 msgid "Homepage"
-msgstr ""
+msgstr "Internetinė svetainė"
 
 #: formcard/AboutKDE.qml:82
 #, kde-format
 msgid "Report bugs"
-msgstr ""
+msgstr "Praneškite apie klaidas"
 
 #: formcard/AboutKDE.qml:87
 #, kde-format
@@ -200,16 +210,29 @@ msgid ""
 "tracking system to register your wish. Make sure you use the severity called "
 "\"Wishlist\"."
 msgstr ""
+"Programinė įranga visada gali būti tobulinama ir KDE komanda yra pasiryžusi "
+"tai daryti. Vis dėlto, būtent jūs – naudotojas – privalote mums pranešti, "
+"kai kas nors neveikia taip, kaip turėtų arba, jei kas nors gali būti "
+"padaryta geriau.\n"
+"\n"
+"KDE turi klaidų sekimo sistemą. Naudokite žemiau esantį mygtuką, kad "
+"praneštumėte apie klaidą arba pasinaudokite programos „Apie“ puslapiu, kad "
+"praneštumėte apie konkrečios programos klaidą.\n"
+"\n"
+"Jei turite pasiūlymą kaip galima ką nors patobulinti, esate kviečiami "
+"naudotis klaidų sekimo sistema ir užregistruoti savo pasiūlymą. "
+"Įsitikinkite, kad naudosite svarbą, pavadinimu „Pageidavimas (angl. "
+"Wishlist)“."
 
 #: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:243
 #, kde-format
 msgid "Report a bug"
-msgstr ""
+msgstr "Pranešti apie klaidą"
 
 #: formcard/AboutKDE.qml:102
 #, kde-format
 msgid "Join us"
-msgstr ""
+msgstr "Prisijunkite prie mūsų"
 
 #: formcard/AboutKDE.qml:107
 #, kde-format
@@ -218,21 +241,25 @@ msgid ""
 "You can join the language teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
+"Norėdami būti KDE komandos dalimi, neprivalote būti programinės įrangos "
+"programuotoju. Galite prisijungti prie nacionalinių komandų, verčiančių "
+"programų sąsajas. Galite teikti grafinius paveikslus, apipavidalinimus, "
+"garsus bei patobulintą dokumentaciją. Spręskite patys!"
 
 #: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:218
 #, kde-format
 msgid "Get Involved"
-msgstr ""
+msgstr "Įsitraukti"
 
 #: formcard/AboutKDE.qml:123
 #, kde-format
 msgid "Developer Documentation"
-msgstr ""
+msgstr "Plėtotojo dokumentacija"
 
 #: formcard/AboutKDE.qml:129
 #, kde-format
 msgid "Support us"
-msgstr ""
+msgstr "Paremkite mus"
 
 #: formcard/AboutKDE.qml:134
 #, kde-format
@@ -254,92 +281,104 @@ msgid ""
 "\n"
 "Thank you very much in advance for your support."
 msgstr ""
+"KDE programinė įranga yra ir visada bus nemokama, vis dėlto, jos plėtojimas "
+"nėra nemokamas.\n"
+"\n"
+"Norėdama palaikyti plėtojimą, KDE bendruomenė įkūrė „KDE e.V.“ – ne pelno "
+"organizaciją, kuri teisiškai įsteigta Vokietijoje. „KDE e.V.“ atstovauja KDE "
+"bendruomenę teisiniuose ir finansiniuose reikaluose.\n"
+"\n"
+"KDE praverčia įvairi parama, įskaitant ir finansinį palaikymą. Mes naudojame "
+"lėšas, kad apmokėtume dalyviams ir kitiems asmenims jų išlaidas, kurias jie "
+"patiria talkindami projektui. Kitos lėšos yra naudojamos teisiniam "
+"palaikymui ir konferencijų bei susitikimų organizavimui."
 
 #: formcard/AboutKDE.qml:146
 #, kde-format
 msgid "KDE e.V"
-msgstr ""
+msgstr "KDE e.V"
 
 #: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:205
 #, kde-format
 msgid "Donate"
-msgstr ""
+msgstr "Paaukoti"
 
 #: formcard/AboutPage.qml:87
 #, kde-format
 msgid "About %1"
-msgstr ""
+msgstr "Apie %1"
 
 #: formcard/AboutPage.qml:133
 #, kde-format
 msgid "Copyright"
-msgstr ""
+msgstr "Autorių teisės"
 
 #: formcard/AboutPage.qml:141
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Licencija"
+msgstr[1] "Licencijos"
+msgstr[2] "Licencijos"
+msgstr[3] "Licencijos"
 
 #: formcard/AboutPage.qml:250
 #, kde-format
 msgid "Libraries in use"
-msgstr ""
+msgstr "Naudojamos bibliotekos"
 
 #: formcard/AboutPage.qml:273
 #, kde-format
 msgid "Authors"
-msgstr ""
+msgstr "Autoriai"
 
 #: formcard/AboutPage.qml:288
 #, kde-format
 msgid "Credits"
-msgstr ""
+msgstr "Padėkos"
 
 #: formcard/AboutPage.qml:303
 #, kde-format
 msgid "Translators"
-msgstr ""
+msgstr "Vertėjai"
 
 #: formcard/AboutPage.qml:372
 #, kde-format
 msgid "Visit %1's KDE Store page"
-msgstr ""
+msgstr "Apsilankyti KDE parduotuvės %1 puslapyje"
 
 #: formcard/AboutPage.qml:381
 #, kde-format
 msgid "Send an email to %1"
-msgstr ""
+msgstr "Siųsti el. laišką, adresu %1"
 
-#: formcard/FormDateTimeDelegate.qml:186
+#: formcard/FormDateTimeDelegate.qml:187
 #, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
 msgid "Today"
-msgstr ""
+msgstr "Šiandien"
 
-#: formcard/FormDateTimeDelegate.qml:213 formcard/FormDateTimeDelegate.qml:348
+#: formcard/FormDateTimeDelegate.qml:214 formcard/FormDateTimeDelegate.qml:351
 #, kde-format
 msgctxt "Date is not set"
 msgid "Not set"
-msgstr ""
+msgstr "Nenustatyta"
 
 #: formcard/FormPasswordFieldDelegate.qml:218
-#: formcard/FormTextFieldDelegate.qml:219
+#: formcard/FormTextFieldDelegate.qml:220
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
-msgstr ""
+msgstr "%1/%2"
 
 #: settings/CategorizedSettings.qml:44
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings"
-msgstr ""
+msgstr "Nuostatos"
 
 #: settings/CategorizedSettings.qml:44
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings — %1"
-msgstr ""
+msgstr "Nuostatos – %1"

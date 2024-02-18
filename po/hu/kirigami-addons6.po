@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
 #
-# Kristof Kiszel <ulysses@fsf.hu>, 2021.
+# SPDX-FileCopyrightText: 2021, 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-23 01:45+0000\n"
-"PO-Revision-Date: 2021-11-23 13:47+0100\n"
+"POT-Creation-Date: 2024-01-27 00:37+0000\n"
+"PO-Revision-Date: 2024-01-08 10:35+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -15,94 +15,91 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
-#: components/AbstractMaximizeComponent.qml:125
+#: components/AbstractMaximizeComponent.qml:128
 #, kde-format
 msgid "Close"
-msgstr ""
+msgstr "Bezárás"
 
 #: components/AlbumMaximizeComponent.qml:116
 #, kde-format
 msgid "Zoom in"
-msgstr ""
+msgstr "Nagyítás"
 
 #: components/AlbumMaximizeComponent.qml:121
 #, kde-format
 msgid "Zoom out"
-msgstr ""
+msgstr "Kicsinyítés"
 
 #: components/AlbumMaximizeComponent.qml:127
 #, kde-format
 msgid "Rotate left"
-msgstr ""
+msgstr "Forgatás balra"
 
 #: components/AlbumMaximizeComponent.qml:133
 #, kde-format
 msgid "Rotate right"
-msgstr ""
+msgstr "Forgatás jobbra"
 
 #: components/AlbumMaximizeComponent.qml:138
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
-msgstr ""
+msgstr "Felirat megjelenítése"
 
 #: components/AlbumMaximizeComponent.qml:138
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
-msgstr ""
+msgstr "Felirat elrejtése"
 
 #: components/AlbumMaximizeComponent.qml:144
 #, kde-format
 msgid "Save as"
-msgstr ""
+msgstr "Mentés másként"
 
 #: components/AlbumMaximizeComponent.qml:203
-#, fuzzy, kde-format
-#| msgid "Previous"
+#, kde-format
 msgid "Previous image"
-msgstr "Előző"
+msgstr "Előző kép"
 
 #: components/AlbumMaximizeComponent.qml:221
 #, kde-format
 msgid "Next image"
-msgstr ""
+msgstr "Következő kép"
 
 #: components/Banner.qml:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "Bezárás"
 
 #: components/DownloadAction.qml:37
 #, kde-format
 msgid "Download"
-msgstr ""
+msgstr "Letöltés"
 
 #: components/VideoMaximizeDelegate.qml:240
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
-msgstr ""
+msgstr "Hangerő"
 
 #: dateandtime/DatePopup.qml:71 dateandtime/TimePopup.qml:52
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr "Mégsem"
+msgstr "Mégse"
 
 #: dateandtime/DatePopup.qml:83 dateandtime/TimePopup.qml:64
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
-msgstr ""
+msgstr "Kiválasztás"
 
 #: dateandtime/private/DatePicker.qml:266
-#, fuzzy, kde-format
-#| msgid "Previous"
+#, kde-format
 msgctxt "@action:button"
 msgid "Go Previous"
 msgstr "Előző"
@@ -111,59 +108,58 @@ msgstr "Előző"
 #, kde-format
 msgctxt "@action:button"
 msgid "Jump to today"
-msgstr ""
+msgstr "A mai napra"
 
 #: dateandtime/private/DatePicker.qml:286
-#, fuzzy, kde-format
-#| msgid "Next"
+#, kde-format
 msgctxt "@action:button"
 msgid "Go Next"
 msgstr "Következő"
 
-#: dateandtime/TimePicker.qml:96
+#: dateandtime/TimePicker.qml:97
 #, kde-format
 msgctxt "time in hour in 24h format"
 msgid "%1 hours"
-msgstr ""
+msgstr "%1 óra"
 
-#: dateandtime/TimePicker.qml:98
+#: dateandtime/TimePicker.qml:99
 #, kde-format
 msgctxt "time in hour (PM)"
 msgid "%1 PM"
-msgstr ""
+msgstr "%1 DU"
 
-#: dateandtime/TimePicker.qml:100
+#: dateandtime/TimePicker.qml:101
 #, kde-format
 msgctxt "time in hour (AM)"
 msgid "%1 AM"
-msgstr ""
+msgstr "%1 DE"
 
-#: dateandtime/TimePicker.qml:107
+#: dateandtime/TimePicker.qml:111
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
-msgstr ""
+msgstr ":"
 
-#: dateandtime/TimePicker.qml:121
+#: dateandtime/TimePicker.qml:126
 #, kde-format
 msgctxt "number of minutes"
 msgid "%1 minutes"
-msgstr ""
+msgstr "%1 perc"
 
 #: formcard/AboutKDE.qml:23
 #, kde-format
 msgid "About KDE"
-msgstr ""
+msgstr "A KDE névjegye"
 
 #: formcard/AboutKDE.qml:50
 #, kde-format
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: formcard/AboutKDE.qml:59
 #, kde-format
 msgid "Be Free!"
-msgstr ""
+msgstr "Légy szabad!"
 
 #: formcard/AboutKDE.qml:68
 #, kde-format
@@ -178,16 +174,26 @@ msgid ""
 "the world's finest Free Software. Everyone is welcome to join and contribute "
 "to KDE, including you."
 msgstr ""
+"A KDE olyan szoftvermérnökök, művészek, írók, fordítók és készítők globális "
+"közössége, akik elkötelezettek a  szabad szoftverek fejlesztése iránt A KDE "
+"készíti a Plasma asztali környezetet, alkalmazások százait és az ezeket "
+"támogató számos szoftverkönyvtárat.\n"
+"\n"
+"A KDE egy együttműködésre épülő szervezet: nincs egyetlen legfelsőbb vezető "
+"vagy csoport, ami megszabja az irányt. Ehelyett együtt dolgozunk a közös "
+"célon, hogy létrehozzuk a világ legeslegjobb szabad szoftvereit. Mindenkit "
+"szívesen látunk, aki szeretne  csatlakozni és hozzájárulni a KDE-hez, köztük "
+"Önt is."
 
 #: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:192
 #, kde-format
 msgid "Homepage"
-msgstr ""
+msgstr "Honlap"
 
 #: formcard/AboutKDE.qml:82
 #, kde-format
 msgid "Report bugs"
-msgstr ""
+msgstr "Hibák bejelentése"
 
 #: formcard/AboutKDE.qml:87
 #, kde-format
@@ -203,16 +209,27 @@ msgid ""
 "tracking system to register your wish. Make sure you use the severity called "
 "\"Wishlist\"."
 msgstr ""
+"A szoftvereket mindig lehet fejleszteni, és a KDE csapata készen áll erre. "
+"Azonban Önnek - a felhasználónak - kell megmondania nekünk, ha valami nem "
+"úgy működik, ahogyan az elvárható, vagy jobban is lehetne csinálni.\n"
+"\n"
+"A KDE-nek van egy hibakövetési rendszere. Használja az alábbi gombot  hiba "
+"bejelentéséhez, vagy használja a a program Névjegy oldalát, ha az adott "
+"alkalmazással kapcsolatos hibát szeretne jelenteni.\n"
+"\n"
+"Ha fejlesztési javaslata van, akkor szívesen látjuk a hibakövetési "
+"rendszerben, hogy jelezze kívánságát. Győződjön meg róla, hogy a súlyosság "
+"„Kívánságlista”."
 
 #: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:243
 #, kde-format
 msgid "Report a bug"
-msgstr ""
+msgstr "Hibabejelentés"
 
 #: formcard/AboutKDE.qml:102
 #, kde-format
 msgid "Join us"
-msgstr ""
+msgstr "Csatlakozzon"
 
 #: formcard/AboutKDE.qml:107
 #, kde-format
@@ -221,21 +238,26 @@ msgid ""
 "You can join the language teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
+"Nem csak szoftverfejlesztőket várunk a KDE csapatba! A magyar KDE örömmel "
+"fogad bármiféle segítséget a KDE magyar fordításának jobbá, pontosabbá "
+"tételéhez A KDE fejlesztők örömmel fogadnak mindenkit, aki a mostaninál "
+"szebb és jobb képanyagot, hangokat, grafikai témákat vagy teljesebb "
+"dokumentációt tud készíteni. Ön dönt!"
 
 #: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:218
 #, kde-format
 msgid "Get Involved"
-msgstr ""
+msgstr "Közreműködés"
 
 #: formcard/AboutKDE.qml:123
 #, kde-format
 msgid "Developer Documentation"
-msgstr ""
+msgstr "Fejlesztői dokumentáció"
 
 #: formcard/AboutKDE.qml:129
 #, kde-format
 msgid "Support us"
-msgstr ""
+msgstr "Támogasson minket"
 
 #: formcard/AboutKDE.qml:134
 #, kde-format
@@ -257,95 +279,109 @@ msgid ""
 "\n"
 "Thank you very much in advance for your support."
 msgstr ""
+"A KDE ingyenesen használható, elkészítése azonban pénzbe kerül.\n"
+"\n"
+"Ezért a KDE projekt vezetői létrehoztak egy KDE e.V. nevű nonprofit "
+"szervezetet Németországban. A KDE e.V. képviseli a KDE projektet jogi és "
+"pénzügyi kérdésekben.\n"
+"\n"
+"A KDE projektnek szüksége van pénzügyi támogatásra a megfelelő működéshez A "
+"pénz elsősorban új tagok toborzásához és a forráskód kezeléséhez szükséges "
+"eszközökhöz kell A további támogatásokat jogi támogatásra, konferenciák és "
+"találkozók szervezésére használjuk fel.\n"
+"\n"
+"Ha módjában áll, kérjük járuljon hozzá a erőfeszítéseink támogatásához "
+"pénzügyi támogatással.\n"
+"\n"
+"Előre is köszönjük a támogatását!"
 
 #: formcard/AboutKDE.qml:146
 #, kde-format
 msgid "KDE e.V"
-msgstr ""
+msgstr "KDE e.V"
 
 #: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:205
 #, kde-format
 msgid "Donate"
-msgstr ""
+msgstr "Támogatás"
 
 #: formcard/AboutPage.qml:87
 #, kde-format
 msgid "About %1"
-msgstr ""
+msgstr "Névjegy: %1"
 
 #: formcard/AboutPage.qml:133
 #, kde-format
 msgid "Copyright"
-msgstr ""
+msgstr "Copyright"
 
 #: formcard/AboutPage.qml:141
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Licenc"
+msgstr[1] "Licencek"
 
 #: formcard/AboutPage.qml:250
 #, kde-format
 msgid "Libraries in use"
-msgstr ""
+msgstr "Felhasznált függvénykönyvtárak"
 
 #: formcard/AboutPage.qml:273
 #, kde-format
 msgid "Authors"
-msgstr ""
+msgstr "Szerzők"
 
 #: formcard/AboutPage.qml:288
 #, kde-format
 msgid "Credits"
-msgstr ""
+msgstr "Köszönetnyilvánítás"
 
 #: formcard/AboutPage.qml:303
 #, kde-format
 msgid "Translators"
-msgstr ""
+msgstr "Fordítók"
 
 #: formcard/AboutPage.qml:372
 #, kde-format
 msgid "Visit %1's KDE Store page"
-msgstr ""
+msgstr "A(z) %1 KDE Store oldala"
 
 #: formcard/AboutPage.qml:381
 #, kde-format
 msgid "Send an email to %1"
-msgstr ""
+msgstr "E-mail küldése neki: %1"
 
-#: formcard/FormDateTimeDelegate.qml:186
-#, fuzzy, kde-format
-#| msgid "Today"
+#: formcard/FormDateTimeDelegate.qml:187
+#, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
 msgid "Today"
 msgstr "Ma"
 
-#: formcard/FormDateTimeDelegate.qml:213 formcard/FormDateTimeDelegate.qml:348
+#: formcard/FormDateTimeDelegate.qml:214 formcard/FormDateTimeDelegate.qml:351
 #, kde-format
 msgctxt "Date is not set"
 msgid "Not set"
-msgstr ""
+msgstr "Nincs beállítva"
 
 #: formcard/FormPasswordFieldDelegate.qml:218
-#: formcard/FormTextFieldDelegate.qml:219
+#: formcard/FormTextFieldDelegate.qml:220
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
-msgstr ""
+msgstr "%1/%2"
 
 #: settings/CategorizedSettings.qml:44
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings"
-msgstr ""
+msgstr "Beállítások"
 
 #: settings/CategorizedSettings.qml:44
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings — %1"
-msgstr ""
+msgstr "Beállítások — %1"
 
 #~ msgid "Accept"
 #~ msgstr "Elfogadás"

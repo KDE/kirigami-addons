@@ -16,7 +16,7 @@ import org.kde.kirigami 2.20 as Kirigami
 Kirigami.ScrollablePage {
     id: root
 
-    default property alias cards: internalLayout.children
+    default property alias cards: internalLayout.data
 
     topPadding: 0
     leftPadding: 0

@@ -158,7 +158,7 @@ AbstractFormDelegate {
                 background: Item {
                     implicitHeight: Kirigami.Units.gridUnit * 2
                     Rectangle {
-                        color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.15)
+                        color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, Kirigami.Theme.frameContrast)
                         height: 1
                         anchors {
                             left: parent.left
@@ -168,7 +168,7 @@ AbstractFormDelegate {
                     }
 
                     Rectangle {
-                        color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.15)
+                        color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, Kirigami.Theme.frameContrast)
                         height: 1
                         anchors {
                             left: parent.left

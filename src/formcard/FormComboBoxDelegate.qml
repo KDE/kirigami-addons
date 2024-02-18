@@ -299,9 +299,12 @@ AbstractFormDelegate {
 
     focusPolicy: Qt.StrongFocus
     Accessible.description: description
+    Accessible.onPressAction: controlRoot.clicked()
 
-    contentItem: RowLayout {
-        ColumnLayout {
+    contentItem: ColumnLayout {
+        spacing: Kirigami.Units.smallSpacing
+
+        RowLayout {
             Layout.fillWidth: true
             spacing: Kirigami.Units.smallSpacing
 
@@ -312,40 +315,42 @@ AbstractFormDelegate {
                 color: controlRoot.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
                 wrapMode: Text.Wrap
                 maximumLineCount: 2
+                Accessible.ignored: true
             }
 
             QQC2.Label {
-                visible: controlRoot.description !== ""
-                Layout.fillWidth: true
-                text: controlRoot.description
+                Layout.alignment: Qt.AlignRight
+                Layout.rightMargin: Kirigami.Units.smallSpacing
                 color: Kirigami.Theme.disabledTextColor
-                wrapMode: Text.Wrap
+                text: controlRoot.displayText
+                visible: controlRoot.displayMode === FormComboBoxDelegate.Dialog || controlRoot.displayMode === FormComboBoxDelegate.Page
+            }
+
+            QQC2.ComboBox {
+                id: combobox
+                focusPolicy: Qt.NoFocus // provided by parent
+                model: controlRoot.model
+                visible: controlRoot.displayMode == FormComboBoxDelegate.ComboBox
+                delegate: controlRoot.comboBoxDelegate
+                currentIndex: controlRoot.currentIndex
+                onActivated: index => controlRoot.activated(index)
+                onAccepted: controlRoot.accepted()
+            }
+
+            FormArrow {
+                Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
+                direction: Qt.DownArrow
+                visible: controlRoot.displayMode === FormComboBoxDelegate.Dialog || controlRoot.displayMode === FormComboBoxDelegate.Page
             }
         }
 
         QQC2.Label {
-            Layout.alignment: Qt.AlignRight
-            Layout.rightMargin: Kirigami.Units.smallSpacing
+            visible: controlRoot.description !== ""
+            Layout.fillWidth: true
+            text: controlRoot.description
             color: Kirigami.Theme.disabledTextColor
-            text: controlRoot.displayText
-            visible: controlRoot.displayMode === FormComboBoxDelegate.Dialog || controlRoot.displayMode === FormComboBoxDelegate.Page
-        }
-
-        QQC2.ComboBox {
-            id: combobox
-            focusPolicy: Qt.NoFocus // provided by parent
-            model: controlRoot.model
-            visible: controlRoot.displayMode == FormComboBoxDelegate.ComboBox
-            delegate: controlRoot.comboBoxDelegate
-            currentIndex: controlRoot.currentIndex
-            onActivated: index => controlRoot.activated(index)
-            onAccepted: controlRoot.accepted()
-        }
-
-        FormArrow {
-            Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-            direction: Qt.DownArrow
-            visible: controlRoot.displayMode === FormComboBoxDelegate.Dialog || controlRoot.displayMode === FormComboBoxDelegate.Page
+            wrapMode: Text.Wrap
+            Accessible.ignored: true
         }
     }
 }

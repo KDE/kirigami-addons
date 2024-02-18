@@ -45,7 +45,7 @@ Item {
      *
      * This is where you should add new Form delegates.
      */
-    default property alias delegates: internalColumn.children
+    default property alias delegates: internalColumn.data
 
     /**
      * @brief The maximum width of the card.
@@ -103,7 +103,7 @@ Item {
         }
 
         border {
-            color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.15)
+            color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, Kirigami.Theme.frameContrast)
             width: borderWidth
         }
 
