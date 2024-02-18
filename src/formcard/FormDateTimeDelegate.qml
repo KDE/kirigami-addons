@@ -135,6 +135,12 @@ AbstractFormDelegate {
      */
     property string statusMessage: ""
 
+    /**
+     * @brief This property holds the parent used for the popups
+     * of this control.
+     */
+    property Item popupParent: applicationWindow()
+
     background: null
 
     focusPolicy: text.length > 0 ? Qt.TabFocus : Qt.NoFocus
@@ -263,7 +269,7 @@ AbstractFormDelegate {
                         androidPickerActive = true;
                         DateTime.AndroidIntegration.showDatePicker(value.getTime());
                     } else {
-                        const item = datePopup.createObject(applicationWindow(), {
+                        const item = datePopup.createObject(root.popupParent, {
                             value: value,
                             minimumDate: root.minimumDate,
                             maximumDate: root.maximumDate,
@@ -293,7 +299,7 @@ AbstractFormDelegate {
                         x: parent ? Math.round((parent.width - width) / 2) : 0
                         y: parent ? Math.round((parent.height - height) / 2) : 0
 
-                        width: Math.min(Kirigami.Units.gridUnit * 20, applicationWindow().width - 2 * Kirigami.Units.gridUnit)
+                        width: Math.min(Kirigami.Units.gridUnit * 20, root.popupParent.width - 2 * Kirigami.Units.gridUnit)
 
                         height: Kirigami.Units.gridUnit * 20
 
@@ -365,7 +371,7 @@ AbstractFormDelegate {
                         androidPickerActive = true;
                         DateTime.AndroidIntegration.showTimePicker(value.getTime());
                     } else {
-                        const popup = timePopup.createObject(applicationWindow(), {
+                        const popup = timePopup.createObject(root.popupParent, {
                             value: value,
                         })
                         popup.open();
@@ -382,7 +388,7 @@ AbstractFormDelegate {
 
                         onClosed: popup.destroy();
 
-                        parent: applicationWindow().overlay
+                        parent: root.popupParent.overlay
                         modal: true
 
                         onAccepted: {
