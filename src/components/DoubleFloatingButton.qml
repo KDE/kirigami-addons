@@ -74,8 +74,9 @@ Kirigami.ShadowedRectangle {
     }
 
     readonly property real __padding: radius === Infinity
-        ? Math.round(Math.max(__effectiveIconSize.width, __effectiveIconSize.height) * (Math.sqrt(2) - 1))
+        ? Math.round(Math.max(Math.max(leadingButton.__effectiveIconSize.width, leadingButton.__effectiveIconSize.height), Math.max(trailingButton.__effectiveIconSize.width, trailingButton.__effectiveIconSize.height)) * (Math.sqrt(2) - 1))
         : Kirigami.Settings.hasTransientTouchInput ? (Kirigami.Units.largeSpacing * 2) : Kirigami.Units.largeSpacing
+
 
 
     // Extra clickable area that adjusts both paddings and insets.
