@@ -8,6 +8,7 @@ import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.15
 
 import org.kde.kirigami 2.19 as Kirigami
+import org.kde.kirigamiaddons.delegates as Delegates
 
 /**
  * @brief A Form delegate that corresponds to a combobox.
@@ -178,11 +179,10 @@ AbstractFormDelegate {
     /**
      * @brief The delegate component to use as entries in the combobox display mode.
      */
-    property Component comboBoxDelegate: QQC2.ItemDelegate {
+    property Component comboBoxDelegate: Delegates.RoundedItemDelegate {
         implicitWidth: ListView.view ? ListView.view.width : Kirigami.Units.gridUnit * 16
         text: controlRoot.textRole ? (Array.isArray(controlRoot.model) ? modelData[controlRoot.textRole] : model[controlRoot.textRole]) : modelData
-        highlighted: controlRoot.highlightedIndex === index
-        property bool separatorVisible: false
+        highlighted: controlRoot.currentIndex === index
         Kirigami.Theme.colorSet: controlRoot.Kirigami.Theme.inherit ? controlRoot.Kirigami.Theme.colorSet : Kirigami.Theme.View
         Kirigami.Theme.inherit: controlRoot.Kirigami.Theme.inherit
     }
@@ -194,7 +194,6 @@ AbstractFormDelegate {
         implicitWidth: ListView.view ? ListView.view.width : Kirigami.Units.gridUnit * 16
         text: controlRoot.textRole ? (Array.isArray(controlRoot.model) ? modelData[controlRoot.textRole] : model[controlRoot.textRole]) : modelData
         checked: controlRoot.currentIndex === index
-        property bool separatorVisible: false
         Kirigami.Theme.colorSet: controlRoot.Kirigami.Theme.inherit ? controlRoot.Kirigami.Theme.colorSet : Kirigami.Theme.View
         Kirigami.Theme.inherit: controlRoot.Kirigami.Theme.inherit
         onClicked: {
