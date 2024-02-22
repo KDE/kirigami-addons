@@ -3,14 +3,14 @@
 
 cmake_minimum_required(VERSION 3.16)
 
-project(kirigami-addons VERSION 0.11.90)
+project(kirigami-addons VERSION 1.0.0)
 
 include(FeatureSummary)
 
 set(AUTOMOC_MOC_OPTIONS -Muri=org.kde.kirigami)
 
-set(QT_REQUIRED_VERSION "6.4")
-set(KF_MIN_VERSION "5.240.0")
+set(QT_REQUIRED_VERSION "6.6")
+set(KF_MIN_VERSION "6.0.0")
 set(KF_MAJOR_VERSION "6")
 
 find_package(ECM ${KF_MIN_VERSION} NO_MODULE)
