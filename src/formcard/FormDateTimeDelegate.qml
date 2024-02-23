@@ -139,7 +139,7 @@ AbstractFormDelegate {
      * @brief This property holds the parent used for the popups
      * of this control.
      */
-    property Item popupParent: applicationWindow()
+    property var popupParent: QQC2.ApplicationWindow.window
 
     background: null
 
