@@ -39,7 +39,8 @@ RowLayout {
         hoursTumbler.currentIndex = (_isAmPm && hours > 12 ? hours - 12 : hours);
         minutesTumbler.currentIndex = minutes;
         if (_isAmPm) {
-            amPmTumbler.currentIndex = hours > 12 ? 1 : 0;
+            root._pm = hours > 12 ? 1 : 0;
+            amPmTumbler.currentIndex = _pm;
         }
 
         // Avoid initialisation bug where thumbler are by default initialised
