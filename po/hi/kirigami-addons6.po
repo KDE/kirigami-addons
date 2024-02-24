@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-21 00:37+0000\n"
+"POT-Creation-Date: 2024-02-24 00:37+0000\n"
 "PO-Revision-Date: 2021-06-29 17:45+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -120,31 +120,31 @@ msgctxt "@action:button"
 msgid "Go Next"
 msgstr "अगला"
 
-#: dateandtime/TimePicker.qml:97
+#: dateandtime/TimePicker.qml:98
 #, kde-format
 msgctxt "time in hour in 24h format"
 msgid "%1 hours"
 msgstr ""
 
-#: dateandtime/TimePicker.qml:99
+#: dateandtime/TimePicker.qml:100
 #, kde-format
 msgctxt "time in hour (PM)"
 msgid "%1 PM"
 msgstr ""
 
-#: dateandtime/TimePicker.qml:101
+#: dateandtime/TimePicker.qml:102
 #, kde-format
 msgctxt "time in hour (AM)"
 msgid "%1 AM"
 msgstr ""
 
-#: dateandtime/TimePicker.qml:111
+#: dateandtime/TimePicker.qml:112
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
 msgstr ""
 
-#: dateandtime/TimePicker.qml:126
+#: dateandtime/TimePicker.qml:127
 #, kde-format
 msgctxt "number of minutes"
 msgid "%1 minutes"
