@@ -194,6 +194,9 @@ Kirigami.ShadowedRectangle {
         width: root.height
         enabled: action ? action.enabled : false
         display: QQC2.AbstractButton.IconOnly
+        QQC2.ToolTip.visible: hovered && QQC2.ToolTip.text.length > 0
+        QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+        QQC2.ToolTip.text: action.tooltip
     }
 
     T.RoundButton {
@@ -287,5 +290,8 @@ Kirigami.ShadowedRectangle {
         width: root.height
         enabled: action ? action.enabled : false
         display: QQC2.AbstractButton.IconOnly
+        QQC2.ToolTip.visible: hovered && QQC2.ToolTip.text.length > 0
+        QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+        QQC2.ToolTip.text: action.tooltip
     }
 }
