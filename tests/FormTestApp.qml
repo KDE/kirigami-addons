@@ -15,7 +15,7 @@ import org.kde.kirigamiaddons.components 1.0 as Components
 Kirigami.ApplicationWindow {
     id: appwindow
 
-    title: "Mobile Form Test"
+    title: "Form Card Example"
 
     width: Kirigami.Settings.isMobile ? 400 : 800
     height: Kirigami.Settings.isMobile ? 550 : 500
