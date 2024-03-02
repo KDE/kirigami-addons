@@ -334,6 +334,7 @@ AbstractFormDelegate {
                 currentIndex: controlRoot.currentIndex
                 onActivated: index => controlRoot.activated(index)
                 onAccepted: controlRoot.accepted()
+                popup.contentItem.clip: true
             }
 
             FormArrow {
