@@ -8,6 +8,7 @@ import QtQuick.Window 2.15
 import QtQuick.Layouts 1.15
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kirigamiaddons.components 1.0 as KirigamiComponents
+import org.kde.coreaddons as Core
 
 import "private" as Private
 
@@ -67,7 +68,7 @@ FormCardPage {
      *
      * @see KAboutData
      */
-    property var aboutData
+    property var aboutData: Core.AboutData
 
     /**
      * @brief This property holds a link to a "Get Involved" page.
