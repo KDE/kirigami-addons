@@ -52,8 +52,6 @@ ecm_target_qml_sources(componentsplugin SOURCES
     DialogRoundedBackground.qml
 
     MessageDialog.qml
-    MessageDialogButton.qml
-    MessageDialogButtonBox.qml
     SearchPopupField.qml
     SegmentedButton.qml
 )

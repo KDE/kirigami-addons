@@ -106,7 +106,6 @@ T.Dialog {
     focus: true
 
     background: Components.DialogRoundedBackground {}
-    footer: Components.MessageDialogButtonBox {}
 
     // black background, fades in and out
     QQC2.Overlay.modal: Rectangle {

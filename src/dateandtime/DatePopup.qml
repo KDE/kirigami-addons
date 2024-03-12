@@ -64,13 +64,12 @@ QQC2.Dialog {
         focus: true
     }
 
-    footer: Components.MessageDialogButtonBox {
+    footer: QQC2.DialogButtonBox {
         id: box
 
-        Components.MessageDialogButton {
+        QQC2.Button {
             text: i18ndc("kirigami-addons6", "@action:button", "Cancel")
             icon.name: "dialog-cancel"
-            buttonBox: box
             onClicked: {
                 root.cancelled()
                 root.close()
@@ -79,10 +78,9 @@ QQC2.Dialog {
             QQC2.DialogButtonBox.buttonRole: QQC2.DialogButtonBox.RejectRole
         }
 
-        Components.MessageDialogButton {
+        QQC2.Button {
             text: i18ndc("kirigami-addons6", "@action:button", "Select")
             icon.name: "dialog-ok-apply"
-            buttonBox: box
 
             onClicked: {
                 root.value = datePicker.selectedDate;
