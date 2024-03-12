@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-24 00:37+0000\n"
+"POT-Creation-Date: 2024-03-12 00:37+0000\n"
 "PO-Revision-Date: 2023-11-23 20:47+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -185,7 +185,7 @@ msgstr ""
 "plej bonan Liberan Programaron de la mondo. Ĉiuj bonvenas aliĝi kaj "
 "kontribui al KDE, inkluzive de vi."
 
-#: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:192
+#: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:193
 #, kde-format
 msgid "Homepage"
 msgstr "Hejmpaĝo"
@@ -221,7 +221,7 @@ msgstr ""
 "por registri vian deziron. Certigu, ke vi uzas la severecon nomatan "
 "\"Dezirlisto\"."
 
-#: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:243
+#: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:244
 #, kde-format
 msgid "Report a bug"
 msgstr "Raportu cimon"
@@ -242,7 +242,7 @@ msgstr ""
 "al la naciaj teamoj, kiuj tradukas programinterfacojn. Vi povas provizi "
 "grafikojn, etosojn, sonojn kaj plibonigitan dokumentadon. Vi decidu!"
 
-#: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:218
+#: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:219
 #, kde-format
 msgid "Get Involved"
 msgstr "Implikiĝi"
@@ -298,54 +298,54 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:205
+#: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:206
 #, kde-format
 msgid "Donate"
 msgstr "Doni"
 
-#: formcard/AboutPage.qml:87
+#: formcard/AboutPage.qml:88
 #, kde-format
 msgid "About %1"
 msgstr "Pri %1"
 
-#: formcard/AboutPage.qml:133
+#: formcard/AboutPage.qml:134
 #, kde-format
 msgid "Copyright"
 msgstr "Kopirajto"
 
-#: formcard/AboutPage.qml:141
+#: formcard/AboutPage.qml:142
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "Permesilo"
 msgstr[1] "Permesiloj"
 
-#: formcard/AboutPage.qml:250
+#: formcard/AboutPage.qml:251
 #, kde-format
 msgid "Libraries in use"
 msgstr "Bibliotekoj en uzo"
 
-#: formcard/AboutPage.qml:273
+#: formcard/AboutPage.qml:274
 #, kde-format
 msgid "Authors"
 msgstr "Aŭtoroj"
 
-#: formcard/AboutPage.qml:288
+#: formcard/AboutPage.qml:289
 #, kde-format
 msgid "Credits"
 msgstr "Kreditigoj"
 
-#: formcard/AboutPage.qml:303
+#: formcard/AboutPage.qml:304
 #, kde-format
 msgid "Translators"
 msgstr "Tradukistoj"
 
-#: formcard/AboutPage.qml:372
+#: formcard/AboutPage.qml:373
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Viziti la KDE-magazenan paĝon de %1"
 
-#: formcard/AboutPage.qml:381
+#: formcard/AboutPage.qml:382
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Sendi retpoŝton al %1"
