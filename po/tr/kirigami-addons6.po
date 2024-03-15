@@ -1,14 +1,14 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
 #
-# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 # Emir SARI <emir_sari@icloud.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-13 00:37+0000\n"
-"PO-Revision-Date: 2023-11-30 17:41+0300\n"
+"PO-Revision-Date: 2024-03-15 00:16+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: components/AbstractMaximizeComponent.qml:128
 #, kde-format
@@ -181,10 +181,10 @@ msgstr ""
 "ortamını, yüzlerce uygulamayı ve bu uygulamaları destekleyen çok sayıda "
 "yazılım kitaplığını geliştirir.\n"
 "\n"
-"KDE, işbirliğine dayalı bir kuruluştur: yönünü veya ürünlerini tek başına "
+"KDE, işbirliğine dayalı bir kuruluştur; yönünü veya ürünlerini tek başına "
 "denetleyen bir kuruluş yoktur. Bunun yerine, dünyanın en iyi Özgür "
-"Yazılımını oluşturma ortak hedefine ulaşmak için birlikte çalışıyoruz. Siz "
-"de dahil olmak üzere herkes KDE'ye katılabilir ve katkıda bulunabilir."
+"Yazılım’ını oluşturma ortak hedefine ulaşmak için birlikte çalışıyoruz. Siz "
+"de dahil olmak üzere herkes KDE’ye katılabilir ve katkıda bulunabilir."
 
 #: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:193
 #, kde-format
@@ -215,12 +215,12 @@ msgstr ""
 "çalışmadığında veya kimi şeylerin daha iyi olabileceğini düşündüğünüzde "
 "lütfen bize bunları bildirin.\n"
 "\n"
-"KDE Masaüstü Ortamı'nın bir hata izleme sistemi vardır. Bir hata bildirmek "
+"KDE Masaüstü Ortamı’nın bir hata izleme sistemi vardır. Bir hata bildirmek "
 "için aşağıdaki düğmeyi veya bu uygulamaya özgü bir hatayı bildirmek için "
-"uygulamanın Hakkında sayfasına bakın.\n"
+"uygulamanın ‘Hakkında’ sayfasına bakın.\n"
 "\n"
 "Bir iyileştirme önerisinde bulunmak için de hata izleme sistemini "
-"kullanabilirsiniz. \"Wishlist\" önceliğini seçtiğinizden emin olun."
+"kullanabilirsiniz. ‘Wishlist’ önceliğini seçtiğinizden emin olun."
 
 #: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:244
 #, kde-format
@@ -282,12 +282,12 @@ msgstr ""
 "KDE yazılımları ücretsizdir ve her zaman ücretsiz kalacaktır; ancak onları "
 "yapmak bedava değildir.\n"
 "\n"
-"KDE topluluğu, kar amacı gütmeyen bir organizasyon olan KDE e.V'i  "
-"Almanya'da kurmuştur. KDE e.V, KDE topluluğunu finansal ve hukuki konularda "
+"KDE topluluğu, kar amacı gütmeyen bir organizasyon olan KDE e.V’yi "
+"Almanya’da kurmuştur. KDE e.V, KDE topluluğunu finansal ve hukuki konularda "
 "temsil etmektedir.\n"
 "\n"
-"KDE Takımı'nın  her zaman finansal desteğe gereksinimi vardır. Yapılan "
-"bağışlar; yasal destek, KDE geliştiricilerinin KDE'ye yaptıkları desteğin "
+"KDE Takımı’nın her zaman finansal desteğe gereksinimi vardır. Yapılan "
+"bağışlar; yasal destek, KDE geliştiricilerinin KDE’ye yaptıkları desteğin "
 "sürekliliğini sağlamak ve toplantıların/konferansların organizasyonu için "
 "harcanır.\n"
 "\n"
@@ -345,12 +345,12 @@ msgstr "Çeviriler"
 #: formcard/AboutPage.qml:373
 #, kde-format
 msgid "Visit %1's KDE Store page"
-msgstr "KDE Store Sayfasına Git: %1"
+msgstr "KDE Store sayfasına git: %1"
 
 #: formcard/AboutPage.qml:382
 #, kde-format
 msgid "Send an email to %1"
-msgstr "E-posta Gönder: %1"
+msgstr "E-posta gönder: %1"
 
 #: formcard/FormDateTimeDelegate.qml:193
 #, kde-format
