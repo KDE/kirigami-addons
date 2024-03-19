@@ -1,0 +1,379 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the kirigami-addons package.
+#
+# SPDX-FileCopyrightText: 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: kirigami-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-03-13 00:37+0000\n"
+"PO-Revision-Date: 2024-03-18 15:21+0000\n"
+"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.08.3\n"
+
+#: components/AbstractMaximizeComponent.qml:128
+#, kde-format
+msgid "Close"
+msgstr "Loka"
+
+#: components/AlbumMaximizeComponent.qml:116
+#, kde-format
+msgid "Zoom in"
+msgstr "Auka aðdrátt"
+
+#: components/AlbumMaximizeComponent.qml:121
+#, kde-format
+msgid "Zoom out"
+msgstr "Minnka aðdrátt"
+
+#: components/AlbumMaximizeComponent.qml:127
+#, kde-format
+msgid "Rotate left"
+msgstr "Snúa til vinstri"
+
+#: components/AlbumMaximizeComponent.qml:133
+#, kde-format
+msgid "Rotate right"
+msgstr "Snúa til hægri"
+
+#: components/AlbumMaximizeComponent.qml:138
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "Show caption"
+msgstr "Sýna skýringartexta"
+
+#: components/AlbumMaximizeComponent.qml:138
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "Hide caption"
+msgstr "Fela skýringartexta"
+
+#: components/AlbumMaximizeComponent.qml:144
+#, kde-format
+msgid "Save as"
+msgstr "Vista sem"
+
+#: components/AlbumMaximizeComponent.qml:203
+#, kde-format
+msgid "Previous image"
+msgstr "Fyrri mynd"
+
+#: components/AlbumMaximizeComponent.qml:221
+#, kde-format
+msgid "Next image"
+msgstr "Næsta mynd"
+
+#: components/Banner.qml:186
+#, kde-format
+msgctxt "@action:button"
+msgid "Close"
+msgstr "Loka"
+
+#: components/DownloadAction.qml:37
+#, kde-format
+msgid "Download"
+msgstr "Sækja"
+
+#: components/VideoMaximizeDelegate.qml:240
+#, kde-format
+msgctxt "@action:button"
+msgid "Volume"
+msgstr "Hljóðstyrkur"
+
+#: dateandtime/DatePopup.qml:71 dateandtime/TimePopup.qml:52
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Hætta við"
+
+#: dateandtime/DatePopup.qml:82 dateandtime/TimePopup.qml:63
+#, kde-format
+msgctxt "@action:button"
+msgid "Select"
+msgstr "Velja"
+
+#: dateandtime/private/DatePicker.qml:266
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Previous"
+msgstr "Fara á fyrra"
+
+#: dateandtime/private/DatePicker.qml:279
+#, kde-format
+msgctxt "@action:button"
+msgid "Jump to today"
+msgstr "Fara í daginn í dag"
+
+#: dateandtime/private/DatePicker.qml:286
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Next"
+msgstr "Fara á næsta"
+
+#: dateandtime/TimePicker.qml:98
+#, kde-format
+msgctxt "time in hour in 24h format"
+msgid "%1 hours"
+msgstr "%1 klukkustundir"
+
+#: dateandtime/TimePicker.qml:100
+#, kde-format
+msgctxt "time in hour (PM)"
+msgid "%1 PM"
+msgstr "%1 e.h."
+
+#: dateandtime/TimePicker.qml:102
+#, kde-format
+msgctxt "time in hour (AM)"
+msgid "%1 AM"
+msgstr "%1 f.h."
+
+#: dateandtime/TimePicker.qml:112
+#, kde-format
+msgctxt "Time separator"
+msgid ":"
+msgstr ":"
+
+#: dateandtime/TimePicker.qml:127
+#, kde-format
+msgctxt "number of minutes"
+msgid "%1 minutes"
+msgstr "%1 mínútur"
+
+#: formcard/AboutKDE.qml:23
+#, kde-format
+msgid "About KDE"
+msgstr "Um KDE"
+
+#: formcard/AboutKDE.qml:50
+#, kde-format
+msgid "KDE"
+msgstr "KDE"
+
+#: formcard/AboutKDE.qml:59
+#, kde-format
+msgid "Be Free!"
+msgstr "Vertu frjáls!"
+
+#: formcard/AboutKDE.qml:68
+#, kde-format
+msgid ""
+"KDE is a world-wide community of software engineers, artists, writers, "
+"translators and creators who are committed to Free Software development. KDE "
+"produces the Plasma desktop environment, hundreds of applications, and the "
+"many software libraries that support them.\n"
+"\n"
+"KDE is a cooperative enterprise: no single entity controls its direction or "
+"products. Instead, we work together to achieve the common goal of building "
+"the world's finest Free Software. Everyone is welcome to join and contribute "
+"to KDE, including you."
+msgstr ""
+"KDE er samfélag hugbúnaðarfólks, listafólks, þýðenda og hönnuða allsstaðar "
+"að úr heiminum sem styðja hugmyndina um  frjálsan hugbúnað. KDE framleiðir "
+"Plasma skjáborðsumhverfið, hundruði forrita og fjölmörg hugbúnaðarsöfn sem "
+"styðja þau.\n"
+"\n"
+"KDE er samvinnuverkefni: engin einn aðili stjórnar því, stefnu þess eða "
+"framleiðsluvörum. Í stað þess vinnum við saman að því að ná því sameiginlega "
+"markmiði að búa til besta frjálsa hugbúnaðinn í heiminum. Öll geta <a href="
+"\"\">tekið þátt og lagt sitt af mörkum í KDE, líka þú."
+
+#: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:193
+#, kde-format
+msgid "Homepage"
+msgstr "Heimasíða"
+
+#: formcard/AboutKDE.qml:82
+#, kde-format
+msgid "Report bugs"
+msgstr "Senda villuskýrslu"
+
+#: formcard/AboutKDE.qml:87
+#, kde-format
+msgid ""
+"Software can always be improved, and the KDE team is ready to do so. "
+"However, you - the user - must tell us when something does not work as "
+"expected or could be done better.\n"
+"\n"
+"KDE has a bug tracking system. Use the button below to file a bug, or use "
+"the program's About page to report a bug specific to this application.\n"
+"\n"
+"If you have a suggestion for improvement then you are welcome to use the bug "
+"tracking system to register your wish. Make sure you use the severity called "
+"\"Wishlist\"."
+msgstr ""
+"Það er alltaf hægt að bæta hugbúnað og KDE-hópurinn er boðinn og búinn að "
+"gera það. Hins vegar þarft þú sem notandi að segja frá ef eitthvað virkar "
+"ekki sem skyldi eða mætti gera betur.\n"
+"\n"
+"Það er til villugrunnur fyrir KDE. Notaðu hnappinn hér fyrir neðan til að "
+"tilkynna villu eða gerðu það í gegnum síðuna \"Um forritið\" í forritinu til "
+"að tilkynna villur í þeim hugbúnaði.\n"
+"\n"
+"Ef þú hefur tillögur að endurbótum skaltu endilega nota KDE villugrunninn "
+"til að senda inn tillögu þína. Merktu hana bara sem \"Wishlist "
+"\" (\"óskalisti\")."
+
+#: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:244
+#, kde-format
+msgid "Report a bug"
+msgstr "Senda villutilkynningu"
+
+#: formcard/AboutKDE.qml:102
+#, kde-format
+msgid "Join us"
+msgstr "Vertu með"
+
+#: formcard/AboutKDE.qml:107
+#, kde-format
+msgid ""
+"You do not have to be a software developer to be a member of the KDE team. "
+"You can join the language teams that translate program interfaces. You can "
+"provide graphics, themes, sounds, and improved documentation. You decide!"
+msgstr ""
+"Þú þarft ekki að vera forritari til að vera með í KDE-teyminu. Þú gætir til "
+"dæmis tekið þátt í að þýða notendaviðmót forrita á íslensku eða önnur "
+"tungumál, hannað grafík, þemu, hljóð og hjálpað til við að bæta "
+"handbækurnar. Það sem þú vilt!"
+
+#: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:219
+#, kde-format
+msgid "Get Involved"
+msgstr "Taktu þátt"
+
+#: formcard/AboutKDE.qml:123
+#, kde-format
+msgid "Developer Documentation"
+msgstr "Skjölun fyrir forritara"
+
+#: formcard/AboutKDE.qml:129
+#, kde-format
+msgid "Support us"
+msgstr "Styrktu okkur"
+
+#: formcard/AboutKDE.qml:134
+#, kde-format
+msgid ""
+"KDE software is and will always be available free of charge, however "
+"creating it is not free.\n"
+"\n"
+"To support development the KDE community has formed the KDE e.V., a non-"
+"profit organization legally founded in Germany. KDE e.V. represents the KDE "
+"community in legal and financial matters.\n"
+"\n"
+"KDE benefits from many kinds of contributions, including financial. We use "
+"the funds to reimburse members and others for expenses they incur when "
+"contributing. Further funds are used for legal support and organizing "
+"conferences and meetings.\n"
+"\n"
+"We would like to encourage you to support our efforts with a financial "
+"donation.\n"
+"\n"
+"Thank you very much in advance for your support."
+msgstr ""
+"KDE er og verður alltaf ókeypis en það er ekki ókeypis að búa það til.\n"
+"\n"
+"Því hefur KDE stofnað KDE e.V., félag með aðsetur í Þýskalandi sem starfar "
+"ekki í hagnaðarskyni. Félagið kemur fram fyrir hönd KDE-verkefnisins "
+"varðandi lögfræðileg og fjárhagsleg mál.\n"
+"\n"
+"KDE nýtur góðs af ýmis konar stuðningi, þ.m.t. fjárhagslegum.  Við notum "
+"fjármunina til að styrkja meðlimi og aðra í þeim útgjöldum sem þau kunna að "
+"verða fyrir vegna vinnu sinnar við KDE.  Einnig er fjármagnið notað til að "
+"sinna lagalegum málefnum, skipuleggja ráðstefnur og fundi.\n"
+"\n"
+"Við hvetjum þig til að leggja þitt af mörkum með fjárhagslegum stuðningi."
+
+#: formcard/AboutKDE.qml:146
+#, kde-format
+msgid "KDE e.V"
+msgstr "KDE e.V"
+
+#: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:206
+#, kde-format
+msgid "Donate"
+msgstr "Styrkja"
+
+#: formcard/AboutPage.qml:88
+#, kde-format
+msgid "About %1"
+msgstr "Um %1"
+
+#: formcard/AboutPage.qml:134
+#, kde-format
+msgid "Copyright"
+msgstr "Höfundarréttur"
+
+#: formcard/AboutPage.qml:142
+#, kde-format
+msgid "License"
+msgid_plural "Licenses"
+msgstr[0] "Notkunarleyfi"
+msgstr[1] "Notkunarleyfi"
+
+#: formcard/AboutPage.qml:251
+#, kde-format
+msgid "Libraries in use"
+msgstr "Hugbúnaðarsöfn í notkun"
+
+#: formcard/AboutPage.qml:274
+#, kde-format
+msgid "Authors"
+msgstr "Höfundar"
+
+#: formcard/AboutPage.qml:289
+#, kde-format
+msgid "Credits"
+msgstr "Þátttakendur"
+
+#: formcard/AboutPage.qml:304
+#, kde-format
+msgid "Translators"
+msgstr "Þýðendur"
+
+#: formcard/AboutPage.qml:373
+#, kde-format
+msgid "Visit %1's KDE Store page"
+msgstr "Heimsækja síðu %1 á KDE Store"
+
+#: formcard/AboutPage.qml:382
+#, kde-format
+msgid "Send an email to %1"
+msgstr "Senda tölvupóst á %1"
+
+#: formcard/FormDateTimeDelegate.qml:193
+#, kde-format
+msgctxt "Displayed in place of the date if the selected day is today"
+msgid "Today"
+msgstr "Í dag"
+
+#: formcard/FormDateTimeDelegate.qml:220 formcard/FormDateTimeDelegate.qml:357
+#, kde-format
+msgctxt "Date is not set"
+msgid "Not set"
+msgstr "Ekki stillt"
+
+#: formcard/FormPasswordFieldDelegate.qml:218
+#: formcard/FormTextFieldDelegate.qml:220
+#, kde-format
+msgctxt "@label %1 is current text length, %2 is maximum length of text field"
+msgid "%1/%2"
+msgstr "%1/%2"
+
+#: settings/CategorizedSettings.qml:44
+#, kde-format
+msgctxt "@title:window"
+msgid "Settings"
+msgstr "Stillingar"
+
+#: settings/CategorizedSettings.qml:44
+#, kde-format
+msgctxt "@title:window"
+msgid "Settings — %1"
+msgstr "Stillingar — %1"
