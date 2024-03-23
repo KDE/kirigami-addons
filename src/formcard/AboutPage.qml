@@ -133,7 +133,7 @@ FormCardPage {
             id: copyrightDelegate
             text: i18nd("kirigami-addons6", "Copyright")
             descriptionItem.textFormat: Text.PlainText
-            description: aboutData.otherText + (aboutData.otherText.length > 0 ? '</br>' : '')
+            description: aboutData.otherText + (aboutData.otherText.length > 0 ? '\n' : '')
                 + aboutData.copyrightStatement
         }
     }
