@@ -204,7 +204,9 @@ AbstractMaximizeComponent {
             onClicked: {
                 view.currentItem.pause()
                 view.currentIndex -= 1
-                view.currentItem.play()
+                if (root.autoPlay) {
+                    view.currentItem.play()
+                }
             }
         }
         KirigamiComponents.FloatingButton {
@@ -222,7 +224,9 @@ AbstractMaximizeComponent {
             onClicked: {
                 view.currentItem.pause()
                 view.currentIndex += 1
-                view.currentItem.play()
+                if (root.autoPlay) {
+                    view.currentItem.play()
+                }
             }
         }
         HoverHandler {

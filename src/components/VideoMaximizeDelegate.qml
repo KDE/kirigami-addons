@@ -144,7 +144,7 @@ Item {
 
         source: root.source
         onSourceChanged: {
-            if (source.toString().length > 0 && root.autoPlay) {
+            if (source.toString().length > 0 && root.autoPlay && root.index === root.ListView.view.currentIndex) {
                 videoItem.play()
             }
         }
