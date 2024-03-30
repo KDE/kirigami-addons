@@ -44,6 +44,31 @@ Kirigami.ApplicationWindow {
 
     LayoutMirroring.enabled: false
 
+    FormCard.FormCardDialog {
+        id: formDialog
+
+        title: "Add Thingy"
+
+        standardButtons: Controls.Dialog.Ok | Controls.Dialog.Cancel
+
+        FormCard.FormTextFieldDelegate {
+            label: i18nc("@label:textbox Notebook name", "Name:")
+        }
+
+        FormCard.FormDelegateSeparator {}
+
+        FormCard.FormButtonDelegate {
+            text: i18nc("@action:button", "Color")
+            icon.name: "color-picker"
+        }
+
+        FormCard.FormDelegateSeparator {}
+
+        FormCard.FormButtonDelegate {
+            text: i18nc("@action:button", "Icon")
+            icon.name: "preferences-desktop-emoticons"
+        }
+    }
 
     Component {
         id: aboutComponent
@@ -191,7 +216,8 @@ Duo Reges: constructio interrete. Primum Theophrasti, Strato, physicum se voluit
 
                     FormCard.FormButtonDelegate {
                         id: delegate2
-                        text: "Button 2"
+                        text: "Form Dialog"
+                        onClicked: formDialog.open()
                     }
 
                     FormCard.FormDelegateSeparator { above: delegate2; below: delegate3 }

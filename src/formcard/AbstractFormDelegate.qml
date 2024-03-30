@@ -26,7 +26,7 @@ import org.kde.kirigami 2.12 as Kirigami
 T.ItemDelegate {
     id: root
 
-    horizontalPadding: Kirigami.Units.gridUnit
+    horizontalPadding: parent._internal_formcard_margins ? parent._internal_formcard_margins : Kirigami.Units.gridUnit
     verticalPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
 
     implicitWidth: contentItem.implicitWidth + leftPadding + rightPadding

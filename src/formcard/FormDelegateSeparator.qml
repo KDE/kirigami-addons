@@ -35,8 +35,8 @@ Kirigami.Separator {
      */
     property Item below
 
-    Layout.leftMargin: Kirigami.Units.largeSpacing
-    Layout.rightMargin: Kirigami.Units.largeSpacing
+    Layout.leftMargin: parent._internal_formcard_margins ? parent._internal_formcard_margins : Kirigami.Units.largeSpacing
+    Layout.rightMargin: parent._internal_formcard_margins ? parent._internal_formcard_margins : Kirigami.Units.largeSpacing
     Layout.fillWidth: true
 
     // We need to initialize above and below later otherwise nextItemInFocusChain

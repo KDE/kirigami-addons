@@ -31,6 +31,7 @@ ecm_target_qml_sources(formcardplugin SOURCES
     FormPasswordFieldDelegate.qml
     FormDateTimeDelegate.qml
     FormGridContainer.qml
+    FormCardDialog.qml
 )
 
 ecm_target_qml_sources(formcardplugin PATH private SOURCES
