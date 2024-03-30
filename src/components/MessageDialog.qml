@@ -29,8 +29,7 @@ T.Dialog {
 
     parent: applicationWindow().QQC2.Overlay.overlay
 
-    width: Math.min(parent.width - Kirigami.Units.gridUnit * 4, Kirigami.Units.gridUnit * 30)
-    height: Math.min(parent.height - Kirigami.Units.gridUnit * 4, Kirigami.Units.gridUnit * 30)
+    width: Math.min(parent.width - Kirigami.Units.gridUnit * 4, Kirigami.Units.gridUnit * 20)
 
     z: Kirigami.OverlayZStacking.z
 
@@ -43,7 +42,7 @@ T.Dialog {
                              + (implicitHeaderHeight > 0 ? implicitHeaderHeight + spacing : 0)
                              + (implicitFooterHeight > 0 ? implicitFooterHeight + spacing : 0))
 
-    padding: Kirigami.Units.gridUnit
+    padding: Kirigami.Units.largeSpacing * 2
 
     header: ColumnLayout {
         spacing: Kirigami.Units.largeSpacing
@@ -67,7 +66,7 @@ T.Dialog {
             }
             Layout.preferredWidth: Kirigami.Units.iconSizes.huge
             Layout.preferredHeight: Kirigami.Units.iconSizes.huge
-            Layout.topMargin: Kirigami.Units.gridUnit
+            Layout.topMargin: Kirigami.Units.largeSpacing
             Layout.alignment: Qt.AlignHCenter
         }
 
@@ -80,6 +79,16 @@ T.Dialog {
 
             Layout.fillWidth: true
         }
+    }
+
+
+    footer: QQC2.DialogButtonBox {
+        leftPadding: Kirigami.Units.largeSpacing * 2
+        rightPadding: Kirigami.Units.largeSpacing * 2
+        bottomPadding: Kirigami.Units.largeSpacing * 2
+        topPadding: Kirigami.Units.largeSpacing * 2
+
+        standardButtons: root.standardButtons
     }
 
     enter: Transition {
