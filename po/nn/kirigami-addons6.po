@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-13 00:37+0000\n"
+"POT-Creation-Date: 2024-03-30 00:37+0000\n"
 "PO-Revision-Date: 2023-08-21 19:52+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -67,7 +67,7 @@ msgstr "Lagra som"
 msgid "Previous image"
 msgstr "Førre bilete"
 
-#: components/AlbumMaximizeComponent.qml:221
+#: components/AlbumMaximizeComponent.qml:223
 #, kde-format
 msgid "Next image"
 msgstr "Neste bilete"
