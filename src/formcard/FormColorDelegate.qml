@@ -29,7 +29,7 @@ import org.kde.kirigami as Kirigami
  *     }
  * }
  * @endcode
- * @image html formcardcolor
+ * @image html formcardcolor.png
  */
 FormCard.AbstractFormDelegate {
     id: root

@@ -10,6 +10,11 @@ import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.components as Components
 import org.kde.kirigamiaddons.delegates as Delegates
 
+/**
+ * A dialog to show a message. This dialog exists has 4 modes: success, warning, error, information.
+ *
+ * @image html messagedialog.png
+ */
 T.Dialog {
     id: root
 
@@ -20,6 +25,16 @@ T.Dialog {
         Information
     }
 
+    /**
+     * This property holds the dialogType. It can be either:
+     *
+     * - `MessageDialog.Sucess`: For a sucess message
+     * - `MessageDialog.Warning`: For a warning message
+     * - `MessageDialog.Error`: For an actual error
+     * - `MessageDialog.Information`: For an informational message
+     *
+     * By default, the dialogType is `MessageDialog.Sucess`
+     */
     property int dialogType: MessageDialog.Sucess
 
     property string iconName: ''
