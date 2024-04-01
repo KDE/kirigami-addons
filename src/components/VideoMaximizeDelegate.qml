@@ -81,6 +81,31 @@ Item {
     }
 
     /**
+     * @brief The default action triggered when the play button is pressed.
+     *
+     * This exists as a property so that the action can be overridden. For example
+     * if you want to be able to interface with a media manager.
+     */
+    property Kirigami.Action playAction: Kirigami.Action {
+        onTriggered: videoItem.play()
+    }
+
+    /**
+     * @brief The default action triggered when the pause button is pressed.
+     *
+     * This exists as a property so that the action can be overridden. For example
+     * if you want to be able to interface with a media manager.
+     */
+    property Kirigami.Action pauseAction: Kirigami.Action {
+        onTriggered: videoItem.pause()
+    }
+
+    /**
+     * @brief The playback state of the media.
+     */
+    property alias playbackState: videoItem.playbackState
+
+    /**
      * @brief The padding around the content image.
      *
      * The padding is factored in when calculating the maximum size of the content
@@ -145,7 +170,7 @@ Item {
         source: root.source
         onSourceChanged: {
             if (source.toString().length > 0 && root.autoPlay && root.index === root.ListView.view.currentIndex) {
-                videoItem.play()
+                root.playAction.trigger()
             }
         }
 
@@ -216,7 +241,7 @@ Item {
                     id: playButton
                     z: 1
                     icon.name: videoItem.playbackState === MediaPlayer.PlayingState ? "media-playback-pause" : "media-playback-start"
-                    onClicked: videoItem.playbackState === MediaPlayer.PlayingState ? videoItem.pause() : videoItem.play()
+                    action: videoItem.playbackState === MediaPlayer.PlayingState ? root.pauseAction : root.playAction
                 }
                 QQC2.Slider {
                     Layout.fillWidth: true

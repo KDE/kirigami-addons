@@ -99,6 +99,27 @@ AbstractMaximizeComponent {
     property DownloadAction downloadAction
 
     /**
+     * @brief The default action triggered when the play button is pressed.
+     *
+     * This exists as a property so that the action can be overridden. For example
+     * if you want to be able to interface with a media manager.
+     */
+    property Kirigami.Action playAction
+
+    /**
+     * @brief The default action triggered when the pause button is pressed.
+     *
+     * This exists as a property so that the action can be overridden. For example
+     * if you want to be able to interface with a media manager.
+     */
+    property Kirigami.Action pauseAction
+
+    /**
+     * @brief The current item in the view.
+     */
+    property alias currentItem: view.currentItem
+
+    /**
      * @brief Emitted when the content image is right clicked.
      */
     signal itemRightClicked()
@@ -176,12 +197,31 @@ AbstractMaximizeComponent {
             DelegateChoice {
                 roleValue: AlbumModelItem.Video
                 VideoMaximizeDelegate {
+                    id: videoMaximizeDelegate
                     width: ListView.view.width
                     height: ListView.view.height
 
                     autoPlay: root.autoPlay
                     // Make sure that the default action in the delegate is used if not overridden
                     downloadAction: root.downloadAction ? root.downloadAction : undefined
+                    StateGroup {
+                        states: State {
+                            when: root.playAction
+                            PropertyChanges {
+                                target: videoMaximizeDelegate
+                                playAction: root.playAction
+                            }
+                        }
+                    }
+                    StateGroup {
+                        states: State {
+                            when: root.pauseAction
+                            PropertyChanges {
+                                target: videoMaximizeDelegate
+                                pauseAction: root.pauseAction
+                            }
+                        }
+                    }
 
                     onItemRightClicked: root.itemRightClicked()
                     onBackgroundClicked: root.close()
@@ -205,7 +245,7 @@ AbstractMaximizeComponent {
                 view.currentItem.pause()
                 view.currentIndex -= 1
                 if (root.autoPlay) {
-                    view.currentItem.play()
+                    view.currentItem.playAction.trigger()
                 }
             }
         }
@@ -225,7 +265,7 @@ AbstractMaximizeComponent {
                 view.currentItem.pause()
                 view.currentIndex += 1
                 if (root.autoPlay) {
-                    view.currentItem.play()
+                    view.currentItem.playAction.trigger()
                 }
             }
         }
