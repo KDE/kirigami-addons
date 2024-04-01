@@ -25,18 +25,20 @@ Kirigami.ApplicationWindow {
         ListTableViewPage {}
     }
 
-    pageStack.initialPage: Kirigami.ScrollablePage {
-        ColumnLayout {
-            FormCard.FormCard {
-                FormCard.FormButtonDelegate {
-                    text: i18n("Table View for QAbstractTableModel")
-                    onClicked: root.pageStack.layers.push(tableviewpage)
-                }
+    pageStack.initialPage: FormCard.FormCardPage {
+        FormCard.FormCard {
+            Layout.topMargin: Kirigami.Units.gridUnit
 
-                FormCard.FormButtonDelegate {
-                    text: i18n("Table View for QAbstractListModel")
-                    onClicked: root.pageStack.layers.push(listtableviewpage)
-                }
+            FormCard.FormButtonDelegate {
+                text: i18n("Table View for QAbstractTableModel")
+                onClicked: root.pageStack.layers.push(tableviewpage)
+            }
+
+            FormCard.FormDelegateSeparator {}
+
+            FormCard.FormButtonDelegate {
+                text: i18n("Table View for QAbstractListModel")
+                onClicked: root.pageStack.layers.push(listtableviewpage)
             }
         }
     }

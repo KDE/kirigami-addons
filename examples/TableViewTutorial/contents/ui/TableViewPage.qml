@@ -17,11 +17,16 @@ Kirigami.Page {
 
     title: i18nc("@title:group", "Table View for QAbstractTableModel")
 
-    QQC2.ScrollView {
-        Component.onCompleted: background.visible = true
-        anchors.fill: parent
+    topPadding: 0
+    leftPadding: 0
+    bottomPadding: 0
+    rightPadding: 0
 
-        Tables.KTableView {
+    Kirigami.Theme.colorSet: Kirigami.Theme.View
+    Kirigami.Theme.inherit: false
+
+    contentItem: QQC2.ScrollView {
+        contentItem: Tables.KTableView {
             id: view
             model: bookTableModel
 
