@@ -14,7 +14,7 @@ import "private" as Private
 /**
  * @brief A single card that follows a form style.
  *
- * This is the entrypoint component for MobileForm.
+ * This is the entrypoint component for FormCard.
  *
  * A FormCard consists of a container that can be used to create your
  * own Settings pages. It has a different color than the background.

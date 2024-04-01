@@ -19,7 +19,7 @@ import org.kde.kirigami as Kirigami
  * }
  *
  * FormCard.FormCard {
- *     MobileForm.FormTextFieldDelegate {
+ *     FormCard.FormTextFieldDelegate {
  *         label: "Account name"
  *     }
  *

@@ -13,32 +13,28 @@ import org.kde.kirigami 2.19 as Kirigami
  * @brief A Form delegate that corresponds to a password field.
  *
  * ```qml
- * MobileForm.FormCard {
- *     contentItem: ColumnLayout {
- *         spacing: 0
+ * FormCard.FormHeader {
+ *     title: "Information"
+ * }
  *
- *         MobileForm.FormCardHeader {
- *             title: "Information"
- *         }
+ * FormCard.FormCard {
+ *     FormCard.FormTextFieldDelegate {
+ *         label: "Account name"
+ *     }
  *
- *         MobileForm.FormTextFieldDelegate {
- *             label: "Account name"
- *         }
+ *     FormCard.FormPasswordFieldDelegate {
+ *         label: "Password"
+ *         statusMessage: "Password incorrect"
+ *         status: Kirigami.MessageType.Error
+ *         text: "666666666"
+ *     }
  *
- *         MobileForm.FormPasswordFieldDelegate {
- *             label: "Password"
- *             statusMessage: "Password incorrect"
- *             status: Kirigami.MessageType.Error
- *             text: "666666666"
- *         }
- *
- *         MobileForm.FormPasswordFieldDelegate {
- *             label: "Password repeat"
- *             statusMessage: "Password match"
- *             text: "4242424242"
- *             status: Kirigami.MessageType.Positive
- *             echoMode: TextInput.Password
- *         }
+ *     FormCard.FormPasswordFieldDelegate {
+ *         label: "Password repeat"
+ *         statusMessage: "Password match"
+ *         text: "4242424242"
+ *         status: Kirigami.MessageType.Positive
+ *         echoMode: TextInput.Password
  *     }
  * }
  * ```

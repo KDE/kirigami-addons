@@ -17,13 +17,13 @@ import org.kde.kirigami as Kirigami
  *
  * @code{qml}
  * FormCard.FormCard {
- *     MobileForm.FormColorDelegate {
+ *     FormCard.FormColorDelegate {
  *         color: "blue"
  *     }
  *
  *     FormCard.FormDelegateSeparator {}
  *
- *     MobileForm.FormColorDelegate {
+ *     FormCard.FormColorDelegate {
  *         text: i18nc("@label", "Active color")
  *         color: "blue"
  *     }

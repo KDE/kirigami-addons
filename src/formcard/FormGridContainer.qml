@@ -16,24 +16,24 @@ import "private" as Private
 /**
  * This component render a grid of small cards.
  *
- * This is used to display multiple information in a MobileForm.FormLayout
+ * This is used to display multiple information in a FormCard.FormLayout
  * without taking too much vertical space.
  *
  * @code{.qml}
- * import org.kde.kirigamiaddons.labs.mobileform 0.1 as MobileForm
+ * import org.kde.kirigamiaddons.formcard as FormCard
  *
- * MobileForm.FormGridContainer {
+ * FormCard.FormGridContainer {
  *     id: container
  *
  *     Layout.topMargin: Kirigami.Units.largeSpacing
  *     Layout.fillWidth: true
  *
  *     infoCards: [
- *         MobileForm.FormGridContainer.InfoCard {
+ *         FormCard.FormGridContainer.InfoCard {
  *             title: "42"
  *             subtitle: i18nc("@info:Number of Posts", "Posts")
  *         },
- *         MobileForm.FormGridContainer.InfoCard {
+ *         FormCard.FormGridContainer.InfoCard {
  *             title: "42"
  *             subtitle: i18nc("@info:Number of followers.", "Followers")
  *         }
@@ -78,18 +78,18 @@ Item {
      * Each InfoCard contains a title and an optional subtitle
      *
      * @code{.qml}
-     * import org.kde.kirigamiaddons.labs.mobileform 0.1 as MobileForm
+     * import org.kde.kirigamiaddons.formcard as FormCard
      *
-     * MobileForm.FormGridContainer {
+     * FormCard.FormGridContainer {
      *     infoCards: [
-     *         MobileForm.FormGridContainer.InfoCard {
+     *         FormCard.FormGridContainer.InfoCard {
      *             title: "42"
      *             subtitle: i18nc("@info:Number of Posts", "Posts")
      *         },
-     *         MobileForm.FormGridContainer.InfoCard {
+     *         FormCard.FormGridContainer.InfoCard {
      *             title: "42"
      *         },
-     *         MobileForm.FormGridContainer.InfoCard {
+     *         FormCard.FormGridContainer.InfoCard {
      *             title: "Details"
      *             action: Kirigami.Action {
      *                 onClicked: pageStack.push("Details.qml")
