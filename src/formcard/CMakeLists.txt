@@ -15,6 +15,7 @@ ecm_target_qml_sources(formcardplugin SOURCES
     FormButtonDelegate.qml
     FormCard.qml
     FormCardPage.qml
+    FormColorDelegate.qml
     FormHeader.qml
     AboutPage.qml
     AboutKDE.qml
