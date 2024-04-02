@@ -27,7 +27,7 @@ RowLayout {
             required property T.Action modelData
 
             property bool highlightBackground: down || checked
-            property bool highlightBorder: enabled && down || checked || highlighted || visualFocus || hovered
+            property bool highlightBorder: enabled && down || checked || visualFocus || hovered
 
             padding: Kirigami.Units.mediumSpacing
 
