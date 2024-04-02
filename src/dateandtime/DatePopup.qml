@@ -67,6 +67,10 @@ QQC2.Dialog {
     footer: QQC2.DialogButtonBox {
         id: box
 
+        leftPadding: Kirigami.Units.mediumSpacing
+        rightPadding: Kirigami.Units.mediumSpacing
+        bottomPadding: Kirigami.Units.mediumSpacing
+
         QQC2.Button {
             text: i18ndc("kirigami-addons6", "@action:button", "Cancel")
             icon.name: "dialog-cancel"

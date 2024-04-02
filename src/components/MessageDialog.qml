@@ -58,6 +58,7 @@ T.Dialog {
                              + (implicitFooterHeight > 0 ? implicitFooterHeight + spacing : 0))
 
     padding: Kirigami.Units.largeSpacing * 2
+    bottomPadding: Kirigami.Units.largeSpacing
 
     header: ColumnLayout {
         spacing: Kirigami.Units.largeSpacing
@@ -81,7 +82,7 @@ T.Dialog {
             }
             Layout.preferredWidth: Kirigami.Units.iconSizes.huge
             Layout.preferredHeight: Kirigami.Units.iconSizes.huge
-            Layout.topMargin: Kirigami.Units.largeSpacing
+            Layout.topMargin: Kirigami.Units.largeSpacing * 2
             Layout.alignment: Qt.AlignHCenter
         }
 
@@ -91,6 +92,7 @@ T.Dialog {
             elide: QQC2.Label.ElideRight
             bottomPadding: 0
             horizontalAlignment: Text.AlignHCenter
+            wrapMode: Text.WordWrap
 
             Layout.fillWidth: true
         }
