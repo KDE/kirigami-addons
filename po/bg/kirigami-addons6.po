@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-30 00:37+0000\n"
+"POT-Creation-Date: 2024-04-02 00:37+0000\n"
 "PO-Revision-Date: 2022-05-21 08:42+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -22,50 +22,50 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
-#: components/AlbumMaximizeComponent.qml:116
+#: components/AlbumMaximizeComponent.qml:137
 #, kde-format
 msgid "Zoom in"
 msgstr ""
 
-#: components/AlbumMaximizeComponent.qml:121
+#: components/AlbumMaximizeComponent.qml:142
 #, kde-format
 msgid "Zoom out"
 msgstr ""
 
-#: components/AlbumMaximizeComponent.qml:127
+#: components/AlbumMaximizeComponent.qml:148
 #, kde-format
 msgid "Rotate left"
 msgstr ""
 
-#: components/AlbumMaximizeComponent.qml:133
+#: components/AlbumMaximizeComponent.qml:154
 #, kde-format
 msgid "Rotate right"
 msgstr ""
 
-#: components/AlbumMaximizeComponent.qml:138
+#: components/AlbumMaximizeComponent.qml:159
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
 msgstr ""
 
-#: components/AlbumMaximizeComponent.qml:138
+#: components/AlbumMaximizeComponent.qml:159
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
 msgstr ""
 
-#: components/AlbumMaximizeComponent.qml:144
+#: components/AlbumMaximizeComponent.qml:165
 #, kde-format
 msgid "Save as"
 msgstr ""
 
-#: components/AlbumMaximizeComponent.qml:203
+#: components/AlbumMaximizeComponent.qml:243
 #, fuzzy, kde-format
 #| msgid "Previous"
 msgid "Previous image"
 msgstr "Предишен"
 
-#: components/AlbumMaximizeComponent.qml:223
+#: components/AlbumMaximizeComponent.qml:263
 #, kde-format
 msgid "Next image"
 msgstr ""
@@ -81,7 +81,7 @@ msgstr ""
 msgid "Download"
 msgstr ""
 
-#: components/VideoMaximizeDelegate.qml:240
+#: components/VideoMaximizeDelegate.qml:265
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
@@ -315,6 +315,18 @@ msgstr ""
 msgid "Send an email to %1"
 msgstr ""
 
+#: formcard/FormColorDelegate.qml:42
+#, kde-format
+msgctxt "@action:button"
+msgid "Color"
+msgstr ""
+
+#: formcard/FormColorDelegate.qml:43
+#, kde-format
+msgctxt "Accessible description"
+msgid "Current color \"%1\""
+msgstr ""
+
 #: formcard/FormDateTimeDelegate.qml:193
 #, fuzzy, kde-format
 #| msgid "Today"
@@ -328,8 +340,8 @@ msgctxt "Date is not set"
 msgid "Not set"
 msgstr ""
 
-#: formcard/FormPasswordFieldDelegate.qml:218
-#: formcard/FormTextFieldDelegate.qml:220
+#: formcard/FormPasswordFieldDelegate.qml:214
+#: formcard/FormTextFieldDelegate.qml:217
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-30 00:37+0000\n"
+"POT-Creation-Date: 2024-04-02 00:37+0000\n"
 "PO-Revision-Date: 2024-01-08 10:35+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -22,49 +22,49 @@ msgstr ""
 msgid "Close"
 msgstr "Bezárás"
 
-#: components/AlbumMaximizeComponent.qml:116
+#: components/AlbumMaximizeComponent.qml:137
 #, kde-format
 msgid "Zoom in"
 msgstr "Nagyítás"
 
-#: components/AlbumMaximizeComponent.qml:121
+#: components/AlbumMaximizeComponent.qml:142
 #, kde-format
 msgid "Zoom out"
 msgstr "Kicsinyítés"
 
-#: components/AlbumMaximizeComponent.qml:127
+#: components/AlbumMaximizeComponent.qml:148
 #, kde-format
 msgid "Rotate left"
 msgstr "Forgatás balra"
 
-#: components/AlbumMaximizeComponent.qml:133
+#: components/AlbumMaximizeComponent.qml:154
 #, kde-format
 msgid "Rotate right"
 msgstr "Forgatás jobbra"
 
-#: components/AlbumMaximizeComponent.qml:138
+#: components/AlbumMaximizeComponent.qml:159
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
 msgstr "Felirat megjelenítése"
 
-#: components/AlbumMaximizeComponent.qml:138
+#: components/AlbumMaximizeComponent.qml:159
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
 msgstr "Felirat elrejtése"
 
-#: components/AlbumMaximizeComponent.qml:144
+#: components/AlbumMaximizeComponent.qml:165
 #, kde-format
 msgid "Save as"
 msgstr "Mentés másként"
 
-#: components/AlbumMaximizeComponent.qml:203
+#: components/AlbumMaximizeComponent.qml:243
 #, kde-format
 msgid "Previous image"
 msgstr "Előző kép"
 
-#: components/AlbumMaximizeComponent.qml:223
+#: components/AlbumMaximizeComponent.qml:263
 #, kde-format
 msgid "Next image"
 msgstr "Következő kép"
@@ -80,7 +80,7 @@ msgstr "Bezárás"
 msgid "Download"
 msgstr "Letöltés"
 
-#: components/VideoMaximizeDelegate.qml:240
+#: components/VideoMaximizeDelegate.qml:265
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
@@ -352,6 +352,18 @@ msgstr "A(z) %1 KDE Store oldala"
 msgid "Send an email to %1"
 msgstr "E-mail küldése neki: %1"
 
+#: formcard/FormColorDelegate.qml:42
+#, kde-format
+msgctxt "@action:button"
+msgid "Color"
+msgstr ""
+
+#: formcard/FormColorDelegate.qml:43
+#, kde-format
+msgctxt "Accessible description"
+msgid "Current color \"%1\""
+msgstr ""
+
 #: formcard/FormDateTimeDelegate.qml:193
 #, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
@@ -364,8 +376,8 @@ msgctxt "Date is not set"
 msgid "Not set"
 msgstr "Nincs beállítva"
 
-#: formcard/FormPasswordFieldDelegate.qml:218
-#: formcard/FormTextFieldDelegate.qml:220
+#: formcard/FormPasswordFieldDelegate.qml:214
+#: formcard/FormTextFieldDelegate.qml:217
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"

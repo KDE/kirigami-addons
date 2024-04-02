@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-30 00:37+0000\n"
+"POT-Creation-Date: 2024-04-02 00:37+0000\n"
 "PO-Revision-Date: 2023-08-13 16:36+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -26,49 +26,49 @@ msgstr ""
 msgid "Close"
 msgstr "Schließen"
 
-#: components/AlbumMaximizeComponent.qml:116
+#: components/AlbumMaximizeComponent.qml:137
 #, kde-format
 msgid "Zoom in"
 msgstr "Vergrößern"
 
-#: components/AlbumMaximizeComponent.qml:121
+#: components/AlbumMaximizeComponent.qml:142
 #, kde-format
 msgid "Zoom out"
 msgstr "Verkleinern"
 
-#: components/AlbumMaximizeComponent.qml:127
+#: components/AlbumMaximizeComponent.qml:148
 #, kde-format
 msgid "Rotate left"
 msgstr "Nach links drehen"
 
-#: components/AlbumMaximizeComponent.qml:133
+#: components/AlbumMaximizeComponent.qml:154
 #, kde-format
 msgid "Rotate right"
 msgstr "Nach rechts drehen"
 
-#: components/AlbumMaximizeComponent.qml:138
+#: components/AlbumMaximizeComponent.qml:159
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
 msgstr "Beschriftung anzeigen"
 
-#: components/AlbumMaximizeComponent.qml:138
+#: components/AlbumMaximizeComponent.qml:159
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
 msgstr "Beschriftung ausblenden"
 
-#: components/AlbumMaximizeComponent.qml:144
+#: components/AlbumMaximizeComponent.qml:165
 #, kde-format
 msgid "Save as"
 msgstr "Speichern unter"
 
-#: components/AlbumMaximizeComponent.qml:203
+#: components/AlbumMaximizeComponent.qml:243
 #, kde-format
 msgid "Previous image"
 msgstr "Vorheriges Bild"
 
-#: components/AlbumMaximizeComponent.qml:223
+#: components/AlbumMaximizeComponent.qml:263
 #, kde-format
 msgid "Next image"
 msgstr "Nächstes Bild"
@@ -84,7 +84,7 @@ msgstr "Schließen"
 msgid "Download"
 msgstr "Herunterladen"
 
-#: components/VideoMaximizeDelegate.qml:240
+#: components/VideoMaximizeDelegate.qml:265
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
@@ -337,6 +337,18 @@ msgstr ""
 msgid "Send an email to %1"
 msgstr ""
 
+#: formcard/FormColorDelegate.qml:42
+#, kde-format
+msgctxt "@action:button"
+msgid "Color"
+msgstr ""
+
+#: formcard/FormColorDelegate.qml:43
+#, kde-format
+msgctxt "Accessible description"
+msgid "Current color \"%1\""
+msgstr ""
+
 #: formcard/FormDateTimeDelegate.qml:193
 #, fuzzy, kde-format
 #| msgid "Today"
@@ -350,8 +362,8 @@ msgctxt "Date is not set"
 msgid "Not set"
 msgstr ""
 
-#: formcard/FormPasswordFieldDelegate.qml:218
-#: formcard/FormTextFieldDelegate.qml:220
+#: formcard/FormPasswordFieldDelegate.qml:214
+#: formcard/FormTextFieldDelegate.qml:217
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
