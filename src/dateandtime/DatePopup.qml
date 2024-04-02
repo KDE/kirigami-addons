@@ -22,13 +22,8 @@ QQC2.Dialog {
     property date value: new Date()
 
     /**
-     * Emitted when the user accepts the dialog.
-     * The selected date is available from the selectedDate property.
-     */
-    signal accepted()
-
-    /**
      * Emitted when the user cancells the popup
+     * @deprecated Use rejected instead.
      */
     signal cancelled()
 
@@ -46,6 +41,14 @@ QQC2.Dialog {
      */
     property date maximumDate
 
+    /**
+     * This property holds whether the date popup will automatically select a date
+     * on selection or has a "Select" button.
+     *
+     * By default, this is false.
+     */
+    property bool autoAccept: false
+
     padding: 0
     topPadding: undefined
     leftPadding: undefined
@@ -62,10 +65,19 @@ QQC2.Dialog {
         minimumDate: root.minimumDate
         maximumDate: root.maximumDate
         focus: true
+
+        onDatePicked: (pickedDate) => {
+            if (autoAccept) {
+                root.value = pickedDate;
+                root.accepted();
+            }
+        }
     }
 
     footer: QQC2.DialogButtonBox {
         id: box
+
+        visible: !autoAccept
 
         leftPadding: Kirigami.Units.mediumSpacing
         rightPadding: Kirigami.Units.mediumSpacing
@@ -76,6 +88,7 @@ QQC2.Dialog {
             icon.name: "dialog-cancel"
             onClicked: {
                 root.cancelled()
+                root.rejected()
                 root.close()
             }
 

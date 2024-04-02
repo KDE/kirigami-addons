@@ -402,7 +402,6 @@ QQC2.Control {
                                 text: dayNumber
                                 onClicked: {
                                     selectedDate = date;
-                                    selectedDate = date;
                                     datePicked(date);
                                 }
                             }
