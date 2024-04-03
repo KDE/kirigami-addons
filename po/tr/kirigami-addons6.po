@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-02 00:37+0000\n"
-"PO-Revision-Date: 2024-03-15 00:16+0300\n"
+"POT-Creation-Date: 2024-04-03 00:37+0000\n"
+"PO-Revision-Date: 2024-04-02 12:51+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #: components/AbstractMaximizeComponent.qml:128
 #, kde-format
@@ -87,13 +87,13 @@ msgctxt "@action:button"
 msgid "Volume"
 msgstr "Ses Düzeyi"
 
-#: dateandtime/DatePopup.qml:71 dateandtime/TimePopup.qml:52
+#: dateandtime/DatePopup.qml:87 dateandtime/TimePopup.qml:52
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "İptal"
 
-#: dateandtime/DatePopup.qml:82 dateandtime/TimePopup.qml:63
+#: dateandtime/DatePopup.qml:99 dateandtime/TimePopup.qml:63
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
@@ -356,13 +356,13 @@ msgstr "E-posta gönder: %1"
 #, kde-format
 msgctxt "@action:button"
 msgid "Color"
-msgstr ""
+msgstr "Renk"
 
 #: formcard/FormColorDelegate.qml:43
 #, kde-format
 msgctxt "Accessible description"
 msgid "Current color \"%1\""
-msgstr ""
+msgstr "Geçerli renk “%1”"
 
 #: formcard/FormDateTimeDelegate.qml:193
 #, kde-format

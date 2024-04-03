@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the kirigami-addons package.
 #
 # Automatically generated, 2021.
-# SPDX-FileCopyrightText: 2021, 2022, 2023 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-02 00:37+0000\n"
-"PO-Revision-Date: 2023-11-23 20:31+0100\n"
+"POT-Creation-Date: 2024-04-03 00:37+0000\n"
+"PO-Revision-Date: 2024-04-03 00:09+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #: components/AbstractMaximizeComponent.qml:128
 #, kde-format
@@ -88,13 +88,13 @@ msgctxt "@action:button"
 msgid "Volume"
 msgstr "Volumen"
 
-#: dateandtime/DatePopup.qml:71 dateandtime/TimePopup.qml:52
+#: dateandtime/DatePopup.qml:87 dateandtime/TimePopup.qml:52
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: dateandtime/DatePopup.qml:82 dateandtime/TimePopup.qml:63
+#: dateandtime/DatePopup.qml:99 dateandtime/TimePopup.qml:63
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
@@ -357,13 +357,13 @@ msgstr "Enviar un mensaje a %1"
 #, kde-format
 msgctxt "@action:button"
 msgid "Color"
-msgstr ""
+msgstr "Color"
 
 #: formcard/FormColorDelegate.qml:43
 #, kde-format
 msgctxt "Accessible description"
 msgid "Current color \"%1\""
-msgstr ""
+msgstr "Color actual «%1»"
 
 #: formcard/FormDateTimeDelegate.qml:193
 #, kde-format

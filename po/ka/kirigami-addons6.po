@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-02 00:37+0000\n"
-"PO-Revision-Date: 2023-11-23 06:49+0100\n"
+"POT-Creation-Date: 2024-04-03 00:37+0000\n"
+"PO-Revision-Date: 2024-04-02 06:21+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -87,13 +87,13 @@ msgctxt "@action:button"
 msgid "Volume"
 msgstr "ხმა"
 
-#: dateandtime/DatePopup.qml:71 dateandtime/TimePopup.qml:52
+#: dateandtime/DatePopup.qml:87 dateandtime/TimePopup.qml:52
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "გაუქმება"
 
-#: dateandtime/DatePopup.qml:82 dateandtime/TimePopup.qml:63
+#: dateandtime/DatePopup.qml:99 dateandtime/TimePopup.qml:63
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
@@ -353,13 +353,13 @@ msgstr "%1-სთვის ელფოსტის გაგზავნა"
 #, kde-format
 msgctxt "@action:button"
 msgid "Color"
-msgstr ""
+msgstr "ფერი"
 
 #: formcard/FormColorDelegate.qml:43
 #, kde-format
 msgctxt "Accessible description"
 msgid "Current color \"%1\""
-msgstr ""
+msgstr "მიმდინარე ფერია \"%1\""
 
 #: formcard/FormDateTimeDelegate.qml:193
 #, kde-format
