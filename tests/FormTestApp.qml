@@ -44,7 +44,7 @@ Kirigami.ApplicationWindow {
 
     LayoutMirroring.enabled: false
 
-    FormCard.FormCardDialog {
+    FormCard.FormDialog {
         id: formDialog
 
         title: "Add Thingy"
