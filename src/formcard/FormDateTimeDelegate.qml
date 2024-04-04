@@ -22,7 +22,7 @@ import org.kde.kirigamiaddons.components 1.0 as Components
  * @code{.qml}
  * import org.kde.kirigamiaddons.formcard 1.0 as FormCard
  *
- * FormCard.FormCardPage {
+ * FormCard.FormPage {
  *     FormCard.FormHeader {
  *         title: "Departure"
  *     }

@@ -52,14 +52,7 @@ AbstractFormDelegate {
      */
     property var leading: null
 
-    /**
-     * @brief This property holds the padding after the leading item.
-     *
-     * It is recommended to use Kirigami.Units here instead of direct values.
-     *
-     * @see Kirigami.Units
-     */
-    property real leadingPadding: Kirigami.Units.smallSpacing
+    spacing: Kirigami.Units.smallSpacing
 
     focusPolicy: Qt.StrongFocus
 
@@ -69,10 +62,9 @@ AbstractFormDelegate {
     }
 
     contentItem: RowLayout {
-        spacing: 0
+        spacing: root.spacing
 
         Private.ContentItemLoader {
-            Layout.rightMargin: visible ? root.leadingPadding : 0
             visible: root.leading
             implicitHeight: visible ? root.leading.implicitHeight : 0
             implicitWidth: visible ? root.leading.implicitWidth : 0

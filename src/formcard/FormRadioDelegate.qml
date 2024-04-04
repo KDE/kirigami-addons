@@ -57,21 +57,12 @@ T.RadioDelegate {
     property var leading: null
 
     /**
-     * @brief This property holds the padding after the leading item.
-     */
-    property real leadingPadding: Kirigami.Units.smallSpacing
-
-    /**
      * @brief This property holds an item that will be displayed after the
      * delegate's contents.
      */
     property var trailing: null
 
-    /**
-     * @brief This property holds the padding before the trailing item.
-     */
-    property real trailingPadding: Kirigami.Units.smallSpacing
-
+    spacing: Kirigami.Units.smallSpacing
     leftPadding: Kirigami.Units.gridUnit
     topPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
     bottomPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
@@ -87,10 +78,9 @@ T.RadioDelegate {
     Layout.fillWidth: true
 
     contentItem: RowLayout {
-        spacing: 0
+        spacing: root.spacing
 
         Private.ContentItemLoader {
-            Layout.rightMargin: visible ? root.leadingPadding : 0
             visible: root.leading
             implicitHeight: visible ? root.leading.implicitHeight : 0
             implicitWidth: visible ? root.leading.implicitWidth : 0
@@ -139,7 +129,6 @@ T.RadioDelegate {
         }
 
         Private.ContentItemLoader {
-            Layout.leftMargin: visible ? root.trailingPadding : 0
             visible: root.trailing
             implicitHeight: visible ? root.trailing.implicitHeight : 0
             implicitWidth: visible ? root.trailing.implicitWidth : 0

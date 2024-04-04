@@ -17,7 +17,7 @@ import org.kde.kirigami 2.20 as Kirigami
  *
  * @inherit Kirigami.ScrollablePage
  */
-FormCardPage {
+FormPage {
     id: page
 
     title: i18nd("kirigami-addons6", "About KDE")
