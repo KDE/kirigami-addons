@@ -110,6 +110,9 @@ Item {
         ColumnLayout {
             id: internalColumn
 
+            // used in FormDelegateBackground to determine whether to round corners of the background
+            readonly property bool _roundCorners: root.cardWidthRestricted
+
             spacing: 0
 
             // add 1 to margins to account for the border (so content doesn't overlap it)

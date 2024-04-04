@@ -23,11 +23,17 @@ import org.kde.kirigami 2.20 as Kirigami
  *
  * @inherit QtQuick.Rectangle
  */
-Rectangle {
+Kirigami.ShadowedRectangle {
+    id: root
+
     /**
      * @brief The control to which the background will be assigned.
      */
     required property T.Control control
+
+    readonly property bool _roundCorners: control.parent._roundCorners === true
+    readonly property bool _isFirst: _roundCorners && control.parent.visualChildren[0] === control
+    readonly property bool _isLast: _roundCorners && control.parent.visualChildren[control.parent.visualChildren.length - 1] === control
 
     color: {
         let colorOpacity = 0;
@@ -43,6 +49,13 @@ Rectangle {
         }
 
         return Qt.rgba(Kirigami.Theme.textColor.r, Kirigami.Theme.textColor.g, Kirigami.Theme.textColor.b, colorOpacity)
+    }
+
+    corners {
+        topLeftRadius: _isFirst ? Kirigami.Units.smallSpacing : 0
+        topRightRadius: _isFirst ? Kirigami.Units.smallSpacing : 0
+        bottomLeftRadius: _isLast ? Kirigami.Units.smallSpacing : 0
+        bottomRightRadius: _isLast ? Kirigami.Units.smallSpacing : 0
     }
 
     Behavior on color {
