@@ -8,7 +8,8 @@ import QtQuick.Templates as T
 import QtQuick.Controls as Controls
 import QtQuick.Layouts
 
-import org.kde.kirigami as Kirigami
+import org.kde.kirigami 2.19 as Kirigami
+import org.kde.kirigami.delegates as KirigamiDelegates
 
 import "private" as Private
 
@@ -138,23 +139,13 @@ T.CheckDelegate {
                 implicitWidth: visible ? root.icon.width : 0
                 implicitHeight: visible ? root.icon.height : 0
             }
-
-            Controls.Label {
-                text: root.text
-                color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
-                elide: Text.ElideRight
-                wrapMode: Text.Wrap
-                maximumLineCount: 2
+            KirigamiDelegates.TitleSubtitle {
                 Layout.fillWidth: true
-                Accessible.ignored: true
-            }
-
-            Private.ContentItemLoader {
-                Layout.leftMargin: visible ? root.trailingPadding : 0
-                visible: root.trailing
-                implicitHeight: visible ? root.trailing.implicitHeight : 0
-                implicitWidth: visible ? root.trailing.implicitWidth : 0
-                contentItem: root.trailing
+                title: root.text
+                subtitle: root.description
+                color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
+                subtitleColor: Kirigami.Theme.disabledTextColor
+                wrapMode: Text.Wrap
             }
         }
         Controls.Label {
