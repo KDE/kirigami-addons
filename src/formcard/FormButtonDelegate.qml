@@ -8,6 +8,7 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
 import org.kde.kirigami 2.19 as Kirigami
+import org.kde.kirigami.delegates as KirigamiDelegates
 
 import "private" as Private
 
@@ -37,12 +38,6 @@ AbstractFormDelegate {
      * making it longer than two lines.
      */
     property string description: ""
-
-    /**
-     * @brief This property allows to override the internal description
-     * item (a QtQuick.Controls.Label) with a custom component.
-     */
-    property alias descriptionItem: internalDescriptionItem
 
     /**
      * @brief This property holds an item that will be displayed to the
@@ -80,30 +75,13 @@ AbstractFormDelegate {
             implicitHeight: (root.icon.name !== "") ? root.icon.height : 0
         }
 
-        ColumnLayout {
+        KirigamiDelegates.TitleSubtitle {
             Layout.fillWidth: true
-            spacing: Kirigami.Units.smallSpacing
-
-            Label {
-                Layout.fillWidth: true
-                text: root.text
-                elide: Text.ElideRight
-                wrapMode: Text.Wrap
-                maximumLineCount: 2
-                color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
-                Accessible.ignored: true // base class sets this text on root already
-            }
-
-            Label {
-                id: internalDescriptionItem
-                Layout.fillWidth: true
-                text: root.description
-                color: Kirigami.Theme.disabledTextColor
-                elide: Text.ElideRight
-                visible: root.description !== ""
-                wrapMode: Text.Wrap
-                Accessible.ignored: !visible
-            }
+            title: root.text
+            subtitle: root.description
+            color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
+            subtitleColor: Kirigami.Theme.disabledTextColor
+            wrapMode: Text.Wrap
         }
 
         FormArrow {

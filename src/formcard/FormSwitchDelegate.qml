@@ -9,6 +9,7 @@ import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.15
 
 import org.kde.kirigami 2.19 as Kirigami
+import org.kde.kirigami.delegates as KirigamiDelegates
 
 import "private" as Private
 
@@ -90,28 +91,13 @@ T.SwitchDelegate {
             contentItem: root.leading
         }
 
-        ColumnLayout {
+        KirigamiDelegates.TitleSubtitle {
             Layout.fillWidth: true
-            spacing: Kirigami.Units.smallSpacing
-
-            Controls.Label {
-                Layout.fillWidth: true
-                text: root.text
-                elide: Text.ElideRight
-                wrapMode: Text.Wrap
-                maximumLineCount: 2
-                color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
-                Accessible.ignored: true
-            }
-
-            Controls.Label {
-                visible: root.description !== ""
-                Layout.fillWidth: true
-                text: root.description
-                wrapMode: Text.Wrap
-                color: Kirigami.Theme.disabledTextColor
-                Accessible.ignored: true
-            }
+            title: root.text
+            subtitle: root.description
+            color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
+            subtitleColor: Kirigami.Theme.disabledTextColor
+            wrapMode: Text.Wrap
         }
 
         Controls.Switch {

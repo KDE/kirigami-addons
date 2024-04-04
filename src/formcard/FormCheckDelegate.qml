@@ -9,6 +9,7 @@ import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.15
 
 import org.kde.kirigami 2.19 as Kirigami
+import org.kde.kirigami.delegates as KirigamiDelegates
 
 import "private" as Private
 
@@ -59,12 +60,6 @@ T.CheckDelegate {
      */
     property var trailing: null
 
-    /**
-     * @brief This property allows to override the internal description
-     * item (a QtQuick.Controls.Label) with a custom component.
-     */
-    property alias descriptionItem: internalDescriptionItem
-
     spacing: Kirigami.Units.smallSpacing
     topPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
     bottomPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
@@ -113,27 +108,13 @@ T.CheckDelegate {
             Accessible.ignored: true
         }
 
-        ColumnLayout {
+        KirigamiDelegates.TitleSubtitle {
             Layout.fillWidth: true
-            spacing: Kirigami.Units.smallSpacing
-            Controls.Label {
-                text: root.text
-                color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
-                elide: Text.ElideRight
-                wrapMode: Text.Wrap
-                maximumLineCount: 2
-                Layout.fillWidth: true
-                Accessible.ignored: true
-            }
-
-            Controls.Label {
-                id: internalDescriptionItem
-                Layout.fillWidth: true
-                text: root.description
-                color: Kirigami.Theme.disabledTextColor
-                visible: root.description !== ""
-                wrapMode: Text.Wrap
-            }
+            title: root.text
+            subtitle: root.description
+            color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
+            subtitleColor: Kirigami.Theme.disabledTextColor
+            wrapMode: Text.Wrap
         }
 
         Private.ContentItemLoader {

@@ -9,6 +9,7 @@ import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.15
 
 import org.kde.kirigami 2.19 as Kirigami
+import org.kde.kirigami.delegates as KirigamiDelegates
 
 import "private" as Private
 
@@ -106,26 +107,13 @@ T.RadioDelegate {
             }
         }
 
-        ColumnLayout {
+        KirigamiDelegates.TitleSubtitle {
             Layout.fillWidth: true
-            spacing: Kirigami.Units.smallSpacing
-
-            Controls.Label {
-                Layout.fillWidth: true
-                text: root.text
-                color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
-                elide: Text.ElideRight
-                wrapMode: Text.Wrap
-                maximumLineCount: 2
-            }
-
-            Controls.Label {
-                visible: root.description !== ""
-                Layout.fillWidth: true
-                text: root.description
-                color: Kirigami.Theme.disabledTextColor
-                wrapMode: Text.Wrap
-            }
+            title: root.text
+            subtitle: root.description
+            color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
+            subtitleColor: Kirigami.Theme.disabledTextColor
+            wrapMode: Text.Wrap
         }
 
         Private.ContentItemLoader {

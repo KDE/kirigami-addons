@@ -8,6 +8,7 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
 import org.kde.kirigami 2.19 as Kirigami
+import org.kde.kirigami.delegates as KirigamiDelegates
 
 import "private" as Private
 
@@ -38,16 +39,6 @@ AbstractFormDelegate {
      * This provides additional information shown in a faint gray color.
      */
     property string description: ""
-
-    /**
-     * @brief This property allows for access to the description label item.
-     */
-    property alias descriptionItem: internalDescriptionItem
-
-    /**
-     * @brief This property holds allows for access to the text label item.
-     */
-    property alias textItem: internalTextItem
 
     /**
      * @brief This property holds an item that will be displayed before
@@ -88,29 +79,12 @@ AbstractFormDelegate {
             implicitHeight: (root.icon.name !== "") ? Kirigami.Units.iconSizes.small : 0
         }
 
-        ColumnLayout {
+        KirigamiDelegates.TitleSubtitle {
             Layout.fillWidth: true
-            spacing: Kirigami.Units.smallSpacing
-
-            Label {
-                id: internalTextItem
-                Layout.fillWidth: true
-                text: root.text
-                elide: Text.ElideRight
-                onLinkActivated: root.linkActivated(link)
-                visible: root.text
-                Accessible.ignored: true // base class sets this text on root already
-            }
-
-            Label {
-                id: internalDescriptionItem
-                Layout.fillWidth: true
-                text: root.description
-                color: Kirigami.Theme.disabledTextColor
-                visible: root.description !== ""
-                onLinkActivated: root.linkActivated(link)
-                wrapMode: Text.Wrap
-            }
+            title: root.text
+            subtitle: root.description
+            subtitleColor: Kirigami.Theme.disabledTextColor
+            wrapMode: Text.Wrap
         }
 
         Private.ContentItemLoader {
