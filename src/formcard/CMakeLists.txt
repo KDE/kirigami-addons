@@ -43,7 +43,7 @@ ecm_target_qml_sources(formcardplugin SOURCES
     FormPasswordFieldDelegate.qml
     FormDateTimeDelegate.qml
     FormGridContainer.qml
-    FormCardDialog.qml
+    FormDialog.qml
 )
 
 if(ANDROID)
