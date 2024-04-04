@@ -24,7 +24,7 @@ import "private" as Private
  * @code{.qml}
  * import org.kde.kirigamiaddons.formcard as FormCard
  *
- * FormCard.FormCardPage {
+ * FormCard.FormPage {
  *     FormCard.FormHeader {
  *         title: "Departure"
  *     }

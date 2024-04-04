@@ -57,20 +57,10 @@ T.RadioDelegate {
     property var leading: null
 
     /**
-     * @brief This property holds the padding after the leading item.
-     */
-    property real leadingPadding: Kirigami.Units.smallSpacing
-
-    /**
      * @brief This property holds an item that will be displayed after the
      * delegate's contents.
      */
     property var trailing: null
-
-    /**
-     * @brief This property holds the padding before the trailing item.
-     */
-    property real trailingPadding: Kirigami.Units.smallSpacing
 
     /**
      * @brief This property allows to override the internal description
@@ -78,6 +68,7 @@ T.RadioDelegate {
      */
     property alias descriptionItem: internalDescriptionItem
 
+    spacing: Private.FormCardUnits.verticalSpacing
     horizontalPadding: Private.FormCardUnits.horizontalPadding
     verticalPadding: Private.FormCardUnits.verticalPadding
 
@@ -96,7 +87,7 @@ T.RadioDelegate {
     Layout.fillWidth: true
 
     contentItem: ColumnLayout {
-        spacing: Private.FormCardUnits.verticalSpacing
+        spacing: root.spacing
 
         RowLayout {
             id: innerRowLayout
@@ -166,7 +157,6 @@ T.RadioDelegate {
                 contentItem: root.trailing
             }
         }
-
         Controls.Label {
             id: internalDescriptionItem
 

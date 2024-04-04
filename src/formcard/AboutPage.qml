@@ -25,7 +25,7 @@ import "private" as Private
  * @since KirigamiAddons 0.11.0
  * @inherit org:kde::kirigami::ScrollablePage
  */
-FormCardPage {
+FormPage {
     id: page
 
     /**

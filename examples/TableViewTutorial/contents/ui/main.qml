@@ -25,7 +25,7 @@ Kirigami.ApplicationWindow {
         ListTableViewPage {}
     }
 
-    pageStack.initialPage: FormCard.FormCardPage {
+    pageStack.initialPage: FormCard.FormPage {
         FormCard.FormCard {
             Layout.topMargin: Kirigami.Units.gridUnit
 

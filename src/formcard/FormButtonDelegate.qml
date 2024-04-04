@@ -52,35 +52,17 @@ AbstractFormDelegate {
      */
     property var leading: null
 
-    /**
-     * @brief This property holds the padding after the leading item.
-     *
-     * It is recommended to use Kirigami.Units here instead of direct values.
-     *
-     * @see Kirigami.Units
-     */
-    property real leadingPadding: Kirigami.Units.largeSpacing
-
-    /**
-     * @brief This property holds an alias to the internal FormCard.FormArrow.
-     *
-     * This allow to hide it completely or change the direction (e.g. to
-     * implement a collapsible section).
-     *
-     * @since 1.7.0
-     */
-    readonly property alias trailingLogo: formArrow
+    spacing: Kirigami.Units.smallSpacing
 
     focusPolicy: Qt.StrongFocus
 
     contentItem: RowLayout {
-        spacing: 0
+        spacing: root.spacing
 
         Private.ContentItemLoader {
-            readonly property bool _visible: root.leading && root.leading.visible
-            Layout.rightMargin: _visible ? root.leadingPadding : 0
-            implicitHeight: _visible ? root.leading.implicitHeight : 0
-            implicitWidth: _visible ? root.leading.implicitWidth : 0
+            visible: root.leading
+            implicitHeight: visible ? root.leading.implicitHeight : 0
+            implicitWidth: visible ? root.leading.implicitWidth : 0
             contentItem: root.leading
         }
 

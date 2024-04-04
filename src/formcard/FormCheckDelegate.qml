@@ -54,20 +54,10 @@ T.CheckDelegate {
     property var leading: null
 
     /**
-     * @brief This property holds the padding after the leading item.
-     */
-    property real leadingPadding: Kirigami.Units.smallSpacing
-
-    /**
      * @brief This property holds an item that will be displayed to the right
      * of the delegate's contents.
      */
     property var trailing: null
-
-    /**
-     * @brief This property holds the padding before the trailing item.
-     */
-    property real trailingPadding: Kirigami.Units.smallSpacing
 
     /**
      * @brief This property allows to override the internal description
@@ -80,6 +70,7 @@ T.CheckDelegate {
         height: Kirigami.Units.iconSizes.smallMedium
     }
 
+    spacing: Private.FormCardUnits.verticalSpacing
     horizontalPadding: Private.FormCardUnits.horizontalPadding
     verticalPadding: Private.FormCardUnits.verticalPadding
 
@@ -93,7 +84,7 @@ T.CheckDelegate {
     Layout.fillWidth: true
 
     contentItem: ColumnLayout {
-        spacing: Private.FormCardUnits.verticalSpacing
+        spacing: root.spacing
 
         RowLayout {
             id: innerRowLayout
@@ -166,7 +157,6 @@ T.CheckDelegate {
                 contentItem: root.trailing
             }
         }
-
         Controls.Label {
             id: internalDescriptionItem
 

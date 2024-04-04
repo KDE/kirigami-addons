@@ -34,7 +34,7 @@ The following components are either commonly used or serve as entrypoints for us
   - AboutPage
   - FormCard
   - FormHeader
-  - FormCardPage
+  - FormPage
 - @ref categorizedsettings "Categorized Settings Module"
   - CategorizedSettings
   - SettingAction
@@ -88,7 +88,7 @@ The following list can be used to check which component belongs to which module:
 - FormArrow
 - FormButtonDelegate
 - FormCard
-- FormCardPage
+- FormPage
 - FormCheckDelegate
 - FormComboBoxDelegate
 - FormDateTimeDelegate
