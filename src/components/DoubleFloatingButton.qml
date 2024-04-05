@@ -6,7 +6,6 @@
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15 as QQC2
-import QtQuick.Templates 2.15 as T
 import org.kde.kirigami 2.20 as Kirigami
 
 /**
@@ -73,24 +72,12 @@ Kirigami.ShadowedRectangle {
         return LayoutMirroring.enabled ? radius : 0;
     }
 
-    readonly property real __padding: radius === Infinity
-        ? Math.round(Math.max(Math.max(leadingButton.__effectiveIconSize.width, leadingButton.__effectiveIconSize.height), Math.max(trailingButton.__effectiveIconSize.width, trailingButton.__effectiveIconSize.height)) * (Math.sqrt(2) - 1))
-        : Kirigami.Settings.hasTransientTouchInput ? (Kirigami.Units.largeSpacing * 2) : Kirigami.Units.largeSpacing
-
-
-
-    // Extra clickable area that adjusts both paddings and insets.
-    property real margins: 0
-    property real topMargin: margins
-    property real leftMargin: margins
-    property real rightMargin: margins
-    property real bottomMargin: margins
+    readonly property real __padding: Kirigami.Settings.hasTransientTouchInput ? (Kirigami.Units.largeSpacing * 2) : Kirigami.Units.largeSpacing
 
     radius: Kirigami.Units.largeSpacing
     color: Kirigami.Theme.backgroundColor
 
-    implicitHeight: Math.max(leadingButton.implicitBackgroundHeight + leadingButton.topInset + leadingButton.bottomInset,
-                             leadingButton.implicitContentHeight + leadingButton.topPadding + leadingButton.bottomPadding)
+    implicitHeight: Math.round(Kirigami.Units.gridUnit * 2.5) + __padding * 2
     implicitWidth: 2 * implicitHeight - 1
 
     shadow {
@@ -100,29 +87,10 @@ Kirigami.ShadowedRectangle {
         color: Qt.rgba(0, 0, 0, 0.2)
     }
 
-    T.RoundButton {
+    QQC2.Button {
         id: leadingButton
 
         LayoutMirroring.enabled: root.LayoutMirroring.enabled
-
-        readonly property size __effectiveIconSize: Qt.size(
-            root.leadingAction.icon.height > 0 ? root.leadingAction.icon.height : Kirigami.Units.iconSizes.medium,
-            root.leadingAction.icon.width > 0 ? root.leadingAction.icon.width : Kirigami.Units.iconSizes.medium,
-        )
-
-        // Fit icon into a square bounded by a circle bounded by button
-        padding: root.__padding
-
-        topPadding: padding + root.topMargin
-        leftPadding: padding + root.leftMargin
-        rightPadding: padding + root.rightMargin
-        bottomPadding: padding + root.bottomMargin
-
-        // If user overrides individual padding value, we should adjust background. By default all insets will be 0.
-        topInset: root.topMargin
-        leftInset: root.leftMargin
-        rightInset: root.rightMargin
-        bottomInset: root.bottomMargin
 
         z: (down || visualFocus || (enabled && hovered)) ? 2 : leadingButtonBorderAnimation.running ? 1 : 0
 
@@ -130,7 +98,7 @@ Kirigami.ShadowedRectangle {
             id: leadingButtonBackground
 
             Kirigami.Theme.inherit: false
-            Kirigami.Theme.colorSet: Kirigami.Theme.Button
+            Kirigami.Theme.colorSet: Kirigami.Theme.Window
 
             corners {
                 topLeftRadius: root.__radiusA()
@@ -149,7 +117,6 @@ Kirigami.ShadowedRectangle {
                     Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, Kirigami.Theme.frameContrast)
                 }
             }
-
 
             color: if (leadingButton.down || leadingButton.visualFocus) {
                 Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.6)
@@ -178,16 +145,25 @@ Kirigami.ShadowedRectangle {
         }
 
         contentItem: Item {
-            implicitWidth: parent.__effectiveIconSize.width
-            implicitHeight: parent.__effectiveIconSize.height
-
             Kirigami.Icon {
-                anchors.fill: parent
-                color: parent.icon.color
-                source: root.leadingAction.icon.name !== "" ? root.leadingAction.icon.name : root.leadingAction.icon.source
+                implicitHeight: if (leadingButton.icon.height) {
+                    leadingButton.icon.height
+                } else {
+                    Kirigami.Units.iconSizes.medium
+                }
+                implicitWidth: if (leadingButton.icon.width) {
+                    leadingButton.icon.width
+                } else {
+                    Kirigami.Units.iconSizes.medium
+                }
+                source: if (leadingButton.icon.name) {
+                    leadingButton.icon.name
+                } else {
+                    leadingButton.icon.source
+                }
+                anchors.centerIn: parent
             }
         }
-
         action: root.leadingAction
         anchors.left: root.left
         height: root.height
@@ -199,27 +175,8 @@ Kirigami.ShadowedRectangle {
         QQC2.ToolTip.text: action.tooltip
     }
 
-    T.RoundButton {
+    QQC2.Button {
         id: trailingButton
-
-        readonly property size __effectiveIconSize: Qt.size(
-            root.trailingAction.icon.height > 0 ? root.trailingAction.icon.height : Kirigami.Units.iconSizes.medium,
-            root.trailingAction.icon.width > 0 ? root.trailingAction.icon.width : Kirigami.Units.iconSizes.medium,
-        )
-
-        // Fit icon into a square bounded by a circle bounded by button
-        padding: root.__padding
-
-        topPadding: padding + root.topMargin
-        leftPadding: padding + root.leftMargin
-        rightPadding: padding + root.rightMargin
-        bottomPadding: padding + root.bottomMargin
-
-        // If user overrides individual padding value, we should adjust background. By default all insets will be 0.
-        topInset: root.topMargin
-        leftInset: root.leftMargin
-        rightInset: root.rightMargin
-        bottomInset: root.bottomMargin
 
         LayoutMirroring.enabled: root.LayoutMirroring.enabled
 
@@ -227,7 +184,7 @@ Kirigami.ShadowedRectangle {
 
         background: Kirigami.ShadowedRectangle {
             Kirigami.Theme.inherit: false
-            Kirigami.Theme.colorSet: Kirigami.Theme.Button
+            Kirigami.Theme.colorSet: Kirigami.Theme.Window
 
             corners {
                 topLeftRadius: root.__radiusB()
@@ -274,13 +231,23 @@ Kirigami.ShadowedRectangle {
         }
 
         contentItem: Item {
-            implicitWidth: parent.__effectiveIconSize.width
-            implicitHeight: parent.__effectiveIconSize.height
-
             Kirigami.Icon {
-                anchors.fill: parent
-                color: parent.icon.color
-                source: root.trailingAction.icon.name !== "" ? root.trailingAction.icon.name : root.trailingAction.icon.source
+                implicitHeight: if (trailingButton.icon.height) {
+                    trailingButton.icon.height
+                } else {
+                    Kirigami.Units.iconSizes.medium
+                }
+                implicitWidth: if (trailingButton.icon.width) {
+                    trailingButton.icon.width
+                } else {
+                    Kirigami.Units.iconSizes.medium
+                }
+                source: if (trailingButton.icon.name) {
+                    trailingButton.icon.name
+                } else {
+                    trailingButton.icon.source
+                }
+                anchors.centerIn: parent
             }
         }
 
