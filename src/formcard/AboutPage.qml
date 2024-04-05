@@ -87,9 +87,7 @@ FormPage {
 
     title: i18nd("kirigami-addons6", "About %1", page.aboutData.displayName)
 
-    FormCard {
-        Layout.topMargin: Kirigami.Units.gridUnit
-
+    FormGroup {
         AbstractFormDelegate {
             id: generalDelegate
             Layout.fillWidth: true
@@ -132,18 +130,13 @@ FormPage {
         FormTextDelegate {
             id: copyrightDelegate
             text: i18nd("kirigami-addons6", "Copyright")
-            descriptionItem.textFormat: Text.PlainText
             description: aboutData.otherText + (aboutData.otherText.length > 0 ? '\n' : '')
                 + aboutData.copyrightStatement
         }
     }
 
-    FormHeader {
+    FormGroup {
         title: i18ndp("kirigami-addons6", "License", "Licenses", aboutData.licenses.length)
-        visible: aboutData.licenses.length
-    }
-
-    FormCard {
         visible: aboutData.licenses.length
 
         Repeater {
@@ -185,9 +178,7 @@ FormPage {
         }
     }
 
-    FormCard {
-        Layout.topMargin: Kirigami.Units.gridUnit
-
+    FormGroup {
         FormButtonDelegate {
             id: getInvolvedDelegate
             text: i18nd("kirigami-addons6", "Homepage")
@@ -247,12 +238,8 @@ FormPage {
         }
     }
 
-    FormHeader {
+    FormGroup {
         title: i18nd("kirigami-addons6", "Libraries in use")
-        visible: Kirigami.Settings.information
-    }
-
-    FormCard {
         visible: Kirigami.Settings.information
 
         Repeater {
@@ -270,12 +257,8 @@ FormPage {
         }
     }
 
-    FormHeader {
+    FormGroup {
         title: i18nd("kirigami-addons6", "Authors")
-        visible: aboutData.authors !== undefined && aboutData.authors.length > 0
-    }
-
-    FormCard {
         visible: aboutData.authors !== undefined && aboutData.authors.length > 0
 
         Repeater {
@@ -285,12 +268,8 @@ FormPage {
         }
     }
 
-    FormHeader {
+    FormGroup {
         title: i18nd("kirigami-addons6", "Credits")
-        visible: aboutData.credits !== undefined && aboutData.credits.length > 0
-    }
-
-    FormCard {
         visible: aboutData.credits !== undefined && aboutData.credits.length > 0
 
         Repeater {
@@ -300,12 +279,8 @@ FormPage {
         }
     }
 
-    FormHeader {
+    FormGroup {
         title: i18nd("kirigami-addons6", "Translators")
-        visible: aboutData.translators !== undefined && aboutData.translators.length > 0
-    }
-
-    FormCard {
         visible: aboutData.translators !== undefined && aboutData.translators.length > 0
 
         Repeater {

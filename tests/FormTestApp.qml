@@ -163,10 +163,9 @@ Duo Reges: constructio interrete. Primum Theophrasti, Strato, physicum se voluit
                     ]
                 }
 
-                FormCard.FormHeader {
+                FormCard.FormGroup {
                     title: "About"
-                }
-                FormCard.FormCard {
+
                     FormCard.FormButtonDelegate {
                         id: aboutDelegate
                         text: "About"
@@ -174,11 +173,9 @@ Duo Reges: constructio interrete. Primum Theophrasti, Strato, physicum se voluit
                     }
                 }
 
-                FormCard.FormHeader {
+                FormCard.FormGroup {
                     title: "Date and time"
-                }
 
-                FormCard.FormCard {
                     FormCard.FormDateTimeDelegate {}
 
                     FormCard.FormDelegateSeparator {}
@@ -199,11 +196,9 @@ Duo Reges: constructio interrete. Primum Theophrasti, Strato, physicum se voluit
                     }
                 }
 
-                FormCard.FormHeader {
-                    title: "Buttons"
-                }
-                FormCard.FormCard {
+                FormCard.FormGroup {
                     Layout.fillWidth: true
+                    title: "Buttons"
 
                     FormCard.FormButtonDelegate {
                         id: delegate1
@@ -234,10 +229,9 @@ Duo Reges: constructio interrete. Primum Theophrasti, Strato, physicum se voluit
                 }
 
                 // checkboxes
-                FormCard.FormHeader {
+                FormCard.FormGroup {
                     title: "Checkboxes"
-                }
-                FormCard.FormCard {
+
                     FormCard.FormCheckDelegate {
                         id: checkbox1
                         text: "Check the first box"
@@ -259,10 +253,9 @@ Duo Reges: constructio interrete. Primum Theophrasti, Strato, physicum se voluit
                 }
 
                 // switches
-                FormCard.FormHeader {
+                FormCard.FormGroup {
                     title: "Switches"
-                }
-                FormCard.FormCard {
+
                     FormCard.FormSwitchDelegate {
                         id: switch1
                         text: "Toggle the first switch"
@@ -298,10 +291,9 @@ Duo Reges: constructio interrete. Primum Theophrasti, Strato, physicum se voluit
                 // dropdowns
                 // large amount of options -> push a new page
                 // small amount of options -> open dialog
-                FormCard.FormHeader {
+                FormCard.FormGroup {
                     title: "Dropdowns"
-                }
-                FormCard.FormCard {
+
                     FormCard.FormComboBoxDelegate {
                         id: dropdown1
                         text: "Select a color"
@@ -340,10 +332,9 @@ Duo Reges: constructio interrete. Primum Theophrasti, Strato, physicum se voluit
                 }
 
                 // radio buttons
-                FormCard.FormHeader {
+                FormCard.FormGroup {
                     title: "Radio buttons"
-                }
-                FormCard.FormCard {
+
                     FormCard.FormRadioDelegate {
                         id: radio1
                         text: "Always on"
@@ -361,9 +352,7 @@ Duo Reges: constructio interrete. Primum Theophrasti, Strato, physicum se voluit
                 }
 
                 // misc
-                FormCard.FormCard {
-                    Layout.topMargin: Kirigami.Units.largeSpacing
-
+                FormCard.FormGroup {
                     FormCard.AbstractFormDelegate {
                         id: slider1
                         Layout.fillWidth: true
@@ -428,10 +417,9 @@ Duo Reges: constructio interrete. Primum Theophrasti, Strato, physicum se voluit
                 }
 
                 // info block
-                FormCard.FormHeader {
+                FormCard.FormGroup {
                     title: "Information"
-                }
-                FormCard.FormCard {
+
                     FormCard.FormTextDelegate {
                         id: info1
                         text: "Color"
@@ -464,11 +452,9 @@ Duo Reges: constructio interrete. Primum Theophrasti, Strato, physicum se voluit
                 }
                 
                 // text fields
-                FormCard.FormHeader {
+                FormCard.FormCGroup {
                     title: "Text Fields"
-                }
 
-                FormCard.FormCard {
                     FormCard.FormTextFieldDelegate {
                         id: account
                         label: "Account name"
@@ -497,10 +483,10 @@ Duo Reges: constructio interrete. Primum Theophrasti, Strato, physicum se voluit
                 }
 
                 // spin boxes fields
-                FormCard.FormHeader {
+
+                FormCard.FormGroup {
                     title: "Spin boxes"
-                }
-                FormCard.FormCard {
+
                     FormCard.FormSpinBoxDelegate {
                         label: "Amount"
                         value: 42

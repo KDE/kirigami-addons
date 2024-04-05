@@ -26,7 +26,7 @@ Kirigami.ApplicationWindow {
     }
 
     pageStack.initialPage: FormCard.FormPage {
-        FormCard.FormCard {
+        FormCard.FormGroup {
             Layout.topMargin: Kirigami.Units.gridUnit
 
             FormCard.FormButtonDelegate {

@@ -4,11 +4,9 @@ import org.kde.kirigamiaddons.formcard 1.0 as FormCard
 
 FormCard.FormPage {
 
-    FormCard.FormHeader {
+    FormCard.FormGroup {
         title: i18n("General")
-    }
 
-    FormCard.FormCard {
         FormCard.FormTextDelegate {
             text: i18n("Current Color Scheme")
             description: "Breeze"
@@ -39,11 +37,9 @@ FormCard.FormPage {
         }
     }
 
-    FormCard.FormHeader {
+    FormCard.FormGroup {
         title: i18n("Autosave")
-    }
 
-    FormCard.FormCard {
         FormCard.FormSwitchDelegate {
             id: autosave
             text: i18n("Enabled")
@@ -68,11 +64,9 @@ FormCard.FormPage {
         }
     }
 
-    FormCard.FormHeader {
+    FormCard.FormGroup {
         title: i18n("Accounts")
-    }
 
-    FormCard.FormCard {
         FormCard.FormSectionText {
             text: i18n("Online Account Settings")
         }

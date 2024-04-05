@@ -13,11 +13,10 @@ ecm_target_qml_sources(formcardplugin SOURCES
     AbstractFormDelegate.qml
     FormArrow.qml
     FormButtonDelegate.qml
-    FormCard.qml
     FormPage.qml
     FormGroup.qml
     FormColorDelegate.qml
-    FormHeader.qml
+    ActionHeader.qml
     AboutPage.qml
     AboutKDE.qml
     FormCheckDelegate.qml
