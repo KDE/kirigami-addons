@@ -88,9 +88,7 @@ FormPage {
 
     title: i18nd("kirigami-addons6", "About %1", page.aboutData.displayName)
 
-    FormCard {
-        Layout.topMargin: Kirigami.Units.largeSpacing * 4
-
+    FormGroup {
         AbstractFormDelegate {
             id: generalDelegate
             Layout.fillWidth: true
@@ -137,12 +135,8 @@ FormPage {
         }
     }
 
-    FormHeader {
-        visible: aboutData.otherText.length > 0
+    FormGroup {
         title: i18nd("kirigami-addons6", "Description")
-    }
-
-    FormCard {
         visible: aboutData.otherText.length > 0
         FormTextDelegate {
             Layout.fillWidth: true
@@ -151,12 +145,8 @@ FormPage {
         }
     }
 
-    FormHeader {
+    FormGroup {
         title: i18ndp("kirigami-addons6", "License", "Licenses", aboutData.licenses.length)
-        visible: aboutData.licenses.length
-    }
-
-    FormCard {
         visible: aboutData.licenses.length
 
         Repeater {
@@ -214,10 +204,8 @@ FormPage {
         }
     }
 
-    FormCard {
-        Layout.topMargin: Kirigami.Units.gridUnit
-
-        FormLinkDelegate {
+    FormGroup {
+        FormButtonDelegate {
             id: getInvolvedDelegate
             icon.name: "globe-symbolic"
             text: i18nd("kirigami-addons6", "Homepage")
@@ -279,32 +267,17 @@ FormPage {
         }
     }
 
-    FormHeader {
+    FormGroup {
         title: i18nd("kirigami-addons6", "Libraries in use")
 
-        actions: QQC2.Action {
-            text: i18ndc("kirigami-addons6", "@action:button", "Copy to Clipboard")
-            icon.name: 'edit-copy-symbolic'
-            onTriggered: {
-                FormCardModule.AboutComponent.copyToClipboard();
-                page.QQC2.ApplicationWindow.window.showPassiveNotification(i18ndc("kirigami-addons6", "@info", "System information copied to clipboard."), 'short');
-            }
-        }
-    }
-
-    FormCard {
         Repeater {
             model: FormCardModule.AboutComponent.components
             delegate: libraryDelegate
         }
     }
 
-    FormHeader {
+    FormGroup {
         title: i18nd("kirigami-addons6", "Authors")
-        visible: aboutData.authors !== undefined && aboutData.authors.length > 0
-    }
-
-    FormCard {
         visible: aboutData.authors !== undefined && aboutData.authors.length > 0
 
         Repeater {
@@ -314,12 +287,8 @@ FormPage {
         }
     }
 
-    FormHeader {
+    FormGroup {
         title: i18nd("kirigami-addons6", "Credits")
-        visible: aboutData.credits !== undefined && aboutData.credits.length > 0
-    }
-
-    FormCard {
         visible: aboutData.credits !== undefined && aboutData.credits.length > 0
 
         Repeater {
@@ -329,12 +298,8 @@ FormPage {
         }
     }
 
-    FormHeader {
+    FormGroup {
         title: i18nd("kirigami-addons6", "Translators")
-        visible: aboutData.translators !== undefined && aboutData.translators.length > 0
-    }
-
-    FormCard {
         visible: aboutData.translators !== undefined && aboutData.translators.length > 0
 
         Repeater {

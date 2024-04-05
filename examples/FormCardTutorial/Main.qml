@@ -26,7 +26,7 @@ Kirigami.ApplicationWindow {
 
     pageStack.initialPage: Kirigami.ScrollablePage {
         ColumnLayout {
-            FormCard.FormCard {
+            FormCard.FormGroup {
                 FormCard.FormButtonDelegate {
                     id: aboutKDEButton
                     icon.name: "kde"

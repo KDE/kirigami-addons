@@ -218,9 +218,32 @@ Kirigami.ApplicationWindow {
                     text: "Check the first box"
                 }
 
-                FormCard.FormCheckDelegate {
-                    id: checkbox2
-                    text: "Check the second box"
+                FormCard.FormGroup {
+                    Layout.fillWidth: true
+                    title: "Buttons"
+
+                    FormCard.FormButtonDelegate {
+                        id: delegate1
+                        text: "Button"
+                        description: "Click me!"
+                        onClicked: applicationWindow().pageStack.push(pageComponent)
+                    }
+
+                    FormCard.FormDelegateSeparator { above: delegate1; below: delegate2 }
+
+                    FormCard.FormButtonDelegate {
+                        id: delegate2
+                        text: "Form Dialog"
+                        onClicked: formDialog.open()
+                    }
+
+                    FormCard.FormDelegateSeparator { above: delegate2; below: delegate3 }
+
+                    FormCard.FormButtonDelegate {
+                        id: delegate3
+                        text: "Notification Settings"
+                        icon.name: "notifications"
+                    }
                 }
 
                 FormCard.FormCheckDelegate {
@@ -243,12 +266,14 @@ Kirigami.ApplicationWindow {
                     text: "Toggle the first switch"
                 }
 
-                FormCard.FormDelegateSeparator { above: switch1; below: switch2 }
+                // checkboxes
+                FormCard.FormGroup {
+                    title: "Checkboxes"
 
-                FormCard.FormSwitchDelegate {
-                    id: switch2
-                    text: "Toggle the second switch"
-                }
+                    FormCard.FormCheckDelegate {
+                        id: checkbox1
+                        text: "Check the first box"
+                    }
 
                 FormCard.FormDelegateSeparator { above: switch2; below: switch3 }
 
