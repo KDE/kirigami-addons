@@ -183,7 +183,7 @@ Kirigami.ShadowedRectangle {
 
             Kirigami.Icon {
                 anchors.fill: parent
-                color: parent.icon.color
+                color: root.leadingAction.icon.color
                 source: root.leadingAction.icon.name !== "" ? root.leadingAction.icon.name : root.leadingAction.icon.source
             }
         }
@@ -280,6 +280,7 @@ Kirigami.ShadowedRectangle {
             Kirigami.Icon {
                 anchors.fill: parent
                 color: parent.icon.color
+                color: root.trailingAction.icon.color
                 source: root.trailingAction.icon.name !== "" ? root.trailingAction.icon.name : root.trailingAction.icon.source
             }
         }
