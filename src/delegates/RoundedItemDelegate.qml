@@ -95,7 +95,7 @@ T.ItemDelegate {
     }
 
     background: Rectangle {
-        radius: Kirigami.Units.smallSpacing
+        radius: Kirigami.Units.cornerRadius
 
         color: if (root.highlighted || root.checked || (root.down && !root.checked) || root.visualFocus) {
             const highlight = Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.highlightColor, 0.3);
