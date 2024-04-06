@@ -8,4 +8,5 @@
 .idea
 /cmake-build*
 /build*
+/.vscode/
 CMakeLists.txt.user
