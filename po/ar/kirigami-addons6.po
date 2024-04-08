@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-03 00:37+0000\n"
-"PO-Revision-Date: 2024-02-15 18:40+0400\n"
+"PO-Revision-Date: 2024-04-07 12:08+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -163,12 +163,7 @@ msgid "Be Free!"
 msgstr "كُنْ حُرًّا!"
 
 #: formcard/AboutKDE.qml:68
-#, fuzzy, kde-format
-#| msgid ""
-#| "KDE is a world-wide community of software engineers, artists, writers, "
-#| "translators and creators who are committed to Free Software development. "
-#| "KDE produces the Plasma desktop environment, hundreds of applications, "
-#| "and the many software libraries that support them.\n"
+#, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
 "translators and creators who are committed to Free Software development. KDE "
@@ -183,6 +178,10 @@ msgstr ""
 "كِيدِي هو مجتمع عالمي من مهندسي البرمجيات والفنانين والكتّاب، والمترجمين "
 "والمبدعون الملتزمين بتطوير البرمجيات الحرة. تنتج كِيدِي بيئة سطح مكتب "
 "البلازما، ومئات التطبيقات، والعديد من مكتبات البرامج التي تدعمها.\n"
+"\n"
+"كيدي هي مؤسسة تعاونية: لا يوجد كيان واحد يتحكم في اتجاهها أو منتجاتها. وبدلاً "
+"من ذلك، نعمل معًا لتحقيق الهدف المشترك المتمثل في بناء أفضل البرامج المجانية "
+"في العالم. الجميع مدعوون للانضمام والمساهمة في كيدي، بما في ذلك أنت."
 
 #: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:193
 #, kde-format
@@ -208,6 +207,15 @@ msgid ""
 "tracking system to register your wish. Make sure you use the severity called "
 "\"Wishlist\"."
 msgstr ""
+"يمكن دائمًا تحسين البرامج، وفريق كيدي جاهز للقيام بذلك.ومع ذلك، يجب عليك - "
+"كمستخدم - أن تخبرنا عندما لا يعمل شيء ما كما هو متوقع أو يمكن القيام به بشكل "
+"أفضل.\n"
+"\n"
+"لدى كيدي نظام تتبع الأخطاء. استخدم الزر الموجود أدناه للإبلاغ عن خطأ، أو "
+"استخدم صفحة \"حول\" الخاصة بالبرنامج للإبلاغ عن خطأ خاص بهذا التطبيق.\n"
+"\n"
+"إذا كان لديك اقتراح للتحسين، فنحن نرحب بك لاستخدام نظام تتبع الأخطاء لتسجيل "
+"رغبتك. تأكد من استخدام درجة الخطورة المسماة \"قائمة الرغبات\"."
 
 #: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:244
 #, kde-format
@@ -217,22 +225,17 @@ msgstr "بلغ عن علة"
 #: formcard/AboutKDE.qml:102
 #, kde-format
 msgid "Join us"
-msgstr ""
+msgstr "انضم إلينا"
 
 #: formcard/AboutKDE.qml:107
-#, fuzzy, kde-format
-#| msgid ""
-#| "You do not have to be a software developer to be a member of the KDE "
-#| "team. You can join the national teams that translate program interfaces. "
-#| "You can provide graphics, themes, sounds, and improved documentation. You "
-#| "decide!"
+#, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
 "You can join the language teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
 "ليس عليك أن تكون مطوّر برمجيّات لتكون عضوًا في فريق «كِيدِي» يمكنك الانضمام إلى "
-"الفِرق المحليّة التي تترجم واجهات البرامج. ويمكنك توفير الرّسوميّات، والسّمات، "
+"فرق اللغات التي تترجم واجهات البرامج. ويمكنك توفير الرّسوميّات، والسّمات، "
 "والأصوات وكتابة التّوثيق. أنت تقرّر ذلك!"
 
 #: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:219
@@ -248,7 +251,7 @@ msgstr "وثائق المطورين"
 #: formcard/AboutKDE.qml:129
 #, kde-format
 msgid "Support us"
-msgstr ""
+msgstr "ادعمنا"
 
 #: formcard/AboutKDE.qml:134
 #, kde-format
@@ -270,6 +273,18 @@ msgid ""
 "\n"
 "Thank you very much in advance for your support."
 msgstr ""
+"إن كِيدِي متوفرة بدون مقابل، ولكن صنعها ليس كذلك. \n"
+"\n"
+"لذا قام فريق كِيدِي بتكوين KDE e.V ، وهي منظمة غير ربحية موجودة بشكل قانوني في "
+"في ألمانيا. تمثّل KDE e.V مشروع كِيدِي في الأمور القانونية و المالية. \n"
+"\n"
+"تستفيد كِيدِي كافة أنواع الدعم بما فيها الدعم المالي. تستعمل الأغلب الأموال "
+"لتعويض الأعضاء و غيرهم عن التكاليف التي يتحملونها أثناء المساهمة في كِيدِي. "
+"وتستخدم الأموال الإضافية للدعم القانوني وتنظيم المؤتمرات والاجتماعات.\n"
+"\n"
+" نحن نشجعك على دعم كِيدِي من خلال الهبات المالية، \n"
+"\n"
+"شكرًا جزيلًا مقدمًا لدعمك."
 
 #: formcard/AboutKDE.qml:146
 #, kde-format
@@ -336,13 +351,13 @@ msgstr "أرسِل بريد الإلكتروني إلى %1"
 #, kde-format
 msgctxt "@action:button"
 msgid "Color"
-msgstr ""
+msgstr "اللون"
 
 #: formcard/FormColorDelegate.qml:43
 #, kde-format
 msgctxt "Accessible description"
 msgid "Current color \"%1\""
-msgstr ""
+msgstr "اللون الحالي \"%1\""
 
 #: formcard/FormDateTimeDelegate.qml:193
 #, kde-format

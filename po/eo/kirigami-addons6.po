@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-03 00:37+0000\n"
-"PO-Revision-Date: 2023-11-23 20:47+0100\n"
+"PO-Revision-Date: 2024-04-07 17:09+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -354,13 +354,13 @@ msgstr "Sendi retpoŝton al %1"
 #, kde-format
 msgctxt "@action:button"
 msgid "Color"
-msgstr ""
+msgstr "Koloro"
 
 #: formcard/FormColorDelegate.qml:43
 #, kde-format
 msgctxt "Accessible description"
 msgid "Current color \"%1\""
-msgstr ""
+msgstr "Aktuala koloro \"%1\""
 
 #: formcard/FormDateTimeDelegate.qml:193
 #, kde-format
