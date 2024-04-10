@@ -159,13 +159,10 @@ auto NameUtils::isStringUnsuitableForInitials(const QString &string) -> bool
         QChar::Script_Common, QChar::Script_Inherited, QChar::Script_Latin,
         QChar::Script_Han,    QChar::Script_Hangul,    QChar::Script_Cyrillic};
 
-    for (auto character : string) {
-      auto it = std::find(scripts.begin(), scripts.end(), character.script());
+    std::any_of(string.cbegin(), string.cend(), [](const QChar &character) {
+        return std::find(scripts.begin(), scripts.end(), character.script()) == scripts.end();
+    });
 
-      if (it == scripts.end()) {
-        return true;
-      }
-    }
     return false;
 }
 
