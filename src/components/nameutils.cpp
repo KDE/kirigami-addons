@@ -9,6 +9,8 @@
 #include <QTextBoundaryFinder>
 #include <QVector>
 
+#include <array>
+
 bool contains(const QString &str, QChar::Script s)
 {
     for (auto rune : str) {
@@ -153,12 +155,16 @@ auto NameUtils::isStringUnsuitableForInitials(const QString &string) -> bool
         return true;
     }
 
-    const auto scripts = QList<QChar::Script>{QChar::Script_Common, QChar::Script_Inherited, QChar::Script_Latin, QChar::Script_Han, QChar::Script_Hangul, QChar::Script_Cyrillic};
+    static const std::array<QChar::Script, 6> scripts{
+        QChar::Script_Common, QChar::Script_Inherited, QChar::Script_Latin,
+        QChar::Script_Han,    QChar::Script_Hangul,    QChar::Script_Cyrillic};
 
     for (auto character : string) {
-        if (!scripts.contains(character.script())) {
-            return true;
-        }
+      auto it = std::find(scripts.begin(), scripts.end(), character.script());
+
+      if (it == scripts.end()) {
+        return true;
+      }
     }
     return false;
 }
