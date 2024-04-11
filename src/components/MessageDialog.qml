@@ -37,6 +37,8 @@ T.Dialog {
      */
     property int dialogType: MessageDialog.Sucess
 
+    default property alias mainContent: mainLayout.data
+
     property string iconName: ''
 
     x: Math.round((parent.width - width) / 2)
@@ -60,7 +62,7 @@ T.Dialog {
     padding: Kirigami.Units.largeSpacing * 2
     bottomPadding: Kirigami.Units.largeSpacing
 
-    header: ColumnLayout {
+    contentItem: RowLayout {
         spacing: Kirigami.Units.largeSpacing
         Kirigami.Icon {
             source: {
@@ -82,22 +84,25 @@ T.Dialog {
             }
             Layout.preferredWidth: Kirigami.Units.iconSizes.huge
             Layout.preferredHeight: Kirigami.Units.iconSizes.huge
-            Layout.topMargin: Kirigami.Units.largeSpacing * 2
-            Layout.alignment: Qt.AlignHCenter
+            Layout.alignment: Qt.AlignTop
         }
 
-        Kirigami.Heading {
-            text: root.title
-            visible: root.title
-            elide: QQC2.Label.ElideRight
-            bottomPadding: 0
-            horizontalAlignment: Text.AlignHCenter
-            wrapMode: Text.WordWrap
+        ColumnLayout {
+            id: mainLayout
+
+            spacing: Kirigami.Units.smallSpacing
 
             Layout.fillWidth: true
+
+            Kirigami.Heading {
+                text: root.title
+                visible: root.title
+                elide: QQC2.Label.ElideRight
+                wrapMode: Text.WordWrap
+                Layout.fillWidth: true
+            }
         }
     }
-
 
     footer: QQC2.DialogButtonBox {
         leftPadding: Kirigami.Units.largeSpacing * 2
