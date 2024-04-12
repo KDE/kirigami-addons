@@ -57,12 +57,12 @@ T.Dialog {
 
     x: Math.round((parent.width - width) / 2)
     y: Math.round((parent.height - height) / 2)
+    z: Kirigami.OverlayZStacking.z
 
     parent: applicationWindow().QQC2.Overlay.overlay
 
     width: Math.min(parent.width - Kirigami.Units.gridUnit * 4, Kirigami.Units.gridUnit * 20)
 
-    z: Kirigami.OverlayZStacking.z
 
     implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
                             contentWidth + leftPadding + rightPadding,
