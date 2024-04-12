@@ -5,6 +5,7 @@
 #include <QQmlExtensionPlugin>
 #include <QQmlEngine>
 #include "nameutils.h"
+#include "messagedialoghelper.h"
 
 class ComponentsPlugin : public QQmlExtensionPlugin
 {
@@ -29,6 +30,10 @@ void ComponentsPlugin::registerTypes(const char *uri)
     qmlRegisterModule(uri, 1, 0);
     qmlRegisterSingletonType<NameUtils>(uri, 1, 0, "NameUtils", [](QQmlEngine*, QJSEngine*) -> QObject* {
         return new NameUtils;
+    });
+
+    qmlRegisterSingletonType<MessageDialogHelper>(uri, 1, 0, "MessageDialogHelper", [](QQmlEngine*, QJSEngine*) -> QObject* {
+        return new MessageDialogHelper;
     });
 }
 

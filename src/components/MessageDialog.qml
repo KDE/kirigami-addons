@@ -8,6 +8,7 @@ import QtQuick.Templates as T
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.components as Components
+import org.kde.kirigamiaddons.formcard as FormCard
 import org.kde.kirigamiaddons.delegates as Delegates
 
 /**
@@ -19,7 +20,7 @@ T.Dialog {
     id: root
 
     enum DialogType {
-        Sucess,
+        Success,
         Warning,
         Error,
         Information
@@ -28,14 +29,27 @@ T.Dialog {
     /**
      * This property holds the dialogType. It can be either:
      *
-     * - `MessageDialog.Sucess`: For a sucess message
+     * - `MessageDialog.Success`: For a sucess message
      * - `MessageDialog.Warning`: For a warning message
      * - `MessageDialog.Error`: For an actual error
      * - `MessageDialog.Information`: For an informational message
      *
-     * By default, the dialogType is `MessageDialog.Sucess`
+     * By default, the dialogType is `MessageDialog.Success`
      */
-    property int dialogType: MessageDialog.Sucess
+    property int dialogType: Components.MessageDialog.Success
+
+    /**
+     * @brief This property holds the name of setting to store the "dont's show again" preference.
+     *
+     * If provided, a checkbox is added with which further notifications can be turned off.
+     * The string is used to lookup and store the setting in the applications config file.
+     * The setting is stored in the "Notification Messages" group.
+     *
+     * When set use, openDialog() instead of open() to open this dialog.
+     *
+     * @warning Overwriting the dialog's footer will disable this feature.
+     */
+    property string dontShowAgainName: ''
 
     default property alias mainContent: mainLayout.data
 
@@ -59,8 +73,79 @@ T.Dialog {
                              + (implicitHeaderHeight > 0 ? implicitHeaderHeight + spacing : 0)
                              + (implicitFooterHeight > 0 ? implicitFooterHeight + spacing : 0))
 
+    title: switch (root.dialogType) {
+    case MessageDialog.Success:
+        return i18nc("@title:dialog", "Success");
+    case MessageDialog.Warning:
+        return i18nc("@title:dialog", "Warning");
+    case MessageDialog.Error:
+        return i18nc("@title:dialog", "Error");
+    case MessageDialog.Information:
+        return i18nc("@title:dialog", "Information");
+    default:
+        return i18nc("@title:dialog", "Warning");
+    }
+
     padding: Kirigami.Units.largeSpacing * 2
     bottomPadding: Kirigami.Units.largeSpacing
+
+    property bool _automaticallyClosed: false
+
+    /**
+     * Open the dialog only if the user didn't check the "do not remind me" checkbox
+     * previously.
+     */
+    function openDialog(): void {
+        if (root.dontShowAgainName) {
+            if (root.standardButtons === QQC2.Dialog.Ok) {
+                const show = MessageDialogHelper.shouldBeShownContinue(root.dontShowAgainName);
+                if (!show) {
+                    root._automaticallyClosed = true;
+                    root.accepted();
+                } else {
+                    checkbox.checked = false;
+                    root._automaticallyClosed = false;
+                    root.open();
+                }
+            } else {
+                const result = MessageDialogHelper.shouldBeShownTwoActions(root.dontShowAgainName);
+                if (!result.show) {
+                    root._automaticallyClosed = true;
+                    if (result.result) {
+                        root.accepted();
+                        root.close();
+                    } else {
+                        root.discarded();
+                        root.close();
+                    }
+                } else {
+                    checkbox.checked = false;
+                    root._automaticallyClosed = false;
+                    root.open();
+                }
+            }
+        }
+    }
+
+    onAccepted: {
+        if (root.dontShowAgainName && checkbox.checked && !root._automaticallyClosed) {
+            if (root.standardButtons === QQC2.Dialog.Ok) {
+                MessageDialogHelper.saveDontShowAgainContinue(root.dontShowAgainName);
+            } else {
+                MessageDialogHelper.saveDontShowAgainTwoActions(root.dontShowAgainName, true);
+            }
+        }
+    }
+
+    onDiscarded: {
+        if (root.dontShowAgainName && checkbox.checked && !root._automaticallyClosed) {
+            if (root.standardButtons === QQC2.Dialog.Ok) {
+                MessageDialogHelper.saveDontShowAgainContinue(root.dontShowAgainName);
+            } else {
+                MessageDialogHelper.saveDontShowAgainTwoActions(root.dontShowAgainName, false);
+            }
+        }
+    }
 
     contentItem: RowLayout {
         spacing: Kirigami.Units.largeSpacing
@@ -70,8 +155,8 @@ T.Dialog {
                     return root.iconName
                 }
                 switch (root.dialogType) {
-                case MessageDialog.Sucess:
-                    return "data-sucess";
+                case MessageDialog.Success:
+                    return "data-success";
                 case MessageDialog.Warning:
                     return "data-warning";
                 case MessageDialog.Error:
@@ -104,13 +189,35 @@ T.Dialog {
         }
     }
 
-    footer: QQC2.DialogButtonBox {
-        leftPadding: Kirigami.Units.largeSpacing * 2
-        rightPadding: Kirigami.Units.largeSpacing * 2
-        bottomPadding: Kirigami.Units.largeSpacing * 2
-        topPadding: Kirigami.Units.largeSpacing * 2
+    footer: RowLayout {
+        spacing: Kirigami.Units.largeSpacing
 
-        standardButtons: root.standardButtons
+        FormCard.FormCheckDelegate {
+            id: checkbox
+
+            visible: dontShowAgainName.length > 0
+
+            text: i18nc("@label:checkbox", "Do not show again")
+            background: null
+
+            Layout.fillWidth: true
+        }
+
+        QQC2.DialogButtonBox {
+            leftPadding: Kirigami.Units.largeSpacing * 2
+            rightPadding: Kirigami.Units.largeSpacing * 2
+            bottomPadding: Kirigami.Units.largeSpacing * 2
+            topPadding: Kirigami.Units.largeSpacing * 2
+
+            standardButtons: root.standardButtons
+
+            onAccepted: root.accepted();
+            onDiscarded: root.discarded();
+            onApplied: root.applied();
+            onHelpRequested: root.helpRequested();
+
+            Layout.fillWidth: true
+        }
     }
 
     enter: Transition {

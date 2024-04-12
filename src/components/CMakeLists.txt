@@ -39,6 +39,8 @@ ecm_add_qml_module(componentsplugin URI "org.kde.kirigamiaddons.components" VERS
 target_sources(componentsplugin PRIVATE
     nameutils.h
     nameutils.cpp
+    messagedialoghelper.h
+    messagedialoghelper.cpp
     componentsplugin.cpp
 )
 
@@ -59,6 +61,7 @@ ecm_target_qml_sources(componentsplugin SOURCES
 target_link_libraries(componentsplugin PRIVATE
     Qt6::Quick
     Qt6::Qml
+    KF6::ConfigCore
     Qt6::QuickControls2
 )
 
