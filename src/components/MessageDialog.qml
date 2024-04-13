@@ -215,6 +215,7 @@ T.Dialog {
             onDiscarded: root.discarded();
             onApplied: root.applied();
             onHelpRequested: root.helpRequested();
+            onRejected: root.rejected();
 
             Layout.fillWidth: true
         }

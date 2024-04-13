@@ -100,6 +100,7 @@ QQC2.Dialog {
 
             onAccepted: root.accepted();
             onDiscarded: root.discarded();
+            onRejected: root.rejected();
             onApplied: root.applied();
             onHelpRequested: root.helpRequested();
 
