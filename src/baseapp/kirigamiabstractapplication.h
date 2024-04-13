@@ -75,6 +75,9 @@ class KIRIGAMIADDONSBASEAPP_EXPORT KirigamiAbstractApplication : public QObject
     /// @internal Used by ManagedApp.ManagedWindow
     Q_PROPERTY(QSortFilterProxyModel *actionsModel READ actionsModel CONSTANT)
 
+    /// @internal Used by ManagedApp.ManagedWindow
+    Q_PROPERTY(QAbstractListModel *shortcutsModel READ shortcutsModel CONSTANT)
+
 public:
     /**
      * Default constructor of KirigamiAbstractApplication
@@ -97,14 +100,14 @@ public:
     /// @internal Used by ManagedApp.MainWindow
     QSortFilterProxyModel *actionsModel();
 
+    /// @internal Used by the shortcuts editor
+    QAbstractListModel *shortcutsModel();
+
     /// @internal Used by ManagedApp.Action
     Q_INVOKABLE QAction *action(const QString &actionName);
 
     /// @internal Used by ManagedApp.Action
     Q_INVOKABLE QString iconName(const QIcon &icon) const;
-
-    /// @internal Used by ManagedApp.MainWindow
-    Q_INVOKABLE void configureShortcuts();
 
 Q_SIGNALS:
     /// @internal Used by ManagedApp.MainWindow
@@ -115,6 +118,9 @@ Q_SIGNALS:
 
     /// @internal Used by ManagedApp.MainWindow
     void openKCommandBarAction();
+
+    /// @internal Used by ManagedApp.MainWindow
+    void shortcutsEditorAction();
 
 protected:
     /**
