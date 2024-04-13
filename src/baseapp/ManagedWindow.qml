@@ -62,6 +62,16 @@ Kirigami.ApplicationWindow {
             kcommandbarLoader.active = true;
         }
 
+        function onShortcutsEditorAction(): void {
+            const openDialogWindow = pageStack.pushDialogLayer(Qt.createComponent('./private/ShortcutsEditor.qml'), {
+                width: root.width,
+                model: root.application.shortcutsModel,
+            }, {
+                width: Kirigami.Units.gridUnit * 30,
+                height: Kirigami.Units.gridUnit * 30
+            });
+        }
+
         function onOpenAboutPage(): void {
             const openDialogWindow = pageStack.pushDialogLayer(Qt.createComponent("org.kde.kirigamiaddons.formcard", "AboutPage"), {
                 width: root.width

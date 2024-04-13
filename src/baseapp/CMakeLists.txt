@@ -18,6 +18,8 @@ add_library(KirigamiAddonsBaseApp SHARED
     actionsmodel_p.h
     commandbarfiltermodel.cpp
     commandbarfiltermodel_p.h
+    shortcutsmodel.cpp
+    shortcutsmodel_p.h
 )
 
 set_target_properties(KirigamiAddonsBaseApp PROPERTIES
@@ -90,6 +92,7 @@ ecm_target_qml_sources(KirigamiAddonsBaseApp SOURCES
 
 ecm_target_qml_sources(KirigamiAddonsBaseApp PATH private SOURCES
     private/KQuickCommandBarPage.qml
+    private/ShortcutsEditor.qml
 )
 
 ecm_finalize_qml_module(KirigamiAddonsBaseApp DESTINATION ${KDE_INSTALL_QMLDIR})

@@ -4,6 +4,7 @@
 #include "kirigamiabstractapplication.h"
 #include "commandbarfiltermodel_p.h"
 #include "actionsmodel_p.h"
+#include "shortcutsmodel_p.h"
 #include <KAboutData>
 #include <KAuthorized>
 #include <KConfigGroup>
@@ -13,12 +14,13 @@
 #include <QDebug>
 #include <QGuiApplication>
 
-
-struct KirigamiAbstractApplication::Private
+class KirigamiAbstractApplication::Private
 {
+public:
     KalCommandBarModel *actionModel = nullptr;
     QSortFilterProxyModel *proxyModel = nullptr;
     KirigamiActionCollection *collection = nullptr;
+    ShortcutsModel *shortcutsModel = nullptr;
 };
 
 KirigamiAbstractApplication::KirigamiAbstractApplication(QObject *parent)
@@ -87,16 +89,14 @@ QSortFilterProxyModel *KirigamiAbstractApplication::actionsModel()
     return d->proxyModel;
 }
 
-void KirigamiAbstractApplication::configureShortcuts()
+QAbstractListModel *KirigamiAbstractApplication::shortcutsModel()
 {
-    // TODO replace with QML version
-    //KShortcutsDialog dlg(KShortcutsEditor::ApplicationAction, KShortcutsEditor::LetterShortcutsAllowed, nullptr);
-    //dlg.setModal(true);
-    //const auto collections = actionCollections();
-    //for (const auto collection : collections) {
-    //    dlg.addCollection(collection);
-    //}
-    //dlg.configure();
+    if (!d->shortcutsModel) {
+        d->shortcutsModel = new ShortcutsModel(this);
+    }
+
+    d->shortcutsModel->refresh(actionCollectionToActionGroup(actionCollections()));
+    return d->shortcutsModel;
 }
 
 QAction *KirigamiAbstractApplication::action(const QString &name)
@@ -146,7 +146,7 @@ void KirigamiAbstractApplication::setupActions()
 
     actionName = QLatin1StringView("options_configure_keybinding");
     if (KAuthorized::authorizeAction(actionName)) {
-        auto keyBindingsAction = KirigamiStandardAction::keyBindings(this, &KirigamiAbstractApplication::configureShortcuts, this);
+        auto keyBindingsAction = KirigamiStandardAction::keyBindings(this, &KirigamiAbstractApplication::shortcutsEditorAction, this);
         d->collection->addAction(keyBindingsAction->objectName(), keyBindingsAction);
     }
 
