@@ -87,13 +87,13 @@ Q_DECL_EXPORT jint JNICALL JNI_OnLoad(JavaVM *vm, void *)
 
 void AndroidIntegration::showDatePicker(qint64 initialDate)
 {
-    QJniObject picker("org/kde/kirigamiaddons/dateandtime/DatePicker", "(Landroid/app/Activity;J)V", QNativeInterface::QAndroidApplication::context(), initialDate);
+    QJniObject picker("org/kde/kirigamiaddons/dateandtime/DatePicker", "(Landroid/app/Activity;J)V", QNativeInterface::QAndroidApplication::context().object<jobject>(), initialDate);
     picker.callMethod<void>("doShow");
 }
 
 void AndroidIntegration::showTimePicker(qint64 initialTime)
 {
-    QJniObject picker("org/kde/kirigamiaddons/dateandtime/TimePicker", "(Landroid/app/Activity;J)V", QNativeInterface::QAndroidApplication::context(), initialTime);
+    QJniObject picker("org/kde/kirigamiaddons/dateandtime/TimePicker", "(Landroid/app/Activity;J)V", QNativeInterface::QAndroidApplication::context().object<jobject>(), initialTime);
     picker.callMethod<void>("doShow");
 }
 
