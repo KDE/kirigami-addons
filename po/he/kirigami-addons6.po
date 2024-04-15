@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-14 00:37+0000\n"
-"PO-Revision-Date: 2024-04-08 18:11+0300\n"
+"PO-Revision-Date: 2024-04-14 16:37+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -85,31 +85,31 @@ msgstr "הורדה"
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
-msgstr ""
+msgstr "הצלחה"
 
 #: components/MessageDialog.qml:80 components/MessageDialog.qml:86
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
-msgstr ""
+msgstr "אזהרה"
 
 #: components/MessageDialog.qml:82
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
-msgstr ""
+msgstr "שגיאה"
 
 #: components/MessageDialog.qml:84
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
-msgstr ""
+msgstr "פרטים"
 
 #: components/MessageDialog.qml:200
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
-msgstr ""
+msgstr "לא להציג שוב"
 
 #: components/VideoMaximizeDelegate.qml:265
 #, kde-format
