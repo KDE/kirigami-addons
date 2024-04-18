@@ -6,6 +6,7 @@
 #include <kirigamiaddonsbaseapp_export.h>
 #include <QObject>
 #include <QSortFilterProxyModel>
+#include <QtQml>
 
 /**
  * @class KirigamiAbstractApplication kirigamiabstractapplication.h KirigamiAbstractApplication
@@ -71,6 +72,8 @@
 class KIRIGAMIADDONSBASEAPP_EXPORT KirigamiAbstractApplication : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_UNCREATABLE("Abstract class")
 
     /// @internal Used by ManagedApp.ManagedWindow
     Q_PROPERTY(QSortFilterProxyModel *actionsModel READ actionsModel CONSTANT)

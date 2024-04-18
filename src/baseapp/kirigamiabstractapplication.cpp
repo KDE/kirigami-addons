@@ -140,13 +140,13 @@ void KirigamiAbstractApplication::setupActions()
 
     actionName = QLatin1StringView("file_quit");
     if (KAuthorized::authorizeAction(actionName)) {
-        auto action = KirigamiStandardAction::quit(this, &KirigamiAbstractApplication::quit, this);
+        auto action = KStandardActions::quit(this, &KirigamiAbstractApplication::quit, this);
         d->collection->addAction(action->objectName(), action);
     }
 
     actionName = QLatin1StringView("options_configure_keybinding");
     if (KAuthorized::authorizeAction(actionName)) {
-        auto keyBindingsAction = KirigamiStandardAction::keyBindings(this, &KirigamiAbstractApplication::shortcutsEditorAction, this);
+        auto keyBindingsAction = KStandardActions::keyBindings(this, &KirigamiAbstractApplication::shortcutsEditorAction, this);
         d->collection->addAction(keyBindingsAction->objectName(), keyBindingsAction);
     }
 

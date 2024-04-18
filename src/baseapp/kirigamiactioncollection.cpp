@@ -70,6 +70,7 @@ KirigamiActionCollection::KirigamiActionCollection(QObject *parent, const QStrin
     : QObject(parent)
     , d(new KirigamiActionCollectionPrivate(this))
 {
+    setObjectName(cName);
     KirigamiActionCollectionPrivate::s_allCollections.append(this);
 }
 
@@ -278,35 +279,6 @@ QAction *KirigamiActionCollection::takeAction(QAction *action)
 
     Q_EMIT changed();
     return action;
-}
-
-QAction *KirigamiActionCollection::addAction(KirigamiStandardAction::StandardAction actionType, const QObject *receiver, const char *member)
-{
-    QAction *action = KirigamiStandardAction::create(actionType, receiver, member, this);
-    return action;
-}
-
-QAction *KirigamiActionCollection::addAction(KirigamiStandardAction::StandardAction actionType, const QString &name, const QObject *receiver, const char *member)
-{
-    // pass 0 as parent, because if the parent is a KirigamiActionCollection KirigamiStandardAction::create automatically
-    // adds the action to it under the default name. We would trigger the
-    // warning about renaming the action then.
-    QAction *action = KirigamiStandardAction::create(actionType, receiver, member, nullptr);
-    // Give it a parent for gc.
-    action->setParent(this);
-    // Remove the name to get rid of the "rename action" warning above
-    action->setObjectName(name);
-    // And now add it with the desired name.
-    return addAction(name, action);
-}
-
-QAction *KirigamiActionCollection::addAction(const QString &name, const QObject *receiver, const char *member)
-{
-    QAction *a = new QAction(this);
-    if (receiver && member) {
-        connect(a, SIGNAL(triggered(bool)), receiver, member);
-    }
-    return addAction(name, a);
 }
 
 QKeySequence KirigamiActionCollection::defaultShortcut(QAction *action)
