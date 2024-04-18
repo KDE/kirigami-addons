@@ -102,6 +102,7 @@ QQC2.Dialog {
             onDiscarded: root.discarded();
             onRejected: root.rejected();
             onApplied: root.applied();
+            onReset: root.reset();
             onHelpRequested: root.helpRequested();
 
             Layout.fillWidth: true
