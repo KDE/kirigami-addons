@@ -9,18 +9,29 @@ import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCard
+import org.kde.kirigamiaddons.baseapp as BaseApp
 
+/**
+ * @brief MainWindow represents a top-level main window.
+ *
+ * MainWindow will takes care of providing standard functionalities for your application
+ * main window. This includes stateful window size which is remembered accross application
+ * restart, command bar, handling of standard shortcuts.
+ *
+ * @since 1.3.0
+ */
 Kirigami.ApplicationWindow {
     id: root
 
-    required property var application
+    required property BaseApp.KirigamiAbstractApplication application
 
     property Item hoverLinkIndicator: QQC2.Control {
         parent: overlay.parent
         property alias text: linkText.text
         opacity: text.length > 0 ? 1 : 0
 
-        z: 99999
+        Kirigami.OverlayZStacking.layer: Kirigami.OverlayZStacking.Drawer
+        z: Kirigami.OverlayZStacking.z
         x: 0
         y: parent.height - implicitHeight
         contentItem: QQC2.Label {
@@ -89,7 +100,6 @@ Kirigami.ApplicationWindow {
                 height: Kirigami.Units.gridUnit * 30
             });
         }
-
     }
 
     Loader {
@@ -98,6 +108,7 @@ Kirigami.ApplicationWindow {
         sourceComponent: KQuickCommandBarPage {
             application: root.application
             onClosed: kcommandbarLoader.active = false
+            parent: root.QQC2.Overlay.overlay
         }
         onActiveChanged: if (active) {
             item.open()

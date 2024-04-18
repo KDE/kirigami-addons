@@ -15,7 +15,7 @@
 #pragma once
 
 #include <kirigamiaddonsbaseapp_export.h>
-#include <kirigamistandardaction.h>
+#include <KStandardActions>
 
 #include <QAction>
 #include <QObject>
@@ -204,7 +204,6 @@ Q_SIGNALS:
 
     /**
      * Emitted when an action has been inserted into, or removed from, this action collection.
-     * @since 5.66
      */
     void changed();
 
@@ -266,7 +265,6 @@ public:
      * @param actions the list of the actions to add.
      *
      * @see addAction()
-     * @since 5.0
      */
     void addActions(const QList<QAction *> &actions);
 
@@ -285,147 +283,53 @@ public:
      */
     QAction *takeAction(QAction *action);
 
+#ifdef K_DOXYGEN
     /**
      * Creates a new standard action, adds it to the collection and connects the
      * action's triggered(bool) signal to the specified receiver/member. The
      * newly created action is also returned.
      *
-     * @note Using KirigamiStandardAction::OpenRecent will cause a different signal than
-     * triggered(bool) to be used, see KirigamiStandardAction for more information.
-     *
      * The action can be retrieved later from the collection by its standard name as per
-     * KirigamiStandardAction::stdName.
-     *
-     * The KirigamiActionCollection takes ownership of the action object.
-     *
-     * @param actionType The standard action type of the action to create.
-     * @param receiver The QObject to connect the triggered(bool) signal to.  Leave nullptr if no
-     *                 connection is desired.
-     * @param member The SLOT to connect the triggered(bool) signal to.  Leave nullptr if no
-     *               connection is desired.
-     * @return new action of the given type ActionType.
-     */
-    QAction *addAction(KirigamiStandardAction::StandardAction actionType, const QObject *receiver = nullptr, const char *member = nullptr);
-
-    /**
-     * Creates a new standard action, adds to the collection under the given name
-     * and connects the action's triggered(bool) signal to the specified
-     * receiver/member. The newly created action is also returned.
-     *
-     * @note Using KirigamiStandardAction::OpenRecent will cause a different signal than
-     * triggered(bool) to be used, see KirigamiStandardAction for more information.
-     *
-     * The action can be retrieved later from the collection by the specified name.
+     * KStandardActions::stdName.
      *
      * The KirigamiActionCollection takes ownership of the action object.
      *
      * @param actionType The standard action type of the action to create.
      * @param name The name by which the action be retrieved again from the collection.
-     * @param receiver The QObject to connect the triggered(bool) signal to.  Leave nullptr if no
-     *                 connection is desired.
-     * @param member The SLOT to connect the triggered(bool) signal to.  Leave nullptr if no
-     *               connection is desired.
+     * @param receiver The QObject to connect the triggered(bool) signal to.
+     * @param slot The slot or lambda to connect the triggered(bool) signal to.
      * @return new action of the given type ActionType.
      */
-    QAction *addAction(KirigamiStandardAction::StandardAction actionType, const QString &name, const QObject *receiver = nullptr, const char *member = nullptr);
-
-/**
- * This is the same as addAction(KirigamiStandardAction::StandardAction actionType, const QString &name, const QObject *receiver, const char *member) using
- * new style connect syntax.
- *
- * @param actionType The standard action type of the action to create.
- * @param name The name by which the action be retrieved again from the collection.
- * @param receiver The QObject to connect the triggered(bool) signal to.
- * @param slot The slot or lambda to connect the triggered(bool) signal to.
- * @return new action of the given type ActionType.
- *
- * @see addAction(KirigamiStandardAction::StandardAction, const QString &, const QObject *, const char *)
- * @since 5.80
- */
-#ifdef K_DOXYGEN
-    inline QAction *addAction(KirigamiStandardAction::StandardAction actionType, const QString &name, const Receiver *receiver, Func slot)
+    inline QAction *addAction(KStandardActions::StandardAction actionType, const QString &name, const Receiver *receiver, Func slot)
 #else
     template<class Receiver, class Func>
     inline typename std::enable_if<!std::is_convertible<Func, const char *>::value, QAction>::type *
-    addAction(KirigamiStandardAction::StandardAction actionType, const QString &name, const Receiver *receiver, Func slot)
+    addAction(KStandardActions::StandardAction actionType, const QString &name, const Receiver *receiver, Func slot)
 #endif
     {
-        QAction *action = KirigamiStandardAction::create(actionType, receiver, slot, nullptr);
+        QAction *action = KStandardActions::create(actionType, receiver, slot, nullptr);
         action->setParent(this);
         action->setObjectName(name);
         return addAction(name, action);
     }
 
+#ifdef K_DOXYGEN
     /**
-     * Creates a new action under the given name to the collection and connects
-     * the action's triggered(bool) signal to the specified receiver/member. The
-     * newly created action is returned.
+     * Creates a new action under the given name, adds it to the collection and
+     * connects the action's triggered(bool) signal to the specified
+     * receiver/member.
      *
-     * NOTE: KDE prior to 4.2 used the triggered() signal instead of the triggered(bool)
-     * signal.
-     *
-     * Inserting an action that was previously inserted under a different name will replace the
-     * old entry, i.e. the action will not be available under the old name anymore but only under
-     * the new one.
-     *
-     * Inserting an action under a name that is already used for another action will replace
-     * the other action in the collection.
-     *
-     * The KirigamiActionCollection takes ownership of the action object.
-     *
-     * @param name The name by which the action be retrieved again from the collection.
-     * @param receiver The QObject to connect the triggered(bool) signal to.  Leave nullptr if no
-     *                 connection is desired.
-     * @param member The SLOT to connect the triggered(bool) signal to.  Leave nullptr if no
-     *               connection is desired.
-     * @return new action of the given type ActionType.
-     */
-    QAction *addAction(const QString &name, const QObject *receiver = nullptr, const char *member = nullptr);
-
-    /**
-     * Creates a new action under the given name, adds it to the collection and connects the action's triggered(bool)
-     * signal to the specified receiver/member. The receiver slot may accept either a bool or no
-     * parameters at all (i.e. slotTriggered(bool) or slotTriggered() ).
      * The type of the action is specified by the template parameter ActionType.
-     *
-     * NOTE: KDE prior to 4.2 connected the triggered() signal instead of the triggered(bool)
-     * signal.
      *
      * The KirigamiActionCollection takes ownership of the action object.
      *
      * @param name The internal name of the action (e.g. "file-open").
-     * @param receiver The QObject to connect the triggered(bool) signal to.  Leave nullptr if no
-     *                 connection is desired.
-     * @param member The SLOT to connect the triggered(bool) signal to.  Leave nullptr if no
-     *               connection is desired.
+     * @param receiver The QObject to connect the triggered(bool) signal to.
+     * @param slot The slot or lambda to connect the triggered(bool) signal to.
      * @return new action of the given type ActionType.
      *
-     * @see addAction()
+     * @see add(const QString &, const QObject *, const char *)
      */
-    template<class ActionType>
-    ActionType *add(const QString &name, const QObject *receiver = nullptr, const char *member = nullptr)
-    {
-        ActionType *a = new ActionType(this);
-        if (receiver && member) {
-            connect(a, SIGNAL(triggered(bool)), receiver, member);
-        }
-        addAction(name, a);
-        return a;
-    }
-
-/**
- * This is the same as add(const QString &name, const QObject *receiver, const char *member) using
- * new style connect syntax.
- *
- * @param name The internal name of the action (e.g. "file-open").
- * @param receiver The QObject to connect the triggered(bool) signal to.
- * @param slot The slot or lambda to connect the triggered(bool) signal to.
- * @return new action of the given type ActionType.
- *
- * @see add(const QString &, const QObject *, const char *)
- * @since 5.28
- */
-#ifdef K_DOXYGEN
     template<class ActionType>
     inline ActionType *add(const QString &name, const Receiver *receiver, Func slot)
 #else
@@ -440,19 +344,17 @@ public:
         return a;
     }
 
-/**
- * This is the same as addAction(const QString &name, const QObject *receiver, const char *member) using
- * new style connect syntax.
- *
- * @param name The internal name of the action (e.g. "file-open").
- * @param receiver The QObject to connect the triggered(bool) signal to.
- * @param slot The slot or lambda to connect the triggered(bool) signal to.
- * @return new action of the given type ActionType.
- *
- * @see addAction(const QString &, const QObject *, const char *)
- * @since 5.28
- */
 #ifdef K_DOXYGEN
+    /**
+     * Creates a new action under the given name to the collection and connects
+     * the action's triggered(bool) signal to the specified receiver/member. The
+     * newly created action is returned.
+     *
+     * @param name The internal name of the action (e.g. "file-open").
+     * @param receiver The QObject to connect the triggered(bool) signal to.
+     * @param slot The slot or lambda to connect the triggered(bool) signal to.
+     * @return new action of the given type ActionType.
+     */
     inline QAction *addAction(const QString &name, const Receiver *receiver, Func slot)
 #else
     template<class Receiver, class Func>
@@ -468,7 +370,6 @@ public:
      *
      * @param action the action for which the default primary shortcut should be returned.
      * @return the default primary shortcut of the given action
-     * @since 5.0
      */
     static QKeySequence defaultShortcut(QAction *action);
 
@@ -477,29 +378,22 @@ public:
      *
      * @param action the action for which the default shortcuts should be returned.
      * @return the default shortcuts of the given action
-     * @since 5.0
      */
     static QList<QKeySequence> defaultShortcuts(QAction *action);
 
     /**
      * Set the default shortcut for the given action.
-     * Since 5.2, this also calls action->setShortcut(shortcut), i.e. the default shortcut is
-     * made active initially.
      *
      * @param action the action for which the default shortcut should be set.
      * @param shortcut the shortcut to use for the given action in its specified shortcutContext()
-     * @since 5.0
      */
     static void setDefaultShortcut(QAction *action, const QKeySequence &shortcut);
 
     /**
      * Set the default shortcuts for the given action.
-     * Since 5.2, this also calls action->setShortcuts(shortcuts), i.e. the default shortcut is
-     * made active initially.
      *
      * @param action the action for which the default shortcut should be set.
      * @param shortcuts the shortcuts to use for the given action in its specified shortcutContext()
-     * @since 5.0
      */
     Q_INVOKABLE static void setDefaultShortcuts(QAction *action, const QList<QKeySequence> &shortcuts);
 
@@ -507,7 +401,6 @@ public:
      * Returns true if the given action's shortcuts may be configured by the user.
      *
      * @param action the action for the hint should be verified.
-     * @since 5.0
      */
     static bool isShortcutsConfigurable(QAction *action);
 
@@ -516,7 +409,6 @@ public:
      *
      * @param action the action for the hint should be verified.
      * @param configurable set to true if the shortcuts of the given action may be configured by the user, otherwise false.
-     * @since 5.0
      */
     static void setShortcutsConfigurable(QAction *action, bool configurable);
 

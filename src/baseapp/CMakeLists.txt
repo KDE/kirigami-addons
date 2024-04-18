@@ -6,8 +6,6 @@
 add_library(KirigamiAddonsBaseApp SHARED
     kirigamiactioncollection.cpp
     kirigamiactioncollection.h
-    kirigamistandardaction.cpp
-    kirigamistandardaction.h
     kirigamitoggleaction.cpp
     kirigamitoggleaction.h
     kirigamiguiitem.cpp
@@ -52,7 +50,6 @@ ecm_qt_declare_logging_category(KirigamiAddonsBaseApp
 
 ecm_generate_headers(KirigamiAddonsBaseApp_HEADERS
     HEADER_NAMES
-    KirigamiStandardAction
     KirigamiToggleAction
     KirigamiActionCollection
     KirigamiGuiItem
