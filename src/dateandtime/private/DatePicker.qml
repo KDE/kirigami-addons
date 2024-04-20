@@ -21,6 +21,7 @@ QQC2.Control {
     readonly property int day: selectedDate.getDate()
     property bool showDays: true
     property bool showControlHeader: true
+    readonly property bool __kirigami_dateandtime_marker__: true
 
     /**
      * This property holds the minimum date (inclusive) that the user can select.
