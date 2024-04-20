@@ -314,6 +314,7 @@ QQC2.Control {
                 id: monthPathView
 
                 mainView: pickerView
+                enabled: QQC2.SwipeView.isCurrentItem
 
                 model: InfiniteCalendarViewModel {
                     scale: InfiniteCalendarViewModel.MonthScale
@@ -322,6 +323,7 @@ QQC2.Control {
                     maximumDate: root.maximumDate
                     datesToAdd: 10
                 }
+
 
                 delegate: Loader {
                     id: monthViewLoader
@@ -360,6 +362,7 @@ QQC2.Control {
                                 leftPadding: Kirigami.Units.mediumSpacing
                                 opacity: 0.7
                                 text: modelData
+                                Accessible.ignored: true
                             }
                         }
 
@@ -383,11 +386,8 @@ QQC2.Control {
 
                                 horizontalPadding: 0
 
-                                Accessible.name: if (dayNumber === 1 || index === 0) {
-                                    date.toLocaleDateString(locale, Locale.ShortFormat)
-                                } else {
-                                    dayNumber
-                                }
+                                Accessible.name: date.toLocaleDateString(locale, Locale.ShortFormat)
+                                Accessible.ignored: !monthPathView.QQC2.SwipeView.isCurrentItem || !monthViewLoader.PathView.isCurrentItem
 
                                 background {
                                     visible: sameMonth
@@ -471,6 +471,9 @@ QQC2.Control {
                                 previousAction: goPreviousAction
                                 nextAction: goNextAction
 
+                                Accessible.ignored: !yearPathView.QQC2.SwipeView.isCurrentItem || !yearViewLoader.PathView.isCurrentItem
+                                Accessible.name: date.toLocaleDateString(Qt.locale(), "MMMM yyyy")
+
                                 horizontalPadding: padding * 2
                                 rightPadding: undefined
                                 leftPadding: undefined
@@ -547,6 +550,8 @@ QQC2.Control {
                                 id: yearDelegate
 
                                 readonly property bool sameDecade: Math.floor(date.getFullYear() / 10) == Math.floor(year / 10)
+
+                                Accessible.ignored: !decadePathView.QQC2.SwipeView.isCurrentItem || !decadeViewLoader.PathView.isCurrentItem
 
                                 date: new Date(startDate.getFullYear() + index, 0)
                                 minimumDate: root.minimumDate.valueOf() ? new Date(root.minimumDate.getFullYear(), 0, 0) : new Date("invalid")

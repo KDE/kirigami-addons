@@ -65,6 +65,8 @@ RowLayout {
         verticalAlignment: Text.AlignVCenter
         Layout.alignment: Qt.AlignLeft
         Layout.fillWidth: true
+
+        Accessible.ignored: true
     }
 }
 
