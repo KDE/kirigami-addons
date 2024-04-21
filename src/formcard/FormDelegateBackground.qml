@@ -32,7 +32,7 @@ Kirigami.ShadowedRectangle {
     required property T.Control control
 
     readonly property bool _roundCorners: control.parent._roundCorners === true
-    readonly property bool _isFirst: _roundCorners && control.parent.visualChildren[0] === control
+    readonly property bool _isFirst: _roundCorners && control.parent.children[0] === control
     readonly property bool _isLast: _roundCorners && control.parent.children[control.parent.children.length - 1] === control
 
     color: {
