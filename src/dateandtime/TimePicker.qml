@@ -99,7 +99,7 @@ RowLayout {
         } else if (_isAmPm && _pm) {
             i18ndc("kirigami-addons6", "time in hour (PM)", "%1 PM", currentIndex + 12)
         } else {
-            i18ndc("kirigami-addons6", "time in hour (AM)", "%1 AM", currentIndex)
+            i18ndc("kirigami-addons6", "time in hour (AM)", "%1 AM", currentIndex === 0 ? 12 : currentIndex)
         }
         Accessible.role: Accessible.Dial
         Accessible.onDecreaseAction: hoursTumbler.currentIndex = (hoursTumbler.currentIndex + hoursTumbler.model - 1) % hoursTumbler.model
