@@ -174,7 +174,7 @@ AbstractFormDelegate {
      *
      * @see DisplayMode
      */
-    property int displayMode: FormComboBoxDelegate.Dialog
+    property int displayMode: Kirigami.Settings.isMobile ? FormComboBoxDelegate.Dialog : FormComboBoxDelegate.ComboBox
 
     /**
      * @brief The delegate component to use as entries in the combobox display mode.
