@@ -104,6 +104,11 @@ RowLayout {
         Accessible.role: Accessible.Dial
         Accessible.onDecreaseAction: hoursTumbler.currentIndex = (hoursTumbler.currentIndex + hoursTumbler.model - 1) % hoursTumbler.model
         Accessible.onIncreaseAction: hoursTumbler.currentIndex = (hoursTumbler.currentIndex + 1) % hoursTumbler.model
+        // a11y value interface
+        property int minimumValue: 0
+        property int maximumValue: root._isAmPm ? 11 : 23
+        property alias value: hoursTumbler.currentIndex
+
         focus: true
     }
 
@@ -128,6 +133,10 @@ RowLayout {
         Accessible.role: Accessible.Dial
         Accessible.onDecreaseAction: minutesTumbler.currentIndex = (minutesTumbler.currentIndex + 59) % 60
         Accessible.onIncreaseAction: minutesTumbler.currentIndex = (minutesTumbler.currentIndex + 1) % 60
+        // a11y value interface
+        property int minimumValue: 0
+        property int maximumValue: 59
+        property alias value: minutesTumbler.currentIndex
     }
 
     Tumbler {
