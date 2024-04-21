@@ -174,7 +174,7 @@ AbstractFormDelegate {
      *
      * @see DisplayMode
      */
-    property int displayMode: Kirigami.Settings.isMobile ? FormComboBoxDelegate.Dialog : FormComboBoxDelegate.ComboBox
+    property int displayMode: FormComboBoxDelegate.Dialog
 
     /**
      * @brief The delegate component to use as entries in the combobox display mode.
@@ -183,19 +183,18 @@ AbstractFormDelegate {
         implicitWidth: ListView.view ? ListView.view.width : Kirigami.Units.gridUnit * 16
         text: controlRoot.textRole ? (Array.isArray(controlRoot.model) ? modelData[controlRoot.textRole] : model[controlRoot.textRole]) : modelData
         highlighted: controlRoot.currentIndex === index
-        Kirigami.Theme.colorSet: controlRoot.Kirigami.Theme.inherit ? controlRoot.Kirigami.Theme.colorSet : Kirigami.Theme.View
-        Kirigami.Theme.inherit: controlRoot.Kirigami.Theme.inherit
     }
 
     /**
      * @brief The delegate component to use as entries for each value in the dialog and page display mode.
      */
-    property Component dialogDelegate: QQC2.RadioDelegate {
+    property Component dialogDelegate: Delegates.RoundedItemDelegate {
         implicitWidth: ListView.view ? ListView.view.width : Kirigami.Units.gridUnit * 16
         text: controlRoot.textRole ? (Array.isArray(controlRoot.model) ? modelData[controlRoot.textRole] : model[controlRoot.textRole]) : modelData
         checked: controlRoot.currentIndex === index
-        Kirigami.Theme.colorSet: controlRoot.Kirigami.Theme.inherit ? controlRoot.Kirigami.Theme.colorSet : Kirigami.Theme.View
-        Kirigami.Theme.inherit: controlRoot.Kirigami.Theme.inherit
+
+        Layout.topMargin: index == 0 ? Math.round(Kirigami.Units.smallSpacing / 2) : 0
+
         onClicked: {
             controlRoot.currentIndex = index;
             controlRoot.activated(index);
