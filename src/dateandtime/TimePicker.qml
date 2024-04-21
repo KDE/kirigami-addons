@@ -94,20 +94,22 @@ RowLayout {
         onCurrentIndexChanged: if (_init) {
             hours = currentIndex + (_isAmPm && _pm ? 12 : 0)
         }
-        Accessible.name: if (!_isAmPm) {
-            i18ndc("kirigami-addons6", "time in hour in 24h format", "%1 hours", root.hours)
-        } else if (_isAmPm && _pm) {
-            i18ndc("kirigami-addons6", "time in hour (PM)", "%1 PM", currentIndex + 12)
-        } else {
-            i18ndc("kirigami-addons6", "time in hour (AM)", "%1 AM", currentIndex)
-        }
+        Accessible.name: i18nd("kirigami-addons6", "Hours")
         Accessible.role: Accessible.Dial
         Accessible.onDecreaseAction: hoursTumbler.currentIndex = (hoursTumbler.currentIndex + hoursTumbler.model - 1) % hoursTumbler.model
         Accessible.onIncreaseAction: hoursTumbler.currentIndex = (hoursTumbler.currentIndex + 1) % hoursTumbler.model
         // a11y value interface
-        property int minimumValue: 0
-        property int maximumValue: root._isAmPm ? 11 : 23
-        property alias value: hoursTumbler.currentIndex
+        property int minimumValue: root._isAmPm ? 1 : 0
+        property int maximumValue: root._isAmPm ? 12 : 23
+        property int stepSize: 1
+        property int value: root.hours
+        onValueChanged: {
+            if (root._isAmPm && value === 12)
+                hoursTumbler.currentIndex = 0;
+            else
+                hoursTumbler.currentIndex = value;
+            hoursTumbler.value = Qt.binding(function() { return root.hours; });
+        }
 
         focus: true
     }
@@ -129,13 +131,14 @@ RowLayout {
             minutes = currentIndex;
         }
 
-        Accessible.name: i18ndc("kirigami-addons6", "number of minutes", "%1 minutes", root.minutes)
+        Accessible.name: i18nd("kirigami-addons6", "Minutes")
         Accessible.role: Accessible.Dial
         Accessible.onDecreaseAction: minutesTumbler.currentIndex = (minutesTumbler.currentIndex + 59) % 60
         Accessible.onIncreaseAction: minutesTumbler.currentIndex = (minutesTumbler.currentIndex + 1) % 60
         // a11y value interface
         property int minimumValue: 0
         property int maximumValue: 59
+        property int stepSize: 1
         property alias value: minutesTumbler.currentIndex
     }
 
