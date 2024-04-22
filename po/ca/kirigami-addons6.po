@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-14 00:37+0000\n"
+"POT-Creation-Date: 2024-04-22 00:37+0000\n"
 "PO-Revision-Date: 2024-04-14 09:26+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -149,34 +149,24 @@ msgctxt "@action:button"
 msgid "Go Next"
 msgstr "Ves a la següent"
 
-#: dateandtime/TimePicker.qml:98
-#, kde-format
-msgctxt "time in hour in 24h format"
-msgid "%1 hours"
+#: dateandtime/TimePicker.qml:97
+#, fuzzy, kde-format
+#| msgctxt "time in hour in 24h format"
+#| msgid "%1 hours"
+msgid "Hours"
 msgstr "%1 hores"
 
-#: dateandtime/TimePicker.qml:100
-#, kde-format
-msgctxt "time in hour (PM)"
-msgid "%1 PM"
-msgstr "%1 PM"
-
-#: dateandtime/TimePicker.qml:102
-#, kde-format
-msgctxt "time in hour (AM)"
-msgid "%1 AM"
-msgstr "%1 AM"
-
-#: dateandtime/TimePicker.qml:112
+#: dateandtime/TimePicker.qml:119
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: dateandtime/TimePicker.qml:127
-#, kde-format
-msgctxt "number of minutes"
-msgid "%1 minutes"
+#: dateandtime/TimePicker.qml:134
+#, fuzzy, kde-format
+#| msgctxt "number of minutes"
+#| msgid "%1 minutes"
+msgid "Minutes"
 msgstr "%1 minuts"
 
 #: formcard/AboutKDE.qml:23
@@ -427,3 +417,11 @@ msgstr "Configuració"
 msgctxt "@title:window"
 msgid "Settings — %1"
 msgstr "Configuració — %1"
+
+#~ msgctxt "time in hour (PM)"
+#~ msgid "%1 PM"
+#~ msgstr "%1 PM"
+
+#~ msgctxt "time in hour (AM)"
+#~ msgid "%1 AM"
+#~ msgstr "%1 AM"
