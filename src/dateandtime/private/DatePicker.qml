@@ -236,11 +236,13 @@ QQC2.Control {
 
                 actions: [
                     Kirigami.Action {
+                        id: dayAction
                         text: root.selectedDate.getDate()
                         onTriggered: pickerView.currentIndex = 0 // dayGrid is first item in pickerView
                         checked: pickerView.currentIndex === 0
                     },
                     Kirigami.Action {
+                        id: monthAction
                         text: root.selectedDate.toLocaleDateString(Qt.locale(), "MMMM")
                         onTriggered: pickerView.currentIndex = 1
                         checked: pickerView.currentIndex === 1
@@ -252,6 +254,100 @@ QQC2.Control {
                         checked: pickerView.currentIndex === 2
                     }
                 ]
+            }
+
+            Instantiator {
+                model:dateSegmentedButton.children
+                Item {
+                    required property Item modelData
+                    parent: modelData
+                    anchors.fill: parent
+                    Accessible.ignored: !modelData.action
+                    Accessible.role: Accessible.Dial
+                    Accessible.focusable: true
+                    Accessible.focused: parent.activeFocus
+                    Accessible.name: {
+                        if (modelData.action === dayAction) {
+                            return i18nd("kirigami-addons6", "Day")
+                        }
+                        if (modelData.action === monthAction) {
+                            return i18nd("kirigami-addons6", "Month")
+                        }
+                        if (modelData.action === yearsViewCheck) {
+                            return i18nd("kirigami-addons6", "Year")
+                        }
+                        return ""
+                    }
+                    property int maximumValue: {
+                        if (modelData.action === dayAction) {
+                            if (maximumDate.valueOf() &&  root.year === maximumDate.getYear() && root.month === maximumDate.getMonth()) {
+                                return maximumDate.getDate()
+                            }
+                            return 31
+                        }
+                        if (modelData.action === monthAction) {
+                             if (maximumDate.valueOf() && root.year === maximumDate.getYear() ) {
+                                return maximumDate.month() + 1
+                            }
+                            return 12
+                        }
+                        if (modelData.action === yearsViewCheck) {
+                            if (maximumDate.valueOf()) {
+                                return maximumDate.getYear()
+                            }
+                            return 9999
+                        }
+                        return 0
+                    }
+                    property int minimumValue: {
+                        if (modelData.action === dayAction) {
+                            if (minimumDate.valueOf() && root.year === minimumDate.getYear() && root.month === minimumDate.getMonth()) {
+                                return minimumDate.getDate()
+                            }
+                            return 1
+                        }
+                        if (modelData.action === monthAction) {
+                             if (minimumDate.valueOf() && root.year === minimumDate.getYear() ) {
+                                return minimumDate.month() + 1
+                            }
+                            return 1
+                        }
+                        if (modelData.action === yearsViewCheck) {
+                            if (minimumDate.valueOf()) {
+                                return minimumDate.getYear()
+                            }
+                            return -9999
+                        }
+                        return 0
+                    }
+                    property int stepSize: 1
+                    property int value: {
+                        if (modelData.action === dayAction) {
+                            return root.day
+                        }
+                        if (modelData.action === monthAction) {
+                            return root.month + 1
+                        }
+                        if (modelData.action === yearsViewCheck) {
+                            return root.year
+                        }
+                        return 0
+                    }
+                    onValueChanged: {
+                        if (modelData.action === dayAction) {
+                            selectedDate.setDate(value)
+                        }
+                        if (modelData.action === monthAction) {
+                            selectedDate.setMonth(value - 1)
+                        }
+                        if (modelData.action === yearsViewCheck) {
+                            selectedDate.setFullYear(value)
+                        }
+                    }
+                }
+                onObjectAdded: (index, object) => {
+                    object.modelData.Accessible.ignored = true
+                }
             }
 
             Item {
