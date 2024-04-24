@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-22 00:37+0000\n"
-"PO-Revision-Date: 2024-04-19 22:26+0200\n"
+"POT-Creation-Date: 2024-04-24 00:37+0000\n"
+"PO-Revision-Date: 2024-04-23 21:37+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -131,30 +131,49 @@ msgctxt "@action:button"
 msgid "Select"
 msgstr "Hautatu"
 
-#: dateandtime/private/DatePicker.qml:266
+#: dateandtime/private/DatePicker.qml:271
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "Days"
+msgid "Day"
+msgstr "Egunak"
+
+#: dateandtime/private/DatePicker.qml:274
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "Months"
+msgid "Month"
+msgstr "Hilabeteak"
+
+#: dateandtime/private/DatePicker.qml:277
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "Years"
+msgid "Year"
+msgstr "Urteak"
+
+#: dateandtime/private/DatePicker.qml:362
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Previous"
 msgstr "Joan aurrekora"
 
-#: dateandtime/private/DatePicker.qml:279
+#: dateandtime/private/DatePicker.qml:375
 #, kde-format
 msgctxt "@action:button"
 msgid "Jump to today"
 msgstr "Joan gaurko egunera"
 
-#: dateandtime/private/DatePicker.qml:286
+#: dateandtime/private/DatePicker.qml:382
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Next"
 msgstr "Joan hurrengora"
 
 #: dateandtime/TimePicker.qml:97
-#, fuzzy, kde-format
-#| msgctxt "time in hour in 24h format"
-#| msgid "%1 hours"
+#, kde-format
 msgid "Hours"
-msgstr "%1 ordu"
+msgstr "Ordu"
 
 #: dateandtime/TimePicker.qml:119
 #, kde-format
@@ -163,11 +182,9 @@ msgid ":"
 msgstr ":"
 
 #: dateandtime/TimePicker.qml:134
-#, fuzzy, kde-format
-#| msgctxt "number of minutes"
-#| msgid "%1 minutes"
+#, kde-format
 msgid "Minutes"
-msgstr "%1 minutu"
+msgstr "Minutu"
 
 #: formcard/AboutKDE.qml:23
 #, kde-format
@@ -428,18 +445,6 @@ msgstr "Ezarpenak — %1"
 #~ msgctxt "%1 is month name, %2 is year"
 #~ msgid "%1 %2"
 #~ msgstr "%2(e)ko %1"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Days"
-#~ msgstr "Egunak"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Months"
-#~ msgstr "Hilabeteak"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Years"
-#~ msgstr "Urteak"
 
 #~ msgid "Accept"
 #~ msgstr "Onartu"

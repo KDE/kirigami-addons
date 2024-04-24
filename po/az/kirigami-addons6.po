@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-22 00:37+0000\n"
+"POT-Creation-Date: 2024-04-24 00:37+0000\n"
 "PO-Revision-Date: 2022-03-27 18:27+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -130,20 +130,38 @@ msgctxt "@action:button"
 msgid "Select"
 msgstr ""
 
-#: dateandtime/private/DatePicker.qml:266
+#: dateandtime/private/DatePicker.qml:271
+#, fuzzy, kde-format
+#| msgid "Days"
+msgid "Day"
+msgstr "Günlər"
+
+#: dateandtime/private/DatePicker.qml:274
+#, fuzzy, kde-format
+#| msgid "Months"
+msgid "Month"
+msgstr "Aylar"
+
+#: dateandtime/private/DatePicker.qml:277
+#, fuzzy, kde-format
+#| msgid "Years"
+msgid "Year"
+msgstr "İllər"
+
+#: dateandtime/private/DatePicker.qml:362
 #, fuzzy, kde-format
 #| msgid "Previous"
 msgctxt "@action:button"
 msgid "Go Previous"
 msgstr "Əvvəlki"
 
-#: dateandtime/private/DatePicker.qml:279
+#: dateandtime/private/DatePicker.qml:375
 #, kde-format
 msgctxt "@action:button"
 msgid "Jump to today"
 msgstr ""
 
-#: dateandtime/private/DatePicker.qml:286
+#: dateandtime/private/DatePicker.qml:382
 #, fuzzy, kde-format
 #| msgid "Next"
 msgctxt "@action:button"
@@ -378,24 +396,6 @@ msgstr ""
 #~ msgctxt "%1 is month name, %2 is year"
 #~ msgid "%1 %2"
 #~ msgstr "%1 %2"
-
-#, fuzzy
-#~| msgid "Days"
-#~ msgctxt "@title:tab"
-#~ msgid "Days"
-#~ msgstr "Günlər"
-
-#, fuzzy
-#~| msgid "Months"
-#~ msgctxt "@title:tab"
-#~ msgid "Months"
-#~ msgstr "Aylar"
-
-#, fuzzy
-#~| msgid "Years"
-#~ msgctxt "@title:tab"
-#~ msgid "Years"
-#~ msgstr "İllər"
 
 #~ msgid "Accept"
 #~ msgstr "Qəbul edin"

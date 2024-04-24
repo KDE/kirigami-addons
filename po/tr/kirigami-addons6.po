@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-22 00:37+0000\n"
+"POT-Creation-Date: 2024-04-24 00:37+0000\n"
 "PO-Revision-Date: 2024-04-22 16:30+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -129,19 +129,40 @@ msgctxt "@action:button"
 msgid "Select"
 msgstr "Seç"
 
-#: dateandtime/private/DatePicker.qml:266
+#: dateandtime/private/DatePicker.qml:271
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "Days"
+msgid "Day"
+msgstr "Gün"
+
+#: dateandtime/private/DatePicker.qml:274
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "Months"
+msgid "Month"
+msgstr "Ay"
+
+#: dateandtime/private/DatePicker.qml:277
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "Years"
+msgid "Year"
+msgstr "Yıl"
+
+#: dateandtime/private/DatePicker.qml:362
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Previous"
 msgstr "Öncekine Git"
 
-#: dateandtime/private/DatePicker.qml:279
+#: dateandtime/private/DatePicker.qml:375
 #, kde-format
 msgctxt "@action:button"
 msgid "Jump to today"
 msgstr "Bugüne Atla"
 
-#: dateandtime/private/DatePicker.qml:286
+#: dateandtime/private/DatePicker.qml:382
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Next"
@@ -422,18 +443,6 @@ msgstr "Ayarlar — %1"
 #~ msgctxt "%1 is month name, %2 is year"
 #~ msgid "%1 %2"
 #~ msgstr "%1 %2"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Days"
-#~ msgstr "Gün"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Months"
-#~ msgstr "Ay"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Years"
-#~ msgstr "Yıl"
 
 #~ msgid "Accept"
 #~ msgstr "Kabul Et"

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-22 00:37+0000\n"
-"PO-Revision-Date: 2024-04-03 11:43+0200\n"
+"POT-Creation-Date: 2024-04-24 00:37+0000\n"
+"PO-Revision-Date: 2024-04-17 09:38+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -84,31 +84,31 @@ msgstr "Stáhnout"
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
-msgstr ""
+msgstr "Úspěch"
 
 #: components/MessageDialog.qml:80 components/MessageDialog.qml:86
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
-msgstr ""
+msgstr "Varování"
 
 #: components/MessageDialog.qml:82
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
-msgstr ""
+msgstr "Chyba"
 
 #: components/MessageDialog.qml:84
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
-msgstr ""
+msgstr "Informace"
 
 #: components/MessageDialog.qml:200
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
-msgstr ""
+msgstr "Znovu nezobrazovat"
 
 #: components/VideoMaximizeDelegate.qml:265
 #, kde-format
@@ -128,30 +128,43 @@ msgctxt "@action:button"
 msgid "Select"
 msgstr "Vybrat"
 
-#: dateandtime/private/DatePicker.qml:266
+#: dateandtime/private/DatePicker.qml:271
+#, kde-format
+msgid "Day"
+msgstr ""
+
+#: dateandtime/private/DatePicker.qml:274
+#, kde-format
+msgid "Month"
+msgstr ""
+
+#: dateandtime/private/DatePicker.qml:277
+#, kde-format
+msgid "Year"
+msgstr ""
+
+#: dateandtime/private/DatePicker.qml:362
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Previous"
 msgstr "Přejít na předchozí"
 
-#: dateandtime/private/DatePicker.qml:279
+#: dateandtime/private/DatePicker.qml:375
 #, kde-format
 msgctxt "@action:button"
 msgid "Jump to today"
 msgstr "Přejít na dnešek"
 
-#: dateandtime/private/DatePicker.qml:286
+#: dateandtime/private/DatePicker.qml:382
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Next"
 msgstr "Přejít na následující"
 
 #: dateandtime/TimePicker.qml:97
-#, fuzzy, kde-format
-#| msgctxt "time in hour in 24h format"
-#| msgid "%1 hours"
+#, kde-format
 msgid "Hours"
-msgstr "%1 hodin"
+msgstr "Hodiny"
 
 #: dateandtime/TimePicker.qml:119
 #, kde-format
@@ -160,11 +173,9 @@ msgid ":"
 msgstr ":"
 
 #: dateandtime/TimePicker.qml:134
-#, fuzzy, kde-format
-#| msgctxt "number of minutes"
-#| msgid "%1 minutes"
+#, kde-format
 msgid "Minutes"
-msgstr "%1 minut"
+msgstr "Minuty"
 
 #: formcard/AboutKDE.qml:23
 #, kde-format
@@ -409,11 +420,3 @@ msgstr "Nastavení"
 msgctxt "@title:window"
 msgid "Settings — %1"
 msgstr "Nastavení — %1"
-
-#~ msgctxt "time in hour (PM)"
-#~ msgid "%1 PM"
-#~ msgstr "%1 odp."
-
-#~ msgctxt "time in hour (AM)"
-#~ msgid "%1 AM"
-#~ msgstr "%1 dop."

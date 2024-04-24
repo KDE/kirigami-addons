@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-22 00:37+0000\n"
+"POT-Creation-Date: 2024-04-24 00:37+0000\n"
 "PO-Revision-Date: 2024-02-09 23:45+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -128,19 +128,40 @@ msgctxt "@action:button"
 msgid "Select"
 msgstr "선택"
 
-#: dateandtime/private/DatePicker.qml:266
+#: dateandtime/private/DatePicker.qml:271
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "Days"
+msgid "Day"
+msgstr "일"
+
+#: dateandtime/private/DatePicker.qml:274
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "Months"
+msgid "Month"
+msgstr "월"
+
+#: dateandtime/private/DatePicker.qml:277
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "Years"
+msgid "Year"
+msgstr "년"
+
+#: dateandtime/private/DatePicker.qml:362
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Previous"
 msgstr "뒤로 이동"
 
-#: dateandtime/private/DatePicker.qml:279
+#: dateandtime/private/DatePicker.qml:375
 #, kde-format
 msgctxt "@action:button"
 msgid "Jump to today"
 msgstr "오늘로 이동"
 
-#: dateandtime/private/DatePicker.qml:286
+#: dateandtime/private/DatePicker.qml:382
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Next"
@@ -416,18 +437,6 @@ msgstr "설정 — %1"
 #~ msgctxt "%1 is month name, %2 is year"
 #~ msgid "%1 %2"
 #~ msgstr "%2년 %1"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Days"
-#~ msgstr "일"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Months"
-#~ msgstr "월"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Years"
-#~ msgstr "년"
 
 #~ msgid "Accept"
 #~ msgstr "수락"

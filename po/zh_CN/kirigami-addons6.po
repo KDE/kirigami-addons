@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-22 00:37+0000\n"
-"PO-Revision-Date: 2024-04-22 15:58\n"
+"POT-Creation-Date: 2024-04-24 00:37+0000\n"
+"PO-Revision-Date: 2024-04-23 19:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -128,30 +128,43 @@ msgctxt "@action:button"
 msgid "Select"
 msgstr "选择"
 
-#: dateandtime/private/DatePicker.qml:266
+#: dateandtime/private/DatePicker.qml:271
+#, kde-format
+msgid "Day"
+msgstr ""
+
+#: dateandtime/private/DatePicker.qml:274
+#, kde-format
+msgid "Month"
+msgstr ""
+
+#: dateandtime/private/DatePicker.qml:277
+#, kde-format
+msgid "Year"
+msgstr ""
+
+#: dateandtime/private/DatePicker.qml:362
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Previous"
 msgstr "后退"
 
-#: dateandtime/private/DatePicker.qml:279
+#: dateandtime/private/DatePicker.qml:375
 #, kde-format
 msgctxt "@action:button"
 msgid "Jump to today"
 msgstr "跳转到今天"
 
-#: dateandtime/private/DatePicker.qml:286
+#: dateandtime/private/DatePicker.qml:382
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Next"
 msgstr "前进"
 
 #: dateandtime/TimePicker.qml:97
-#, fuzzy, kde-format
-#| msgctxt "time in hour in 24h format"
-#| msgid "%1 hours"
+#, kde-format
 msgid "Hours"
-msgstr "%1 小时"
+msgstr ""
 
 #: dateandtime/TimePicker.qml:119
 #, kde-format
@@ -160,11 +173,9 @@ msgid ":"
 msgstr ":"
 
 #: dateandtime/TimePicker.qml:134
-#, fuzzy, kde-format
-#| msgctxt "number of minutes"
-#| msgid "%1 minutes"
+#, kde-format
 msgid "Minutes"
-msgstr "%1 分钟"
+msgstr ""
 
 #: formcard/AboutKDE.qml:23
 #, kde-format
@@ -404,11 +415,3 @@ msgstr "设置"
 msgctxt "@title:window"
 msgid "Settings — %1"
 msgstr "设置 — %1"
-
-#~ msgctxt "time in hour (PM)"
-#~ msgid "%1 PM"
-#~ msgstr "%1 PM"
-
-#~ msgctxt "time in hour (AM)"
-#~ msgid "%1 AM"
-#~ msgstr "%1 AM"

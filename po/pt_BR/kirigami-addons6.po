@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-22 00:37+0000\n"
+"POT-Creation-Date: 2024-04-24 00:37+0000\n"
 "PO-Revision-Date: 2023-11-26 01:32-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -130,19 +130,40 @@ msgctxt "@action:button"
 msgid "Select"
 msgstr "Selecionar"
 
-#: dateandtime/private/DatePicker.qml:266
+#: dateandtime/private/DatePicker.qml:271
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "Days"
+msgid "Day"
+msgstr "Dias"
+
+#: dateandtime/private/DatePicker.qml:274
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "Months"
+msgid "Month"
+msgstr "Meses"
+
+#: dateandtime/private/DatePicker.qml:277
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "Years"
+msgid "Year"
+msgstr "Anos"
+
+#: dateandtime/private/DatePicker.qml:362
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Previous"
 msgstr "Ir para o anterior"
 
-#: dateandtime/private/DatePicker.qml:279
+#: dateandtime/private/DatePicker.qml:375
 #, kde-format
 msgctxt "@action:button"
 msgid "Jump to today"
 msgstr "Ir para hoje"
 
-#: dateandtime/private/DatePicker.qml:286
+#: dateandtime/private/DatePicker.qml:382
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Next"
@@ -427,18 +448,6 @@ msgstr "Configurações - %1"
 #~ msgctxt "%1 is month name, %2 is year"
 #~ msgid "%1 %2"
 #~ msgstr "%1 %2"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Days"
-#~ msgstr "Dias"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Months"
-#~ msgstr "Meses"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Years"
-#~ msgstr "Anos"
 
 #~ msgid "Accept"
 #~ msgstr "Aceitar"

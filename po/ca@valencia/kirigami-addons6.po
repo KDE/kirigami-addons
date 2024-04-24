@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-22 00:37+0000\n"
-"PO-Revision-Date: 2024-04-14 09:26+0200\n"
+"POT-Creation-Date: 2024-04-24 00:37+0000\n"
+"PO-Revision-Date: 2024-04-22 12:12+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -131,30 +131,43 @@ msgctxt "@action:button"
 msgid "Select"
 msgstr "Selecciona"
 
-#: dateandtime/private/DatePicker.qml:266
+#: dateandtime/private/DatePicker.qml:271
+#, kde-format
+msgid "Day"
+msgstr ""
+
+#: dateandtime/private/DatePicker.qml:274
+#, kde-format
+msgid "Month"
+msgstr ""
+
+#: dateandtime/private/DatePicker.qml:277
+#, kde-format
+msgid "Year"
+msgstr ""
+
+#: dateandtime/private/DatePicker.qml:362
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Previous"
 msgstr "Ves fins a l'anterior"
 
-#: dateandtime/private/DatePicker.qml:279
+#: dateandtime/private/DatePicker.qml:375
 #, kde-format
 msgctxt "@action:button"
 msgid "Jump to today"
 msgstr "Ves fins a hui"
 
-#: dateandtime/private/DatePicker.qml:286
+#: dateandtime/private/DatePicker.qml:382
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Next"
 msgstr "Ves fins a la següent"
 
 #: dateandtime/TimePicker.qml:97
-#, fuzzy, kde-format
-#| msgctxt "time in hour in 24h format"
-#| msgid "%1 hours"
+#, kde-format
 msgid "Hours"
-msgstr "%1 hores"
+msgstr "Hores"
 
 #: dateandtime/TimePicker.qml:119
 #, kde-format
@@ -163,11 +176,9 @@ msgid ":"
 msgstr ":"
 
 #: dateandtime/TimePicker.qml:134
-#, fuzzy, kde-format
-#| msgctxt "number of minutes"
-#| msgid "%1 minutes"
+#, kde-format
 msgid "Minutes"
-msgstr "%1 minuts"
+msgstr "Minuts"
 
 #: formcard/AboutKDE.qml:23
 #, kde-format
@@ -417,11 +428,3 @@ msgstr "Configuració"
 msgctxt "@title:window"
 msgid "Settings — %1"
 msgstr "Configuració — %1"
-
-#~ msgctxt "time in hour (PM)"
-#~ msgid "%1 PM"
-#~ msgstr "%1 PM"
-
-#~ msgctxt "time in hour (AM)"
-#~ msgid "%1 AM"
-#~ msgstr "%1 AM"

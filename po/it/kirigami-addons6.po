@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-22 00:37+0000\n"
-"PO-Revision-Date: 2024-04-04 09:20+0200\n"
+"POT-Creation-Date: 2024-04-24 00:37+0000\n"
+"PO-Revision-Date: 2024-04-15 18:10+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -85,31 +85,31 @@ msgstr "Scarica"
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
-msgstr ""
+msgstr "Successo"
 
 #: components/MessageDialog.qml:80 components/MessageDialog.qml:86
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
-msgstr ""
+msgstr "Avviso"
 
 #: components/MessageDialog.qml:82
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
-msgstr ""
+msgstr "Errore"
 
 #: components/MessageDialog.qml:84
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
-msgstr ""
+msgstr "Informazioni"
 
 #: components/MessageDialog.qml:200
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
-msgstr ""
+msgstr "Non mostrare di nuovo"
 
 #: components/VideoMaximizeDelegate.qml:265
 #, kde-format
@@ -129,19 +129,40 @@ msgctxt "@action:button"
 msgid "Select"
 msgstr "Seleziona"
 
-#: dateandtime/private/DatePicker.qml:266
+#: dateandtime/private/DatePicker.qml:271
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "Days"
+msgid "Day"
+msgstr "Giorni"
+
+#: dateandtime/private/DatePicker.qml:274
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "Months"
+msgid "Month"
+msgstr "Mesi"
+
+#: dateandtime/private/DatePicker.qml:277
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "Years"
+msgid "Year"
+msgstr "Anni"
+
+#: dateandtime/private/DatePicker.qml:362
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Previous"
 msgstr "Vai al precedente"
 
-#: dateandtime/private/DatePicker.qml:279
+#: dateandtime/private/DatePicker.qml:375
 #, kde-format
 msgctxt "@action:button"
 msgid "Jump to today"
 msgstr "Salta a oggi"
 
-#: dateandtime/private/DatePicker.qml:286
+#: dateandtime/private/DatePicker.qml:382
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Next"
@@ -425,18 +446,6 @@ msgstr "Impostazioni — %1"
 #~ msgctxt "%1 is month name, %2 is year"
 #~ msgid "%1 %2"
 #~ msgstr "%1 %2"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Days"
-#~ msgstr "Giorni"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Months"
-#~ msgstr "Mesi"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Years"
-#~ msgstr "Anni"
 
 #~ msgid "Accept"
 #~ msgstr "Accetta"
