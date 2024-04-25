@@ -164,7 +164,7 @@ msgstr "前进"
 #: dateandtime/TimePicker.qml:97
 #, kde-format
 msgid "Hours"
-msgstr ""
+msgstr "小时"
 
 #: dateandtime/TimePicker.qml:119
 #, kde-format
@@ -175,7 +175,7 @@ msgstr ":"
 #: dateandtime/TimePicker.qml:134
 #, kde-format
 msgid "Minutes"
-msgstr ""
+msgstr "分钟"
 
 #: formcard/AboutKDE.qml:23
 #, kde-format

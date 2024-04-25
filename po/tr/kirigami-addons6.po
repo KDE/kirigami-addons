@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-24 00:37+0000\n"
-"PO-Revision-Date: 2024-04-22 16:30+0300\n"
+"PO-Revision-Date: 2024-04-24 14:39+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: components/AbstractMaximizeComponent.qml:128
 #, kde-format
@@ -130,23 +130,17 @@ msgid "Select"
 msgstr "Seç"
 
 #: dateandtime/private/DatePicker.qml:271
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Days"
+#, kde-format
 msgid "Day"
 msgstr "Gün"
 
 #: dateandtime/private/DatePicker.qml:274
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Months"
+#, kde-format
 msgid "Month"
 msgstr "Ay"
 
 #: dateandtime/private/DatePicker.qml:277
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Years"
+#, kde-format
 msgid "Year"
 msgstr "Yıl"
 
