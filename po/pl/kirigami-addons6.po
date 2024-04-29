@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-24 00:37+0000\n"
-"PO-Revision-Date: 2024-04-13 19:29+0200\n"
+"PO-Revision-Date: 2024-04-28 11:40+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -85,31 +85,31 @@ msgstr "Pobierz"
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
-msgstr ""
+msgstr "Powodzenie"
 
 #: components/MessageDialog.qml:80 components/MessageDialog.qml:86
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
-msgstr ""
+msgstr "Uwaga"
 
 #: components/MessageDialog.qml:82
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
-msgstr ""
+msgstr "Błąd"
 
 #: components/MessageDialog.qml:84
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
-msgstr ""
+msgstr "Informacje"
 
 #: components/MessageDialog.qml:200
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
-msgstr ""
+msgstr "Nie pokazuj ponownie"
 
 #: components/VideoMaximizeDelegate.qml:265
 #, kde-format
@@ -130,25 +130,19 @@ msgid "Select"
 msgstr "Zaznacz"
 
 #: dateandtime/private/DatePicker.qml:271
-#, fuzzy, kde-format
-#| msgctxt "kirigami-addons"
-#| msgid "Days"
+#, kde-format
 msgid "Day"
-msgstr "Dni"
+msgstr "Dzień"
 
 #: dateandtime/private/DatePicker.qml:274
-#, fuzzy, kde-format
-#| msgctxt "kirigami-addons"
-#| msgid "Months"
+#, kde-format
 msgid "Month"
-msgstr "Miesiące"
+msgstr "Miesiąc"
 
 #: dateandtime/private/DatePicker.qml:277
-#, fuzzy, kde-format
-#| msgctxt "kirigami-addons"
-#| msgid "Years"
+#, kde-format
 msgid "Year"
-msgstr "Lata"
+msgstr "Rok"
 
 #: dateandtime/private/DatePicker.qml:362
 #, kde-format
@@ -169,11 +163,9 @@ msgid "Go Next"
 msgstr "Przejdź wprzód"
 
 #: dateandtime/TimePicker.qml:97
-#, fuzzy, kde-format
-#| msgctxt "time in hour in 24h format"
-#| msgid "%1 hours"
+#, kde-format
 msgid "Hours"
-msgstr "%1 godzin"
+msgstr "Godziny"
 
 #: dateandtime/TimePicker.qml:119
 #, kde-format
@@ -182,11 +174,9 @@ msgid ":"
 msgstr ":"
 
 #: dateandtime/TimePicker.qml:134
-#, fuzzy, kde-format
-#| msgctxt "number of minutes"
-#| msgid "%1 minutes"
+#, kde-format
 msgid "Minutes"
-msgstr "%1 minut"
+msgstr "Minuty"
 
 #: formcard/AboutKDE.qml:23
 #, kde-format
