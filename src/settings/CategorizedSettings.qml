@@ -105,7 +105,7 @@ Kirigami.PageRow {
             topMargin: Math.round(Kirigami.Units.smallSpacing / 2)
             bottomMargin: Math.round(Kirigami.Units.smallSpacing / 2)
 
-            onWidthChanged: if (!initDone && root.width >= columnView.columnWidth) {
+            onWidthChanged: if (!initDone && root.width >= Kirigami.Units.gridUnit * 30) {
                 let defaultAction = getActionByName(defaultPage);
                 if (defaultAction) {
                     defaultAction.trigger();
