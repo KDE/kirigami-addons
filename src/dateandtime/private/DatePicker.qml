@@ -449,7 +449,7 @@ QQC2.Control {
                         }
 
                         Repeater {
-                            model: dayGrid.modelLoader.item.weekDays
+                            model: dayGrid.modelLoader.item?.weekDays
                             delegate: QQC2.Label {
                                 Layout.fillWidth: true
                                 Layout.fillHeight: true
