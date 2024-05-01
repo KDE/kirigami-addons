@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-24 00:37+0000\n"
-"PO-Revision-Date: 2024-04-15 18:10+0200\n"
+"PO-Revision-Date: 2024-04-25 17:56+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: components/AbstractMaximizeComponent.qml:128
 #, kde-format
@@ -130,25 +130,19 @@ msgid "Select"
 msgstr "Seleziona"
 
 #: dateandtime/private/DatePicker.qml:271
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Days"
+#, kde-format
 msgid "Day"
-msgstr "Giorni"
+msgstr "Giorno"
 
 #: dateandtime/private/DatePicker.qml:274
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Months"
+#, kde-format
 msgid "Month"
-msgstr "Mesi"
+msgstr "Mese"
 
 #: dateandtime/private/DatePicker.qml:277
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Years"
+#, kde-format
 msgid "Year"
-msgstr "Anni"
+msgstr "Anno"
 
 #: dateandtime/private/DatePicker.qml:362
 #, kde-format
@@ -169,11 +163,9 @@ msgid "Go Next"
 msgstr "Vai al successivo"
 
 #: dateandtime/TimePicker.qml:97
-#, fuzzy, kde-format
-#| msgctxt "time in hour in 24h format"
-#| msgid "%1 hours"
+#, kde-format
 msgid "Hours"
-msgstr "%1 ore"
+msgstr "Ore"
 
 #: dateandtime/TimePicker.qml:119
 #, kde-format
@@ -182,11 +174,9 @@ msgid ":"
 msgstr ":"
 
 #: dateandtime/TimePicker.qml:134
-#, fuzzy, kde-format
-#| msgctxt "number of minutes"
-#| msgid "%1 minutes"
+#, kde-format
 msgid "Minutes"
-msgstr "%1 minuti"
+msgstr "Minuti"
 
 #: formcard/AboutKDE.qml:23
 #, kde-format
