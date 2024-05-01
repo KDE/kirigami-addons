@@ -90,9 +90,21 @@ Kirigami.PageRow {
         rightPadding: 0
         topPadding: 0
 
-        titleDelegate: Kirigami.SearchField {
+        titleDelegate: RowLayout {
             Layout.fillWidth: true
-            onTextChanged: listview.filterText = text.toLowerCase();
+
+            QQC2.ToolButton {
+                icon.name: "go-previous-view"
+                text: i18n("Go back")
+                display: QQC2.AbstractButton.IconOnly
+                onClicked: pageStack.layers.pop()
+                visible: pageStack.layers.depth > 1
+            }
+
+            Kirigami.SearchField {
+                Layout.fillWidth: true
+                onTextChanged: listview.filterText = text.toLowerCase();
+            }
         }
 
         ListView {
