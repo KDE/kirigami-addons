@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-24 00:37+0000\n"
+"POT-Creation-Date: 2024-05-02 00:37+0000\n"
 "PO-Revision-Date: 2023-07-26 15:54+0300\n"
 "Last-Translator: Theofilos Intzoglou <int.teo@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -446,6 +446,12 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings — %1"
+msgstr ""
+
+#: settings/CategorizedSettings.qml:98
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "Go back"
 msgstr ""
 
 #~ msgctxt "%1 is month name, %2 is year"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-24 00:37+0000\n"
+"POT-Creation-Date: 2024-05-02 00:37+0000\n"
 "PO-Revision-Date: 2023-12-14 23:04+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Assamese <alministradores@softastur.org>\n"
@@ -384,6 +384,12 @@ msgstr "Configuración"
 msgctxt "@title:window"
 msgid "Settings — %1"
 msgstr "Configuración — %1"
+
+#: settings/CategorizedSettings.qml:98
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "Go back"
+msgstr ""
 
 #~ msgctxt "time in hour (PM)"
 #~ msgid "%1 PM"
