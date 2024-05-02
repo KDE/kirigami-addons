@@ -61,8 +61,8 @@ T.Dialog {
 
     parent: applicationWindow().QQC2.Overlay.overlay
 
-    width: Math.min(parent.width - Kirigami.Units.gridUnit * 4, Kirigami.Units.gridUnit * 20)
-
+    width: Math.min(parent.width - Kirigami.Units.gridUnit * 2, Kirigami.Units.gridUnit * 20)
+    height: Math.min(implicitHeight, parent.height - Kirigami.Units.gridUnit * 2, Kirigami.Units.gridUnit * 30)
 
     implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
                             contentWidth + leftPadding + rightPadding,
@@ -147,8 +147,12 @@ T.Dialog {
         }
     }
 
-    contentItem: RowLayout {
-        spacing: Kirigami.Units.largeSpacing
+    contentItem: GridLayout {
+        id: gridLayout
+
+        columns: root.width > Kirigami.Units.gridUnit * 18 ? 2 : 1
+        rowSpacing: Kirigami.Units.largeSpacing
+
         Kirigami.Icon {
             source: {
                 if (root.iconName.length > 0) {
@@ -169,7 +173,7 @@ T.Dialog {
             }
             Layout.preferredWidth: Kirigami.Units.iconSizes.huge
             Layout.preferredHeight: Kirigami.Units.iconSizes.huge
-            Layout.alignment: Qt.AlignTop
+            Layout.alignment: gridLayout.columns === 2 ? Qt.AlignTop : Qt.AlignHCenter
         }
 
         ColumnLayout {
