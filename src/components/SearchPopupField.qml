@@ -15,7 +15,34 @@ import org.kde.kirigami 2.20 as Kirigami
 /**
  * SearchField with a Popup to show autocompletion entries or search results
  *
+ * @deprecated Use Kirigami.SearchDialog instead.
+ *
+ * Can be replaced by the following code:
+ *
+ * @code{qml}
+ * Kirigami.SearchField {
+ *     TapHandler {
+ *         onTapped: {
+ *             searchDialog.open();
+ *         }
+ *         acceptedButtons: Qt.RightButton | Qt.LeftButton
+ *     }
+ *     Keys.onPressed: (event) => {
+ *         if (event.key !== Qt.Key_Tab || event.key !== Qt.Key_Backtab) {
+ *             searchDialog.open();
+ *             searchDialog.text = text;
+ *         }
+ *     }
+ *     Keys.priority: Keys.AfterItem
+ *
+ *     Kirigami.SearchDialog {
+ *         id: searchDialog
+ *         ...
+ *     }
+ * }
+ * @endcode
  * @since KirigamiAddons.labs.components 1.0
+ * @see SearchDialog
  */
 QQC2.Control {
     id: root
