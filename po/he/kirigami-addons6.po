@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-02 00:37+0000\n"
-"PO-Revision-Date: 2024-04-24 07:50+0300\n"
+"POT-Creation-Date: 2024-05-03 00:37+0000\n"
+"PO-Revision-Date: 2024-05-02 22:01+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -105,7 +105,7 @@ msgctxt "@title:dialog"
 msgid "Information"
 msgstr "פרטים"
 
-#: components/MessageDialog.qml:200
+#: components/MessageDialog.qml:204
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
@@ -419,7 +419,7 @@ msgstr "הגדרות — %1"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Go back"
-msgstr ""
+msgstr "חזרה"
 
 #~ msgctxt "time in hour (PM)"
 #~ msgid "%1 PM"

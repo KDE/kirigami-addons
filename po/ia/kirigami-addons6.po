@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-02 00:37+0000\n"
-"PO-Revision-Date: 2024-04-26 14:49+0200\n"
+"POT-Creation-Date: 2024-05-03 00:37+0000\n"
+"PO-Revision-Date: 2024-05-02 12:27+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -105,7 +105,7 @@ msgctxt "@title:dialog"
 msgid "Information"
 msgstr "Information"
 
-#: components/MessageDialog.qml:200
+#: components/MessageDialog.qml:204
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
@@ -429,7 +429,7 @@ msgstr "Preferentias — %1"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Go back"
-msgstr ""
+msgstr "Vade retro"
 
 #~ msgctxt "time in hour (PM)"
 #~ msgid "%1 PM"
