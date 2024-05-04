@@ -47,11 +47,12 @@ target_sources(componentsplugin PRIVATE
 ecm_target_qml_sources(componentsplugin SOURCES
     Avatar.qml
     AvatarButton.qml
-    FloatingButton.qml
     DoubleFloatingButton.qml
     Banner.qml
     BottomDrawer.qml
     DialogRoundedBackground.qml
+    FloatingButton.qml
+    FloatingToolBar.qml
 
     MessageDialog.qml
     SearchPopupField.qml
