@@ -8,12 +8,14 @@ import org.kde.kirigami 2.20 as Kirigami
  * @brief Stylish background for dialogs
  *
  * This item can be used as background for any dialog in your application
- * and will provide a rounded.
+ * and will have a rounded style.
  *
  * @since KirigamiAddons 0.12
  */
 Kirigami.ShadowedRectangle {
-    radius: Kirigami.Units.largeSpacing
+    // perfect concentric border radius
+    radius: Kirigami.Units.cornerRadius + Kirigami.Units.smallSpacing
+
     color: Kirigami.Theme.backgroundColor
 
     border {
