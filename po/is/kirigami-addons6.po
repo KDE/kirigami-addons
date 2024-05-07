@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:37+0000\n"
-"PO-Revision-Date: 2024-04-14 18:12+0000\n"
+"PO-Revision-Date: 2024-05-06 12:16+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -131,17 +131,17 @@ msgstr "Velja"
 #: dateandtime/private/DatePicker.qml:271
 #, kde-format
 msgid "Day"
-msgstr ""
+msgstr "Dagur"
 
 #: dateandtime/private/DatePicker.qml:274
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "Mánuður"
 
 #: dateandtime/private/DatePicker.qml:277
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "Ár"
 
 #: dateandtime/private/DatePicker.qml:362
 #, kde-format
@@ -162,11 +162,9 @@ msgid "Go Next"
 msgstr "Fara á næsta"
 
 #: dateandtime/TimePicker.qml:97
-#, fuzzy, kde-format
-#| msgctxt "time in hour in 24h format"
-#| msgid "%1 hours"
+#, kde-format
 msgid "Hours"
-msgstr "%1 klukkustundir"
+msgstr "Klukkustundir"
 
 #: dateandtime/TimePicker.qml:119
 #, kde-format
@@ -175,11 +173,9 @@ msgid ":"
 msgstr ":"
 
 #: dateandtime/TimePicker.qml:134
-#, fuzzy, kde-format
-#| msgctxt "number of minutes"
-#| msgid "%1 minutes"
+#, kde-format
 msgid "Minutes"
-msgstr "%1 mínútur"
+msgstr "Mínútur"
 
 #: formcard/AboutKDE.qml:23
 #, kde-format
@@ -429,7 +425,7 @@ msgstr "Stillingar — %1"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Go back"
-msgstr ""
+msgstr "Fara til baka"
 
 #~ msgctxt "time in hour (PM)"
 #~ msgid "%1 PM"
