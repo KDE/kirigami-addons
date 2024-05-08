@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:37+0000\n"
-"PO-Revision-Date: 2024-04-17 09:38+0200\n"
+"PO-Revision-Date: 2024-05-07 10:58+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: components/AbstractMaximizeComponent.qml:128
 #, kde-format
@@ -131,17 +131,17 @@ msgstr "Vybrat"
 #: dateandtime/private/DatePicker.qml:271
 #, kde-format
 msgid "Day"
-msgstr ""
+msgstr "Den"
 
 #: dateandtime/private/DatePicker.qml:274
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "Měsíc"
 
 #: dateandtime/private/DatePicker.qml:277
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "Rok"
 
 #: dateandtime/private/DatePicker.qml:362
 #, kde-format
@@ -425,4 +425,4 @@ msgstr "Nastavení — %1"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Go back"
-msgstr ""
+msgstr "Přejít zpět"
