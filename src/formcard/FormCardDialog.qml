@@ -56,6 +56,7 @@ QQC2.Dialog {
     width: Math.min(parent.width - Kirigami.Units.gridUnit * 4, Kirigami.Units.gridUnit * 15)
 
     background: Components.DialogRoundedBackground {}
+
     parent: applicationWindow().QQC2.Overlay.overlay
 
     implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
@@ -75,37 +76,33 @@ QQC2.Dialog {
     header: Kirigami.Heading {
         text: root.title
         elide: QQC2.Label.ElideRight
-        leftPadding: Kirigami.Units.largeSpacing * 2
-        rightPadding: Kirigami.Units.largeSpacing * 2
-        topPadding: Kirigami.Units.largeSpacing * 2
-        bottomPadding: Kirigami.Units.largeSpacing
+        leftPadding: Kirigami.Units.largeSpacing
+        rightPadding: Kirigami.Units.largeSpacing
+        topPadding: Kirigami.Units.largeSpacing
+        bottomPadding: 0
     }
 
     contentItem: ColumnLayout {
         id: columnLayout
 
         spacing: 0
-        property int _internal_formcard_margins: Kirigami.Units.largeSpacing * 2
+        property int _internal_formcard_margins: Kirigami.Units.largeSpacing
     }
 
-    footer: RowLayout {
-        QQC2.DialogButtonBox {
-            leftPadding: Kirigami.Units.largeSpacing * 2
-            rightPadding: Kirigami.Units.largeSpacing * 2
-            bottomPadding: Kirigami.Units.largeSpacing * 2
-            topPadding: Kirigami.Units.largeSpacing * 2
-            spacing: Kirigami.Units.mediumSpacing
+    footer: QQC2.DialogButtonBox {
+        leftPadding: Kirigami.Units.largeSpacing
+        rightPadding: Kirigami.Units.largeSpacing
+        bottomPadding: Kirigami.Units.largeSpacing
+        topPadding: Kirigami.Units.smallSpacing
+        spacing: Kirigami.Units.mediumSpacing
 
-            standardButtons: root.standardButtons
+        standardButtons: root.standardButtons
 
-            onAccepted: root.accepted();
-            onDiscarded: root.discarded();
-            onRejected: root.rejected();
-            onApplied: root.applied();
-            onReset: root.reset();
-            onHelpRequested: root.helpRequested();
-
-            Layout.fillWidth: true
-        }
+        onAccepted: root.accepted();
+        onDiscarded: root.discarded();
+        onRejected: root.rejected();
+        onApplied: root.applied();
+        onReset: root.reset();
+        onHelpRequested: root.helpRequested();
     }
 }
