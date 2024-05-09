@@ -7,6 +7,12 @@ import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Templates 2.15 as T
 import org.kde.kirigami 2.20 as Kirigami
 
+/**
+ * An item delegate providing a modern look and feel. Use a combination of
+ * SubtitleContentItem, DefaultContentItem and RowLayout for the contentItem.
+ *
+ * @image html roundeditemdelegate.html
+ */
 T.ItemDelegate {
     id: root
 

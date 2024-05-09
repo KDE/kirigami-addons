@@ -18,6 +18,8 @@ import org.kde.kirigami as Kirigami
  * The popup also has a header bar which has a writable title, an optional leading
  * item to the left, a list of custom actions specified by the actions property
  * and an optional footer item.
+ *
+ * @image html maximizedcomponent.png
  */
 QQC2.Popup {
     id: root
