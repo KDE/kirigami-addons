@@ -53,16 +53,12 @@ QQC2.Dialog {
     y: Math.round((parent.height - height) / 2)
     z: Kirigami.OverlayZStacking.z
 
-    width: Math.min(parent.width - Kirigami.Units.gridUnit * 4, Kirigami.Units.gridUnit * 15)
-
     background: Components.DialogRoundedBackground {}
 
     parent: applicationWindow().QQC2.Overlay.overlay
 
-    implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
-                            contentWidth + leftPadding + rightPadding,
-                            implicitHeaderWidth,
-                            implicitFooterWidth)
+    implicitWidth: Math.min(parent.width - Kirigami.Units.gridUnit * 4, Kirigami.Units.gridUnit * 15)
+
     implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
                              contentHeight + topPadding + bottomPadding
                              + (implicitHeaderHeight > 0 ? implicitHeaderHeight + spacing : 0)
