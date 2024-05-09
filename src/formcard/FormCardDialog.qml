@@ -57,7 +57,7 @@ QQC2.Dialog {
 
     parent: applicationWindow().QQC2.Overlay.overlay
 
-    implicitWidth: Math.min(parent.width - Kirigami.Units.gridUnit * 4, Kirigami.Units.gridUnit * 15)
+    implicitWidth: Math.min(parent.width - Kirigami.Units.gridUnit * 2, Kirigami.Units.gridUnit * 15)
 
     implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
                              contentHeight + topPadding + bottomPadding
