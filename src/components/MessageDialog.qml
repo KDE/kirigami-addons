@@ -61,17 +61,11 @@ T.Dialog {
 
     parent: applicationWindow().QQC2.Overlay.overlay
 
-    width: Math.min(parent.width - Kirigami.Units.gridUnit * 2, Kirigami.Units.gridUnit * 20)
-    height: Math.min(implicitHeight, parent.height - Kirigami.Units.gridUnit * 2, Kirigami.Units.gridUnit * 30)
-
-    implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
-                            contentWidth + leftPadding + rightPadding,
-                            implicitHeaderWidth,
-                            implicitFooterWidth)
-    implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
+    implicitWidth: Math.min(parent.width - Kirigami.Units.gridUnit * 2, Kirigami.Units.gridUnit * 20)
+    implicitHeight: Math.min(Math.max(implicitBackgroundHeight + topInset + bottomInset,
                              contentHeight + topPadding + bottomPadding
                              + (implicitHeaderHeight > 0 ? implicitHeaderHeight + spacing : 0)
-                             + (implicitFooterHeight > 0 ? implicitFooterHeight + spacing : 0))
+                             + (implicitFooterHeight > 0 ? implicitFooterHeight + spacing : 0)), parent.height - Kirigami.Units.gridUnit * 2, Kirigami.Units.gridUnit * 30)
 
     title: switch (root.dialogType) {
     case MessageDialog.Success:
@@ -208,10 +202,10 @@ T.Dialog {
         }
 
         QQC2.DialogButtonBox {
-            leftPadding: Kirigami.Units.largeSpacing * 2
-            rightPadding: Kirigami.Units.largeSpacing * 2
-            bottomPadding: Kirigami.Units.largeSpacing * 2
-            topPadding: Kirigami.Units.largeSpacing * 2
+            leftPadding: Kirigami.Units.largeSpacing
+            rightPadding: Kirigami.Units.largeSpacing
+            bottomPadding: Kirigami.Units.largeSpacing
+            topPadding: Kirigami.Units.largeSpacing
 
             standardButtons: root.standardButtons
 
