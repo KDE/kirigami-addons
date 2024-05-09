@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:37+0000\n"
-"PO-Revision-Date: 2024-04-15 09:29+0200\n"
+"PO-Revision-Date: 2024-05-03 12:13+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -130,25 +130,19 @@ msgid "Select"
 msgstr "Sélectionner"
 
 #: dateandtime/private/DatePicker.qml:271
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Days"
+#, kde-format
 msgid "Day"
-msgstr "Jours"
+msgstr "Jour"
 
 #: dateandtime/private/DatePicker.qml:274
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Months"
+#, kde-format
 msgid "Month"
 msgstr "Mois"
 
 #: dateandtime/private/DatePicker.qml:277
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Years"
+#, kde-format
 msgid "Year"
-msgstr "Années"
+msgstr "Année"
 
 #: dateandtime/private/DatePicker.qml:362
 #, kde-format
@@ -169,11 +163,9 @@ msgid "Go Next"
 msgstr "Aller au suivant"
 
 #: dateandtime/TimePicker.qml:97
-#, fuzzy, kde-format
-#| msgctxt "time in hour in 24h format"
-#| msgid "%1 hours"
+#, kde-format
 msgid "Hours"
-msgstr "%1 heures"
+msgstr "Heures"
 
 #: dateandtime/TimePicker.qml:119
 #, kde-format
@@ -182,11 +174,9 @@ msgid ":"
 msgstr ":"
 
 #: dateandtime/TimePicker.qml:134
-#, fuzzy, kde-format
-#| msgctxt "number of minutes"
-#| msgid "%1 minutes"
+#, kde-format
 msgid "Minutes"
-msgstr "%1 minutes"
+msgstr "Minutes"
 
 #: formcard/AboutKDE.qml:23
 #, kde-format
@@ -443,7 +433,7 @@ msgstr "Configuration — %1"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Go back"
-msgstr ""
+msgstr "Revenir en arrière"
 
 #~ msgctxt "time in hour (PM)"
 #~ msgid "%1 PM"

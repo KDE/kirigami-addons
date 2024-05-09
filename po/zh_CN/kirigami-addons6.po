@@ -420,4 +420,4 @@ msgstr "设置 — %1"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Go back"
-msgstr ""
+msgstr "返回"
