@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-03 00:37+0000\n"
+"POT-Creation-Date: 2024-05-10 00:37+0000\n"
 "PO-Revision-Date: 2024-05-02 09:08+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "%100==4 ? 3 : 0);\n"
 "X-Generator: Poedit 3.4.2\n"
 
-#: components/AbstractMaximizeComponent.qml:128
+#: components/AbstractMaximizeComponent.qml:130
 #, kde-format
 msgid "Close"
 msgstr "Zapri"
@@ -81,31 +81,31 @@ msgstr "Zapri"
 msgid "Download"
 msgstr "Prenesi"
 
-#: components/MessageDialog.qml:78
+#: components/MessageDialog.qml:72
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
 msgstr "Uspeh"
 
-#: components/MessageDialog.qml:80 components/MessageDialog.qml:86
+#: components/MessageDialog.qml:74 components/MessageDialog.qml:80
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
 msgstr "Opozorilo"
 
-#: components/MessageDialog.qml:82
+#: components/MessageDialog.qml:76
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
 msgstr "Napaka"
 
-#: components/MessageDialog.qml:84
+#: components/MessageDialog.qml:78
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
 msgstr "Informacije"
 
-#: components/MessageDialog.qml:204
+#: components/MessageDialog.qml:198
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"

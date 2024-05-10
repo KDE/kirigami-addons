@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-03 00:37+0000\n"
+"POT-Creation-Date: 2024-05-10 00:37+0000\n"
 "PO-Revision-Date: 2023-08-13 16:36+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 23.11.70\n"
 
-#: components/AbstractMaximizeComponent.qml:128
+#: components/AbstractMaximizeComponent.qml:130
 #, kde-format
 msgid "Close"
 msgstr "Schließen"
@@ -84,31 +84,31 @@ msgstr "Schließen"
 msgid "Download"
 msgstr "Herunterladen"
 
-#: components/MessageDialog.qml:78
+#: components/MessageDialog.qml:72
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
 msgstr ""
 
-#: components/MessageDialog.qml:80 components/MessageDialog.qml:86
+#: components/MessageDialog.qml:74 components/MessageDialog.qml:80
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
 msgstr ""
 
-#: components/MessageDialog.qml:82
+#: components/MessageDialog.qml:76
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
 msgstr ""
 
-#: components/MessageDialog.qml:84
+#: components/MessageDialog.qml:78
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
 msgstr ""
 
-#: components/MessageDialog.qml:204
+#: components/MessageDialog.qml:198
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"

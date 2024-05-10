@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-03 00:37+0000\n"
+"POT-Creation-Date: 2024-05-10 00:37+0000\n"
 "PO-Revision-Date: 2024-05-02 05:56+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.3.2\n"
 
-#: components/AbstractMaximizeComponent.qml:128
+#: components/AbstractMaximizeComponent.qml:130
 #, kde-format
 msgid "Close"
 msgstr "დახურვა"
@@ -81,31 +81,31 @@ msgstr "დახურვა"
 msgid "Download"
 msgstr "გადმოწერა"
 
-#: components/MessageDialog.qml:78
+#: components/MessageDialog.qml:72
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
 msgstr "წარმატებულია"
 
-#: components/MessageDialog.qml:80 components/MessageDialog.qml:86
+#: components/MessageDialog.qml:74 components/MessageDialog.qml:80
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
 msgstr "ყურადღება"
 
-#: components/MessageDialog.qml:82
+#: components/MessageDialog.qml:76
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
 msgstr "შეცდომა"
 
-#: components/MessageDialog.qml:84
+#: components/MessageDialog.qml:78
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
 msgstr "ინფორმაცია"
 
-#: components/MessageDialog.qml:204
+#: components/MessageDialog.qml:198
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
