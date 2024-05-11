@@ -93,12 +93,5 @@ QQC2.Dialog {
         spacing: Kirigami.Units.mediumSpacing
 
         standardButtons: root.standardButtons
-
-        onAccepted: root.accepted();
-        onDiscarded: root.discarded();
-        onRejected: root.rejected();
-        onApplied: root.applied();
-        onReset: root.reset();
-        onHelpRequested: root.helpRequested();
     }
 }
