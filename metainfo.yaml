@@ -1,7 +1,5 @@
 maintainer: davidedmundson
 description: Convergent visual components ("widgets") for Kirigami-based applications
-tier: 2
-type: functional
 platforms:
     - name: Linux
     - name: FreeBSD
@@ -12,5 +10,3 @@ release: false
 cmakename: KF5KirigamiAddons
 irc: kde-kirigami
 mailinglist: plasma-devel
-group: Frameworks
-subgroup: Tier 2
