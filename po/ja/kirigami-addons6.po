@@ -1,10 +1,11 @@
+# SPDX-FileCopyrightText: 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-10 00:37+0000\n"
-"PO-Revision-Date: 2021-05-15 14:49-0700\n"
-"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2024-04-28 18:58+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -13,69 +14,70 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: components/AbstractMaximizeComponent.qml:130
 #, kde-format
 msgid "Close"
-msgstr ""
+msgstr "閉じる"
 
 #: components/AlbumMaximizeComponent.qml:137
 #, kde-format
 msgid "Zoom in"
-msgstr ""
+msgstr "拡大"
 
 #: components/AlbumMaximizeComponent.qml:142
 #, kde-format
 msgid "Zoom out"
-msgstr ""
+msgstr "縮小"
 
 #: components/AlbumMaximizeComponent.qml:148
 #, kde-format
 msgid "Rotate left"
-msgstr ""
+msgstr "左に回転"
 
 #: components/AlbumMaximizeComponent.qml:154
 #, kde-format
 msgid "Rotate right"
-msgstr ""
+msgstr "右に回転"
 
 #: components/AlbumMaximizeComponent.qml:159
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
-msgstr ""
+msgstr "キャプションを表示"
 
 #: components/AlbumMaximizeComponent.qml:159
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
-msgstr ""
+msgstr "キャプションを隠す"
 
 #: components/AlbumMaximizeComponent.qml:165
 #, kde-format
 msgid "Save as"
-msgstr ""
+msgstr "名前を付けて保存"
 
 #: components/AlbumMaximizeComponent.qml:243
 #, kde-format
 msgid "Previous image"
-msgstr ""
+msgstr "前の画像"
 
 #: components/AlbumMaximizeComponent.qml:263
 #, kde-format
 msgid "Next image"
-msgstr ""
+msgstr "次の画像"
 
 #: components/Banner.qml:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "閉じる"
 
 #: components/DownloadAction.qml:37
 #, kde-format
 msgid "Download"
-msgstr ""
+msgstr "ダウンロード"
 
 #: components/MessageDialog.qml:72
 #, kde-format
@@ -111,19 +113,19 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
-msgstr ""
+msgstr "音量"
 
 #: dateandtime/DatePopup.qml:87 dateandtime/TimePopup.qml:52
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "キャンセル"
 
 #: dateandtime/DatePopup.qml:99 dateandtime/TimePopup.qml:63
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
-msgstr ""
+msgstr "選択"
 
 #: dateandtime/private/DatePicker.qml:271
 #, kde-format
@@ -144,19 +146,19 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Previous"
-msgstr ""
+msgstr "前に移動"
 
 #: dateandtime/private/DatePicker.qml:375
 #, kde-format
 msgctxt "@action:button"
 msgid "Jump to today"
-msgstr ""
+msgstr "今日に移動"
 
 #: dateandtime/private/DatePicker.qml:382
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Next"
-msgstr ""
+msgstr "次に移動"
 
 #: dateandtime/TimePicker.qml:97
 #, kde-format
@@ -167,7 +169,7 @@ msgstr ""
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: dateandtime/TimePicker.qml:134
 #, kde-format
@@ -177,18 +179,19 @@ msgstr ""
 #: formcard/AboutKDE.qml:23
 #, kde-format
 msgid "About KDE"
-msgstr ""
+msgstr "KDE について"
 
 #: formcard/AboutKDE.qml:50
 #, kde-format
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: formcard/AboutKDE.qml:59
 #, kde-format
 msgid "Be Free!"
-msgstr ""
+msgstr "Be Free!"
 
+# /trunk/l10n-support/ja/summit/messages/kxmlgui/kxmlgui6.po の Revision 1676811 から一部転載
 #: formcard/AboutKDE.qml:68
 #, kde-format
 msgid ""
@@ -202,17 +205,27 @@ msgid ""
 "the world's finest Free Software. Everyone is welcome to join and contribute "
 "to KDE, including you."
 msgstr ""
+"KDE はソフトウェアエンジニア、アーティスト、作家、翻訳者などのフリーソフト"
+"ウェアの開発に協力する人々による世界的なコミュニティです。KDE は Plasma デス"
+"クトップ環境や、数百ものアプリケーション、それらをサポートするたくさんのライ"
+"ブラリを作り出しています。\n"
+"\n"
+"KDE は協力事業です: 一つの企業が方向性や製品をコントロールすることはありませ"
+"ん。代わりに、私達は世界最高級のフリーソフトウェアを作成するという共通のゴー"
+"ルを達成するために共に働いています。あなたを含む誰もが KDE に参加して貢献する"
+"ことが歓迎されています。"
 
 #: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:193
 #, kde-format
 msgid "Homepage"
-msgstr ""
+msgstr "ホームページ"
 
 #: formcard/AboutKDE.qml:82
 #, kde-format
 msgid "Report bugs"
-msgstr ""
+msgstr "バグを報告"
 
+# /trunk/l10n-support/ja/summit/messages/kxmlgui/kxmlgui6.po の Revision 1676811 から一部転載
 #: formcard/AboutKDE.qml:87
 #, kde-format
 msgid ""
@@ -227,17 +240,29 @@ msgid ""
 "tracking system to register your wish. Make sure you use the severity called "
 "\"Wishlist\"."
 msgstr ""
+"ソフトウェアは常に進化しています。KDE チームも日々改良に努めていますが、それ"
+"にはユーザであるあなたの協力が必要です。何かがうまく動作しなかったり、改善で"
+"きる個所に気が付かれたりしたときには、ぜひ私たちに教えてください。\n"
+"\n"
+"KDE にはバグ追跡システムがあります。下のボタンを押してバグを報告できます。も"
+"しくは、「〜について」ページからこのアプリケーションに特有のバグを報告できま"
+"す。\n"
+"\n"
+"改良のためのいいアイデアをお持ちの場合も、バグ追跡システムを使ってあなたの要"
+"望をどしどしお寄せください。この場合、重要度には \"Wishlist\" (要望) を指定し"
+"てください。"
 
 #: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:244
 #, kde-format
 msgid "Report a bug"
-msgstr ""
+msgstr "バグを報告"
 
 #: formcard/AboutKDE.qml:102
 #, kde-format
 msgid "Join us"
-msgstr ""
+msgstr "KDE に参加"
 
+# /trunk/l10n-support/ja/summit/messages/kxmlgui/kxmlgui6.po の Revision 1676811 から一部転載
 #: formcard/AboutKDE.qml:107
 #, kde-format
 msgid ""
@@ -245,22 +270,27 @@ msgid ""
 "You can join the language teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
+"KDE チームに加わるには、必ずしもソフトウェア開発者である必要はありません。プ"
+"ログラムのインターフェースを翻訳する各言語の翻訳チームに参加したり、グラ"
+"フィック、テーマ、サウンドあるいはドキュメントの改善で貢献していただくことも"
+"できます。さあ、あとはあなた次第です!"
 
 #: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:219
 #, kde-format
 msgid "Get Involved"
-msgstr ""
+msgstr "参加する"
 
 #: formcard/AboutKDE.qml:123
 #, kde-format
 msgid "Developer Documentation"
-msgstr ""
+msgstr "開発者向けの文書"
 
 #: formcard/AboutKDE.qml:129
 #, kde-format
 msgid "Support us"
-msgstr ""
+msgstr "KDE を支援"
 
+# /trunk/l10n-support/ja/summit/messages/kxmlgui/kxmlgui6.po の Revision 1676811 から一部転載
 #: formcard/AboutKDE.qml:134
 #, kde-format
 msgid ""
@@ -281,105 +311,117 @@ msgid ""
 "\n"
 "Thank you very much in advance for your support."
 msgstr ""
+"KDE は無償で配布されていますが、開発には費用がかかります。\n"
+"\n"
+"KDE コミュニティはドイツの Tuebingen で法的に創設された KDE e.V. という非営利"
+"組織を形成しています。KDE e.V. は KDE プロジェクトの法的、経済的なことを扱っ"
+"ています。\n"
+"\n"
+"KDE チームは経済的な援助も必要としています。お金のほとんどは、メンバーその他"
+"の人々が KDE に貢献するために支払った費用の払い戻しに充てられます。\n"
+"\n"
+"寄付のご検討をどうぞよろしくお願いします。\n"
+"\n"
+"将来のあなたのサポートに感謝します。"
 
 #: formcard/AboutKDE.qml:146
 #, kde-format
 msgid "KDE e.V"
-msgstr ""
+msgstr "KDE e.V"
 
 #: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:206
 #, kde-format
 msgid "Donate"
-msgstr ""
+msgstr "寄付"
 
 #: formcard/AboutPage.qml:88
 #, kde-format
 msgid "About %1"
-msgstr ""
+msgstr "%1 について"
 
 #: formcard/AboutPage.qml:134
 #, kde-format
 msgid "Copyright"
-msgstr ""
+msgstr "著作権"
 
 #: formcard/AboutPage.qml:142
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
-msgstr[0] ""
+msgstr[0] "ライセンス"
 
 #: formcard/AboutPage.qml:251
 #, kde-format
 msgid "Libraries in use"
-msgstr ""
+msgstr "使用されているライブラリ"
 
 #: formcard/AboutPage.qml:274
 #, kde-format
 msgid "Authors"
-msgstr ""
+msgstr "作者"
 
 #: formcard/AboutPage.qml:289
 #, kde-format
 msgid "Credits"
-msgstr ""
+msgstr "クレジット"
 
 #: formcard/AboutPage.qml:304
 #, kde-format
 msgid "Translators"
-msgstr ""
+msgstr "翻訳者"
 
 #: formcard/AboutPage.qml:373
 #, kde-format
 msgid "Visit %1's KDE Store page"
-msgstr ""
+msgstr "%1 の KDE Store ページを訪れる"
 
 #: formcard/AboutPage.qml:382
 #, kde-format
 msgid "Send an email to %1"
-msgstr ""
+msgstr "%1 にメールを送る"
 
 #: formcard/FormColorDelegate.qml:42
 #, kde-format
 msgctxt "@action:button"
 msgid "Color"
-msgstr ""
+msgstr "色"
 
 #: formcard/FormColorDelegate.qml:43
 #, kde-format
 msgctxt "Accessible description"
 msgid "Current color \"%1\""
-msgstr ""
+msgstr "現在の色 \"%1\""
 
 #: formcard/FormDateTimeDelegate.qml:193
 #, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
 msgid "Today"
-msgstr ""
+msgstr "今日"
 
 #: formcard/FormDateTimeDelegate.qml:220 formcard/FormDateTimeDelegate.qml:357
 #, kde-format
 msgctxt "Date is not set"
 msgid "Not set"
-msgstr ""
+msgstr "設定されていません"
 
 #: formcard/FormPasswordFieldDelegate.qml:214
 #: formcard/FormTextFieldDelegate.qml:217
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
-msgstr ""
+msgstr "%1/%2"
 
 #: settings/CategorizedSettings.qml:44
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings"
-msgstr ""
+msgstr "設定"
 
 #: settings/CategorizedSettings.qml:44
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings — %1"
-msgstr ""
+msgstr "設定 — %1"
 
 #: settings/CategorizedSettings.qml:98
 #, kde-format
