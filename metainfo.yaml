@@ -1,4 +1,4 @@
-maintainer: davidedmundson
+maintainer: carlschwan
 description: Convergent visual components ("widgets") for Kirigami-based applications
 platforms:
     - name: Linux
