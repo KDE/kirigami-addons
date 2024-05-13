@@ -10,7 +10,7 @@ include(FeatureSummary)
 set(AUTOMOC_MOC_OPTIONS -Muri=org.kde.kirigami)
 
 set(QT_REQUIRED_VERSION "6.6")
-set(KF_MIN_VERSION "6.0.0")
+set(KF_MIN_VERSION "6.2.0")
 set(KF_MAJOR_VERSION "6")
 
 find_package(ECM ${KF_MIN_VERSION} NO_MODULE)
