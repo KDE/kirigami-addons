@@ -32,7 +32,7 @@ import QtQuick.Controls
 ToolBar {
     background: Kirigami.ShadowedRectangle {
         color: Kirigami.Theme.backgroundColor
-        radius: Kirigami.Units.cornerRadius
+        radius: 5
 
         shadow {
             size: 15
