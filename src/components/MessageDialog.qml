@@ -202,10 +202,10 @@ T.Dialog {
         }
 
         QQC2.DialogButtonBox {
-            leftPadding: Kirigami.Units.largeSpacing
-            rightPadding: Kirigami.Units.largeSpacing
-            bottomPadding: Kirigami.Units.largeSpacing
-            topPadding: Kirigami.Units.largeSpacing
+            leftPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+            rightPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+            bottomPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+            topPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
 
             standardButtons: root.standardButtons
 

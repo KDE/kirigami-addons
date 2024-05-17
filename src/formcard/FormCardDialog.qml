@@ -72,9 +72,9 @@ QQC2.Dialog {
     header: Kirigami.Heading {
         text: root.title
         elide: QQC2.Label.ElideRight
-        leftPadding: Kirigami.Units.largeSpacing
-        rightPadding: Kirigami.Units.largeSpacing
-        topPadding: Kirigami.Units.largeSpacing
+        leftPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+        rightPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+        topPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
         bottomPadding: 0
     }
 
@@ -82,13 +82,13 @@ QQC2.Dialog {
         id: columnLayout
 
         spacing: 0
-        property int _internal_formcard_margins: Kirigami.Units.largeSpacing
+        property int _internal_formcard_margins: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
     }
 
     footer: QQC2.DialogButtonBox {
-        leftPadding: Kirigami.Units.largeSpacing
-        rightPadding: Kirigami.Units.largeSpacing
-        bottomPadding: Kirigami.Units.largeSpacing
+        leftPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+        rightPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+        bottomPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
         topPadding: Kirigami.Units.smallSpacing
         spacing: Kirigami.Units.mediumSpacing
 
