@@ -84,7 +84,7 @@ Item {
 
     implicitHeight: topPadding + bottomPadding + internalColumn.implicitHeight + rectangle.borderWidth * 2
 
-    Rectangle {
+    Kirigami.ShadowedRectangle {
         id: rectangle
         readonly property real borderWidth: 1
 
@@ -103,8 +103,13 @@ Item {
         }
 
         border {
-            color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, Kirigami.Theme.frameContrast)
+            color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.15)
             width: borderWidth
+        }
+
+        shadow {
+            size: Kirigami.Units.mediumSpacing
+            color: Qt.rgba(Kirigami.Theme.textColor.r, Kirigami.Theme.textColor.g, Kirigami.Theme.textColor.b, 0.10)
         }
 
         ColumnLayout {
