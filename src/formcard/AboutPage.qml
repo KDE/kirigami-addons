@@ -241,7 +241,7 @@ FormCardPage {
                 return url;
             }
 
-            text: i18nd("kirigami-addons6", "Report a bug")
+            text: i18nd("kirigami-addons6", "Report a Bug")
             onClicked: Qt.openUrlExternally(theUrl)
             visible: theUrl.length > 0
         }
