@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-10 00:37+0000\n"
+"POT-Creation-Date: 2024-05-26 00:37+0000\n"
 "PO-Revision-Date: 2024-05-02 13:16+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -253,7 +253,7 @@ msgstr ""
 "Bir iyileştirme önerisinde bulunmak için de hata izleme sistemini "
 "kullanabilirsiniz. ‘Wishlist’ önceliğini seçtiğinizden emin olun."
 
-#: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:244
+#: formcard/AboutKDE.qml:96
 #, kde-format
 msgid "Report a bug"
 msgstr "Hata Bildir"
@@ -352,6 +352,12 @@ msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "Lisans"
 msgstr[1] "Lisanslar"
+
+#: formcard/AboutPage.qml:244
+#, fuzzy, kde-format
+#| msgid "Report a bug"
+msgid "Report a Bug"
+msgstr "Hata Bildir"
 
 #: formcard/AboutPage.qml:251
 #, kde-format

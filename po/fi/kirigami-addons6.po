@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-10 00:37+0000\n"
+"POT-Creation-Date: 2024-05-26 00:37+0000\n"
 "PO-Revision-Date: 2023-07-27 15:01+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -260,7 +260,7 @@ msgstr ""
 "vianjäljitysjärjestelmään. Varmista, että ongelman vakavuus on ”Wishlist”, "
 "toivelista."
 
-#: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:244
+#: formcard/AboutKDE.qml:96
 #, kde-format
 msgid "Report a bug"
 msgstr "Ilmoita viasta"
@@ -362,6 +362,12 @@ msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "Lisenssi"
 msgstr[1] "Lisenssit"
+
+#: formcard/AboutPage.qml:244
+#, fuzzy, kde-format
+#| msgid "Report a bug"
+msgid "Report a Bug"
+msgstr "Ilmoita viasta"
 
 #: formcard/AboutPage.qml:251
 #, kde-format

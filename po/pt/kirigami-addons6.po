@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-10 00:37+0000\n"
+"POT-Creation-Date: 2024-05-26 00:37+0000\n"
 "PO-Revision-Date: 2023-07-13 00:52+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -263,7 +263,7 @@ msgstr ""
 "registo de erros para registar o seu pedido. Certifique-se que usa o nível "
 "de criticidade \"Pedido\"."
 
-#: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:244
+#: formcard/AboutKDE.qml:96
 #, kde-format
 msgid "Report a bug"
 msgstr "Comunicar um erro"
@@ -368,6 +368,12 @@ msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "Licença"
 msgstr[1] "Licenças"
+
+#: formcard/AboutPage.qml:244
+#, fuzzy, kde-format
+#| msgid "Report a bug"
+msgid "Report a Bug"
+msgstr "Comunicar um erro"
 
 #: formcard/AboutPage.qml:251
 #, kde-format

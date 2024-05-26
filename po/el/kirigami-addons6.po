@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-10 00:37+0000\n"
+"POT-Creation-Date: 2024-05-26 00:37+0000\n"
 "PO-Revision-Date: 2023-07-26 15:54+0300\n"
 "Last-Translator: Theofilos Intzoglou <int.teo@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -266,7 +266,7 @@ msgstr ""
 "επιθυμία σας. Σιγουρευτείτε ότι επιλέξατε ως σοβαρότητα την επιλογή "
 "\"Wishlist\"."
 
-#: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:244
+#: formcard/AboutKDE.qml:96
 #, kde-format
 msgid "Report a bug"
 msgstr "Αναφορά σφάλματος"
@@ -373,6 +373,12 @@ msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "Άδεια χρήσης"
 msgstr[1] "Άδειες χρήσης"
+
+#: formcard/AboutPage.qml:244
+#, fuzzy, kde-format
+#| msgid "Report a bug"
+msgid "Report a Bug"
+msgstr "Αναφορά σφάλματος"
 
 #: formcard/AboutPage.qml:251
 #, kde-format

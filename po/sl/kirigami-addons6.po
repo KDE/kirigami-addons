@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-10 00:37+0000\n"
+"POT-Creation-Date: 2024-05-26 00:37+0000\n"
 "PO-Revision-Date: 2024-05-02 09:08+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -252,7 +252,7 @@ msgstr ""
 "da registrirate svojo željo. Prepričajte se, da uporabite resnost, imenovano "
 "\"Seznam želja - Wishlist\"."
 
-#: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:244
+#: formcard/AboutKDE.qml:96
 #, kde-format
 msgid "Report a bug"
 msgstr "Poročaj o napaki"
@@ -353,6 +353,12 @@ msgstr[0] "Licenca"
 msgstr[1] "Licenci"
 msgstr[2] "Licence"
 msgstr[3] "Licence"
+
+#: formcard/AboutPage.qml:244
+#, fuzzy, kde-format
+#| msgid "Report a bug"
+msgid "Report a Bug"
+msgstr "Poročaj o napaki"
 
 #: formcard/AboutPage.qml:251
 #, kde-format

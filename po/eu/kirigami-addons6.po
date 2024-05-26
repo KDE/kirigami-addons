@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-10 00:37+0000\n"
+"POT-Creation-Date: 2024-05-26 00:37+0000\n"
 "PO-Revision-Date: 2024-04-27 21:38+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -254,7 +254,7 @@ msgstr ""
 "nahia erregistratzera ongi etorria zara. Erabili \"desio-zerrenda"
 "\" (\"Wishlist\") larritasun-kategoria gisa."
 
-#: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:244
+#: formcard/AboutKDE.qml:96
 #, kde-format
 msgid "Report a bug"
 msgstr "Eman akats baten berri"
@@ -354,6 +354,12 @@ msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "Lizentzia"
 msgstr[1] "Lizentziak"
+
+#: formcard/AboutPage.qml:244
+#, fuzzy, kde-format
+#| msgid "Report a bug"
+msgid "Report a Bug"
+msgstr "Eman akats baten berri"
 
 #: formcard/AboutPage.qml:251
 #, kde-format

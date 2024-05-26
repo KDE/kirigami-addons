@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-10 00:37+0000\n"
+"POT-Creation-Date: 2024-05-26 00:37+0000\n"
 "PO-Revision-Date: 2024-05-06 12:16+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -251,7 +251,7 @@ msgstr ""
 "til að senda inn tillögu þína. Merktu hana bara sem \"Wishlist "
 "\" (\"óskalisti\")."
 
-#: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:244
+#: formcard/AboutKDE.qml:96
 #, kde-format
 msgid "Report a bug"
 msgstr "Senda villutilkynningu"
@@ -347,6 +347,12 @@ msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "Notkunarleyfi"
 msgstr[1] "Notkunarleyfi"
+
+#: formcard/AboutPage.qml:244
+#, fuzzy, kde-format
+#| msgid "Report a bug"
+msgid "Report a Bug"
+msgstr "Senda villutilkynningu"
 
 #: formcard/AboutPage.qml:251
 #, kde-format

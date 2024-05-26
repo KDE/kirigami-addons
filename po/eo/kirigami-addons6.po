@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-10 00:37+0000\n"
+"POT-Creation-Date: 2024-05-26 00:37+0000\n"
 "PO-Revision-Date: 2024-05-15 23:33+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -252,7 +252,7 @@ msgstr ""
 "por registri vian deziron. Certigu, ke vi uzas la severecon nomatan "
 "\"Dezirlisto\"."
 
-#: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:244
+#: formcard/AboutKDE.qml:96
 #, kde-format
 msgid "Report a bug"
 msgstr "Raportu cimon"
@@ -350,6 +350,12 @@ msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "Permesilo"
 msgstr[1] "Permesiloj"
+
+#: formcard/AboutPage.qml:244
+#, fuzzy, kde-format
+#| msgid "Report a bug"
+msgid "Report a Bug"
+msgstr "Raportu cimon"
 
 #: formcard/AboutPage.qml:251
 #, kde-format

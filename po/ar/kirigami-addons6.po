@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-10 00:37+0000\n"
+"POT-Creation-Date: 2024-05-26 00:37+0000\n"
 "PO-Revision-Date: 2024-05-02 11:12+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -248,7 +248,7 @@ msgstr ""
 "إذا كان لديك اقتراح للتحسين، فنحن نرحب بك لاستخدام نظام تتبع الأخطاء لتسجيل "
 "رغبتك. تأكد من استخدام درجة الخطورة المسماة \"قائمة الرغبات\"."
 
-#: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:244
+#: formcard/AboutKDE.qml:96
 #, kde-format
 msgid "Report a bug"
 msgstr "بلغ عن علة"
@@ -347,6 +347,12 @@ msgstr[2] "الرّخصتين"
 msgstr[3] "الرّخص"
 msgstr[4] "الرّخص"
 msgstr[5] "الرّخص"
+
+#: formcard/AboutPage.qml:244
+#, fuzzy, kde-format
+#| msgid "Report a bug"
+msgid "Report a Bug"
+msgstr "بلغ عن علة"
 
 #: formcard/AboutPage.qml:251
 #, kde-format

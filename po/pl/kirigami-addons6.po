@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-10 00:37+0000\n"
+"POT-Creation-Date: 2024-05-26 00:37+0000\n"
 "PO-Revision-Date: 2024-05-12 08:46+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -253,7 +253,7 @@ msgstr ""
 "pomysł propozycję w systemie obsługi błędów. Upewnij się tylko, że ustawisz "
 "wagę błędu na \"Życzenie\"."
 
-#: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:244
+#: formcard/AboutKDE.qml:96
 #, kde-format
 msgid "Report a bug"
 msgstr "Zgłoś błąd"
@@ -352,6 +352,12 @@ msgid_plural "Licenses"
 msgstr[0] "Licencja"
 msgstr[1] "Licencje"
 msgstr[2] "Licencje"
+
+#: formcard/AboutPage.qml:244
+#, fuzzy, kde-format
+#| msgid "Report a bug"
+msgid "Report a Bug"
+msgstr "Zgłoś błąd"
 
 #: formcard/AboutPage.qml:251
 #, kde-format

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-10 00:37+0000\n"
+"POT-Creation-Date: 2024-05-26 00:37+0000\n"
 "PO-Revision-Date: 2024-05-03 03:15+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -248,7 +248,7 @@ msgstr ""
 "如果您有改善的建議，您也可以使用問題追蹤系統來寫下您的希望。此時請使用"
 "「Wishlist」（願望清單）作為問題的嚴重程度。"
 
-#: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:244
+#: formcard/AboutKDE.qml:96
 #, kde-format
 msgid "Report a bug"
 msgstr "回報問題"
@@ -340,6 +340,12 @@ msgstr "版權"
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "授權"
+
+#: formcard/AboutPage.qml:244
+#, fuzzy, kde-format
+#| msgid "Report a bug"
+msgid "Report a Bug"
+msgstr "回報問題"
 
 #: formcard/AboutPage.qml:251
 #, kde-format

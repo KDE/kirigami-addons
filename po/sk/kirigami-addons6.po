@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-10 00:37+0000\n"
+"POT-Creation-Date: 2024-05-26 00:37+0000\n"
 "PO-Revision-Date: 2023-12-05 17:33+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -237,7 +237,7 @@ msgid ""
 "\"Wishlist\"."
 msgstr ""
 
-#: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:244
+#: formcard/AboutKDE.qml:96
 #, kde-format
 msgid "Report a bug"
 msgstr "Nahlásiť chybu"
@@ -318,6 +318,12 @@ msgid_plural "Licenses"
 msgstr[0] "Licencia"
 msgstr[1] "Licencie"
 msgstr[2] "Licencie"
+
+#: formcard/AboutPage.qml:244
+#, fuzzy, kde-format
+#| msgid "Report a bug"
+msgid "Report a Bug"
+msgstr "Nahlásiť chybu"
 
 #: formcard/AboutPage.qml:251
 #, kde-format

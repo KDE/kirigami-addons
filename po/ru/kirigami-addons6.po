@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-10 00:37+0000\n"
+"POT-Creation-Date: 2024-05-26 00:37+0000\n"
 "PO-Revision-Date: 2024-01-27 19:01+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -269,7 +269,7 @@ msgstr ""
 "Для связи с командой перевода KDE на русский язык используй почтовую "
 "рассылку kde-russian@lists.kde.ru."
 
-#: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:244
+#: formcard/AboutKDE.qml:96
 #, kde-format
 msgid "Report a bug"
 msgstr "Сообщить об ошибке"
@@ -369,6 +369,12 @@ msgstr[0] "Лицензии"
 msgstr[1] "Лицензии"
 msgstr[2] "Лицензии"
 msgstr[3] "Лицензия"
+
+#: formcard/AboutPage.qml:244
+#, fuzzy, kde-format
+#| msgid "Report a bug"
+msgid "Report a Bug"
+msgstr "Сообщить об ошибке"
 
 #: formcard/AboutPage.qml:251
 #, kde-format

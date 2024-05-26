@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-10 00:37+0000\n"
+"POT-Creation-Date: 2024-05-26 00:37+0000\n"
 "PO-Revision-Date: 2024-05-05 14:47+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -247,7 +247,7 @@ msgstr ""
 "விரும்பும் மாற்றங்களை பரிந்துரைக்கக் கூட பிழைகளை கண்காணிக்கும் அமைப்பினைப் பயன்படுத்தலாம். "
 "அப்படி தெரிவிக்கும்போது, \"Wishlist\" என்ற முக்கியத்துவத்தை தேர்ந்தெடுங்கள்."
 
-#: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:244
+#: formcard/AboutKDE.qml:96
 #, kde-format
 msgid "Report a bug"
 msgstr "பிழையைத் தெரிவிப்பது"
@@ -343,6 +343,12 @@ msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "உரிமம்"
 msgstr[1] "உரிமங்கள்"
+
+#: formcard/AboutPage.qml:244
+#, fuzzy, kde-format
+#| msgid "Report a bug"
+msgid "Report a Bug"
+msgstr "பிழையைத் தெரிவிப்பது"
 
 #: formcard/AboutPage.qml:251
 #, kde-format

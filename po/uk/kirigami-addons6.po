@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-10 00:37+0000\n"
+"POT-Creation-Date: 2024-05-26 00:37+0000\n"
 "PO-Revision-Date: 2024-05-02 09:08+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -254,7 +254,7 @@ msgstr ""
 "зареєструвати ваше побажання. Переконайтеся, що поле «Важливість» "
 "встановлено у значення «Список побажань» («Wishlist»)."
 
-#: formcard/AboutKDE.qml:96 formcard/AboutPage.qml:244
+#: formcard/AboutKDE.qml:96
 #, kde-format
 msgid "Report a bug"
 msgstr "Повідомити про помилку"
@@ -355,6 +355,12 @@ msgstr[0] "Ліцензування"
 msgstr[1] "Ліцензування"
 msgstr[2] "Ліцензування"
 msgstr[3] "Ліцензування"
+
+#: formcard/AboutPage.qml:244
+#, fuzzy, kde-format
+#| msgid "Report a bug"
+msgid "Report a Bug"
+msgstr "Повідомити про помилку"
 
 #: formcard/AboutPage.qml:251
 #, kde-format
