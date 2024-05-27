@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-26 00:37+0000\n"
-"PO-Revision-Date: 2024-05-02 13:18+0200\n"
+"PO-Revision-Date: 2024-05-26 11:21+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -317,7 +317,7 @@ msgstr ""
 "debades.\n"
 "\n"
 "Per a donar suport al desenvolupament, la comunitat KDE va formar la KDE e."
-"V., una organització sense ànim de lucre, fundada legalment a Alemanya. La "
+"V., una organització sense ànim de lucre, fundada legalment en Alemanya. La "
 "KDE e.V. representa la comunitat KDE en qüestions legals i financeres.\n"
 "\n"
 "KDE es beneficia de molts tipus de col·laboracions, inclosa la financera. "
@@ -357,8 +357,7 @@ msgstr[0] "Llicència"
 msgstr[1] "Llicències"
 
 #: formcard/AboutPage.qml:244
-#, fuzzy, kde-format
-#| msgid "Report a bug"
+#, kde-format
 msgid "Report a Bug"
 msgstr "Informeu d'un error"
 

@@ -344,10 +344,9 @@ msgid_plural "Licenses"
 msgstr[0] "许可证"
 
 #: formcard/AboutPage.qml:244
-#, fuzzy, kde-format
-#| msgid "Report a bug"
+#, kde-format
 msgid "Report a Bug"
-msgstr "报告程序缺陷"
+msgstr ""
 
 #: formcard/AboutPage.qml:251
 #, kde-format
