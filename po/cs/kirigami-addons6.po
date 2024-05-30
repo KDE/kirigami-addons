@@ -349,8 +349,7 @@ msgstr[1] "Licence"
 msgstr[2] "Licencí"
 
 #: formcard/AboutPage.qml:244
-#, fuzzy, kde-format
-#| msgid "Report a bug"
+#, kde-format
 msgid "Report a Bug"
 msgstr "Nahlásit chybu"
 
