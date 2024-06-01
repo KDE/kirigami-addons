@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-26 00:37+0000\n"
-"PO-Revision-Date: 2024-01-08 10:35+0100\n"
+"PO-Revision-Date: 2024-05-31 22:52+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: components/AbstractMaximizeComponent.qml:130
 #, kde-format
@@ -84,31 +84,31 @@ msgstr "Letöltés"
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
-msgstr ""
+msgstr "Sikeres"
 
 #: components/MessageDialog.qml:74 components/MessageDialog.qml:80
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
-msgstr ""
+msgstr "Figyelmeztetés"
 
 #: components/MessageDialog.qml:76
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
-msgstr ""
+msgstr "Hiba"
 
 #: components/MessageDialog.qml:78
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
-msgstr ""
+msgstr "Információ"
 
 #: components/MessageDialog.qml:198
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
-msgstr ""
+msgstr "Ne jelenjen meg újra"
 
 #: components/VideoMaximizeDelegate.qml:265
 #, kde-format
@@ -131,17 +131,17 @@ msgstr "Kiválasztás"
 #: dateandtime/private/DatePicker.qml:271
 #, kde-format
 msgid "Day"
-msgstr ""
+msgstr "Nap"
 
 #: dateandtime/private/DatePicker.qml:274
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "Hónap"
 
 #: dateandtime/private/DatePicker.qml:277
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "Év"
 
 #: dateandtime/private/DatePicker.qml:362
 #, kde-format
@@ -162,11 +162,9 @@ msgid "Go Next"
 msgstr "Következő"
 
 #: dateandtime/TimePicker.qml:97
-#, fuzzy, kde-format
-#| msgctxt "time in hour in 24h format"
-#| msgid "%1 hours"
+#, kde-format
 msgid "Hours"
-msgstr "%1 óra"
+msgstr "Óra"
 
 #: dateandtime/TimePicker.qml:119
 #, kde-format
@@ -175,11 +173,9 @@ msgid ":"
 msgstr ":"
 
 #: dateandtime/TimePicker.qml:134
-#, fuzzy, kde-format
-#| msgctxt "number of minutes"
-#| msgid "%1 minutes"
+#, kde-format
 msgid "Minutes"
-msgstr "%1 perc"
+msgstr "Perc"
 
 #: formcard/AboutKDE.qml:23
 #, kde-format
@@ -358,8 +354,7 @@ msgstr[0] "Licenc"
 msgstr[1] "Licencek"
 
 #: formcard/AboutPage.qml:244
-#, fuzzy, kde-format
-#| msgid "Report a bug"
+#, kde-format
 msgid "Report a Bug"
 msgstr "Hibabejelentés"
 
@@ -397,13 +392,13 @@ msgstr "E-mail küldése neki: %1"
 #, kde-format
 msgctxt "@action:button"
 msgid "Color"
-msgstr ""
+msgstr "Szín"
 
 #: formcard/FormColorDelegate.qml:43
 #, kde-format
 msgctxt "Accessible description"
 msgid "Current color \"%1\""
-msgstr ""
+msgstr "Jelenlegi szín „%1”"
 
 #: formcard/FormDateTimeDelegate.qml:193
 #, kde-format
@@ -440,7 +435,7 @@ msgstr "Beállítások — %1"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Go back"
-msgstr ""
+msgstr "Ugrás vissza"
 
 #~ msgctxt "time in hour (PM)"
 #~ msgid "%1 PM"
