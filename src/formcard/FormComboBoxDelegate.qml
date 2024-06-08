@@ -236,6 +236,7 @@ AbstractFormDelegate {
                 controlRoot._selectionPageItem = applicationWindow().pageStack.pushDialogLayer(page)
             } else {
                 combobox.popup.open();
+                combobox.forceActiveFocus(Qt.PopupFocusReason);
             }
         }
     }
