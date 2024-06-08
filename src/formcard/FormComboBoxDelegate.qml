@@ -182,7 +182,7 @@ AbstractFormDelegate {
     property Component comboBoxDelegate: Delegates.RoundedItemDelegate {
         implicitWidth: ListView.view ? ListView.view.width : Kirigami.Units.gridUnit * 16
         text: controlRoot.textRole ? (Array.isArray(controlRoot.model) ? modelData[controlRoot.textRole] : model[controlRoot.textRole]) : modelData
-        highlighted: controlRoot.currentIndex === index
+        highlighted: controlRoot.highlightedIndex === index
     }
 
     /**
