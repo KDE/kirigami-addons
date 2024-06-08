@@ -109,7 +109,7 @@ Item {
 
         shadow {
             size: Kirigami.Units.mediumSpacing
-            color: Qt.rgba(Kirigami.Theme.textColor.r, Kirigami.Theme.textColor.g, Kirigami.Theme.textColor.b, 0.10)
+            color: Qt.alpha(Kirigami.Theme.textColor, 0.10)
         }
 
         ColumnLayout {
