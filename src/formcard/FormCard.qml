@@ -86,11 +86,24 @@ Item {
 
     Kirigami.ShadowedRectangle {
         id: rectangle
+
         readonly property real borderWidth: 1
+        readonly property bool isDarkColor: {
+            const temp = Qt.darker(Kirigami.Theme.backgroundColor, 1);
+            return temp.a > 0 && getDarkness(Kirigami.Theme.backgroundColor) >= 0.4;
+        }
 
         // only have card radius if it isn't filling the entire width
         radius: root.cardWidthRestricted ? 5 : 0
         color: Kirigami.Theme.backgroundColor
+
+        function getDarkness(background: color): real {
+            // Thanks to Gojir4 from the Qt forum
+            // https://forum.qt.io/topic/106362/best-way-to-set-text-color-for-maximum-contrast-on-background-color/
+            var temp = Qt.darker(background, 1);
+            var a = 1 - ( 0.299 * temp.r + 0.587 * temp.g + 0.114 * temp.b);
+            return a;
+        }
 
         anchors {
             top: parent.top
@@ -103,13 +116,13 @@ Item {
         }
 
         border {
-            color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.15)
+            color: isDarkColor ? Qt.darker(Kirigami.Theme.backgroundColor, 1.2) : Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.15)
             width: borderWidth
         }
 
         shadow {
-            size: Kirigami.Units.mediumSpacing
-            color: Qt.alpha(Kirigami.Theme.textColor, 0.10)
+            size: isDarkColor ? Kirigami.Units.mediumSpacing : Kirigami.Units.largeSpacing
+            color: isDarkColor ? Qt.darker(Kirigami.Theme.backgroundColor, 1.1) : Qt.alpha(Kirigami.Theme.textColor, 0.10)
         }
 
         ColumnLayout {
