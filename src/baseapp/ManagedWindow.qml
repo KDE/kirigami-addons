@@ -10,6 +10,7 @@ import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCard
 import org.kde.kirigamiaddons.baseapp as BaseApp
+import org.kde.kirigamiaddons.baseapp.private as Private
 
 /**
  * @brief MainWindow represents a top-level main window.
@@ -74,12 +75,13 @@ Kirigami.ApplicationWindow {
         }
 
         function onShortcutsEditorAction(): void {
-            const openDialogWindow = pageStack.pushDialogLayer(Qt.createComponent('./private/ShortcutsEditor.qml'), {
+            const openDialogWindow = pageStack.pushDialogLayer(Qt.createComponent("org.kde.kirigamiaddons.baseapp.private", 'ShortcutsEditor'), {
                 width: root.width,
                 model: root.application.shortcutsModel,
             }, {
                 width: Kirigami.Units.gridUnit * 30,
-                height: Kirigami.Units.gridUnit * 30
+                height: Kirigami.Units.gridUnit * 30,
+                title: i18ndc("kirigami-addons6", "@title:window", "Shortcuts"),
             });
         }
 
@@ -105,7 +107,7 @@ Kirigami.ApplicationWindow {
     Loader {
         id: kcommandbarLoader
         active: false
-        sourceComponent: KQuickCommandBarPage {
+        sourceComponent: Private.KQuickCommandBarPage {
             application: root.application
             onClosed: kcommandbarLoader.active = false
             parent: root.QQC2.Overlay.overlay

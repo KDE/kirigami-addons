@@ -33,12 +33,19 @@ include(ECMQmlModule)
 
 find_package(Qt6 ${QT_REQUIRED_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick QuickControls2)
 
-find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS Kirigami I18n Config CoreAddons)
+find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS Kirigami I18n Config CoreAddons GuiAddons)
 if (BUILD_TESTING)
     find_package(Qt6QuickTest ${QT_REQUIRED_VERSION} CONFIG QUIET)
 endif()
 if (ANDROID)
     find_package(Gradle REQUIRED)
+endif()
+
+if(NOT WIN32 AND NOT APPLE AND NOT ANDROID)
+    find_package(KF6GlobalAccel ${KF_DEP_VERSION} REQUIRED)
+    set(HAVE_KGLOBALACCEL TRUE)
+else()
+    set(HAVE_KGLOBALACCEL FALSE)
 endif()
 
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF6KirigamiAddons")
