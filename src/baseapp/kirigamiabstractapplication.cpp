@@ -10,9 +10,9 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
-//#include <KShortcutsDialog>
-#include <QDebug>
 #include <QGuiApplication>
+
+using namespace std::chrono_literals;
 
 class KirigamiAbstractApplication::Private
 {
@@ -68,6 +68,14 @@ static QList<KalCommandBarModel::ActionGroup> actionCollectionToActionGroup(cons
     return actionList;
 }
 
+void KirigamiAbstractApplication::readSettings()
+{
+    const auto collections = actionCollections();
+    for (const auto collection : collections) {
+        collection->readSettings();
+    }
+}
+
 QSortFilterProxyModel *KirigamiAbstractApplication::actionsModel()
 {
     if (!d->proxyModel) {
@@ -95,7 +103,7 @@ QAbstractListModel *KirigamiAbstractApplication::shortcutsModel()
         d->shortcutsModel = new ShortcutsModel(this);
     }
 
-    d->shortcutsModel->refresh(actionCollectionToActionGroup(actionCollections()));
+    d->shortcutsModel->refresh(actionCollections());
     return d->shortcutsModel;
 }
 

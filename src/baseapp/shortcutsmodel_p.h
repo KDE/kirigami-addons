@@ -4,10 +4,13 @@
 #pragma once
 
 #include <QAbstractListModel>
+#include <QKeySequence>
 #include "actionsmodel_p.h"
 
 class QAction;
+class KirigamiActionCollection;
 
+/// \internal
 class ShortcutsModel : public QAbstractListModel
 {
     Q_OBJECT
@@ -18,13 +21,14 @@ public:
     enum Role {
         IconNameRole = Qt::UserRole + 1,
         ShortcutRole,
+        ShortcutDisplayRole,
         DefaultShortcutRole,
-        AlternateShortcutRole,
+        AlternateShortcutsRole,
         CollectionNameRole,
     };
 
     struct Item {
-        QString collectionName;
+        KirigamiActionCollection *collection;
         QAction *action = nullptr;
     };
 
@@ -32,8 +36,15 @@ public:
     QVariant data(const QModelIndex &index, int role) const override;
     QHash<int, QByteArray> roleNames() const override;
 
-    void refresh(const QList<KalCommandBarModel::ActionGroup> &actionGroups);
+    void refresh(const QList<KirigamiActionCollection*> &actionCollections);
+    Q_INVOKABLE QList<QKeySequence> updateShortcut(int index, int shortcutIndex, QKeySequence keySequence);
+    Q_INVOKABLE QList<QKeySequence> reset(int index);
+    Q_INVOKABLE void save();
+    Q_INVOKABLE void resetAll();
+
+    Q_INVOKABLE QKeySequence emptyKeySequence() const;
 
 private:
     QList<Item> m_items;
+    QList<KirigamiActionCollection *> m_collections;
 };

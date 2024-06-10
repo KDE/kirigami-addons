@@ -67,7 +67,7 @@
  * }
  * @endcode{}
  *
- * @since 1.2.0
+ * @since 1.3.0
  */
 class KIRIGAMIADDONSBASEAPP_EXPORT KirigamiAbstractApplication : public QObject
 {
@@ -135,8 +135,15 @@ protected:
      * - CommandBar
      * - About page for your application
      * - About page for KDE
+     *
+     * Once the actions are setup, call readSettings to read the confirured shortcuts.
      */
     virtual void setupActions();
+
+    /**
+     * Read the configured settings for the action.
+     */
+    void readSettings();
 
 private:
     void KIRIGAMIADDONSBASEAPP_NO_EXPORT quit();

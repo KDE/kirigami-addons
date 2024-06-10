@@ -4,6 +4,7 @@
 
 import QtQuick
 import org.kde.kirigami as Kirigami
+import org.kde.kirigamiaddons.baseapp.private as Private
 
 /**
  * A Kirigami.Action defined by a QAction.
@@ -24,15 +25,21 @@ import org.kde.kirigami as Kirigami
  * @endcode{}
  */
 Kirigami.Action {
-    required property string actionName
+    id: root
 
+    required property string actionName
     readonly property var _action: applicationWindow().application.action(actionName)
 
-    text: _action.text
     shortcut: _action.shortcut
+    text: _action.text
     icon.name: applicationWindow().application.iconName(_action.icon)
     onTriggered: _action.trigger()
     visible: _action.text.length > 0
     checkable: _action.checkable
     checked: _action.checked
+
+    readonly property Shortcut alternateShortcut : Shortcut {
+        sequences: Private.Helper.alternateShortcuts(_action)
+        onActivated: root.trigger()
+    }
 }

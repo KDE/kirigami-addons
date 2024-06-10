@@ -346,7 +346,7 @@ void KirigamiActionCollection::readSettings(KConfigGroup *config)
         return;
     }
 
-    for (QMap<QString, QAction *>::ConstIterator it = d->actionByName.constBegin(); it != d->actionByName.constEnd(); ++it) {
+    for (auto it = d->actionByName.constBegin(); it != d->actionByName.constEnd(); ++it) {
         QAction *action = it.value();
         if (!action) {
             continue;
@@ -417,7 +417,6 @@ void KirigamiActionCollection::writeSettings(KConfigGroup *config, bool writeAll
                 }
                 qCDebug(BASEAPP_LOG) << "\twriting " << actionName << " = " << s;
                 config->writeEntry(actionName, s, flags);
-
             } else if (bConfigHasAction) {
                 // Otherwise, this key is the same as default but exists in
                 // config file. Remove it.

@@ -1,6 +1,8 @@
 # SPDX-FileCopyrightText: 2024 Carl Schwan <carl@carlschwan.eu>
 # SPDX-License-Identifier: LGPL-2.0-or-later
 
+add_subdirectory(private)
+
 # BaseApp module
 
 add_library(KirigamiAddonsBaseApp SHARED
@@ -85,11 +87,6 @@ ecm_add_qml_module(KirigamiAddonsBaseApp
 ecm_target_qml_sources(KirigamiAddonsBaseApp SOURCES
     ManagedWindow.qml
     Action.qml
-)
-
-ecm_target_qml_sources(KirigamiAddonsBaseApp PATH private SOURCES
-    private/KQuickCommandBarPage.qml
-    private/ShortcutsEditor.qml
 )
 
 ecm_finalize_qml_module(KirigamiAddonsBaseApp DESTINATION ${KDE_INSTALL_QMLDIR})
