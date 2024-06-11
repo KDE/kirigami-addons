@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
-# Sergiu Bivol <sergiu@cip.md>, 2022.
+# Sergiu Bivol <sergiu@cip.md>, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-26 00:37+0000\n"
-"PO-Revision-Date: 2022-04-04 11:43+0100\n"
+"POT-Creation-Date: 2024-06-11 00:38+0000\n"
+"PO-Revision-Date: 2024-06-09 13:44+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -21,106 +21,104 @@ msgstr ""
 #: components/AbstractMaximizeComponent.qml:130
 #, kde-format
 msgid "Close"
-msgstr ""
+msgstr "Închide"
 
 #: components/AlbumMaximizeComponent.qml:137
 #, kde-format
 msgid "Zoom in"
-msgstr ""
+msgstr "Apropie"
 
 #: components/AlbumMaximizeComponent.qml:142
 #, kde-format
 msgid "Zoom out"
-msgstr ""
+msgstr "Îndepărtează"
 
 #: components/AlbumMaximizeComponent.qml:148
 #, kde-format
 msgid "Rotate left"
-msgstr ""
+msgstr "Rotește spre stânga"
 
 #: components/AlbumMaximizeComponent.qml:154
 #, kde-format
 msgid "Rotate right"
-msgstr ""
+msgstr "Rotește spre dreapta"
 
 #: components/AlbumMaximizeComponent.qml:159
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
-msgstr ""
+msgstr "Arată titlul"
 
 #: components/AlbumMaximizeComponent.qml:159
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
-msgstr ""
+msgstr "Ascunde titlul"
 
 #: components/AlbumMaximizeComponent.qml:165
 #, kde-format
 msgid "Save as"
-msgstr ""
+msgstr "Salvează ca"
 
 #: components/AlbumMaximizeComponent.qml:243
-#, fuzzy, kde-format
-#| msgid "Previous"
+#, kde-format
 msgid "Previous image"
-msgstr "Precedent"
+msgstr "Imaginea precedentă"
 
 #: components/AlbumMaximizeComponent.qml:263
 #, kde-format
 msgid "Next image"
-msgstr ""
+msgstr "Imaginea următoare"
 
 #: components/Banner.qml:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "Închide"
 
 #: components/DownloadAction.qml:37
 #, kde-format
 msgid "Download"
-msgstr ""
+msgstr "Descarcă"
 
 #: components/MessageDialog.qml:72
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
-msgstr ""
+msgstr "Succes"
 
 #: components/MessageDialog.qml:74 components/MessageDialog.qml:80
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
-msgstr ""
+msgstr "Avertisment"
 
 #: components/MessageDialog.qml:76
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
-msgstr ""
+msgstr "Eroare"
 
 #: components/MessageDialog.qml:78
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
-msgstr ""
+msgstr "Informație"
 
 #: components/MessageDialog.qml:198
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
-msgstr ""
+msgstr "Nu mai arăta"
 
 #: components/VideoMaximizeDelegate.qml:265
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
-msgstr ""
+msgstr "Volum"
 
 #: dateandtime/DatePopup.qml:87 dateandtime/TimePopup.qml:52
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Renunță"
@@ -129,76 +127,71 @@ msgstr "Renunță"
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
-msgstr ""
+msgstr "Alege"
 
 #: dateandtime/private/DatePicker.qml:271
-#, fuzzy, kde-format
-#| msgid "Days"
+#, kde-format
 msgid "Day"
-msgstr "Zile"
+msgstr "Zi"
 
 #: dateandtime/private/DatePicker.qml:274
-#, fuzzy, kde-format
-#| msgid "Months"
+#, kde-format
 msgid "Month"
-msgstr "Luni"
+msgstr "Lună"
 
 #: dateandtime/private/DatePicker.qml:277
-#, fuzzy, kde-format
-#| msgid "Years"
+#, kde-format
 msgid "Year"
-msgstr "Ani"
+msgstr "An"
 
 #: dateandtime/private/DatePicker.qml:362
-#, fuzzy, kde-format
-#| msgid "Previous"
+#, kde-format
 msgctxt "@action:button"
 msgid "Go Previous"
-msgstr "Precedent"
+msgstr "La precedenta"
 
 #: dateandtime/private/DatePicker.qml:375
 #, kde-format
 msgctxt "@action:button"
 msgid "Jump to today"
-msgstr ""
+msgstr "La azi"
 
 #: dateandtime/private/DatePicker.qml:382
-#, fuzzy, kde-format
-#| msgid "Next"
+#, kde-format
 msgctxt "@action:button"
 msgid "Go Next"
-msgstr "Următor"
+msgstr "La următoarea"
 
 #: dateandtime/TimePicker.qml:97
 #, kde-format
 msgid "Hours"
-msgstr ""
+msgstr "Ore"
 
 #: dateandtime/TimePicker.qml:119
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: dateandtime/TimePicker.qml:134
 #, kde-format
 msgid "Minutes"
-msgstr ""
+msgstr "Minute"
 
 #: formcard/AboutKDE.qml:23
 #, kde-format
 msgid "About KDE"
-msgstr ""
+msgstr "Despre KDE"
 
 #: formcard/AboutKDE.qml:50
 #, kde-format
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: formcard/AboutKDE.qml:59
 #, kde-format
 msgid "Be Free!"
-msgstr ""
+msgstr "Fii liber!"
 
 #: formcard/AboutKDE.qml:68
 #, kde-format
@@ -213,16 +206,25 @@ msgid ""
 "the world's finest Free Software. Everyone is welcome to join and contribute "
 "to KDE, including you."
 msgstr ""
+"KDE este o comunitate mondială de programatori, artiști, scriitori, "
+"traducători și creatori dedicați dezvoltării programelor libere. KDE produce "
+"mediul de birou Plasma, sute de aplicații și mulțimea de biblioteci ce le "
+"susțin.\n"
+"\n"
+"KDE este o întreprindere bazată pe cooperare: nicio entitate nu-i "
+"controlează direcția sau produsele. Dimpotrivă, colaborăm pentru a atinge "
+"scopul comun de a construi cele mai bune programe libere din lume. Toți sunt "
+"bineveniți să se alăture și să contribuie la KDE, inclusiv dumneavoastră."
 
 #: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:193
 #, kde-format
 msgid "Homepage"
-msgstr ""
+msgstr "Pagină web"
 
 #: formcard/AboutKDE.qml:82
 #, kde-format
 msgid "Report bugs"
-msgstr ""
+msgstr "Raportează defecte"
 
 #: formcard/AboutKDE.qml:87
 #, kde-format
@@ -238,16 +240,27 @@ msgid ""
 "tracking system to register your wish. Make sure you use the severity called "
 "\"Wishlist\"."
 msgstr ""
+"Programele pot fi îmbunătățite mereu, iar echipa KDE este pregătită să facă "
+"asta. Totuși, dumneavoastră, utilizatorul, trebuie să ne spuneți când ceva "
+"nu merge așa cum ar trebui sau ar putea merge mai bine.\n"
+"\n"
+"KDE are un sistem de evidență a defectelor. Folosiți butonul de mai jos "
+"pentru a raporta un defect, sau folosiți pagina Despre a programului pentru "
+"a raporta un defect specific acestei aplicații.\n"
+"\n"
+"Dacă aveți o sugestie de îmbunătățire, atunci sunteți bineveniți să folosiți "
+"sistemul de evidență a defectelor pentru a vă înregistra dorința. Asigurați-"
+"vă că folosiți nivelul de severitate „Dorință”."
 
 #: formcard/AboutKDE.qml:96
 #, kde-format
 msgid "Report a bug"
-msgstr ""
+msgstr "Raportează defect"
 
 #: formcard/AboutKDE.qml:102
 #, kde-format
 msgid "Join us"
-msgstr ""
+msgstr "Alătură-te"
 
 #: formcard/AboutKDE.qml:107
 #, kde-format
@@ -256,21 +269,25 @@ msgid ""
 "You can join the language teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
+"Nu trebuie să fiți neapărat un programator ca să fiți un membru al echipei "
+"KDE Vă puteți alătura echipelor lingvistice care traduc interfețele "
+"programelor. Puteți să creați imagini, tematici, sunete și să îmbunătățiți "
+"documentația. Dumneavoastră decideți!"
 
 #: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:219
 #, kde-format
 msgid "Get Involved"
-msgstr ""
+msgstr "Implică-te"
 
 #: formcard/AboutKDE.qml:123
 #, kde-format
 msgid "Developer Documentation"
-msgstr ""
+msgstr "Documentație pentru dezvoltatori"
 
 #: formcard/AboutKDE.qml:129
 #, kde-format
 msgid "Support us"
-msgstr ""
+msgstr "Susține-ne"
 
 #: formcard/AboutKDE.qml:134
 #, kde-format
@@ -292,85 +309,99 @@ msgid ""
 "\n"
 "Thank you very much in advance for your support."
 msgstr ""
+"Programele KDE sunt și vor fi disponibile gratuit pentru totdeauna, dar "
+"producerea acestora nu e gratuită.\n"
+"\n"
+"Pentru a susține dezvoltarea, comunitatea KDE a format KDE eV., o "
+"organizație non-profit fondată juridic în Germania. KDE e.V. reprezintă "
+"comunitatea KDE în chestiuni juridice și financiare.\n"
+"\n"
+"KDE beneficiază de sprijin în multe feluri, inclusiv financiar. Fondurile "
+"sunt utilizate pentru a rambursa cheltuielile membrilor și a altora făcute "
+"pentru contribuția la KDE. Alte fonduri sunt folosite pentru susținere "
+"juridică și organizarea de conferințe și întâlniri.\n"
+"\n"
+"Vă încurajăm să susțineți eforturile noastre printr-o donație financiară.\n"
+"\n"
+"Vă mulțumim anticipat pentru sprijinul dumneavoastră."
 
 #: formcard/AboutKDE.qml:146
 #, kde-format
 msgid "KDE e.V"
-msgstr ""
+msgstr "KDE e.V"
 
 #: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:206
 #, kde-format
 msgid "Donate"
-msgstr ""
+msgstr "Donează"
 
 #: formcard/AboutPage.qml:88
 #, kde-format
 msgid "About %1"
-msgstr ""
+msgstr "Despre %1"
 
 #: formcard/AboutPage.qml:134
 #, kde-format
 msgid "Copyright"
-msgstr ""
+msgstr "Drept de autor"
 
 #: formcard/AboutPage.qml:142
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Licență"
+msgstr[1] "Licențe"
+msgstr[2] "Licențe"
 
 #: formcard/AboutPage.qml:244
 #, kde-format
 msgid "Report a Bug"
-msgstr ""
+msgstr "Raportează defect"
 
 #: formcard/AboutPage.qml:251
 #, kde-format
 msgid "Libraries in use"
-msgstr ""
+msgstr "Biblioteci folosite"
 
 #: formcard/AboutPage.qml:274
 #, kde-format
 msgid "Authors"
-msgstr ""
+msgstr "Autori"
 
 #: formcard/AboutPage.qml:289
 #, kde-format
 msgid "Credits"
-msgstr ""
+msgstr "Mulțumiri"
 
 #: formcard/AboutPage.qml:304
 #, kde-format
 msgid "Translators"
-msgstr ""
+msgstr "Traducători"
 
 #: formcard/AboutPage.qml:373
 #, kde-format
 msgid "Visit %1's KDE Store page"
-msgstr ""
+msgstr "Vizitează pagina %1 din Magazinul KDE"
 
 #: formcard/AboutPage.qml:382
 #, kde-format
 msgid "Send an email to %1"
-msgstr ""
+msgstr "Trimite scrisoare către %1"
 
 #: formcard/FormColorDelegate.qml:42
 #, kde-format
 msgctxt "@action:button"
 msgid "Color"
-msgstr ""
+msgstr "Culoare"
 
 #: formcard/FormColorDelegate.qml:43
 #, kde-format
 msgctxt "Accessible description"
 msgid "Current color \"%1\""
-msgstr ""
+msgstr "Culoarea actuală „%1”"
 
 #: formcard/FormDateTimeDelegate.qml:193
-#, fuzzy, kde-format
-#| msgid "Today"
+#, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
 msgid "Today"
 msgstr "Azi"
@@ -379,32 +410,48 @@ msgstr "Azi"
 #, kde-format
 msgctxt "Date is not set"
 msgid "Not set"
-msgstr ""
+msgstr "Nu e stabilită"
 
 #: formcard/FormPasswordFieldDelegate.qml:214
 #: formcard/FormTextFieldDelegate.qml:217
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
-msgstr ""
+msgstr "%1/%2"
 
-#: settings/CategorizedSettings.qml:44
+#: settings/CategorizedSettings.qml:45 settings/ConfigurationsView.qml:81
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings"
-msgstr ""
+msgstr "Configurări"
 
-#: settings/CategorizedSettings.qml:44
+#: settings/CategorizedSettings.qml:45
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings — %1"
-msgstr ""
+msgstr "Configurări — %1"
 
-#: settings/CategorizedSettings.qml:98
+#: settings/CategorizedSettings.qml:99
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Go back"
-msgstr ""
+msgstr "Mergi înapoi"
+
+#: settings/private/ConfigMobilePage.qml:24
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Settings"
+msgctxt "@title"
+msgid "Settings"
+msgstr "Configurări"
+
+#: settings/private/ConfigMobilePage.qml:83
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Settings"
+msgctxt "@title:group"
+msgid "Settings"
+msgstr "Configurări"
 
 #~ msgctxt "%1 is month name, %2 is year"
 #~ msgid "%1 %2"

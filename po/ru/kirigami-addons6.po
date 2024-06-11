@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-26 00:37+0000\n"
+"POT-Creation-Date: 2024-06-11 00:38+0000\n"
 "PO-Revision-Date: 2024-01-27 19:01+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -437,23 +437,39 @@ msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
 msgstr "%1/%2"
 
-#: settings/CategorizedSettings.qml:44
+#: settings/CategorizedSettings.qml:45 settings/ConfigurationsView.qml:81
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "Параметры"
 
-#: settings/CategorizedSettings.qml:44
+#: settings/CategorizedSettings.qml:45
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings — %1"
 msgstr "Параметры — %1"
 
-#: settings/CategorizedSettings.qml:98
+#: settings/CategorizedSettings.qml:99
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Go back"
 msgstr ""
+
+#: settings/private/ConfigMobilePage.qml:24
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Settings"
+msgctxt "@title"
+msgid "Settings"
+msgstr "Параметры"
+
+#: settings/private/ConfigMobilePage.qml:83
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Settings"
+msgctxt "@title:group"
+msgid "Settings"
+msgstr "Параметры"
 
 #~ msgctxt "time in hour (PM)"
 #~ msgid "%1 PM"
