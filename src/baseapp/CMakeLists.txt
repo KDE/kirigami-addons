@@ -8,10 +8,6 @@ add_subdirectory(private)
 add_library(KirigamiAddonsBaseApp SHARED
     kirigamiactioncollection.cpp
     kirigamiactioncollection.h
-    kirigamitoggleaction.cpp
-    kirigamitoggleaction.h
-    kirigamiguiitem.cpp
-    kirigamiguiitem.h
     kirigamiabstractapplication.cpp
     kirigamiabstractapplication.h
     actionsmodel.cpp
@@ -52,9 +48,7 @@ ecm_qt_declare_logging_category(KirigamiAddonsBaseApp
 
 ecm_generate_headers(KirigamiAddonsBaseApp_HEADERS
     HEADER_NAMES
-    KirigamiToggleAction
     KirigamiActionCollection
-    KirigamiGuiItem
     KirigamiAbstractApplication
     REQUIRED_HEADERS KirigamiAddonsBaseApp_HEADERS
 )

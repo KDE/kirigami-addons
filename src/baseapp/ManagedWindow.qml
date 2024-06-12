@@ -92,6 +92,7 @@ Kirigami.ApplicationWindow {
                 width: Kirigami.Units.gridUnit * 30,
                 height: Kirigami.Units.gridUnit * 30
             });
+            openDialogWindow.Keys.escapePressed.connect(function() { openDialogWindow.closeDialog() });
         }
 
         function onOpenAboutKDEPage(): void {
@@ -101,6 +102,7 @@ Kirigami.ApplicationWindow {
                 width: Kirigami.Units.gridUnit * 30,
                 height: Kirigami.Units.gridUnit * 30
             });
+            openDialogWindow.Keys.escapePressed.connect(function() { openDialogWindow.closeDialog() });
         }
     }
 
