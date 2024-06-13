@@ -14,7 +14,7 @@
 
 #pragma once
 
-#include <kirigamiaddonsbaseapp_export.h>
+#include <kirigamiaddonsstatefulapp_export.h>
 #include <KStandardActions>
 
 #include <QAction>
@@ -40,7 +40,7 @@ class QString;
  *
  * @since 1.3.0
  */
-class KIRIGAMIADDONSBASEAPP_EXPORT KirigamiActionCollection : public QObject
+class KIRIGAMIADDONSSTATEFULAPP_EXPORT KirigamiActionCollection : public QObject
 {
     Q_OBJECT
 
@@ -225,7 +225,7 @@ protected Q_SLOTS:
     virtual void slotActionTriggered();
 
 private Q_SLOTS:
-    KIRIGAMIADDONSBASEAPP_NO_EXPORT void slotActionHovered();
+    KIRIGAMIADDONSSTATEFULAPP_NO_EXPORT void slotActionHovered();
 
 public:
     /**

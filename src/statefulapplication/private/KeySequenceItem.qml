@@ -10,7 +10,7 @@ import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
-import org.kde.kirigamiaddons.baseapp.private
+import org.kde.kirigamiaddons.statefulapp.private
 import org.kde.kirigamiaddons.formcard as FormCard
 
 /**

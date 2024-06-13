@@ -1,19 +1,19 @@
-// SPDX-FileCopyrightText: 2023 Carl Schwan <carl@carlschwan.eu>
-// SPDX-License-Identifier: LGPL-2.1-or-later
+// SPDX-FileCopyrightText: 2024 Carl Schwan <carl@carlschwan.eu>
+// SPDX-License-Identifier: LGPL-2.1-only or LGPL-3.0-only or LicenseRef-KDE-Accepted-LGPL
 #pragma once
 
 #include <kirigamiactioncollection.h>
-#include <kirigamiaddonsbaseapp_export.h>
+#include <kirigamiaddonsstatefulapp_export.h>
 #include <QObject>
 #include <QSortFilterProxyModel>
 #include <QtQml>
 
 /**
- * @class KirigamiAbstractApplication kirigamiabstractapplication.h KirigamiAbstractApplication
+ * @class AbstractKirigamiApplication kirigamiabstractapplication.h AbstractKirigamiApplication
  *
  * @short The main container for your actions.
  *
- * KirigamiAbstractApplication is a class that needs to be inherited in your application.
+ * AbstractKirigamiApplication is a class that needs to be inherited in your application.
  * It allows to expose the various actions of your applications to the QML frontend. Depending
  * on the complexitiy of you application, you will have to either reimplement setupActions only
  * and put all your actions inside the mainCollection or if you want to organize your actions
@@ -21,7 +21,7 @@
  * actionCollections.
  *
  * @code{.cpp}
- * class MyKoolApp : public KirigamiAbstractApplication
+ * class MyKoolApp : public AbstractKirigamiApplication
  * {
  *     Q_OBJECT
  *     QML_ELEMENT
@@ -33,14 +33,14 @@
  * };
  *
  * MyKoolApp::MyKoolApp(QObject *parent)
- *     : KirigamiAbstractApplication(parent)
+ *     : AbstractKirigamiApplication(parent)
  * {
  *      setupActions();
  * }
  *
  * void MyKoolApp::setupActions()
  * {
- *     KirigamiAbstractApplication::setupActions();
+ *     AbstractKirigamiApplication::setupActions();
  *
  *     auto actionName = QLatin1String("add_notebook");
  *     if (KAuthorized::authorizeAction(actionName)) {
@@ -56,12 +56,12 @@
  * The application object then needs to set in ManagedWindow.
  *
  * @code{.qml}
- * import org.kde.kirigamiaddons.managedapplication as ManagedApplication
+ * import org.kde.kirigamiaddons.StatefulApplication as StatefulApplication
  *
- * ManagedApplication.MainWindow {
+ * StatefulApplication.StatefulWindow {
  *     application: MyKoolApp
  *
- *     ManagedApplication.Action {
+ *     StatefulApplication.Action {
  *         actionName: 'add_notebook'
  *     }
  * }
@@ -69,28 +69,28 @@
  *
  * @since 1.3.0
  */
-class KIRIGAMIADDONSBASEAPP_EXPORT KirigamiAbstractApplication : public QObject
+class KIRIGAMIADDONSSTATEFULAPP_EXPORT AbstractKirigamiApplication : public QObject
 {
     Q_OBJECT
     QML_ELEMENT
     QML_UNCREATABLE("Abstract class")
 
-    /// @internal Used by ManagedApp.ManagedWindow
+    /// @internal Used by StatefulApp.ManagedWindow
     Q_PROPERTY(QSortFilterProxyModel *actionsModel READ actionsModel CONSTANT)
 
-    /// @internal Used by ManagedApp.ManagedWindow
+    /// @internal Used by StatefulApp.ManagedWindow
     Q_PROPERTY(QAbstractListModel *shortcutsModel READ shortcutsModel CONSTANT)
 
 public:
     /**
-     * Default constructor of KirigamiAbstractApplication
+     * Default constructor of AbstractKirigamiApplication
      */
-    explicit KirigamiAbstractApplication(QObject *parent = nullptr);
+    explicit AbstractKirigamiApplication(QObject *parent = nullptr);
 
     /**
-     * Default destructor of KirigamiAbstractApplication
+     * Default destructor of AbstractKirigamiApplication
      */
-    virtual ~KirigamiAbstractApplication();
+    virtual ~AbstractKirigamiApplication();
 
     /// Return the list of KirigamiActionCollection setup in your application.
     ///
@@ -100,29 +100,29 @@ public:
     /// Return the main action collection.
     KirigamiActionCollection *mainCollection() const;
 
-    /// @internal Used by ManagedApp.MainWindow
+    /// @internal Used by StatefulApp.StatefulWindow
     QSortFilterProxyModel *actionsModel();
 
     /// @internal Used by the shortcuts editor
     QAbstractListModel *shortcutsModel();
 
-    /// @internal Used by ManagedApp.Action
+    /// @internal Used by StatefulApp.Action
     Q_INVOKABLE QAction *action(const QString &actionName);
 
-    /// @internal Used by ManagedApp.Action
+    /// @internal Used by StatefulApp.Action
     Q_INVOKABLE QString iconName(const QIcon &icon) const;
 
 Q_SIGNALS:
-    /// @internal Used by ManagedApp.MainWindow
+    /// @internal Used by StatefulApp.StatefulWindow
     void openAboutPage();
 
-    /// @internal Used by ManagedApp.MainWindow
+    /// @internal Used by StatefulApp.StatefulWindow
     void openAboutKDEPage();
 
-    /// @internal Used by ManagedApp.MainWindow
+    /// @internal Used by StatefulApp.StatefulWindow
     void openKCommandBarAction();
 
-    /// @internal Used by ManagedApp.MainWindow
+    /// @internal Used by StatefulApp.StatefulWindow
     void shortcutsEditorAction();
 
 protected:
@@ -146,7 +146,7 @@ protected:
     void readSettings();
 
 private:
-    void KIRIGAMIADDONSBASEAPP_NO_EXPORT quit();
+    void KIRIGAMIADDONSSTATEFULAPP_NO_EXPORT quit();
 
     class Private;
     std::unique_ptr<Private> d;

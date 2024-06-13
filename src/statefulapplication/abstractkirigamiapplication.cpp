@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2023 Carl Schwan <carlschwan@kde.org>
 // SPDX-License-Identifier: LGPL-2.1-or-later
 
-#include "kirigamiabstractapplication.h"
+#include "abstractkirigamiapplication.h"
 #include "commandbarfiltermodel_p.h"
 #include "actionsmodel_p.h"
 #include "shortcutsmodel_p.h"
@@ -14,7 +14,7 @@
 
 using namespace std::chrono_literals;
 
-class KirigamiAbstractApplication::Private
+class AbstractKirigamiApplication::Private
 {
 public:
     KalCommandBarModel *actionModel = nullptr;
@@ -23,14 +23,14 @@ public:
     ShortcutsModel *shortcutsModel = nullptr;
 };
 
-KirigamiAbstractApplication::KirigamiAbstractApplication(QObject *parent)
+AbstractKirigamiApplication::AbstractKirigamiApplication(QObject *parent)
     : QObject(parent)
     , d(std::make_unique<Private>())
 {
     d->collection = new KirigamiActionCollection(parent);
 }
 
-KirigamiAbstractApplication::~KirigamiAbstractApplication()
+AbstractKirigamiApplication::~AbstractKirigamiApplication()
 {
     if (d->actionModel) {
         auto lastUsedActions = d->actionModel->lastUsedActions();
@@ -68,7 +68,7 @@ static QList<KalCommandBarModel::ActionGroup> actionCollectionToActionGroup(cons
     return actionList;
 }
 
-void KirigamiAbstractApplication::readSettings()
+void AbstractKirigamiApplication::readSettings()
 {
     const auto collections = actionCollections();
     for (const auto collection : collections) {
@@ -76,7 +76,7 @@ void KirigamiAbstractApplication::readSettings()
     }
 }
 
-QSortFilterProxyModel *KirigamiAbstractApplication::actionsModel()
+QSortFilterProxyModel *AbstractKirigamiApplication::actionsModel()
 {
     if (!d->proxyModel) {
         d->actionModel = new KalCommandBarModel(this);
@@ -97,7 +97,7 @@ QSortFilterProxyModel *KirigamiAbstractApplication::actionsModel()
     return d->proxyModel;
 }
 
-QAbstractListModel *KirigamiAbstractApplication::shortcutsModel()
+QAbstractListModel *AbstractKirigamiApplication::shortcutsModel()
 {
     if (!d->shortcutsModel) {
         d->shortcutsModel = new ShortcutsModel(this);
@@ -107,7 +107,7 @@ QAbstractListModel *KirigamiAbstractApplication::shortcutsModel()
     return d->shortcutsModel;
 }
 
-QAction *KirigamiAbstractApplication::action(const QString &name)
+QAction *AbstractKirigamiApplication::action(const QString &name)
 {
     const auto collections = actionCollections();
     for (const auto collection : collections) {
@@ -122,23 +122,23 @@ QAction *KirigamiAbstractApplication::action(const QString &name)
     return nullptr;
 }
 
-QList<KirigamiActionCollection *> KirigamiAbstractApplication::actionCollections() const
+QList<KirigamiActionCollection *> AbstractKirigamiApplication::actionCollections() const
 {
     return QList{
         d->collection,
     };
 }
 
-KirigamiActionCollection *KirigamiAbstractApplication::mainCollection() const
+KirigamiActionCollection *AbstractKirigamiApplication::mainCollection() const
 {
     return d->collection;
 }
 
-void KirigamiAbstractApplication::setupActions()
+void AbstractKirigamiApplication::setupActions()
 {
     auto actionName = QLatin1StringView("open_kcommand_bar");
     if (KAuthorized::authorizeAction(actionName)) {
-        auto openKCommandBarAction = d->collection->addAction(actionName, this, &KirigamiAbstractApplication::openKCommandBarAction);
+        auto openKCommandBarAction = d->collection->addAction(actionName, this, &AbstractKirigamiApplication::openKCommandBarAction);
         openKCommandBarAction->setText(i18n("Open Command Bar"));
         openKCommandBarAction->setIcon(QIcon::fromTheme(QStringLiteral("new-command-alarm")));
 
@@ -148,39 +148,39 @@ void KirigamiAbstractApplication::setupActions()
 
     actionName = QLatin1StringView("file_quit");
     if (KAuthorized::authorizeAction(actionName)) {
-        auto action = KStandardActions::quit(this, &KirigamiAbstractApplication::quit, this);
+        auto action = KStandardActions::quit(this, &AbstractKirigamiApplication::quit, this);
         d->collection->addAction(action->objectName(), action);
     }
 
     actionName = QLatin1StringView("options_configure_keybinding");
     if (KAuthorized::authorizeAction(actionName)) {
-        auto keyBindingsAction = KStandardActions::keyBindings(this, &KirigamiAbstractApplication::shortcutsEditorAction, this);
+        auto keyBindingsAction = KStandardActions::keyBindings(this, &AbstractKirigamiApplication::shortcutsEditorAction, this);
         d->collection->addAction(keyBindingsAction->objectName(), keyBindingsAction);
     }
 
     actionName = QLatin1StringView("open_about_page");
     if (KAuthorized::authorizeAction(actionName)) {
-        auto action = d->collection->addAction(actionName, this, &KirigamiAbstractApplication::openAboutPage);
+        auto action = d->collection->addAction(actionName, this, &AbstractKirigamiApplication::openAboutPage);
         action->setText(i18n("About %1", KAboutData::applicationData().displayName()));
         action->setIcon(QIcon::fromTheme(QStringLiteral("help-about")));
     }
 
     actionName = QLatin1StringView("open_about_kde_page");
     if (KAuthorized::authorizeAction(actionName)) {
-        auto action = d->collection->addAction(actionName, this, &KirigamiAbstractApplication::openAboutKDEPage);
+        auto action = d->collection->addAction(actionName, this, &AbstractKirigamiApplication::openAboutKDEPage);
         action->setText(i18n("About KDE"));
         action->setIcon(QIcon::fromTheme(QStringLiteral("kde")));
     }
 }
 
-void KirigamiAbstractApplication::quit()
+void AbstractKirigamiApplication::quit()
 {
     qGuiApp->exit();
 }
 
-QString KirigamiAbstractApplication::iconName(const QIcon &icon) const
+QString AbstractKirigamiApplication::iconName(const QIcon &icon) const
 {
     return icon.name();
 }
 
-#include "moc_kirigamiabstractapplication.cpp"
+#include "moc_abstractkirigamiapplication.cpp"
