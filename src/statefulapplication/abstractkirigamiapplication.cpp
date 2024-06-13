@@ -13,6 +13,7 @@
 #include <QGuiApplication>
 
 using namespace std::chrono_literals;
+using namespace Qt::StringLiterals;
 
 class AbstractKirigamiApplication::Private
 {
@@ -170,6 +171,10 @@ void AbstractKirigamiApplication::setupActions()
         auto action = d->collection->addAction(actionName, this, &AbstractKirigamiApplication::openAboutKDEPage);
         action->setText(i18n("About KDE"));
         action->setIcon(QIcon::fromTheme(QStringLiteral("kde")));
+
+        if (KAboutData::applicationData().desktopFileName().startsWith(u"org.kde."_s)) {
+            action->setVisible(false);
+        }
     }
 }
 

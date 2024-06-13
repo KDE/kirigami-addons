@@ -22,6 +22,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH})
 include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
+include(KDEPackageAppTemplates)
 
 include(ECMGenerateExportHeader)
 include(ECMSetupVersion)
@@ -75,6 +76,10 @@ option(BUILD_EXAMPLES OFF)
 
 if (BUILD_EXAMPLES)
     add_subdirectory(examples)
+endif()
+
+if (NOT ANDROID)
+    add_subdirectory(templates)
 endif()
 
 install(FILES

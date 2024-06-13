@@ -11,6 +11,7 @@ import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCard
 import org.kde.kirigamiaddons.statefulapp as StatefulApp
 import org.kde.kirigamiaddons.statefulapp.private as Private
+import org.kde.coreaddons as Core
 
 /**
  * @brief StatefulWindow will takes care of providing standard functionalities
@@ -42,7 +43,7 @@ Kirigami.ApplicationWindow {
      *
      * @see AbstractKirigamiApplication
      */
-    property StatefulApp.AbstractKirigamiApplication application: Private.DefaultKirigamiApplication {}
+    property StatefulApp.AbstractKirigamiApplication application: Private.DefaultKirigamiApplication
 
     property Item hoverLinkIndicator: QQC2.Control {
         parent: overlay.parent
@@ -106,7 +107,8 @@ Kirigami.ApplicationWindow {
                 width: root.width
             }, {
                 width: Kirigami.Units.gridUnit * 30,
-                height: Kirigami.Units.gridUnit * 30
+                height: Kirigami.Units.gridUnit * 30,
+                title: i18ndc("kirigami-addons6", "@title:window", "About %1", Core.AboutData.displayName),
             });
             openDialogWindow.Keys.escapePressed.connect(function() {
                 openDialogWindow.closeDialog();
@@ -118,7 +120,8 @@ Kirigami.ApplicationWindow {
                 width: root.width
             }, {
                 width: Kirigami.Units.gridUnit * 30,
-                height: Kirigami.Units.gridUnit * 30
+                height: Kirigami.Units.gridUnit * 30,
+                title: i18ndc("kirigami-addons6", "@title:window", "About KDE"),
             });
             openDialogWindow.Keys.escapePressed.connect(function() {
                 openDialogWindow.closeDialog();

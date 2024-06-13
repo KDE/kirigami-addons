@@ -132,7 +132,10 @@ Kirigami.ScrollablePage {
             padding: Kirigami.Units.largeSpacing
             standardButtons: QQC2.Dialog.Save | QQC2.Dialog.Reset
 
-            onAccepted: root.model.save()
+            onAccepted: {
+                root.model.save()
+                root.closeDialog();
+            }
             onReset: root.model.resetAll()
         }
     }

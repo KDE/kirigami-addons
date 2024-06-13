@@ -1,0 +1,7 @@
+# KDE Config File
+[General]
+Name=Advanced Kirigami Application (Qt6)
+Comment=Convergent application using Kirigami Addons
+Category=Qt/Graphical
+Icon=kirigami-app.png
+ShowFilesAfterGeneration=src/main.cpp
