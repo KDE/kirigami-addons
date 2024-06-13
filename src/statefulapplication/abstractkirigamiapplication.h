@@ -6,7 +6,7 @@
 #include <kirigamiaddonsstatefulapp_export.h>
 #include <QObject>
 #include <QSortFilterProxyModel>
-#include <QtQml>
+#include <QtQml/qqmlregistration.h>
 
 /**
  * @class AbstractKirigamiApplication kirigamiabstractapplication.h AbstractKirigamiApplication
