@@ -436,10 +436,10 @@ msgstr "Přejít zpět"
 #, kde-format
 msgctxt "@title"
 msgid "Settings"
-msgstr ""
+msgstr "Nastavení"
 
 #: settings/private/ConfigMobilePage.qml:83
 #, kde-format
 msgctxt "@title:group"
 msgid "Settings"
-msgstr ""
+msgstr "Nastavení"
