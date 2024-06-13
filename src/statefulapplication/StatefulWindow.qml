@@ -9,22 +9,40 @@ import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCard
-import org.kde.kirigamiaddons.baseapp as BaseApp
-import org.kde.kirigamiaddons.baseapp.private as Private
+import org.kde.kirigamiaddons.statefulapp as StatefulApp
+import org.kde.kirigamiaddons.statefulapp.private as Private
 
 /**
- * @brief MainWindow represents a top-level main window.
+ * @brief StatefulWindow will takes care of providing standard functionalities
+ * for your application main window.
  *
- * MainWindow will takes care of providing standard functionalities for your application
- * main window. This includes stateful window size which is remembered accross application
- * restart, command bar, handling of standard shortcuts.
+ * This includes:
+ * * Restoration of the window size accross restart
+ * * Handle some of the standard actions defined in your KirigamiAbstractApplication
+ * * (AboutKDE and AboutApp)
+ * * A command bar to access all the defined shortcuts
+ * * A shortcut editor
  *
  * @since 1.3.0
  */
 Kirigami.ApplicationWindow {
     id: root
 
-    required property BaseApp.KirigamiAbstractApplication application
+    /**
+     * This property holds the AbstractKirigamiApplication of your application.
+     *
+     * The default AbstractKirigamiApplication set, just provides the following actions:
+     * * KStandardActions::quit
+     * * KStandardActions::keyBindings
+     * * "Open Command Bar"
+     * * "About App"
+     * * "About KDE"
+     *
+     * These actions are also handled by StatefulWindow. If you need more overwrite AbstractKirigamiApplication::setupActions.
+     *
+     * @see AbstractKirigamiApplication
+     */
+    property StatefulApp.AbstractKirigamiApplication application: Private.DefaultKirigamiApplication {}
 
     property Item hoverLinkIndicator: QQC2.Control {
         parent: overlay.parent
@@ -44,28 +62,26 @@ Kirigami.ApplicationWindow {
         }
     }
 
-    width: Kirigami.Units.gridUnit * 65
+    onClosing: Private.Helper.saveWindowGeometry(root)
 
-    minimumWidth: Kirigami.Units.gridUnit * 15
-    minimumHeight: Kirigami.Units.gridUnit * 20
-    onClosing: root.application.saveWindowGeometry(root)
+    onWidthChanged: saveWindowGeometryTimer.restart()
+    onHeightChanged: saveWindowGeometryTimer.restart()
+    onXChanged: saveWindowGeometryTimer.restart()
+    onYChanged: saveWindowGeometryTimer.restart()
+
+    Component.onCompleted: Private.Helper.restoreWindowGeometry(root)
+
+    // This timer allows to batch update the window size change to reduce
+    // the io load and also work around the fact that x/y/width/height are
+    // changed when loading the page and overwrite the saved geometry from
+    // the previous session.
+    Timer {
+        id: saveWindowGeometryTimer
+        interval: 1000
+        onTriggered: Private.Helper.saveWindowGeometry(root)
+    }
 
     pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.ToolBar
-
-    QQC2.Action {
-        id: closeOverlayAction
-        shortcut: "Escape"
-        onTriggered: {
-            if(pageStack.layers.depth > 1) {
-                pageStack.layers.pop();
-                return;
-            }
-            if(contextDrawer && contextDrawer.visible) {
-                contextDrawer.close();
-                return;
-            }
-        }
-    }
 
     Connections {
         target: root.application
@@ -75,7 +91,7 @@ Kirigami.ApplicationWindow {
         }
 
         function onShortcutsEditorAction(): void {
-            const openDialogWindow = pageStack.pushDialogLayer(Qt.createComponent("org.kde.kirigamiaddons.baseapp.private", 'ShortcutsEditor'), {
+            const openDialogWindow = pageStack.pushDialogLayer(Qt.createComponent("org.kde.kirigamiaddons.statefulapp.private", 'ShortcutsEditor'), {
                 width: root.width,
                 model: root.application.shortcutsModel,
             }, {
@@ -92,7 +108,9 @@ Kirigami.ApplicationWindow {
                 width: Kirigami.Units.gridUnit * 30,
                 height: Kirigami.Units.gridUnit * 30
             });
-            openDialogWindow.Keys.escapePressed.connect(function() { openDialogWindow.closeDialog() });
+            openDialogWindow.Keys.escapePressed.connect(function() {
+                openDialogWindow.closeDialog();
+            });
         }
 
         function onOpenAboutKDEPage(): void {
@@ -102,7 +120,9 @@ Kirigami.ApplicationWindow {
                 width: Kirigami.Units.gridUnit * 30,
                 height: Kirigami.Units.gridUnit * 30
             });
-            openDialogWindow.Keys.escapePressed.connect(function() { openDialogWindow.closeDialog() });
+            openDialogWindow.Keys.escapePressed.connect(function() {
+                openDialogWindow.closeDialog();
+            });
         }
     }
 

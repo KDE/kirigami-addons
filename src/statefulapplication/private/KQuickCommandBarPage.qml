@@ -7,13 +7,13 @@ import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.delegates as Delegates
 import org.kde.kirigamiaddons.components as Components
-import org.kde.kirigamiaddons.baseapp as BaseApp
+import org.kde.kirigamiaddons.statefulapp as StatefulApp
 import QtQuick.Templates as T
 
 Kirigami.SearchDialog {
     id: root
 
-    required property BaseApp.KirigamiAbstractApplication application
+    required property StatefulApp.KirigamiAbstractApplication application
 
     background: Components.DialogRoundedBackground {}
 

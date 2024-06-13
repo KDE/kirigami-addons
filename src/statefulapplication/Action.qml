@@ -4,7 +4,7 @@
 
 import QtQuick
 import org.kde.kirigami as Kirigami
-import org.kde.kirigamiaddons.baseapp.private as Private
+import org.kde.kirigamiaddons.statefulapp.private as Private
 
 /**
  * A Kirigami.Action defined by a QAction.
