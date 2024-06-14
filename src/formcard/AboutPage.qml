@@ -164,7 +164,7 @@ FormCardPage {
 
             property alias text: bodyLabel.text
 
-            parent: applicationWindow().overlay
+            parent: QQC2.Overlay.overlay
             iconName: "license"
 
             leftPadding: 0
