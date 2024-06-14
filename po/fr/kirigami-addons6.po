@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-11 00:38+0000\n"
-"PO-Revision-Date: 2024-05-27 07:34+0200\n"
+"PO-Revision-Date: 2024-06-12 08:59+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -441,17 +441,13 @@ msgid "Go back"
 msgstr "Revenir en arrière"
 
 #: settings/private/ConfigMobilePage.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title"
 msgid "Settings"
 msgstr "Configuration"
 
 #: settings/private/ConfigMobilePage.qml:83
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title:group"
 msgid "Settings"
 msgstr "Configuration"
