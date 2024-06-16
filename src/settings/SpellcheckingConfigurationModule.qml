@@ -8,7 +8,7 @@ import QtQuick
  */
 ConfigurationModule {
     moduleId: "spellchecking"
-    text: i18n("Spell Checking")
+    text: i18ndc("kirigami-addons6", "@action:button", "Spell Checking")
     icon.name: "tools-check-spelling"
     page: () => Qt.createComponent("org.kde.kirigamiaddons.settings.private", "SonnetConfigPage")
     visible: Qt.platform.os !== "android"
