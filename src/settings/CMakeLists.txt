@@ -20,6 +20,7 @@ ecm_target_qml_sources(settingsplugin SOURCES
 
     ConfigurationsView.qml
     ConfigurationModule.qml
+    SpellcheckingConfigurationModule.qml
 )
 
 target_link_libraries(settingsplugin PRIVATE
