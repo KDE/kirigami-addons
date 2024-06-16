@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-11 00:38+0000\n"
-"PO-Revision-Date: 2024-04-05 16:08+0300\n"
+"PO-Revision-Date: 2024-05-29 16:25+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: components/AbstractMaximizeComponent.qml:130
 #, kde-format
@@ -36,12 +36,12 @@ msgstr "Tālināt"
 #: components/AlbumMaximizeComponent.qml:148
 #, kde-format
 msgid "Rotate left"
-msgstr "Rotēt pa kreisi"
+msgstr "Pagriezt pa kreisi"
 
 #: components/AlbumMaximizeComponent.qml:154
 #, kde-format
 msgid "Rotate right"
-msgstr "Rotēt pa labi"
+msgstr "Pagriezt pa labi"
 
 #: components/AlbumMaximizeComponent.qml:159
 #, kde-format
@@ -85,31 +85,31 @@ msgstr "Lejupielādēt"
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
-msgstr ""
+msgstr "Izdevās"
 
 #: components/MessageDialog.qml:74 components/MessageDialog.qml:80
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
-msgstr ""
+msgstr "Brīdinājums"
 
 #: components/MessageDialog.qml:76
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
-msgstr ""
+msgstr "Kļūda"
 
 #: components/MessageDialog.qml:78
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
-msgstr ""
+msgstr "Informācija"
 
 #: components/MessageDialog.qml:198
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
-msgstr ""
+msgstr "Vairs nerādīt"
 
 #: components/VideoMaximizeDelegate.qml:265
 #, kde-format
@@ -132,17 +132,17 @@ msgstr "Atlasīt"
 #: dateandtime/private/DatePicker.qml:271
 #, kde-format
 msgid "Day"
-msgstr ""
+msgstr "Diena"
 
 #: dateandtime/private/DatePicker.qml:274
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "Mēnesis"
 
 #: dateandtime/private/DatePicker.qml:277
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "Gads"
 
 #: dateandtime/private/DatePicker.qml:362
 #, kde-format
@@ -163,11 +163,9 @@ msgid "Go Next"
 msgstr "Iet uz nākamo"
 
 #: dateandtime/TimePicker.qml:97
-#, fuzzy, kde-format
-#| msgctxt "time in hour in 24h format"
-#| msgid "%1 hours"
+#, kde-format
 msgid "Hours"
-msgstr "%1 stundas"
+msgstr "Stundas"
 
 #: dateandtime/TimePicker.qml:119
 #, kde-format
@@ -176,11 +174,9 @@ msgid ":"
 msgstr ":"
 
 #: dateandtime/TimePicker.qml:134
-#, fuzzy, kde-format
-#| msgctxt "number of minutes"
-#| msgid "%1 minutes"
+#, kde-format
 msgid "Minutes"
-msgstr "%1 minūtes"
+msgstr "Minūtes"
 
 #: formcard/AboutKDE.qml:23
 #, kde-format
@@ -359,8 +355,7 @@ msgstr[1] "Licences"
 msgstr[2] "Licences"
 
 #: formcard/AboutPage.qml:244
-#, fuzzy, kde-format
-#| msgid "Report a bug"
+#, kde-format
 msgid "Report a Bug"
 msgstr "Ziņot par kļūdu"
 
@@ -441,7 +436,7 @@ msgstr "Iestatījumi — %1"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Go back"
-msgstr ""
+msgstr "Iet atpakaļ"
 
 #: settings/private/ConfigMobilePage.qml:24
 #, fuzzy, kde-format

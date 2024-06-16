@@ -431,10 +431,10 @@ msgstr "返回"
 #, kde-format
 msgctxt "@title"
 msgid "Settings"
-msgstr ""
+msgstr "设置"
 
 #: settings/private/ConfigMobilePage.qml:83
 #, kde-format
 msgctxt "@title:group"
 msgid "Settings"
-msgstr ""
+msgstr "设置"
