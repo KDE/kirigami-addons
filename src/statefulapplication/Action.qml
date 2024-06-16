@@ -2,9 +2,11 @@
 // SPDX-FileCopyrightText: 2024 Carl Schwan <carl@carlschwan.eu>
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
+import QtQml
 import QtQuick
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.statefulapp.private as Private
+import org.kde.kirigamiaddons.statefulapp as StatefulApp
 
 /**
  * A Kirigami.Action defined by a QAction.
@@ -28,11 +30,12 @@ Kirigami.Action {
     id: root
 
     required property string actionName
-    readonly property var _action: applicationWindow().application.action(actionName)
+    required property StatefulApp.AbstractKirigamiApplication application
+    readonly property QtObject _action: application.action(actionName)
 
     shortcut: _action.shortcut
     text: _action.text
-    icon.name: applicationWindow().application.iconName(_action.icon)
+    icon.name: application.iconName(_action.icon)
     onTriggered: _action.trigger()
     visible: _action.text.length > 0
     checkable: _action.checkable
