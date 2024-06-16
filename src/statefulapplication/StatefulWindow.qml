@@ -37,40 +37,46 @@ Kirigami.ApplicationWindow {
      * * KStandardActions::keyBindings
      * * "Open Command Bar"
      * * "About App"
-     * * "About KDE"
+     * * "About KDE" (if your desktop file id starts with org.kde.)
      *
-     * These actions are also handled by StatefulWindow. If you need more overwrite AbstractKirigamiApplication::setupActions.
+     * These actions are handled by defauly by StatefulWindow.
+     *
+     * If you need more actions provide your own AbstractKirigamiApplication and overwrite
+     * AbstractKirigamiApplication::setupActions.
      *
      * @see AbstractKirigamiApplication
      */
     property StatefulApp.AbstractKirigamiApplication application: Private.DefaultKirigamiApplication
 
-    property Item hoverLinkIndicator: QQC2.Control {
-        parent: overlay.parent
-        property alias text: linkText.text
-        opacity: text.length > 0 ? 1 : 0
+    Connections {
+        id: saveWindowGeometryConnections
 
-        Kirigami.OverlayZStacking.layer: Kirigami.OverlayZStacking.Drawer
-        z: Kirigami.OverlayZStacking.z
-        x: 0
-        y: parent.height - implicitHeight
-        contentItem: QQC2.Label {
-            id: linkText
+        enabled: false // Disable on startup to avoid writing wrong values if the window is hidden
+        target: root
+
+        function onClosing(): void {
+            Private.Helper.saveWindowGeometry(root);
         }
-        Kirigami.Theme.colorSet: Kirigami.Theme.View
-        background: Rectangle {
-             color: Kirigami.Theme.backgroundColor
+
+        function onWidthChanged(): void {
+            saveWindowGeometryTimer.restart();
+        }
+
+        function onHeightChanged(): void {
+            saveWindowGeometryTimer.restart();
+        }
+        function onXChanged(): void {
+            saveWindowGeometryTimer.restart();
+        }
+        function onYChanged(): void {
+            saveWindowGeometryTimer.restart();
         }
     }
 
-    onClosing: Private.Helper.saveWindowGeometry(root)
-
-    onWidthChanged: saveWindowGeometryTimer.restart()
-    onHeightChanged: saveWindowGeometryTimer.restart()
-    onXChanged: saveWindowGeometryTimer.restart()
-    onYChanged: saveWindowGeometryTimer.restart()
-
-    Component.onCompleted: Private.Helper.restoreWindowGeometry(root)
+    Component.onCompleted: {
+        Private.Helper.restoreWindowGeometry(root);
+        saveWindowGeometryConnections.enabled = true;
+    }
 
     // This timer allows to batch update the window size change to reduce
     // the io load and also work around the fact that x/y/width/height are
@@ -78,11 +84,10 @@ Kirigami.ApplicationWindow {
     // the previous session.
     Timer {
         id: saveWindowGeometryTimer
+
         interval: 1000
         onTriggered: Private.Helper.saveWindowGeometry(root)
     }
-
-    pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.ToolBar
 
     Connections {
         target: root.application

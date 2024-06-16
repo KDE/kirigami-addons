@@ -44,9 +44,10 @@ ecm_qt_declare_logging_category(KirigamiAddonsStatefulApp
 
 ecm_generate_headers(KirigamiAddonsStatefulApp_HEADERS
     HEADER_NAMES
-    KirigamiActionCollection
-    AbstractKirigamiApplication
-    REQUIRED_HEADERS KirigamiAddonsStatefulApp_HEADERS
+        KirigamiActionCollection
+        AbstractKirigamiApplication
+    REQUIRED_HEADERS
+        KirigamiAddonsStatefulApp_HEADERS
 )
 
 target_link_libraries(KirigamiAddonsStatefulApp
