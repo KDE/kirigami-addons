@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-11 00:38+0000\n"
-"PO-Revision-Date: 2024-05-05 14:47+0530\n"
+"PO-Revision-Date: 2024-06-16 17:08+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: components/AbstractMaximizeComponent.qml:130
 #, kde-format
@@ -345,10 +345,9 @@ msgstr[0] "உரிமம்"
 msgstr[1] "உரிமங்கள்"
 
 #: formcard/AboutPage.qml:244
-#, fuzzy, kde-format
-#| msgid "Report a bug"
+#, kde-format
 msgid "Report a Bug"
-msgstr "பிழையைத் தெரிவிப்பது"
+msgstr "பிழையை தெரிவி"
 
 #: formcard/AboutPage.qml:251
 #, kde-format
@@ -430,17 +429,13 @@ msgid "Go back"
 msgstr "பின்னே செல்"
 
 #: settings/private/ConfigMobilePage.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title"
 msgid "Settings"
 msgstr "அமைப்புகள்"
 
 #: settings/private/ConfigMobilePage.qml:83
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title:group"
 msgid "Settings"
 msgstr "அமைப்புகள்"
