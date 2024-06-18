@@ -10,9 +10,14 @@ Helper::Helper(QObject *parent)
     : QObject(parent)
 {}
 
+QString Helper::iconName(const QIcon &icon) const
+{
+    return icon.name();
+}
+
 QList<QKeySequence> Helper::alternateShortcuts(QAction *action) const
 {
-    if (action->shortcuts().length() <= 1) {
+    if (!action || action->shortcuts().length() <= 1) {
         return {};
     } else {
         return action->shortcuts().mid(1);

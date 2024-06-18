@@ -110,9 +110,6 @@ public:
     /// @internal Used by StatefulApp.Action
     Q_INVOKABLE QAction *action(const QString &actionName);
 
-    /// @internal Used by StatefulApp.Action
-    Q_INVOKABLE QString iconName(const QIcon &icon) const;
-
 Q_SIGNALS:
     /// @internal Used by StatefulApp.StatefulWindow
     void openAboutPage();

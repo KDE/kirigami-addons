@@ -183,9 +183,4 @@ void AbstractKirigamiApplication::quit()
     qGuiApp->exit();
 }
 
-QString AbstractKirigamiApplication::iconName(const QIcon &icon) const
-{
-    return icon.name();
-}
-
 #include "moc_abstractkirigamiapplication.cpp"
