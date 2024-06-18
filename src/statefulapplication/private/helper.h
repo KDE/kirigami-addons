@@ -21,6 +21,7 @@ public:
     explicit Helper(QObject *parent = nullptr);
 
     Q_INVOKABLE QList<QKeySequence> alternateShortcuts(QAction *action) const;
+    Q_INVOKABLE QString iconName(const QIcon &icon) const;
 
 public Q_SLOTS:
     /// Restore current window geometry

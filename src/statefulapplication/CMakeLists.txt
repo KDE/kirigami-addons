@@ -98,7 +98,6 @@ install(FILES
     COMPONENT Devel
 )
 
-# private
-
 add_subdirectory(private)
+add_subdirectory(labs)
 
