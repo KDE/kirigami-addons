@@ -37,14 +37,16 @@ MenuItem {
     required property StatefulApp.AbstractKirigamiApplication application
     readonly property QtObject _action: application.action(actionName)
 
-    text: _action.text
-    shortcut: _action.shortcut
-    icon.name: Private.Helper.iconName(_action.icon)
-    onTriggered: _action.trigger()
-    visible: _action.text.length > 0
-    checkable: _action.checkable
-    checked: _action.checked
-    enabled: _action.enabled && parent.enabled
+    text: _action?.text ?? ''
+    shortcut: _action?.shortcut
+    icon.name: _action ? Private.Helper.iconName(_action.icon) : ''
+    onTriggered: if (_action) {
+        _action.trigger();
+    }
+    visible: _action && _action.text.length > 0
+    checkable: _action?.checkable
+    checked: _action?.checked
+    enabled: _action && _action.enabled && parent.enabled
 
     readonly property Shortcut alternateShortcut : Shortcut {
         sequences: Private.Helper.alternateShortcuts(_action)
