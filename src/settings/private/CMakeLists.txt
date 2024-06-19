@@ -7,7 +7,12 @@ ecm_add_qml_module(settingsprivateplugin
     DEPENDENCIES
         "org.kde.kirigami"
         "org.kde.kirigamiaddons.delegates"
-    )
+)
+
+target_sources(settingsprivateplugin PRIVATE
+    helper.cpp
+    helper.h
+)
 
 ecm_target_qml_sources(settingsprivateplugin SOURCES
     ConfigWindow.qml
@@ -18,6 +23,7 @@ ecm_target_qml_sources(settingsprivateplugin SOURCES
 
 target_link_libraries(settingsprivateplugin PRIVATE
     Qt6::Quick
+    Qt6::QuickControls2
     Qt6::Qml
 )
 
