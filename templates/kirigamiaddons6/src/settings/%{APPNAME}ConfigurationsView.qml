@@ -1,7 +1,6 @@
 // SPDX-FileCopyrightText: %{CURRENT_YEAR} %{AUTHOR} <%{EMAIL}>
 // SPDX-License-Identifier: GPL-2.0-or-later
 
-pragma Singleton
 pragma ComponentBehavior: Bound
 
 import QtQuick

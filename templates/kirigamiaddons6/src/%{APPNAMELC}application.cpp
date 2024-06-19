@@ -26,12 +26,6 @@ void %{APPNAME}Application::setupActions()
         mainCollection()->setDefaultShortcut(action, Qt::CTRL | Qt::Key_I);
     }
 
-    actionName = "options_configure"_L1;
-    if (KAuthorized::authorizeAction(actionName)) {
-        auto action = KStandardActions::preferences(this, &%{APPNAME}Application::openConfigurations, this);
-        mainCollection()->addAction(action->objectName(), action);
-    }
-
     readSettings();
 }
 

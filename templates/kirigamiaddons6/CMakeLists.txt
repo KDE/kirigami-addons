@@ -16,12 +16,14 @@ find_package(ECM ${KF6_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH})
 
 include(FeatureSummary)
+
 include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 
 include(ECMSetupVersion)
 include(ECMFindQmlModule)
+include(ECMQmlModule)
 include(ECMQmlModule)
 
 if (NOT ANDROID)

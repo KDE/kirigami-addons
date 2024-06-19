@@ -4,10 +4,13 @@
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
+
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.statefulapp as StatefulApp
 import org.kde.kirigamiaddons.formcard as FormCard
+
 import org.kde.%{APPNAMELC}
+import org.kde.%{APPNAMELC}.settings as Settings
 
 StatefulApp.StatefulWindow {
     id: root
@@ -19,17 +22,15 @@ StatefulApp.StatefulWindow {
     minimumWidth: Kirigami.Units.gridUnit * 20
     minimumHeight: Kirigami.Units.gridUnit * 20
 
-    application: %{APPNAME}Application
+    application: %{APPNAME}Application {
+        configurationsView: Settings.%{APPNAME}ConfigurationsView {}
+    }
 
     Connections {
-        target: %{APPNAME}Application
+        target: root.application
 
         function onIncrementCounter(): void {
             root.counter += 1;
-        }
-
-        function onOpenConfigurations(): void {
-            
         }
     }
 
@@ -39,18 +40,18 @@ StatefulApp.StatefulWindow {
             StatefulApp.Action {
                 id: incrementCounterAction
                 actionName: "increment_counter"
-                application: %{APPNAME}Application
+                application: root.application
             },
             Kirigami.Action {
                 separator: true
             },
             StatefulApp.Action {
                 actionName: "options_configure"
-                application: %{APPNAME}Application
+                application: root.application
             },
             StatefulApp.Action {
                 actionName: "options_configure_keybinding"
-                application: %{APPNAME}Application
+                application: root.application
             },
             Kirigami.Action {
                 separator: true
@@ -58,15 +59,15 @@ StatefulApp.StatefulWindow {
             StatefulApp.Action {
                 id: aboutAction
                 actionName: "open_about_page"
-                application: %{APPNAME}Application
+                application: root.application
             },
             StatefulApp.Action {
                 actionName: "open_about_kde_page"
-                application: %{APPNAME}Application
+                application: root.application
             },
             StatefulApp.Action {
                 actionName: "file_quit"
-                application: %{APPNAME}Application
+                application: root.application
             }
         ]
     }

@@ -12,13 +12,11 @@ class %{APPNAME}Application : public AbstractKirigamiApplication
 {
     Q_OBJECT
     QML_ELEMENT
-    QML_SINGLETON
 
 public:
     explicit %{APPNAME}Application(QObject *parent = nullptr);
 
 Q_SIGNALS:
-    void openConfigurations();
     void incrementCounter();
 
 private:
