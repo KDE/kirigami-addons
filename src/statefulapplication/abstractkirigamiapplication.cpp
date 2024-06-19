@@ -22,6 +22,8 @@ public:
     QSortFilterProxyModel *proxyModel = nullptr;
     KirigamiActionCollection *collection = nullptr;
     ShortcutsModel *shortcutsModel = nullptr;
+    QObject *configurationsView = nullptr;
+    QAction *openConfigurationsViewAction = nullptr;
 };
 
 AbstractKirigamiApplication::AbstractKirigamiApplication(QObject *parent)
@@ -181,6 +183,38 @@ void AbstractKirigamiApplication::setupActions()
 void AbstractKirigamiApplication::quit()
 {
     qGuiApp->exit();
+}
+
+QObject *AbstractKirigamiApplication::configurationsView() const
+{
+    return d->configurationsView;
+}
+
+void AbstractKirigamiApplication::setConfigurationsView(QObject *configurationsView)
+{
+    if (d->configurationsView == configurationsView) {
+        return;
+    }
+
+    if (d->configurationsView) {
+        d->openConfigurationsViewAction->setVisible(false);
+    }
+
+    d->configurationsView = configurationsView;
+    Q_EMIT configurationsViewChanged();
+
+    if (d->configurationsView) {
+        if (!d->openConfigurationsViewAction) {
+            // TODO also expose individual ConfigurationModule as action
+            d->openConfigurationsViewAction = KStandardActions::preferences(this, [this]() {
+                QMetaObject::invokeMethod(d->configurationsView, "open", Qt::QueuedConnection, QVariant());
+            }, this);
+            mainCollection()->addAction(d->openConfigurationsViewAction->objectName(), d->openConfigurationsViewAction);
+        }
+        d->openConfigurationsViewAction->setVisible(true);
+
+        mainCollection()->readSettings();
+    }
 }
 
 #include "moc_abstractkirigamiapplication.cpp"

@@ -52,5 +52,10 @@ endif()
 kconfig_add_kcfg_files(%{APPNAMELC}_static GENERATE_MOC %{APPNAMELC}config.kcfgc)
 
 add_executable(%{APPNAMELC} main.cpp)
-target_link_libraries(%{APPNAMELC} PUBLIC %{APPNAMELC}_static %{APPNAMELC}_staticplugin)
+target_link_libraries(%{APPNAMELC} PUBLIC
+    %{APPNAMELC}_static
+    %{APPNAMELC}_staticplugin
+    %{APPNAMELC}_settings
+    %{APPNAMELC}_settingsplugin
+)
 install(TARGETS %{APPNAMELC} ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

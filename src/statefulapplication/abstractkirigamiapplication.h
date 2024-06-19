@@ -82,15 +82,17 @@ class KIRIGAMIADDONSSTATEFULAPP_EXPORT AbstractKirigamiApplication : public QObj
     /// @internal Used by StatefulApp.ManagedWindow
     Q_PROPERTY(QAbstractListModel *shortcutsModel READ shortcutsModel CONSTANT)
 
+    /// This property holds the configurationView of the application
+    ///
+    /// When set, AbstractKirigamiApplication will setup a "options_configure" action
+    /// that will open the configurationView when triggered.
+    Q_PROPERTY(QObject *configurationsView READ configurationsView WRITE setConfigurationsView NOTIFY configurationsViewChanged)
+
 public:
-    /**
-     * Default constructor of AbstractKirigamiApplication
-     */
+    /// Default constructor of AbstractKirigamiApplication
     explicit AbstractKirigamiApplication(QObject *parent = nullptr);
 
-    /**
-     * Default destructor of AbstractKirigamiApplication
-     */
+    /// Default destructor of AbstractKirigamiApplication
     virtual ~AbstractKirigamiApplication();
 
     /// Return the list of KirigamiActionCollection setup in your application.
@@ -110,6 +112,12 @@ public:
     /// @internal Used by StatefulApp.Action
     Q_INVOKABLE QAction *action(const QString &actionName);
 
+    /// Getter for the configurationsView property.
+    QObject *configurationsView() const;
+
+    /// Setter for the configurationsView property.
+    void setConfigurationsView(QObject *configurationsView);
+
 Q_SIGNALS:
     /// @internal Used by StatefulApp.StatefulWindow
     void openAboutPage();
@@ -123,24 +131,23 @@ Q_SIGNALS:
     /// @internal Used by StatefulApp.StatefulWindow
     void shortcutsEditorAction();
 
+    /// Changed signal for the configurationView property.
+    void configurationsViewChanged();
+
 protected:
-    /**
-     * Entry points to declare your actions.
-     *
-     * Don't forget to call the parent implementation to get the following actions
-     * setup for you:
-     *
-     * - CommandBar
-     * - About page for your application
-     * - About page for KDE
-     *
-     * Once the actions are setup, call readSettings to read the confirured shortcuts.
-     */
+    /// Entry points to declare your actions.
+    ///
+    /// Don't forget to call the parent implementation to get the following actions
+    /// setup for you:
+    ///
+    /// - CommandBar
+    /// - About page for your application
+    /// - About page for KDE
+    ///
+    /// Once the actions are setup, call readSettings to read the confirured shortcuts.
     virtual void setupActions();
 
-    /**
-     * Read the configured settings for the action.
-     */
+    /// Read the configured settings for the action.
     void readSettings();
 
 private:
