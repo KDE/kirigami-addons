@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-11 00:38+0000\n"
-"PO-Revision-Date: 2023-10-20 20:26+0200\n"
+"PO-Revision-Date: 2024-06-19 19:08+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: components/AbstractMaximizeComponent.qml:130
 #, kde-format
@@ -84,31 +84,31 @@ msgstr "Ladda ner"
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
-msgstr ""
+msgstr "Lyckades"
 
 #: components/MessageDialog.qml:74 components/MessageDialog.qml:80
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
-msgstr ""
+msgstr "Varning"
 
 #: components/MessageDialog.qml:76
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
-msgstr ""
+msgstr "Fel"
 
 #: components/MessageDialog.qml:78
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
-msgstr ""
+msgstr "Information"
 
 #: components/MessageDialog.qml:198
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
-msgstr ""
+msgstr "Visa inte igen"
 
 #: components/VideoMaximizeDelegate.qml:265
 #, kde-format
@@ -129,23 +129,17 @@ msgid "Select"
 msgstr "Välj"
 
 #: dateandtime/private/DatePicker.qml:271
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Days"
+#, kde-format
 msgid "Day"
-msgstr "Dagar"
+msgstr "Dag"
 
 #: dateandtime/private/DatePicker.qml:274
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Months"
+#, kde-format
 msgid "Month"
-msgstr "Månader"
+msgstr "Månad"
 
 #: dateandtime/private/DatePicker.qml:277
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Years"
+#, kde-format
 msgid "Year"
 msgstr "År"
 
@@ -168,11 +162,9 @@ msgid "Go Next"
 msgstr "Gå till nästa"
 
 #: dateandtime/TimePicker.qml:97
-#, fuzzy, kde-format
-#| msgctxt "time in hour in 24h format"
-#| msgid "%1 hours"
+#, kde-format
 msgid "Hours"
-msgstr "%1 timmar"
+msgstr "Timmar"
 
 #: dateandtime/TimePicker.qml:119
 #, kde-format
@@ -181,11 +173,9 @@ msgid ":"
 msgstr ":"
 
 #: dateandtime/TimePicker.qml:134
-#, fuzzy, kde-format
-#| msgctxt "number of minutes"
-#| msgid "%1 minutes"
+#, kde-format
 msgid "Minutes"
-msgstr "%1 minuter"
+msgstr "Minuter"
 
 #: formcard/AboutKDE.qml:23
 #, kde-format
@@ -272,12 +262,7 @@ msgid "Join us"
 msgstr "Gå med"
 
 #: formcard/AboutKDE.qml:107
-#, fuzzy, kde-format
-#| msgid ""
-#| "You do not have to be a software developer to be a member of the KDE "
-#| "team. You can join the national teams that translate program interfaces. "
-#| "You can provide graphics, themes, sounds, and improved documentation. You "
-#| "decide!"
+#, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
 "You can join the language teams that translate program interfaces. You can "
@@ -367,8 +352,7 @@ msgstr[0] "Licens"
 msgstr[1] "Licenser"
 
 #: formcard/AboutPage.qml:244
-#, fuzzy, kde-format
-#| msgid "Report a bug"
+#, kde-format
 msgid "Report a Bug"
 msgstr "Rapportera ett fel"
 
@@ -406,13 +390,13 @@ msgstr "Skicka e-post till %1"
 #, kde-format
 msgctxt "@action:button"
 msgid "Color"
-msgstr ""
+msgstr "Färg"
 
 #: formcard/FormColorDelegate.qml:43
 #, kde-format
 msgctxt "Accessible description"
 msgid "Current color \"%1\""
-msgstr ""
+msgstr "Nuvarande färg \"%1\""
 
 #: formcard/FormDateTimeDelegate.qml:193
 #, kde-format
@@ -449,20 +433,16 @@ msgstr "Inställningar — %1"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Go back"
-msgstr ""
+msgstr "Gå tillbaka"
 
 #: settings/private/ConfigMobilePage.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title"
 msgid "Settings"
 msgstr "Inställningar"
 
 #: settings/private/ConfigMobilePage.qml:83
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title:group"
 msgid "Settings"
 msgstr "Inställningar"
