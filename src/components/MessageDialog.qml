@@ -90,11 +90,12 @@ T.Dialog {
      * previously.
      */
     function openDialog(): void {
-        if (root.dontShowAgainName) {
+        if (root.dontShowAgainName.length > 0) {
             if (root.standardButtons === QQC2.Dialog.Ok) {
                 const show = MessageDialogHelper.shouldBeShownContinue(root.dontShowAgainName);
                 if (!show) {
                     root._automaticallyClosed = true;
+                    root.applied();
                     root.accepted();
                 } else {
                     checkbox.checked = false;
@@ -107,16 +108,25 @@ T.Dialog {
                     root._automaticallyClosed = true;
                     if (result.result) {
                         root.accepted();
-                        root.close();
+                        root.applied();
                     } else {
                         root.discarded();
-                        root.close();
                     }
                 } else {
                     checkbox.checked = false;
                     root._automaticallyClosed = false;
                     root.open();
                 }
+            }
+        }
+    }
+
+    onApplied: {
+        if (root.dontShowAgainName && checkbox.checked && !root._automaticallyClosed) {
+            if (root.standardButtons === QQC2.Dialog.Ok) {
+                MessageDialogHelper.saveDontShowAgainContinue(root.dontShowAgainName);
+            } else {
+                MessageDialogHelper.saveDontShowAgainTwoActions(root.dontShowAgainName, true);
             }
         }
     }
