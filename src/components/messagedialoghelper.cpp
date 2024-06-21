@@ -12,24 +12,24 @@ MessageDialogHelper::MessageDialogHelper(QObject *parent)
 {
 }
 
-QVariantHash MessageDialogHelper::shouldBeShownTwoActions(const QString &dontShowAgainName)
+QJsonObject MessageDialogHelper::shouldBeShownTwoActions(const QString &dontShowAgainName)
 {
     KConfigGroup cg(m_config ? m_config : KSharedConfig::openConfig().data(), QStringLiteral("Notification Messages"));
     const QString dontAsk = cg.readEntry(dontShowAgainName, QString()).toLower();
-    if (dontAsk == QLatin1String("yes") || dontAsk == QLatin1String("true")) {
-        return QVariantHash{
+    if (dontAsk == QLatin1StringView("yes") || dontAsk == QLatin1StringView("true")) {
+        return {
             { "result"_L1, true },
             { "show"_L1, false },
         };
     }
-    if (dontAsk == QLatin1String("no") || dontAsk == QLatin1String("false")) {
-        return QVariantHash{
+    if (dontAsk == QLatin1StringView("no") || dontAsk == QLatin1StringView("false")) {
+        return {
             { "result"_L1, false },
             { "show"_L1, false },
         };
     }
 
-    return QVariantHash{
+    return {
         { "show"_L1, true },
     };
 }

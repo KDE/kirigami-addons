@@ -21,7 +21,7 @@ public:
     KConfig *config() const;
     void setConfig(KConfig *config);
 
-    Q_INVOKABLE QVariantHash shouldBeShownTwoActions(const QString &dontShowAgainName);
+    Q_INVOKABLE QJsonObject shouldBeShownTwoActions(const QString &dontShowAgainName);
 
     Q_INVOKABLE bool shouldBeShownContinue(const QString &dontShowAgainName);
 
