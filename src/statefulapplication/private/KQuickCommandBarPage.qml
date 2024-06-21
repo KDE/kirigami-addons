@@ -52,5 +52,5 @@ Kirigami.SearchDialog {
         }
     }
 
-    emptyText: i18n("No results found")
+    emptyText: i18ndc("kirigami-addons6", "@info:placeholder", "No results found")
 }

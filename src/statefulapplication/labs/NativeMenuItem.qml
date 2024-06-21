@@ -10,9 +10,6 @@ import org.kde.kirigamiaddons.statefulapp as StatefulApp
 /**
  * A Labs.MenuItem defined by a QAction.
  *
- * This requires setting both the actionName defined in your AbstractKirigamiApplication
- * implementation and your AbstractKirigamiApplication.
- *
  * @code{qml}
  * import Qt.labs.platform as Labs
  * import org.kde.kirigamiaddons.statefulapp as StatefulApp
@@ -31,10 +28,19 @@ import org.kde.kirigamiaddons.statefulapp as StatefulApp
  *     }
  * }
  * @endcode{}
+ * @since KirigamiAddons 1.4.0
  */
 MenuItem {
+    /**
+     * This property holds the action name defined in your AbstractKirigamiApplication implementation.
+     */
     required property string actionName
+
+    /**
+     * This property holds the AbstractKirigamiApplication where the action is defined.
+     */
     required property StatefulApp.AbstractKirigamiApplication application
+
     readonly property QtObject _action: application.action(actionName)
 
     text: _action?.text ?? ''

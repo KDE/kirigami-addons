@@ -19,7 +19,7 @@ Kirigami.ScrollablePage {
 
     actions: Kirigami.Action {
         displayComponent: Kirigami.SearchField {
-            placeholderText: i18ndc("kirigami-addons6", "@label:textbox", "Filter...")
+            placeholderText: i18ndc("kirigami-addons6", "@label:textbox", "Filter…")
         }
     }
 

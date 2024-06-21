@@ -14,14 +14,14 @@ import org.kde.kirigamiaddons.statefulapp.private as Private
 import org.kde.coreaddons as Core
 
 /**
- * @brief StatefulWindow will takes care of providing standard functionalities
+ * @brief StatefulWindow takes care of providing standard functionalities
  * for your application main window.
  *
  * This includes:
- * * Restoration of the window size accross restart
- * * Handle some of the standard actions defined in your KirigamiAbstractApplication
- * * (AboutKDE and AboutApp)
- * * A command bar to access all the defined shortcuts
+ * * Restoration of the window size accross restarts
+ * * Handling some of the standard actions defined in your KirigamiAbstractApplication
+ *   (AboutKDE and AboutApp)
+ * * A command bar to access all the defined actions
  * * A shortcut editor
  *
  * @since 1.3.0
@@ -32,14 +32,12 @@ Kirigami.ApplicationWindow {
     /**
      * This property holds the AbstractKirigamiApplication of your application.
      *
-     * The default AbstractKirigamiApplication set, just provides the following actions:
+     * The default AbstractKirigamiApplication provides the following actions:
      * * KStandardActions::quit
      * * KStandardActions::keyBindings
      * * "Open Command Bar"
      * * "About App"
-     * * "About KDE" (if your desktop file id starts with org.kde.)
-     *
-     * These actions are handled by defauly by StatefulWindow.
+     * * "About KDE" (if your application id starts with org.kde.)
      *
      * If you need more actions provide your own AbstractKirigamiApplication and overwrite
      * AbstractKirigamiApplication::setupActions.

@@ -18,7 +18,7 @@ using namespace Qt::StringLiterals;
 class AbstractKirigamiApplication::Private
 {
 public:
-    KalCommandBarModel *actionModel = nullptr;
+    KCommandBarModel *actionModel = nullptr;
     QSortFilterProxyModel *proxyModel = nullptr;
     KirigamiActionCollection *collection = nullptr;
     ShortcutsModel *shortcutsModel = nullptr;
@@ -47,9 +47,9 @@ AbstractKirigamiApplication::~AbstractKirigamiApplication()
  * A helper function that takes a list of KActionCollection* and converts it
  * to KCommandBar::ActionGroup
  */
-static QList<KalCommandBarModel::ActionGroup> actionCollectionToActionGroup(const QList<KirigamiActionCollection *> &actionCollections)
+static QList<KCommandBarModel::ActionGroup> actionCollectionToActionGroup(const QList<KirigamiActionCollection *> &actionCollections)
 {
-    using ActionGroup = KalCommandBarModel::ActionGroup;
+    using ActionGroup = KCommandBarModel::ActionGroup;
 
     QList<ActionGroup> actionList;
     actionList.reserve(actionCollections.size());
@@ -82,9 +82,9 @@ void AbstractKirigamiApplication::readSettings()
 QSortFilterProxyModel *AbstractKirigamiApplication::actionsModel()
 {
     if (!d->proxyModel) {
-        d->actionModel = new KalCommandBarModel(this);
+        d->actionModel = new KCommandBarModel(this);
         d->proxyModel = new CommandBarFilterModel(this);
-        d->proxyModel->setSortRole(KalCommandBarModel::Score);
+        d->proxyModel->setSortRole(KCommandBarModel::Score);
         d->proxyModel->setFilterRole(Qt::DisplayRole);
         d->proxyModel->setSourceModel(d->actionModel);
     }
