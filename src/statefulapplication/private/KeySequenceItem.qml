@@ -1,5 +1,5 @@
-// SPDX-FileCopyright: 2014 David Edmundson <kde@davidedmundson.co.uk
-// SPDX-FileCopyright: 2020 David Redondo <kde@david-redondo.de
+// SPDX-FileCopyright: 2014 David Edmundson <kde@davidedmundson.co.uk>
+// SPDX-FileCopyright: 2020 David Redondo <kde@david-redondo.de>
 // SPDX-FileCopyright: 2022 Aleix Pol <aleixpol@kde.org>
 // SPDX-FileCopyright: 2024 ivan tkachenko <me@ratijas.tk>
 // SPDX-FileCopyright: 2024 Carl Schwan <carl@carlschwan.eu>
@@ -32,8 +32,8 @@ FormCard.AbstractFormDelegate {
      * is set. If a conflict is detected, a messagebox will be shown asking the user to confirm their
      * input. Valid values are combinations of the following flags:
      *   - @p ShortcutType.None Do not check for conflicts.
-     *   - @p ShortcutType.StandardShortcuts Check against standard shortcuts. @see KStandardshortcut
-     *   - @p ShortcutType.GlobalShortcuts Check against global shortcuts. @see KGlobalAccel
+     *   - @p ShortcutType.StandardShortcuts Check against standard shortcuts. @see KStandardShortcut
+     *   - @p ShortcutType.GlobalShortcuts Check against global shortcuts. Only works when building with KGlobalAccel. @see KGlobalAccel
      *
      * The default is `ShortcutType.GlobalShortcuts | ShortcutType.StandardShortcut`
      */
@@ -42,7 +42,7 @@ FormCard.AbstractFormDelegate {
     property string __previousSequence: ""
 
     /**
-     * Emitted whenever the key sequence is modified by the user, interacting with the component
+     * Emitted whenever the key sequence is modified by the user interacting with the component
      *
      * Either by interacting capturing a key sequence or pressing the clear button.
      */
@@ -53,7 +53,7 @@ FormCard.AbstractFormDelegate {
     signal showStealStandardShortcutDialog(title: string, message: string, sequence: var)
 
     /**
-     * Start capturing a key sequence. This equivalent to the user clicking on the main button of the item
+     * Start capturing a key sequence. This equivalent to the user clicking on the main button of the item.
      */
     function startCapturing() {
         mainButton.checked = true;

@@ -8,7 +8,8 @@
 
 class QAction;
 
-class KalCommandBarModel final : public QAbstractTableModel
+///\\internal
+class KCommandBarModel final : public QAbstractTableModel
 {
     Q_OBJECT
 public:
@@ -28,7 +29,7 @@ public:
         QList<QAction *> actions;
     };
 
-    explicit KalCommandBarModel(QObject *parent = nullptr);
+    explicit KCommandBarModel(QObject *parent = nullptr);
 
     enum Role {
         Score = Qt::UserRole + 1,

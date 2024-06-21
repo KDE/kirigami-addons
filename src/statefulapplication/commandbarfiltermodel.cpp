@@ -32,8 +32,8 @@ void CommandBarFilterModel::setFilterString(const QString &string)
 
 bool CommandBarFilterModel::lessThan(const QModelIndex &sourceLeft, const QModelIndex &sourceRight) const
 {
-    const int l = sourceLeft.data(KalCommandBarModel::Score).toInt();
-    const int r = sourceRight.data(KalCommandBarModel::Score).toInt();
+    const int l = sourceLeft.data(KCommandBarModel::Score).toInt();
+    const int r = sourceRight.data(KCommandBarModel::Score).toInt();
     return l < r;
 }
 
@@ -50,7 +50,7 @@ bool CommandBarFilterModel::filterAcceptsRow(int sourceRow, const QModelIndex &s
 
     const QString actionName = idx.data(Qt::DisplayRole).toString();
     KFuzzyMatcher::Result res = KFuzzyMatcher::match(m_pattern, actionName);
-    sourceModel()->setData(idx, res.score, KalCommandBarModel::Score);
+    sourceModel()->setData(idx, res.score, KCommandBarModel::Score);
     return res.matched;
 }
 

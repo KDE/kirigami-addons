@@ -15,8 +15,7 @@ class DefaultKirigamiApplication : public AbstractKirigamiApplication
     QML_SINGLETON
 
 public:
-    DefaultKirigamiApplication(QObject *parent = nullptr);
-    ~DefaultKirigamiApplication() override = default;
+    explicit DefaultKirigamiApplication(QObject *parent = nullptr);
 
 private:
     void setupActions() override;

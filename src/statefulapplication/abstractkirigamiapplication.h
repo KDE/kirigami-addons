@@ -10,15 +10,14 @@
 #include <QtQml/qqmlregistration.h>
 
 /**
- * @class AbstractKirigamiApplication kirigamiabstractapplication.h AbstractKirigamiApplication
- *
+ * @class AbstractKirigamiApplication AbstractKirigamiApplication
  * @short The main container for your actions.
  *
  * AbstractKirigamiApplication is a class that needs to be inherited in your application.
- * It allows to expose the various actions of your applications to the QML frontend. Depending
- * on the complexitiy of you application, you will have to either reimplement setupActions only
- * and put all your actions inside the mainCollection or if you want to organize your actions
- * in multiple collections, you will have to also expose the custom collections by overwriting
+ * It allows to expose the various actions of your application to the QML frontend. Depending
+ * on the complexitiy of the application, you can either reimplement setupActions only
+ * and put all your actions inside the mainCollection, or, if you want to organize your actions
+ * in multiple collections, you can also expose the custom collections by overwriting
  * actionCollections.
  *
  * @code{.cpp}
@@ -26,7 +25,7 @@
  * {
  *     Q_OBJECT
  *     QML_ELEMENT
- *     QML_SINGLETON
+ *
  *  public:
  *     explicit MyKoolApp(QObject *parent = nullptr);
  *
@@ -54,16 +53,19 @@
  * }
  * @endcode
  *
- * The application object then needs to set in ManagedWindow.
+ * The application object then need to be assigned to the application property in a StatefulWindow.
  *
  * @code{.qml}
  * import org.kde.kirigamiaddons.StatefulApplication as StatefulApplication
  *
  * StatefulApplication.StatefulWindow {
- *     application: MyKoolApp
+ *     id: root
+ *
+ *     application: MyKoolApp {}
  *
  *     StatefulApplication.Action {
  *         actionName: 'add_notebook'
+ *         application: root.application
  *     }
  * }
  * @endcode{}
@@ -82,10 +84,10 @@ class KIRIGAMIADDONSSTATEFULAPP_EXPORT AbstractKirigamiApplication : public QObj
     /// @internal Used by StatefulApp.ManagedWindow
     Q_PROPERTY(QAbstractListModel *shortcutsModel READ shortcutsModel CONSTANT)
 
-    /// This property holds the configurationView of the application
+    /// This property holds the configurationsView of the application
     ///
     /// When set, AbstractKirigamiApplication will setup a "options_configure" action
-    /// that will open the configurationView when triggered.
+    /// that will open the configurationsView when triggered.
     Q_PROPERTY(QObject *configurationsView READ configurationsView WRITE setConfigurationsView NOTIFY configurationsViewChanged)
 
 public:
@@ -144,7 +146,7 @@ protected:
     /// - About page for your application
     /// - About page for KDE
     ///
-    /// Once the actions are setup, call readSettings to read the confirured shortcuts.
+    /// Once the actions are setup, call readSettings to read the configured shortcuts.
     virtual void setupActions();
 
     /// Read the configured settings for the action.

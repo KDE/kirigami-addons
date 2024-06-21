@@ -11,9 +11,6 @@ import org.kde.kirigamiaddons.statefulapp as StatefulApp
 /**
  * A Kirigami.Action defined by a QAction.
  *
- * This requires setting both the actionName defined in your AbstractKirigamiApplication
- * implementation and your AbstractKirigamiApplication.
- *
  * @code{qml}
  * import org.kde.kirigamiaddons.statefulapp as StatefulApp
  *
@@ -26,12 +23,21 @@ import org.kde.kirigamiaddons.statefulapp as StatefulApp
  *     }
  * }
  * @endcode{}
+ * @since KirigamiAddons 1.4.0
  */
 Kirigami.Action {
     id: root
 
+    /**
+     * This property holds the action name defined in your AbstractKirigamiApplication implementation.
+     */
     required property string actionName
+
+    /**
+     * This property holds the AbstractKirigamiApplication where the action is defined.
+     */
     required property StatefulApp.AbstractKirigamiApplication application
+
     readonly property QtObject _action: application.action(actionName)
 
     shortcut: _action?.shortcut

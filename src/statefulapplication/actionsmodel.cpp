@@ -9,12 +9,12 @@
 
 #include <unordered_set>
 
-KalCommandBarModel::KalCommandBarModel(QObject *parent)
+KCommandBarModel::KCommandBarModel(QObject *parent)
     : QAbstractTableModel(parent)
 {
 }
 
-void fillRows(QList<KalCommandBarModel::Item> &rows, const QString &title, const QList<QAction *> &actions, std::unordered_set<QAction *> &uniqueActions)
+void fillRows(QList<KCommandBarModel::Item> &rows, const QString &title, const QList<QAction *> &actions, std::unordered_set<QAction *> &uniqueActions)
 {
     for (const auto &action : actions) {
         // We don't want disabled actions
@@ -23,12 +23,12 @@ void fillRows(QList<KalCommandBarModel::Item> &rows, const QString &title, const
         }
 
         if (uniqueActions.insert(action).second) {
-            rows.push_back(KalCommandBarModel::Item{title, action, -1});
+            rows.push_back(KCommandBarModel::Item{title, action, -1});
         }
     }
 }
 
-void KalCommandBarModel::refresh(const QList<ActionGroup> &actionGroups)
+void KCommandBarModel::refresh(const QList<ActionGroup> &actionGroups)
 {
     int totalActions = std::accumulate(actionGroups.begin(), actionGroups.end(), 0, [](int a, const ActionGroup &ag) {
         return a + ag.actions.count();
@@ -61,7 +61,7 @@ void KalCommandBarModel::refresh(const QList<ActionGroup> &actionGroups)
      */
     int score = 0;
     std::for_each(m_lastTriggered.crbegin(), m_lastTriggered.crend(), [&score, &temp_rows](const QString &act) {
-        auto it = std::find_if(temp_rows.begin(), temp_rows.end(), [act](const KalCommandBarModel::Item &i) {
+        auto it = std::find_if(temp_rows.begin(), temp_rows.end(), [act](const KCommandBarModel::Item &i) {
             return i.action->text() == act;
         });
         if (it != temp_rows.end()) {
@@ -74,7 +74,7 @@ void KalCommandBarModel::refresh(const QList<ActionGroup> &actionGroups)
     endResetModel();
 }
 
-QVariant KalCommandBarModel::data(const QModelIndex &index, int role) const
+QVariant KCommandBarModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
         return {};
@@ -116,7 +116,7 @@ QVariant KalCommandBarModel::data(const QModelIndex &index, int role) const
     return {};
 }
 
-void KalCommandBarModel::actionTriggered(const QString &name)
+void KCommandBarModel::actionTriggered(const QString &name)
 {
     if (m_lastTriggered.size() == 6) {
         m_lastTriggered.pop_back();
@@ -124,12 +124,12 @@ void KalCommandBarModel::actionTriggered(const QString &name)
     m_lastTriggered.push_front(name);
 }
 
-QStringList KalCommandBarModel::lastUsedActions() const
+QStringList KCommandBarModel::lastUsedActions() const
 {
     return m_lastTriggered;
 }
 
-void KalCommandBarModel::setLastUsedActions(const QStringList &actionNames)
+void KCommandBarModel::setLastUsedActions(const QStringList &actionNames)
 {
     m_lastTriggered = actionNames;
 
@@ -138,7 +138,7 @@ void KalCommandBarModel::setLastUsedActions(const QStringList &actionNames)
     }
 }
 
-QHash<int, QByteArray> KalCommandBarModel::roleNames() const
+QHash<int, QByteArray> KCommandBarModel::roleNames() const
 {
     auto roles = QAbstractTableModel::roleNames();
     roles[Qt::UserRole] = QByteArrayLiteral("qaction");
