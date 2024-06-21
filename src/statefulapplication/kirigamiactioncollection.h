@@ -38,7 +38,7 @@ class QString;
  * Additionally, KirigamiActionCollection provides several convenience functions for locating
  * named actions, and actions grouped by QActionGroup.
  *
- * @since 1.3.0
+ * @since KirigamiAddons 1.4.0
  */
 class KIRIGAMIADDONSSTATEFULAPP_EXPORT KirigamiActionCollection : public QObject
 {

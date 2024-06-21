@@ -70,7 +70,7 @@
  * }
  * @endcode{}
  *
- * @since 1.3.0
+ * @since KirigamiAddons 1.4.0
  */
 class KIRIGAMIADDONSSTATEFULAPP_EXPORT AbstractKirigamiApplication : public QObject
 {

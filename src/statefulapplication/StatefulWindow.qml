@@ -24,7 +24,7 @@ import org.kde.coreaddons as Core
  * * A command bar to access all the defined actions
  * * A shortcut editor
  *
- * @since 1.3.0
+ * @since KirigamiAddons 1.4.0
  */
 Kirigami.ApplicationWindow {
     id: root
