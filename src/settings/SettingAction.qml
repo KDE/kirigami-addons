@@ -7,9 +7,8 @@ import org.kde.kirigami 2.20 as Kirigami
 
 /**
  * @brief SettingAction defines a settings page, and is typically used by a CategorizedSettings object.
- * @since 5.86
- * @since org.kde.kirigami 2.18
  * @inherit org::kde::kirigami::PagePoolAction
+ * @deprecated Since 1.3.0, use ConfigurationModule instead.
  */
 Kirigami.PagePoolAction {
     /**

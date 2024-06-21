@@ -6,6 +6,7 @@ import org.kde.kirigamiaddons.settings.private as Private
 
 /**
  * This object holds the information of configuration module.
+ * @since KirigamiAddons 1.3.0
  */
 QtObject {
     id: root

@@ -19,7 +19,7 @@ import org.kde.kirigamiaddons.delegates 1.0 as Delegates
  *
  * @since KirigamiAddons 0.11.0
  * @inherit kde::org::kirigami::PageRow
- * @deprecated Use ConfigDialog instead
+ * @deprecated Since 1.3.0, use ConfigurationsView instead.
  */
 Kirigami.PageRow {
     id: root

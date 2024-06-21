@@ -6,6 +6,8 @@ import org.kde.kirigamiaddons.settings.private as Private
 
 /**
  * Configuration module for spellchecking.
+ *
+ * @since KirigamiAddons 1.3.0
  */
 ConfigurationModule {
     moduleId: "spellchecking"
