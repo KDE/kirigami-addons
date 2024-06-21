@@ -54,6 +54,8 @@ public:
 
 Q_SIGNALS:
     void checkAgainstShortcutTypesChanged();
+    void errorOccurred(const QString &title, const QString &message);
+    void showStealStandardShortcutDialog(const QString &title, const QString &message, const QKeySequence &key);
 
 private:
     friend class KeySequenceHelperPrivate;

@@ -97,10 +97,16 @@ QList<QKeySequence> ShortcutsModel::updateShortcut(int row, int shortcutIndex, Q
 
     const auto &item = m_items[row];
     auto oldShortcuts = item.action->shortcuts();
-    if (shortcutIndex == oldShortcuts.count()) {
-        oldShortcuts << keySequence;
+    if (keySequence.isEmpty()) {
+        if (shortcutIndex != oldShortcuts.count()) {
+            oldShortcuts.remove(shortcutIndex);
+        }
     } else {
-        oldShortcuts[shortcutIndex] = keySequence;
+        if (shortcutIndex == oldShortcuts.count()) {
+            oldShortcuts << keySequence;
+        } else {
+            oldShortcuts[shortcutIndex] = keySequence;
+        }
     }
 
     item.action->setShortcuts(oldShortcuts);

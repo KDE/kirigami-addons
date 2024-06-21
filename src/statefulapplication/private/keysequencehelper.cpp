@@ -1,5 +1,5 @@
 /*
-    SPDX-FileCopyrightText: 2020 David Redondo <davidedmundson@kde.org>
+    SPDX-FileCopyrightText: 2020 David Redondo <kde@david-redondo.de>
     SPDX-FileCopyrightText: 2014 David Edmundson <davidedmundson@kde.org>
     SPDX-FileCopyrightText: 1998 Mark Donohoe <donohoe@kde.org>
     SPDX-FileCopyrightText: 2001 Ellis Whitehead <ellis@kde.org>
@@ -114,12 +114,12 @@ bool KeySequenceHelperPrivate::conflictWithGlobalShortcuts(const QKeySequence &k
 #ifdef Q_OS_WIN
     // on windows F12 is reserved by the debugger at all times, so we can't use it for a global shortcut
     if (KeySequenceHelper::GlobalShortcuts && keySequence.toString().contains(QLatin1String("F12"))) {
-        QString title = i18n("Reserved Shortcut");
-        QString message = i18n(
+        const QString title = i18nc("@title:dialog", "Reserved Shortcut");
+        const QString message = i18nc("@info",
             "The F12 key is reserved on Windows, so cannot be used for a global shortcut.\n"
             "Please choose another one.");
 
-        //KMessageBox::error(nullptr, message, title);
+        Q_EMIT q->errorOccurred(title, message);
     }
     return false;
 #elif defined(HAVE_KGLOBALACCEL)
@@ -140,22 +140,22 @@ bool KeySequenceHelperPrivate::conflictWithGlobalShortcuts(const QKeySequence &k
     }
 
     if (!shadow.isEmpty() || !shadowed.isEmpty()) {
-        QString title = i18n("Global Shortcut Shadowing");
+        const QString title = i18nc("@title:dialog This happen when a global shortcut is already defined with the same shortcut", "Global Shortcut Shadowing");
         QString message;
         if (!shadowed.isEmpty()) {
-            message += i18n("The '%1' key combination is shadowed by following global actions:\n").arg(keySequence.toString());
+            message += i18nc("@info", "The '%1' key combination is shadowed by following global actions:\n").arg(keySequence.toString());
             for (const KGlobalShortcutInfo &info : std::as_const(shadowed)) {
-                message += i18n("Action '%1' in context '%2'\n").arg(info.friendlyName(), info.contextFriendlyName());
+                message += i18nc("@info", "Action '%1' in context '%2'\n").arg(info.friendlyName(), info.contextFriendlyName());
             }
         }
         if (!shadow.isEmpty()) {
-            message += i18n("The '%1' key combination shadows following global actions:\n").arg(keySequence.toString());
+            message += i18nc("@info", "The '%1' key combination shadows following global actions:\n").arg(keySequence.toString());
             for (const KGlobalShortcutInfo &info : std::as_const(shadow)) {
-                message += i18n("Action '%1' in context '%2'\n").arg(info.friendlyName(), info.contextFriendlyName());
+                message += i18nc("@info", "Action '%1' in context '%2'\n").arg(info.friendlyName(), info.contextFriendlyName());
             }
         }
 
-        //KMessageBox::error(nullptr, message, title);
+        Q_EMIT q->errorOccurred(title, message);
         return true;
     }
 
@@ -170,10 +170,8 @@ bool KeySequenceHelperPrivate::conflictWithGlobalShortcuts(const QKeySequence &k
     // most likely the first action that is done in the slot
     // listening to keySequenceChanged().
     KGlobalAccel::stealShortcutSystemwide(keySequence);
-    return false;
-#else
-    return false;
 #endif
+    return false;
 }
 
 bool KeySequenceHelperPrivate::conflictWithStandardShortcuts(const QKeySequence &keySequence)
@@ -192,21 +190,17 @@ bool KeySequenceHelperPrivate::conflictWithStandardShortcuts(const QKeySequence 
 bool KeySequenceHelperPrivate::stealStandardShortcut(KStandardShortcut::StandardShortcut std, const QKeySequence &seq)
 {
 #ifndef Q_OS_ANDROID
-    QString title = i18n("Conflict with Standard Application Shortcut");
-    QString message = i18n(
+    const QString title = i18nc("@title:dialog", "Conflict with Standard Application Shortcut");
+    const QString message = i18nc("@info",
         "The '%1' key combination is also used for the standard action "
         "\"%2\" that some applications use.\n"
         "Do you really want to use it as a global shortcut as well?",
         seq.toString(QKeySequence::NativeText),
         KStandardShortcut::label(std));
 
-    //if (KMessageBox::warningContinueCancel(nullptr, message, title, KGuiItem(i18n("Reassign"))) != KMessageBox::Continue) {
-    //    return false;
-    //}
-    return true;
-#else
-    return false;
+    Q_EMIT q->showStealStandardShortcutDialog(title, message, seq);
 #endif
+return false;
 }
 
 bool KeySequenceHelper::keySequenceIsEmpty(const QKeySequence &keySequence)

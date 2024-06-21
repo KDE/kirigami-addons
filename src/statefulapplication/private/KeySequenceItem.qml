@@ -41,18 +41,39 @@ FormCard.AbstractFormDelegate {
 
     property string __previousSequence: ""
 
-    /***
+    /**
      * Emitted whenever the key sequence is modified by the user, interacting with the component
      *
      * Either by interacting capturing a key sequence or pressing the clear button.
      */
     signal keySequenceModified()
 
+    signal errorOccurred(title: string, message: string)
+
+    signal showStealStandardShortcutDialog(title: string, message: string, sequence: var)
+
     /**
      * Start capturing a key sequence. This equivalent to the user clicking on the main button of the item
      */
     function startCapturing() {
         mainButton.checked = true;
+    }
+
+    function stealStandardShortcut(sequence): void {
+        applyStealStandardShortcutTimer.sequence = sequence;
+        applyStealStandardShortcutTimer.start();
+    }
+
+    Timer {
+        id: applyStealStandardShortcutTimer
+
+        property var sequence
+
+        interval: 200
+        onTriggered: {
+            helper.currentKeySequence = sequence;
+            root.keySequenceModified();
+        }
     }
 
     background: null
@@ -77,6 +98,14 @@ FormCard.AbstractFormDelegate {
                     }
                     mainButton.checked = false;
                     root.keySequenceModified();
+                }
+
+                onErrorOccurred: (title, message) => {
+                    root.errorOccurred(title, message);
+                }
+
+                onShowStealStandardShortcutDialog: (title, message, seq) => {
+                    root.showStealStandardShortcutDialog(title, message, seq);
                 }
             }
 
