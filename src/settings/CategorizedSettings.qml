@@ -96,7 +96,7 @@ Kirigami.PageRow {
 
             QQC2.ToolButton {
                 icon.name: "go-previous-view"
-                text: i18nc("@action:intoolbar", "Go back")
+                text: i18ndc("kirigami-addons6", "@action:intoolbar", "Go back")
                 display: QQC2.AbstractButton.IconOnly
                 onClicked: pageStack.layers.pop()
                 visible: pageStack.layers.depth > 1

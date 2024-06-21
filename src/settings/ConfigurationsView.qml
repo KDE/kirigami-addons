@@ -78,7 +78,7 @@ QtObject {
      *
      * By default this is "Settings"
      */
-    property string title: i18nc("@title:window", "Settings")
+    property string title: i18ndc("kirigami-addons6", "@title:window", "Settings")
 
     /**
      * @brief This property holds the list of pages for the settings.

@@ -21,7 +21,7 @@ FormCard.FormCardPage {
     // Do not use Map, it crashes very frequently
     property var pageCache: Object.create(null)
 
-    title: i18nc("@title", "Settings")
+    title: i18ndc("kirigami-addons6", "@title", "Settings")
 
     // search bar
     FormCard.FormCard {
@@ -80,7 +80,7 @@ FormCard.FormCardPage {
             spacing: 0
 
             FormCard.FormHeader {
-                title: categoryDelegate.modelData.name === "_main_category" ? i18nc("@title:group", "Settings") : modelData.name
+                title: categoryDelegate.modelData.name === "_main_category" ? i18ndc("kirigami-addons6", "@title:group", "Settings") : modelData.name
             }
 
             // settings categories
