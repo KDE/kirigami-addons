@@ -31,21 +31,21 @@ import org.kde.kirigamiaddons.settings.private as Private
  *         modules [
  *             KirigamiSettings.ConfigurationModule {
  *                 moduleId: "appearance"
- *                 text: i18n("Appearance")
+ *                 text: i18nc("@action:button", "Appearance")
  *                 icon.name: "preferences-desktop-theme-global"
  *                 page: () => Qt.createComponent("org.kde.tokodon", "AppearancePage")
  *             },
  *             ...
  *             KirigamiSettings.ConfigurationModule {
  *                 moduleId: "about"
- *                 text: i18n("About Tokodon")
+ *                 text: i18nc("@action:button", "About Tokodon")
  *                 icon.name: "help-about"
  *                 page: () => Qt.createComponent("org.kde.kirigamiaddons.formcard", "AboutPage")
  *                 category: i18nc("@title:group", "About")
  *             },
  *             KirigamiSettings.ConfigurationModule {
  *                 moduleId: "aboutkde"
- *                 text: i18n("About KDE")
+ *                 text: i18nc("@action:button", "About KDE")
  *                 icon.name: "kde"
  *                 page: () => Qt.createComponent("org.kde.kirigamiaddons.formcard", "AboutKDE")
  *                 category: i18nc("@title:group", "About")

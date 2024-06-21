@@ -63,14 +63,14 @@ Kirigami.Page {
             headerComponents: [
                 Tables.HeaderComponent {
                     width: 200
-                    title: i18n("Book")
+                    title: i18nc("@title:column", "Book")
                     textRole: "title"
                     role: BookRoles.TitleRole
                 },
 
                 Tables.HeaderComponent {
                     width: 200
-                    title: i18n("Author")
+                    title: i18nc("@title:column", "Author")
                     textRole: "author"
                     role: BookRoles.AuthorRole
                     draggable: true
@@ -84,7 +84,7 @@ Kirigami.Page {
 
                 Tables.HeaderComponent {
                     width: 100
-                    title: i18n("Year")
+                    title: i18nc("@title:column", "Year")
                     textRole: "year"
                     role: BookRoles.YearRole
                     draggable: true
@@ -92,7 +92,7 @@ Kirigami.Page {
 
                 Tables.HeaderComponent {
                     width: 100
-                    title: i18n("Rating")
+                    title: i18nc("@title:column", "Rating")
                     textRole: "rating"
                     role: BookRoles.RatingRole
                     draggable: true

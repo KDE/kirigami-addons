@@ -94,7 +94,7 @@ FormCard.FormCardPage {
         FormCard.FormComboBoxDelegate {
             id: selectedDefaultLanguage
             text: i18ndc("kirigami-addons6", "@label:listbox", "Selected default language:")
-            model: isEmpty ? [{"display": i18n("None")}] : root.settings.dictionaryModel
+            model: isEmpty ? [{"display": i18ndc("kirigami-addons6", "No selected language", "None")}] : root.settings.dictionaryModel
             textRole: "display"
             valueRole: "languageCode"
             property bool isEmpty: false

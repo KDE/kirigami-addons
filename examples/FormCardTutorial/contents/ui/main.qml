@@ -32,7 +32,7 @@ Kirigami.ApplicationWindow {
                 FormCard.FormButtonDelegate {
                     id: aboutKDEButton
                     icon.name: "kde"
-                    text: i18n("About KDE Page")
+                    text: i18nc("@action:button", "About KDE Page")
                     onClicked: root.pageStack.layers.push(aboutkde)
                 }
 
@@ -44,7 +44,7 @@ Kirigami.ApplicationWindow {
                 FormCard.FormButtonDelegate {
                     id: aboutPageButton
                     icon.name: "applications-utilities"
-                    text: i18n("About Addons Example")
+                    text: i18nc("@action:button", "About Addons Example")
                     onClicked: root.pageStack.layers.push(aboutpage)
                 }
 
@@ -56,7 +56,7 @@ Kirigami.ApplicationWindow {
                 FormCard.FormButtonDelegate {
                     id: settingsButton
                     icon.name: "settings-configure"
-                    text: i18n("Single Settings Page")
+                    text: i18nc("@action:button", "Single Settings Page")
                     onClicked: root.pageStack.layers.push(settingspage)
                 }
             }

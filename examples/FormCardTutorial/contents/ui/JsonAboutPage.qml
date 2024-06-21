@@ -2,7 +2,7 @@ import org.kde.kirigamiaddons.formcard 1.0 as FormCard
 import org.kde.about 1.0
 
 FormCard.AboutPage {
-    title: i18n("About")
+    title: i18nc("@action:button", "About")
     aboutData: {
         "displayName" : "Addons Example",
         "productName" : "",

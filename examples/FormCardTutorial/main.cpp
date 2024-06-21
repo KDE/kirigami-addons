@@ -14,12 +14,12 @@ int main(int argCount, char* argVector[])
 
     KAboutData aboutData(
         QStringLiteral("addonsexample"),
-        i18n("Addons Example"),
+        i18nc("@title:window", "Addons Example"),
         QStringLiteral("1.0"),
-        i18n("This program shows how to use Kirigami Addons"),
+        i18nc("@info", "This program shows how to use Kirigami Addons"),
         KAboutLicense::GPL_V3,
         QStringLiteral("(C) 2023"),
-        i18n("Optional text shown in the About"),
+        i18nc("@info", "Optional text shown in the About"),
         QStringLiteral("https://kde.org"));
 
     aboutData.addAuthor(i18nc("@info:credit", "John Doe"),

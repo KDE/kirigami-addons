@@ -30,14 +30,14 @@ Kirigami.ApplicationWindow {
             Layout.topMargin: Kirigami.Units.gridUnit
 
             FormCard.FormButtonDelegate {
-                text: i18n("Table View for QAbstractTableModel")
+                text: i18nc("@title:action", "Table View for QAbstractTableModel")
                 onClicked: root.pageStack.layers.push(tableviewpage)
             }
 
             FormCard.FormDelegateSeparator {}
 
             FormCard.FormButtonDelegate {
-                text: i18n("Table View for QAbstractListModel")
+                text: i18nc("@title:action", "Table View for QAbstractListModel")
                 onClicked: root.pageStack.layers.push(listtableviewpage)
             }
         }

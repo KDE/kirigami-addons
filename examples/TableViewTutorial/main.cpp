@@ -22,12 +22,12 @@ int main(int argCount, char *argVector[])
     KLocalizedString::setApplicationDomain("org.kde.tableviewexample");
 
     KAboutData aboutData(QStringLiteral("tableviewexample"),
-                         i18n("Kirigami Addons Table Example"),
+                         i18nc("@title:window", "Kirigami Addons Table Example"),
                          QStringLiteral("1.0"),
-                         i18n("This program shows how to use TableView component from Kirigami Addons"),
+                         i18nc("@info", "This program shows how to use TableView component from Kirigami Addons"),
                          KAboutLicense::GPL_V3,
                          QStringLiteral("(C) 2023"),
-                         i18n("Optional text shown in the About"),
+                         i18nc("@info", "Optional text shown in the About"),
                          QStringLiteral("https://kde.org"));
 
     aboutData.addAuthor(i18nc("@info:credit", "John Doe"), i18nc("@info:credit", "Maintainer"));
