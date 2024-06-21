@@ -15,7 +15,6 @@ ecm_target_qml_sources(formcardplugin SOURCES
     FormButtonDelegate.qml
     FormCard.qml
     FormCardPage.qml
-    FormColorDelegate.qml
     FormHeader.qml
     AboutPage.qml
     AboutKDE.qml
@@ -34,6 +33,16 @@ ecm_target_qml_sources(formcardplugin SOURCES
     FormGridContainer.qml
     FormCardDialog.qml
 )
+
+if(ANDROID)
+    ecm_target_qml_sources(formcardplugin SOURCES
+        android/FormColorDelegate.qml
+    )
+else()
+    ecm_target_qml_sources(formcardplugin SOURCES
+        FormColorDelegate.qml
+    )
+endif()
 
 ecm_target_qml_sources(formcardplugin PATH private SOURCES
     private/ContentItemLoader.qml
