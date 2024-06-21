@@ -8,6 +8,7 @@ import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCard
 import org.kde.kirigamiaddons.delegates as Delegates
+import org.kde.kirigamiaddons.components as Components
 
 Kirigami.ScrollablePage {
     id: root
@@ -63,14 +64,54 @@ Kirigami.ScrollablePage {
             property var alternateShortcuts
             property int index: -1
 
-            parent: root.QQC2.ApplicationWindow.overlay
+            parent: root.QQC2.Overlay.overlay
 
             KeySequenceItem {
                 id: keySequenceItem
+
                 label: i18ndc("krigiami-addons6", "@label", "Shortcut:")
                 onKeySequenceModified: {
                     root.model.updateShortcut(shortcutDialog.index, 0, keySequence);
                 }
+
+                onErrorOccurred: (title, message) => {
+                    root.QQC2.ApplicationWindow.showPassiveNotification(title + '\n' + message);
+                }
+
+                onShowStealStandardShortcutDialog: (title, message, sequence) => {
+                    stealStandardShortcutDialog.title = title
+                    stealStandardShortcutDialog.message = message;
+                    stealStandardShortcutDialog.sequence = sequence;
+                    stealStandardShortcutDialog.parent = root.QQC2.Overlay.overlay;
+                    stealStandardShortcutDialog.sequenceItem = this;
+                    stealStandardShortcutDialog.openDialog();
+                }
+            }
+
+            Components.MessageDialog {
+                id: stealStandardShortcutDialog
+
+                property string message
+                property var sequence
+                property KeySequenceItem sequenceItem
+
+                dialogType: Components.MessageDialog.Warning
+                dontShowAgainName: "stealStandardShortcutDialog"
+
+                QQC2.Label {
+                    text: stealStandardShortcutDialog.message
+                    Layout.fillWidth: true
+                    wrapMode: Text.WordWrap
+                }
+
+                standardButtons: Kirigami.PromptDialog.Apply | Kirigami.PromptDialog.Cancel
+
+                onApplied: {
+                    sequenceItem.stealStandardShortcut(sequence);
+                    close();
+                }
+
+                onRejected: close()
             }
 
             Repeater {
@@ -87,7 +128,23 @@ Kirigami.ScrollablePage {
 
                     keySequence: modelData
                     onKeySequenceModified: {
-                        shortcutDialog.alternateShortcuts = root.model.updateShortcut(shortcutDialog.index, index + 1, keySequence);
+                        const alternates = root.model.updateShortcut(shortcutDialog.index, index + 1, keySequence);
+                        if (alternates !== shortcutDialog.alternateShortcuts) {
+                            shortcutDialog.alternateShortcuts = alternates;
+                        }
+                    }
+
+                    onErrorOccurred: (title, message) => {
+                        root.QQC2.ApplicationWindow.showPassiveNotification(title + '\n' + message);
+                    }
+
+                    onShowStealStandardShortcutDialog: (title, message, sequence) => {
+                        stealStandardShortcutDialog.title = title
+                        stealStandardShortcutDialog.message = message;
+                        stealStandardShortcutDialog.sequence = sequence;
+                        stealStandardShortcutDialog.parent = root.QQC2.Overlay.overlay;
+                        stealStandardShortcutDialog.sequenceItem = this;
+                        stealStandardShortcutDialog.openDialog();
                     }
                 }
             }
@@ -100,6 +157,19 @@ Kirigami.ScrollablePage {
                 onKeySequenceModified: {
                     shortcutDialog.alternateShortcuts = root.model.updateShortcut(shortcutDialog.index, alternateRepeater.count + 1, keySequence);
                     keySequence = root.model.emptyKeySequence();
+                }
+
+                onErrorOccurred: (title, message) => {
+                    root.QQC2.ApplicationWindow.showPassiveNotification(title + '\n' + message);
+                }
+
+                onShowStealStandardShortcutDialog: (title, message, sequence) => {
+                    stealStandardShortcutDialog.title = title
+                    stealStandardShortcutDialog.message = message;
+                    stealStandardShortcutDialog.sequence = sequence;
+                    stealStandardShortcutDialog.parent = root.QQC2.Overlay.overlay;
+                    stealStandardShortcutDialog.sequenceItem = this;
+                    stealStandardShortcutDialog.openDialog();
                 }
             }
 
