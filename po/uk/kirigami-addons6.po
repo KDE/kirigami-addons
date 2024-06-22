@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-21 00:38+0000\n"
-"PO-Revision-Date: 2024-06-11 09:20+0300\n"
+"POT-Creation-Date: 2024-06-22 00:38+0000\n"
+"PO-Revision-Date: 2024-06-21 08:48+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -391,13 +391,13 @@ msgstr "Відвідайте сторінку %1 у KDE Store"
 msgid "Send an email to %1"
 msgstr "Надіслати повідомлення ел. пошти до %1"
 
-#: formcard/FormColorDelegate.qml:42
+#: formcard/android/FormColorDelegate.qml:42 formcard/FormColorDelegate.qml:42
 #, kde-format
 msgctxt "@action:button"
 msgid "Color"
 msgstr "Колір"
 
-#: formcard/FormColorDelegate.qml:43
+#: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:43
 #, kde-format
 msgctxt "Accessible description"
 msgid "Current color \"%1\""
@@ -456,42 +456,44 @@ msgstr "Параметри"
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Enable automatic spell checking"
-msgstr ""
+msgstr "Увімкнути автоматичну перевірку правопису"
 
 #: settings/private/SonnetConfigPage.qml:55
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore uppercase words"
-msgstr ""
+msgstr "Ігнорувати слова великими літерами"
 
 #: settings/private/SonnetConfigPage.qml:69
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore hyphenated words"
-msgstr ""
+msgstr "Ігнорувати слова з дефісом"
 
 #: settings/private/SonnetConfigPage.qml:83
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Detect language automatically"
-msgstr ""
+msgstr "Виявляти мову автоматично"
 
 #: settings/private/SonnetConfigPage.qml:96
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Selected default language:"
-msgstr ""
+msgstr "Вибрана типова мова:"
 
 #: settings/private/SonnetConfigPage.qml:97
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "None"
+msgctxt "No selected language"
 msgid "None"
-msgstr ""
+msgstr "Немає"
 
 #: settings/private/SonnetConfigPage.qml:117
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Additional Spell Checking Languages"
-msgstr ""
+msgstr "Додаткові мови перевірки правопису"
 
 #: settings/private/SonnetConfigPage.qml:118
 #, kde-format
@@ -499,53 +501,55 @@ msgid ""
 "%1 will provide spell checking and suggestions for the languages listed here "
 "when autodetection is enabled."
 msgstr ""
+"%1 виконуватиме перевірку правопису і надання пропозицій для мов з і списку "
+"тут, якщо увімкнено автоматичне виявлення мови."
 
 #: settings/private/SonnetConfigPage.qml:131
 #, kde-format
 msgctxt "@action:button"
 msgid "Open Personal Dictionary"
-msgstr ""
+msgstr "Відкрити особистий словник"
 
 #: settings/private/SonnetConfigPage.qml:143
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking languages"
-msgstr ""
+msgstr "Мови перевірки орфографії"
 
 #: settings/private/SonnetConfigPage.qml:155
 #, kde-format
 msgid "Default Language"
-msgstr ""
+msgstr "Типова мова"
 
 #: settings/private/SonnetConfigPage.qml:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking dictionary"
-msgstr ""
+msgstr "Словник перевірки правопису"
 
 #: settings/private/SonnetConfigPage.qml:174
 #, kde-format
 msgctxt "Placeholder message"
 msgid "Add a new word to your personal dictionary…"
-msgstr ""
+msgstr "Додати нове слово до вашого особистого словника."
 
 #: settings/private/SonnetConfigPage.qml:177
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Word"
-msgstr ""
+msgstr "Додати слово"
 
 #: settings/private/SonnetConfigPage.qml:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete word"
-msgstr ""
+msgstr "Вилучити слово"
 
-#: settings/SpellcheckingConfigurationModule.qml:12
+#: settings/SpellcheckingConfigurationModule.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Spell Checking"
-msgstr ""
+msgstr "Перевірка правопису"
 
 #~ msgctxt "time in hour (PM)"
 #~ msgid "%1 PM"

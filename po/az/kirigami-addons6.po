@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-21 00:38+0000\n"
+"POT-Creation-Date: 2024-06-22 00:38+0000\n"
 "PO-Revision-Date: 2022-03-27 18:27+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -354,13 +354,13 @@ msgstr ""
 msgid "Send an email to %1"
 msgstr ""
 
-#: formcard/FormColorDelegate.qml:42
+#: formcard/android/FormColorDelegate.qml:42 formcard/FormColorDelegate.qml:42
 #, kde-format
 msgctxt "@action:button"
 msgid "Color"
 msgstr ""
 
-#: formcard/FormColorDelegate.qml:43
+#: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:43
 #, kde-format
 msgctxt "Accessible description"
 msgid "Current color \"%1\""
@@ -448,6 +448,7 @@ msgstr ""
 
 #: settings/private/SonnetConfigPage.qml:97
 #, kde-format
+msgctxt "No selected language"
 msgid "None"
 msgstr ""
 
@@ -505,7 +506,7 @@ msgctxt "@action:button"
 msgid "Delete word"
 msgstr ""
 
-#: settings/SpellcheckingConfigurationModule.qml:12
+#: settings/SpellcheckingConfigurationModule.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Spell Checking"

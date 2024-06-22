@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-21 00:38+0000\n"
-"PO-Revision-Date: 2024-06-11 07:53+0200\n"
+"POT-Creation-Date: 2024-06-22 00:38+0000\n"
+"PO-Revision-Date: 2024-06-21 07:20+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -389,13 +389,13 @@ msgstr "Obiščite %1 stran skladišča KDE"
 msgid "Send an email to %1"
 msgstr "Pošljite e-pošto %1"
 
-#: formcard/FormColorDelegate.qml:42
+#: formcard/android/FormColorDelegate.qml:42 formcard/FormColorDelegate.qml:42
 #, kde-format
 msgctxt "@action:button"
 msgid "Color"
 msgstr "Barva"
 
-#: formcard/FormColorDelegate.qml:43
+#: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:43
 #, kde-format
 msgctxt "Accessible description"
 msgid "Current color \"%1\""
@@ -454,42 +454,44 @@ msgstr "Nastavitve"
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Enable automatic spell checking"
-msgstr ""
+msgstr "Omogoči samodejno preverjanje črkovanja"
 
 #: settings/private/SonnetConfigPage.qml:55
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore uppercase words"
-msgstr ""
+msgstr "Prezri besede z velikimi črkami"
 
 #: settings/private/SonnetConfigPage.qml:69
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore hyphenated words"
-msgstr ""
+msgstr "Prezri besede z vezaji"
 
 #: settings/private/SonnetConfigPage.qml:83
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Detect language automatically"
-msgstr ""
+msgstr "Samodejno zaznaj jezik"
 
 #: settings/private/SonnetConfigPage.qml:96
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Selected default language:"
-msgstr ""
+msgstr "Izberi privzeti jezik:"
 
 #: settings/private/SonnetConfigPage.qml:97
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "None"
+msgctxt "No selected language"
 msgid "None"
-msgstr ""
+msgstr "Noben"
 
 #: settings/private/SonnetConfigPage.qml:117
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Additional Spell Checking Languages"
-msgstr ""
+msgstr "Dodatni jeziki za preverjanje črkovanja"
 
 #: settings/private/SonnetConfigPage.qml:118
 #, kde-format
@@ -497,53 +499,55 @@ msgid ""
 "%1 will provide spell checking and suggestions for the languages listed here "
 "when autodetection is enabled."
 msgstr ""
+"%1 bo zagotovil preverjanje črkovanja in predloge za tukaj navedene jezike, "
+"ko je omogočeno samodejno zaznavanje."
 
 #: settings/private/SonnetConfigPage.qml:131
 #, kde-format
 msgctxt "@action:button"
 msgid "Open Personal Dictionary"
-msgstr ""
+msgstr "Odpri osebni slovar"
 
 #: settings/private/SonnetConfigPage.qml:143
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking languages"
-msgstr ""
+msgstr "Jeziki za preverjanje črkovanja"
 
 #: settings/private/SonnetConfigPage.qml:155
 #, kde-format
 msgid "Default Language"
-msgstr ""
+msgstr "Privzeti jezik"
 
 #: settings/private/SonnetConfigPage.qml:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking dictionary"
-msgstr ""
+msgstr "Slovar za preverjanje črkovanja"
 
 #: settings/private/SonnetConfigPage.qml:174
 #, kde-format
 msgctxt "Placeholder message"
 msgid "Add a new word to your personal dictionary…"
-msgstr ""
+msgstr "Dodaj novo besedo v svoj osebni slovar ..."
 
 #: settings/private/SonnetConfigPage.qml:177
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Word"
-msgstr ""
+msgstr "Dodaj besedo"
 
 #: settings/private/SonnetConfigPage.qml:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete word"
-msgstr ""
+msgstr "Zbriši besedo"
 
-#: settings/SpellcheckingConfigurationModule.qml:12
+#: settings/SpellcheckingConfigurationModule.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Spell Checking"
-msgstr ""
+msgstr "Preverjanje črkovanja"
 
 #~ msgctxt "time in hour (PM)"
 #~ msgid "%1 PM"
