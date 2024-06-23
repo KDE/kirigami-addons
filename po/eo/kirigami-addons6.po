@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-22 00:38+0000\n"
-"PO-Revision-Date: 2024-06-21 23:56+0200\n"
+"PO-Revision-Date: 2024-06-22 06:48+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -478,8 +478,7 @@ msgid "Selected default language:"
 msgstr "Elektita defaŭlta lingvo:"
 
 #: settings/private/SonnetConfigPage.qml:97
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "No selected language"
 msgid "None"
 msgstr "Neniu"

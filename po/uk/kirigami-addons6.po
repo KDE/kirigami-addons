@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-22 00:38+0000\n"
-"PO-Revision-Date: 2024-06-21 08:48+0300\n"
+"PO-Revision-Date: 2024-06-22 09:41+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -483,8 +483,7 @@ msgid "Selected default language:"
 msgstr "Вибрана типова мова:"
 
 #: settings/private/SonnetConfigPage.qml:97
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "No selected language"
 msgid "None"
 msgstr "Немає"

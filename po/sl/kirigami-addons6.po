@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-22 00:38+0000\n"
-"PO-Revision-Date: 2024-06-21 07:20+0200\n"
+"PO-Revision-Date: 2024-06-22 07:50+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -481,8 +481,7 @@ msgid "Selected default language:"
 msgstr "Izberi privzeti jezik:"
 
 #: settings/private/SonnetConfigPage.qml:97
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "No selected language"
 msgid "None"
 msgstr "Noben"
@@ -529,7 +528,7 @@ msgstr "Slovar za preverjanje črkovanja"
 #, kde-format
 msgctxt "Placeholder message"
 msgid "Add a new word to your personal dictionary…"
-msgstr "Dodaj novo besedo v svoj osebni slovar ..."
+msgstr "Dodaj novo besedo v svoj osebni slovar…"
 
 #: settings/private/SonnetConfigPage.qml:177
 #, kde-format
