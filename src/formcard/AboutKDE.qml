@@ -23,7 +23,7 @@ FormCardPage {
     title: i18nd("kirigami-addons6", "About KDE")
 
     FormCard {
-        Layout.topMargin: Kirigami.Units.gridUnit
+        Layout.topMargin: Kirigami.Units.largeSpacing * 4
 
         AbstractFormDelegate {
             id: generalDelegate
