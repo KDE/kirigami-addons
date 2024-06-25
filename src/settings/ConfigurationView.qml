@@ -23,7 +23,7 @@ import org.kde.kirigamiaddons.settings.private as Private
  * Controls.Button {
  *     id: button
  *
- *     KirigamiSettings.ConfigurationsView {
+ *     KirigamiSettings.ConfigurationView {
  *         id: configuration
  *
  *         window: button.Controls.ApplicationWindow.window as Kirigami.ApplicationWindow

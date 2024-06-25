@@ -18,7 +18,7 @@ ecm_target_qml_sources(settingsplugin SOURCES
     SettingAction.qml # deprecated
     CategorizedSettings.qml # deprecated
 
-    ConfigurationsView.qml
+    ConfigurationView.qml
     ConfigurationModule.qml
     SpellcheckingConfigurationModule.qml
 )
