@@ -84,11 +84,11 @@ class KIRIGAMIADDONSSTATEFULAPP_EXPORT AbstractKirigamiApplication : public QObj
     /// @internal Used by StatefulApp.ManagedWindow
     Q_PROPERTY(QAbstractListModel *shortcutsModel READ shortcutsModel CONSTANT)
 
-    /// This property holds the configurationsView of the application
+    /// This property holds the configurationView of the application
     ///
     /// When set, AbstractKirigamiApplication will setup a "options_configure" action
-    /// that will open the configurationsView when triggered.
-    Q_PROPERTY(QObject *configurationsView READ configurationsView WRITE setConfigurationsView NOTIFY configurationsViewChanged)
+    /// that will open the configurationView when triggered.
+    Q_PROPERTY(QObject *configurationView READ configurationView WRITE setConfigurationView NOTIFY configurationViewChanged)
 
 public:
     /// Default constructor of AbstractKirigamiApplication
@@ -114,11 +114,11 @@ public:
     /// @internal Used by StatefulApp.Action
     Q_INVOKABLE QAction *action(const QString &actionName);
 
-    /// Getter for the configurationsView property.
-    QObject *configurationsView() const;
+    /// Getter for the configurationView property.
+    QObject *configurationView() const;
 
-    /// Setter for the configurationsView property.
-    void setConfigurationsView(QObject *configurationsView);
+    /// Setter for the configurationView property.
+    void setConfigurationView(QObject *configurationView);
 
 Q_SIGNALS:
     /// @internal Used by StatefulApp.StatefulWindow
@@ -134,7 +134,7 @@ Q_SIGNALS:
     void shortcutsEditorAction();
 
     /// Changed signal for the configurationView property.
-    void configurationsViewChanged();
+    void configurationViewChanged();
 
 protected:
     /// Entry points to declare your actions.
