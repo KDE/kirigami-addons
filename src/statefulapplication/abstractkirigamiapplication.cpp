@@ -22,8 +22,8 @@ public:
     QSortFilterProxyModel *proxyModel = nullptr;
     KirigamiActionCollection *collection = nullptr;
     ShortcutsModel *shortcutsModel = nullptr;
-    QObject *configurationsView = nullptr;
-    QAction *openConfigurationsViewAction = nullptr;
+    QObject *configurationView = nullptr;
+    QAction *openConfigurationViewAction = nullptr;
 };
 
 AbstractKirigamiApplication::AbstractKirigamiApplication(QObject *parent)
@@ -185,33 +185,33 @@ void AbstractKirigamiApplication::quit()
     qGuiApp->exit();
 }
 
-QObject *AbstractKirigamiApplication::configurationsView() const
+QObject *AbstractKirigamiApplication::configurationView() const
 {
-    return d->configurationsView;
+    return d->configurationView;
 }
 
-void AbstractKirigamiApplication::setConfigurationsView(QObject *configurationsView)
+void AbstractKirigamiApplication::setConfigurationView(QObject *configurationView)
 {
-    if (d->configurationsView == configurationsView) {
+    if (d->configurationView == configurationView) {
         return;
     }
 
-    if (d->configurationsView) {
-        d->openConfigurationsViewAction->setVisible(false);
+    if (d->configurationView) {
+        d->openConfigurationViewAction->setVisible(false);
     }
 
-    d->configurationsView = configurationsView;
-    Q_EMIT configurationsViewChanged();
+    d->configurationView = configurationView;
+    Q_EMIT configurationViewChanged();
 
-    if (d->configurationsView) {
-        if (!d->openConfigurationsViewAction) {
+    if (d->configurationView) {
+        if (!d->openConfigurationViewAction) {
             // TODO also expose individual ConfigurationModule as action
-            d->openConfigurationsViewAction = KStandardActions::preferences(this, [this]() {
-                QMetaObject::invokeMethod(d->configurationsView, "open", Qt::QueuedConnection, QVariant());
+            d->openConfigurationViewAction = KStandardActions::preferences(this, [this]() {
+                QMetaObject::invokeMethod(d->configurationView, "open", Qt::QueuedConnection, QVariant());
             }, this);
-            mainCollection()->addAction(d->openConfigurationsViewAction->objectName(), d->openConfigurationsViewAction);
+            mainCollection()->addAction(d->openConfigurationViewAction->objectName(), d->openConfigurationViewAction);
         }
-        d->openConfigurationsViewAction->setVisible(true);
+        d->openConfigurationViewAction->setVisible(true);
 
         mainCollection()->readSettings();
     }
