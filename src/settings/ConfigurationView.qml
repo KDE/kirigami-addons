@@ -28,7 +28,7 @@ import org.kde.kirigamiaddons.settings.private as Private
  *
  *         window: button.Controls.ApplicationWindow.window as Kirigami.ApplicationWindow
  *
- *         modules [
+ *         modules: [
  *             KirigamiSettings.ConfigurationModule {
  *                 moduleId: "appearance"
  *                 text: i18nc("@action:button", "Appearance")
