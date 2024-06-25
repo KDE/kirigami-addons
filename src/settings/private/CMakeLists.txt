@@ -18,8 +18,13 @@ ecm_target_qml_sources(settingsprivateplugin SOURCES
     ConfigWindow.qml
     ConfigMobilePage.qml
     ActionIconGroup.qml
-    SonnetConfigPage.qml
 )
+
+if (NOT ANDROID)
+    ecm_target_qml_sources(settingsprivateplugin SOURCES
+        SonnetConfigPage.qml
+    )
+endif()
 
 target_link_libraries(settingsprivateplugin PRIVATE
     Qt6::Quick
