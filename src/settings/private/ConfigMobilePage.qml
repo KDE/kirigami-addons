@@ -144,6 +144,9 @@ FormCard.FormCardPage {
             return pageCache[module.moduleId];
         } else {
             const component = module.page();
+            if (component.status === Component.Error) {
+                console.error(component.errorString());
+            }
             const page = component.createObject(root, module.initialProperties());
             if (page.title.length === 0) {
                 page.title = module.text;
