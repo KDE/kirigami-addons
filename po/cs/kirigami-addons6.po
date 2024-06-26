@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-22 00:38+0000\n"
-"PO-Revision-Date: 2024-06-24 10:18+0200\n"
+"POT-Creation-Date: 2024-06-26 00:38+0000\n"
+"PO-Revision-Date: 2024-06-25 10:53+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -414,7 +414,7 @@ msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
 msgstr "%1/%2"
 
-#: settings/CategorizedSettings.qml:45 settings/ConfigurationsView.qml:81
+#: settings/CategorizedSettings.qml:45 settings/ConfigurationView.qml:81
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings"
@@ -493,6 +493,8 @@ msgid ""
 "%1 will provide spell checking and suggestions for the languages listed here "
 "when autodetection is enabled."
 msgstr ""
+"Pokud je automatická detekce povolena, bude %1 poskytovat kontrolu pravopisu "
+"a návrhy pro jazyky v tomto seznamu."
 
 #: settings/private/SonnetConfigPage.qml:131
 #, kde-format

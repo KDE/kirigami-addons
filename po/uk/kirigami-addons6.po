@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-22 00:38+0000\n"
+"POT-Creation-Date: 2024-06-26 00:38+0000\n"
 "PO-Revision-Date: 2024-06-22 09:41+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -422,7 +422,7 @@ msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
 msgstr "%1/%2"
 
-#: settings/CategorizedSettings.qml:45 settings/ConfigurationsView.qml:81
+#: settings/CategorizedSettings.qml:45 settings/ConfigurationView.qml:81
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings"
