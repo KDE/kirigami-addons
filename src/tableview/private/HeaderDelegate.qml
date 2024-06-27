@@ -32,9 +32,6 @@ QQC2.Control {
     signal doubleClicked()
 
     background: Rectangle {
-        Kirigami.Theme.colorSet: Kirigami.Theme.Header
-        Kirigami.Theme.inherit: false
-
         readonly property bool containsDrag: delegate.enabled &&
                                              delegate.headerComponent.draggable &&
                                              dropArea.containsDrag &&
