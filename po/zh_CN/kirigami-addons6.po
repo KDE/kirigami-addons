@@ -473,7 +473,7 @@ msgstr "选定的默认语言："
 #, kde-format
 msgctxt "No selected language"
 msgid "None"
-msgstr ""
+msgstr "无"
 
 #: settings/private/SonnetConfigPage.qml:117
 #, kde-format
