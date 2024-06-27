@@ -165,19 +165,35 @@ FormCardPage {
             property alias text: bodyLabel.text
 
             parent: QQC2.Overlay.overlay
-            iconName: "license"
 
             leftPadding: 0
             rightPadding: 0
             bottomPadding: 0
+            topPadding: 0
+
+            header: Kirigami.Heading {
+                text: licenseSheet.title
+                elide: QQC2.Label.ElideRight
+                padding: licenseSheet.padding
+                topPadding: Kirigami.Units.largeSpacing
+                bottomPadding: Kirigami.Units.largeSpacing
+
+                Kirigami.Separator {
+                    anchors {
+                        left: parent.left
+                        right: parent.right
+                        bottom: parent.bottom
+                    }
+                }
+            }
 
             contentItem: QQC2.ScrollView {
-                leftPadding: Kirigami.Units.gridUnit
-                rightPadding: Kirigami.Units.gridUnit
+                id: scrollView
 
                 Kirigami.SelectableLabel {
                     id: bodyLabel
                     text: licenseSheet.text
+                    textMargin: Kirigami.Units.gridUnit
                 }
             }
 
@@ -439,22 +455,35 @@ FormCardPage {
                         KirigamiComponents.MessageDialog {
                             id: licenseSheet
 
-                            parent: applicationWindow().overlay
-                            iconName: "license"
+                            parent: root.QQC2.Overlay.overlay
+                            title: delegate.modelData.name
 
                             leftPadding: 0
                             rightPadding: 0
                             bottomPadding: 0
+                            topPadding: 0
 
-                            title: delegate.modelData.licenses.name
+                            header: Kirigami.Heading {
+                                text: licenseSheet.title
+                                elide: QQC2.Label.ElideRight
+                                padding: licenseSheet.padding
+                                topPadding: Kirigami.Units.largeSpacing
+                                bottomPadding: Kirigami.Units.largeSpacing
+
+                                Kirigami.Separator {
+                                    anchors {
+                                        left: parent.left
+                                        right: parent.right
+                                        bottom: parent.bottom
+                                    }
+                                }
+                            }
 
                             contentItem: QQC2.ScrollView {
-                                leftPadding: Kirigami.Units.gridUnit
-                                rightPadding: Kirigami.Units.gridUnit
-
                                 Kirigami.SelectableLabel {
                                     id: bodyLabel
                                     text: delegate.modelData.licenses.text
+                                    textMargin: Kirigami.Units.gridUnit
                                 }
                             }
 
