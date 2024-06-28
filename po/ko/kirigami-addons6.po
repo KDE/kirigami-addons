@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-26 00:38+0000\n"
+"POT-Creation-Date: 2024-06-28 00:38+0000\n"
 "PO-Revision-Date: 2024-02-09 23:45+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -224,7 +224,7 @@ msgstr ""
 "께 힘을 모으고 있습니다. KDE에는 이 글을 읽는 여러분과 같은 누구나 참여하고 "
 "기여할 수 있습니다."
 
-#: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:193
+#: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:209
 #, kde-format
 msgid "Homepage"
 msgstr "홈페이지"
@@ -279,7 +279,7 @@ msgstr ""
 "를 번역하는 각 언어 번역팀을 도울 수도 있습니다. 또한 그래픽, 테마, 소리, 더 "
 "나은 문서 등을 기여할 수도 있습니다. 직접 결정하십시오!"
 
-#: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:219
+#: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:235
 #, kde-format
 msgid "Get Involved"
 msgstr "참여하기"
@@ -332,7 +332,7 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:206
+#: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:222
 #, kde-format
 msgid "Donate"
 msgstr "기부하기"
@@ -353,38 +353,38 @@ msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "라이선스"
 
-#: formcard/AboutPage.qml:244
+#: formcard/AboutPage.qml:260
 #, fuzzy, kde-format
 #| msgid "Report a bug"
 msgid "Report a Bug"
 msgstr "버그 보고"
 
-#: formcard/AboutPage.qml:251
+#: formcard/AboutPage.qml:267
 #, kde-format
 msgid "Libraries in use"
 msgstr "사용하는 라이브러리"
 
-#: formcard/AboutPage.qml:274
+#: formcard/AboutPage.qml:290
 #, kde-format
 msgid "Authors"
 msgstr "작성자"
 
-#: formcard/AboutPage.qml:289
+#: formcard/AboutPage.qml:305
 #, kde-format
 msgid "Credits"
 msgstr "제작진"
 
-#: formcard/AboutPage.qml:304
+#: formcard/AboutPage.qml:320
 #, kde-format
 msgid "Translators"
 msgstr "번역자"
 
-#: formcard/AboutPage.qml:373
+#: formcard/AboutPage.qml:389
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "%1의 KDE 스토어 페이지 방문"
 
-#: formcard/AboutPage.qml:382
+#: formcard/AboutPage.qml:398
 #, kde-format
 msgid "Send an email to %1"
 msgstr "%1(으)로 이메일 보내기"

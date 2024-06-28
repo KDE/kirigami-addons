@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-26 00:38+0000\n"
+"POT-Creation-Date: 2024-06-28 00:38+0000\n"
 "PO-Revision-Date: 2024-06-22 10:16+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -220,7 +220,7 @@ msgstr ""
 "món. Donem la benvinguda a tothom a afegir-se i col·laborar amb KDE, "
 "incloent-vos-hi."
 
-#: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:193
+#: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:209
 #, kde-format
 msgid "Homepage"
 msgstr "Pàgina web"
@@ -278,7 +278,7 @@ msgstr ""
 "dels programes. Podeu proporcionar gràfics, temes, sons i millorar la "
 "documentació. Vós decidiu!"
 
-#: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:219
+#: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:235
 #, kde-format
 msgid "Get Involved"
 msgstr "Col·laboreu-hi"
@@ -334,7 +334,7 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:206
+#: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:222
 #, kde-format
 msgid "Donate"
 msgstr "Donatius"
@@ -356,37 +356,37 @@ msgid_plural "Licenses"
 msgstr[0] "Llicència"
 msgstr[1] "Llicències"
 
-#: formcard/AboutPage.qml:244
+#: formcard/AboutPage.qml:260
 #, kde-format
 msgid "Report a Bug"
 msgstr "Informeu d'un error"
 
-#: formcard/AboutPage.qml:251
+#: formcard/AboutPage.qml:267
 #, kde-format
 msgid "Libraries in use"
 msgstr "Biblioteques en ús"
 
-#: formcard/AboutPage.qml:274
+#: formcard/AboutPage.qml:290
 #, kde-format
 msgid "Authors"
 msgstr "Autors"
 
-#: formcard/AboutPage.qml:289
+#: formcard/AboutPage.qml:305
 #, kde-format
 msgid "Credits"
 msgstr "Atribucions"
 
-#: formcard/AboutPage.qml:304
+#: formcard/AboutPage.qml:320
 #, kde-format
 msgid "Translators"
 msgstr "Traductors"
 
-#: formcard/AboutPage.qml:373
+#: formcard/AboutPage.qml:389
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Visita la pàgina %1 de la KDE Store"
 
-#: formcard/AboutPage.qml:382
+#: formcard/AboutPage.qml:398
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Envia un correu a %1"

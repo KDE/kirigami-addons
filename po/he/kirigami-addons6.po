@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-26 00:38+0000\n"
+"POT-Creation-Date: 2024-06-28 00:38+0000\n"
 "PO-Revision-Date: 2024-06-22 07:41+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -214,7 +214,7 @@ msgstr ""
 "פועלים יחד כדי להגיע ליעד המשותף של בניית התוכנה החופשית הטובה בעולם. כולם "
 "מוזמנים להצטרף ולתרום ל־KDE, כולל אותך."
 
-#: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:193
+#: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:209
 #, kde-format
 msgid "Homepage"
 msgstr "דף הבית"
@@ -268,7 +268,7 @@ msgstr ""
 "מאפשרת לתרגם את ממשקי היישומים. אפשר לספק גרפיקה, ערכות עיצוב, צלילים "
 "ושיפורים בתיעוד. הבחירה בידיך!"
 
-#: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:219
+#: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:235
 #, kde-format
 msgid "Get Involved"
 msgstr "השתתפות"
@@ -318,7 +318,7 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:206
+#: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:222
 #, kde-format
 msgid "Donate"
 msgstr "תרומה"
@@ -342,37 +342,37 @@ msgstr[1] "רישיונות"
 msgstr[2] "רישיונות"
 msgstr[3] "רישיונות"
 
-#: formcard/AboutPage.qml:244
+#: formcard/AboutPage.qml:260
 #, kde-format
 msgid "Report a Bug"
 msgstr "דיווח על תקלה"
 
-#: formcard/AboutPage.qml:251
+#: formcard/AboutPage.qml:267
 #, kde-format
 msgid "Libraries in use"
 msgstr "ספריות בשימוש"
 
-#: formcard/AboutPage.qml:274
+#: formcard/AboutPage.qml:290
 #, kde-format
 msgid "Authors"
 msgstr "יוצרים"
 
-#: formcard/AboutPage.qml:289
+#: formcard/AboutPage.qml:305
 #, kde-format
 msgid "Credits"
 msgstr "תודות"
 
-#: formcard/AboutPage.qml:304
+#: formcard/AboutPage.qml:320
 #, kde-format
 msgid "Translators"
 msgstr "מתרגמים"
 
-#: formcard/AboutPage.qml:373
+#: formcard/AboutPage.qml:389
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "ביקור בעמוד של %1 בחנות KDE"
 
-#: formcard/AboutPage.qml:382
+#: formcard/AboutPage.qml:398
 #, kde-format
 msgid "Send an email to %1"
 msgstr "שליחת דוא״ל אל %1"

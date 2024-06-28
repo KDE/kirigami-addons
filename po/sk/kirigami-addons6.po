@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-26 00:38+0000\n"
+"POT-Creation-Date: 2024-06-28 00:38+0000\n"
 "PO-Revision-Date: 2023-12-05 17:33+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -212,7 +212,7 @@ msgid ""
 "to KDE, including you."
 msgstr ""
 
-#: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:193
+#: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:209
 #, kde-format
 msgid "Homepage"
 msgstr "Domovská stránka"
@@ -255,7 +255,7 @@ msgid ""
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
 
-#: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:219
+#: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:235
 #, kde-format
 msgid "Get Involved"
 msgstr "Zapojiť sa"
@@ -296,7 +296,7 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:206
+#: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:222
 #, kde-format
 msgid "Donate"
 msgstr "Venovať peniaze"
@@ -319,38 +319,38 @@ msgstr[0] "Licencia"
 msgstr[1] "Licencie"
 msgstr[2] "Licencie"
 
-#: formcard/AboutPage.qml:244
+#: formcard/AboutPage.qml:260
 #, fuzzy, kde-format
 #| msgid "Report a bug"
 msgid "Report a Bug"
 msgstr "Nahlásiť chybu"
 
-#: formcard/AboutPage.qml:251
+#: formcard/AboutPage.qml:267
 #, kde-format
 msgid "Libraries in use"
 msgstr ""
 
-#: formcard/AboutPage.qml:274
+#: formcard/AboutPage.qml:290
 #, kde-format
 msgid "Authors"
 msgstr "Autori"
 
-#: formcard/AboutPage.qml:289
+#: formcard/AboutPage.qml:305
 #, kde-format
 msgid "Credits"
 msgstr "Zásluhy"
 
-#: formcard/AboutPage.qml:304
+#: formcard/AboutPage.qml:320
 #, kde-format
 msgid "Translators"
 msgstr "Prekladatelia"
 
-#: formcard/AboutPage.qml:373
+#: formcard/AboutPage.qml:389
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr ""
 
-#: formcard/AboutPage.qml:382
+#: formcard/AboutPage.qml:398
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Odoslať email pre %1"

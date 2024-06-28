@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-26 00:38+0000\n"
+"POT-Creation-Date: 2024-06-28 00:38+0000\n"
 "PO-Revision-Date: 2024-01-31 18:00+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -221,7 +221,7 @@ msgstr ""
 "sukurtume geriausią pasaulyje laisvąją programinę įrangą. Visi, įskaitant ir "
 "jus, yra kviečiami prisijungti ir talkinti KDE."
 
-#: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:193
+#: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:209
 #, kde-format
 msgid "Homepage"
 msgstr "Internetinė svetainė"
@@ -281,7 +281,7 @@ msgstr ""
 "programų sąsajas. Galite teikti grafinius paveikslus, apipavidalinimus, "
 "garsus bei patobulintą dokumentaciją. Spręskite patys!"
 
-#: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:219
+#: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:235
 #, kde-format
 msgid "Get Involved"
 msgstr "Įsitraukti"
@@ -333,7 +333,7 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:206
+#: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:222
 #, kde-format
 msgid "Donate"
 msgstr "Paaukoti"
@@ -357,38 +357,38 @@ msgstr[1] "Licencijos"
 msgstr[2] "Licencijos"
 msgstr[3] "Licencijos"
 
-#: formcard/AboutPage.qml:244
+#: formcard/AboutPage.qml:260
 #, fuzzy, kde-format
 #| msgid "Report a bug"
 msgid "Report a Bug"
 msgstr "Pranešti apie klaidą"
 
-#: formcard/AboutPage.qml:251
+#: formcard/AboutPage.qml:267
 #, kde-format
 msgid "Libraries in use"
 msgstr "Naudojamos bibliotekos"
 
-#: formcard/AboutPage.qml:274
+#: formcard/AboutPage.qml:290
 #, kde-format
 msgid "Authors"
 msgstr "Autoriai"
 
-#: formcard/AboutPage.qml:289
+#: formcard/AboutPage.qml:305
 #, kde-format
 msgid "Credits"
 msgstr "Padėkos"
 
-#: formcard/AboutPage.qml:304
+#: formcard/AboutPage.qml:320
 #, kde-format
 msgid "Translators"
 msgstr "Vertėjai"
 
-#: formcard/AboutPage.qml:373
+#: formcard/AboutPage.qml:389
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Apsilankyti KDE parduotuvės %1 puslapyje"
 
-#: formcard/AboutPage.qml:382
+#: formcard/AboutPage.qml:398
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Siųsti el. laišką, adresu %1"
