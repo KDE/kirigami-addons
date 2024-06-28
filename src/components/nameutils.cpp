@@ -138,9 +138,10 @@ auto NameUtils::colorsFromString(const QString &string) -> QColor
     auto hash = qHash(string);
     // hash modulo the length of the colors list minus one will always get us a valid
     // index
-    auto index = hash % (grabColors().length() - 1);
+    const auto colors = grabColors();
+    auto index = hash % (colors.length() - 1);
     // return a colour
-    return grabColors()[index];
+    return colors[index];
 }
 
 auto NameUtils::isStringUnsuitableForInitials(const QString &string) -> bool
