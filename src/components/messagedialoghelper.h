@@ -4,7 +4,7 @@
 #pragma once
 
 #include <QObject>
-#include <QtQml>
+#include <QtQml/qqmlregistration.h>
 #include <KSharedConfig>
 
 /// @internal Only used by MessageDialog
