@@ -173,15 +173,31 @@ AbstractFormDelegate {
      * @brief Clears the contents of the text input and resets partial
      * text input from an input method.
      */
-    function clear() {
+    function clear(): void {
         textField.clear();
     }
 
     /**
      * Inserts text into the TextInput at position.
      */
-    function insert(position: int, text: string) {
+    function insert(position: int, text: string): void {
         textField.insert(position, text);
+    }
+
+    /**
+     * Causes all text to be selected.
+     * @since Kirigami Addons 1.4.0
+     */
+    function selectAll(): void {
+        textField.selectAll();
+    }
+
+    /**
+     * Causes the text from start to end to be selected.
+     * @since Kirigami Addons 1.4.0
+     */
+    function select(start: int, end: int): void {
+        textField.select(start, end);
     }
 
     onActiveFocusChanged: { // propagate focus to the text field
