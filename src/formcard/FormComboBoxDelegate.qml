@@ -87,6 +87,14 @@ AbstractFormDelegate {
     property var model
 
     /**
+     * @brief This property holds the `count` of the internal combobox.
+     *
+     * @see QtQuick.Controls.ComboBox.count
+     * @since Kirigami Addons 1.4.0
+     */
+    property alias count: combobox.count
+
+    /**
      * @brief This property holds the `textRole` of the internal combobox.
      *
      * @see QtQuick.Controls.ComboBox.textRole
