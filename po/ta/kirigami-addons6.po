@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-28 00:38+0000\n"
-"PO-Revision-Date: 2024-06-16 17:08+0530\n"
+"POT-Creation-Date: 2024-07-01 00:38+0000\n"
+"PO-Revision-Date: 2024-06-30 13:39+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -404,7 +404,7 @@ msgid "Not set"
 msgstr "அமைக்கப்படவில்லை"
 
 #: formcard/FormPasswordFieldDelegate.qml:214
-#: formcard/FormTextFieldDelegate.qml:217
+#: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:217
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
@@ -444,43 +444,43 @@ msgstr "அமைப்புகள்"
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Enable automatic spell checking"
-msgstr ""
+msgstr "தானியங்கி சொல் திருத்தத்தை இயக்கு"
 
 #: settings/private/SonnetConfigPage.qml:55
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore uppercase words"
-msgstr ""
+msgstr "பெரிய எழுத்துகள் மட்டுமுடைய சொற்களை பொருட்படுத்தாதே"
 
 #: settings/private/SonnetConfigPage.qml:69
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore hyphenated words"
-msgstr ""
+msgstr "இடைக்கோட்டுடைய சொற்களை பொருட்படுத்தாதே"
 
 #: settings/private/SonnetConfigPage.qml:83
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Detect language automatically"
-msgstr ""
+msgstr "மொழியை தானாக கண்டறி"
 
 #: settings/private/SonnetConfigPage.qml:96
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Selected default language:"
-msgstr ""
+msgstr "தேர்ந்தெடுத்துள்ள இயல்பிருப்பு மொழி:"
 
 #: settings/private/SonnetConfigPage.qml:97
 #, kde-format
 msgctxt "No selected language"
 msgid "None"
-msgstr ""
+msgstr "ஏதுமில்லை"
 
 #: settings/private/SonnetConfigPage.qml:117
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Additional Spell Checking Languages"
-msgstr ""
+msgstr "கூடுதல் சொல் திருத்த மொழிகள்"
 
 #: settings/private/SonnetConfigPage.qml:118
 #, kde-format
@@ -488,53 +488,55 @@ msgid ""
 "%1 will provide spell checking and suggestions for the languages listed here "
 "when autodetection is enabled."
 msgstr ""
+"தானாக கண்டறியும் அம்சம் இயக்கப்பட்டிருப்பின், கீழுள்ள மொழிகளுக்கான சொல் திருத்தத்தையும் "
+"பரிந்துரைகளையும் %1 வழங்கும்."
 
 #: settings/private/SonnetConfigPage.qml:131
 #, kde-format
 msgctxt "@action:button"
 msgid "Open Personal Dictionary"
-msgstr ""
+msgstr "தனிப்பயன் அகரமுதலியை திற"
 
 #: settings/private/SonnetConfigPage.qml:143
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking languages"
-msgstr ""
+msgstr "சொல் திருத்த மொழிகள்"
 
 #: settings/private/SonnetConfigPage.qml:155
 #, kde-format
 msgid "Default Language"
-msgstr ""
+msgstr "இயல்பிருப்பு மொழி"
 
 #: settings/private/SonnetConfigPage.qml:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking dictionary"
-msgstr ""
+msgstr "சொல் திருத்த அகரமுதலி"
 
 #: settings/private/SonnetConfigPage.qml:174
 #, kde-format
 msgctxt "Placeholder message"
 msgid "Add a new word to your personal dictionary…"
-msgstr ""
+msgstr "தனிப்பயன் அகரமுதலியில் ஓர் புதிய சொல்லைச் சேர்…"
 
 #: settings/private/SonnetConfigPage.qml:177
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Word"
-msgstr ""
+msgstr "சொல்லை சேர்"
 
 #: settings/private/SonnetConfigPage.qml:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete word"
-msgstr ""
+msgstr "சொல்லை நீக்கு"
 
 #: settings/SpellcheckingConfigurationModule.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Spell Checking"
-msgstr ""
+msgstr "சொல் திருத்தம்"
 
 #~ msgctxt "time in hour (PM)"
 #~ msgid "%1 PM"
