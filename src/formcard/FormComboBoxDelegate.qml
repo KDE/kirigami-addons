@@ -333,23 +333,24 @@ AbstractFormDelegate {
                 visible: controlRoot.displayMode === FormComboBoxDelegate.Dialog || controlRoot.displayMode === FormComboBoxDelegate.Page
             }
 
-            QQC2.ComboBox {
-                id: combobox
-                focusPolicy: Qt.NoFocus // provided by parent
-                model: controlRoot.model
-                visible: controlRoot.displayMode == FormComboBoxDelegate.ComboBox
-                delegate: controlRoot.comboBoxDelegate
-                currentIndex: controlRoot.currentIndex
-                onActivated: index => controlRoot.activated(index)
-                onAccepted: controlRoot.accepted()
-                popup.contentItem.clip: true
-            }
-
             FormArrow {
                 Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
                 direction: Qt.DownArrow
                 visible: controlRoot.displayMode === FormComboBoxDelegate.Dialog || controlRoot.displayMode === FormComboBoxDelegate.Page
             }
+        }
+
+        QQC2.ComboBox {
+            id: combobox
+            focusPolicy: Qt.NoFocus // provided by parent
+            model: controlRoot.model
+            visible: controlRoot.displayMode == FormComboBoxDelegate.ComboBox
+            delegate: controlRoot.comboBoxDelegate
+            currentIndex: controlRoot.currentIndex
+            onActivated: index => controlRoot.activated(index)
+            onAccepted: controlRoot.accepted()
+            popup.contentItem.clip: true
+            Layout.fillWidth: true
         }
 
         QQC2.Label {
