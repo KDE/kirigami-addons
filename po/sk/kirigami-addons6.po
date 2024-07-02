@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-01 00:38+0000\n"
+"POT-Creation-Date: 2024-07-02 00:38+0000\n"
 "PO-Revision-Date: 2023-12-05 17:33+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -379,8 +379,8 @@ msgctxt "Date is not set"
 msgid "Not set"
 msgstr "Nenastavené"
 
-#: formcard/FormPasswordFieldDelegate.qml:214
-#: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:217
+#: formcard/FormPasswordFieldDelegate.qml:230
+#: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:233
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
