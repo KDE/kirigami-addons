@@ -1,8 +1,8 @@
-// SPDX-FileCopyright: 2014 David Edmundson <kde@davidedmundson.co.uk>
-// SPDX-FileCopyright: 2020 David Redondo <kde@david-redondo.de>
-// SPDX-FileCopyright: 2022 Aleix Pol <aleixpol@kde.org>
-// SPDX-FileCopyright: 2024 ivan tkachenko <me@ratijas.tk>
-// SPDX-FileCopyright: 2024 Carl Schwan <carl@carlschwan.eu>
+// SPDX-FileCopyrightText: 2014 David Edmundson <kde@davidedmundson.co.uk>
+// SPDX-FileCopyrightText: 2020 David Redondo <kde@david-redondo.de>
+// SPDX-FileCopyrightText: 2022 Aleix Pol <aleixpol@kde.org>
+// SPDX-FileCopyrightText: 2024 ivan tkachenko <me@ratijas.tk>
+// SPDX-FileCopyrightText: 2024 Carl Schwan <carl@carlschwan.eu>
 // SPDX-License-Identifier: LGPL-2.1-or-later
 
 import QtQuick
