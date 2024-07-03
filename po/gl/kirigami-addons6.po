@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-02 00:38+0000\n"
+"POT-Creation-Date: 2024-07-03 00:38+0000\n"
 "PO-Revision-Date: 2024-06-23 09:47+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -16,6 +16,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.05.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
 
 #: components/AbstractMaximizeComponent.qml:130
 #, kde-format
@@ -104,7 +114,7 @@ msgctxt "@title:dialog"
 msgid "Information"
 msgstr "Información"
 
-#: components/MessageDialog.qml:198
+#: components/MessageDialog.qml:208
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
@@ -178,6 +188,7 @@ msgid "Minutes"
 msgstr "Minutos"
 
 #: formcard/AboutKDE.qml:23
+#: statefulapplication/abstractkirigamiapplication.cpp:174
 #, kde-format
 msgid "About KDE"
 msgstr "Sobre KDE"
@@ -336,6 +347,7 @@ msgid "Donate"
 msgstr "Doar"
 
 #: formcard/AboutPage.qml:88
+#: statefulapplication/abstractkirigamiapplication.cpp:167
 #, kde-format
 msgid "About %1"
 msgstr "Sobre %1"
@@ -545,6 +557,165 @@ msgstr "Eliminar a palabra"
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "Corrección ortográfica"
+
+#: statefulapplication/abstractkirigamiapplication.cpp:145
+#, kde-format
+msgid "Open Command Bar"
+msgstr ""
+
+#: statefulapplication/private/keysequencehelper.cpp:117
+#, kde-format
+msgctxt "@title:dialog"
+msgid "Reserved Shortcut"
+msgstr ""
+
+#: statefulapplication/private/keysequencehelper.cpp:119
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The F12 key is reserved on Windows, so cannot be used for a global "
+"shortcut.\n"
+"Please choose another one."
+msgstr ""
+
+#: statefulapplication/private/keysequencehelper.cpp:143
+#, kde-format
+msgctxt ""
+"@title:dialog This happen when a global shortcut is already defined with the "
+"same shortcut"
+msgid "Global Shortcut Shadowing"
+msgstr ""
+
+#: statefulapplication/private/keysequencehelper.cpp:146
+#, kde-format
+msgctxt "@info"
+msgid "The '%1' key combination is shadowed by following global actions:\n"
+msgstr ""
+
+#: statefulapplication/private/keysequencehelper.cpp:148
+#: statefulapplication/private/keysequencehelper.cpp:154
+#, kde-format
+msgctxt "@info"
+msgid "Action '%1' in context '%2'\n"
+msgstr ""
+
+#: statefulapplication/private/keysequencehelper.cpp:152
+#, kde-format
+msgctxt "@info"
+msgid "The '%1' key combination shadows following global actions:\n"
+msgstr ""
+
+#: statefulapplication/private/keysequencehelper.cpp:193
+#, kde-format
+msgctxt "@title:dialog"
+msgid "Conflict with Standard Application Shortcut"
+msgstr ""
+
+#: statefulapplication/private/keysequencehelper.cpp:195
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The '%1' key combination is also used for the standard action \"%2\" that "
+"some applications use.\n"
+"Do you really want to use it as a global shortcut as well?"
+msgstr ""
+
+#: statefulapplication/private/KeySequenceItem.qml:129
+#, kde-format
+msgctxt "What the user inputs now will be taken as the new shortcut"
+msgid "Input"
+msgstr ""
+
+#: statefulapplication/private/KeySequenceItem.qml:130
+#, fuzzy, kde-format
+#| msgctxt "No selected language"
+#| msgid "None"
+msgctxt "No shortcut defined"
+msgid "None"
+msgstr "Ningún"
+
+#: statefulapplication/private/KeySequenceItem.qml:141
+#, kde-format
+msgid ""
+"Click on the button, then enter the shortcut like you would in the program.\n"
+"Example for Ctrl+A: hold the Ctrl key and press A."
+msgstr ""
+
+#: statefulapplication/private/KeySequenceItem.qml:182
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Clear Key Sequence"
+msgstr ""
+
+#: statefulapplication/private/KeySequenceItem.qml:198
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cancel Key Sequence Recording"
+msgstr ""
+
+#: statefulapplication/private/KQuickCommandBarPage.qml:55
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "No results found"
+msgstr ""
+
+#: statefulapplication/private/ShortcutsEditor.qml:18
+#: statefulapplication/StatefulWindow.qml:104
+#, kde-format
+msgctxt "@title:window"
+msgid "Shortcuts"
+msgstr ""
+
+#: statefulapplication/private/ShortcutsEditor.qml:22
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Filter…"
+msgstr ""
+
+#: statefulapplication/private/ShortcutsEditor.qml:52
+#, kde-format
+msgctxt "@title:window"
+msgid "Shortcut: %1"
+msgstr ""
+
+#: statefulapplication/private/ShortcutsEditor.qml:72
+#, kde-format
+msgctxt "@label"
+msgid "Shortcut:"
+msgstr ""
+
+#: statefulapplication/private/ShortcutsEditor.qml:127
+#: statefulapplication/private/ShortcutsEditor.qml:155
+#, kde-format
+msgctxt "@label"
+msgid "Alternative:"
+msgstr ""
+
+#: statefulapplication/private/ShortcutsEditor.qml:193
+#, kde-format
+msgctxt "Placeholder message"
+msgid "No shortcuts found"
+msgstr ""
+
+#: statefulapplication/shortcutsmodel.cpp:41
+#, kde-format
+msgctxt "List separator"
+msgid ", "
+msgstr ""
+
+#: statefulapplication/StatefulWindow.qml:114
+#, fuzzy, kde-format
+#| msgid "About %1"
+msgctxt "@title:window"
+msgid "About %1"
+msgstr "Sobre %1"
+
+#: statefulapplication/StatefulWindow.qml:127
+#, fuzzy, kde-format
+#| msgid "About KDE"
+msgctxt "@title:window"
+msgid "About KDE"
+msgstr "Sobre KDE"
 
 #~ msgctxt "time in hour (PM)"
 #~ msgid "%1 PM"
