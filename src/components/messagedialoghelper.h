@@ -6,6 +6,7 @@
 #include <QObject>
 #include <QtQml/qqmlregistration.h>
 #include <KSharedConfig>
+#include <QJsonObject>
 
 /// @internal Only used by MessageDialog
 class MessageDialogHelper : public QObject
