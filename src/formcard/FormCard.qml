@@ -121,8 +121,8 @@ Item {
         }
 
         shadow {
-            size: isDarkColor ? Kirigami.Units.mediumSpacing : Kirigami.Units.largeSpacing
-            color: isDarkColor ? Qt.darker(Kirigami.Theme.backgroundColor, 1.1) : Qt.alpha(Kirigami.Theme.textColor, 0.10)
+            size: isDarkColor ? Kirigami.Units.smallSpacing : Kirigami.Units.largeSpacing
+            color: Qt.alpha(Kirigami.Theme.textColor, 0.10)
         }
 
         ColumnLayout {
