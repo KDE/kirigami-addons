@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-03 00:38+0000\n"
-"PO-Revision-Date: 2024-06-22 07:41+0300\n"
+"PO-Revision-Date: 2024-07-03 18:36+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,17 +16,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "צוות התרגום של KDE ישראל"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "kde-l10n-he@kde.org"
 
 #: components/AbstractMaximizeComponent.qml:130
 #, kde-format
@@ -549,13 +549,13 @@ msgstr "בדיקת איות"
 #: statefulapplication/abstractkirigamiapplication.cpp:145
 #, kde-format
 msgid "Open Command Bar"
-msgstr ""
+msgstr "פתיחת סרגל פקודות"
 
 #: statefulapplication/private/keysequencehelper.cpp:117
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Reserved Shortcut"
-msgstr ""
+msgstr "קיצורי מקשים שמורים"
 
 #: statefulapplication/private/keysequencehelper.cpp:119
 #, kde-format
@@ -565,6 +565,8 @@ msgid ""
 "shortcut.\n"
 "Please choose another one."
 msgstr ""
+"מקש ה־F12 הוא מקש שמור ב־Windows, לכן אינו יכול לשמש כמקש קיצור כללי. נא "
+"לבחור מקש אחר."
 
 #: statefulapplication/private/keysequencehelper.cpp:143
 #, kde-format
@@ -572,32 +574,32 @@ msgctxt ""
 "@title:dialog This happen when a global shortcut is already defined with the "
 "same shortcut"
 msgid "Global Shortcut Shadowing"
-msgstr ""
+msgstr "האפלת קיצורי מקשים כלליים"
 
 #: statefulapplication/private/keysequencehelper.cpp:146
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination is shadowed by following global actions:\n"
-msgstr ""
+msgstr "צירוף המקשים ‚%1’ מואפל על ידי הפעולות הכלליות הבאות:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:148
 #: statefulapplication/private/keysequencehelper.cpp:154
 #, kde-format
 msgctxt "@info"
 msgid "Action '%1' in context '%2'\n"
-msgstr ""
+msgstr "הפעולה ‚%1’ בהקשר ‚%2’\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:152
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination shadows following global actions:\n"
-msgstr ""
+msgstr "צירוף המקשים ‚%1’ מאפיל על הפעולות הכלליות הבאות:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:193
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Conflict with Standard Application Shortcut"
-msgstr ""
+msgstr "סתירה עם קיצור יישום תקני"
 
 #: statefulapplication/private/keysequencehelper.cpp:195
 #, kde-format
@@ -607,17 +609,17 @@ msgid ""
 "some applications use.\n"
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
+"צירוף המקשים ‚%1’ משמש גם לפעולה הרגילה „%2” בה משתמשים חלק מהיישומים.\n"
+"להשתמש בו גם כמקש קיצור כללי?"
 
 #: statefulapplication/private/KeySequenceItem.qml:129
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
-msgstr ""
+msgstr "קלט"
 
 #: statefulapplication/private/KeySequenceItem.qml:130
-#, fuzzy, kde-format
-#| msgctxt "No selected language"
-#| msgid "None"
+#, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "אין"
@@ -628,79 +630,79 @@ msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
+"יש ללחוץ על הכפתור ואז להקליד את מקשי הקיצור כפי שנהוג ביישום.\n"
+"לדוגמה: Ctrl+A: להחזיק את Ctrl ואז ללחוץ על A."
 
 #: statefulapplication/private/KeySequenceItem.qml:182
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
-msgstr ""
+msgstr "פינוי רצף מקשים"
 
 #: statefulapplication/private/KeySequenceItem.qml:198
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel Key Sequence Recording"
-msgstr ""
+msgstr "ביטול הקלטת רצף מקשים"
 
 #: statefulapplication/private/KQuickCommandBarPage.qml:55
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No results found"
-msgstr ""
+msgstr "לא נמצאו תוצאות"
 
 #: statefulapplication/private/ShortcutsEditor.qml:18
 #: statefulapplication/StatefulWindow.qml:104
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcuts"
-msgstr ""
+msgstr "מקשי קיצור"
 
 #: statefulapplication/private/ShortcutsEditor.qml:22
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Filter…"
-msgstr ""
+msgstr "סינון…"
 
 #: statefulapplication/private/ShortcutsEditor.qml:52
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut: %1"
-msgstr ""
+msgstr "מקשי קיצור: %1"
 
 #: statefulapplication/private/ShortcutsEditor.qml:72
 #, kde-format
 msgctxt "@label"
 msgid "Shortcut:"
-msgstr ""
+msgstr "מקשי קיצור:"
 
 #: statefulapplication/private/ShortcutsEditor.qml:127
 #: statefulapplication/private/ShortcutsEditor.qml:155
 #, kde-format
 msgctxt "@label"
 msgid "Alternative:"
-msgstr ""
+msgstr "חלופה:"
 
 #: statefulapplication/private/ShortcutsEditor.qml:193
 #, kde-format
 msgctxt "Placeholder message"
 msgid "No shortcuts found"
-msgstr ""
+msgstr "לא נמצאו מקשי קיצור"
 
 #: statefulapplication/shortcutsmodel.cpp:41
 #, kde-format
 msgctxt "List separator"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: statefulapplication/StatefulWindow.qml:114
-#, fuzzy, kde-format
-#| msgid "About %1"
+#, kde-format
 msgctxt "@title:window"
 msgid "About %1"
 msgstr "על %1"
 
 #: statefulapplication/StatefulWindow.qml:127
-#, fuzzy, kde-format
-#| msgid "About KDE"
+#, kde-format
 msgctxt "@title:window"
 msgid "About KDE"
 msgstr "על KDE"
