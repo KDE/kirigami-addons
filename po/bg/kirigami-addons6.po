@@ -1,135 +1,133 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
 #
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-03 00:38+0000\n"
-"PO-Revision-Date: 2022-05-21 08:42+0200\n"
+"PO-Revision-Date: 2024-07-05 16:35+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.04.0\n"
+"X-Generator: Lokalize 24.05.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Минчо Кондарев"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "mkondarev@yahoo.de"
 
 #: components/AbstractMaximizeComponent.qml:130
 #, kde-format
 msgid "Close"
-msgstr ""
+msgstr "Затваряне"
 
 #: components/AlbumMaximizeComponent.qml:137
 #, kde-format
 msgid "Zoom in"
-msgstr ""
+msgstr "Увеличаване"
 
 #: components/AlbumMaximizeComponent.qml:142
 #, kde-format
 msgid "Zoom out"
-msgstr ""
+msgstr "Намаляване"
 
 #: components/AlbumMaximizeComponent.qml:148
 #, kde-format
 msgid "Rotate left"
-msgstr ""
+msgstr "Завъртане наляво"
 
 #: components/AlbumMaximizeComponent.qml:154
 #, kde-format
 msgid "Rotate right"
-msgstr ""
+msgstr "Завъртане надясно"
 
 #: components/AlbumMaximizeComponent.qml:159
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
-msgstr ""
+msgstr "Показване на надпис"
 
 #: components/AlbumMaximizeComponent.qml:159
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
-msgstr ""
+msgstr "Скриване на надпис"
 
 #: components/AlbumMaximizeComponent.qml:165
 #, kde-format
 msgid "Save as"
-msgstr ""
+msgstr "Запазване като"
 
 #: components/AlbumMaximizeComponent.qml:243
-#, fuzzy, kde-format
-#| msgid "Previous"
+#, kde-format
 msgid "Previous image"
-msgstr "Предишен"
+msgstr "Предишно изображение"
 
 #: components/AlbumMaximizeComponent.qml:263
 #, kde-format
 msgid "Next image"
-msgstr ""
+msgstr "Следващо изображение"
 
 #: components/Banner.qml:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "Затваряне"
 
 #: components/DownloadAction.qml:37
 #, kde-format
 msgid "Download"
-msgstr ""
+msgstr "Изтегляне"
 
 #: components/MessageDialog.qml:72
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
-msgstr ""
+msgstr "Успех"
 
 #: components/MessageDialog.qml:74 components/MessageDialog.qml:80
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
-msgstr ""
+msgstr "Предупреждение"
 
 #: components/MessageDialog.qml:76
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
-msgstr ""
+msgstr "Грешка"
 
 #: components/MessageDialog.qml:78
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
-msgstr ""
+msgstr "Информация"
 
 #: components/MessageDialog.qml:208
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
-msgstr ""
+msgstr "Изключване на въпроса"
 
 #: components/VideoMaximizeDelegate.qml:265
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
-msgstr ""
+msgstr "Сила на звука"
 
 #: dateandtime/DatePopup.qml:87 dateandtime/TimePopup.qml:52
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Отказ"
@@ -138,26 +136,25 @@ msgstr "Отказ"
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
-msgstr ""
+msgstr "Избиране"
 
 #: dateandtime/private/DatePicker.qml:271
 #, kde-format
 msgid "Day"
-msgstr ""
+msgstr "Ден"
 
 #: dateandtime/private/DatePicker.qml:274
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "Месец"
 
 #: dateandtime/private/DatePicker.qml:277
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "Година"
 
 #: dateandtime/private/DatePicker.qml:362
-#, fuzzy, kde-format
-#| msgid "Previous"
+#, kde-format
 msgctxt "@action:button"
 msgid "Go Previous"
 msgstr "Предишен"
@@ -166,11 +163,10 @@ msgstr "Предишен"
 #, kde-format
 msgctxt "@action:button"
 msgid "Jump to today"
-msgstr ""
+msgstr "Преминаване към днешна дата"
 
 #: dateandtime/private/DatePicker.qml:382
-#, fuzzy, kde-format
-#| msgid "Next"
+#, kde-format
 msgctxt "@action:button"
 msgid "Go Next"
 msgstr "Следващ"
@@ -178,34 +174,34 @@ msgstr "Следващ"
 #: dateandtime/TimePicker.qml:97
 #, kde-format
 msgid "Hours"
-msgstr ""
+msgstr "Часове"
 
 #: dateandtime/TimePicker.qml:119
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: dateandtime/TimePicker.qml:134
 #, kde-format
 msgid "Minutes"
-msgstr ""
+msgstr "Минути"
 
 #: formcard/AboutKDE.qml:23
 #: statefulapplication/abstractkirigamiapplication.cpp:174
 #, kde-format
 msgid "About KDE"
-msgstr ""
+msgstr "Относно KDE"
 
 #: formcard/AboutKDE.qml:50
 #, kde-format
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: formcard/AboutKDE.qml:59
 #, kde-format
 msgid "Be Free!"
-msgstr ""
+msgstr "Бъдете свободни!"
 
 #: formcard/AboutKDE.qml:68
 #, kde-format
@@ -220,16 +216,25 @@ msgid ""
 "the world's finest Free Software. Everyone is welcome to join and contribute "
 "to KDE, including you."
 msgstr ""
+"KDE е световна общност от софтуерни инженери, художници, писатели, преводачи "
+"и творци, които са отдадени на разработката на безплатен софтуер. KDE "
+"създава десктоп средата Plasma, както и стотици приложения и много софтуерни "
+"библиотеки, които ги поддържат.\n"
+"\n"
+"KDE е кооперативно предприятие: нито един субект не контролира неговата "
+"посока или продукти. Вместо това работим заедно, за да постигнем общата цел "
+"за изграждане на най-добрия безплатен софтуер в света. Всеки е добре дошъл "
+"да се присъедини и да допринесе за KDE, включително и вие."
 
 #: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:209
 #, kde-format
 msgid "Homepage"
-msgstr ""
+msgstr "Домашна страница"
 
 #: formcard/AboutKDE.qml:82
 #, kde-format
 msgid "Report bugs"
-msgstr ""
+msgstr "Докладване на грешки"
 
 #: formcard/AboutKDE.qml:87
 #, kde-format
@@ -245,16 +250,27 @@ msgid ""
 "tracking system to register your wish. Make sure you use the severity called "
 "\"Wishlist\"."
 msgstr ""
+"Софтуерът винаги може да бъде подобрен и екипът на KDE е готов да го "
+"направи. Вие обаче - потребителят - трябва да ни кажете, когато нещо не "
+"работи според очакванията или може да се направи по-добре.\n"
+"\n"
+"KDE има система за проследяване на грешки. Използвайте бутона по-долу, за да "
+"подадете сигнал за грешка, или използвайте страницата Информация за "
+"програмата, за да съобщите за грешка, специфична за това приложение.\n"
+"\n"
+"Ако имате предложение за подобрение, можете да използвате системата за "
+"проследяване на грешки, за да регистрирате желанието си. Уверете се, че "
+"използвате степента на тежест, наречена \"Списък с желания\"."
 
 #: formcard/AboutKDE.qml:96
 #, kde-format
 msgid "Report a bug"
-msgstr ""
+msgstr "Сигнал за грешка"
 
 #: formcard/AboutKDE.qml:102
 #, kde-format
 msgid "Join us"
-msgstr ""
+msgstr "Присъедини се към нас"
 
 #: formcard/AboutKDE.qml:107
 #, kde-format
@@ -263,21 +279,25 @@ msgid ""
 "You can join the language teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
+"Не е необходимо да сте разработчик на софтуер, за да сте член на екипа на "
+"KDE. Можете да се присъедините към езиковите екипи, които превеждат "
+"програмни интерфейси. Можете да предоставите графики, теми, звуци и "
+"подобрена документация. Ти решаваш!"
 
 #: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:235
 #, kde-format
 msgid "Get Involved"
-msgstr ""
+msgstr "Включете се"
 
 #: formcard/AboutKDE.qml:123
 #, kde-format
 msgid "Developer Documentation"
-msgstr ""
+msgstr "Документация за разработчици"
 
 #: formcard/AboutKDE.qml:129
 #, kde-format
 msgid "Support us"
-msgstr ""
+msgstr "Подкрепете ни"
 
 #: formcard/AboutKDE.qml:134
 #, kde-format
@@ -299,85 +319,101 @@ msgid ""
 "\n"
 "Thank you very much in advance for your support."
 msgstr ""
+"Софтуерът KDE е и винаги ще бъде достъпен безплатно, но създаването му не е "
+"безплатно.\n"
+"\n"
+"За да подпомогне разработката, общността на KDE създаде KDE eV, организация "
+"с нестопанска цел, законно основана в Германия. KDE eV представлява "
+"общността на KDE по правни и финансови въпроси.\n"
+"\n"
+"KDE се възползва от много видове приноси, включително финансови. Ние "
+"използваме средствата, за да възстановим разходите на членове и други лица, "
+"които те правят, като допринасят за развитието на софтуера. Допълнителни "
+"средства се използват за правна подкрепа и организиране на конференции и "
+"срещи.\n"
+"\n"
+"Бихме искали да ви насърчим да подкрепите нашите усилия с финансово "
+"дарение.\n"
+"\n"
+"Много ви благодарим предварително за вашата подкрепа."
 
 #: formcard/AboutKDE.qml:146
 #, kde-format
 msgid "KDE e.V"
-msgstr ""
+msgstr "KDE e.V"
 
 #: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:222
 #, kde-format
 msgid "Donate"
-msgstr ""
+msgstr "Дарение"
 
 #: formcard/AboutPage.qml:88
 #: statefulapplication/abstractkirigamiapplication.cpp:167
 #, kde-format
 msgid "About %1"
-msgstr ""
+msgstr "Относно %1"
 
 #: formcard/AboutPage.qml:134
 #, kde-format
 msgid "Copyright"
-msgstr ""
+msgstr "Авторско право"
 
 #: formcard/AboutPage.qml:142
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Лиценз"
+msgstr[1] "Лицензи"
 
 #: formcard/AboutPage.qml:260
 #, kde-format
 msgid "Report a Bug"
-msgstr ""
+msgstr "Подаване на сигнал за грешка"
 
 #: formcard/AboutPage.qml:267
 #, kde-format
 msgid "Libraries in use"
-msgstr ""
+msgstr "Използвани библиотеки"
 
 #: formcard/AboutPage.qml:290
 #, kde-format
 msgid "Authors"
-msgstr ""
+msgstr "Автори"
 
 #: formcard/AboutPage.qml:305
 #, kde-format
 msgid "Credits"
-msgstr ""
+msgstr "Заслуги"
 
 #: formcard/AboutPage.qml:320
 #, kde-format
 msgid "Translators"
-msgstr ""
+msgstr "Преводачи"
 
 #: formcard/AboutPage.qml:389
 #, kde-format
 msgid "Visit %1's KDE Store page"
-msgstr ""
+msgstr "Посетете %1 на страницата на KDE магазин"
 
 #: formcard/AboutPage.qml:398
 #, kde-format
 msgid "Send an email to %1"
-msgstr ""
+msgstr "Изпращане на имейл до %1"
 
 #: formcard/android/FormColorDelegate.qml:42 formcard/FormColorDelegate.qml:42
 #, kde-format
 msgctxt "@action:button"
 msgid "Color"
-msgstr ""
+msgstr "Цвят"
 
 #: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:43
 #, kde-format
 msgctxt "Accessible description"
 msgid "Current color \"%1\""
-msgstr ""
+msgstr "Текущият цвят \"%1\""
 
 #: formcard/FormDateTimeDelegate.qml:193
-#, fuzzy, kde-format
-#| msgid "Today"
+#, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
 msgid "Today"
 msgstr "Днес"
@@ -386,86 +422,86 @@ msgstr "Днес"
 #, kde-format
 msgctxt "Date is not set"
 msgid "Not set"
-msgstr ""
+msgstr "Не е указано"
 
 #: formcard/FormPasswordFieldDelegate.qml:230
 #: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:233
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
-msgstr ""
+msgstr "%1/%2"
 
 #: settings/CategorizedSettings.qml:45 settings/ConfigurationView.qml:81
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings"
-msgstr ""
+msgstr "Настройки"
 
 #: settings/CategorizedSettings.qml:45
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings — %1"
-msgstr ""
+msgstr "Настройки — %1"
 
 #: settings/CategorizedSettings.qml:99
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Go back"
-msgstr ""
+msgstr "Назад"
 
 #: settings/private/ConfigMobilePage.qml:24
 #, kde-format
 msgctxt "@title"
 msgid "Settings"
-msgstr ""
+msgstr "Настройки"
 
 #: settings/private/ConfigMobilePage.qml:83
 #, kde-format
 msgctxt "@title:group"
 msgid "Settings"
-msgstr ""
+msgstr "Настройки"
 
 #: settings/private/SonnetConfigPage.qml:41
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Enable automatic spell checking"
-msgstr ""
+msgstr "Активиране на автоматичната проверка на правописа"
 
 #: settings/private/SonnetConfigPage.qml:55
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore uppercase words"
-msgstr ""
+msgstr "Игнориране на думите с главни букви"
 
 #: settings/private/SonnetConfigPage.qml:69
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore hyphenated words"
-msgstr ""
+msgstr "Игнориране на думите с тирета"
 
 #: settings/private/SonnetConfigPage.qml:83
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Detect language automatically"
-msgstr ""
+msgstr "Автоматично разпознаване на езика"
 
 #: settings/private/SonnetConfigPage.qml:96
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Selected default language:"
-msgstr ""
+msgstr "Избран език по подразбиране:"
 
 #: settings/private/SonnetConfigPage.qml:97
 #, kde-format
 msgctxt "No selected language"
 msgid "None"
-msgstr ""
+msgstr "Няма"
 
 #: settings/private/SonnetConfigPage.qml:117
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Additional Spell Checking Languages"
-msgstr ""
+msgstr "Допълнителни езици за проверка на правописа"
 
 #: settings/private/SonnetConfigPage.qml:118
 #, kde-format
@@ -473,64 +509,66 @@ msgid ""
 "%1 will provide spell checking and suggestions for the languages listed here "
 "when autodetection is enabled."
 msgstr ""
+"%1 ще осигури проверка на правописа и предложения за изброените тук езици, "
+"когато автоматичното откриване е активирано."
 
 #: settings/private/SonnetConfigPage.qml:131
 #, kde-format
 msgctxt "@action:button"
 msgid "Open Personal Dictionary"
-msgstr ""
+msgstr "Отворете личен речник"
 
 #: settings/private/SonnetConfigPage.qml:143
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking languages"
-msgstr ""
+msgstr "Езици за проверка на правописа"
 
 #: settings/private/SonnetConfigPage.qml:155
 #, kde-format
 msgid "Default Language"
-msgstr ""
+msgstr "Език по подразбиране"
 
 #: settings/private/SonnetConfigPage.qml:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking dictionary"
-msgstr ""
+msgstr "Речник за проверка на правописа"
 
 #: settings/private/SonnetConfigPage.qml:174
 #, kde-format
 msgctxt "Placeholder message"
 msgid "Add a new word to your personal dictionary…"
-msgstr ""
+msgstr "Добавяне на нова дума към личния речник..."
 
 #: settings/private/SonnetConfigPage.qml:177
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Word"
-msgstr ""
+msgstr "Добавяне на дума"
 
 #: settings/private/SonnetConfigPage.qml:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete word"
-msgstr ""
+msgstr "Изтриване на дума"
 
 #: settings/SpellcheckingConfigurationModule.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Spell Checking"
-msgstr ""
+msgstr "Проверка на правописа"
 
 #: statefulapplication/abstractkirigamiapplication.cpp:145
 #, kde-format
 msgid "Open Command Bar"
-msgstr ""
+msgstr "Отваряне на командната лента"
 
 #: statefulapplication/private/keysequencehelper.cpp:117
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Reserved Shortcut"
-msgstr ""
+msgstr "Запазен бърз клавиш"
 
 #: statefulapplication/private/keysequencehelper.cpp:119
 #, kde-format
@@ -540,6 +578,9 @@ msgid ""
 "shortcut.\n"
 "Please choose another one."
 msgstr ""
+"Клавишът F12 е запазен за Прозорци, така че не може да се използва за "
+"глобална клавишна комбинация.\n"
+"Моля, изберете друг."
 
 #: statefulapplication/private/keysequencehelper.cpp:143
 #, kde-format
@@ -547,32 +588,32 @@ msgctxt ""
 "@title:dialog This happen when a global shortcut is already defined with the "
 "same shortcut"
 msgid "Global Shortcut Shadowing"
-msgstr ""
+msgstr "Засенчване на глобални клавишни комбинации"
 
 #: statefulapplication/private/keysequencehelper.cpp:146
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination is shadowed by following global actions:\n"
-msgstr ""
+msgstr "'%1' клавишна комбинация е засенчена от следните глобални действия:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:148
 #: statefulapplication/private/keysequencehelper.cpp:154
 #, kde-format
 msgctxt "@info"
 msgid "Action '%1' in context '%2'\n"
-msgstr ""
+msgstr "Действие \"%1\" в контекст \"%2\"\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:152
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination shadows following global actions:\n"
-msgstr ""
+msgstr "'%1' клавишна комбинация засенчва следните глобални действия:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:193
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Conflict with Standard Application Shortcut"
-msgstr ""
+msgstr "Конфликт със стандартна клавишна комбинация на приложението"
 
 #: statefulapplication/private/keysequencehelper.cpp:195
 #, kde-format
@@ -582,18 +623,20 @@ msgid ""
 "some applications use.\n"
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
+"Клавишната комбинация \"%1\" вече е зададена за действието \"%2\".\n"
+"Искате ли да я използвате и като глобален бърз клавиш."
 
 #: statefulapplication/private/KeySequenceItem.qml:129
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
-msgstr ""
+msgstr "Въведени данни"
 
 #: statefulapplication/private/KeySequenceItem.qml:130
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
-msgstr ""
+msgstr "Без"
 
 #: statefulapplication/private/KeySequenceItem.qml:141
 #, kde-format
@@ -601,77 +644,80 @@ msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
+"Кликнете върху бутона, след което въведете клавишна комбинация, както бихте "
+"направили в програмата.\n"
+"Пример за Ctrl+A: задръжте клавиша Ctrl и натиснете A."
 
 #: statefulapplication/private/KeySequenceItem.qml:182
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
-msgstr ""
+msgstr "Изчистване на последователност от клавиши"
 
 #: statefulapplication/private/KeySequenceItem.qml:198
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel Key Sequence Recording"
-msgstr ""
+msgstr "Отмяна на записване на последователност от клавиши"
 
 #: statefulapplication/private/KQuickCommandBarPage.qml:55
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No results found"
-msgstr ""
+msgstr "Не са открити резултати"
 
 #: statefulapplication/private/ShortcutsEditor.qml:18
 #: statefulapplication/StatefulWindow.qml:104
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcuts"
-msgstr ""
+msgstr "Клавишни комбинации"
 
 #: statefulapplication/private/ShortcutsEditor.qml:22
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Filter…"
-msgstr ""
+msgstr "Филтър…"
 
 #: statefulapplication/private/ShortcutsEditor.qml:52
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut: %1"
-msgstr ""
+msgstr "Клавишна комбинация: %1"
 
 #: statefulapplication/private/ShortcutsEditor.qml:72
 #, kde-format
 msgctxt "@label"
 msgid "Shortcut:"
-msgstr ""
+msgstr "Клавишна комбинация:"
 
 #: statefulapplication/private/ShortcutsEditor.qml:127
 #: statefulapplication/private/ShortcutsEditor.qml:155
 #, kde-format
 msgctxt "@label"
 msgid "Alternative:"
-msgstr ""
+msgstr "Алтернатива:"
 
 #: statefulapplication/private/ShortcutsEditor.qml:193
 #, kde-format
 msgctxt "Placeholder message"
 msgid "No shortcuts found"
-msgstr ""
+msgstr "Не са намерени клавишни комбинации"
 
 #: statefulapplication/shortcutsmodel.cpp:41
 #, kde-format
 msgctxt "List separator"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: statefulapplication/StatefulWindow.qml:114
 #, kde-format
 msgctxt "@title:window"
 msgid "About %1"
-msgstr ""
+msgstr "Относно %1"
 
 #: statefulapplication/StatefulWindow.qml:127
 #, kde-format
 msgctxt "@title:window"
 msgid "About KDE"
-msgstr ""
+msgstr "Относно KDE"
