@@ -53,7 +53,18 @@ T.Dialog {
 
     default property alias mainContent: mainLayout.data
 
-    property string iconName: ''
+    property string iconName: switch (root.dialogType) {
+    case MessageDialog.Success:
+        return "data-success";
+    case MessageDialog.Warning:
+        return "data-warning";
+    case MessageDialog.Error:
+        return "data-error";
+    case MessageDialog.Information:
+        return "data-information";
+    default:
+        return "data-warning";
+    }
 
     x: Math.round((parent.width - width) / 2)
     y: Math.round((parent.height - height) / 2)
@@ -154,27 +165,14 @@ T.Dialog {
     contentItem: GridLayout {
         id: gridLayout
 
-        columns: root.width > Kirigami.Units.gridUnit * 18 ? 2 : 1
+        columns: icon.visible && root.width > Kirigami.Units.gridUnit * 18 ? 2 : 1
         rowSpacing: Kirigami.Units.largeSpacing
 
         Kirigami.Icon {
-            source: {
-                if (root.iconName.length > 0) {
-                    return root.iconName
-                }
-                switch (root.dialogType) {
-                case MessageDialog.Success:
-                    return "data-success";
-                case MessageDialog.Warning:
-                    return "data-warning";
-                case MessageDialog.Error:
-                    return "data-error";
-                case MessageDialog.Information:
-                    return "data-information";
-                default:
-                    return "data-warning";
-                }
-            }
+            id: icon
+
+            visible: root.iconName.length > 0
+            source: root.iconName
             Layout.preferredWidth: Kirigami.Units.iconSizes.huge
             Layout.preferredHeight: Kirigami.Units.iconSizes.huge
             Layout.alignment: gridLayout.columns === 2 ? Qt.AlignTop : Qt.AlignHCenter
