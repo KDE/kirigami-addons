@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-03 00:38+0000\n"
+"POT-Creation-Date: 2024-07-09 00:38+0000\n"
 "PO-Revision-Date: 2024-07-06 21:30+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -90,31 +90,31 @@ msgstr "மூடு"
 msgid "Download"
 msgstr "பதிவிறக்கு"
 
-#: components/MessageDialog.qml:72
+#: components/MessageDialog.qml:83
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
 msgstr "வெற்றி"
 
-#: components/MessageDialog.qml:74 components/MessageDialog.qml:80
+#: components/MessageDialog.qml:85 components/MessageDialog.qml:91
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
 msgstr "எச்சரிக்கை"
 
-#: components/MessageDialog.qml:76
+#: components/MessageDialog.qml:87
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
 msgstr "சிக்கல்"
 
-#: components/MessageDialog.qml:78
+#: components/MessageDialog.qml:89
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
 msgstr "தகவல்"
 
-#: components/MessageDialog.qml:208
+#: components/MessageDialog.qml:206
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"

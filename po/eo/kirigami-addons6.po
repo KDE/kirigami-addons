@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-03 00:38+0000\n"
-"PO-Revision-Date: 2024-07-03 21:54+0200\n"
+"POT-Creation-Date: 2024-07-09 00:38+0000\n"
+"PO-Revision-Date: 2024-07-08 22:51+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -91,31 +91,31 @@ msgstr "Fermi"
 msgid "Download"
 msgstr "Elŝuti"
 
-#: components/MessageDialog.qml:72
+#: components/MessageDialog.qml:83
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
 msgstr "Sukceso"
 
-#: components/MessageDialog.qml:74 components/MessageDialog.qml:80
+#: components/MessageDialog.qml:85 components/MessageDialog.qml:91
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
 msgstr "Averto"
 
-#: components/MessageDialog.qml:76
+#: components/MessageDialog.qml:87
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
 msgstr "Eraro"
 
-#: components/MessageDialog.qml:78
+#: components/MessageDialog.qml:89
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
 msgstr "Informo"
 
-#: components/MessageDialog.qml:208
+#: components/MessageDialog.qml:206
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
@@ -592,7 +592,7 @@ msgstr "Ombrado de Ĉiea Ŝparvojo"
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination is shadowed by following global actions:\n"
-msgstr ""
+msgstr "La klavkombino '%1' estas ombrata per sekvantaj ĉieaj agoj:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:148
 #: statefulapplication/private/keysequencehelper.cpp:154
@@ -605,13 +605,13 @@ msgstr "Ago '%1' en kunteksto '%2'\n"
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination shadows following global actions:\n"
-msgstr ""
+msgstr "La klavkombino '%1' ombras sekvantajn ĉieajn agojn:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:193
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Conflict with Standard Application Shortcut"
-msgstr ""
+msgstr "Konflikto kun Norma Aplika Ŝparvojo"
 
 #: statefulapplication/private/keysequencehelper.cpp:195
 #, kde-format
@@ -640,6 +640,8 @@ msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
+"Alklaku la butonon, tiam enigu la ŝparvojon kiel vi farus en la programo.\n"
+"Ekzemplo por Ctrl+A: tenu la Ctrl-klavon kaj premu A."
 
 #: statefulapplication/private/KeySequenceItem.qml:182
 #, kde-format
