@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-09 00:38+0000\n"
-"PO-Revision-Date: 2024-04-27 21:38+0200\n"
+"PO-Revision-Date: 2024-07-16 12:32+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,17 +18,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Iñigo Salvador Azurmendi"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "xalba@ni.eus"
 
 #: components/AbstractMaximizeComponent.qml:130
 #, kde-format
@@ -368,8 +368,7 @@ msgstr[0] "Lizentzia"
 msgstr[1] "Lizentziak"
 
 #: formcard/AboutPage.qml:260
-#, fuzzy, kde-format
-#| msgid "Report a bug"
+#, kde-format
 msgid "Report a Bug"
 msgstr "Eman akats baten berri"
 
@@ -450,20 +449,16 @@ msgstr "Ezarpenak — %1"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Go back"
-msgstr ""
+msgstr "Itzuli"
 
 #: settings/private/ConfigMobilePage.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title"
 msgid "Settings"
 msgstr "Ezarpenak"
 
 #: settings/private/ConfigMobilePage.qml:83
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title:group"
 msgid "Settings"
 msgstr "Ezarpenak"
@@ -472,43 +467,43 @@ msgstr "Ezarpenak"
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Enable automatic spell checking"
-msgstr ""
+msgstr "Gaitu ortografia-azterketa automatikoa"
 
 #: settings/private/SonnetConfigPage.qml:55
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore uppercase words"
-msgstr ""
+msgstr "Ezikusi hizki larriz dauden hitzak"
 
 #: settings/private/SonnetConfigPage.qml:69
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore hyphenated words"
-msgstr ""
+msgstr "Ez ikusi marratxo bidez zatitutako hitzak"
 
 #: settings/private/SonnetConfigPage.qml:83
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Detect language automatically"
-msgstr ""
+msgstr "Hizkuntza automatikoki antzeman"
 
 #: settings/private/SonnetConfigPage.qml:96
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Selected default language:"
-msgstr ""
+msgstr "Hautatutako hizkuntza lehenetsia:"
 
 #: settings/private/SonnetConfigPage.qml:97
 #, kde-format
 msgctxt "No selected language"
 msgid "None"
-msgstr ""
+msgstr "Bat ere ez"
 
 #: settings/private/SonnetConfigPage.qml:117
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Additional Spell Checking Languages"
-msgstr ""
+msgstr "Ortografia zuzentzeko hizkuntza gehigarriak"
 
 #: settings/private/SonnetConfigPage.qml:118
 #, kde-format
@@ -516,64 +511,66 @@ msgid ""
 "%1 will provide spell checking and suggestions for the languages listed here "
 "when autodetection is enabled."
 msgstr ""
+"%1(e)k, hemen zerrendatutako hizkuntzetarako, ortografia-azterketa eta "
+"iradokizunak emango ditu, antzemate automatikoa gaituta dagoenean."
 
 #: settings/private/SonnetConfigPage.qml:131
 #, kde-format
 msgctxt "@action:button"
 msgid "Open Personal Dictionary"
-msgstr ""
+msgstr "Ireki hiztegi pertsonala"
 
 #: settings/private/SonnetConfigPage.qml:143
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking languages"
-msgstr ""
+msgstr "Ortografia zuzentzeko hizkuntzak"
 
 #: settings/private/SonnetConfigPage.qml:155
 #, kde-format
 msgid "Default Language"
-msgstr ""
+msgstr "Hizkuntza lehenetsia"
 
 #: settings/private/SonnetConfigPage.qml:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking dictionary"
-msgstr ""
+msgstr "Ortografia-aztertzeko hiztegia"
 
 #: settings/private/SonnetConfigPage.qml:174
 #, kde-format
 msgctxt "Placeholder message"
 msgid "Add a new word to your personal dictionary…"
-msgstr ""
+msgstr "Gehitu hitz berri bat zure hiztegi pertsonalera..."
 
 #: settings/private/SonnetConfigPage.qml:177
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Word"
-msgstr ""
+msgstr "Gehitu hitza"
 
 #: settings/private/SonnetConfigPage.qml:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete word"
-msgstr ""
+msgstr "Ezabatu hitza"
 
 #: settings/SpellcheckingConfigurationModule.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Spell Checking"
-msgstr ""
+msgstr "Ortografia-azterketa"
 
 #: statefulapplication/abstractkirigamiapplication.cpp:145
 #, kde-format
 msgid "Open Command Bar"
-msgstr ""
+msgstr "Ireki komando-barra"
 
 #: statefulapplication/private/keysequencehelper.cpp:117
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Reserved Shortcut"
-msgstr ""
+msgstr "Lasterbide erreserbatua"
 
 #: statefulapplication/private/keysequencehelper.cpp:119
 #, kde-format
@@ -583,6 +580,9 @@ msgid ""
 "shortcut.\n"
 "Please choose another one."
 msgstr ""
+"F12 tekla erreserbatuta dago Windows-en, beraz ezin da erabili lasterbide "
+"orokor gisa.\n"
+"Mesedez, hautatu beste bat."
 
 #: statefulapplication/private/keysequencehelper.cpp:143
 #, kde-format
@@ -590,32 +590,32 @@ msgctxt ""
 "@title:dialog This happen when a global shortcut is already defined with the "
 "same shortcut"
 msgid "Global Shortcut Shadowing"
-msgstr ""
+msgstr "Laster-tekla globalari itzal egitea"
 
 #: statefulapplication/private/keysequencehelper.cpp:146
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination is shadowed by following global actions:\n"
-msgstr ""
+msgstr "'%1' tekla konbinazioari itzal egiten diote ondoko ekintza globalek:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:148
 #: statefulapplication/private/keysequencehelper.cpp:154
 #, kde-format
 msgctxt "@info"
 msgid "Action '%1' in context '%2'\n"
-msgstr ""
+msgstr "'%1' ekintza '%2' testuinguruan\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:152
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination shadows following global actions:\n"
-msgstr ""
+msgstr "'%1' tekla konbinazioak itzal egiten die ondoko ekintza globalei:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:193
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Conflict with Standard Application Shortcut"
-msgstr ""
+msgstr "Gatazka aplikazio-lasterbide estandarrekin"
 
 #: statefulapplication/private/keysequencehelper.cpp:195
 #, kde-format
@@ -625,18 +625,21 @@ msgid ""
 "some applications use.\n"
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
+"'%1' tekla-konbinazioa aplikazio batzuek erabiltzen duten \"%2\" ekintza "
+"estandarrekin erer erabiltzen da.\n"
+"Benetan erabili nahi duzu ere laster-tekla orokor gisa?"
 
 #: statefulapplication/private/KeySequenceItem.qml:129
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
-msgstr ""
+msgstr "Sarrera"
 
 #: statefulapplication/private/KeySequenceItem.qml:130
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
-msgstr ""
+msgstr "Bat ere ez"
 
 #: statefulapplication/private/KeySequenceItem.qml:141
 #, kde-format
@@ -644,79 +647,80 @@ msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
+"Botoian klik egin, ondoren, sartu lasterbidea programan egingo zenukeen "
+"moduan.\n"
+"Adibidez Ktrl+A: sakatuta mantendu Ktrl tekla eta sakatu A."
 
 #: statefulapplication/private/KeySequenceItem.qml:182
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
-msgstr ""
+msgstr "Garbitu tekla sekuentzia"
 
 #: statefulapplication/private/KeySequenceItem.qml:198
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel Key Sequence Recording"
-msgstr ""
+msgstr "Utzi tekla sekuentzia grabatzeari"
 
 #: statefulapplication/private/KQuickCommandBarPage.qml:55
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No results found"
-msgstr ""
+msgstr "Ez da emaitzarik aurkitu"
 
 #: statefulapplication/private/ShortcutsEditor.qml:18
 #: statefulapplication/StatefulWindow.qml:104
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcuts"
-msgstr ""
+msgstr "Lasterbideak"
 
 #: statefulapplication/private/ShortcutsEditor.qml:22
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Filter…"
-msgstr ""
+msgstr "Iragazi..."
 
 #: statefulapplication/private/ShortcutsEditor.qml:52
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut: %1"
-msgstr ""
+msgstr "Lasterbidea: %1"
 
 #: statefulapplication/private/ShortcutsEditor.qml:72
 #, kde-format
 msgctxt "@label"
 msgid "Shortcut:"
-msgstr ""
+msgstr "Lasterbidea:"
 
 #: statefulapplication/private/ShortcutsEditor.qml:127
 #: statefulapplication/private/ShortcutsEditor.qml:155
 #, kde-format
 msgctxt "@label"
 msgid "Alternative:"
-msgstr ""
+msgstr "Alternatiba:"
 
 #: statefulapplication/private/ShortcutsEditor.qml:193
 #, kde-format
 msgctxt "Placeholder message"
 msgid "No shortcuts found"
-msgstr ""
+msgstr "Ez da lasterbiderik aurkitu"
 
 #: statefulapplication/shortcutsmodel.cpp:41
 #, kde-format
 msgctxt "List separator"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: statefulapplication/StatefulWindow.qml:114
-#, fuzzy, kde-format
-#| msgid "About %1"
+#, kde-format
 msgctxt "@title:window"
 msgid "About %1"
 msgstr "%1(e)ri buruz"
 
 #: statefulapplication/StatefulWindow.qml:127
-#, fuzzy, kde-format
-#| msgid "About KDE"
+#, kde-format
 msgctxt "@title:window"
 msgid "About KDE"
 msgstr "KDEri buruz"
