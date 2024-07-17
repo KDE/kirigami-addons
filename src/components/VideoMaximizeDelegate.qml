@@ -174,6 +174,8 @@ Item {
             }
         }
 
+        Component.onDestruction: videoItem.stop()
+
         clip: true
 
         Behavior on width {
