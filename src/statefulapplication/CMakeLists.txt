@@ -77,7 +77,6 @@ ecm_add_qml_module(KirigamiAddonsStatefulApp
 
 ecm_target_qml_sources(KirigamiAddonsStatefulApp SOURCES
     StatefulWindow.qml
-    Action.qml
 )
 
 ecm_finalize_qml_module(KirigamiAddonsStatefulApp DESTINATION ${KDE_INSTALL_QMLDIR})
