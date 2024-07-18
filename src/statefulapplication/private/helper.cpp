@@ -23,21 +23,3 @@ QList<QKeySequence> Helper::alternateShortcuts(QAction *action) const
         return action->shortcuts().mid(1);
     }
 }
-
-void Helper::restoreWindowGeometry(QQuickWindow *window, const QString &group) const
-{
-    KConfig dataResource(u"data"_s, KConfig::SimpleConfig, QStandardPaths::AppDataLocation);
-    KConfigGroup windowGroup(&dataResource, "Window-"_L1 + group);
-    KWindowConfig::restoreWindowSize(window, windowGroup);
-    KWindowConfig::restoreWindowPosition(window, windowGroup);
-}
-
-void Helper::saveWindowGeometry(QQuickWindow *window, const QString &group) const
-{
-    KConfig dataResource(u"data"_s, KConfig::SimpleConfig, QStandardPaths::AppDataLocation);
-    KConfigGroup windowGroup(&dataResource, "Window-"_L1 + group);
-    KWindowConfig::saveWindowPosition(window, windowGroup);
-    KWindowConfig::saveWindowSize(window, windowGroup);
-    dataResource.sync();
-}
-

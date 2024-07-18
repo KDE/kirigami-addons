@@ -111,7 +111,8 @@ public:
     /// @internal Used by the shortcuts editor
     QAbstractListModel *shortcutsModel();
 
-    /// @internal Used by StatefulApp.Action
+    /// Get the named action.
+    /// \return nullptr is not such action is defined.
     Q_INVOKABLE QAction *action(const QString &actionName);
 
     /// Getter for the configurationView property.

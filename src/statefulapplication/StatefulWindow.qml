@@ -24,10 +24,32 @@ import org.kde.coreaddons as Core
  * * A command bar to access all the defined actions
  * * A shortcut editor
  *
+ * @code
+ * import org.kde.kirigamiaddons.statefulapp as StatefulApp
+ * import org.kde.kirigamiaddons.settings as Settings
+ *
+ * StatefulApp.StatefulWindow {
+ *     id: root
+ *
+ *     windowName: 'Main'
+ *     application: MyApplication {
+ *         configurationView: Settings.ConfigurationView { ... }
+ *     }
+ * }
+ * @endcode
+ *
  * @since KirigamiAddons 1.4.0
  */
 Kirigami.ApplicationWindow {
     id: root
+
+    /**
+     * This property holds the window's name.
+     *
+     * This needs to be an unique identifier for your application and will be used to store
+     * the state of the window in your application config.
+     */
+    property alias windowName: windowStateSaver.configGroupName
 
     /**
      * This property holds the AbstractKirigamiApplication of your application.
@@ -46,45 +68,8 @@ Kirigami.ApplicationWindow {
      */
     property StatefulApp.AbstractKirigamiApplication application: Private.DefaultKirigamiApplication
 
-    Connections {
-        id: saveWindowGeometryConnections
-
-        enabled: false // Disable on startup to avoid writing wrong values if the window is hidden
-        target: root
-
-        function onClosing(): void {
-            Private.Helper.saveWindowGeometry(root);
-        }
-
-        function onWidthChanged(): void {
-            saveWindowGeometryTimer.restart();
-        }
-
-        function onHeightChanged(): void {
-            saveWindowGeometryTimer.restart();
-        }
-        function onXChanged(): void {
-            saveWindowGeometryTimer.restart();
-        }
-        function onYChanged(): void {
-            saveWindowGeometryTimer.restart();
-        }
-    }
-
-    Component.onCompleted: {
-        Private.Helper.restoreWindowGeometry(root);
-        saveWindowGeometryConnections.enabled = true;
-    }
-
-    // This timer allows to batch update the window size change to reduce
-    // the io load and also work around the fact that x/y/width/height are
-    // changed when loading the page and overwrite the saved geometry from
-    // the previous session.
-    Timer {
-        id: saveWindowGeometryTimer
-
-        interval: 1000
-        onTriggered: Private.Helper.saveWindowGeometry(root)
+    Private.WindowStateSaver {
+        id: windowStateSaver
     }
 
     Connections {

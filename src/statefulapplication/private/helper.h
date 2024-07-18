@@ -22,11 +22,4 @@ public:
 
     Q_INVOKABLE QList<QKeySequence> alternateShortcuts(QAction *action) const;
     Q_INVOKABLE QString iconName(const QIcon &icon) const;
-
-public Q_SLOTS:
-    /// Restore current window geometry
-    void restoreWindowGeometry(QQuickWindow *window, const QString &group = u"main"_s) const;
-
-    /// Save current window geometry
-    void saveWindowGeometry(QQuickWindow *window, const QString &group = u"main"_s) const;
 };
