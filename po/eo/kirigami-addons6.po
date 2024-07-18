@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-09 00:38+0000\n"
+"POT-Creation-Date: 2024-07-18 00:38+0000\n"
 "PO-Revision-Date: 2024-07-13 10:51+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -121,7 +121,7 @@ msgctxt "@label:checkbox"
 msgid "Do not show again"
 msgstr "Ne refoje montri"
 
-#: components/VideoMaximizeDelegate.qml:265
+#: components/VideoMaximizeDelegate.qml:267
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
