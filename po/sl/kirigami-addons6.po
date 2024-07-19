@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-18 00:38+0000\n"
+"POT-Creation-Date: 2024-07-19 00:38+0000\n"
 "PO-Revision-Date: 2024-07-03 07:44+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -668,7 +668,7 @@ msgid "No results found"
 msgstr "Ni zadetkov"
 
 #: statefulapplication/private/ShortcutsEditor.qml:18
-#: statefulapplication/StatefulWindow.qml:104
+#: statefulapplication/StatefulWindow.qml:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcuts"
@@ -711,13 +711,13 @@ msgctxt "List separator"
 msgid ", "
 msgstr ", "
 
-#: statefulapplication/StatefulWindow.qml:114
+#: statefulapplication/StatefulWindow.qml:99
 #, kde-format
 msgctxt "@title:window"
 msgid "About %1"
 msgstr "O %1"
 
-#: statefulapplication/StatefulWindow.qml:127
+#: statefulapplication/StatefulWindow.qml:112
 #, kde-format
 msgctxt "@title:window"
 msgid "About KDE"
