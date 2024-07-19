@@ -3,7 +3,6 @@
 
 #include "messagedialoghelper.h"
 #include <KConfigGroup>
-#include <KSharedConfig>
 
 using namespace Qt::StringLiterals;
 
