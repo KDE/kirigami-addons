@@ -5,7 +5,6 @@ add_subdirectory(settings)
 
 qt_add_library(%{APPNAMELC}_static STATIC)
 ecm_add_qml_module(%{APPNAMELC}_static
-    STATIC
     URI org.kde.%{APPNAMELC}
     GENERATE_PLUGIN_SOURCE
     VERSION 1.0

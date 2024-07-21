@@ -19,11 +19,13 @@ StatefulApp.StatefulWindow {
 
     title: i18nc("@title:window", "%{APPNAME}")
 
+    windowName: "%{APPNAME}"
+
     minimumWidth: Kirigami.Units.gridUnit * 20
     minimumHeight: Kirigami.Units.gridUnit * 20
 
     application: %{APPNAME}Application {
-        configurationsView: Settings.%{APPNAME}ConfigurationsView {}
+        configurationView: Settings.%{APPNAME}ConfigurationView {}
     }
 
     Connections {
@@ -37,37 +39,31 @@ StatefulApp.StatefulWindow {
     globalDrawer: Kirigami.GlobalDrawer {
         isMenu: !Kirigami.Settings.isMobile
         actions: [
-            StatefulApp.Action {
+            Kirigami.Action {
                 id: incrementCounterAction
-                actionName: "increment_counter"
-                application: root.application
+                fromQAction: root.application.action("increment_counter")
             },
             Kirigami.Action {
                 separator: true
             },
-            StatefulApp.Action {
-                actionName: "options_configure"
-                application: root.application
+            Kirigami.Action {
+                fromQAction: root.application.action("options_configure")
             },
-            StatefulApp.Action {
-                actionName: "options_configure_keybinding"
-                application: root.application
+            Kirigami.Action {
+                fromQAction: root.application.action("options_configure_keybinding")
             },
             Kirigami.Action {
                 separator: true
             },
-            StatefulApp.Action {
+            Kirigami.Action {
                 id: aboutAction
-                actionName: "open_about_page"
-                application: root.application
+                fromQAction: root.application.action("open_about_page")
             },
-            StatefulApp.Action {
-                actionName: "open_about_kde_page"
-                application: root.application
+            Kirigami.Action {
+                fromQAction: root.application.action("open_about_kde_page")
             },
-            StatefulApp.Action {
-                actionName: "file_quit"
-                application: root.application
+            Kirigami.Action {
+                fromQAction: root.application.action("file_quit")
             }
         ]
     }

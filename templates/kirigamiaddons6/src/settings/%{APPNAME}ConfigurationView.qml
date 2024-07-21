@@ -6,7 +6,7 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import org.kde.kirigamiaddons.settings as KirigamiSettings
 
-KirigamiSettings.ConfigurationsView {
+KirigamiSettings.ConfigurationView {
     id: root
 
     modules: [
