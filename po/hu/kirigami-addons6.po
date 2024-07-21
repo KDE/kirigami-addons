@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-19 00:38+0000\n"
-"PO-Revision-Date: 2024-06-20 22:16+0200\n"
+"PO-Revision-Date: 2024-07-20 15:29+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -15,17 +15,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Kiszel Kristóf"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "ulysses@fsf.hu"
 
 #: components/AbstractMaximizeComponent.qml:130
 #, kde-format
@@ -465,43 +465,43 @@ msgstr "Beállítások"
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Enable automatic spell checking"
-msgstr ""
+msgstr "Automatikus helyesírás-ellenőrzés bekapcsolása"
 
 #: settings/private/SonnetConfigPage.qml:55
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore uppercase words"
-msgstr ""
+msgstr "Nagybetűs szavak kihagyása"
 
 #: settings/private/SonnetConfigPage.qml:69
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore hyphenated words"
-msgstr ""
+msgstr "Kötőjeles szavak kihagyása"
 
 #: settings/private/SonnetConfigPage.qml:83
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Detect language automatically"
-msgstr ""
+msgstr "Automatikus nyelvfelismerés"
 
 #: settings/private/SonnetConfigPage.qml:96
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Selected default language:"
-msgstr ""
+msgstr "Alapértelmezett nyelv:"
 
 #: settings/private/SonnetConfigPage.qml:97
 #, kde-format
 msgctxt "No selected language"
 msgid "None"
-msgstr ""
+msgstr "Nincs"
 
 #: settings/private/SonnetConfigPage.qml:117
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Additional Spell Checking Languages"
-msgstr ""
+msgstr "További helyesírás-ellenőrzési nyelvek"
 
 #: settings/private/SonnetConfigPage.qml:118
 #, kde-format
@@ -509,64 +509,66 @@ msgid ""
 "%1 will provide spell checking and suggestions for the languages listed here "
 "when autodetection is enabled."
 msgstr ""
+"A(z) %1 biztosítja a helyesírás-ellenőrzést és a javaslatokat az alábbi "
+"nyelvekhez, ha az automatikus felismerés be van kapcsolva."
 
 #: settings/private/SonnetConfigPage.qml:131
 #, kde-format
 msgctxt "@action:button"
 msgid "Open Personal Dictionary"
-msgstr ""
+msgstr "Személyes szótár megnyitása"
 
 #: settings/private/SonnetConfigPage.qml:143
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking languages"
-msgstr ""
+msgstr "Helyesírás-ellenőrzés nyelvei"
 
 #: settings/private/SonnetConfigPage.qml:155
 #, kde-format
 msgid "Default Language"
-msgstr ""
+msgstr "Alapértelmezett nyelv"
 
 #: settings/private/SonnetConfigPage.qml:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking dictionary"
-msgstr ""
+msgstr "Helyesírás-ellenőrzési szótár"
 
 #: settings/private/SonnetConfigPage.qml:174
 #, kde-format
 msgctxt "Placeholder message"
 msgid "Add a new word to your personal dictionary…"
-msgstr ""
+msgstr "Új szó hozzáadása a személyes szótárhoz…"
 
 #: settings/private/SonnetConfigPage.qml:177
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Word"
-msgstr ""
+msgstr "Szó hozzáadása"
 
 #: settings/private/SonnetConfigPage.qml:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete word"
-msgstr ""
+msgstr "Szó törlése"
 
 #: settings/SpellcheckingConfigurationModule.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Spell Checking"
-msgstr ""
+msgstr "Helyesírás-ellenőrzés"
 
 #: statefulapplication/abstractkirigamiapplication.cpp:145
 #, kde-format
 msgid "Open Command Bar"
-msgstr ""
+msgstr "Parancssáv megnyitása"
 
 #: statefulapplication/private/keysequencehelper.cpp:117
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Reserved Shortcut"
-msgstr ""
+msgstr "Foglalt gyorsbillentyű"
 
 #: statefulapplication/private/keysequencehelper.cpp:119
 #, kde-format
@@ -576,6 +578,9 @@ msgid ""
 "shortcut.\n"
 "Please choose another one."
 msgstr ""
+"Az F12 foglalt billentyű a Windowsban, ezért nem használható globális "
+"billentyűparancsban.\n"
+"Válasszon más billentyűt."
 
 #: statefulapplication/private/keysequencehelper.cpp:143
 #, kde-format
@@ -583,32 +588,34 @@ msgctxt ""
 "@title:dialog This happen when a global shortcut is already defined with the "
 "same shortcut"
 msgid "Global Shortcut Shadowing"
-msgstr ""
+msgstr "Globális gyorsbillentyű-rejtés"
 
 #: statefulapplication/private/keysequencehelper.cpp:146
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination is shadowed by following global actions:\n"
 msgstr ""
+"A(z) „%1” billentyűkombinációt elrejtik a következő globális műveletek:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:148
 #: statefulapplication/private/keysequencehelper.cpp:154
 #, kde-format
 msgctxt "@info"
 msgid "Action '%1' in context '%2'\n"
-msgstr ""
+msgstr "Művelet: „%1”, kontextus: „%2”\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:152
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination shadows following global actions:\n"
 msgstr ""
+"A(z) „%1” billentyűkombináció a következő globális műveleteket rejti el:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:193
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Conflict with Standard Application Shortcut"
-msgstr ""
+msgstr "Ütközés egy alkalmazásbeli billentyűkombinációval"
 
 #: statefulapplication/private/keysequencehelper.cpp:195
 #, kde-format
@@ -618,18 +625,21 @@ msgid ""
 "some applications use.\n"
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
+"A(z) „%1” billentyűkombináció már hozzá van rendelve a standard „%2” "
+"művelethez.\n"
+"Azt szeretné, hogy ez globális billentyűparancs is legyen?"
 
 #: statefulapplication/private/KeySequenceItem.qml:129
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
-msgstr ""
+msgstr "Bemenet"
 
 #: statefulapplication/private/KeySequenceItem.qml:130
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
-msgstr ""
+msgstr "Nincs"
 
 #: statefulapplication/private/KeySequenceItem.qml:141
 #, kde-format
@@ -637,79 +647,79 @@ msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
+"Kattintson a gombra, majd adja meg a kívánt billentyűkombinációt.\n"
+"Példa Ctrl+A-ra: a Ctrl lenyomva tartása mellett nyomja le az A-t."
 
 #: statefulapplication/private/KeySequenceItem.qml:182
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
-msgstr ""
+msgstr "Billentyűkombináció törlése"
 
 #: statefulapplication/private/KeySequenceItem.qml:198
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel Key Sequence Recording"
-msgstr ""
+msgstr "Billentyűkombináció rögzítésének megszakítása"
 
 #: statefulapplication/private/KQuickCommandBarPage.qml:55
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No results found"
-msgstr ""
+msgstr "Nincs találat"
 
 #: statefulapplication/private/ShortcutsEditor.qml:18
 #: statefulapplication/StatefulWindow.qml:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcuts"
-msgstr ""
+msgstr "Gyorsbillentyűk"
 
 #: statefulapplication/private/ShortcutsEditor.qml:22
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Filter…"
-msgstr ""
+msgstr "Szűrő…"
 
 #: statefulapplication/private/ShortcutsEditor.qml:52
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut: %1"
-msgstr ""
+msgstr "Gyorsbillentyű: %1"
 
 #: statefulapplication/private/ShortcutsEditor.qml:72
 #, kde-format
 msgctxt "@label"
 msgid "Shortcut:"
-msgstr ""
+msgstr "Gyorsbillentyű:"
 
 #: statefulapplication/private/ShortcutsEditor.qml:127
 #: statefulapplication/private/ShortcutsEditor.qml:155
 #, kde-format
 msgctxt "@label"
 msgid "Alternative:"
-msgstr ""
+msgstr "Alternatíva:"
 
 #: statefulapplication/private/ShortcutsEditor.qml:193
 #, kde-format
 msgctxt "Placeholder message"
 msgid "No shortcuts found"
-msgstr ""
+msgstr "Nincsenek gyorsbillentyűk"
 
 #: statefulapplication/shortcutsmodel.cpp:41
 #, kde-format
 msgctxt "List separator"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: statefulapplication/StatefulWindow.qml:99
-#, fuzzy, kde-format
-#| msgid "About %1"
+#, kde-format
 msgctxt "@title:window"
 msgid "About %1"
 msgstr "Névjegy: %1"
 
 #: statefulapplication/StatefulWindow.qml:112
-#, fuzzy, kde-format
-#| msgid "About KDE"
+#, kde-format
 msgctxt "@title:window"
 msgid "About KDE"
 msgstr "A KDE névjegye"
