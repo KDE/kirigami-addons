@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-19 00:38+0000\n"
-"PO-Revision-Date: 2024-07-06 16:48+0200\n"
+"PO-Revision-Date: 2024-07-21 12:14+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -132,51 +132,51 @@ msgstr "Lydstyrke"
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: dateandtime/DatePopup.qml:99 dateandtime/TimePopup.qml:63
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
-msgstr ""
+msgstr "Vel"
 
 #: dateandtime/private/DatePicker.qml:271
 #, kde-format
 msgid "Day"
-msgstr ""
+msgstr "Dag"
 
 #: dateandtime/private/DatePicker.qml:274
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "Månad"
 
 #: dateandtime/private/DatePicker.qml:277
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "År"
 
 #: dateandtime/private/DatePicker.qml:362
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Previous"
-msgstr ""
+msgstr "Gå til førre"
 
 #: dateandtime/private/DatePicker.qml:375
 #, kde-format
 msgctxt "@action:button"
 msgid "Jump to today"
-msgstr ""
+msgstr "Hopp til i dag"
 
 #: dateandtime/private/DatePicker.qml:382
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Next"
-msgstr ""
+msgstr "Gå til neste"
 
 #: dateandtime/TimePicker.qml:97
 #, kde-format
 msgid "Hours"
-msgstr ""
+msgstr "Timar"
 
 #: dateandtime/TimePicker.qml:119
 #, kde-format
@@ -187,7 +187,7 @@ msgstr ":"
 #: dateandtime/TimePicker.qml:134
 #, kde-format
 msgid "Minutes"
-msgstr ""
+msgstr "Minutt"
 
 #: formcard/AboutKDE.qml:23
 #: statefulapplication/abstractkirigamiapplication.cpp:174
@@ -275,12 +275,7 @@ msgid "Join us"
 msgstr "Vert med"
 
 #: formcard/AboutKDE.qml:107
-#, fuzzy, kde-format
-#| msgid ""
-#| "You do not have to be a software developer to be a member of the KDE "
-#| "team. You can join the national teams that translate program interfaces. "
-#| "You can provide graphics, themes, sounds, and improved documentation. You "
-#| "decide!"
+#, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
 "You can join the language teams that translate program interfaces. You can "
@@ -367,8 +362,7 @@ msgstr[0] "Lisens"
 msgstr[1] "Lisensar"
 
 #: formcard/AboutPage.qml:260
-#, fuzzy, kde-format
-#| msgid "Report a bug"
+#, kde-format
 msgid "Report a Bug"
 msgstr "Meld frå om feil"
 
@@ -406,32 +400,32 @@ msgstr "Send e-post til %1"
 #, kde-format
 msgctxt "@action:button"
 msgid "Color"
-msgstr ""
+msgstr "Farge"
 
 #: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:43
 #, kde-format
 msgctxt "Accessible description"
 msgid "Current color \"%1\""
-msgstr ""
+msgstr "Gjeldande farge er «%1»"
 
 #: formcard/FormDateTimeDelegate.qml:193
 #, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
 msgid "Today"
-msgstr ""
+msgstr "I dag"
 
 #: formcard/FormDateTimeDelegate.qml:220 formcard/FormDateTimeDelegate.qml:357
 #, kde-format
 msgctxt "Date is not set"
 msgid "Not set"
-msgstr ""
+msgstr "Ikkje vald"
 
 #: formcard/FormPasswordFieldDelegate.qml:230
 #: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:233
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
-msgstr ""
+msgstr "%1/%2"
 
 #: settings/CategorizedSettings.qml:45 settings/ConfigurationView.qml:81
 #, kde-format
@@ -449,20 +443,16 @@ msgstr "Innstillingar – %1"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Go back"
-msgstr ""
+msgstr "Gå tilbake"
 
 #: settings/private/ConfigMobilePage.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title"
 msgid "Settings"
 msgstr "Innstillingar"
 
 #: settings/private/ConfigMobilePage.qml:83
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title:group"
 msgid "Settings"
 msgstr "Innstillingar"
@@ -471,43 +461,43 @@ msgstr "Innstillingar"
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Enable automatic spell checking"
-msgstr ""
+msgstr "Bruk automatisk stavekontroll"
 
 #: settings/private/SonnetConfigPage.qml:55
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore uppercase words"
-msgstr ""
+msgstr "Ignorer ord med store bokstavar"
 
 #: settings/private/SonnetConfigPage.qml:69
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore hyphenated words"
-msgstr ""
+msgstr "Ignorer ord med bindestrekar"
 
 #: settings/private/SonnetConfigPage.qml:83
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Detect language automatically"
-msgstr ""
+msgstr "Oppdag automatisk rett språk"
 
 #: settings/private/SonnetConfigPage.qml:96
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Selected default language:"
-msgstr ""
+msgstr "Valt standardspråk:"
 
 #: settings/private/SonnetConfigPage.qml:97
 #, kde-format
 msgctxt "No selected language"
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 #: settings/private/SonnetConfigPage.qml:117
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Additional Spell Checking Languages"
-msgstr ""
+msgstr "Fleire stavekontroll-språk"
 
 #: settings/private/SonnetConfigPage.qml:118
 #, kde-format
@@ -515,64 +505,66 @@ msgid ""
 "%1 will provide spell checking and suggestions for the languages listed here "
 "when autodetection is enabled."
 msgstr ""
+"%1 vil kontrollera stavinga og gje staveforslag for desse språka når "
+"automatisk språk­attkjenning er slått på."
 
 #: settings/private/SonnetConfigPage.qml:131
 #, kde-format
 msgctxt "@action:button"
 msgid "Open Personal Dictionary"
-msgstr ""
+msgstr "Opna personleg ordliste"
 
 #: settings/private/SonnetConfigPage.qml:143
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking languages"
-msgstr ""
+msgstr "Språk for stavekontroll"
 
 #: settings/private/SonnetConfigPage.qml:155
 #, kde-format
 msgid "Default Language"
-msgstr ""
+msgstr "Standardspråk"
 
 #: settings/private/SonnetConfigPage.qml:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking dictionary"
-msgstr ""
+msgstr "Stavekontroll-ordliste"
 
 #: settings/private/SonnetConfigPage.qml:174
 #, kde-format
 msgctxt "Placeholder message"
 msgid "Add a new word to your personal dictionary…"
-msgstr ""
+msgstr "Legg nytt ord til personleg ordliste …"
 
 #: settings/private/SonnetConfigPage.qml:177
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Word"
-msgstr ""
+msgstr "Legg til ord"
 
 #: settings/private/SonnetConfigPage.qml:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete word"
-msgstr ""
+msgstr "Fjern ord"
 
 #: settings/SpellcheckingConfigurationModule.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Spell Checking"
-msgstr ""
+msgstr "Stavekontroll"
 
 #: statefulapplication/abstractkirigamiapplication.cpp:145
 #, kde-format
 msgid "Open Command Bar"
-msgstr ""
+msgstr "Opna kommandolinje"
 
 #: statefulapplication/private/keysequencehelper.cpp:117
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Reserved Shortcut"
-msgstr ""
+msgstr "Reservert snarveg"
 
 #: statefulapplication/private/keysequencehelper.cpp:119
 #, kde-format
@@ -582,6 +574,9 @@ msgid ""
 "shortcut.\n"
 "Please choose another one."
 msgstr ""
+"«F12»-tasten er reservert på Windows og kan derfor ikkje brukast som ein "
+"global snarveg.\n"
+"Vel ein annan snarvegtast."
 
 #: statefulapplication/private/keysequencehelper.cpp:143
 #, kde-format
@@ -589,32 +584,32 @@ msgctxt ""
 "@title:dialog This happen when a global shortcut is already defined with the "
 "same shortcut"
 msgid "Global Shortcut Shadowing"
-msgstr ""
+msgstr "Overstyring av global snøggtast"
 
 #: statefulapplication/private/keysequencehelper.cpp:146
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination is shadowed by following global actions:\n"
-msgstr ""
+msgstr "Snøggtasten «%1» vert overstyrt av desse globale handlingane:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:148
 #: statefulapplication/private/keysequencehelper.cpp:154
 #, kde-format
 msgctxt "@info"
 msgid "Action '%1' in context '%2'\n"
-msgstr ""
+msgstr "Handlinga «%1» i samanhengen «%2»\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:152
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination shadows following global actions:\n"
-msgstr ""
+msgstr "Snøggtasten «%1» overstyrer desse globale handlingane:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:193
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Conflict with Standard Application Shortcut"
-msgstr ""
+msgstr "Konflikt med standard programsnarveg"
 
 #: statefulapplication/private/keysequencehelper.cpp:195
 #, kde-format
@@ -624,18 +619,21 @@ msgid ""
 "some applications use.\n"
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
+"Snøggtasten «%1» er alt i bruk for standardhandlinga «%2» som nokre program "
+"brukar.\n"
+"Er du sikker på at du likevel vil bruka han som ein global snøggtast?"
 
 #: statefulapplication/private/KeySequenceItem.qml:129
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
-msgstr ""
+msgstr "Inndata"
 
 #: statefulapplication/private/KeySequenceItem.qml:130
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 #: statefulapplication/private/KeySequenceItem.qml:141
 #, kde-format
@@ -650,74 +648,72 @@ msgstr ""
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
-msgstr ""
+msgstr "Tøm tastesekvens"
 
 #: statefulapplication/private/KeySequenceItem.qml:198
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel Key Sequence Recording"
-msgstr ""
+msgstr "Avbryt snøggtast-registrering"
 
 #: statefulapplication/private/KQuickCommandBarPage.qml:55
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No results found"
-msgstr ""
+msgstr "Fann ingen treff"
 
 #: statefulapplication/private/ShortcutsEditor.qml:18
 #: statefulapplication/StatefulWindow.qml:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcuts"
-msgstr ""
+msgstr "Snarvegar"
 
 #: statefulapplication/private/ShortcutsEditor.qml:22
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Filter…"
-msgstr ""
+msgstr "Filtrer …"
 
 #: statefulapplication/private/ShortcutsEditor.qml:52
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut: %1"
-msgstr ""
+msgstr "Snøggtast: %1"
 
 #: statefulapplication/private/ShortcutsEditor.qml:72
 #, kde-format
 msgctxt "@label"
 msgid "Shortcut:"
-msgstr ""
+msgstr "Snøggtast:"
 
 #: statefulapplication/private/ShortcutsEditor.qml:127
 #: statefulapplication/private/ShortcutsEditor.qml:155
 #, kde-format
 msgctxt "@label"
 msgid "Alternative:"
-msgstr ""
+msgstr "Alternativ:"
 
 #: statefulapplication/private/ShortcutsEditor.qml:193
 #, kde-format
 msgctxt "Placeholder message"
 msgid "No shortcuts found"
-msgstr ""
+msgstr "Fann ingen snøggtastar"
 
 #: statefulapplication/shortcutsmodel.cpp:41
 #, kde-format
 msgctxt "List separator"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: statefulapplication/StatefulWindow.qml:99
-#, fuzzy, kde-format
-#| msgid "About %1"
+#, kde-format
 msgctxt "@title:window"
 msgid "About %1"
 msgstr "Om %1"
 
 #: statefulapplication/StatefulWindow.qml:112
-#, fuzzy, kde-format
-#| msgid "About KDE"
+#, kde-format
 msgctxt "@title:window"
 msgid "About KDE"
 msgstr "Om KDE"
