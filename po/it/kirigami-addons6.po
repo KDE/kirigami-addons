@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-19 00:38+0000\n"
-"PO-Revision-Date: 2024-07-19 19:29+0200\n"
+"PO-Revision-Date: 2024-07-22 15:46+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -623,12 +623,15 @@ msgid ""
 "some applications use.\n"
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
+"La combinazione di tasti «%1» è usata anche per l'azione standard «%2», che "
+"viene utilizzata da alcune applicazioni.\n"
+"Vuoi usarla veramente anche come scorciatoia globale?"
 
 #: statefulapplication/private/KeySequenceItem.qml:129
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
-msgstr ""
+msgstr "Immissione"
 
 #: statefulapplication/private/KeySequenceItem.qml:130
 #, kde-format
