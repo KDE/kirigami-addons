@@ -33,7 +33,6 @@ FormCardPage {
                 spacing: Kirigami.Units.smallSpacing * 2
 
                 Kirigami.Icon {
-                    Layout.rowSpan: 3
                     Layout.preferredHeight: Kirigami.Units.iconSizes.huge
                     Layout.preferredWidth: height
                     Layout.maximumWidth: page.width / 3;
