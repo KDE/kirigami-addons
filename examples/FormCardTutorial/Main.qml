@@ -4,8 +4,6 @@ import QtQuick.Layouts 1.15
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kirigamiaddons.formcard 1.0 as FormCard
 
-import org.kde.about 1.0
-
 Kirigami.ApplicationWindow {
     id: root
     width: 600
@@ -18,7 +16,7 @@ Kirigami.ApplicationWindow {
 
     Component {
         id: aboutpage
-        MyAboutPage {}
+        FormCard.AboutPage {}
     }
 
     Component {

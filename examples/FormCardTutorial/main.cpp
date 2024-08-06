@@ -32,17 +32,9 @@ int main(int argCount, char* argVector[])
     }
     QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("kde")));
 
-    qmlRegisterSingletonType(
-        "org.kde.about",
-        1, 0, "About",
-        [](QQmlEngine *engine, QJSEngine *) -> QJSValue {
-            return engine->toScriptValue(KAboutData::applicationData());
-        }
-    );
-
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
-    engine.load(QStringLiteral("qrc:/main.qml"));
+    engine.loadFromModule("org.kde.addonsexample", "Main");
     app.exec();
 }
 

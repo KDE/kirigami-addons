@@ -1,8 +1,0 @@
-<!DOCTYPE RCC>
-<RCC version="1.0">
-<qresource prefix="/">
-    <file alias="main.qml">contents/ui/main.qml</file>
-    <file alias="MyAboutPage.qml">contents/ui/MyAboutPage.qml</file>
-    <file alias="SettingsPage.qml">contents/ui/SettingsPage.qml</file>
-</qresource>
-</RCC>
