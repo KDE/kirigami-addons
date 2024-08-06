@@ -17,9 +17,6 @@ target_sources(statefulappprivateplugin PRIVATE
     helper.h
     keysequencehelper.cpp
     keysequencehelper.h
-
-    kwindowstatesaverquick.h   # to remove when we can use KConfig 6.5
-    kwindowstatesaverquick.cpp
 )
 
 ecm_target_qml_sources(statefulappprivateplugin SOURCES

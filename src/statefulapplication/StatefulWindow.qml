@@ -7,6 +7,7 @@ import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 
+import org.kde.config as Config
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCard
 import org.kde.kirigamiaddons.statefulapp as StatefulApp
@@ -68,7 +69,7 @@ Kirigami.ApplicationWindow {
      */
     property StatefulApp.AbstractKirigamiApplication application: Private.DefaultKirigamiApplication
 
-    Private.WindowStateSaver {
+    Config.WindowStateSaver {
         id: windowStateSaver
     }
 
