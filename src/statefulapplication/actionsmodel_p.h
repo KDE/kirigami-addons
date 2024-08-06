@@ -96,6 +96,7 @@ public:
     [[nodiscard]] QHash<int, QByteArray> roleNames() const override;
 
 private:
+    bool m_hasMultipleGroup = false;
     QList<Item> m_rows;
 
     /**

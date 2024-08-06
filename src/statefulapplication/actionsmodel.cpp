@@ -30,9 +30,12 @@ void fillRows(QList<KCommandBarModel::Item> &rows, const QString &title, const Q
 
 void KCommandBarModel::refresh(const QList<ActionGroup> &actionGroups)
 {
-    int totalActions = std::accumulate(actionGroups.begin(), actionGroups.end(), 0, [](int a, const ActionGroup &ag) {
-        return a + ag.actions.count();
+    QSet<QString> groupNames;
+    int totalActions = std::accumulate(actionGroups.begin(), actionGroups.end(), 0, [&groupNames](int a, const ActionGroup &ag) {
+        groupNames << ag.name;
+        return ag.actions.count() + a;
     });
+    m_hasMultipleGroup = groupNames.count() > 1;
 
     QList<Item> temp_rows;
     std::unordered_set<QAction *> uniqueActions;
@@ -87,9 +90,13 @@ QVariant KCommandBarModel::data(const QModelIndex &index, int role) const
     case Qt::DisplayRole:
     case DisplayNameRole:
         if (col == 0) {
-            QString groupName = KLocalizedString::removeAcceleratorMarker(entry.groupName);
             QString actionText = KLocalizedString::removeAcceleratorMarker(entry.action->text());
-            return QString(groupName + QStringLiteral(": ") + actionText);
+            if (m_hasMultipleGroup) {
+                const QString groupName = KLocalizedString::removeAcceleratorMarker(entry.groupName);
+                return QString(groupName + QStringLiteral(": ") + actionText);
+            } else {
+                return actionText;
+            }
         } else {
             return entry.action->shortcut().toString(QKeySequence::NativeText);
         }
