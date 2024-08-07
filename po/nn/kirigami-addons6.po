@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-19 00:38+0000\n"
+"POT-Creation-Date: 2024-08-07 00:39+0000\n"
 "PO-Revision-Date: 2024-07-21 12:14+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -195,17 +195,17 @@ msgstr "Minutt"
 msgid "About KDE"
 msgstr "Om KDE"
 
-#: formcard/AboutKDE.qml:50
+#: formcard/AboutKDE.qml:49
 #, kde-format
 msgid "KDE"
 msgstr "KDE"
 
-#: formcard/AboutKDE.qml:59
+#: formcard/AboutKDE.qml:58
 #, kde-format
 msgid "Be Free!"
 msgstr "Ver fri!"
 
-#: formcard/AboutKDE.qml:68
+#: formcard/AboutKDE.qml:67
 #, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
@@ -228,17 +228,17 @@ msgstr ""
 "i. Derimot arbeider me saman om å oppnå vårt felles mål om å laga fri "
 "programvare i verdsklasse. Alle er velkomne til å bidra – du òg."
 
-#: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:209
+#: formcard/AboutKDE.qml:75 formcard/AboutPage.qml:208
 #, kde-format
 msgid "Homepage"
 msgstr "Heimeside"
 
-#: formcard/AboutKDE.qml:82
+#: formcard/AboutKDE.qml:81
 #, kde-format
 msgid "Report bugs"
 msgstr "Meld frå om feil"
 
-#: formcard/AboutKDE.qml:87
+#: formcard/AboutKDE.qml:86
 #, kde-format
 msgid ""
 "Software can always be improved, and the KDE team is ready to do so. "
@@ -264,17 +264,17 @@ msgstr ""
 "feilsporings­systemet. Sjå då til at du har markert feil­rapporten med "
 "«Wishlist»."
 
-#: formcard/AboutKDE.qml:96
+#: formcard/AboutKDE.qml:95
 #, kde-format
 msgid "Report a bug"
 msgstr "Meld frå om feil"
 
-#: formcard/AboutKDE.qml:102
+#: formcard/AboutKDE.qml:101
 #, kde-format
 msgid "Join us"
 msgstr "Vert med"
 
-#: formcard/AboutKDE.qml:107
+#: formcard/AboutKDE.qml:106
 #, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
@@ -285,22 +285,22 @@ msgstr ""
 "med omsetjingar, laga grafikk, tema, lydar eller betre hjelpetekstar. Her er "
 "noko for alle!"
 
-#: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:235
+#: formcard/AboutKDE.qml:114 formcard/AboutPage.qml:234
 #, kde-format
 msgid "Get Involved"
 msgstr "Vert med"
 
-#: formcard/AboutKDE.qml:123
+#: formcard/AboutKDE.qml:122
 #, kde-format
 msgid "Developer Documentation"
 msgstr "Dokumentasjon for utviklarar"
 
-#: formcard/AboutKDE.qml:129
+#: formcard/AboutKDE.qml:128
 #, kde-format
 msgid "Support us"
 msgstr "Støtt oss"
 
-#: formcard/AboutKDE.qml:134
+#: formcard/AboutKDE.qml:133
 #, kde-format
 msgid ""
 "KDE software is and will always be available free of charge, however "
@@ -333,12 +333,12 @@ msgstr ""
 "\n"
 "På førehand tusen takk for støtta di."
 
-#: formcard/AboutKDE.qml:146
+#: formcard/AboutKDE.qml:145
 #, kde-format
 msgid "KDE e.V"
 msgstr "KDE e.V."
 
-#: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:222
+#: formcard/AboutKDE.qml:153 formcard/AboutPage.qml:221
 #, kde-format
 msgid "Donate"
 msgstr "Gje pengegåve"
@@ -349,49 +349,49 @@ msgstr "Gje pengegåve"
 msgid "About %1"
 msgstr "Om %1"
 
-#: formcard/AboutPage.qml:134
+#: formcard/AboutPage.qml:133
 #, kde-format
 msgid "Copyright"
 msgstr "Opphavsrett"
 
-#: formcard/AboutPage.qml:142
+#: formcard/AboutPage.qml:141
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "Lisens"
 msgstr[1] "Lisensar"
 
-#: formcard/AboutPage.qml:260
+#: formcard/AboutPage.qml:259
 #, kde-format
 msgid "Report a Bug"
 msgstr "Meld frå om feil"
 
-#: formcard/AboutPage.qml:267
+#: formcard/AboutPage.qml:266
 #, kde-format
 msgid "Libraries in use"
 msgstr "Brukte bibliotek"
 
-#: formcard/AboutPage.qml:290
+#: formcard/AboutPage.qml:289
 #, kde-format
 msgid "Authors"
 msgstr "Utviklarar"
 
-#: formcard/AboutPage.qml:305
+#: formcard/AboutPage.qml:304
 #, kde-format
 msgid "Credits"
 msgstr "Bidragsytarar"
 
-#: formcard/AboutPage.qml:320
+#: formcard/AboutPage.qml:319
 #, kde-format
 msgid "Translators"
 msgstr "Omsetjarar"
 
-#: formcard/AboutPage.qml:389
+#: formcard/AboutPage.qml:388
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Gå til %1-sida i KDE-butikken"
 
-#: formcard/AboutPage.qml:398
+#: formcard/AboutPage.qml:397
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Send e-post til %1"

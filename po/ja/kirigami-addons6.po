@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-19 00:38+0000\n"
+"POT-Creation-Date: 2024-08-07 00:39+0000\n"
 "PO-Revision-Date: 2024-04-28 18:58+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -192,18 +192,18 @@ msgstr ""
 msgid "About KDE"
 msgstr "KDE について"
 
-#: formcard/AboutKDE.qml:50
+#: formcard/AboutKDE.qml:49
 #, kde-format
 msgid "KDE"
 msgstr "KDE"
 
-#: formcard/AboutKDE.qml:59
+#: formcard/AboutKDE.qml:58
 #, kde-format
 msgid "Be Free!"
 msgstr "Be Free!"
 
 # /trunk/l10n-support/ja/summit/messages/kxmlgui/kxmlgui6.po の Revision 1676811 から一部転載
-#: formcard/AboutKDE.qml:68
+#: formcard/AboutKDE.qml:67
 #, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
@@ -226,18 +226,18 @@ msgstr ""
 "ルを達成するために共に働いています。あなたを含む誰もが KDE に参加して貢献する"
 "ことが歓迎されています。"
 
-#: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:209
+#: formcard/AboutKDE.qml:75 formcard/AboutPage.qml:208
 #, kde-format
 msgid "Homepage"
 msgstr "ホームページ"
 
-#: formcard/AboutKDE.qml:82
+#: formcard/AboutKDE.qml:81
 #, kde-format
 msgid "Report bugs"
 msgstr "バグを報告"
 
 # /trunk/l10n-support/ja/summit/messages/kxmlgui/kxmlgui6.po の Revision 1676811 から一部転載
-#: formcard/AboutKDE.qml:87
+#: formcard/AboutKDE.qml:86
 #, kde-format
 msgid ""
 "Software can always be improved, and the KDE team is ready to do so. "
@@ -263,18 +263,18 @@ msgstr ""
 "望をどしどしお寄せください。この場合、重要度には \"Wishlist\" (要望) を指定し"
 "てください。"
 
-#: formcard/AboutKDE.qml:96
+#: formcard/AboutKDE.qml:95
 #, kde-format
 msgid "Report a bug"
 msgstr "バグを報告"
 
-#: formcard/AboutKDE.qml:102
+#: formcard/AboutKDE.qml:101
 #, kde-format
 msgid "Join us"
 msgstr "KDE に参加"
 
 # /trunk/l10n-support/ja/summit/messages/kxmlgui/kxmlgui6.po の Revision 1676811 から一部転載
-#: formcard/AboutKDE.qml:107
+#: formcard/AboutKDE.qml:106
 #, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
@@ -286,23 +286,23 @@ msgstr ""
 "フィック、テーマ、サウンドあるいはドキュメントの改善で貢献していただくことも"
 "できます。さあ、あとはあなた次第です!"
 
-#: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:235
+#: formcard/AboutKDE.qml:114 formcard/AboutPage.qml:234
 #, kde-format
 msgid "Get Involved"
 msgstr "参加する"
 
-#: formcard/AboutKDE.qml:123
+#: formcard/AboutKDE.qml:122
 #, kde-format
 msgid "Developer Documentation"
 msgstr "開発者向けの文書"
 
-#: formcard/AboutKDE.qml:129
+#: formcard/AboutKDE.qml:128
 #, kde-format
 msgid "Support us"
 msgstr "KDE を支援"
 
 # /trunk/l10n-support/ja/summit/messages/kxmlgui/kxmlgui6.po の Revision 1676811 から一部転載
-#: formcard/AboutKDE.qml:134
+#: formcard/AboutKDE.qml:133
 #, kde-format
 msgid ""
 "KDE software is and will always be available free of charge, however "
@@ -335,12 +335,12 @@ msgstr ""
 "\n"
 "将来のあなたのサポートに感謝します。"
 
-#: formcard/AboutKDE.qml:146
+#: formcard/AboutKDE.qml:145
 #, kde-format
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:222
+#: formcard/AboutKDE.qml:153 formcard/AboutPage.qml:221
 #, kde-format
 msgid "Donate"
 msgstr "寄付"
@@ -351,49 +351,49 @@ msgstr "寄付"
 msgid "About %1"
 msgstr "%1 について"
 
-#: formcard/AboutPage.qml:134
+#: formcard/AboutPage.qml:133
 #, kde-format
 msgid "Copyright"
 msgstr "著作権"
 
-#: formcard/AboutPage.qml:142
+#: formcard/AboutPage.qml:141
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "ライセンス"
 
-#: formcard/AboutPage.qml:260
+#: formcard/AboutPage.qml:259
 #, fuzzy, kde-format
 #| msgid "Report a bug"
 msgid "Report a Bug"
 msgstr "バグを報告"
 
-#: formcard/AboutPage.qml:267
+#: formcard/AboutPage.qml:266
 #, kde-format
 msgid "Libraries in use"
 msgstr "使用されているライブラリ"
 
-#: formcard/AboutPage.qml:290
+#: formcard/AboutPage.qml:289
 #, kde-format
 msgid "Authors"
 msgstr "作者"
 
-#: formcard/AboutPage.qml:305
+#: formcard/AboutPage.qml:304
 #, kde-format
 msgid "Credits"
 msgstr "クレジット"
 
-#: formcard/AboutPage.qml:320
+#: formcard/AboutPage.qml:319
 #, kde-format
 msgid "Translators"
 msgstr "翻訳者"
 
-#: formcard/AboutPage.qml:389
+#: formcard/AboutPage.qml:388
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "%1 の KDE Store ページを訪れる"
 
-#: formcard/AboutPage.qml:398
+#: formcard/AboutPage.qml:397
 #, kde-format
 msgid "Send an email to %1"
 msgstr "%1 にメールを送る"

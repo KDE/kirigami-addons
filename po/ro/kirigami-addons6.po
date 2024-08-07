@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-19 00:38+0000\n"
+"POT-Creation-Date: 2024-08-07 00:39+0000\n"
 "PO-Revision-Date: 2024-06-09 13:44+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -194,17 +194,17 @@ msgstr "Minute"
 msgid "About KDE"
 msgstr "Despre KDE"
 
-#: formcard/AboutKDE.qml:50
+#: formcard/AboutKDE.qml:49
 #, kde-format
 msgid "KDE"
 msgstr "KDE"
 
-#: formcard/AboutKDE.qml:59
+#: formcard/AboutKDE.qml:58
 #, kde-format
 msgid "Be Free!"
 msgstr "Fii liber!"
 
-#: formcard/AboutKDE.qml:68
+#: formcard/AboutKDE.qml:67
 #, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
@@ -227,17 +227,17 @@ msgstr ""
 "scopul comun de a construi cele mai bune programe libere din lume. Toți sunt "
 "bineveniți să se alăture și să contribuie la KDE, inclusiv dumneavoastră."
 
-#: formcard/AboutKDE.qml:76 formcard/AboutPage.qml:209
+#: formcard/AboutKDE.qml:75 formcard/AboutPage.qml:208
 #, kde-format
 msgid "Homepage"
 msgstr "Pagină web"
 
-#: formcard/AboutKDE.qml:82
+#: formcard/AboutKDE.qml:81
 #, kde-format
 msgid "Report bugs"
 msgstr "Raportează defecte"
 
-#: formcard/AboutKDE.qml:87
+#: formcard/AboutKDE.qml:86
 #, kde-format
 msgid ""
 "Software can always be improved, and the KDE team is ready to do so. "
@@ -263,17 +263,17 @@ msgstr ""
 "sistemul de evidență a defectelor pentru a vă înregistra dorința. Asigurați-"
 "vă că folosiți nivelul de severitate „Dorință”."
 
-#: formcard/AboutKDE.qml:96
+#: formcard/AboutKDE.qml:95
 #, kde-format
 msgid "Report a bug"
 msgstr "Raportează defect"
 
-#: formcard/AboutKDE.qml:102
+#: formcard/AboutKDE.qml:101
 #, kde-format
 msgid "Join us"
 msgstr "Alătură-te"
 
-#: formcard/AboutKDE.qml:107
+#: formcard/AboutKDE.qml:106
 #, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
@@ -285,22 +285,22 @@ msgstr ""
 "programelor. Puteți să creați imagini, tematici, sunete și să îmbunătățiți "
 "documentația. Dumneavoastră decideți!"
 
-#: formcard/AboutKDE.qml:115 formcard/AboutPage.qml:235
+#: formcard/AboutKDE.qml:114 formcard/AboutPage.qml:234
 #, kde-format
 msgid "Get Involved"
 msgstr "Implică-te"
 
-#: formcard/AboutKDE.qml:123
+#: formcard/AboutKDE.qml:122
 #, kde-format
 msgid "Developer Documentation"
 msgstr "Documentație pentru dezvoltatori"
 
-#: formcard/AboutKDE.qml:129
+#: formcard/AboutKDE.qml:128
 #, kde-format
 msgid "Support us"
 msgstr "Susține-ne"
 
-#: formcard/AboutKDE.qml:134
+#: formcard/AboutKDE.qml:133
 #, kde-format
 msgid ""
 "KDE software is and will always be available free of charge, however "
@@ -336,12 +336,12 @@ msgstr ""
 "\n"
 "Vă mulțumim anticipat pentru sprijinul dumneavoastră."
 
-#: formcard/AboutKDE.qml:146
+#: formcard/AboutKDE.qml:145
 #, kde-format
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDE.qml:154 formcard/AboutPage.qml:222
+#: formcard/AboutKDE.qml:153 formcard/AboutPage.qml:221
 #, kde-format
 msgid "Donate"
 msgstr "Donează"
@@ -352,12 +352,12 @@ msgstr "Donează"
 msgid "About %1"
 msgstr "Despre %1"
 
-#: formcard/AboutPage.qml:134
+#: formcard/AboutPage.qml:133
 #, kde-format
 msgid "Copyright"
 msgstr "Drept de autor"
 
-#: formcard/AboutPage.qml:142
+#: formcard/AboutPage.qml:141
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
@@ -365,37 +365,37 @@ msgstr[0] "Licență"
 msgstr[1] "Licențe"
 msgstr[2] "Licențe"
 
-#: formcard/AboutPage.qml:260
+#: formcard/AboutPage.qml:259
 #, kde-format
 msgid "Report a Bug"
 msgstr "Raportează defect"
 
-#: formcard/AboutPage.qml:267
+#: formcard/AboutPage.qml:266
 #, kde-format
 msgid "Libraries in use"
 msgstr "Biblioteci folosite"
 
-#: formcard/AboutPage.qml:290
+#: formcard/AboutPage.qml:289
 #, kde-format
 msgid "Authors"
 msgstr "Autori"
 
-#: formcard/AboutPage.qml:305
+#: formcard/AboutPage.qml:304
 #, kde-format
 msgid "Credits"
 msgstr "Mulțumiri"
 
-#: formcard/AboutPage.qml:320
+#: formcard/AboutPage.qml:319
 #, kde-format
 msgid "Translators"
 msgstr "Traducători"
 
-#: formcard/AboutPage.qml:389
+#: formcard/AboutPage.qml:388
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Vizitează pagina %1 din Magazinul KDE"
 
-#: formcard/AboutPage.qml:398
+#: formcard/AboutPage.qml:397
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Trimite scrisoare către %1"
