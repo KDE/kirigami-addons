@@ -241,7 +241,7 @@ AbstractFormDelegate {
             if (controlRoot.displayMode === FormComboBoxDelegate.Dialog) {
                 controlRoot.dialog.open();
             } else if (controlRoot.displayMode === FormComboBoxDelegate.Page) {
-                controlRoot._selectionPageItem = controlRoot.ApplicationWindow.window.pageStack.pushDialogLayer(page)
+                controlRoot._selectionPageItem = controlRoot.QQC2.ApplicationWindow.window.pageStack.pushDialogLayer(page)
             } else {
                 combobox.popup.open();
                 combobox.forceActiveFocus(Qt.PopupFocusReason);
