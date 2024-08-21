@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-07 00:39+0000\n"
-"PO-Revision-Date: 2024-02-09 23:45+0100\n"
+"PO-Revision-Date: 2024-08-20 23:35+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,17 +15,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "박신조"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "kde@peremen.name"
 
 #: components/AbstractMaximizeComponent.qml:130
 #, kde-format
@@ -94,31 +94,31 @@ msgstr "다운로드"
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
-msgstr ""
+msgstr "성공"
 
 #: components/MessageDialog.qml:85 components/MessageDialog.qml:91
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
-msgstr ""
+msgstr "경고"
 
 #: components/MessageDialog.qml:87
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
-msgstr ""
+msgstr "오류"
 
 #: components/MessageDialog.qml:89
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
-msgstr ""
+msgstr "정보"
 
 #: components/MessageDialog.qml:206
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
-msgstr ""
+msgstr "다시 보지 않기"
 
 #: components/VideoMaximizeDelegate.qml:267
 #, kde-format
@@ -139,25 +139,19 @@ msgid "Select"
 msgstr "선택"
 
 #: dateandtime/private/DatePicker.qml:271
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Days"
+#, kde-format
 msgid "Day"
 msgstr "일"
 
 #: dateandtime/private/DatePicker.qml:274
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Months"
+#, kde-format
 msgid "Month"
 msgstr "월"
 
 #: dateandtime/private/DatePicker.qml:277
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Years"
+#, kde-format
 msgid "Year"
-msgstr "년"
+msgstr "연도"
 
 #: dateandtime/private/DatePicker.qml:362
 #, kde-format
@@ -178,11 +172,9 @@ msgid "Go Next"
 msgstr "앞으로 이동"
 
 #: dateandtime/TimePicker.qml:97
-#, fuzzy, kde-format
-#| msgctxt "time in hour in 24h format"
-#| msgid "%1 hours"
+#, kde-format
 msgid "Hours"
-msgstr "%1시"
+msgstr "시간"
 
 #: dateandtime/TimePicker.qml:119
 #, kde-format
@@ -191,11 +183,9 @@ msgid ":"
 msgstr ":"
 
 #: dateandtime/TimePicker.qml:134
-#, fuzzy, kde-format
-#| msgctxt "number of minutes"
-#| msgid "%1 minutes"
+#, kde-format
 msgid "Minutes"
-msgstr "%1분"
+msgstr "분"
 
 #: formcard/AboutKDE.qml:23
 #: statefulapplication/abstractkirigamiapplication.cpp:174
@@ -366,8 +356,7 @@ msgid_plural "Licenses"
 msgstr[0] "라이선스"
 
 #: formcard/AboutPage.qml:259
-#, fuzzy, kde-format
-#| msgid "Report a bug"
+#, kde-format
 msgid "Report a Bug"
 msgstr "버그 보고"
 
@@ -405,13 +394,13 @@ msgstr "%1(으)로 이메일 보내기"
 #, kde-format
 msgctxt "@action:button"
 msgid "Color"
-msgstr ""
+msgstr "색상"
 
 #: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:43
 #, kde-format
 msgctxt "Accessible description"
 msgid "Current color \"%1\""
-msgstr ""
+msgstr "현재 색상 \"%1\""
 
 #: formcard/FormDateTimeDelegate.qml:193
 #, kde-format
@@ -448,20 +437,16 @@ msgstr "설정 — %1"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Go back"
-msgstr ""
+msgstr "뒤로 이동"
 
 #: settings/private/ConfigMobilePage.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title"
 msgid "Settings"
 msgstr "설정"
 
 #: settings/private/ConfigMobilePage.qml:83
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title:group"
 msgid "Settings"
 msgstr "설정"
@@ -470,43 +455,43 @@ msgstr "설정"
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Enable automatic spell checking"
-msgstr ""
+msgstr "자동 맞춤법 검사 사용"
 
 #: settings/private/SonnetConfigPage.qml:55
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore uppercase words"
-msgstr ""
+msgstr "대문자 단어 무시"
 
 #: settings/private/SonnetConfigPage.qml:69
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore hyphenated words"
-msgstr ""
+msgstr "하이픈으로 연결된 단어 무시"
 
 #: settings/private/SonnetConfigPage.qml:83
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Detect language automatically"
-msgstr ""
+msgstr "자동으로 언어 감지"
 
 #: settings/private/SonnetConfigPage.qml:96
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Selected default language:"
-msgstr ""
+msgstr "선택한 기본 언어:"
 
 #: settings/private/SonnetConfigPage.qml:97
 #, kde-format
 msgctxt "No selected language"
 msgid "None"
-msgstr ""
+msgstr "없음"
 
 #: settings/private/SonnetConfigPage.qml:117
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Additional Spell Checking Languages"
-msgstr ""
+msgstr "추가 맞춤법 검사 언어"
 
 #: settings/private/SonnetConfigPage.qml:118
 #, kde-format
@@ -514,64 +499,66 @@ msgid ""
 "%1 will provide spell checking and suggestions for the languages listed here "
 "when autodetection is enabled."
 msgstr ""
+"자동 감지를 활성화하면 %1에서 여기에 표시된 언어 감지와 맞춤법 검사를 제공합"
+"니다."
 
 #: settings/private/SonnetConfigPage.qml:131
 #, kde-format
 msgctxt "@action:button"
 msgid "Open Personal Dictionary"
-msgstr ""
+msgstr "개인 사전 열기"
 
 #: settings/private/SonnetConfigPage.qml:143
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking languages"
-msgstr ""
+msgstr "맞춤법 검사 언어"
 
 #: settings/private/SonnetConfigPage.qml:155
 #, kde-format
 msgid "Default Language"
-msgstr ""
+msgstr "기본 언어"
 
 #: settings/private/SonnetConfigPage.qml:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking dictionary"
-msgstr ""
+msgstr "맞춤법 검사 사전"
 
 #: settings/private/SonnetConfigPage.qml:174
 #, kde-format
 msgctxt "Placeholder message"
 msgid "Add a new word to your personal dictionary…"
-msgstr ""
+msgstr "개인 사전에 단어 추가..."
 
 #: settings/private/SonnetConfigPage.qml:177
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Word"
-msgstr ""
+msgstr "단어 추가"
 
 #: settings/private/SonnetConfigPage.qml:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete word"
-msgstr ""
+msgstr "단어 삭제"
 
 #: settings/SpellcheckingConfigurationModule.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Spell Checking"
-msgstr ""
+msgstr "맞춤법 검사"
 
 #: statefulapplication/abstractkirigamiapplication.cpp:145
 #, kde-format
 msgid "Open Command Bar"
-msgstr ""
+msgstr "명령 표시줄 열기"
 
 #: statefulapplication/private/keysequencehelper.cpp:117
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Reserved Shortcut"
-msgstr ""
+msgstr "예약된 단축키"
 
 #: statefulapplication/private/keysequencehelper.cpp:119
 #, kde-format
@@ -581,6 +568,8 @@ msgid ""
 "shortcut.\n"
 "Please choose another one."
 msgstr ""
+"F12 키는 Windows에서 예약되어 있으므로 전역 단축키로 사용할 수 없습니다.\n"
+"다른 키를 선택하십시오"
 
 #: statefulapplication/private/keysequencehelper.cpp:143
 #, kde-format
@@ -588,32 +577,32 @@ msgctxt ""
 "@title:dialog This happen when a global shortcut is already defined with the "
 "same shortcut"
 msgid "Global Shortcut Shadowing"
-msgstr ""
+msgstr "전역 단축키 재정의"
 
 #: statefulapplication/private/keysequencehelper.cpp:146
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination is shadowed by following global actions:\n"
-msgstr ""
+msgstr "'%1' 키 조합은 다음 전역 동작이 우선 순위를 갖습니다:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:148
 #: statefulapplication/private/keysequencehelper.cpp:154
 #, kde-format
 msgctxt "@info"
 msgid "Action '%1' in context '%2'\n"
-msgstr ""
+msgstr "상황 '%2'의 동작 '%1'\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:152
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination shadows following global actions:\n"
-msgstr ""
+msgstr "'%1' 키 조합은 다음 전역 동작을 덮어씁니다:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:193
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Conflict with Standard Application Shortcut"
-msgstr ""
+msgstr "표준 앱 단축키와 충돌"
 
 #: statefulapplication/private/keysequencehelper.cpp:195
 #, kde-format
@@ -623,18 +612,20 @@ msgid ""
 "some applications use.\n"
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
+"'%1' 키 조합은 많은 앱이 사용하는 \"%2\" 표준 동작에 할당되어 있습니다.\n"
+"그래도 전역 단축키로 사용하시겠습니까?"
 
 #: statefulapplication/private/KeySequenceItem.qml:129
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
-msgstr ""
+msgstr "입력"
 
 #: statefulapplication/private/KeySequenceItem.qml:130
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
-msgstr ""
+msgstr "없음"
 
 #: statefulapplication/private/KeySequenceItem.qml:141
 #, kde-format
@@ -642,79 +633,79 @@ msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
+"단추를 클릭한 다음 프로그램에 사용할 단축키를 누르십시오.\n"
+"Ctrl+A를 사용하려면 Ctrl 키를 누르면서 A 키를 누르십시오."
 
 #: statefulapplication/private/KeySequenceItem.qml:182
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
-msgstr ""
+msgstr "키 배열 비우기"
 
 #: statefulapplication/private/KeySequenceItem.qml:198
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel Key Sequence Recording"
-msgstr ""
+msgstr "키 배열 기록 취소"
 
 #: statefulapplication/private/KQuickCommandBarPage.qml:55
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No results found"
-msgstr ""
+msgstr "결과 없음"
 
 #: statefulapplication/private/ShortcutsEditor.qml:18
 #: statefulapplication/StatefulWindow.qml:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcuts"
-msgstr ""
+msgstr "단축키"
 
 #: statefulapplication/private/ShortcutsEditor.qml:22
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Filter…"
-msgstr ""
+msgstr "필터…"
 
 #: statefulapplication/private/ShortcutsEditor.qml:52
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut: %1"
-msgstr ""
+msgstr "단축키: %1"
 
 #: statefulapplication/private/ShortcutsEditor.qml:72
 #, kde-format
 msgctxt "@label"
 msgid "Shortcut:"
-msgstr ""
+msgstr "단축키:"
 
 #: statefulapplication/private/ShortcutsEditor.qml:127
 #: statefulapplication/private/ShortcutsEditor.qml:155
 #, kde-format
 msgctxt "@label"
 msgid "Alternative:"
-msgstr ""
+msgstr "대안:"
 
 #: statefulapplication/private/ShortcutsEditor.qml:193
 #, kde-format
 msgctxt "Placeholder message"
 msgid "No shortcuts found"
-msgstr ""
+msgstr "단축키를 찾을 수 없음"
 
 #: statefulapplication/shortcutsmodel.cpp:41
 #, kde-format
 msgctxt "List separator"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: statefulapplication/StatefulWindow.qml:99
-#, fuzzy, kde-format
-#| msgid "About %1"
+#, kde-format
 msgctxt "@title:window"
 msgid "About %1"
 msgstr "%1 정보"
 
 #: statefulapplication/StatefulWindow.qml:112
-#, fuzzy, kde-format
-#| msgid "About KDE"
+#, kde-format
 msgctxt "@title:window"
 msgid "About KDE"
 msgstr "KDE 정보"
