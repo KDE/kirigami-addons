@@ -211,6 +211,39 @@ AbstractFormDelegate {
     }
 
     /**
+     * @brief This property holds the current status message type of
+     * the text field.
+     *
+     * This consists of an inline message with a colorful background
+     * and an appropriate icon.
+     *
+     * The status property will affect the color of ::statusMessage used.
+     *
+     * Accepted values:
+     * - `Kirigami.MessageType.Information` (blue color)
+     * - `Kirigami.MessageType.Positive` (green color)
+     * - `Kirigami.MessageType.Warning` (orange color)
+     * - `Kirigami.MessageType.Error` (red color)
+     *
+     * default: `Kirigami.MessageType.Information` if ::statusMessage is set,
+     * nothing otherwise.
+     *
+     * @see Kirigami.MessageType
+     * @since 1.5.0
+     */
+    property var status: Kirigami.MessageType.Information
+
+    /**
+     * @brief This property holds the current status message of
+     * the text field.
+     *
+     * If this property is not set, no ::status will be shown.
+     *
+     * @since 1.5.0
+     */
+    property string statusMessage: ""
+
+    /**
      * @brief Closes the dialog or layer.
      *
      * This function can be used when reimplementing the ::page or ::dialog.
@@ -360,6 +393,14 @@ AbstractFormDelegate {
             color: Kirigami.Theme.disabledTextColor
             wrapMode: Text.Wrap
             Accessible.ignored: true
+        }
+
+        Kirigami.InlineMessage {
+            visible: controlRoot.statusMessage.length > 0
+            Layout.topMargin: visible ? Kirigami.Units.smallSpacing : 0
+            Layout.fillWidth: true
+            text: controlRoot.statusMessage
+            type: controlRoot.status
         }
     }
 }
