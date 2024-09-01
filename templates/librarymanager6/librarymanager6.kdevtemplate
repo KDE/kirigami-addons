@@ -1,0 +1,7 @@
+# KDE Config File
+[General]
+Name=Multimedia Manager with Kirigami (Qt6)
+Comment=Simple app used for multimedia managements (books, videos, games, ...)
+Category=Qt/Graphical
+Icon=kirigami-app.png
+ShowFilesAfterGeneration=src/main.cpp

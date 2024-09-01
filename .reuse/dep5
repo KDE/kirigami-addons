@@ -15,6 +15,6 @@ Files: examples/FormCardTutorial/*
 Copyright: 2023 by Thiago Masato Costa Sueto <thiago.sueto@kde.org>
 License: LGPL-2.1-or-later
 
-Files: templates/kirigamiaddons6/kirigami-app.png templates/kirigamiaddons6/kirigami.kdevtemplate  templates/kirigamiaddons6/android/res/drawable/*
+Files: templates/kirigamiaddons6/kirigami-app.png templates/kirigamiaddons6/kirigami.kdevtemplate  templates/kirigamiaddons6/android/res/drawable/* templates/librarymanager6/kirigami-app.png templates/librarymanager6/librarymanager6.kdevtemplate  templates/librarymanager6/android/res/drawable/*
 Copyright: none
 License: CC0-1.0
