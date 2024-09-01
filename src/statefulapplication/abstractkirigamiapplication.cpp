@@ -174,7 +174,7 @@ void AbstractKirigamiApplication::setupActions()
         action->setText(i18n("About KDE"));
         action->setIcon(QIcon::fromTheme(QStringLiteral("kde")));
 
-        if (KAboutData::applicationData().desktopFileName().startsWith(u"org.kde."_s)) {
+        if (!KAboutData::applicationData().desktopFileName().startsWith(u"org.kde."_s)) {
             action->setVisible(false);
         }
     }
