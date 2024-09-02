@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-07 00:39+0000\n"
+"POT-Creation-Date: 2024-09-02 00:38+0000\n"
 "PO-Revision-Date: 2024-07-18 17:20+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -190,23 +190,23 @@ msgstr ":"
 msgid "Minutes"
 msgstr "分鐘"
 
-#: formcard/AboutKDE.qml:23
+#: formcard/AboutKDEPage.qml:23
 #: statefulapplication/abstractkirigamiapplication.cpp:174
 #, kde-format
 msgid "About KDE"
 msgstr "關於 KDE"
 
-#: formcard/AboutKDE.qml:49
+#: formcard/AboutKDEPage.qml:49
 #, kde-format
 msgid "KDE"
 msgstr "KDE"
 
-#: formcard/AboutKDE.qml:58
+#: formcard/AboutKDEPage.qml:58
 #, kde-format
 msgid "Be Free!"
 msgstr "擁抱自由！"
 
-#: formcard/AboutKDE.qml:67
+#: formcard/AboutKDEPage.qml:67
 #, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
@@ -226,17 +226,17 @@ msgstr ""
 "KDE 是個合作企業：沒有任何人操控 KDE 的目標和產品，取而代之的是一起達到建立世"
 "界上最好自由軟體的共同目標。歡迎任何人 -- 包括您。"
 
-#: formcard/AboutKDE.qml:75 formcard/AboutPage.qml:208
+#: formcard/AboutKDEPage.qml:75 formcard/AboutPage.qml:208
 #, kde-format
 msgid "Homepage"
 msgstr "首頁"
 
-#: formcard/AboutKDE.qml:81
+#: formcard/AboutKDEPage.qml:81
 #, kde-format
 msgid "Report bugs"
 msgstr "回報問題"
 
-#: formcard/AboutKDE.qml:86
+#: formcard/AboutKDEPage.qml:86
 #, kde-format
 msgid ""
 "Software can always be improved, and the KDE team is ready to do so. "
@@ -259,17 +259,17 @@ msgstr ""
 "如果您有改善的建議，您也可以使用問題追蹤系統來寫下您的希望。此時請使用"
 "「Wishlist」（願望清單）作為問題的嚴重程度。"
 
-#: formcard/AboutKDE.qml:95
+#: formcard/AboutKDEPage.qml:95
 #, kde-format
 msgid "Report a bug"
 msgstr "回報問題"
 
-#: formcard/AboutKDE.qml:101
+#: formcard/AboutKDEPage.qml:101
 #, kde-format
 msgid "Join us"
 msgstr "加入我們"
 
-#: formcard/AboutKDE.qml:106
+#: formcard/AboutKDEPage.qml:106
 #, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
@@ -279,22 +279,22 @@ msgstr ""
 "您不需要是軟體工程師也可以成為 KDE 團隊的一份子。您可以加入翻譯團隊來翻譯程式"
 "的介面。您可以提供圖形、佈景主題、音效，或幫忙撰寫文件，看您喜歡做哪一項。"
 
-#: formcard/AboutKDE.qml:114 formcard/AboutPage.qml:234
+#: formcard/AboutKDEPage.qml:114 formcard/AboutPage.qml:234
 #, kde-format
 msgid "Get Involved"
 msgstr "參與"
 
-#: formcard/AboutKDE.qml:122
+#: formcard/AboutKDEPage.qml:122
 #, kde-format
 msgid "Developer Documentation"
 msgstr "開發者說明文件"
 
-#: formcard/AboutKDE.qml:128
+#: formcard/AboutKDEPage.qml:128
 #, kde-format
 msgid "Support us"
 msgstr "支援我們"
 
-#: formcard/AboutKDE.qml:133
+#: formcard/AboutKDEPage.qml:133
 #, kde-format
 msgid ""
 "KDE software is and will always be available free of charge, however "
@@ -326,12 +326,12 @@ msgstr ""
 "\n"
 "我們非常感謝您對 KDE 的支持。"
 
-#: formcard/AboutKDE.qml:145
+#: formcard/AboutKDEPage.qml:145
 #, kde-format
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDE.qml:153 formcard/AboutPage.qml:221
+#: formcard/AboutKDEPage.qml:153 formcard/AboutPage.qml:221
 #, kde-format
 msgid "Donate"
 msgstr "贊助"

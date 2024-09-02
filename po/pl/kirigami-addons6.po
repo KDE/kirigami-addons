@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-07 00:39+0000\n"
+"POT-Creation-Date: 2024-09-02 00:38+0000\n"
 "PO-Revision-Date: 2024-07-06 11:28+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -188,23 +188,23 @@ msgstr ":"
 msgid "Minutes"
 msgstr "Minuty"
 
-#: formcard/AboutKDE.qml:23
+#: formcard/AboutKDEPage.qml:23
 #: statefulapplication/abstractkirigamiapplication.cpp:174
 #, kde-format
 msgid "About KDE"
 msgstr "O KDE"
 
-#: formcard/AboutKDE.qml:49
+#: formcard/AboutKDEPage.qml:49
 #, kde-format
 msgid "KDE"
 msgstr "KDE"
 
-#: formcard/AboutKDE.qml:58
+#: formcard/AboutKDEPage.qml:58
 #, kde-format
 msgid "Be Free!"
 msgstr "Bądź wolny!"
 
-#: formcard/AboutKDE.qml:67
+#: formcard/AboutKDEPage.qml:67
 #, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
@@ -228,17 +228,17 @@ msgstr ""
 "Oprogramowania. Zachęcamy każdego do dołączenia i współtworzenia, także "
 "ciebie."
 
-#: formcard/AboutKDE.qml:75 formcard/AboutPage.qml:208
+#: formcard/AboutKDEPage.qml:75 formcard/AboutPage.qml:208
 #, kde-format
 msgid "Homepage"
 msgstr "Strona domowa"
 
-#: formcard/AboutKDE.qml:81
+#: formcard/AboutKDEPage.qml:81
 #, kde-format
 msgid "Report bugs"
 msgstr "Zgłoś błąd"
 
-#: formcard/AboutKDE.qml:86
+#: formcard/AboutKDEPage.qml:86
 #, kde-format
 msgid ""
 "Software can always be improved, and the KDE team is ready to do so. "
@@ -264,17 +264,17 @@ msgstr ""
 "pomysł propozycję w systemie obsługi błędów. Upewnij się tylko, że ustawisz "
 "wagę błędu na \"Życzenie\"."
 
-#: formcard/AboutKDE.qml:95
+#: formcard/AboutKDEPage.qml:95
 #, kde-format
 msgid "Report a bug"
 msgstr "Zgłoś błąd"
 
-#: formcard/AboutKDE.qml:101
+#: formcard/AboutKDEPage.qml:101
 #, kde-format
 msgid "Join us"
 msgstr "Dołącz do nas"
 
-#: formcard/AboutKDE.qml:106
+#: formcard/AboutKDEPage.qml:106
 #, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
@@ -285,22 +285,22 @@ msgstr ""
 "przyłączyć się do lokalnej grupy tłumaczy na twój język. Możesz dostarczyć "
 "nam grafiki, motywy, dźwięki lub poprawić dokumentację. Ty decydujesz!"
 
-#: formcard/AboutKDE.qml:114 formcard/AboutPage.qml:234
+#: formcard/AboutKDEPage.qml:114 formcard/AboutPage.qml:234
 #, kde-format
 msgid "Get Involved"
 msgstr "Współtwórz"
 
-#: formcard/AboutKDE.qml:122
+#: formcard/AboutKDEPage.qml:122
 #, kde-format
 msgid "Developer Documentation"
 msgstr "Dokumentacja programisty"
 
-#: formcard/AboutKDE.qml:128
+#: formcard/AboutKDEPage.qml:128
 #, kde-format
 msgid "Support us"
 msgstr "Wesprzyj nas"
 
-#: formcard/AboutKDE.qml:133
+#: formcard/AboutKDEPage.qml:133
 #, kde-format
 msgid ""
 "KDE software is and will always be available free of charge, however "
@@ -336,12 +336,12 @@ msgstr ""
 "\n"
 "Z góry dziękujemy za wszelką pomoc."
 
-#: formcard/AboutKDE.qml:145
+#: formcard/AboutKDEPage.qml:145
 #, kde-format
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDE.qml:153 formcard/AboutPage.qml:221
+#: formcard/AboutKDEPage.qml:153 formcard/AboutPage.qml:221
 #, kde-format
 msgid "Donate"
 msgstr "Darowizna"

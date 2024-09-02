@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-07 00:39+0000\n"
+"POT-Creation-Date: 2024-09-02 00:38+0000\n"
 "PO-Revision-Date: 2024-08-20 23:35+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -187,23 +187,23 @@ msgstr ":"
 msgid "Minutes"
 msgstr "분"
 
-#: formcard/AboutKDE.qml:23
+#: formcard/AboutKDEPage.qml:23
 #: statefulapplication/abstractkirigamiapplication.cpp:174
 #, kde-format
 msgid "About KDE"
 msgstr "KDE 정보"
 
-#: formcard/AboutKDE.qml:49
+#: formcard/AboutKDEPage.qml:49
 #, kde-format
 msgid "KDE"
 msgstr "KDE"
 
-#: formcard/AboutKDE.qml:58
+#: formcard/AboutKDEPage.qml:58
 #, kde-format
 msgid "Be Free!"
 msgstr "자유롭게!"
 
-#: formcard/AboutKDE.qml:67
+#: formcard/AboutKDEPage.qml:67
 #, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
@@ -225,17 +225,17 @@ msgstr ""
 "께 힘을 모으고 있습니다. KDE에는 이 글을 읽는 여러분과 같은 누구나 참여하고 "
 "기여할 수 있습니다."
 
-#: formcard/AboutKDE.qml:75 formcard/AboutPage.qml:208
+#: formcard/AboutKDEPage.qml:75 formcard/AboutPage.qml:208
 #, kde-format
 msgid "Homepage"
 msgstr "홈페이지"
 
-#: formcard/AboutKDE.qml:81
+#: formcard/AboutKDEPage.qml:81
 #, kde-format
 msgid "Report bugs"
 msgstr "버그 보고"
 
-#: formcard/AboutKDE.qml:86
+#: formcard/AboutKDEPage.qml:86
 #, kde-format
 msgid ""
 "Software can always be improved, and the KDE team is ready to do so. "
@@ -259,17 +259,17 @@ msgstr ""
 "개선 사항 제안을 하고 싶으시다면 버그 보고 시스템을 통해서 알려 주십시오. 이 "
 "경우 심각성 항목에서 \"Wishlist\"를 선택하셔야 합니다."
 
-#: formcard/AboutKDE.qml:95
+#: formcard/AboutKDEPage.qml:95
 #, kde-format
 msgid "Report a bug"
 msgstr "버그 보고"
 
-#: formcard/AboutKDE.qml:101
+#: formcard/AboutKDEPage.qml:101
 #, kde-format
 msgid "Join us"
 msgstr "참여하기"
 
-#: formcard/AboutKDE.qml:106
+#: formcard/AboutKDEPage.qml:106
 #, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
@@ -280,22 +280,22 @@ msgstr ""
 "를 번역하는 각 언어 번역팀을 도울 수도 있습니다. 또한 그래픽, 테마, 소리, 더 "
 "나은 문서 등을 기여할 수도 있습니다. 직접 결정하십시오!"
 
-#: formcard/AboutKDE.qml:114 formcard/AboutPage.qml:234
+#: formcard/AboutKDEPage.qml:114 formcard/AboutPage.qml:234
 #, kde-format
 msgid "Get Involved"
 msgstr "참여하기"
 
-#: formcard/AboutKDE.qml:122
+#: formcard/AboutKDEPage.qml:122
 #, kde-format
 msgid "Developer Documentation"
 msgstr "개발자 문서"
 
-#: formcard/AboutKDE.qml:128
+#: formcard/AboutKDEPage.qml:128
 #, kde-format
 msgid "Support us"
 msgstr "지원하기"
 
-#: formcard/AboutKDE.qml:133
+#: formcard/AboutKDEPage.qml:133
 #, kde-format
 msgid ""
 "KDE software is and will always be available free of charge, however "
@@ -328,12 +328,12 @@ msgstr ""
 "\n"
 "여러분의 협조에  미리 감사드립니다."
 
-#: formcard/AboutKDE.qml:145
+#: formcard/AboutKDEPage.qml:145
 #, kde-format
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDE.qml:153 formcard/AboutPage.qml:221
+#: formcard/AboutKDEPage.qml:153 formcard/AboutPage.qml:221
 #, kde-format
 msgid "Donate"
 msgstr "기부하기"
