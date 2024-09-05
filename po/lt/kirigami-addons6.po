@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-02 00:38+0000\n"
-"PO-Revision-Date: 2024-01-31 18:00+0200\n"
+"PO-Revision-Date: 2024-09-05 00:33+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Moo"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "<>"
 
 #: components/AbstractMaximizeComponent.qml:130
 #, kde-format
@@ -96,31 +96,31 @@ msgstr "Atsisiųsti"
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
-msgstr ""
+msgstr "Pavyko"
 
 #: components/MessageDialog.qml:85 components/MessageDialog.qml:91
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
-msgstr ""
+msgstr "Įspėjimas"
 
 #: components/MessageDialog.qml:87
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
-msgstr ""
+msgstr "Klaida"
 
 #: components/MessageDialog.qml:89
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
-msgstr ""
+msgstr "Informacija"
 
 #: components/MessageDialog.qml:206
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
-msgstr ""
+msgstr "Daugiau neberodyti"
 
 #: components/VideoMaximizeDelegate.qml:267
 #, kde-format
@@ -143,17 +143,17 @@ msgstr "Pasirinkti"
 #: dateandtime/private/DatePicker.qml:271
 #, kde-format
 msgid "Day"
-msgstr ""
+msgstr "Diena"
 
 #: dateandtime/private/DatePicker.qml:274
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "Mėnesis"
 
 #: dateandtime/private/DatePicker.qml:277
 #, kde-format
 msgid "Year"
-msgstr ""
+msgstr "Metai"
 
 #: dateandtime/private/DatePicker.qml:362
 #, kde-format
@@ -409,13 +409,13 @@ msgstr "Siųsti el. laišką, adresu %1"
 #, kde-format
 msgctxt "@action:button"
 msgid "Color"
-msgstr ""
+msgstr "Spalva"
 
 #: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:43
 #, kde-format
 msgctxt "Accessible description"
 msgid "Current color \"%1\""
-msgstr ""
+msgstr "Dabartinė spalva „%1“"
 
 #: formcard/FormDateTimeDelegate.qml:193
 #, kde-format
@@ -452,7 +452,7 @@ msgstr "Nuostatos – %1"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Go back"
-msgstr ""
+msgstr "Grįžti"
 
 #: settings/private/ConfigMobilePage.qml:24
 #, fuzzy, kde-format
@@ -707,7 +707,7 @@ msgstr ""
 #, kde-format
 msgctxt "List separator"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: statefulapplication/StatefulWindow.qml:99
 #, fuzzy, kde-format
