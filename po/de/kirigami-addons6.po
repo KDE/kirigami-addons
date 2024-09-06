@@ -8,7 +8,7 @@
 # Automatically generated, 2021.
 msgid ""
 msgstr ""
-"Project-Id-Version: kirigami-addons\n"
+"Project-Id-Version: kirigami-addons6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-02 00:38+0000\n"
 "PO-Revision-Date: 2023-08-13 16:36+0200\n"
