@@ -4,6 +4,7 @@
 # This file is distributed under the same license as the kirigami-addons package.
 # Frederik Schwarzer <schwarzer@kde.org>, 2021, 2022, 2023.
 # Frank Steinmetzger <dev-kde@felsenfleischer.de>, 2022.
+# SPDX-FileCopyrightText: 2024 Alois Spitzbart <spitz234@hotmail.com>
 #
 # Automatically generated, 2021.
 msgid ""
@@ -11,25 +12,25 @@ msgstr ""
 "Project-Id-Version: kirigami-addons6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-02 00:38+0000\n"
-"PO-Revision-Date: 2023-08-13 16:36+0200\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2024-09-08 16:14+0200\n"
+"Last-Translator: Alois.spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Deutsches KDE-Übersetzerteam"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "kde-i18n-de@kde.org"
 
 #: components/AbstractMaximizeComponent.qml:130
 #, kde-format
@@ -98,31 +99,31 @@ msgstr "Herunterladen"
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
-msgstr ""
+msgstr "Erfolg"
 
 #: components/MessageDialog.qml:85 components/MessageDialog.qml:91
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
-msgstr ""
+msgstr "Warnung"
 
 #: components/MessageDialog.qml:87
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
-msgstr ""
+msgstr "Fehler"
 
 #: components/MessageDialog.qml:89
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
-msgstr ""
+msgstr "Information"
 
 #: components/MessageDialog.qml:206
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
-msgstr ""
+msgstr "Nicht wieder anzeigen"
 
 #: components/VideoMaximizeDelegate.qml:267
 #, kde-format
@@ -131,8 +132,7 @@ msgid "Volume"
 msgstr "Lautstärke"
 
 #: dateandtime/DatePopup.qml:87 dateandtime/TimePopup.qml:52
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Abbrechen"
@@ -141,53 +141,45 @@ msgstr "Abbrechen"
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
-msgstr ""
+msgstr "Auswählen"
 
 #: dateandtime/private/DatePicker.qml:271
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Days"
+#, kde-format
 msgid "Day"
-msgstr "Tage"
+msgstr "Tag"
 
 #: dateandtime/private/DatePicker.qml:274
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Months"
+#, kde-format
 msgid "Month"
-msgstr "Monate"
+msgstr "Monat"
 
 #: dateandtime/private/DatePicker.qml:277
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Years"
+#, kde-format
 msgid "Year"
-msgstr "Jahre"
+msgstr "Jahr"
 
 #: dateandtime/private/DatePicker.qml:362
-#, fuzzy, kde-format
-#| msgid "Previous"
+#, kde-format
 msgctxt "@action:button"
 msgid "Go Previous"
-msgstr "Zurück"
+msgstr "Zum vorigen gehen"
 
 #: dateandtime/private/DatePicker.qml:375
 #, kde-format
 msgctxt "@action:button"
 msgid "Jump to today"
-msgstr ""
+msgstr "Heutigen Tag anzeigen"
 
 #: dateandtime/private/DatePicker.qml:382
-#, fuzzy, kde-format
-#| msgid "Next"
+#, kde-format
 msgctxt "@action:button"
 msgid "Go Next"
-msgstr "Weiter"
+msgstr "Zum nächsten gehen"
 
 #: dateandtime/TimePicker.qml:97
 #, kde-format
 msgid "Hours"
-msgstr ""
+msgstr "Stunden"
 
 #: dateandtime/TimePicker.qml:119
 #, kde-format
@@ -198,7 +190,7 @@ msgstr ":"
 #: dateandtime/TimePicker.qml:134
 #, kde-format
 msgid "Minutes"
-msgstr ""
+msgstr "Minuten"
 
 #: formcard/AboutKDEPage.qml:23
 #: statefulapplication/abstractkirigamiapplication.cpp:174
@@ -245,8 +237,7 @@ msgid "Homepage"
 msgstr "Startseite"
 
 #: formcard/AboutKDEPage.qml:81
-#, fuzzy, kde-format
-#| msgid "Report a bug"
+#, kde-format
 msgid "Report bugs"
 msgstr "Probleme oder Wünsche berichten"
 
@@ -264,6 +255,19 @@ msgid ""
 "tracking system to register your wish. Make sure you use the severity called "
 "\"Wishlist\"."
 msgstr ""
+"Software kann immer verbessert werden, und das KDE-Team ist bereit, dies zu "
+"tun. Allerdings müssen Sie als Benutzer uns sagen, wenn etwas nicht wie "
+"erwartet funktioniert oder verbessert werden kann.\n"
+"\n"
+"KDE besitzt ein System zum Verfolgen von Problemen. Verwenden Sie die "
+"Schaltfläche unten, um einen Fehler zu melden, oder verwenden Sie die Info-"
+"Seite des Programms, um einen Fehler speziell für diese Anwendung zu "
+"melden.\n"
+"\n"
+"Auch wenn Sie einen Verbesserungsvorschlag haben, können Sie gerne das "
+"System für die Fehlerverfolgung benutzen, um Ihren Wunsch zu registrieren. "
+"Stellen Sie nur sicher, dass Sie unter „Severity“ („Schweregrad“) die "
+"Auswahl „Wishlist“ treffen."
 
 #: formcard/AboutKDEPage.qml:95
 #, kde-format
@@ -273,22 +277,17 @@ msgstr "Probleme oder Wünsche berichten"
 #: formcard/AboutKDEPage.qml:101
 #, kde-format
 msgid "Join us"
-msgstr ""
+msgstr "Mitmachen"
 
 #: formcard/AboutKDEPage.qml:106
-#, fuzzy, kde-format
-#| msgid ""
-#| "You do not have to be a software developer to be a member of the KDE "
-#| "team. You can join the national teams that translate program interfaces. "
-#| "You can provide graphics, themes, sounds, and improved documentation. You "
-#| "decide!"
+#, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
 "You can join the language teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
 "Sie brauchen kein Programmierer zu sein, um ein Mitglied des KDE-Teams zu "
-"werden. Sie können den nationalen Gruppen beitreten, die Programmoberflächen "
+"werden. Sie können den Sprachgruppen beitreten, die Programmoberflächen "
 "übersetzen. Sie können Grafik, Design, Klänge oder verbesserte Dokumentation "
 "beitragen. Entscheiden Sie selbst."
 
@@ -327,6 +326,24 @@ msgid ""
 "\n"
 "Thank you very much in advance for your support."
 msgstr ""
+"Die Software von KDE ist kostenlos und wird es auch bleiben; die Entwicklung "
+"ist dagegen nicht kostenlos.\n"
+"\n"
+"Zur Unterstützung der Entwicklung hat die Projektgemeinschaft den „KDE e. "
+"V.“ gegründet. Es handelt sich dabei um einen gemeinnützigen Verein, der in "
+"Tübingen eingetragen ist. Der KDE e. V. repräsentiert die Gemeinschaft in "
+"juristischen und finanziellen Angelegenheiten.\n"
+"\n"
+"KDE profitiert von vielen Arten der Unterstützung (einschl. finanzieller). "
+"Die Mittel werden zur Erstattung von Kosten verwendet, die Mitgliedern und "
+"anderen Helfern im Rahmen ihres Mitwirkens entstanden sind. Weitere Mittel "
+"werden für die rechtliche Unterstützung und der Verwaltung von Konferenzen "
+"und Treffen verwendet.\n"
+"\n"
+"Wir möchten Sie dazu ermutigen, unsere Arbeit durch eine finanzielle Spende "
+"zu unterstützen.\n"
+"\n"
+"Für diese Unterstützung möchten wir uns im Voraus bedanken."
 
 #: formcard/AboutKDEPage.qml:145
 #, kde-format
@@ -357,8 +374,7 @@ msgstr[0] "Lizenz"
 msgstr[1] "Lizenzen"
 
 #: formcard/AboutPage.qml:259
-#, fuzzy, kde-format
-#| msgid "Report a bug"
+#, kde-format
 msgid "Report a Bug"
 msgstr "Probleme oder Wünsche berichten"
 
@@ -385,28 +401,27 @@ msgstr "Übersetzer"
 #: formcard/AboutPage.qml:388
 #, kde-format
 msgid "Visit %1's KDE Store page"
-msgstr ""
+msgstr "Besuchen Sie %1 im KDE Store"
 
 #: formcard/AboutPage.qml:397
 #, kde-format
 msgid "Send an email to %1"
-msgstr ""
+msgstr "Eine E-Mail an %1 senden"
 
 #: formcard/android/FormColorDelegate.qml:42 formcard/FormColorDelegate.qml:42
 #, kde-format
 msgctxt "@action:button"
 msgid "Color"
-msgstr ""
+msgstr "Farbe"
 
 #: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:43
 #, kde-format
 msgctxt "Accessible description"
 msgid "Current color \"%1\""
-msgstr ""
+msgstr "Aktuelle Farbe „%1“"
 
 #: formcard/FormDateTimeDelegate.qml:193
-#, fuzzy, kde-format
-#| msgid "Today"
+#, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
 msgid "Today"
 msgstr "Heute"
@@ -415,14 +430,14 @@ msgstr "Heute"
 #, kde-format
 msgctxt "Date is not set"
 msgid "Not set"
-msgstr ""
+msgstr "Nicht eingestellt"
 
 #: formcard/FormPasswordFieldDelegate.qml:230
 #: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:233
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
-msgstr ""
+msgstr "%1/%2"
 
 #: settings/CategorizedSettings.qml:45 settings/ConfigurationView.qml:81
 #, kde-format
@@ -440,20 +455,16 @@ msgstr "Einstellungen — %1"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Go back"
-msgstr ""
+msgstr "Zurück gehen"
 
 #: settings/private/ConfigMobilePage.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title"
 msgid "Settings"
 msgstr "Einstellungen"
 
 #: settings/private/ConfigMobilePage.qml:83
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title:group"
 msgid "Settings"
 msgstr "Einstellungen"
@@ -462,43 +473,43 @@ msgstr "Einstellungen"
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Enable automatic spell checking"
-msgstr ""
+msgstr "Automatische Rechtschreibprüfung aktivieren"
 
 #: settings/private/SonnetConfigPage.qml:55
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore uppercase words"
-msgstr ""
+msgstr "Durchgehend groß geschriebene Wörter ignorieren"
 
 #: settings/private/SonnetConfigPage.qml:69
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore hyphenated words"
-msgstr ""
+msgstr "Bindestrichwörter ignorieren"
 
 #: settings/private/SonnetConfigPage.qml:83
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Detect language automatically"
-msgstr ""
+msgstr "Sprache automatisch erkennen"
 
 #: settings/private/SonnetConfigPage.qml:96
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Selected default language:"
-msgstr ""
+msgstr "Ausgewählte Standardsprache:"
 
 #: settings/private/SonnetConfigPage.qml:97
 #, kde-format
 msgctxt "No selected language"
 msgid "None"
-msgstr ""
+msgstr "Keine"
 
 #: settings/private/SonnetConfigPage.qml:117
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Additional Spell Checking Languages"
-msgstr ""
+msgstr "Zusätzliche Sprachen für Rechtschreibprüfung"
 
 #: settings/private/SonnetConfigPage.qml:118
 #, kde-format
@@ -506,64 +517,66 @@ msgid ""
 "%1 will provide spell checking and suggestions for the languages listed here "
 "when autodetection is enabled."
 msgstr ""
+"%1 bietet Rechtschreibprüfung und -vorschläge für die hier aufgelisteten "
+"Sprachen an, wenn die automatische Erkennung aktiv ist."
 
 #: settings/private/SonnetConfigPage.qml:131
 #, kde-format
 msgctxt "@action:button"
 msgid "Open Personal Dictionary"
-msgstr ""
+msgstr "Persönliches Wörterbuch öffnen"
 
 #: settings/private/SonnetConfigPage.qml:143
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking languages"
-msgstr ""
+msgstr "Sprachen für Rechtschreibprüfung"
 
 #: settings/private/SonnetConfigPage.qml:155
 #, kde-format
 msgid "Default Language"
-msgstr ""
+msgstr "Standardsprache"
 
 #: settings/private/SonnetConfigPage.qml:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking dictionary"
-msgstr ""
+msgstr "Wörterbuch für Rechtschreibprüfung"
 
 #: settings/private/SonnetConfigPage.qml:174
 #, kde-format
 msgctxt "Placeholder message"
 msgid "Add a new word to your personal dictionary…"
-msgstr ""
+msgstr "Ein neues Wort zu Ihrem persönlichen Wörterbuch hinzufügen …"
 
 #: settings/private/SonnetConfigPage.qml:177
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Word"
-msgstr ""
+msgstr "Wort hinzufügen"
 
 #: settings/private/SonnetConfigPage.qml:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete word"
-msgstr ""
+msgstr "Wort löschen"
 
 #: settings/SpellcheckingConfigurationModule.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Spell Checking"
-msgstr ""
+msgstr "Rechtschreibprüfung"
 
 #: statefulapplication/abstractkirigamiapplication.cpp:145
 #, kde-format
 msgid "Open Command Bar"
-msgstr ""
+msgstr "Befehlsleiste öffnen"
 
 #: statefulapplication/private/keysequencehelper.cpp:117
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Reserved Shortcut"
-msgstr ""
+msgstr "Reservierter Kurzbefehl"
 
 #: statefulapplication/private/keysequencehelper.cpp:119
 #, kde-format
@@ -573,6 +586,9 @@ msgid ""
 "shortcut.\n"
 "Please choose another one."
 msgstr ""
+"Die Taste „F12“ ist unter Windows reserviert, kann also nicht als globaler "
+"Kurzbefehl verwendet werden.\n"
+"Bitte wählen Sie eine andere Taste."
 
 #: statefulapplication/private/keysequencehelper.cpp:143
 #, kde-format
@@ -580,32 +596,35 @@ msgctxt ""
 "@title:dialog This happen when a global shortcut is already defined with the "
 "same shortcut"
 msgid "Global Shortcut Shadowing"
-msgstr ""
+msgstr "Überschreiben globaler Kurzbefehle"
 
 #: statefulapplication/private/keysequencehelper.cpp:146
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination is shadowed by following global actions:\n"
 msgstr ""
+"Die Tastenkombination „%1“ wird von den folgenden globalen Aktionen "
+"überschrieben:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:148
 #: statefulapplication/private/keysequencehelper.cpp:154
 #, kde-format
 msgctxt "@info"
 msgid "Action '%1' in context '%2'\n"
-msgstr ""
+msgstr "Aktion „%1“ in Zusammenhang „%2“\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:152
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination shadows following global actions:\n"
 msgstr ""
+"Die Tastenkombination „%1“ überschreibt die folgenden globalen Aktionen:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:193
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Conflict with Standard Application Shortcut"
-msgstr ""
+msgstr "Konflikt mit Standard-Kurzbefehl des Programms"
 
 #: statefulapplication/private/keysequencehelper.cpp:195
 #, kde-format
@@ -615,18 +634,21 @@ msgid ""
 "some applications use.\n"
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
+"Die Tastenkombination „%1“ ist bereits der Standard-Aktion „%2“ zugeordnet, "
+"die von einigen Anwendungen benutzt wird.\n"
+"Möchten Sie sie wirklich auch als globales Tastenkürzel verwenden?"
 
 #: statefulapplication/private/KeySequenceItem.qml:129
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
-msgstr ""
+msgstr "Eingabe"
 
 #: statefulapplication/private/KeySequenceItem.qml:130
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
-msgstr ""
+msgstr "Keiner"
 
 #: statefulapplication/private/KeySequenceItem.qml:141
 #, kde-format
@@ -634,79 +656,81 @@ msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
+"Klicken Sie auf den Knopf und drücken Sie dann die Tasten für den Kurzbefehl "
+"auf der Tastatur.\n"
+"Beispielsweise für Strg+A: Halten Sie die Strg-Taste gedrückt und drücken "
+"Sie dann „A“."
 
 #: statefulapplication/private/KeySequenceItem.qml:182
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
-msgstr ""
+msgstr "Tastenfolge löschen"
 
 #: statefulapplication/private/KeySequenceItem.qml:198
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel Key Sequence Recording"
-msgstr ""
+msgstr "Tastenfolgen-Aufnahme abbrechen"
 
 #: statefulapplication/private/KQuickCommandBarPage.qml:55
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No results found"
-msgstr ""
+msgstr "Keine Ergebnisse gefunden"
 
 #: statefulapplication/private/ShortcutsEditor.qml:18
 #: statefulapplication/StatefulWindow.qml:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcuts"
-msgstr ""
+msgstr "Kurzbefehle"
 
 #: statefulapplication/private/ShortcutsEditor.qml:22
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Filter…"
-msgstr ""
+msgstr "Filter …"
 
 #: statefulapplication/private/ShortcutsEditor.qml:52
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut: %1"
-msgstr ""
+msgstr "Kurzbefehl: %1"
 
 #: statefulapplication/private/ShortcutsEditor.qml:72
 #, kde-format
 msgctxt "@label"
 msgid "Shortcut:"
-msgstr ""
+msgstr "Kurzbefehl:"
 
 #: statefulapplication/private/ShortcutsEditor.qml:127
 #: statefulapplication/private/ShortcutsEditor.qml:155
 #, kde-format
 msgctxt "@label"
 msgid "Alternative:"
-msgstr ""
+msgstr "Alternative:"
 
 #: statefulapplication/private/ShortcutsEditor.qml:193
 #, kde-format
 msgctxt "Placeholder message"
 msgid "No shortcuts found"
-msgstr ""
+msgstr "Keine Kurzbefehle gefunden"
 
 #: statefulapplication/shortcutsmodel.cpp:41
 #, kde-format
 msgctxt "List separator"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: statefulapplication/StatefulWindow.qml:99
-#, fuzzy, kde-format
-#| msgid "About %1"
+#, kde-format
 msgctxt "@title:window"
 msgid "About %1"
 msgstr "Über %1"
 
 #: statefulapplication/StatefulWindow.qml:112
-#, fuzzy, kde-format
-#| msgid "About KDE"
+#, kde-format
 msgctxt "@title:window"
 msgid "About KDE"
 msgstr "Über KDE"
