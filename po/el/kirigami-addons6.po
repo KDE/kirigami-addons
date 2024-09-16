@@ -129,8 +129,7 @@ msgid "Volume"
 msgstr "Ένταση"
 
 #: dateandtime/DatePopup.qml:87 dateandtime/TimePopup.qml:52
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Ακύρωση"
@@ -388,8 +387,7 @@ msgstr[0] "Άδεια χρήσης"
 msgstr[1] "Άδειες χρήσης"
 
 #: formcard/AboutPage.qml:259
-#, fuzzy, kde-format
-#| msgid "Report a bug"
+#, kde-format
 msgid "Report a Bug"
 msgstr "Αναφορά σφάλματος"
 
@@ -436,8 +434,7 @@ msgid "Current color \"%1\""
 msgstr ""
 
 #: formcard/FormDateTimeDelegate.qml:193
-#, fuzzy, kde-format
-#| msgid "Today"
+#, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
 msgid "Today"
 msgstr "Σήμερα"
@@ -725,15 +722,13 @@ msgid ", "
 msgstr ""
 
 #: statefulapplication/StatefulWindow.qml:99
-#, fuzzy, kde-format
-#| msgid "About %1"
+#, kde-format
 msgctxt "@title:window"
 msgid "About %1"
 msgstr "Σχετικά με το %1"
 
 #: statefulapplication/StatefulWindow.qml:112
-#, fuzzy, kde-format
-#| msgid "About KDE"
+#, kde-format
 msgctxt "@title:window"
 msgid "About KDE"
 msgstr "Σχετικά με το KDE"
