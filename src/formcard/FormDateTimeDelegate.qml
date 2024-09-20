@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2023 Carl Schwan <carl@carlschwan.eu>
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
-import QtQuick.Controls 2.15 as QQC2
-import org.kde.kirigami 2.20 as Kirigami
-import org.kde.kirigamiaddons.dateandtime 1.0 as DateTime
-import org.kde.kirigamiaddons.components 1.0 as Components
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as QQC2
+import org.kde.kirigami as Kirigami
+import org.kde.kirigamiaddons.dateandtime as DateTime
+import org.kde.kirigamiaddons.components as Components
 
 /**
  * FormDateTimeDelegate is a delegate for FormCard that lets the user enters either
@@ -20,7 +20,7 @@ import org.kde.kirigamiaddons.components 1.0 as Components
  * refers too.
  *
  * @code{.qml}
- * import org.kde.kirigamiaddons.formcard 1.0 as FormCard
+ * import org.kde.kirigamiaddons.formcard as FormCard
  *
  * FormCard.FormCardPage {
  *     FormCard.FormHeader {
