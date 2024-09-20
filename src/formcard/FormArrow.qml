@@ -36,13 +36,13 @@ Kirigami.Icon {
     source: {
         switch (direction) {
             case Qt.UpArrow:
-                return "arrow-up";
+                return "arrow-up-symbolic";
             case Qt.DownArrow:
-                return "arrow-down";
+                return "arrow-down-symbolic";
             case Qt.LeftArrow:
-                return "arrow-left";
+                return "arrow-left-symbolic";
             case Qt.RightArrow:
-                return "arrow-right";
+                return "arrow-right-symbolic";
         }
     }
     implicitWidth: Math.round(Kirigami.Units.iconSizes.small * 0.75)
