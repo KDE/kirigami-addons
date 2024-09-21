@@ -4,10 +4,15 @@
 #define SoundsPickerModel_H
 
 #include <QAbstractListModel>
+#include <qqmlregistration.h>
+
 #include <memory>
+
 class SoundsPickerModel : public QAbstractListModel
 {
     Q_OBJECT
+    QML_NAMED_ELEMENT(SoundsModel)
+
     Q_PROPERTY(bool notification READ notification WRITE setNotification NOTIFY notificationChanged)
     Q_PROPERTY(QStringList defaultAudio READ defaultAudio WRITE setDefaultAudio NOTIFY defaultAudioChanged)
     Q_PROPERTY(QString theme READ theme WRITE setTheme NOTIFY themeChanged)
