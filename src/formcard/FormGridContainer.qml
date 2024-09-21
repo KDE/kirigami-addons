@@ -189,7 +189,7 @@ Item {
                     QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
 
                     background: Rectangle {
-                        radius: root.cardWidthRestricted ? Kirigami.Units.smallSpacing : 0
+                        radius: root.cardWidthRestricted ? Kirigami.Units.cornerRadius : 0
                         color: Kirigami.Theme.backgroundColor
 
                         border {
@@ -199,7 +199,7 @@ Item {
 
                         Rectangle {
                             anchors.fill: parent
-                            radius: root.cardWidthRestricted ? Kirigami.Units.smallSpacing : 0
+                            radius: root.cardWidthRestricted ? Kirigami.Units.cornerRadius : 0
 
                             color: {
                                 let alpha = 0;

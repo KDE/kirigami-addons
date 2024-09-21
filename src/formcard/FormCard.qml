@@ -94,7 +94,7 @@ Item {
         }
 
         // only have card radius if it isn't filling the entire width
-        radius: root.cardWidthRestricted ? 5 : 0
+        radius: root.cardWidthRestricted ? Kirigami.Units.cornerRadius : 0
         color: Kirigami.Theme.backgroundColor
 
         function getDarkness(background: color): real {

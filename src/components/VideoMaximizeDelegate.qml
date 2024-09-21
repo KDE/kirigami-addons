@@ -328,7 +328,7 @@ Item {
                             }
                         }
                         background: Kirigami.ShadowedRectangle {
-                            radius: 4
+                            radius: Kirigami.Units.cornerRadius
                             color: Kirigami.Theme.backgroundColor
                             opacity: 0.8
 
@@ -344,7 +344,7 @@ Item {
                 }
             }
             background: Kirigami.ShadowedRectangle {
-                radius: 4
+                radius: Kirigami.Units.cornerRadius
                 color: Kirigami.Theme.backgroundColor
                 opacity: 0.8
 

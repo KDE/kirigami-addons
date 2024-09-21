@@ -85,7 +85,7 @@ T.RoundButton {
     bottomInset: bottomMargin
 
     // Set to Infinity to get extra padding for round button style.
-    radius: Kirigami.Units.largeSpacing
+    radius: Kirigami.Units.cornerRadius
 
     // Text is not supported anyway
     spacing: 0

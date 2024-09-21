@@ -14,7 +14,7 @@ import org.kde.kirigami 2.20 as Kirigami
  */
 Kirigami.ShadowedRectangle {
     // perfect concentric border radius
-    radius: 5 + Kirigami.Units.smallSpacing
+    radius: Kirigami.Units.cornerRadius + Kirigami.Units.smallSpacing
 
     color: Kirigami.Theme.backgroundColor
 
