@@ -2,11 +2,11 @@
 // SPDX-FileCopyrightText: 2022 Carl Schwan <carl@carlschwan.eu>
 // SPDX-License-Identifier: LGPL-2.1-or-later
 
-import QtQuick 2.15
-import QtQuick.Controls 2.15
-import org.kde.kirigami 2.20 as Kirigami
-import QtQuick.Layouts 1.15
-import org.kde.kirigamiaddons.dateandtime 1.0
+import QtQuick
+import QtQuick.Controls
+import org.kde.kirigami as Kirigami
+import QtQuick.Layouts
+import org.kde.kirigamiaddons.dateandtime
 
 /**
  * A large time picker
