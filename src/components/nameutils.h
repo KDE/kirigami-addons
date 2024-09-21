@@ -7,10 +7,13 @@
 #include <QColor>
 #include <QObject>
 #include <QVariant>
+#include <qqmlregistration.h>
 
 class NameUtils : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_SINGLETON
 
 public:
     Q_INVOKABLE QString initialsFromString(const QString &name);

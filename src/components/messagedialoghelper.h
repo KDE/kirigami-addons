@@ -12,6 +12,7 @@
 class MessageDialogHelper : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
     QML_SINGLETON
 
     Q_PROPERTY(KConfig *config READ config WRITE setConfig NOTIFY configChanged);
