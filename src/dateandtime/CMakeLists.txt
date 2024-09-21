@@ -28,6 +28,7 @@ target_sources(dateandtimeplugin PRIVATE
     yearmodel.cpp
     monthmodel.cpp
     infinitecalendarviewmodel.cpp
+    types.h
 )
 
 ecm_target_qml_sources(dateandtimeplugin SOURCES

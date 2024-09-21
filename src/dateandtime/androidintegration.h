@@ -12,7 +12,6 @@
 
 #include <QDateTime>
 #include <QObject>
-#include <qqmlregistration.h>
 
 namespace KirigamiAddonsDateAndTime {
 
@@ -22,8 +21,6 @@ namespace KirigamiAddonsDateAndTime {
 class KIRIGAMIDATEANDTIME_EXPORT AndroidIntegration : public QObject
 {
     Q_OBJECT
-    QML_ELEMENT
-    QML_SINGLETON
 
 public:
     Q_INVOKABLE void showDatePicker(qint64 initialDate);
