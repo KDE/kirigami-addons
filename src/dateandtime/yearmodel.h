@@ -7,11 +7,14 @@
 #pragma once
 
 #include <QAbstractListModel>
+#include <qqmlregistration.h>
 
 /// Display the number of months in a year.
 class YearModel : public QAbstractListModel
 {
     Q_OBJECT
+    QML_ELEMENT
+
     Q_PROPERTY(int year READ year WRITE setYear NOTIFY yearChanged)
 
 public:

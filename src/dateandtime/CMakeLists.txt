@@ -13,15 +13,21 @@ if (ANDROID)
     install(TARGETS KF6KirigamiDateAndTime ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 endif()
 
-ecm_add_qml_module(dateandtimeplugin URI "org.kde.kirigamiaddons.dateandtime" VERSION 1.0)
+ecm_add_qml_module(dateandtimeplugin
+    URI "org.kde.kirigamiaddons.dateandtime"
+    VERSION 1.0
+    GENERATE_PLUGIN_SOURCE
+    DEPENDENCIES
+        org.kde.kirigami
+        org.kde.kirigamiaddons.delegates
+)
 
 target_compile_definitions(dateandtimeplugin PRIVATE -DTRANSLATION_DOMAIN=\"kirigami-addons\")
 
 target_sources(dateandtimeplugin PRIVATE
-    lib/yearmodel.cpp
-    lib/monthmodel.cpp
-    lib/plugin.cpp
-    lib/infinitecalendarviewmodel.cpp
+    yearmodel.cpp
+    monthmodel.cpp
+    infinitecalendarviewmodel.cpp
 )
 
 ecm_target_qml_sources(dateandtimeplugin SOURCES

@@ -8,10 +8,13 @@
 #include <QDateTime>
 #include <QLocale>
 #include <QQmlParserStatus>
+#include <qqmlregistration.h>
 
 class InfiniteCalendarViewModel : public QAbstractListModel, public QQmlParserStatus
 {
     Q_OBJECT
+    QML_ELEMENT
+
     Q_INTERFACES(QQmlParserStatus)
 
     // Amount of dates to add each time the model adds more dates
