@@ -2,13 +2,13 @@
 // SPDX-License-Identifier: LGPL-2.1-only or LGPL-3.0-only or LicenseRef-KDE-Accepted-LGPL
 
 import QtQuick
-import QtQuick.Controls 2 as QQC2
+import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 
-import org.kde.kirigami 2 as Kirigami
-import org.kde.kirigamiaddons.delegates 1 as Delegates
-import org.kde.kirigamiaddons.treeview 1.0 as Tree
-import org.kde.kitemmodels 1
+import org.kde.kirigami as Kirigami
+import org.kde.kirigamiaddons.delegates as Delegates
+import org.kde.kirigamiaddons.treeview as Tree
+import org.kde.kitemmodels
 
 /**
  * Rounded item delegate meant to be used in combination with
