@@ -5,7 +5,7 @@ if (ANDROID)
     add_library(KF6KirigamiDateAndTime)
     add_library(KF6::KirigamiDateAndTime ALIAS KF6KirigamiDateAndTime)
     target_sources(KF6KirigamiDateAndTime PRIVATE
-        lib/androidintegration.cpp
+        androidintegration.cpp
     )
     generate_export_header(KF6KirigamiDateAndTime BASE_NAME KirigamiDateAndTime)
     target_link_libraries(KF6KirigamiDateAndTime PUBLIC Qt6::Core)
