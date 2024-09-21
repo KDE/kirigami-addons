@@ -3,10 +3,13 @@
 
 # FormCard module
 
-ecm_add_qml_module(formcardplugin URI "org.kde.kirigamiaddons.formcard" VERSION 1.0)
-
-target_sources(formcardplugin PRIVATE
-    lib/formcardplugin.cpp
+ecm_add_qml_module(formcardplugin
+    URI "org.kde.kirigamiaddons.formcard"
+    VERSION 1.0
+    GENERATE_PLUGIN_SOURCE
+    DEPENDENCIES
+        org.kde.kirigami
+        org.kde.kirigamiaddons.delegates
 )
 
 ecm_target_qml_sources(formcardplugin SOURCES
