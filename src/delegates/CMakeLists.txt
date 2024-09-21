@@ -1,10 +1,14 @@
 # SPDX-FileCopyrightText: 2023 Carl Schwan <carl@carlschwan.eu>
 # SPDX-License-Identifier: BSD-2-Clause
 
-ecm_add_qml_module(delegatesplugin URI "org.kde.kirigamiaddons.delegates" VERSION 1.0)
-
-target_sources(delegatesplugin PRIVATE
-    plugin.cpp
+ecm_add_qml_module(delegatesplugin
+    URI "org.kde.kirigamiaddons.delegates"
+    VERSION 1.0
+    GENERATE_PLUGIN_SOURCE
+    DEPENDENCIES
+        org.kde.kirigami
+        org.kde.kirigamiaddons.treeview
+        org.kde.kitemmodels
 )
 
 ecm_target_qml_sources(delegatesplugin SOURCES
