@@ -1,10 +1,12 @@
 # SPDX-FileCopyrightText: 2023 Evgeny Chesnokov <echesnokov@astralinux.ru>
 # SPDX-License-Identifier: GPL-2.0-or-later
 
-ecm_add_qml_module(tableviewplugin URI "org.kde.kirigamiaddons.tableview" VERSION 1.0)
-
-target_sources(tableviewplugin PRIVATE
-    tableviewplugin.cpp
+ecm_add_qml_module(tableviewplugin
+    URI "org.kde.kirigamiaddons.tableview"
+    VERSION 1.0
+    GENERATE_PLUGIN_SOURCE
+    DEPENDENCIES
+        org.kde.kirigami
 )
 
 ecm_target_qml_sources(tableviewplugin SOURCES
