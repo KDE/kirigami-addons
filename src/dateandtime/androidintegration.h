@@ -12,7 +12,7 @@
 
 #include <QDateTime>
 #include <QObject>
-#include <qqmlintegration.h>
+#include <qqmlregistration.h>
 
 namespace KirigamiAddonsDateAndTime {
 
