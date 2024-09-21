@@ -75,6 +75,11 @@ T.CheckDelegate {
      */
     property alias descriptionItem: internalDescriptionItem
 
+    icon {
+        width: Kirigami.Units.iconSizes.small
+        height: Kirigami.Units.iconSizes.small
+    }
+
     topPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
     bottomPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
     leftPadding: parent._internal_formcard_margins ? parent._internal_formcard_margins : Kirigami.Units.gridUnit
@@ -121,6 +126,15 @@ T.CheckDelegate {
             checked: root.checked
 
             Accessible.ignored: true
+        }
+
+        Kirigami.Icon {
+            visible: root.icon.name.length > 0 || root.icon.source.toString().length > 0
+            source: root.icon.name.length > 0 ? root.icon.name : root.icon.source
+            color: root.icon.color
+            Layout.rightMargin: visible ? Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing : 0
+            implicitWidth: visible ? root.icon.width : 0
+            implicitHeight: visible ? root.icon.height : 0
         }
 
         ColumnLayout {
