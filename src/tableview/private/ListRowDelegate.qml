@@ -49,7 +49,7 @@ QQC2.ItemDelegate {
             model: root.__columnModel
 
             delegate: ListCellDelegate {
-                implicitWidth: root.__columnModel.get(index).headerComponent.width
+                implicitWidth: root.__columnModel.get(index)?.headerComponent.width ?? 0
                 implicitHeight: root.__rowHeight
                 entry: delegate.model
                 rowIndex: delegate.index
