@@ -65,12 +65,18 @@ T.RadioDelegate {
      * @brief This property holds an item that will be displayed after the
      * delegate's contents.
      */
-    property var trailing: null
+    property var trailing
 
     /**
      * @brief This property holds the padding before the trailing item.
      */
     property real trailingPadding: Kirigami.Units.smallSpacing
+
+    /**
+     * @brief This property allows to override the internal description
+     * item (a QtQuick.Controls.Label) with a custom component.
+     */
+    property alias descriptionItem: internalDescriptionItem
 
     leftPadding: Kirigami.Units.gridUnit
     topPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
@@ -86,39 +92,51 @@ T.RadioDelegate {
 
     Layout.fillWidth: true
 
-    contentItem: RowLayout {
-        spacing: 0
+    contentItem: ColumnLayout {
+        spacing: Kirigami.Units.smallSpacing
 
-        Private.ContentItemLoader {
-            Layout.rightMargin: visible ? root.leadingPadding : 0
-            visible: root.leading
-            implicitHeight: visible ? root.leading.implicitHeight : 0
-            implicitWidth: visible ? root.leading.implicitWidth : 0
-            contentItem: root.leading
-        }
+        RowLayout {
+            id: innerRowLayout
 
-        Controls.RadioButton {
-            id: radioButtonItem
-            focusPolicy: Qt.NoFocus // provided by delegate
-            Layout.rightMargin: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+            spacing: 0
 
-            enabled: root.enabled
-            checked: root.checked
-
-            onToggled: root.toggled()
-            onClicked: root.clicked()
-            onPressAndHold: root.pressAndHold()
-            onDoubleClicked: root.doubleClicked()
-
-            onCheckedChanged: {
-                root.checked = checked;
-                checked = Qt.binding(() => root.checked);
-            }
-        }
-
-        ColumnLayout {
             Layout.fillWidth: true
-            spacing: Kirigami.Units.smallSpacing
+
+            Private.ContentItemLoader {
+                Layout.rightMargin: visible ? root.leadingPadding : 0
+                visible: root.leading
+                implicitHeight: visible ? root.leading.implicitHeight : 0
+                implicitWidth: visible ? root.leading.implicitWidth : 0
+                contentItem: root.leading
+            }
+
+            Controls.RadioButton {
+                id: radioButtonItem
+                focusPolicy: Qt.NoFocus // provided by delegate
+                Layout.rightMargin: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+
+                enabled: root.enabled
+                checked: root.checked
+
+                onToggled: root.toggled()
+                onClicked: root.clicked()
+                onPressAndHold: root.pressAndHold()
+                onDoubleClicked: root.doubleClicked()
+
+                onCheckedChanged: {
+                    root.checked = checked;
+                    checked = Qt.binding(() => root.checked);
+                }
+            }
+
+            Kirigami.Icon {
+                visible: root.icon.name.length > 0 || root.icon.source.toString().length > 0
+                source: root.icon.name.length > 0 ? root.icon.name : root.icon.source
+                color: root.icon.color
+                Layout.rightMargin: visible ? Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing : 0
+                implicitWidth: visible ? root.icon.width : 0
+                implicitHeight: visible ? root.icon.height : 0
+            }
 
             Controls.Label {
                 Layout.fillWidth: true
@@ -129,21 +147,23 @@ T.RadioDelegate {
                 maximumLineCount: 2
             }
 
-            Controls.Label {
-                visible: root.description !== ""
-                Layout.fillWidth: true
-                text: root.description
-                color: Kirigami.Theme.disabledTextColor
-                wrapMode: Text.Wrap
+            Private.ContentItemLoader {
+                Layout.leftMargin: visible ? root.trailingPadding : 0
+                visible: root.trailing
+                implicitHeight: visible ? root.trailing.implicitHeight : 0
+                implicitWidth: visible ? root.trailing.implicitWidth : 0
+                contentItem: root.trailing
             }
         }
 
-        Private.ContentItemLoader {
-            Layout.leftMargin: visible ? root.trailingPadding : 0
-            visible: root.trailing
-            implicitHeight: visible ? root.trailing.implicitHeight : 0
-            implicitWidth: visible ? root.trailing.implicitWidth : 0
-            contentItem: root.trailing
+        Controls.Label {
+            id: internalDescriptionItem
+
+            visible: root.description !== ""
+            Layout.fillWidth: true
+            text: root.description
+            color: Kirigami.Theme.disabledTextColor
+            wrapMode: Text.Wrap
         }
     }
 }

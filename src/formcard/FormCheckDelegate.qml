@@ -94,52 +94,52 @@ T.CheckDelegate {
 
     Layout.fillWidth: true
 
-    contentItem: RowLayout {
-        spacing: 0
+    contentItem: ColumnLayout {
+        spacing: Kirigami.Units.smallSpacing
 
-        Private.ContentItemLoader {
-            Layout.rightMargin: visible ? root.leadingPadding : 0
-            visible: root.leading
-            implicitHeight: visible ? root.leading.implicitHeight : 0
-            implicitWidth: visible ? root.leading.implicitWidth : 0
-            contentItem: root.leading
-        }
+        RowLayout {
+            id: innerRowLayout
 
-        Controls.CheckBox {
-            id: checkBoxItem
-            Layout.rightMargin: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
-            focusPolicy: Qt.NoFocus // provided by delegate
-
-            checkState: root.checkState
-            nextCheckState: root.nextCheckState
-            tristate: root.tristate
-
-            onToggled: {
-                root.toggle();
-                root.toggled();
+            Private.ContentItemLoader {
+                Layout.rightMargin: visible ? root.leadingPadding : 0
+                visible: root.leading
+                implicitHeight: visible ? root.leading.implicitHeight : 0
+                implicitWidth: visible ? root.leading.implicitWidth : 0
+                contentItem: root.leading
             }
-            onClicked: root.clicked()
-            onPressAndHold: root.pressAndHold()
-            onDoubleClicked: root.doubleClicked()
 
-            enabled: root.enabled
-            checked: root.checked
+            Controls.CheckBox {
+                id: checkBoxItem
+                Layout.rightMargin: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+                focusPolicy: Qt.NoFocus // provided by delegate
 
-            Accessible.ignored: true
-        }
+                checkState: root.checkState
+                nextCheckState: root.nextCheckState
+                tristate: root.tristate
 
-        Kirigami.Icon {
-            visible: root.icon.name.length > 0 || root.icon.source.toString().length > 0
-            source: root.icon.name.length > 0 ? root.icon.name : root.icon.source
-            color: root.icon.color
-            Layout.rightMargin: visible ? Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing : 0
-            implicitWidth: visible ? root.icon.width : 0
-            implicitHeight: visible ? root.icon.height : 0
-        }
+                onToggled: {
+                    root.toggle();
+                    root.toggled();
+                }
+                onClicked: root.clicked()
+                onPressAndHold: root.pressAndHold()
+                onDoubleClicked: root.doubleClicked()
 
-        ColumnLayout {
-            Layout.fillWidth: true
-            spacing: Kirigami.Units.smallSpacing
+                enabled: root.enabled
+                checked: root.checked
+
+                Accessible.ignored: true
+            }
+
+            Kirigami.Icon {
+                visible: root.icon.name.length > 0 || root.icon.source.toString().length > 0
+                source: root.icon.name.length > 0 ? root.icon.name : root.icon.source
+                color: root.icon.color
+                Layout.rightMargin: visible ? Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing : 0
+                implicitWidth: visible ? root.icon.width : 0
+                implicitHeight: visible ? root.icon.height : 0
+            }
+
             Controls.Label {
                 text: root.text
                 color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
@@ -150,22 +150,23 @@ T.CheckDelegate {
                 Accessible.ignored: true
             }
 
-            Controls.Label {
-                id: internalDescriptionItem
-                Layout.fillWidth: true
-                text: root.description
-                color: Kirigami.Theme.disabledTextColor
-                visible: root.description !== ""
-                wrapMode: Text.Wrap
+            Private.ContentItemLoader {
+                Layout.leftMargin: visible ? root.trailingPadding : 0
+                visible: root.trailing
+                implicitHeight: visible ? root.trailing.implicitHeight : 0
+                implicitWidth: visible ? root.trailing.implicitWidth : 0
+                contentItem: root.trailing
             }
         }
 
-        Private.ContentItemLoader {
-            Layout.leftMargin: visible ? root.trailingPadding : 0
-            visible: root.trailing
-            implicitHeight: visible ? root.trailing.implicitHeight : 0
-            implicitWidth: visible ? root.trailing.implicitWidth : 0
-            contentItem: root.trailing
+        Controls.Label {
+            id: internalDescriptionItem
+
+            Layout.fillWidth: true
+            text: root.description
+            color: Kirigami.Theme.disabledTextColor
+            visible: root.description !== ""
+            wrapMode: Text.Wrap
         }
     }
 }
