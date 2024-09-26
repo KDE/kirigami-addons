@@ -8,9 +8,15 @@ import QtQuick.Layouts 1.15
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kirigamiaddons.delegates 1.0 as Delegates
 
+/**
+ * Segmented button component. This holds multiple buttons.
+ */
 RowLayout {
     id: root
 
+    /**
+     * This property holds individual actions representing the buttons of the segmented button.
+     */
     property list<T.Action> actions
 
     spacing: Math.round(Kirigami.Units.smallSpacing / 2)
