@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-22 00:39+0000\n"
+"POT-Creation-Date: 2024-09-27 00:39+0000\n"
 "PO-Revision-Date: 2024-08-30 10:21+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -238,7 +238,7 @@ msgstr ""
 "καλύτερου Ελεύθερου Λογισμικού. Όλοι είναι ευπρόσδεκτοι να συμμετέχουν και "
 "να συμβάλλουν στο KDE, συμπεριλαμβανόμενου και εσένα."
 
-#: formcard/AboutKDEPage.qml:75 formcard/AboutPage.qml:208
+#: formcard/AboutKDEPage.qml:75 formcard/AboutPage.qml:221
 #, kde-format
 msgid "Homepage"
 msgstr "Αρχική σελίδα"
@@ -304,7 +304,7 @@ msgstr ""
 "περιβάλλοντα των προγραμμάτων. Μπορείτε να συνεισφέρετε με γραφικά, θέματα, "
 "ήχους και βελτιωμένη τεκμηρίωση. Εσείς αποφασίζετε!"
 
-#: formcard/AboutKDEPage.qml:114 formcard/AboutPage.qml:234
+#: formcard/AboutKDEPage.qml:114 formcard/AboutPage.qml:247
 #, kde-format
 msgid "Get Involved"
 msgstr "Ασχοληθείτε"
@@ -363,7 +363,7 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDEPage.qml:153 formcard/AboutPage.qml:221
+#: formcard/AboutKDEPage.qml:153 formcard/AboutPage.qml:234
 #, kde-format
 msgid "Donate"
 msgstr "Δωρεά"
@@ -380,43 +380,50 @@ msgid "Copyright"
 msgstr "Πνευματικά δικαιώματα"
 
 #: formcard/AboutPage.qml:141
+#, fuzzy, kde-format
+#| msgctxt "@action:intoolbar"
+#| msgid "Hide caption"
+msgid "Description"
+msgstr "Απόκρυψη τίτλου"
+
+#: formcard/AboutPage.qml:154
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "Άδεια χρήσης"
 msgstr[1] "Άδειες χρήσης"
 
-#: formcard/AboutPage.qml:259
+#: formcard/AboutPage.qml:272
 #, kde-format
 msgid "Report a Bug"
 msgstr "Αναφορά σφάλματος"
 
-#: formcard/AboutPage.qml:266
+#: formcard/AboutPage.qml:279
 #, kde-format
 msgid "Libraries in use"
 msgstr "Βιβλιοθήκες σε χρήση"
 
-#: formcard/AboutPage.qml:289
+#: formcard/AboutPage.qml:302
 #, kde-format
 msgid "Authors"
 msgstr "Συγγραφείς"
 
-#: formcard/AboutPage.qml:304
+#: formcard/AboutPage.qml:317
 #, kde-format
 msgid "Credits"
 msgstr "Αναγνώριση"
 
-#: formcard/AboutPage.qml:319
+#: formcard/AboutPage.qml:332
 #, kde-format
 msgid "Translators"
 msgstr "Μεταφραστές"
 
-#: formcard/AboutPage.qml:388
+#: formcard/AboutPage.qml:401
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr ""
 
-#: formcard/AboutPage.qml:397
+#: formcard/AboutPage.qml:410
 #, kde-format
 msgid "Send an email to %1"
 msgstr ""

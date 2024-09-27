@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-22 00:39+0000\n"
+"POT-Creation-Date: 2024-09-27 00:39+0000\n"
 "PO-Revision-Date: 2024-07-18 17:20+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -226,7 +226,7 @@ msgstr ""
 "KDE 是個合作企業：沒有任何人操控 KDE 的目標和產品，取而代之的是一起達到建立世"
 "界上最好自由軟體的共同目標。歡迎任何人 -- 包括您。"
 
-#: formcard/AboutKDEPage.qml:75 formcard/AboutPage.qml:208
+#: formcard/AboutKDEPage.qml:75 formcard/AboutPage.qml:221
 #, kde-format
 msgid "Homepage"
 msgstr "首頁"
@@ -279,7 +279,7 @@ msgstr ""
 "您不需要是軟體工程師也可以成為 KDE 團隊的一份子。您可以加入翻譯團隊來翻譯程式"
 "的介面。您可以提供圖形、佈景主題、音效，或幫忙撰寫文件，看您喜歡做哪一項。"
 
-#: formcard/AboutKDEPage.qml:114 formcard/AboutPage.qml:234
+#: formcard/AboutKDEPage.qml:114 formcard/AboutPage.qml:247
 #, kde-format
 msgid "Get Involved"
 msgstr "參與"
@@ -331,7 +331,7 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDEPage.qml:153 formcard/AboutPage.qml:221
+#: formcard/AboutKDEPage.qml:153 formcard/AboutPage.qml:234
 #, kde-format
 msgid "Donate"
 msgstr "贊助"
@@ -348,42 +348,49 @@ msgid "Copyright"
 msgstr "版權"
 
 #: formcard/AboutPage.qml:141
+#, fuzzy, kde-format
+#| msgctxt "@action:intoolbar"
+#| msgid "Hide caption"
+msgid "Description"
+msgstr "隱藏標題"
+
+#: formcard/AboutPage.qml:154
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "授權"
 
-#: formcard/AboutPage.qml:259
+#: formcard/AboutPage.qml:272
 #, kde-format
 msgid "Report a Bug"
 msgstr "回報問題"
 
-#: formcard/AboutPage.qml:266
+#: formcard/AboutPage.qml:279
 #, kde-format
 msgid "Libraries in use"
 msgstr "使用函式庫"
 
-#: formcard/AboutPage.qml:289
+#: formcard/AboutPage.qml:302
 #, kde-format
 msgid "Authors"
 msgstr "作者群"
 
-#: formcard/AboutPage.qml:304
+#: formcard/AboutPage.qml:317
 #, kde-format
 msgid "Credits"
 msgstr "致謝"
 
-#: formcard/AboutPage.qml:319
+#: formcard/AboutPage.qml:332
 #, kde-format
 msgid "Translators"
 msgstr "翻譯者"
 
-#: formcard/AboutPage.qml:388
+#: formcard/AboutPage.qml:401
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "造訪 %1 在 KDE Store 的頁面"
 
-#: formcard/AboutPage.qml:397
+#: formcard/AboutPage.qml:410
 #, kde-format
 msgid "Send an email to %1"
 msgstr "傳送電子郵件給 %1"
