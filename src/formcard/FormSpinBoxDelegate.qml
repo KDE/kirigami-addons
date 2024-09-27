@@ -76,6 +76,11 @@ AbstractFormDelegate {
     property alias displayText: spinbox.displayText
 
     /**
+     * @brief This property holds the `validator` of the internal spinbox.
+     */
+    property alias validator: spinbox.validator
+
+    /**
      * @brief This property holds the current type of status displayed in
      * the text field.
      *
