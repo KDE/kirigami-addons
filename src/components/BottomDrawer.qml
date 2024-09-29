@@ -77,7 +77,7 @@ QQC2.Drawer {
     width: applicationWindow().width
     height: Math.min(contentItem.implicitHeight, Math.round(applicationWindow().height * 0.8))
 
-    // makes sure the drawer is not able to be opened when not trigered
+    // makes sure the drawer is not able to be opened when not triggered
     interactive : false
 
     background: Kirigami.ShadowedRectangle {

@@ -47,7 +47,7 @@ Kirigami.ApplicationWindow {
     /**
      * This property holds the window's name.
      *
-     * This needs to be an unique identifier for your application and will be used to store
+     * This needs to be a unique identifier for your application and will be used to store
      * the state of the window in your application config.
      */
     property alias windowName: windowStateSaver.configGroupName

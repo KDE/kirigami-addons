@@ -11,7 +11,7 @@ Kirigami Addons is an additional set of visual components that work well on mobi
 
 ## Structure
 
-The [examples/](examples) folder contains full project examples that can be built individually using `-DBUILD_EXAMPLES=ON`. Each project can be built with a CMake target available in the [CMakeLists.txt](examples/CMakeLists.txt), e.g. `cmake --build build/ --target mobile-about`. Some examples, such as [MobileFormTutorial](examples/MobileFormTutorial), are used for the Kirigami tutorial.
+The [examples/](examples) folder contains full project examples that can be built individually using `-DBUILD_EXAMPLES=ON`. Each project can be built with a CMake target available in the [CMakeLists.txt](examples/CMakeLists.txt), e.g. `cmake --build build/ --target mobile-about`. Some examples, such as [FormCardTutorial](examples/FormCardTutorial), are used for the Kirigami tutorial.
 
 The [autotests/](autotests) folder contains tests done at build time.
 
@@ -23,7 +23,7 @@ The [src/dateandtime/](src/dateandtime) folder contains ready-to-use time compon
 
 The [src/delegates/](src/delegates) folder contains base delegates to be used in ListViews following the Kirigami Addons style.
 
-The [src/formcard/](src/mobileform) folder contains components used to create your own About and Settings pages. They are ready to use and extensible. It depends on [Ki18n](https://api.kde.org/frameworks/ki18n/html/index.html).
+The [src/formcard/](src/formcard) folder contains components used to create your own About and Settings pages. They are ready to use and extensible. It depends on [Ki18n](https://api.kde.org/frameworks/ki18n/html/index.html).
 
 The [src/settings/](src/settings) folder contains categorized settings components, visually similar to the categorized sidebar of [Plasma System Settings](https://invent.kde.org/plasma/systemsettings).
 

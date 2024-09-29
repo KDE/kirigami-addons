@@ -43,7 +43,7 @@ QtObject {
      * This property holds the initial property that the page needs to be initialized with
      * if any.
      *
-     * This is a function that returns an Javascript object.
+     * This is a function that returns a Javascript object.
      *
      * @code{qml}
      * initialProperties: () => {
