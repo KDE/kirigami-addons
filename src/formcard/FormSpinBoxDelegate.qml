@@ -137,7 +137,7 @@ AbstractFormDelegate {
 
             P.SpinButton {
                 onClicked: root.decrease()
-                icon.name: 'list-remove-symbolic'
+                icon.name: 'arrow-down'
                 visible: Kirigami.Settings.isMobile
 
                 isStart: true
@@ -183,7 +183,7 @@ AbstractFormDelegate {
             P.SpinButton {
                 onClicked: root.increase()
                 visible: Kirigami.Settings.isMobile
-                icon.name: 'list-add'
+                icon.name: 'arrow-up'
 
                 isStart: false
                 isEnd: true
