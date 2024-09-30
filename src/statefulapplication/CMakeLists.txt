@@ -3,7 +3,7 @@
 
 # StatefulApp module
 
-add_library(KirigamiAddonsStatefulApp SHARED
+add_library(KirigamiAddonsStatefulApp
     abstractkirigamiapplication.cpp
     abstractkirigamiapplication.h
     kirigamiactioncollection.cpp
