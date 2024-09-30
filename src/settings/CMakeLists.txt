@@ -7,11 +7,7 @@ ecm_add_qml_module(settingsplugin
     URI "org.kde.kirigamiaddons.settings"
     VERSION 1.0
     GENERATE_PLUGIN_SOURCE
-)
-
-ecm_add_qml_module_dependencies(settingsplugin
-    DEPENDS
-        "org.kde.kirigamiaddons.settings.private"
+    DEPENDENCIES "org.kde.kirigamiaddons.settings.private"
 )
 
 ecm_target_qml_sources(settingsplugin SOURCES
