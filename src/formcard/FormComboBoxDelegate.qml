@@ -341,6 +341,10 @@ AbstractFormDelegate {
     Accessible.description: description
     Accessible.onPressAction: controlRoot.clicked()
 
+    // Only have the mouse hover feedback if the combobox is the whole delegate itself
+    background: displayMode === FormComboBoxDelegate.ComboBox ? null : selectableBackground
+    FormDelegateBackground { id: selectableBackground; control: controlRoot }
+
     contentItem: ColumnLayout {
         spacing: Kirigami.Units.smallSpacing
 
