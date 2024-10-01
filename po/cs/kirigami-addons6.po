@@ -353,11 +353,9 @@ msgid "Copyright"
 msgstr "Autorská práva"
 
 #: formcard/AboutPage.qml:141
-#, fuzzy, kde-format
-#| msgctxt "@action:intoolbar"
-#| msgid "Hide caption"
+#, kde-format
 msgid "Description"
-msgstr "Skrýt titulek"
+msgstr "Popis"
 
 #: formcard/AboutPage.qml:154
 #, kde-format
