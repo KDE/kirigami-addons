@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-27 00:39+0000\n"
-"PO-Revision-Date: 2024-09-14 14:35+0200\n"
+"PO-Revision-Date: 2024-09-29 18:27+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -368,11 +368,9 @@ msgid "Copyright"
 msgstr "Copyright"
 
 #: formcard/AboutPage.qml:141
-#, fuzzy, kde-format
-#| msgctxt "@action:intoolbar"
-#| msgid "Hide caption"
+#, kde-format
 msgid "Description"
-msgstr "Beschriftung ausblenden"
+msgstr "Beschreibung"
 
 #: formcard/AboutPage.qml:154
 #, kde-format
