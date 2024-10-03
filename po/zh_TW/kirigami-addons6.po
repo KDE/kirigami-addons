@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-27 00:39+0000\n"
-"PO-Revision-Date: 2024-07-18 17:20+0900\n"
+"PO-Revision-Date: 2024-10-02 17:22+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -59,13 +59,13 @@ msgstr "向右旋轉"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
-msgstr "顯示標題"
+msgstr "顯示簡短說明"
 
 #: components/AlbumMaximizeComponent.qml:159
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
-msgstr "隱藏標題"
+msgstr "隱藏簡短說明"
 
 #: components/AlbumMaximizeComponent.qml:165
 #, kde-format
@@ -348,11 +348,9 @@ msgid "Copyright"
 msgstr "版權"
 
 #: formcard/AboutPage.qml:141
-#, fuzzy, kde-format
-#| msgctxt "@action:intoolbar"
-#| msgid "Hide caption"
+#, kde-format
 msgid "Description"
-msgstr "隱藏標題"
+msgstr "描述"
 
 #: formcard/AboutPage.qml:154
 #, kde-format
