@@ -24,4 +24,4 @@ target_link_libraries(settingsplugin PRIVATE
     Qt6::Qml
 )
 
-ecm_finalize_qml_module(settingsplugin DESTINATION ${KDE_INSTALL_QMLDIR})
+ecm_finalize_qml_module(settingsplugin DESTINATION ${KDE_INSTALL_QMLDIR} EXPORT KirigamiAddonsTargets)

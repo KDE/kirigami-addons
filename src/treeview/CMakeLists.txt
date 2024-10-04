@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2020 Marco Martin <notmart@gmail.com>
 # SPDX-License-Identifier: BSD-2-Clause
 
-ecm_add_qml_module(treeviewplugin URI "org.kde.kirigamiaddons.treeview" VERSION 1.0)
+ecm_add_qml_module(treeviewplugin URI "org.kde.kirigamiaddons.treeview" VERSION 1.0 CLASS_NAME TreeViewPlugin)
 
 target_sources(treeviewplugin PRIVATE
     treeviewplugin.cpp
@@ -24,4 +24,4 @@ target_link_libraries(treeviewplugin PRIVATE
     Qt6::QuickControls2
 )
 
-ecm_finalize_qml_module(treeviewplugin DESTINATION ${KDE_INSTALL_QMLDIR})
+ecm_finalize_qml_module(treeviewplugin DESTINATION ${KDE_INSTALL_QMLDIR} EXPORT KirigamiAddonsTargets)

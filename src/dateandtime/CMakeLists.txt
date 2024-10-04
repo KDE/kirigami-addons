@@ -52,4 +52,4 @@ if (TARGET KF6KirigamiDateAndTime)
     target_link_libraries(dateandtimeplugin PRIVATE KF6KirigamiDateAndTime)
 endif()
 
-ecm_finalize_qml_module(dateandtimeplugin DESTINATION ${KDE_INSTALL_QMLDIR})
+ecm_finalize_qml_module(dateandtimeplugin DESTINATION ${KDE_INSTALL_QMLDIR} EXPORT KirigamiAddonsTargets)

@@ -24,4 +24,4 @@ target_link_libraries(soundsplugin PRIVATE
     KF6::I18n
 )
 
-ecm_finalize_qml_module(soundsplugin DESTINATION ${KDE_INSTALL_QMLDIR})
+ecm_finalize_qml_module(soundsplugin DESTINATION ${KDE_INSTALL_QMLDIR} EXPORT KirigamiAddonsTargets)

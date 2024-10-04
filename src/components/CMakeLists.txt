@@ -71,4 +71,4 @@ target_link_libraries(componentsplugin PRIVATE
     Qt6::QuickControls2
 )
 
-ecm_finalize_qml_module(componentsplugin DESTINATION ${KDE_INSTALL_QMLDIR})
+ecm_finalize_qml_module(componentsplugin DESTINATION ${KDE_INSTALL_QMLDIR} EXPORT KirigamiAddonsTargets)

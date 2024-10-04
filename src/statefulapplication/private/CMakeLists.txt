@@ -39,4 +39,4 @@ if (HAVE_KGLOBALACCEL)
     target_compile_definitions(statefulappprivateplugin PRIVATE -DHAVE_KGLOBALACCEL=\"true\")
 endif()
 
-ecm_finalize_qml_module(statefulappprivateplugin DESTINATION ${KDE_INSTALL_QMLDIR})
+ecm_finalize_qml_module(statefulappprivateplugin DESTINATION ${KDE_INSTALL_QMLDIR} EXPORT KirigamiAddonsTargets)

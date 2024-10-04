@@ -30,4 +30,4 @@ target_link_libraries(tableviewplugin PRIVATE
     Qt6::QuickControls2
 )
 
-ecm_finalize_qml_module(tableviewplugin DESTINATION ${KDE_INSTALL_QMLDIR})
+ecm_finalize_qml_module(tableviewplugin DESTINATION ${KDE_INSTALL_QMLDIR} EXPORT KirigamiAddonsTargets)
