@@ -82,7 +82,6 @@ QQC2.Dialog {
         id: columnLayout
 
         spacing: 0
-        property int _internal_formcard_margins: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
     }
 
     footer: QQC2.DialogButtonBox {

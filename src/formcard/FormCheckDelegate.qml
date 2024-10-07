@@ -76,14 +76,14 @@ T.CheckDelegate {
     property alias descriptionItem: internalDescriptionItem
 
     icon {
-        width: Kirigami.Units.iconSizes.small
-        height: Kirigami.Units.iconSizes.small
+        width: Kirigami.Units.iconSizes.smallMedium
+        height: Kirigami.Units.iconSizes.smallMedium
     }
 
     topPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
     bottomPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
-    leftPadding: parent._internal_formcard_margins ? parent._internal_formcard_margins : Kirigami.Units.gridUnit
-    rightPadding: parent._internal_formcard_margins ? parent._internal_formcard_margins : Kirigami.Units.gridUnit
+    leftPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+    rightPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
 
     implicitWidth: contentItem.implicitWidth + leftPadding + rightPadding
     implicitHeight: contentItem.implicitHeight + topPadding + bottomPadding
@@ -99,6 +99,8 @@ T.CheckDelegate {
 
         RowLayout {
             id: innerRowLayout
+
+            spacing: 0
 
             Private.ContentItemLoader {
                 Layout.rightMargin: visible ? root.leadingPadding : 0
@@ -117,6 +119,11 @@ T.CheckDelegate {
                 nextCheckState: root.nextCheckState
                 tristate: root.tristate
 
+                topPadding: 0
+                leftPadding: 0
+                rightPadding: 0
+                bottomPadding: 0
+
                 onToggled: {
                     root.toggle();
                     root.toggled();
@@ -124,6 +131,9 @@ T.CheckDelegate {
                 onClicked: root.clicked()
                 onPressAndHold: root.pressAndHold()
                 onDoubleClicked: root.doubleClicked()
+
+                contentItem: null // Remove right margin
+                spacing: 0
 
                 enabled: root.enabled
                 checked: root.checked
@@ -135,7 +145,7 @@ T.CheckDelegate {
                 visible: root.icon.name.length > 0 || root.icon.source.toString().length > 0
                 source: root.icon.name.length > 0 ? root.icon.name : root.icon.source
                 color: root.icon.color
-                Layout.rightMargin: visible ? Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing : 0
+                Layout.rightMargin: visible ? Kirigami.Units.largeSpacing : 0
                 implicitWidth: visible ? root.icon.width : 0
                 implicitHeight: visible ? root.icon.height : 0
             }

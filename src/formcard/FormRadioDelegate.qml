@@ -65,7 +65,7 @@ T.RadioDelegate {
      * @brief This property holds an item that will be displayed after the
      * delegate's contents.
      */
-    property var trailing
+    property var trailing: null
 
     /**
      * @brief This property holds the padding before the trailing item.
@@ -78,10 +78,10 @@ T.RadioDelegate {
      */
     property alias descriptionItem: internalDescriptionItem
 
-    leftPadding: Kirigami.Units.gridUnit
+    leftPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
     topPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
     bottomPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
-    rightPadding: Kirigami.Units.gridUnit
+    rightPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
 
     implicitWidth: contentItem.implicitWidth + leftPadding + rightPadding
     implicitHeight: contentItem.implicitHeight + topPadding + bottomPadding
@@ -89,6 +89,11 @@ T.RadioDelegate {
     focusPolicy: Qt.StrongFocus
     hoverEnabled: true
     background: FormDelegateBackground { control: root }
+
+    icon {
+        width: Kirigami.Units.iconSizes.smallMedium
+        height: Kirigami.Units.iconSizes.smallMedium
+    }
 
     Layout.fillWidth: true
 
@@ -113,10 +118,18 @@ T.RadioDelegate {
             Controls.RadioButton {
                 id: radioButtonItem
                 focusPolicy: Qt.NoFocus // provided by delegate
-                Layout.rightMargin: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+                Layout.rightMargin: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing 
 
                 enabled: root.enabled
                 checked: root.checked
+
+                contentItem: null // Remove right margin
+                spacing: 0
+
+                topPadding: 0
+                leftPadding: 0
+                rightPadding: 0
+                bottomPadding: 0
 
                 onToggled: root.toggled()
                 onClicked: root.clicked()
@@ -133,7 +146,7 @@ T.RadioDelegate {
                 visible: root.icon.name.length > 0 || root.icon.source.toString().length > 0
                 source: root.icon.name.length > 0 ? root.icon.name : root.icon.source
                 color: root.icon.color
-                Layout.rightMargin: visible ? Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing : 0
+                Layout.rightMargin: visible ? Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing  : 0
                 implicitWidth: visible ? root.icon.width : 0
                 implicitHeight: visible ? root.icon.height : 0
             }

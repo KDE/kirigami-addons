@@ -72,8 +72,8 @@ T.SwitchDelegate {
 
     topPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
     bottomPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
-    leftPadding: parent._internal_formcard_margins ? parent._internal_formcard_margins : Kirigami.Units.gridUnit
-    rightPadding: parent._internal_formcard_margins ? parent._internal_formcard_margins : Kirigami.Units.gridUnit
+    leftPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+    rightPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
 
     implicitWidth: contentItem.implicitWidth + leftPadding + rightPadding
     implicitHeight: contentItem.implicitHeight + topPadding + bottomPadding
@@ -131,6 +131,14 @@ T.SwitchDelegate {
 
             enabled: root.enabled
             checked: root.checked
+
+            spacing: 0
+            contentItem: null
+
+            topPadding: 0
+            leftPadding: 0
+            rightPadding: 0
+            bottomPadding: 0
 
             onToggled: root.toggled()
             onClicked: root.clicked()

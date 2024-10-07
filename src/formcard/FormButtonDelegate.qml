@@ -63,11 +63,6 @@ AbstractFormDelegate {
 
     focusPolicy: Qt.StrongFocus
 
-    icon {
-        width: Kirigami.Units.iconSizes.small
-        height: Kirigami.Units.iconSizes.small
-    }
-
     contentItem: RowLayout {
         spacing: 0
 

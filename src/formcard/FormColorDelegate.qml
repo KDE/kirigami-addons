@@ -48,8 +48,8 @@ FormCard.AbstractFormDelegate {
         Kirigami.Icon {
             source: "color-picker"
             Layout.rightMargin: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
-            implicitWidth: Kirigami.Units.iconSizes.small
-            implicitHeight: Kirigami.Units.iconSizes.small
+            implicitWidth: root.icon.width
+            implicitHeight: root.icon.height
         }
 
         Controls.Label {
@@ -65,8 +65,8 @@ FormCard.AbstractFormDelegate {
             id: colorRect
             radius: height
             color: root.color
-            Layout.preferredWidth: Kirigami.Units.iconSizes.small
-            Layout.preferredHeight: Kirigami.Units.iconSizes.small
+            Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
+            Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium
             Layout.rightMargin: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
         }
 

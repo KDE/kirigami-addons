@@ -26,7 +26,7 @@ import org.kde.kirigami as Kirigami
 T.ItemDelegate {
     id: root
 
-    horizontalPadding: parent._internal_formcard_margins ? parent._internal_formcard_margins : Kirigami.Units.gridUnit
+    horizontalPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
     verticalPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
 
     implicitWidth: contentItem.implicitWidth + leftPadding + rightPadding
@@ -35,6 +35,11 @@ T.ItemDelegate {
     focusPolicy: Qt.StrongFocus
     hoverEnabled: true
     background: FormDelegateBackground { control: root }
+
+    icon {
+        width: Kirigami.Units.iconSizes.smallMedium
+        height: Kirigami.Units.iconSizes.smallMedium
+    }
 
     Layout.fillWidth: true
 }

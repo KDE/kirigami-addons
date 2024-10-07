@@ -177,7 +177,7 @@ AbstractFormDelegate {
 
                 property bool androidPickerActive: false
 
-                horizontalPadding: Kirigami.Units.gridUnit
+                horizontalPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
                 verticalPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
 
                 Layout.fillWidth: true
@@ -342,7 +342,7 @@ AbstractFormDelegate {
 
                 visible: root.dateTimeDisplay === FormDateTimeDelegate.DateTimeDisplay.DateTime || root.dateTimeDisplay === FormDateTimeDelegate.DateTimeDisplay.Time
 
-                horizontalPadding: Kirigami.Units.gridUnit
+                horizontalPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
                 verticalPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
 
                 Layout.fillWidth: true

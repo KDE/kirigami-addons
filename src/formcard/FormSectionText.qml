@@ -30,8 +30,8 @@ Label {
 
     Layout.maximumWidth: Kirigami.Units.gridUnit * 30
     Layout.alignment: Qt.AlignHCenter
-    Layout.leftMargin: Kirigami.Units.gridUnit
-    Layout.rightMargin: Kirigami.Units.gridUnit
+    Layout.leftMargin: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+    Layout.rightMargin: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
     Layout.bottomMargin: Kirigami.Units.largeSpacing
     Layout.topMargin: Kirigami.Units.largeSpacing
     Layout.fillWidth: true

@@ -93,8 +93,8 @@ AbstractFormDelegate {
             source: root.icon.name
             color: root.icon.color
             Layout.rightMargin: (root.icon.name !== "") ? Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing : 0
-            implicitWidth: (root.icon.name !== "") ? Kirigami.Units.iconSizes.small : 0
-            implicitHeight: (root.icon.name !== "") ? Kirigami.Units.iconSizes.small : 0
+            implicitWidth: (root.icon.name !== "") ? Kirigami.Units.iconSizes.smallMedium : 0
+            implicitHeight: (root.icon.name !== "") ? Kirigami.Units.iconSizes.smallMedium : 0
         }
 
         ColumnLayout {
