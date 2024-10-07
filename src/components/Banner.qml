@@ -48,6 +48,7 @@ import org.kde.kirigami 2.20 as Kirigami
  * @endcode
  * @since KirigamiAddons 0.10.0
  * @inherit QtQuick.Controls.Control
+ * @deprecatde Since 1.5.0, use Kirigami.InlineMessage with the appropriate `position` property.
  */
 T.ToolBar {
     id: root
