@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-27 00:39+0000\n"
+"POT-Creation-Date: 2024-10-08 00:38+0000\n"
 "PO-Revision-Date: 2021-06-29 17:45+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -80,7 +80,7 @@ msgstr "पिछला"
 msgid "Next image"
 msgstr ""
 
-#: components/Banner.qml:186
+#: components/Banner.qml:187
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
