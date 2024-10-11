@@ -350,11 +350,9 @@ msgid "Copyright"
 msgstr "版权信息"
 
 #: formcard/AboutPage.qml:141
-#, fuzzy, kde-format
-#| msgctxt "@action:intoolbar"
-#| msgid "Hide caption"
+#, kde-format
 msgid "Description"
-msgstr "隐藏标题"
+msgstr "描述"
 
 #: formcard/AboutPage.qml:154
 #, kde-format
