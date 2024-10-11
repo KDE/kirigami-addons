@@ -288,7 +288,7 @@ AbstractMaximizeComponent {
                 contentWidth: captionLabel.width
                 contentHeight: captionLabel.height - captionLabel.padding * 2 + Kirigami.Units.largeSpacing
 
-                QQC2.Label {
+                Kirigami.SelectableLabel {
                     id: captionLabel
                     wrapMode: Text.WordWrap
                     text: view.currentItem.caption
