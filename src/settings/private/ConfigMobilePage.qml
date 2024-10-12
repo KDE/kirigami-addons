@@ -21,7 +21,21 @@ FormCard.FormCardPage {
     // Do not use Map, it crashes very frequently
     property var pageCache: Object.create(null)
 
+    property bool initDone: false
+
     title: i18ndc("kirigami-addons6", "@title", "Settings")
+
+    Connections {
+        target: window.pageStack.layers
+
+        onBusyChanged: if (!window.pageStack.layers.busy && !initDone) {
+            const module = getModuleByName(defaultModule);
+            if (module) {
+                window.pageStack.layers.push(pageForModule(module));
+            }
+            initDone = true;
+        }
+    }
 
     // search bar
     FormCard.FormCard {
