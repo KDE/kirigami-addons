@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-08 00:38+0000\n"
+"POT-Creation-Date: 2024-10-13 00:38+0000\n"
 "PO-Revision-Date: 2024-08-30 10:21+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -477,13 +477,13 @@ msgctxt "@action:intoolbar"
 msgid "Go back"
 msgstr ""
 
-#: settings/private/ConfigMobilePage.qml:24
+#: settings/private/ConfigMobilePage.qml:26
 #, kde-format
 msgctxt "@title"
 msgid "Settings"
 msgstr ""
 
-#: settings/private/ConfigMobilePage.qml:83
+#: settings/private/ConfigMobilePage.qml:97
 #, kde-format
 msgctxt "@title:group"
 msgid "Settings"
