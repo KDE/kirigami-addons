@@ -18,8 +18,12 @@ target_link_libraries(test-artefacts
 )
 
 add_executable(qmltest qmltests.cpp)
+ecm_add_qml_module(qmltest URI "org.kde.kirigami.addons.test")
+if (NOT QT6_IS_SHARED_LIBS_BUILD)
+    qt6_import_qml_plugins(qmltest)
+endif()
 
-target_link_libraries(qmltest
+target_link_libraries(qmltest PRIVATE
     test-artefacts
     Qt6::QuickTest
     Qt6::Qml
