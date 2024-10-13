@@ -3,7 +3,7 @@
 
 # Labs module
 
-ecm_add_qml_module(componentslabsplugin URI "org.kde.kirigamiaddons.labs.components" VERSION 1.0)
+ecm_add_qml_module(componentslabsplugin URI "org.kde.kirigamiaddons.labs.components" VERSION 1.0 CLASS_NAME ComponentsLabsPlugin)
 
 target_sources(componentslabsplugin PRIVATE
     nameutils.h
@@ -30,7 +30,7 @@ target_link_libraries(componentslabsplugin PRIVATE
     Qt6::QuickControls2
 )
 
-ecm_finalize_qml_module(componentslabsplugin DESTINATION ${KDE_INSTALL_QMLDIR})
+ecm_finalize_qml_module(componentslabsplugin DESTINATION ${KDE_INSTALL_QMLDIR} EXPORT KirigamiAddonsTargets)
 
 # Non labs module
 
