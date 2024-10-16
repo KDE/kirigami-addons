@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-13 00:38+0000\n"
-"PO-Revision-Date: 2024-05-29 16:25+0300\n"
+"PO-Revision-Date: 2024-10-14 14:31+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,17 +16,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Toms Trasūns"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "toms.trasuns@posteo.net"
 
 #: components/AbstractMaximizeComponent.qml:130
 #, kde-format
@@ -359,11 +359,9 @@ msgid "Copyright"
 msgstr "Autortiesības"
 
 #: formcard/AboutPage.qml:141
-#, fuzzy, kde-format
-#| msgctxt "@action:intoolbar"
-#| msgid "Hide caption"
+#, kde-format
 msgid "Description"
-msgstr "Slēpt parakstu"
+msgstr "Apraksts"
 
 #: formcard/AboutPage.qml:154
 #, kde-format
@@ -458,17 +456,13 @@ msgid "Go back"
 msgstr "Iet atpakaļ"
 
 #: settings/private/ConfigMobilePage.qml:26
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title"
 msgid "Settings"
 msgstr "Iestatījumi"
 
 #: settings/private/ConfigMobilePage.qml:97
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title:group"
 msgid "Settings"
 msgstr "Iestatījumi"
@@ -477,43 +471,43 @@ msgstr "Iestatījumi"
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Enable automatic spell checking"
-msgstr ""
+msgstr "Ieslēgt automātisko pareizrakstības pārbaudi"
 
 #: settings/private/SonnetConfigPage.qml:55
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore uppercase words"
-msgstr ""
+msgstr "Ignorēt ar lielajiem burtiem rakstītus vārdus"
 
 #: settings/private/SonnetConfigPage.qml:69
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore hyphenated words"
-msgstr ""
+msgstr "Ignorēt vārdus, kas satur defisi"
 
 #: settings/private/SonnetConfigPage.qml:83
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Detect language automatically"
-msgstr ""
+msgstr "Automātiski noteikt valodu"
 
 #: settings/private/SonnetConfigPage.qml:96
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Selected default language:"
-msgstr ""
+msgstr "Izvēlētā noklusējuma valoda:"
 
 #: settings/private/SonnetConfigPage.qml:97
 #, kde-format
 msgctxt "No selected language"
 msgid "None"
-msgstr ""
+msgstr "Neviena"
 
 #: settings/private/SonnetConfigPage.qml:117
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Additional Spell Checking Languages"
-msgstr ""
+msgstr "Papildu pareizrakstības pārbaudes valodas"
 
 #: settings/private/SonnetConfigPage.qml:118
 #, kde-format
@@ -521,64 +515,66 @@ msgid ""
 "%1 will provide spell checking and suggestions for the languages listed here "
 "when autodetection is enabled."
 msgstr ""
+"%1 nodrošinās pareizrakstības pārbaudi un ieteikumus sarakstā norādītajām "
+"valodām, ja ir ieslēgta valodu automātiska noteikšana."
 
 #: settings/private/SonnetConfigPage.qml:131
 #, kde-format
 msgctxt "@action:button"
 msgid "Open Personal Dictionary"
-msgstr ""
+msgstr "Atvērt personīgo vārdnīcu"
 
 #: settings/private/SonnetConfigPage.qml:143
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking languages"
-msgstr ""
+msgstr "Pareizrakstības pārbaudes valodas"
 
 #: settings/private/SonnetConfigPage.qml:155
 #, kde-format
 msgid "Default Language"
-msgstr ""
+msgstr "Noklusējuma valoda"
 
 #: settings/private/SonnetConfigPage.qml:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking dictionary"
-msgstr ""
+msgstr "Pareizrakstības pārbaudes vārdnīca"
 
 #: settings/private/SonnetConfigPage.qml:174
 #, kde-format
 msgctxt "Placeholder message"
 msgid "Add a new word to your personal dictionary…"
-msgstr ""
+msgstr "Pievienot jaunu vārdu personīgajai vārdnīcai…"
 
 #: settings/private/SonnetConfigPage.qml:177
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Word"
-msgstr ""
+msgstr "Pievienot vārdu"
 
 #: settings/private/SonnetConfigPage.qml:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete word"
-msgstr ""
+msgstr "Dzēst vārdu"
 
 #: settings/SpellcheckingConfigurationModule.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Spell Checking"
-msgstr ""
+msgstr "Pareizrakstības pārbaude"
 
 #: statefulapplication/abstractkirigamiapplication.cpp:145
 #, kde-format
 msgid "Open Command Bar"
-msgstr ""
+msgstr "Atvērt komandu joslu"
 
 #: statefulapplication/private/keysequencehelper.cpp:117
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Reserved Shortcut"
-msgstr ""
+msgstr "Rezervēta saīsne"
 
 #: statefulapplication/private/keysequencehelper.cpp:119
 #, kde-format
@@ -588,6 +584,9 @@ msgid ""
 "shortcut.\n"
 "Please choose another one."
 msgstr ""
+"„F12“ taustiņš „Windows“ operētājsistēmā ir rezervēts, tāpēc to nevar "
+"izmantot kā globālo saīsni.\n"
+"Izvēlieties kādu citu."
 
 #: statefulapplication/private/keysequencehelper.cpp:143
 #, kde-format
@@ -595,32 +594,32 @@ msgctxt ""
 "@title:dialog This happen when a global shortcut is already defined with the "
 "same shortcut"
 msgid "Global Shortcut Shadowing"
-msgstr ""
+msgstr "Globālo saīšņu ēnošana"
 
 #: statefulapplication/private/keysequencehelper.cpp:146
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination is shadowed by following global actions:\n"
-msgstr ""
+msgstr "„%1“ taustiņu kombināciju ēno šādas globālās darbības:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:148
 #: statefulapplication/private/keysequencehelper.cpp:154
 #, kde-format
 msgctxt "@info"
 msgid "Action '%1' in context '%2'\n"
-msgstr ""
+msgstr "Darbība „%1“, kas notiek „%2“ kontekstā\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:152
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination shadows following global actions:\n"
-msgstr ""
+msgstr "„%1“ taustiņu kombinācija ēno šādas globālās darbības:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:193
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Conflict with Standard Application Shortcut"
-msgstr ""
+msgstr "Konflikts ar programmu standarta saīsni"
 
 #: statefulapplication/private/keysequencehelper.cpp:195
 #, kde-format
@@ -630,18 +629,21 @@ msgid ""
 "some applications use.\n"
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
+"Taustiņu kombināciju „%1“ citas programmas bieži izmanto kā standarta "
+"kombināciju darbībai „%2“.\n"
+"Vai tiešām vēlaties to izmantot arī kā globālu saīsni?"
 
 #: statefulapplication/private/KeySequenceItem.qml:129
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
-msgstr ""
+msgstr "Ievade"
 
 #: statefulapplication/private/KeySequenceItem.qml:130
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
-msgstr ""
+msgstr "Nav"
 
 #: statefulapplication/private/KeySequenceItem.qml:141
 #, kde-format
@@ -649,79 +651,81 @@ msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
+"Klikšķiniet uz pogas, pēc tam ierakstiet saīsni tā, kā to spiestu "
+"programmā.\n"
+"Piemēram, lai ievadītu saīsni „Ctrl+A“, nospiežot un pieturot nospiestu "
+"„Ctrl“ taustiņu, nospiediet „A“."
 
 #: statefulapplication/private/KeySequenceItem.qml:182
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
-msgstr ""
+msgstr "Notīrīt taustiņu virkni"
 
 #: statefulapplication/private/KeySequenceItem.qml:198
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel Key Sequence Recording"
-msgstr ""
+msgstr "Atcelt taustiņu virknes ierakstīšanu"
 
 #: statefulapplication/private/KQuickCommandBarPage.qml:55
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No results found"
-msgstr ""
+msgstr "Nekas nav atrasts"
 
 #: statefulapplication/private/ShortcutsEditor.qml:18
 #: statefulapplication/StatefulWindow.qml:90
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcuts"
-msgstr ""
+msgstr "Saīsnes"
 
 #: statefulapplication/private/ShortcutsEditor.qml:22
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Filter…"
-msgstr ""
+msgstr "Filtrēt…"
 
 #: statefulapplication/private/ShortcutsEditor.qml:52
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut: %1"
-msgstr ""
+msgstr "Saīsne: „%1“"
 
 #: statefulapplication/private/ShortcutsEditor.qml:72
 #, kde-format
 msgctxt "@label"
 msgid "Shortcut:"
-msgstr ""
+msgstr "Saīsne:"
 
 #: statefulapplication/private/ShortcutsEditor.qml:127
 #: statefulapplication/private/ShortcutsEditor.qml:155
 #, kde-format
 msgctxt "@label"
 msgid "Alternative:"
-msgstr ""
+msgstr "Alternatīva:"
 
 #: statefulapplication/private/ShortcutsEditor.qml:193
 #, kde-format
 msgctxt "Placeholder message"
 msgid "No shortcuts found"
-msgstr ""
+msgstr "Saīsnes nav atrastas"
 
 #: statefulapplication/shortcutsmodel.cpp:41
 #, kde-format
 msgctxt "List separator"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: statefulapplication/StatefulWindow.qml:100
-#, fuzzy, kde-format
-#| msgid "About %1"
+#, kde-format
 msgctxt "@title:window"
 msgid "About %1"
 msgstr "Par „%1“"
 
 #: statefulapplication/StatefulWindow.qml:113
-#, fuzzy, kde-format
-#| msgid "About KDE"
+#, kde-format
 msgctxt "@title:window"
 msgid "About KDE"
 msgstr "Par KDE"
