@@ -198,12 +198,13 @@ Item {
             source: "user"
         }
 
-        Image {
+        AnimatedImage {
             id: avatarImage
 
             anchors.fill: parent
 
             visible: root.__showImage
+            playing: Kirigami.Units.shortDuration > 0
 
             fillMode: Image.PreserveAspectCrop
             mipmap: true
