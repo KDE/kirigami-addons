@@ -198,7 +198,7 @@ Item {
             source: "user"
         }
 
-        Image {
+        AnimatedImage {
             id: avatarImage
 
             anchors.fill: parent
