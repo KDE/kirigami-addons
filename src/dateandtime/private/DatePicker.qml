@@ -74,20 +74,57 @@ QQC2.Control {
             date = maximumDate;
         }
 
-        const yearDiff = date.getFullYear() - yearPathView.currentItem.startDate.getFullYear();
-        // For the decadeDiff we add one to the input date year so that we use e.g. 2021, making the pathview move to the grid that contains the 2020 decade
-        // instead of staying within the 2010 decade, which contains a 2020 cell at the very end
-        const decadeDiff = Math.floor((date.getFullYear() + 1 - decadePathView.currentItem.startDate.getFullYear()) / 12); // 12 years in one decade grid
+        if (yearPathView.currentItem !== null) {
+            const yearDiff = date.getFullYear() - yearPathView.currentItem.startDate.getFullYear();
+            let newYearIndex = yearPathView.currentIndex + yearDiff;
+            let firstYearItemDate = yearPathView.model.data(yearPathView.model.index(1,0), InfiniteCalendarViewModel.StartDateRole);
+            let lastYearItemDate = yearPathView.model.data(yearPathView.model.index(yearPathView.model.rowCount() - 2,0), InfiniteCalendarViewModel.StartDateRole);
 
-        let newYearIndex = yearPathView.currentIndex + yearDiff;
-        let newDecadeIndex = decadePathView.currentIndex + decadeDiff;
+            // Set to index and create dates if needed for year view
+            while (firstYearItemDate >= date) {
+                yearPathView.model.addDates(false)
+                firstYearItemDate = yearPathView.model.data(yearPathView.model.index(1,0), InfiniteCalendarViewModel.StartDateRole);
+                newYearIndex = 0;
+            }
+            if (firstYearItemDate < date && newYearIndex === 0) {
+                newYearIndex = date.getFullYear() - firstYearItemDate.getFullYear() + 1;
+            }
 
-        let firstYearItemDate = yearPathView.model.data(yearPathView.model.index(1,0), InfiniteCalendarViewModel.StartDateRole);
-        let lastYearItemDate = yearPathView.model.data(yearPathView.model.index(yearPathView.model.rowCount() - 2,0), InfiniteCalendarViewModel.StartDateRole);
-        let firstDecadeItemDate = decadePathView.model.data(decadePathView.model.index(1,0), InfiniteCalendarViewModel.StartDateRole);
-        let lastDecadeItemDate = decadePathView.model.data(decadePathView.model.index(decadePathView.model.rowCount() - 1,0), InfiniteCalendarViewModel.StartDateRole);
+            while (lastYearItemDate <= date) {
+                yearPathView.model.addDates(true)
+                lastYearItemDate = yearPathView.model.data(yearPathView.model.index(yearPathView.model.rowCount() - 1,0), InfiniteCalendarViewModel.StartDateRole);
+            }
 
-        if(showDays) { // Set to correct index, including creating new dates in model if needed, for the month view
+            yearPathView.currentIndex = newYearIndex;
+        }
+
+        if (decadePathView.currentItem !== null) {
+            // For the decadeDiff we add one to the input date year so that we use e.g. 2021, making the pathview move to the grid that contains the 2020 decade
+            // instead of staying within the 2010 decade, which contains a 2020 cell at the very end
+            const decadeDiff = Math.floor((date.getFullYear() + 1 - decadePathView.currentItem.startDate.getFullYear()) / 12); // 12 years in one decade grid
+            let newDecadeIndex = decadePathView.currentIndex + decadeDiff;
+            let firstDecadeItemDate = decadePathView.model.data(decadePathView.model.index(1,0), InfiniteCalendarViewModel.StartDateRole);
+            let lastDecadeItemDate = decadePathView.model.data(decadePathView.model.index(decadePathView.model.rowCount() - 1,0), InfiniteCalendarViewModel.StartDateRole);
+
+            // Set to index and create dates if needed for decade view
+            while (firstDecadeItemDate >= date) {
+                decadePathView.model.addDates(false)
+                firstDecadeItemDate = decadePathView.model.data(decadePathView.model.index(1,0), InfiniteCalendarViewModel.StartDateRole);
+                newDecadeIndex = 0;
+            }
+            if (firstDecadeItemDate < date && newDecadeIndex === 0) {
+                newDecadeIndex = date.getFullYear() - firstDecadeItemDate.getFullYear() + 1;
+            }
+
+            while (lastDecadeItemDate.getFullYear() <= date.getFullYear()) {
+                decadePathView.model.addDates(true)
+                lastDecadeItemDate = decadePathView.model.data(decadePathView.model.index(decadePathView.model.rowCount() - 1,0), InfiniteCalendarViewModel.StartDateRole);
+            }
+
+            decadePathView.currentIndex = newDecadeIndex;
+        }
+
+        if (showDays && monthPathView.currentItem !== null) { // Set to correct index, including creating new dates in model if needed, for the month view
             const monthDiff = date.getMonth() - monthPathView.currentItem.firstDayOfMonth.getMonth() + (12 * (date.getFullYear() - monthPathView.currentItem.firstDayOfMonth.getFullYear()));
             let newMonthIndex = monthPathView.currentIndex + monthDiff;
             let firstMonthItemDate = monthPathView.model.data(monthPathView.model.index(1,0), InfiniteCalendarViewModel.FirstDayOfMonthRole);
@@ -109,39 +146,6 @@ QQC2.Control {
 
             monthPathView.currentIndex = newMonthIndex;
         }
-
-        // Set to index and create dates if needed for year view
-        while(firstYearItemDate >= date) {
-            yearPathView.model.addDates(false)
-            firstYearItemDate = yearPathView.model.data(yearPathView.model.index(1,0), InfiniteCalendarViewModel.StartDateRole);
-            newYearIndex = 0;
-        }
-        if(firstYearItemDate < date && newYearIndex === 0) {
-            newYearIndex = date.getFullYear() - firstYearItemDate.getFullYear() + 1;
-        }
-
-        while(lastYearItemDate <= date) {
-            yearPathView.model.addDates(true)
-            lastYearItemDate = yearPathView.model.data(yearPathView.model.index(yearPathView.model.rowCount() - 1,0), InfiniteCalendarViewModel.StartDateRole);
-        }
-
-        // Set to index and create dates if needed for decade view
-        while(firstDecadeItemDate >= date) {
-            decadePathView.model.addDates(false)
-            firstDecadeItemDate = decadePathView.model.data(decadePathView.model.index(1,0), InfiniteCalendarViewModel.StartDateRole);
-            newDecadeIndex = 0;
-        }
-        if(firstDecadeItemDate < date && newDecadeIndex === 0) {
-            newDecadeIndex = date.getFullYear() - firstDecadeItemDate.getFullYear() + 1;
-        }
-
-        while(lastDecadeItemDate.getFullYear() <= date.getFullYear()) {
-            decadePathView.model.addDates(true)
-            lastDecadeItemDate = decadePathView.model.data(decadePathView.model.index(decadePathView.model.rowCount() - 1,0), InfiniteCalendarViewModel.StartDateRole);
-        }
-
-        yearPathView.currentIndex = newYearIndex;
-        decadePathView.currentIndex = newDecadeIndex;
 
         _runSetDate = false;
     }
