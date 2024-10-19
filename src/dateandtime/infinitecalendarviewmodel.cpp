@@ -82,7 +82,7 @@ QVariant InfiniteCalendarViewModel::data(const QModelIndex &idx, int role) const
         case SelectedYearRole:
             return firstDay.date().year();
         default:
-            qWarning() << "Unknown role for startdate:" << QMetaEnum::fromType<Roles>().valueToKey(role);
+            qWarning() << "Unknown role for firstDay:" << QMetaEnum::fromType<Roles>().valueToKey(role);
             return {};
         }
     }
