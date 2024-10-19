@@ -439,8 +439,8 @@ QQC2.Control {
                         property var modelLoader: Loader {
                             asynchronous: true
                             sourceComponent: MonthModel {
-                                year: firstDay.getFullYear()
-                                month: firstDay.getMonth() + 1 // From pathview model
+                                year: monthViewLoader.firstDayOfMonth.getFullYear()
+                                month: monthViewLoader.firstDayOfMonth.getMonth() + 1 // From pathview model
                             }
                         }
 
