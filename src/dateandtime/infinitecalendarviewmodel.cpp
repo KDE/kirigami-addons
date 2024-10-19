@@ -72,30 +72,30 @@ QVariant InfiniteCalendarViewModel::data(const QModelIndex &idx, int role) const
     }
 
     if (m_scale == MonthScale && role != StartDateRole) {
-        const QDateTime firstDay = m_firstDayOfMonthDates[idx.row()];
+        const auto firstDay = m_firstDayOfMonthDates[idx.row()].date();
 
         switch (role) {
         case FirstDayOfMonthRole:
-            return firstDay.date().startOfDay();
+            return firstDay.startOfDay();
         case SelectedMonthRole:
-            return firstDay.date().month();
+            return firstDay.month();
         case SelectedYearRole:
-            return firstDay.date().year();
+            return firstDay.year();
         default:
             qWarning() << "Unknown role for firstDay:" << QMetaEnum::fromType<Roles>().valueToKey(role);
             return {};
         }
     }
 
-    const auto startDate = m_startDates[idx.row()];
+    const auto startDate = m_startDates[idx.row()].date();
 
     switch (role) {
     case StartDateRole:
-        return startDate.date().startOfDay();
+        return startDate.startOfDay();
     case SelectedMonthRole:
-        return startDate.date().month();
+        return startDate.month();
     case SelectedYearRole:
-        return startDate.date().year();
+        return startDate.year();
     default:
         qWarning() << "Unknown role for startdate:" << QMetaEnum::fromType<Roles>().valueToKey(role);
         return {};
