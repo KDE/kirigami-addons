@@ -90,6 +90,8 @@ QVariant InfiniteCalendarViewModel::data(const QModelIndex &idx, int role) const
     const auto startDate = m_startDates[idx.row()].date();
 
     switch (role) {
+    case FirstDayOfMonthRole:
+        return QDate(startDate.year(), startDate.month(), 1).startOfDay();
     case StartDateRole:
         return startDate.startOfDay();
     case SelectedMonthRole:
