@@ -71,8 +71,6 @@ QVariant InfiniteCalendarViewModel::data(const QModelIndex &idx, int role) const
         return {};
     }
 
-    const QDateTime startDate = m_startDates[idx.row()];
-
     if (m_scale == MonthScale && role != StartDateRole) {
         const QDateTime firstDay = m_firstDayOfMonthDates[idx.row()];
 
@@ -88,6 +86,8 @@ QVariant InfiniteCalendarViewModel::data(const QModelIndex &idx, int role) const
             return {};
         }
     }
+
+    const auto startDate = m_startDates[idx.row()];
 
     switch (role) {
     case StartDateRole:
