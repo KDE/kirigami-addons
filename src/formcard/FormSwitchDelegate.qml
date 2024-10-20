@@ -82,6 +82,11 @@ T.SwitchDelegate {
     hoverEnabled: true
     background: FormDelegateBackground { control: root }
 
+    icon {
+        width: Kirigami.Units.iconSizes.smallMedium
+        height: Kirigami.Units.iconSizes.smallMedium
+    }
+
     Layout.fillWidth: true
 
     Accessible.description: root.description
@@ -98,6 +103,15 @@ T.SwitchDelegate {
             implicitHeight: visible ? root.leading.implicitHeight : 0
             implicitWidth: visible ? root.leading.implicitWidth : 0
             contentItem: root.leading
+        }
+
+        Kirigami.Icon {
+            visible: root.icon.name.length > 0 || root.icon.source.toString().length > 0
+            source: root.icon.name.length > 0 ? root.icon.name : root.icon.source
+            color: root.icon.color
+            Layout.rightMargin: visible ? Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing  : 0
+            implicitWidth: visible ? root.icon.width : 0
+            implicitHeight: visible ? root.icon.height : 0
         }
 
         ColumnLayout {
