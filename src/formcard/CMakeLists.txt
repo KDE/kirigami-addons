@@ -10,6 +10,7 @@ ecm_add_qml_module(formcardplugin
     DEPENDENCIES
         org.kde.coreaddons
         org.kde.kirigami
+        org.kde.kirigamiaddons.components
         org.kde.kirigamiaddons.delegates
 )
 
