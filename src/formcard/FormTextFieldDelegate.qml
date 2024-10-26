@@ -242,6 +242,8 @@ AbstractFormDelegate {
                     : Kirigami.Theme.textColor
                 horizontalAlignment: Text.AlignRight
 
+                Accessible.ignored: !visible
+
                 Layout.margins: Kirigami.Units.smallSpacing
                 Layout.preferredWidth: metrics.advanceWidth
             }
