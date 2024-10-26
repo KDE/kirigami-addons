@@ -94,5 +94,6 @@ QQC2.Dialog {
         spacing: Kirigami.Units.mediumSpacing
 
         standardButtons: root.standardButtons
+        visible: count > 0
     }
 }
