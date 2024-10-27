@@ -5,6 +5,7 @@
 #include <QQmlExtensionPlugin>
 #include <QQmlEngine>
 #include "nameutils.h"
+#include "timezoneutils.h"
 
 class ComponentsLabsPlugin : public QQmlExtensionPlugin
 {
@@ -19,6 +20,11 @@ public:
         qmlRegisterModule(uri, 1, 0);
         qmlRegisterSingletonType<NameUtils>(uri, 1, 0, "NameUtils", [](QQmlEngine*, QJSEngine*) -> QObject* {
             return new NameUtils;
+        });
+
+        qmlRegisterModule(uri, 1, 0);
+        qmlRegisterSingletonType<TimeZoneUtils>(uri, 1, 0, "TimeZoneUtils", [](QQmlEngine*, QJSEngine*) -> QObject* {
+            return new TimeZoneUtils;
         });
     }
 };

@@ -8,6 +8,8 @@ ecm_add_qml_module(componentslabsplugin URI "org.kde.kirigamiaddons.labs.compone
 target_sources(componentslabsplugin PRIVATE
     nameutils.h
     nameutils.cpp
+    timezoneutils.h
+    timezoneutils.cpp
     componentslabsplugin.cpp
 )
 
@@ -22,6 +24,8 @@ ecm_target_qml_sources(componentslabsplugin SOURCES
     DownloadAction.qml
     SearchPopupField.qml
     DialogRoundedBackground.qml
+    TimezoneSelector.qml
+    GeoJsonDelegate.qml
 )
 
 target_link_libraries(componentslabsplugin PRIVATE
@@ -45,6 +49,8 @@ ecm_add_qml_module(componentsplugin
 target_sources(componentsplugin PRIVATE
     nameutils.h
     nameutils.cpp
+    timezoneutils.h
+    timezoneutils.cpp
     messagedialoghelper.h
     messagedialoghelper.cpp
 )
@@ -62,6 +68,8 @@ ecm_target_qml_sources(componentsplugin SOURCES
     MessageDialog.qml
     SearchPopupField.qml
     SegmentedButton.qml
+    TimezoneSelector.qml
+    GeoJsonDelegate.qml
 )
 
 target_link_libraries(componentsplugin PRIVATE
@@ -72,3 +80,11 @@ target_link_libraries(componentsplugin PRIVATE
 )
 
 ecm_finalize_qml_module(componentsplugin DESTINATION ${KDE_INSTALL_QMLDIR} EXPORT KirigamiAddonsTargets)
+
+install( FILES timezones.json  DESTINATION ${KDE_INSTALL_DATADIR}/timezonefiles )
+
+qt_add_resources(
+    componentsplugin "timezone_files"
+    PREFIX "kirigami-addons/timezone"
+    FILES "offline_tiles/"
+)
