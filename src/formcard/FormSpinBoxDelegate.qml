@@ -6,7 +6,7 @@ import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
-import 'private' as P
+import 'private' as Private
 
 /**
  * @brief A Form delegate that corresponds to a spinbox.
@@ -122,6 +122,8 @@ AbstractFormDelegate {
     background: null
 
     contentItem: ColumnLayout {
+        spacing: Private.FormCardUnits.verticalSpacing
+
         RowLayout {
             Layout.fillWidth: true
             spacing: 0
@@ -135,7 +137,7 @@ AbstractFormDelegate {
                 maximumLineCount: 2
             }
 
-            P.SpinButton {
+            Private.SpinButton {
                 onClicked: root.decrease()
                 icon.name: 'arrow-down'
                 visible: Kirigami.Settings.isMobile
@@ -180,7 +182,7 @@ AbstractFormDelegate {
                 }
             }
 
-            P.SpinButton {
+            Private.SpinButton {
                 onClicked: root.increase()
                 visible: Kirigami.Settings.isMobile
                 icon.name: 'arrow-up'

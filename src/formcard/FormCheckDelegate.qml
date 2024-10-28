@@ -80,8 +80,8 @@ T.CheckDelegate {
         height: Kirigami.Units.iconSizes.smallMedium
     }
 
-    horizontalPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
-    verticalPadding: Kirigami.Units.largeSpacing + (Kirigami.Settings.isMobile ? Kirigami.Units.smallSpacing : 0)
+    horizontalPadding: Private.FormCardUnits.horizontalPadding
+    verticalPadding: Private.FormCardUnits.verticalPadding
 
     implicitWidth: contentItem.implicitWidth + leftPadding + rightPadding
     implicitHeight: contentItem.implicitHeight + topPadding + bottomPadding
@@ -93,7 +93,7 @@ T.CheckDelegate {
     Layout.fillWidth: true
 
     contentItem: ColumnLayout {
-        spacing: Kirigami.Units.smallSpacing
+        spacing: Private.FormCardUnits.verticalSpacing
 
         RowLayout {
             id: innerRowLayout
@@ -110,7 +110,7 @@ T.CheckDelegate {
 
             Controls.CheckBox {
                 id: checkBoxItem
-                Layout.rightMargin: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+                Layout.rightMargin: Private.FormCardUnits.horizontalSpacing
                 focusPolicy: Qt.NoFocus // provided by delegate
 
                 checkState: root.checkState
@@ -143,7 +143,7 @@ T.CheckDelegate {
                 visible: root.icon.name.length > 0 || root.icon.source.toString().length > 0
                 source: root.icon.name.length > 0 ? root.icon.name : root.icon.source
                 color: root.icon.color
-                Layout.rightMargin: visible ? Kirigami.Units.largeSpacing : 0
+                Layout.rightMargin: visible ? Private.FormCardUnits.horizonalSpacing : 0
                 implicitWidth: visible ? root.icon.width : 0
                 implicitHeight: visible ? root.icon.height : 0
             }

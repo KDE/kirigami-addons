@@ -70,8 +70,8 @@ T.SwitchDelegate {
      */
     property real trailingPadding: Kirigami.Units.smallSpacing
 
-    horizontalPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
-    verticalPadding: Kirigami.Units.largeSpacing + (Kirigami.Settings.isMobile ? Kirigami.Units.smallSpacing : 0)
+    horizontalPadding: Private.FormCardUnits.horizontalPadding
+    verticalPadding: Private.FormCardUnits.verticalPadding
 
     implicitWidth: contentItem.implicitWidth + leftPadding + rightPadding
     implicitHeight: contentItem.implicitHeight + topPadding + bottomPadding
@@ -107,14 +107,14 @@ T.SwitchDelegate {
             visible: root.icon.name.length > 0 || root.icon.source.toString().length > 0
             source: root.icon.name.length > 0 ? root.icon.name : root.icon.source
             color: root.icon.color
-            Layout.rightMargin: visible ? Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing  : 0
+            Layout.rightMargin: visible ? Private.FormCardUnits.horizontalSpacing : 0
             implicitWidth: visible ? root.icon.width : 0
             implicitHeight: visible ? root.icon.height : 0
         }
 
         ColumnLayout {
             Layout.fillWidth: true
-            spacing: Kirigami.Units.smallSpacing
+            spacing: Private.FormCardUnits.verticalSpacing
 
             Controls.Label {
                 Layout.fillWidth: true
@@ -139,7 +139,7 @@ T.SwitchDelegate {
         Controls.Switch {
             id: switchItem
             focusPolicy: Qt.NoFocus // provided by delegate
-            Layout.leftMargin: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+            Layout.leftMargin: Private.FormCardUnits.horizontalSpacing
 
             enabled: root.enabled
             checked: root.checked

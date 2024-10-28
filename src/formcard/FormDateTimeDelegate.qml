@@ -8,6 +8,8 @@ import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.dateandtime as DateTime
 import org.kde.kirigamiaddons.components as Components
 
+import "private" as Private
+
 /**
  * FormDateTimeDelegate is a delegate for FormCard that lets the user enters either
  * a date, a time or both.
@@ -177,8 +179,8 @@ AbstractFormDelegate {
 
                 property bool androidPickerActive: false
 
-                horizontalPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
-                verticalPadding: Kirigami.Units.largeSpacing + (Kirigami.Settings.isMobile ? Kirigami.Units.smallSpacing : 0)
+                horizontalPadding: Private.FormCardUnits.horizontalPadding
+                verticalPadding: Private.FormCardUnits.verticalPadding
 
                 Layout.fillWidth: true
                 Layout.maximumWidth: root.dateTimeDisplay === FormDateTimeDelegate.DateTimeDisplay.DateTime ? parent.width / 2 : parent.width
@@ -227,7 +229,7 @@ AbstractFormDelegate {
                         source: "view-calendar"
                         Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
                         Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium
-                        Layout.rightMargin: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+                        Layout.rightMargin: Private.FormCardUnits.horizontalSpacing
                     }
 
                     QQC2.Label {
@@ -342,8 +344,8 @@ AbstractFormDelegate {
 
                 visible: root.dateTimeDisplay === FormDateTimeDelegate.DateTimeDisplay.DateTime || root.dateTimeDisplay === FormDateTimeDelegate.DateTimeDisplay.Time
 
-                horizontalPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
-                verticalPadding: Kirigami.Units.largeSpacing + (Kirigami.Settings.isMobile ? Kirigami.Units.smallSpacing : 0)
+                horizontalPadding: Private.FormCardUnits.horizontalPadding
+                verticalPadding: Private.FormCardUnits.verticalPadding
 
                 Layout.fillWidth: true
                 Layout.maximumWidth: root.dateTimeDisplay === FormDateTimeDelegate.DateTimeDisplay.DateTime ? parent.width / 2 : parent.width
@@ -423,7 +425,7 @@ AbstractFormDelegate {
 
                         Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
                         Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium
-                        Layout.rightMargin: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+                        Layout.rightMargin: Private.FormCardUnits.horizontalSpacing
                     }
 
                     QQC2.Label {

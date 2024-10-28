@@ -9,6 +9,8 @@ import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 
+import './private' as Private
+
 /**
  * @brief A Form delegate that corresponds to a text field.
  *
@@ -211,9 +213,12 @@ AbstractFormDelegate {
     Accessible.role: Accessible.EditableText
 
     contentItem: ColumnLayout {
-        spacing: Kirigami.Units.smallSpacing
+        spacing: Private.FormCardUnits.verticalSpacing
         RowLayout {
-            spacing: Kirigami.Units.largeSpacing
+            spacing: Private.FormCardUnits.horizontalSpacing
+
+            Layout.fillWidth: true
+
             Label {
                 Layout.fillWidth: true
                 text: label
@@ -244,7 +249,6 @@ AbstractFormDelegate {
 
                 Accessible.ignored: !visible
 
-                Layout.margins: Kirigami.Units.smallSpacing
                 Layout.preferredWidth: metrics.advanceWidth
             }
         }

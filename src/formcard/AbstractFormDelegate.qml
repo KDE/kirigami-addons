@@ -8,6 +8,7 @@ import QtQuick.Templates as T
 import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
+import './private' as P
 
 /**
  * @brief A base item for delegates to be used in a FormCard.
@@ -26,8 +27,8 @@ import org.kde.kirigami as Kirigami
 T.ItemDelegate {
     id: root
 
-    horizontalPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
-    verticalPadding: Kirigami.Units.largeSpacing + (Kirigami.Settings.isMobile ? Kirigami.Units.smallSpacing : 0)
+    horizontalPadding: P.FormCardUnits.horizontalPadding
+    verticalPadding: P.FormCardUnits.verticalPadding
 
     implicitWidth: contentItem.implicitWidth + leftPadding + rightPadding
     implicitHeight: contentItem.implicitHeight + topPadding + bottomPadding

@@ -78,14 +78,14 @@ AbstractFormDelegate {
             visible: root.icon.name !== ""
             source: root.icon.name
             color: root.icon.color
-            Layout.rightMargin: (root.icon.name !== "") ? Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing : 0
+            Layout.rightMargin: (root.icon.name !== "") ? Private.FormCardUnits.horizontalSpacing : 0
             implicitWidth: (root.icon.name !== "") ? root.icon.width : 0
             implicitHeight: (root.icon.name !== "") ? root.icon.height : 0
         }
 
         ColumnLayout {
             Layout.fillWidth: true
-            spacing: Kirigami.Units.smallSpacing
+            spacing: Private.FormCardUnits.verticalSpacing
 
             Label {
                 Layout.fillWidth: true

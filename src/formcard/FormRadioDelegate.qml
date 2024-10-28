@@ -78,8 +78,8 @@ T.RadioDelegate {
      */
     property alias descriptionItem: internalDescriptionItem
 
-    horizontalPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
-    verticalPadding: Kirigami.Units.largeSpacing + (Kirigami.Settings.isMobile ? Kirigami.Units.smallSpacing : 0)
+    horizontalPadding: Private.FormCardUnits.horizontalPadding
+    verticalPadding: Private.FormCardUnits.verticalPadding
 
     implicitWidth: contentItem.implicitWidth + leftPadding + rightPadding
     implicitHeight: contentItem.implicitHeight + topPadding + bottomPadding
@@ -96,7 +96,7 @@ T.RadioDelegate {
     Layout.fillWidth: true
 
     contentItem: ColumnLayout {
-        spacing: Kirigami.Units.smallSpacing
+        spacing: Private.FormCardUnits.verticalSpacing
 
         RowLayout {
             id: innerRowLayout
@@ -116,7 +116,7 @@ T.RadioDelegate {
             Controls.RadioButton {
                 id: radioButtonItem
                 focusPolicy: Qt.NoFocus // provided by delegate
-                Layout.rightMargin: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing 
+                Layout.rightMargin: Private.FormCardUnits.horizontalSpacing
 
                 enabled: root.enabled
                 checked: root.checked

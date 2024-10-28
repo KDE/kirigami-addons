@@ -56,9 +56,12 @@ target_sources(formcardplugin PRIVATE
     aboutcomponent.cpp
 )
 
+set_source_files_properties(private/FormCardUnits.qml PROPERTIES QT_QML_SINGLETON_TYPE TRUE)
+
 ecm_target_qml_sources(formcardplugin PATH private SOURCES
     private/ContentItemLoader.qml
     private/SpinButton.qml
+    private/FormCardUnits.qml
 )
 
 target_link_libraries(formcardplugin PRIVATE
