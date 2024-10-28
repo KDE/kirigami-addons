@@ -334,7 +334,7 @@ AbstractFormDelegate {
                 Layout.preferredWidth: 1
                 Layout.topMargin: Kirigami.Units.smallSpacing
                 Layout.bottomMargin: Kirigami.Units.smallSpacing
-                opacity: dateButton.hovered || timeButton.hovered ? 0 : 0.5
+                opacity: dateButton.hovered || timeButton.hovered || !timeButton.visible || !dateButton.visible ? 0 : 0.5
             }
 
             QQC2.AbstractButton {
