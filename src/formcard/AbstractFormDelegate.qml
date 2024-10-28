@@ -27,7 +27,7 @@ T.ItemDelegate {
     id: root
 
     horizontalPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
-    verticalPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+    verticalPadding: Kirigami.Units.largeSpacing + (Kirigami.Settings.isMobile ? Kirigami.Units.smallSpacing : 0)
 
     implicitWidth: contentItem.implicitWidth + leftPadding + rightPadding
     implicitHeight: contentItem.implicitHeight + topPadding + bottomPadding

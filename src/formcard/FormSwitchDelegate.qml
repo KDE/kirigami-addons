@@ -70,10 +70,8 @@ T.SwitchDelegate {
      */
     property real trailingPadding: Kirigami.Units.smallSpacing
 
-    topPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
-    bottomPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
-    leftPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
-    rightPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+    horizontalPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+    verticalPadding: Kirigami.Units.largeSpacing + (Kirigami.Settings.isMobile ? Kirigami.Units.smallSpacing : 0)
 
     implicitWidth: contentItem.implicitWidth + leftPadding + rightPadding
     implicitHeight: contentItem.implicitHeight + topPadding + bottomPadding
