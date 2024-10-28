@@ -4,6 +4,7 @@
 if (ANDROID)
     add_library(KF6KirigamiDateAndTime)
     add_library(KF6::KirigamiDateAndTime ALIAS KF6KirigamiDateAndTime)
+    qt_extract_metatypes(KF6KirigamiDateAndTime)
     target_sources(KF6KirigamiDateAndTime PRIVATE
         androidintegration.cpp
     )
