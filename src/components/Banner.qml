@@ -133,7 +133,7 @@ T.ToolBar {
                 source: {
                     switch (root.type) {
                     case Kirigami.MessageType.Positive:
-                        return "emblem-positive";
+                        return "emblem-success";
                     case Kirigami.MessageType.Warning:
                         return "data-warning";
                     case Kirigami.MessageType.Error:
