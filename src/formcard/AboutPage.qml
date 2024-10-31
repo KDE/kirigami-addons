@@ -446,6 +446,7 @@ FormCardPage {
                     }
 
                     QQC2.ToolButton {
+                        id: licenseButton
                         visible: modelData.licenses !== 0
                         icon.name: "license"
 
@@ -456,20 +457,39 @@ FormCardPage {
                         KirigamiComponents.MessageDialog {
                             id: licenseSheet
 
-                            parent: root.QQC2.Overlay.overlay
                             title: delegate.modelData.name
+
+                            parent: licenseButton.QQC2.Overlay.overlay
+                            implicitWidth: Math.min(parent.width - Kirigami.Units.gridUnit * 2, implicitContentWidth)
 
                             leftPadding: 0
                             rightPadding: 0
                             bottomPadding: 0
                             topPadding: 0
 
-                            header: Kirigami.Heading {
-                                text: licenseSheet.title
-                                elide: QQC2.Label.ElideRight
+                            header: QQC2.Control {
                                 padding: licenseSheet.padding
                                 topPadding: Kirigami.Units.largeSpacing
                                 bottomPadding: Kirigami.Units.largeSpacing
+
+                                contentItem: RowLayout {
+                                    spacing: Kirigami.Units.largeSpacing
+
+                                    Kirigami.Heading {
+                                        text: licenseSheet.title
+                                        elide: QQC2.Label.ElideRight
+                                        padding: 0
+                                        leftPadding: Kirigami.Units.largeSpacing
+                                        Layout.fillWidth: true
+                                    }
+
+                                    QQC2.ToolButton {
+                                        icon.name: hovered ? "window-close" : "window-close-symbolic"
+                                        text: i18nc("@action:button", "Close")
+                                        display: QQC2.ToolButton.IconOnly
+                                        onClicked: licenseSheet.close()
+                                    }
+                                }
 
                                 Kirigami.Separator {
                                     anchors {
