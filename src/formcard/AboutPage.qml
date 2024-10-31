@@ -8,6 +8,7 @@ import QtQuick.Window
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.components as KirigamiComponents
+import org.kde.kirigamiaddons.formcard as FormCardModule
 import org.kde.coreaddons as Core
 
 import "private" as Private
@@ -277,23 +278,11 @@ FormCardPage {
 
     FormHeader {
         title: i18nd("kirigami-addons6", "Libraries in use")
-        visible: Kirigami.Settings.information
     }
 
     FormCard {
-        visible: Kirigami.Settings.information
-
         Repeater {
-            model: Kirigami.Settings.information
-            delegate: FormTextDelegate {
-                id: libraries
-                Layout.fillWidth: true
-                text: modelData
-            }
-        }
-
-        Repeater {
-            model: aboutData.components
+            model: FormCardModule.AboutComponent.components
             delegate: libraryDelegate
         }
     }

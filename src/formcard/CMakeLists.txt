@@ -2,7 +2,6 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 # FormCard module
-
 ecm_add_qml_module(formcardplugin
     URI "org.kde.kirigamiaddons.formcard"
     VERSION 1.0
@@ -52,6 +51,11 @@ else()
     )
 endif()
 
+target_sources(formcardplugin PRIVATE
+    aboutcomponent_p.h
+    aboutcomponent.cpp
+)
+
 ecm_target_qml_sources(formcardplugin PATH private SOURCES
     private/ContentItemLoader.qml
     private/SpinButton.qml
@@ -61,6 +65,8 @@ target_link_libraries(formcardplugin PRIVATE
     Qt6::Quick
     Qt6::Qml
     KF6::I18n
+    KF6::I18n
+    KF6::CoreAddons
 )
 
 ecm_finalize_qml_module(formcardplugin DESTINATION ${KDE_INSTALL_QMLDIR} EXPORT KirigamiAddonsTargets)
