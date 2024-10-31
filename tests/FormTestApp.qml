@@ -437,7 +437,7 @@ Kirigami.ApplicationWindow {
             FormCard.FormSectionText {
                 text: "Use the text form delegates to display information."
             }
-            
+
             // text fields
             FormCard.FormHeader {
                 title: "Text Fields"
@@ -449,6 +449,8 @@ Kirigami.ApplicationWindow {
                     label: "Account name"
                 }
 
+                FormCard.FormDelegateSeparator {}
+
                 FormCard.FormTextFieldDelegate {
                     id: password1
                     label: "Password"
@@ -458,7 +460,6 @@ Kirigami.ApplicationWindow {
                     text: "666666666"
                 }
 
-                // don't put above and below, since we don't care about hover events
                 FormCard.FormDelegateSeparator {}
 
                 FormCard.FormTextFieldDelegate {
