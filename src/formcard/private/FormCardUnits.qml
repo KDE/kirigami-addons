@@ -10,6 +10,6 @@ QtObject {
     readonly property int horizontalPadding: Kirigami.Units.largeSpacing + (Kirigami.Settings.isMobile ? Kirigami.Units.smallSpacing : 0)
     readonly property int verticalPadding: Kirigami.Units.largeSpacing + (Kirigami.Settings.isMobile ? Kirigami.Units.smallSpacing : 0)
 
-    readonly property int verticalSpacing: Kirigami.Settings.isMobile ? Kirigami.Units.smallSpacing : 0
+    readonly property int verticalSpacing: Kirigami.Settings.isMobile ? Kirigami.Units.smallSpacing : Math.round(Kirigami.Units.smallSpacing / 2)
     readonly property int horizontalSpacing: Kirigami.Settings.isMobile ? Kirigami.Units.largeSpacing : Kirigami.Units.smallSpacing
 }

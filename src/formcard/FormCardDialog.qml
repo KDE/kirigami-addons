@@ -9,6 +9,8 @@ import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.components as Components
 import org.kde.kirigamiaddons.formcard as FormCard
 
+import './private' as Private
+
 /**
  * A dialog designed to use FormCard delegates as it's content.
  *
@@ -72,9 +74,9 @@ QQC2.Dialog {
     header: Kirigami.Heading {
         text: root.title
         elide: QQC2.Label.ElideRight
-        leftPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
-        rightPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
-        topPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+        leftPadding: Private.FormCardUnits.horizontalPadding
+        rightPadding: Private.FormCardUnits.horizontalPadding
+        topPadding: Private.FormCardUnits.verticalPadding
         bottomPadding: 0
     }
 
@@ -85,9 +87,9 @@ QQC2.Dialog {
     }
 
     footer: QQC2.DialogButtonBox {
-        leftPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
-        rightPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
-        bottomPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+        leftPadding: Private.FormCardUnits.horizontalPadding
+        rightPadding: Private.FormCardUnits.horizontalPadding
+        bottomPadding: Private.FormCardUnits.verticalPadding
         topPadding: Kirigami.Units.smallSpacing
         spacing: Kirigami.Units.mediumSpacing
 
