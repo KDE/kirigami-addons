@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-13 00:38+0000\n"
+"POT-Creation-Date: 2024-11-01 00:39+0000\n"
 "PO-Revision-Date: 2024-10-06 14:05+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -81,7 +81,7 @@ msgstr "Førre bilete"
 msgid "Next image"
 msgstr "Neste bilete"
 
-#: components/Banner.qml:187
+#: components/Banner.qml:187 formcard/AboutPage.qml:488
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -140,34 +140,34 @@ msgctxt "@action:button"
 msgid "Select"
 msgstr "Vel"
 
-#: dateandtime/private/DatePicker.qml:271
+#: dateandtime/private/DatePicker.qml:275
 #, kde-format
 msgid "Day"
 msgstr "Dag"
 
-#: dateandtime/private/DatePicker.qml:274
+#: dateandtime/private/DatePicker.qml:278
 #, kde-format
 msgid "Month"
 msgstr "Månad"
 
-#: dateandtime/private/DatePicker.qml:277
+#: dateandtime/private/DatePicker.qml:281
 #, kde-format
 msgid "Year"
 msgstr "År"
 
-#: dateandtime/private/DatePicker.qml:362
+#: dateandtime/private/DatePicker.qml:366
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Previous"
 msgstr "Gå til førre"
 
-#: dateandtime/private/DatePicker.qml:375
+#: dateandtime/private/DatePicker.qml:379
 #, kde-format
 msgctxt "@action:button"
 msgid "Jump to today"
 msgstr "Hopp til i dag"
 
-#: dateandtime/private/DatePicker.qml:382
+#: dateandtime/private/DatePicker.qml:386
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Next"
@@ -188,6 +188,38 @@ msgstr ":"
 #, kde-format
 msgid "Minutes"
 msgstr "Minutt"
+
+#: formcard/aboutcomponent.cpp:20
+#, kde-format
+msgid "Windowing system"
+msgstr ""
+
+#: formcard/aboutcomponent.cpp:21
+#, kde-format
+msgid "Qt"
+msgstr ""
+
+#: formcard/aboutcomponent.cpp:22
+#, kde-format
+msgctxt "@info"
+msgid "Cross-platform application development framework"
+msgstr ""
+
+#: formcard/aboutcomponent.cpp:23
+#, kde-format
+msgid "Using %1 and built against %2"
+msgstr ""
+
+#: formcard/aboutcomponent.cpp:26
+#, kde-format
+msgid "KDE Frameworks"
+msgstr ""
+
+#: formcard/aboutcomponent.cpp:27
+#, kde-format
+msgctxt "@info"
+msgid "Collection of libraries created by the KDE Community to extend Qt"
+msgstr ""
 
 #: formcard/AboutKDEPage.qml:23
 #: statefulapplication/abstractkirigamiapplication.cpp:174
@@ -228,7 +260,7 @@ msgstr ""
 "i. Derimot arbeider me saman om å oppnå vårt felles mål om å laga fri "
 "programvare i verdsklasse. Alle er velkomne til å bidra – du òg."
 
-#: formcard/AboutKDEPage.qml:75 formcard/AboutPage.qml:221
+#: formcard/AboutKDEPage.qml:75 formcard/AboutPage.qml:222
 #, kde-format
 msgid "Homepage"
 msgstr "Heimeside"
@@ -285,7 +317,7 @@ msgstr ""
 "med omsetjingar, laga grafikk, tema, lydar eller betre hjelpetekstar. Her er "
 "noko for alle!"
 
-#: formcard/AboutKDEPage.qml:114 formcard/AboutPage.qml:247
+#: formcard/AboutKDEPage.qml:114 formcard/AboutPage.qml:248
 #, kde-format
 msgid "Get Involved"
 msgstr "Vert med"
@@ -338,65 +370,65 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:153 formcard/AboutPage.qml:234
+#: formcard/AboutKDEPage.qml:153 formcard/AboutPage.qml:235
 #, kde-format
 msgid "Donate"
 msgstr "Gje pengegåve"
 
-#: formcard/AboutPage.qml:88
+#: formcard/AboutPage.qml:89
 #: statefulapplication/abstractkirigamiapplication.cpp:167
 #, kde-format
 msgid "About %1"
 msgstr "Om %1"
 
-#: formcard/AboutPage.qml:133
+#: formcard/AboutPage.qml:134
 #, kde-format
 msgid "Copyright"
 msgstr "Opphavsrett"
 
-#: formcard/AboutPage.qml:141
+#: formcard/AboutPage.qml:142
 #, kde-format
 msgid "Description"
 msgstr "Skildring"
 
-#: formcard/AboutPage.qml:154
+#: formcard/AboutPage.qml:155
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "Lisens"
 msgstr[1] "Lisensar"
 
-#: formcard/AboutPage.qml:272
+#: formcard/AboutPage.qml:273
 #, kde-format
 msgid "Report a Bug"
 msgstr "Meld frå om feil"
 
-#: formcard/AboutPage.qml:279
+#: formcard/AboutPage.qml:280
 #, kde-format
 msgid "Libraries in use"
 msgstr "Brukte bibliotek"
 
-#: formcard/AboutPage.qml:302
+#: formcard/AboutPage.qml:291
 #, kde-format
 msgid "Authors"
 msgstr "Utviklarar"
 
-#: formcard/AboutPage.qml:317
+#: formcard/AboutPage.qml:306
 #, kde-format
 msgid "Credits"
 msgstr "Bidragsytarar"
 
-#: formcard/AboutPage.qml:332
+#: formcard/AboutPage.qml:321
 #, kde-format
 msgid "Translators"
 msgstr "Omsetjarar"
 
-#: formcard/AboutPage.qml:401
+#: formcard/AboutPage.qml:390
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Gå til %1-sida i KDE-butikken"
 
-#: formcard/AboutPage.qml:410
+#: formcard/AboutPage.qml:399
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Send e-post til %1"
@@ -413,20 +445,20 @@ msgctxt "Accessible description"
 msgid "Current color \"%1\""
 msgstr "Gjeldande farge er «%1»"
 
-#: formcard/FormDateTimeDelegate.qml:193
+#: formcard/FormDateTimeDelegate.qml:195
 #, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
 msgid "Today"
 msgstr "I dag"
 
-#: formcard/FormDateTimeDelegate.qml:220 formcard/FormDateTimeDelegate.qml:357
+#: formcard/FormDateTimeDelegate.qml:222 formcard/FormDateTimeDelegate.qml:359
 #, kde-format
 msgctxt "Date is not set"
 msgid "Not set"
 msgstr "Ikkje vald"
 
 #: formcard/FormPasswordFieldDelegate.qml:230
-#: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:233
+#: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:238
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"

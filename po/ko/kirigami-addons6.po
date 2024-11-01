@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-13 00:38+0000\n"
+"POT-Creation-Date: 2024-11-01 00:39+0000\n"
 "PO-Revision-Date: 2024-08-20 23:35+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -79,7 +79,7 @@ msgstr "이전 그림"
 msgid "Next image"
 msgstr "다음 그림"
 
-#: components/Banner.qml:187
+#: components/Banner.qml:187 formcard/AboutPage.qml:488
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -138,34 +138,34 @@ msgctxt "@action:button"
 msgid "Select"
 msgstr "선택"
 
-#: dateandtime/private/DatePicker.qml:271
+#: dateandtime/private/DatePicker.qml:275
 #, kde-format
 msgid "Day"
 msgstr "일"
 
-#: dateandtime/private/DatePicker.qml:274
+#: dateandtime/private/DatePicker.qml:278
 #, kde-format
 msgid "Month"
 msgstr "월"
 
-#: dateandtime/private/DatePicker.qml:277
+#: dateandtime/private/DatePicker.qml:281
 #, kde-format
 msgid "Year"
 msgstr "연도"
 
-#: dateandtime/private/DatePicker.qml:362
+#: dateandtime/private/DatePicker.qml:366
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Previous"
 msgstr "뒤로 이동"
 
-#: dateandtime/private/DatePicker.qml:375
+#: dateandtime/private/DatePicker.qml:379
 #, kde-format
 msgctxt "@action:button"
 msgid "Jump to today"
 msgstr "오늘로 이동"
 
-#: dateandtime/private/DatePicker.qml:382
+#: dateandtime/private/DatePicker.qml:386
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Next"
@@ -186,6 +186,38 @@ msgstr ":"
 #, kde-format
 msgid "Minutes"
 msgstr "분"
+
+#: formcard/aboutcomponent.cpp:20
+#, kde-format
+msgid "Windowing system"
+msgstr ""
+
+#: formcard/aboutcomponent.cpp:21
+#, kde-format
+msgid "Qt"
+msgstr ""
+
+#: formcard/aboutcomponent.cpp:22
+#, kde-format
+msgctxt "@info"
+msgid "Cross-platform application development framework"
+msgstr ""
+
+#: formcard/aboutcomponent.cpp:23
+#, kde-format
+msgid "Using %1 and built against %2"
+msgstr ""
+
+#: formcard/aboutcomponent.cpp:26
+#, kde-format
+msgid "KDE Frameworks"
+msgstr ""
+
+#: formcard/aboutcomponent.cpp:27
+#, kde-format
+msgctxt "@info"
+msgid "Collection of libraries created by the KDE Community to extend Qt"
+msgstr ""
 
 #: formcard/AboutKDEPage.qml:23
 #: statefulapplication/abstractkirigamiapplication.cpp:174
@@ -225,7 +257,7 @@ msgstr ""
 "께 힘을 모으고 있습니다. KDE에는 이 글을 읽는 여러분과 같은 누구나 참여하고 "
 "기여할 수 있습니다."
 
-#: formcard/AboutKDEPage.qml:75 formcard/AboutPage.qml:221
+#: formcard/AboutKDEPage.qml:75 formcard/AboutPage.qml:222
 #, kde-format
 msgid "Homepage"
 msgstr "홈페이지"
@@ -280,7 +312,7 @@ msgstr ""
 "를 번역하는 각 언어 번역팀을 도울 수도 있습니다. 또한 그래픽, 테마, 소리, 더 "
 "나은 문서 등을 기여할 수도 있습니다. 직접 결정하십시오!"
 
-#: formcard/AboutKDEPage.qml:114 formcard/AboutPage.qml:247
+#: formcard/AboutKDEPage.qml:114 formcard/AboutPage.qml:248
 #, kde-format
 msgid "Get Involved"
 msgstr "참여하기"
@@ -333,66 +365,66 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDEPage.qml:153 formcard/AboutPage.qml:234
+#: formcard/AboutKDEPage.qml:153 formcard/AboutPage.qml:235
 #, kde-format
 msgid "Donate"
 msgstr "기부하기"
 
-#: formcard/AboutPage.qml:88
+#: formcard/AboutPage.qml:89
 #: statefulapplication/abstractkirigamiapplication.cpp:167
 #, kde-format
 msgid "About %1"
 msgstr "%1 정보"
 
-#: formcard/AboutPage.qml:133
+#: formcard/AboutPage.qml:134
 #, kde-format
 msgid "Copyright"
 msgstr "저작권"
 
-#: formcard/AboutPage.qml:141
+#: formcard/AboutPage.qml:142
 #, fuzzy, kde-format
 #| msgctxt "@action:intoolbar"
 #| msgid "Hide caption"
 msgid "Description"
 msgstr "캡션 숨기기"
 
-#: formcard/AboutPage.qml:154
+#: formcard/AboutPage.qml:155
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "라이선스"
 
-#: formcard/AboutPage.qml:272
+#: formcard/AboutPage.qml:273
 #, kde-format
 msgid "Report a Bug"
 msgstr "버그 보고"
 
-#: formcard/AboutPage.qml:279
+#: formcard/AboutPage.qml:280
 #, kde-format
 msgid "Libraries in use"
 msgstr "사용하는 라이브러리"
 
-#: formcard/AboutPage.qml:302
+#: formcard/AboutPage.qml:291
 #, kde-format
 msgid "Authors"
 msgstr "작성자"
 
-#: formcard/AboutPage.qml:317
+#: formcard/AboutPage.qml:306
 #, kde-format
 msgid "Credits"
 msgstr "제작진"
 
-#: formcard/AboutPage.qml:332
+#: formcard/AboutPage.qml:321
 #, kde-format
 msgid "Translators"
 msgstr "번역자"
 
-#: formcard/AboutPage.qml:401
+#: formcard/AboutPage.qml:390
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "%1의 KDE 스토어 페이지 방문"
 
-#: formcard/AboutPage.qml:410
+#: formcard/AboutPage.qml:399
 #, kde-format
 msgid "Send an email to %1"
 msgstr "%1(으)로 이메일 보내기"
@@ -409,20 +441,20 @@ msgctxt "Accessible description"
 msgid "Current color \"%1\""
 msgstr "현재 색상 \"%1\""
 
-#: formcard/FormDateTimeDelegate.qml:193
+#: formcard/FormDateTimeDelegate.qml:195
 #, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
 msgid "Today"
 msgstr "오늘"
 
-#: formcard/FormDateTimeDelegate.qml:220 formcard/FormDateTimeDelegate.qml:357
+#: formcard/FormDateTimeDelegate.qml:222 formcard/FormDateTimeDelegate.qml:359
 #, kde-format
 msgctxt "Date is not set"
 msgid "Not set"
 msgstr "설정하지 않음"
 
 #: formcard/FormPasswordFieldDelegate.qml:230
-#: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:233
+#: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:238
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
