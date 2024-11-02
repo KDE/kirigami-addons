@@ -340,13 +340,11 @@ FormCardPage {
                 Layout.fillWidth: true
                 background: null
                 contentItem: RowLayout {
-                    spacing: Kirigami.Units.smallSpacing * 2
+                    spacing: Private.FormCardUnits.horizontalSpacing
 
                     KirigamiComponents.Avatar {
                         id: avatarIcon
 
-                        // TODO FIXME kf6 https://phabricator.kde.org/T15993
-                        property bool hasRemoteAvatar: false // (typeof(modelData.ocsUsername) !== "undefined" && modelData.ocsUsername.length > 0)
                         implicitWidth: Kirigami.Units.iconSizes.medium
                         implicitHeight: implicitWidth
                         name: modelData.name
@@ -359,11 +357,13 @@ FormCardPage {
                         } else {
                             return '';
                         }
+
+                        Layout.rightMargin: Private.FormCardUnits.horizontalSpacing
                     }
 
                     ColumnLayout {
                         Layout.fillWidth: true
-                        spacing: Kirigami.Units.smallSpacing
+                        spacing: Private.FormCardUnits.verticalSpacing
 
                         QQC2.Label {
                             Layout.fillWidth: true
@@ -422,11 +422,11 @@ FormCardPage {
                 Layout.fillWidth: true
                 background: null
                 contentItem: RowLayout {
-                    spacing: Kirigami.Units.smallSpacing * 2
+                    spacing: Private.FormCardUnits.horizontalSpacing
 
                     ColumnLayout {
                         Layout.fillWidth: true
-                        spacing: Kirigami.Units.smallSpacing
+                        spacing: Private.FormCardUnits.verticalSpacing
 
                         QQC2.Label {
                             Layout.fillWidth: true
