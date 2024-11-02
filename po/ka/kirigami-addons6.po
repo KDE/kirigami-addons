@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-01 00:39+0000\n"
-"PO-Revision-Date: 2024-09-27 06:17+0200\n"
+"PO-Revision-Date: 2024-11-01 04:22+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -191,34 +191,36 @@ msgstr "წუთი"
 #: formcard/aboutcomponent.cpp:20
 #, kde-format
 msgid "Windowing system"
-msgstr ""
+msgstr "ფანჯრული სისტემა"
 
 #: formcard/aboutcomponent.cpp:21
 #, kde-format
 msgid "Qt"
-msgstr ""
+msgstr "Qt"
 
 #: formcard/aboutcomponent.cpp:22
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework"
-msgstr ""
+msgstr "მრავალპლატფორმული აპლიკაციის შემუშავების ბიბლიოთეკა"
 
 #: formcard/aboutcomponent.cpp:23
 #, kde-format
 msgid "Using %1 and built against %2"
-msgstr ""
+msgstr "გამოიყენება %1 და აგებულირა %2-ით"
 
 #: formcard/aboutcomponent.cpp:26
 #, kde-format
 msgid "KDE Frameworks"
-msgstr ""
+msgstr "KDE-სი გამოყენებული ბიბლიოთეკები"
 
 #: formcard/aboutcomponent.cpp:27
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt"
 msgstr ""
+"Qt-ის ფუნქციონალის გასაფართოებლად KDE-ის საზოგადოების მიერ შექმნილი "
+"ბიბლიოთეკების კოლექცია"
 
 #: formcard/AboutKDEPage.qml:23
 #: statefulapplication/abstractkirigamiapplication.cpp:174
