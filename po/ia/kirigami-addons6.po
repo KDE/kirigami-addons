@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-01 00:39+0000\n"
-"PO-Revision-Date: 2024-09-27 16:15+0200\n"
+"PO-Revision-Date: 2024-11-04 18:30+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -196,7 +196,7 @@ msgstr ""
 #: formcard/aboutcomponent.cpp:21
 #, kde-format
 msgid "Qt"
-msgstr ""
+msgstr "Qt"
 
 #: formcard/aboutcomponent.cpp:22
 #, kde-format
@@ -212,7 +212,7 @@ msgstr ""
 #: formcard/aboutcomponent.cpp:26
 #, kde-format
 msgid "KDE Frameworks"
-msgstr ""
+msgstr "KDE Frameworks"
 
 #: formcard/aboutcomponent.cpp:27
 #, kde-format
