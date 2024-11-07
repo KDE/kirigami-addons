@@ -11,7 +11,7 @@ if (ANDROID)
     generate_export_header(KF6KirigamiDateAndTime BASE_NAME KirigamiDateAndTime)
     target_link_libraries(KF6KirigamiDateAndTime PUBLIC Qt6::Core)
     add_subdirectory(android)
-    install(TARGETS KF6KirigamiDateAndTime ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+    install(TARGETS KF6KirigamiDateAndTime EXPORT KirigamiAddonsTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 endif()
 
 ecm_add_qml_module(dateandtimeplugin
