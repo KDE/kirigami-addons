@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-01 00:39+0000\n"
-"PO-Revision-Date: 2024-11-04 18:30+0100\n"
+"PO-Revision-Date: 2024-11-06 16:04+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -191,7 +191,7 @@ msgstr "Minutas"
 #: formcard/aboutcomponent.cpp:20
 #, kde-format
 msgid "Windowing system"
-msgstr ""
+msgstr "Systema de fenestra"
 
 #: formcard/aboutcomponent.cpp:21
 #, kde-format
@@ -202,12 +202,12 @@ msgstr "Qt"
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework"
-msgstr ""
+msgstr "Schema (Framework) de disveloppamento de Application inter-platform"
 
 #: formcard/aboutcomponent.cpp:23
 #, kde-format
 msgid "Using %1 and built against %2"
-msgstr ""
+msgstr "Usante %1 e construite contra %2"
 
 #: formcard/aboutcomponent.cpp:26
 #, kde-format
@@ -219,6 +219,7 @@ msgstr "KDE Frameworks"
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt"
 msgstr ""
+"Collection de bibliotecas create per le Communitate de KDE per extender Qt"
 
 #: formcard/AboutKDEPage.qml:23
 #: statefulapplication/abstractkirigamiapplication.cpp:174
