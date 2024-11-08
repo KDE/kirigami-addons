@@ -73,7 +73,9 @@ ecm_add_qml_module(KirigamiAddonsStatefulApp
     VERSION 1.0
     GENERATE_PLUGIN_SOURCE
     DEPENDENCIES QtQuick
-    IMPORTS "org.kde.kirigamiaddons.statefulapp.private"
+    IMPORTS
+        "org.kde.kirigamiaddons.statefulapp.private"
+        "org.kde.config"
 )
 
 ecm_target_qml_sources(KirigamiAddonsStatefulApp SOURCES
