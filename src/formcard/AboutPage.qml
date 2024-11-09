@@ -219,6 +219,7 @@ FormCardPage {
 
         FormButtonDelegate {
             id: getInvolvedDelegate
+            icon.name: "globe-symbolic"
             text: i18nd("kirigami-addons6", "Homepage")
             onClicked: Qt.openUrlExternally(aboutData.homepage)
             visible: aboutData.homepage.length > 0
@@ -232,6 +233,7 @@ FormCardPage {
 
         FormButtonDelegate {
             id: donateDelegate
+            icon.name: "donate-symbolic"
             text: i18nd("kirigami-addons6", "Donate")
             onClicked: Qt.openUrlExternally(donateUrl + "?app=" + page.aboutData.componentName)
             visible: donateUrl.toString().length > 0
@@ -245,6 +247,7 @@ FormCardPage {
 
         FormButtonDelegate {
             id: homepageDelegate
+            icon.name: "applications-development-symbolic"
             text: i18nd("kirigami-addons6", "Get Involved")
             onClicked: Qt.openUrlExternally(page.getInvolvedUrl)
             visible: page.getInvolvedUrl != ""
@@ -270,6 +273,7 @@ FormCardPage {
                 return url;
             }
 
+            icon.name: "tools-report-bug-symbolic"
             text: i18nd("kirigami-addons6", "Report a Bug")
             onClicked: Qt.openUrlExternally(theUrl)
             visible: theUrl.length > 0
