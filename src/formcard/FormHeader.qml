@@ -54,7 +54,7 @@ Item {
     Layout.fillWidth: true
 
     implicitHeight: header.implicitHeight
-    implicitWidth: header.implicitWidth + header.anchors.leftMargin + header.anchors.rightMargin
+    implicitWidth: header.implicitWidth
 
     RowLayout {
         id: header
