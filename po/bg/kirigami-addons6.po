@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-01 00:39+0000\n"
-"PO-Revision-Date: 2024-11-02 20:30+0100\n"
+"PO-Revision-Date: 2024-11-09 20:09+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -448,7 +448,7 @@ msgstr "Цвят"
 #, kde-format
 msgctxt "Accessible description"
 msgid "Current color \"%1\""
-msgstr "Текущият цвят \"%1\""
+msgstr "Текущият цвят „%1“"
 
 #: formcard/FormDateTimeDelegate.qml:195
 #, kde-format
@@ -639,7 +639,7 @@ msgstr "'%1' клавишна комбинация е засенчена от с
 #, kde-format
 msgctxt "@info"
 msgid "Action '%1' in context '%2'\n"
-msgstr "Действие \"%1\" в контекст \"%2\"\n"
+msgstr "Действие „%1“ в контекст „%2“\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:152
 #, kde-format
@@ -661,7 +661,7 @@ msgid ""
 "some applications use.\n"
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
-"Клавишната комбинация \"%1\" вече е зададена за действието \"%2\".\n"
+"Клавишната комбинация „%1“ вече е зададена за действието „%2“.\n"
 "Искате ли да я използвате и като глобален бърз клавиш."
 
 #: statefulapplication/private/KeySequenceItem.qml:129
