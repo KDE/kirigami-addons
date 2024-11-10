@@ -43,7 +43,8 @@ QList<KAboutComponent> AboutComponent::components() const
 
 void AboutComponent::copyToClipboard()
 {
-    QString info;
+    auto aboutData = KAboutData::applicationData();
+    QString info = aboutData.displayName() + u": "_s + aboutData.version() + u'\n';
 
     const auto allComponents = components();
     for (const auto &component : allComponents) {
