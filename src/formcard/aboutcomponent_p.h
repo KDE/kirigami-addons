@@ -21,4 +21,6 @@ public:
     ~AboutComponent();
 
     QList<KAboutComponent> components() const;
+
+    Q_INVOKABLE void copyToClipboard();
 };

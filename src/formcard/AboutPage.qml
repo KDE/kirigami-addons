@@ -282,6 +282,15 @@ FormCardPage {
 
     FormHeader {
         title: i18nd("kirigami-addons6", "Libraries in use")
+
+        actions: QQC2.Action {
+            text: i18ndc("kirigami-addons6", "@action:button", "Copy to Clipboard")
+            icon.name: 'edit-copy-symbolic'
+            onTriggered: {
+                FormCardModule.AboutComponent.copyToClipboard();
+                root.QQC2.ApplicationWindow.window.showPassiveNotification(i18ndc("kirigami-addons6", "@info", "System information copied to clipboard."), 'short');
+            }
+        }
     }
 
     FormCard {

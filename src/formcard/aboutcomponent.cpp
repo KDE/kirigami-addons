@@ -5,6 +5,7 @@
 
 #include <KLocalizedString>
 #include <QGuiApplication>
+#include <QClipboard>
 
 using namespace Qt::StringLiterals;
 
@@ -38,4 +39,24 @@ QList<KAboutComponent> AboutComponent::components() const
                                           KAboutLicense::LGPL_V2_1));
 
     return allComponents;
+}
+
+void AboutComponent::copyToClipboard()
+{
+    QString info;
+
+    const auto allComponents = components();
+    for (const auto &component : allComponents) {
+        info += component.name();
+        if (!component.version().isEmpty()) {
+            info += u": "_s + component.version();
+        }
+        info += u'\n';
+    }
+
+    info += u"Build ABI: "_s + QSysInfo::buildAbi() + u'\n';
+    info += u"Kernel: "_s + QSysInfo::kernelType() + u' ' + QSysInfo::kernelVersion() + u'\n';
+
+    QClipboard *clipboard = QGuiApplication::clipboard();
+    clipboard->setText(info);
 }
