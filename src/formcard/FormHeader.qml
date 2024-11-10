@@ -59,6 +59,8 @@ Item {
     RowLayout {
         id: header
 
+        spacing: Kirigami.Units.smallSpacing
+
         anchors {
             fill: parent
             leftMargin: root.cardWidthRestricted ? Math.round((root.width - root.maximumWidth) / 2) : 0
