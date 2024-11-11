@@ -113,6 +113,21 @@ AbstractFormDelegate {
     property alias acceptableInput: textField.acceptableInput
 
     /**
+    * @brief This property holds the `cursorPosition` of the internal TextField.
+    *
+    * The `cursorPosition` property holds the position of the cursor in the
+    * text field. A value of 0 indicates that the cursor is at the beginning
+    * of the text field.
+    *
+    * This property allows you to programmatically control and access the
+    * cursor position within the text field, which can be useful for
+    * integrating the `FormTextFieldDelegate` component into your project.
+    *
+    * @see <a href="https://doc.qt.io/qt-6/qml-qtquick-textinput.html#cursorPosition-prop">TextInput.cursorPosition</a>
+    */
+    property alias cursorPosition: textField.cursorPosition
+
+    /**
      * @brief This property holds the current status message type of
      * the text field.
      *
