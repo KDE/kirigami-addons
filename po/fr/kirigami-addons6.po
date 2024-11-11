@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-01 00:39+0000\n"
+"POT-Creation-Date: 2024-11-11 00:39+0000\n"
 "PO-Revision-Date: 2024-11-02 08:46+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -80,7 +80,7 @@ msgstr "Image précédente"
 msgid "Next image"
 msgstr "Image suivante"
 
-#: components/Banner.qml:187 formcard/AboutPage.qml:488
+#: components/Banner.qml:187 formcard/AboutPage.qml:501
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -188,36 +188,47 @@ msgstr ":"
 msgid "Minutes"
 msgstr "Minutes"
 
-#: formcard/aboutcomponent.cpp:20
+#: formcard/aboutcomponent.cpp:25
 #, kde-format
-msgid "Windowing system"
-msgstr "Système de fenêtrage"
+msgctxt "@info Platform name"
+msgid "%1 (%2)"
+msgstr ""
 
-#: formcard/aboutcomponent.cpp:21
+#: formcard/aboutcomponent.cpp:29
+#, kde-format
+msgctxt "@info"
+msgid "Underlying platform."
+msgstr ""
+
+#: formcard/aboutcomponent.cpp:30
 #, kde-format
 msgid "Qt"
 msgstr "Qt"
 
-#: formcard/aboutcomponent.cpp:22
-#, kde-format
+#: formcard/aboutcomponent.cpp:31
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Cross-platform application development framework"
 msgctxt "@info"
-msgid "Cross-platform application development framework"
+msgid "Cross-platform application development framework."
 msgstr "Environnement de développement d'applications multi-plateformes"
 
-#: formcard/aboutcomponent.cpp:23
+#: formcard/aboutcomponent.cpp:32
 #, kde-format
 msgid "Using %1 and built against %2"
 msgstr "Utilisation de %1 et compilation concernant %2"
 
-#: formcard/aboutcomponent.cpp:26
+#: formcard/aboutcomponent.cpp:35
 #, kde-format
 msgid "KDE Frameworks"
 msgstr "Environnements de développement de KDE"
 
-#: formcard/aboutcomponent.cpp:27
-#, kde-format
+#: formcard/aboutcomponent.cpp:36
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Collection of libraries created by the KDE Community to extend Qt"
 msgctxt "@info"
-msgid "Collection of libraries created by the KDE Community to extend Qt"
+msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr ""
 "Collection de bibliothèques créées par la communauté de KDE pour étendre Qt"
 
@@ -262,7 +273,7 @@ msgstr ""
 "logiciels libres au monde. Tout le monde est invité à se joindre et à "
 "contribuer à KDE, y compris vous."
 
-#: formcard/AboutKDEPage.qml:75 formcard/AboutPage.qml:222
+#: formcard/AboutKDEPage.qml:75 formcard/AboutPage.qml:223
 #, kde-format
 msgid "Homepage"
 msgstr "Page d'accueil"
@@ -321,7 +332,7 @@ msgstr ""
 "les interfaces de programmes. Vous pouvez fournir des illustrations, des "
 "thèmes, des sons et une documentation améliorée. C'est vous qui décidez !"
 
-#: formcard/AboutKDEPage.qml:114 formcard/AboutPage.qml:248
+#: formcard/AboutKDEPage.qml:114 formcard/AboutPage.qml:251
 #, kde-format
 msgid "Get Involved"
 msgstr "Impliquez-vous"
@@ -378,7 +389,7 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDEPage.qml:153 formcard/AboutPage.qml:235
+#: formcard/AboutKDEPage.qml:153 formcard/AboutPage.qml:237
 #, kde-format
 msgid "Donate"
 msgstr "Faire un don"
@@ -406,37 +417,49 @@ msgid_plural "Licenses"
 msgstr[0] "Licence"
 msgstr[1] "Licences"
 
-#: formcard/AboutPage.qml:273
+#: formcard/AboutPage.qml:277
 #, kde-format
 msgid "Report a Bug"
 msgstr "Signaler un bogue"
 
-#: formcard/AboutPage.qml:280
+#: formcard/AboutPage.qml:284
 #, kde-format
 msgid "Libraries in use"
 msgstr "Bibliothèques en cours d'utilisation"
 
+#: formcard/AboutPage.qml:287
+#, kde-format
+msgctxt "@action:button"
+msgid "Copy to Clipboard"
+msgstr ""
+
 #: formcard/AboutPage.qml:291
+#, kde-format
+msgctxt "@info"
+msgid "System information copied to clipboard."
+msgstr ""
+
+#: formcard/AboutPage.qml:304
 #, kde-format
 msgid "Authors"
 msgstr "Auteurs"
 
-#: formcard/AboutPage.qml:306
+#: formcard/AboutPage.qml:319
 #, kde-format
 msgid "Credits"
 msgstr "Remerciements"
 
-#: formcard/AboutPage.qml:321
+#: formcard/AboutPage.qml:334
 #, kde-format
 msgid "Translators"
 msgstr "Équipe de traduction"
 
-#: formcard/AboutPage.qml:390
+#: formcard/AboutPage.qml:403
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Consulter la page %1 de la boutique de KDE"
 
-#: formcard/AboutPage.qml:399
+#: formcard/AboutPage.qml:412
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Envoyer un courriel vers %1"
@@ -767,6 +790,9 @@ msgstr "À propos de %1"
 msgctxt "@title:window"
 msgid "About KDE"
 msgstr "À propos de KDE"
+
+#~ msgid "Windowing system"
+#~ msgstr "Système de fenêtrage"
 
 #~ msgctxt "time in hour (PM)"
 #~ msgid "%1 PM"

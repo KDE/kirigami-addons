@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-01 00:39+0000\n"
+"POT-Creation-Date: 2024-11-11 00:39+0000\n"
 "PO-Revision-Date: 2024-10-10 21:38+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -79,7 +79,7 @@ msgstr "Előző kép"
 msgid "Next image"
 msgstr "Következő kép"
 
-#: components/Banner.qml:187 formcard/AboutPage.qml:488
+#: components/Banner.qml:187 formcard/AboutPage.qml:501
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -187,36 +187,43 @@ msgstr ":"
 msgid "Minutes"
 msgstr "Perc"
 
-#: formcard/aboutcomponent.cpp:20
+#: formcard/aboutcomponent.cpp:25
 #, kde-format
-msgid "Windowing system"
+msgctxt "@info Platform name"
+msgid "%1 (%2)"
 msgstr ""
 
-#: formcard/aboutcomponent.cpp:21
+#: formcard/aboutcomponent.cpp:29
+#, kde-format
+msgctxt "@info"
+msgid "Underlying platform."
+msgstr ""
+
+#: formcard/aboutcomponent.cpp:30
 #, kde-format
 msgid "Qt"
 msgstr ""
 
-#: formcard/aboutcomponent.cpp:22
+#: formcard/aboutcomponent.cpp:31
 #, kde-format
 msgctxt "@info"
-msgid "Cross-platform application development framework"
+msgid "Cross-platform application development framework."
 msgstr ""
 
-#: formcard/aboutcomponent.cpp:23
+#: formcard/aboutcomponent.cpp:32
 #, kde-format
 msgid "Using %1 and built against %2"
 msgstr ""
 
-#: formcard/aboutcomponent.cpp:26
+#: formcard/aboutcomponent.cpp:35
 #, kde-format
 msgid "KDE Frameworks"
 msgstr ""
 
-#: formcard/aboutcomponent.cpp:27
+#: formcard/aboutcomponent.cpp:36
 #, kde-format
 msgctxt "@info"
-msgid "Collection of libraries created by the KDE Community to extend Qt"
+msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr ""
 
 #: formcard/AboutKDEPage.qml:23
@@ -259,7 +266,7 @@ msgstr ""
 "szívesen látunk, aki szeretne  csatlakozni és hozzájárulni a KDE-hez, köztük "
 "Önt is."
 
-#: formcard/AboutKDEPage.qml:75 formcard/AboutPage.qml:222
+#: formcard/AboutKDEPage.qml:75 formcard/AboutPage.qml:223
 #, kde-format
 msgid "Homepage"
 msgstr "Honlap"
@@ -318,7 +325,7 @@ msgstr ""
 "szebb és jobb képanyagot, hangokat, grafikai témákat vagy teljesebb "
 "dokumentációt tud készíteni. Ön dönt!"
 
-#: formcard/AboutKDEPage.qml:114 formcard/AboutPage.qml:248
+#: formcard/AboutKDEPage.qml:114 formcard/AboutPage.qml:251
 #, kde-format
 msgid "Get Involved"
 msgstr "Közreműködés"
@@ -374,7 +381,7 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDEPage.qml:153 formcard/AboutPage.qml:235
+#: formcard/AboutKDEPage.qml:153 formcard/AboutPage.qml:237
 #, kde-format
 msgid "Donate"
 msgstr "Támogatás"
@@ -402,37 +409,49 @@ msgid_plural "Licenses"
 msgstr[0] "Licenc"
 msgstr[1] "Licencek"
 
-#: formcard/AboutPage.qml:273
+#: formcard/AboutPage.qml:277
 #, kde-format
 msgid "Report a Bug"
 msgstr "Hibabejelentés"
 
-#: formcard/AboutPage.qml:280
+#: formcard/AboutPage.qml:284
 #, kde-format
 msgid "Libraries in use"
 msgstr "Felhasznált függvénykönyvtárak"
 
+#: formcard/AboutPage.qml:287
+#, kde-format
+msgctxt "@action:button"
+msgid "Copy to Clipboard"
+msgstr ""
+
 #: formcard/AboutPage.qml:291
+#, kde-format
+msgctxt "@info"
+msgid "System information copied to clipboard."
+msgstr ""
+
+#: formcard/AboutPage.qml:304
 #, kde-format
 msgid "Authors"
 msgstr "Szerzők"
 
-#: formcard/AboutPage.qml:306
+#: formcard/AboutPage.qml:319
 #, kde-format
 msgid "Credits"
 msgstr "Köszönetnyilvánítás"
 
-#: formcard/AboutPage.qml:321
+#: formcard/AboutPage.qml:334
 #, kde-format
 msgid "Translators"
 msgstr "Fordítók"
 
-#: formcard/AboutPage.qml:390
+#: formcard/AboutPage.qml:403
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "A(z) %1 KDE Store oldala"
 
-#: formcard/AboutPage.qml:399
+#: formcard/AboutPage.qml:412
 #, kde-format
 msgid "Send an email to %1"
 msgstr "E-mail küldése neki: %1"

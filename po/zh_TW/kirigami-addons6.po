@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-01 00:39+0000\n"
+"POT-Creation-Date: 2024-11-11 00:39+0000\n"
 "PO-Revision-Date: 2024-10-02 17:22+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -82,7 +82,7 @@ msgstr "前一個影像"
 msgid "Next image"
 msgstr "下一個影像"
 
-#: components/Banner.qml:187 formcard/AboutPage.qml:488
+#: components/Banner.qml:187 formcard/AboutPage.qml:501
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -190,36 +190,43 @@ msgstr ":"
 msgid "Minutes"
 msgstr "分鐘"
 
-#: formcard/aboutcomponent.cpp:20
+#: formcard/aboutcomponent.cpp:25
 #, kde-format
-msgid "Windowing system"
+msgctxt "@info Platform name"
+msgid "%1 (%2)"
 msgstr ""
 
-#: formcard/aboutcomponent.cpp:21
+#: formcard/aboutcomponent.cpp:29
+#, kde-format
+msgctxt "@info"
+msgid "Underlying platform."
+msgstr ""
+
+#: formcard/aboutcomponent.cpp:30
 #, kde-format
 msgid "Qt"
 msgstr ""
 
-#: formcard/aboutcomponent.cpp:22
+#: formcard/aboutcomponent.cpp:31
 #, kde-format
 msgctxt "@info"
-msgid "Cross-platform application development framework"
+msgid "Cross-platform application development framework."
 msgstr ""
 
-#: formcard/aboutcomponent.cpp:23
+#: formcard/aboutcomponent.cpp:32
 #, kde-format
 msgid "Using %1 and built against %2"
 msgstr ""
 
-#: formcard/aboutcomponent.cpp:26
+#: formcard/aboutcomponent.cpp:35
 #, kde-format
 msgid "KDE Frameworks"
 msgstr ""
 
-#: formcard/aboutcomponent.cpp:27
+#: formcard/aboutcomponent.cpp:36
 #, kde-format
 msgctxt "@info"
-msgid "Collection of libraries created by the KDE Community to extend Qt"
+msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr ""
 
 #: formcard/AboutKDEPage.qml:23
@@ -258,7 +265,7 @@ msgstr ""
 "KDE 是個合作企業：沒有任何人操控 KDE 的目標和產品，取而代之的是一起達到建立世"
 "界上最好自由軟體的共同目標。歡迎任何人 -- 包括您。"
 
-#: formcard/AboutKDEPage.qml:75 formcard/AboutPage.qml:222
+#: formcard/AboutKDEPage.qml:75 formcard/AboutPage.qml:223
 #, kde-format
 msgid "Homepage"
 msgstr "首頁"
@@ -311,7 +318,7 @@ msgstr ""
 "您不需要是軟體工程師也可以成為 KDE 團隊的一份子。您可以加入翻譯團隊來翻譯程式"
 "的介面。您可以提供圖形、佈景主題、音效，或幫忙撰寫文件，看您喜歡做哪一項。"
 
-#: formcard/AboutKDEPage.qml:114 formcard/AboutPage.qml:248
+#: formcard/AboutKDEPage.qml:114 formcard/AboutPage.qml:251
 #, kde-format
 msgid "Get Involved"
 msgstr "參與"
@@ -363,7 +370,7 @@ msgstr ""
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDEPage.qml:153 formcard/AboutPage.qml:235
+#: formcard/AboutKDEPage.qml:153 formcard/AboutPage.qml:237
 #, kde-format
 msgid "Donate"
 msgstr "贊助"
@@ -390,37 +397,49 @@ msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "授權"
 
-#: formcard/AboutPage.qml:273
+#: formcard/AboutPage.qml:277
 #, kde-format
 msgid "Report a Bug"
 msgstr "回報問題"
 
-#: formcard/AboutPage.qml:280
+#: formcard/AboutPage.qml:284
 #, kde-format
 msgid "Libraries in use"
 msgstr "使用函式庫"
 
+#: formcard/AboutPage.qml:287
+#, kde-format
+msgctxt "@action:button"
+msgid "Copy to Clipboard"
+msgstr ""
+
 #: formcard/AboutPage.qml:291
+#, kde-format
+msgctxt "@info"
+msgid "System information copied to clipboard."
+msgstr ""
+
+#: formcard/AboutPage.qml:304
 #, kde-format
 msgid "Authors"
 msgstr "作者群"
 
-#: formcard/AboutPage.qml:306
+#: formcard/AboutPage.qml:319
 #, kde-format
 msgid "Credits"
 msgstr "致謝"
 
-#: formcard/AboutPage.qml:321
+#: formcard/AboutPage.qml:334
 #, kde-format
 msgid "Translators"
 msgstr "翻譯者"
 
-#: formcard/AboutPage.qml:390
+#: formcard/AboutPage.qml:403
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "造訪 %1 在 KDE Store 的頁面"
 
-#: formcard/AboutPage.qml:399
+#: formcard/AboutPage.qml:412
 #, kde-format
 msgid "Send an email to %1"
 msgstr "傳送電子郵件給 %1"
