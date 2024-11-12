@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-11 00:39+0000\n"
-"PO-Revision-Date: 2024-11-01 07:28+0200\n"
+"POT-Creation-Date: 2024-11-12 00:39+0000\n"
+"PO-Revision-Date: 2024-11-11 03:36+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -192,13 +192,13 @@ msgstr "דקות"
 #, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: formcard/aboutcomponent.cpp:29
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr ""
+msgstr "הפלטפורמה התומכת."
 
 #: formcard/aboutcomponent.cpp:30
 #, kde-format
@@ -206,12 +206,10 @@ msgid "Qt"
 msgstr "Qt"
 
 #: formcard/aboutcomponent.cpp:31
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Cross-platform application development framework"
+#, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr "תשתית חוצה פלטפורמות לפיתוח יישומים"
+msgstr "תשתית חוצה פלטפורמות לפיתוח יישומים."
 
 #: formcard/aboutcomponent.cpp:32
 #, kde-format
@@ -224,12 +222,10 @@ msgid "KDE Frameworks"
 msgstr "תשתיות KDE"
 
 #: formcard/aboutcomponent.cpp:36
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Collection of libraries created by the KDE Community to extend Qt"
+#, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
-msgstr "אוסף של ספריות שנוצרו על ידי קהילת KDE כדי להרחיב את Qt"
+msgstr "אוסף של ספריות שנוצרו על ידי קהילת KDE כדי להרחיב את Qt."
 
 #: formcard/AboutKDEPage.qml:23
 #: statefulapplication/abstractkirigamiapplication.cpp:174
@@ -416,13 +412,13 @@ msgstr "ספריות בשימוש"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "העתקה ללוח הגזירים"
 
 #: formcard/AboutPage.qml:291
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
-msgstr ""
+msgstr "פרטי המערכת הועתקו ללוח הגזירים."
 
 #: formcard/AboutPage.qml:304
 #, kde-format
@@ -474,7 +470,7 @@ msgid "Not set"
 msgstr "לא הוגדר"
 
 #: formcard/FormPasswordFieldDelegate.qml:230
-#: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:238
+#: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:253
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"

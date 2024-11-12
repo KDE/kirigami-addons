@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-11 00:39+0000\n"
-"PO-Revision-Date: 2024-11-01 19:18+0200\n"
+"POT-Creation-Date: 2024-11-12 00:39+0000\n"
+"PO-Revision-Date: 2024-11-11 17:56+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -192,13 +192,13 @@ msgstr "Хвилини"
 #, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: formcard/aboutcomponent.cpp:29
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr ""
+msgstr "Базова платформа."
 
 #: formcard/aboutcomponent.cpp:30
 #, kde-format
@@ -206,12 +206,10 @@ msgid "Qt"
 msgstr "Qt"
 
 #: formcard/aboutcomponent.cpp:31
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Cross-platform application development framework"
+#, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr "Багатоплатформова бібліотека для розробки програм"
+msgstr "Багатоплатформовий набір бібліотек для розробки програм."
 
 #: formcard/aboutcomponent.cpp:32
 #, kde-format
@@ -224,13 +222,12 @@ msgid "KDE Frameworks"
 msgstr "KDE Frameworks"
 
 #: formcard/aboutcomponent.cpp:36
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Collection of libraries created by the KDE Community to extend Qt"
+#, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr ""
-"Збірка бібліотек, які створено спільнотою KDE для розширення можливостей Qt"
+"Збірка бібліотек, яку створено спільнотою KDE з метою розширення можливостей "
+"Qt."
 
 #: formcard/AboutKDEPage.qml:23
 #: statefulapplication/abstractkirigamiapplication.cpp:174
@@ -431,13 +428,13 @@ msgstr "Використані бібліотеки"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Скопіювати до буфера"
 
 #: formcard/AboutPage.qml:291
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
-msgstr ""
+msgstr "Відомості щодо системи скопійовано до буфера обміну даними."
 
 #: formcard/AboutPage.qml:304
 #, kde-format
@@ -489,7 +486,7 @@ msgid "Not set"
 msgstr "Не встановлено"
 
 #: formcard/FormPasswordFieldDelegate.qml:230
-#: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:238
+#: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:253
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"

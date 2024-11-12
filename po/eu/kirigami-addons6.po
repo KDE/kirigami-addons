@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-11 00:39+0000\n"
-"PO-Revision-Date: 2024-11-10 20:11+0100\n"
+"POT-Creation-Date: 2024-11-12 00:39+0000\n"
+"PO-Revision-Date: 2024-11-11 07:00+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -194,13 +194,13 @@ msgstr "Minutu"
 #, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: formcard/aboutcomponent.cpp:29
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr ""
+msgstr "Azpiko plataforma."
 
 #: formcard/aboutcomponent.cpp:30
 #, kde-format
@@ -208,12 +208,10 @@ msgid "Qt"
 msgstr "Qt"
 
 #: formcard/aboutcomponent.cpp:31
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Cross-platform application development framework"
+#, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr "Plataforma anitzeko aplikazioak garatzeko armazoia"
+msgstr "Plataforma anitzeko aplikazioak garatzeko armazoia."
 
 #: formcard/aboutcomponent.cpp:32
 #, kde-format
@@ -226,12 +224,10 @@ msgid "KDE Frameworks"
 msgstr "KDE Frameworks"
 
 #: formcard/aboutcomponent.cpp:36
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Collection of libraries created by the KDE Community to extend Qt"
+#, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
-msgstr "Qt hedatzeko KDE Komunitateak eraikitako liburutegi-bilduma"
+msgstr "Qt hedatzeko KDE Komunitateak eraikitako liburutegi-bilduma."
 
 #: formcard/AboutKDEPage.qml:23
 #: statefulapplication/abstractkirigamiapplication.cpp:174
@@ -429,13 +425,13 @@ msgstr "Erabiltzen ari diren liburutegiak"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Kopiatu arbelera"
 
 #: formcard/AboutPage.qml:291
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
-msgstr ""
+msgstr "Sistemaren informazioa arbelera kopiatu da."
 
 #: formcard/AboutPage.qml:304
 #, kde-format
@@ -487,7 +483,7 @@ msgid "Not set"
 msgstr "Ezarri gabe"
 
 #: formcard/FormPasswordFieldDelegate.qml:230
-#: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:238
+#: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:253
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"

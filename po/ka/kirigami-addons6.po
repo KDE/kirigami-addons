@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-11 00:39+0000\n"
-"PO-Revision-Date: 2024-11-01 04:22+0100\n"
+"POT-Creation-Date: 2024-11-12 00:39+0000\n"
+"PO-Revision-Date: 2024-11-11 04:21+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -192,13 +192,13 @@ msgstr "წუთი"
 #, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: formcard/aboutcomponent.cpp:29
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr ""
+msgstr "ძირითადი პლატფორმა."
 
 #: formcard/aboutcomponent.cpp:30
 #, kde-format
@@ -206,12 +206,10 @@ msgid "Qt"
 msgstr "Qt"
 
 #: formcard/aboutcomponent.cpp:31
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Cross-platform application development framework"
+#, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr "მრავალპლატფორმული აპლიკაციის შემუშავების ბიბლიოთეკა"
+msgstr "მრავალპლატფორმული აპლიკაციის შემუშავების ბიბლიოთეკა."
 
 #: formcard/aboutcomponent.cpp:32
 #, kde-format
@@ -224,14 +222,12 @@ msgid "KDE Frameworks"
 msgstr "KDE-სი გამოყენებული ბიბლიოთეკები"
 
 #: formcard/aboutcomponent.cpp:36
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Collection of libraries created by the KDE Community to extend Qt"
+#, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr ""
 "Qt-ის ფუნქციონალის გასაფართოებლად KDE-ის საზოგადოების მიერ შექმნილი "
-"ბიბლიოთეკების კოლექცია"
+"ბიბლიოთეკების კოლექცია."
 
 #: formcard/AboutKDEPage.qml:23
 #: statefulapplication/abstractkirigamiapplication.cpp:174
@@ -426,13 +422,13 @@ msgstr "გამოყენებული ბიბლიოთეკებ�
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "ბუფერში კოპირება"
 
 #: formcard/AboutPage.qml:291
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
-msgstr ""
+msgstr "ინფორმაცია სისტემის შესახებ დაკოპირდა ბუფერში."
 
 #: formcard/AboutPage.qml:304
 #, kde-format
@@ -484,7 +480,7 @@ msgid "Not set"
 msgstr "დაყენებული არაა"
 
 #: formcard/FormPasswordFieldDelegate.qml:230
-#: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:238
+#: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:253
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"

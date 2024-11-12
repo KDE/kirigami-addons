@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-11 00:39+0000\n"
-"PO-Revision-Date: 2024-11-02 17:08+0300\n"
+"POT-Creation-Date: 2024-11-12 00:39+0000\n"
+"PO-Revision-Date: 2024-11-11 22:18+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -192,13 +192,13 @@ msgstr "Dakika"
 #, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: formcard/aboutcomponent.cpp:29
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr ""
+msgstr "Altta yatan platform."
 
 #: formcard/aboutcomponent.cpp:30
 #, kde-format
@@ -206,12 +206,10 @@ msgid "Qt"
 msgstr "Qt"
 
 #: formcard/aboutcomponent.cpp:31
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Cross-platform application development framework"
+#, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr "Çapraz platform uygulama geliştirme çatısı"
+msgstr "Çapraz platform uygulama geliştirme çatısı."
 
 #: formcard/aboutcomponent.cpp:32
 #, kde-format
@@ -224,14 +222,12 @@ msgid "KDE Frameworks"
 msgstr "KDE Frameworks"
 
 #: formcard/aboutcomponent.cpp:36
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Collection of libraries created by the KDE Community to extend Qt"
+#, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr ""
 "Qt’yi genişletmek üzere KDE Topluluğu tarafından oluşturulan kitaplıklar "
-"koleksiyonu"
+"koleksiyonu."
 
 #: formcard/AboutKDEPage.qml:23
 #: statefulapplication/abstractkirigamiapplication.cpp:174
@@ -429,13 +425,13 @@ msgstr "Kullanılan Kitaplıklar"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Panoya Kopyala"
 
 #: formcard/AboutPage.qml:291
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
-msgstr ""
+msgstr "Sistem bilgisi panoya kopyalandı."
 
 #: formcard/AboutPage.qml:304
 #, kde-format
@@ -487,7 +483,7 @@ msgid "Not set"
 msgstr "Ayarlanmadı"
 
 #: formcard/FormPasswordFieldDelegate.qml:230
-#: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:238
+#: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:253
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"

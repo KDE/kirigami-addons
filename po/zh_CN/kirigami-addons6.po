@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-11 00:39+0000\n"
+"POT-Creation-Date: 2024-11-12 00:39+0000\n"
 "PO-Revision-Date: 2024-04-23 19:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -205,12 +205,10 @@ msgid "Qt"
 msgstr "Qt"
 
 #: formcard/aboutcomponent.cpp:31
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Cross-platform application development framework"
+#, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr "跨平台应用程序框架"
+msgstr ""
 
 #: formcard/aboutcomponent.cpp:32
 #, kde-format
@@ -223,12 +221,10 @@ msgid "KDE Frameworks"
 msgstr "KDE 程序框架"
 
 #: formcard/aboutcomponent.cpp:36
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Collection of libraries created by the KDE Community to extend Qt"
+#, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
-msgstr "KDE 社区打造的 Qt 功能扩展程序库集合"
+msgstr ""
 
 #: formcard/AboutKDEPage.qml:23
 #: statefulapplication/abstractkirigamiapplication.cpp:174
@@ -475,7 +471,7 @@ msgid "Not set"
 msgstr "未设置"
 
 #: formcard/FormPasswordFieldDelegate.qml:230
-#: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:238
+#: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:253
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
@@ -767,6 +763,3 @@ msgstr "关于 %1"
 msgctxt "@title:window"
 msgid "About KDE"
 msgstr "关于 KDE"
-
-#~ msgid "Windowing system"
-#~ msgstr "窗口系统"
