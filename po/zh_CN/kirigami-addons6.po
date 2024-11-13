@@ -191,13 +191,13 @@ msgstr "分钟"
 #, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: formcard/aboutcomponent.cpp:29
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr ""
+msgstr "底层平台。"
 
 #: formcard/aboutcomponent.cpp:30
 #, kde-format
@@ -208,7 +208,7 @@ msgstr "Qt"
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr ""
+msgstr "跨平台应用程序开发框架。"
 
 #: formcard/aboutcomponent.cpp:32
 #, kde-format
@@ -224,7 +224,7 @@ msgstr "KDE 程序框架"
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
-msgstr ""
+msgstr "KDE 社区打造的 Qt 功能扩展程序库集合。"
 
 #: formcard/AboutKDEPage.qml:23
 #: statefulapplication/abstractkirigamiapplication.cpp:174
@@ -413,13 +413,13 @@ msgstr "使用的程序库"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "复制到剪贴板"
 
 #: formcard/AboutPage.qml:291
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
-msgstr ""
+msgstr "系统信息已复制到剪贴板。"
 
 #: formcard/AboutPage.qml:304
 #, kde-format
