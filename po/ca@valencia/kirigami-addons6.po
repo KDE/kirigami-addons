@@ -10,15 +10,15 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-12 00:39+0000\n"
-"PO-Revision-Date: 2024-11-01 21:11+0100\n"
-"Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
+"PO-Revision-Date: 2024-11-11 09:37+0100\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -194,13 +194,13 @@ msgstr "Minuts"
 #, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: formcard/aboutcomponent.cpp:29
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr ""
+msgstr "Plataforma subjacent."
 
 #: formcard/aboutcomponent.cpp:30
 #, kde-format
@@ -208,12 +208,10 @@ msgid "Qt"
 msgstr "Qt"
 
 #: formcard/aboutcomponent.cpp:31
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Cross-platform application development framework"
+#, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr "Entorn de desenvolupament d'aplicacions multiplataforma"
+msgstr "Entorn de desenvolupament d'aplicacions multiplataforma."
 
 #: formcard/aboutcomponent.cpp:32
 #, kde-format
@@ -226,14 +224,12 @@ msgid "KDE Frameworks"
 msgstr "Frameworks de KDE"
 
 #: formcard/aboutcomponent.cpp:36
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Collection of libraries created by the KDE Community to extend Qt"
+#, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr ""
 "Col·lecció de biblioteques creades per la Comunitat de KDE per a ampliar les "
-"Qt"
+"Qt."
 
 #: formcard/AboutKDEPage.qml:23
 #: statefulapplication/abstractkirigamiapplication.cpp:174
@@ -432,13 +428,13 @@ msgstr "Biblioteques en ús"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Copia a dins del porta-retalls"
 
 #: formcard/AboutPage.qml:291
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
-msgstr ""
+msgstr "La informació del sistema s'ha copiat a dins del porta-retalls."
 
 #: formcard/AboutPage.qml:304
 #, kde-format
@@ -790,6 +786,3 @@ msgstr "Quant a %1"
 msgctxt "@title:window"
 msgid "About KDE"
 msgstr "Quant a KDE"
-
-#~ msgid "Windowing system"
-#~ msgstr "Sistema de finestres"

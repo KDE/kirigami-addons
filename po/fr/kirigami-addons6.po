@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-12 00:39+0000\n"
-"PO-Revision-Date: 2024-11-02 08:46+0100\n"
+"PO-Revision-Date: 2024-11-12 09:10+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.08.3\n"
 "X-Text-Markup: kde4\n"
 
 #, kde-format
@@ -192,13 +192,13 @@ msgstr "Minutes"
 #, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: formcard/aboutcomponent.cpp:29
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr ""
+msgstr "Plate-forme sous-jacente."
 
 #: formcard/aboutcomponent.cpp:30
 #, kde-format
@@ -206,12 +206,10 @@ msgid "Qt"
 msgstr "Qt"
 
 #: formcard/aboutcomponent.cpp:31
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Cross-platform application development framework"
+#, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr "Environnement de développement d'applications multi-plateformes"
+msgstr "Environnement de développement d'applications multi-plateforme"
 
 #: formcard/aboutcomponent.cpp:32
 #, kde-format
@@ -224,13 +222,11 @@ msgid "KDE Frameworks"
 msgstr "Environnements de développement de KDE"
 
 #: formcard/aboutcomponent.cpp:36
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Collection of libraries created by the KDE Community to extend Qt"
+#, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr ""
-"Collection de bibliothèques créées par la communauté de KDE pour étendre Qt"
+"Collection de bibliothèques créées par la communauté de KDE pour étendre Qt."
 
 #: formcard/AboutKDEPage.qml:23
 #: statefulapplication/abstractkirigamiapplication.cpp:174
@@ -431,13 +427,13 @@ msgstr "Bibliothèques en cours d'utilisation"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Copier dans le presse-papier"
 
 #: formcard/AboutPage.qml:291
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
-msgstr ""
+msgstr "Informations sur le système copiées dans le presse-papier."
 
 #: formcard/AboutPage.qml:304
 #, kde-format
