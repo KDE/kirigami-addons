@@ -449,7 +449,7 @@ QQC2.Control {
                         }
 
                         QQC2.ButtonGroup {
-                            buttons: dayGrid.children
+                            id: monthGroup
                         }
 
                         Repeater {
@@ -488,6 +488,8 @@ QQC2.Control {
 
                                 Accessible.name: date.toLocaleDateString(locale, Locale.ShortFormat)
                                 Accessible.ignored: !monthPathView.QQC2.SwipeView.isCurrentItem || !monthViewLoader.PathView.isCurrentItem
+
+                                QQC2.ButtonGroup.group: monthGroup
 
                                 background {
                                     visible: sameMonth
@@ -552,7 +554,7 @@ QQC2.Control {
                         rows: 4
 
                         QQC2.ButtonGroup {
-                            buttons: yearGrid.children
+                            id: yearGroup
                         }
 
                         Repeater {
@@ -573,6 +575,8 @@ QQC2.Control {
 
                                 Accessible.ignored: !yearPathView.QQC2.SwipeView.isCurrentItem || !yearViewLoader.PathView.isCurrentItem
                                 Accessible.name: date.toLocaleDateString(Qt.locale(), "MMMM yyyy")
+
+                                QQC2.ButtonGroup.group: yearGroup
 
                                 horizontalPadding: padding * 2
                                 rightPadding: undefined
@@ -638,7 +642,7 @@ QQC2.Control {
                         rows: 4
 
                         QQC2.ButtonGroup {
-                            buttons: decadeGrid.children
+                            id: decadeGroup
                         }
 
                         Repeater {
@@ -652,6 +656,7 @@ QQC2.Control {
                                 readonly property bool sameDecade: Math.floor(date.getFullYear() / 10) == Math.floor(year / 10)
 
                                 Accessible.ignored: !decadePathView.QQC2.SwipeView.isCurrentItem || !decadeViewLoader.PathView.isCurrentItem
+                                QQC2.ButtonGroup.group: decadeGroup
 
                                 date: new Date(startDate.getFullYear() + index, 0)
                                 minimumDate: root.minimumDate.valueOf() ? new Date(root.minimumDate.getFullYear(), 0, 0) : new Date("invalid")
