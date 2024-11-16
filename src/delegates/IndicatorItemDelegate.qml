@@ -5,18 +5,27 @@ import QtQuick
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 import QtQuick.Controls as QQC2
+import QtQuick.Templates as T
 
 /**
  * @warning This component is expected to be used as a ListView.delegate.
  * If this is not the case, make sure to set index and listView
  */
-QQC2.ItemDelegate {
+T.ItemDelegate {
     id: root
 
     required property int index
     required property bool unread
 
     readonly property bool showSeparator: root.index !== ListView.view.count
+
+    implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
+                            implicitContentWidth + leftPadding + rightPadding,
+                            implicitIndicatorWidth + leftPadding + rightPadding)
+    implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
+                             implicitContentHeight + topPadding + bottomPadding,
+                             implicitIndicatorHeight + topPadding + bottomPadding,
+                             Kirigami.Units.gridUnit * 2)
 
     width: ListView.view ? ListView.view.width : implicitWidth
     highlighted: ListView.isCurrentItem
