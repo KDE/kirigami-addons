@@ -160,11 +160,9 @@ auto NameUtils::isStringUnsuitableForInitials(const QString &string) -> bool
         QChar::Script_Common, QChar::Script_Inherited, QChar::Script_Latin,
         QChar::Script_Han,    QChar::Script_Hangul,    QChar::Script_Cyrillic};
 
-    std::any_of(string.cbegin(), string.cend(), [](const QChar &character) {
+    return std::any_of(string.cbegin(), string.cend(), [](const QChar &character) {
         return std::find(scripts.begin(), scripts.end(), character.script()) == scripts.end();
     });
-
-    return false;
 }
 
 #include "moc_nameutils.cpp"
