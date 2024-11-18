@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-12 00:39+0000\n"
-"PO-Revision-Date: 2024-10-20 16:05+0530\n"
+"PO-Revision-Date: 2024-11-17 22:18+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -191,40 +191,40 @@ msgstr "நிமிடங்கள்"
 #, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: formcard/aboutcomponent.cpp:29
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr ""
+msgstr "இயக்குதளம்."
 
 #: formcard/aboutcomponent.cpp:30
 #, kde-format
 msgid "Qt"
-msgstr ""
+msgstr "Qt"
 
 #: formcard/aboutcomponent.cpp:31
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr ""
+msgstr "பல்லியக்குதள செயலி உருவாக்க நிரலகம்."
 
 #: formcard/aboutcomponent.cpp:32
 #, kde-format
 msgid "Using %1 and built against %2"
-msgstr ""
+msgstr "%1 பயன்படுத்தி %2 கொண்டு தொகுக்கப்பட்டுள்ளது"
 
 #: formcard/aboutcomponent.cpp:35
 #, kde-format
 msgid "KDE Frameworks"
-msgstr ""
+msgstr "கே.டீ.யீ. நிரலகங்கள்"
 
 #: formcard/aboutcomponent.cpp:36
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
-msgstr ""
+msgstr "Qt-யுடன் பயன்படுத்தக்கூடிய, கே.டீ.யீ. சமூகத்தால் உருவாக்கப்பட்டுள்ள, நிரலகங்கள்."
 
 #: formcard/AboutKDEPage.qml:23
 #: statefulapplication/abstractkirigamiapplication.cpp:174
@@ -414,13 +414,13 @@ msgstr "பயனிலுள்ள நிரலகங்கள்"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "பிடிப்புப்பலகைக்கு நகலெடு"
 
 #: formcard/AboutPage.qml:291
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
-msgstr ""
+msgstr "கணினி விவரங்கள் பிடிப்புப்பலகைக்கு நகலெடுக்கப்பட்டன."
 
 #: formcard/AboutPage.qml:304
 #, kde-format
