@@ -114,9 +114,18 @@ Item {
     Kirigami.Theme.colorSet: Kirigami.Theme.View
     Kirigami.Theme.inherit: false
 
+    Layout.fillWidth: true
+
     implicitHeight: topPadding + bottomPadding + grid.implicitHeight
 
     Item {
+        id: _private
+
+        readonly property bool isDarkColor: {
+            const temp = Qt.darker(Kirigami.Theme.backgroundColor, 1);
+            return temp.a > 0 && getDarkness(Kirigami.Theme.backgroundColor) >= 0.4;
+        }
+
         anchors {
             top: parent.top
             bottom: parent.bottom
@@ -188,13 +197,18 @@ Item {
                     QQC2.ToolTip.visible: tooltipText && hovered
                     QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
 
-                    background: Rectangle {
+                    background: Kirigami.ShadowedRectangle {
                         radius: root.cardWidthRestricted ? Kirigami.Units.cornerRadius : 0
                         color: Kirigami.Theme.backgroundColor
 
                         border {
-                            color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, Kirigami.Theme.frameContrast)
+                            color: _private.isDarkColor ? Qt.darker(Kirigami.Theme.backgroundColor, 1.2) : Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.15)
                             width: 1
+                        }
+
+                        shadow {
+                            size: _private.isDarkColor ? Kirigami.Units.smallSpacing : Kirigami.Units.largeSpacing
+                            color: Qt.alpha(Kirigami.Theme.textColor, 0.10)
                         }
 
                         Rectangle {
