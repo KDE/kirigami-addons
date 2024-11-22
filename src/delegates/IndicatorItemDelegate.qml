@@ -99,7 +99,7 @@ T.ItemDelegate {
                 leftMargin: root.leftPadding
                 rightMargin: root.rightPadding
             }
-            visible: root.showSeparator && !root.hovered && (root.index === 0 || !root.ListView.view.itemAtIndex(root.index - 1))
+            visible: root.showSeparator && !root.hovered
             opacity: 0.5
         }
     }
