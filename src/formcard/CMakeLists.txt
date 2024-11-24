@@ -28,6 +28,7 @@ ecm_target_qml_sources(formcardplugin SOURCES
     FormComboBoxDelegate.qml
     FormDelegateBackground.qml
     FormDelegateSeparator.qml
+    FormPlaceholderMessageDelegate.qml
     FormRadioDelegate.qml
     FormRadioSelectorDelegate.qml
     FormSectionText.qml
