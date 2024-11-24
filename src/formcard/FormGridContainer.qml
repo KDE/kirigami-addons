@@ -121,6 +121,14 @@ Item {
     Item {
         id: _private
 
+        function getDarkness(background: color): real {
+            // Thanks to Gojir4 from the Qt forum
+            // https://forum.qt.io/topic/106362/best-way-to-set-text-color-for-maximum-contrast-on-background-color/
+            var temp = Qt.darker(background, 1);
+            var a = 1 - ( 0.299 * temp.r + 0.587 * temp.g + 0.114 * temp.b);
+            return a;
+        }
+
         readonly property bool isDarkColor: {
             const temp = Qt.darker(Kirigami.Theme.backgroundColor, 1);
             return temp.a > 0 && getDarkness(Kirigami.Theme.backgroundColor) >= 0.4;
