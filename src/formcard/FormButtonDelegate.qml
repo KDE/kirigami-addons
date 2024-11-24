@@ -64,37 +64,44 @@ AbstractFormDelegate {
     focusPolicy: Qt.StrongFocus
 
     contentItem: RowLayout {
-        spacing: 0
-
-        Private.ContentItemLoader {
-            Layout.rightMargin: visible ? root.leadingPadding : 0
-            visible: root.leading
-            implicitHeight: visible ? root.leading.implicitHeight : 0
-            implicitWidth: visible ? root.leading.implicitWidth : 0
-            contentItem: root.leading
-        }
-
-        Kirigami.Icon {
-            visible: root.icon.name !== ""
-            source: root.icon.name
-            color: root.icon.color
-            Layout.rightMargin: (root.icon.name !== "") ? Private.FormCardUnits.horizontalSpacing : 0
-            implicitWidth: (root.icon.name !== "") ? root.icon.width : 0
-            implicitHeight: (root.icon.name !== "") ? root.icon.height : 0
-        }
+        spacing: Private.FormCardUnits.horizontalSpacing
 
         ColumnLayout {
-            Layout.fillWidth: true
             spacing: Private.FormCardUnits.verticalSpacing
 
-            Label {
+            Layout.fillWidth: true
+
+            RowLayout {
+                spacing: 0
+
                 Layout.fillWidth: true
-                text: root.text
-                elide: Text.ElideRight
-                wrapMode: Text.Wrap
-                maximumLineCount: 2
-                color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
-                Accessible.ignored: true // base class sets this text on root already
+
+                Private.ContentItemLoader {
+                    Layout.rightMargin: visible ? root.leadingPadding : 0
+                    visible: root.leading
+                    implicitHeight: visible ? root.leading.implicitHeight : 0
+                    implicitWidth: visible ? root.leading.implicitWidth : 0
+                    contentItem: root.leading
+                }
+
+                Kirigami.Icon {
+                    visible: root.icon.name !== ""
+                    source: root.icon.name
+                    color: root.icon.color
+                    Layout.rightMargin: (root.icon.name !== "") ? Private.FormCardUnits.horizontalSpacing : 0
+                    implicitWidth: (root.icon.name !== "") ? root.icon.width : 0
+                    implicitHeight: (root.icon.name !== "") ? root.icon.height : 0
+                }
+
+                Label {
+                    Layout.fillWidth: true
+                    text: root.text
+                    elide: Text.ElideRight
+                    wrapMode: Text.Wrap
+                    maximumLineCount: 2
+                    color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
+                    Accessible.ignored: true // base class sets this text on root already
+                }
             }
 
             Label {
