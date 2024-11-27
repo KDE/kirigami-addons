@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-12 00:39+0000\n"
-"PO-Revision-Date: 2024-10-02 17:22+0900\n"
+"PO-Revision-Date: 2024-11-26 21:39+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -194,40 +194,40 @@ msgstr "分鐘"
 #, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: formcard/aboutcomponent.cpp:29
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr ""
+msgstr "基底平台。"
 
 #: formcard/aboutcomponent.cpp:30
 #, kde-format
 msgid "Qt"
-msgstr ""
+msgstr "Qt"
 
 #: formcard/aboutcomponent.cpp:31
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr ""
+msgstr "跨平台的應用程式開發框架。"
 
 #: formcard/aboutcomponent.cpp:32
 #, kde-format
 msgid "Using %1 and built against %2"
-msgstr ""
+msgstr "使用 %1 並建置於 %2 之上"
 
 #: formcard/aboutcomponent.cpp:35
 #, kde-format
 msgid "KDE Frameworks"
-msgstr ""
+msgstr "KDE Frameworks"
 
 #: formcard/aboutcomponent.cpp:36
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
-msgstr ""
+msgstr "擴展 Qt 的多個函式庫的集合，由 KDE 社群所開發。"
 
 #: formcard/AboutKDEPage.qml:23
 #: statefulapplication/abstractkirigamiapplication.cpp:174
@@ -411,13 +411,13 @@ msgstr "使用函式庫"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "複製到剪貼簿"
 
 #: formcard/AboutPage.qml:291
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
-msgstr ""
+msgstr "已將系統資訊複製到剪貼簿。"
 
 #: formcard/AboutPage.qml:304
 #, kde-format
