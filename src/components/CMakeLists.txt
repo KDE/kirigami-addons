@@ -22,7 +22,6 @@ ecm_target_qml_sources(componentslabsplugin SOURCES
     DownloadAction.qml
     SearchPopupField.qml
     DialogRoundedBackground.qml
-    RadioSelector.qml
 )
 
 target_link_libraries(componentslabsplugin PRIVATE
@@ -63,6 +62,7 @@ ecm_target_qml_sources(componentsplugin SOURCES
     MessageDialog.qml
     SearchPopupField.qml
     SegmentedButton.qml
+    RadioSelector.qml
 )
 
 target_link_libraries(componentsplugin PRIVATE
