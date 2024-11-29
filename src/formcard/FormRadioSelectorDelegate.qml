@@ -29,6 +29,7 @@ import org.kde.kirigamiaddons.components as Components
 *   ]
 * }
 * @endcode
+* @since Kirigami Addons 1.6.0.
 */
 AbstractFormDelegate {
     id: root

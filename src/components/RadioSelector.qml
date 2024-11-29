@@ -31,6 +31,7 @@ import org.kde.kirigami as Kirigami
 *   ]
 * }
 * @endcode
+* @since Kirigami Addons 1.6.0.
 */
 Item {
     id: root
