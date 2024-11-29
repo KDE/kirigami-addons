@@ -163,12 +163,12 @@ Item {
 
                 onClicked: {
                     button.checked = true;
-                    button.selectedIndex = index;
+                    root.selectedIndex = index;
                 }
 
-                Component.onCompleted: if (index === selectedIndex) {
+                Component.onCompleted: if (index === root.selectedIndex) {
                     button.checked = true;
-                    button.selectedIndex = index;
+                    root.selectedIndex = index;
                 }
             }
         }
