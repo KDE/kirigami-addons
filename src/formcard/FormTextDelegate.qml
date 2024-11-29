@@ -99,7 +99,7 @@ AbstractFormDelegate {
 
         ColumnLayout {
             Layout.fillWidth: true
-            spacing: Private.FormCardUnits.verticalSpacing
+            spacing: 0
 
             Label {
                 id: internalTextItem
