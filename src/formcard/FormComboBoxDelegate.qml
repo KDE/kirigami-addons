@@ -9,6 +9,7 @@ import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.delegates as Delegates
+import org.kde.kirigamiaddons.components as Components
 
 /**
  * @brief A Form delegate that corresponds to a combobox.
@@ -272,7 +273,8 @@ AbstractFormDelegate {
         target: controlRoot
         function onClicked() {
             if (controlRoot.displayMode === FormComboBoxDelegate.Dialog) {
-                controlRoot.dialog.open();
+                const dialogObject = controlRoot.dialog.createObject();
+                dialogObject.open();
             } else if (controlRoot.displayMode === FormComboBoxDelegate.Page) {
                 controlRoot._selectionPageItem = controlRoot.QQC2.ApplicationWindow.window.pageStack.pushDialogLayer(page)
             } else {
@@ -288,19 +290,70 @@ AbstractFormDelegate {
      * This property allows to override the internal dialog
      * with a custom component.
      */
-    property var dialog: Kirigami.Dialog {
+    property Component dialog: QQC2.Dialog {
         id: dialog
-        showCloseButton: false
-        title: controlRoot.text
-        preferredWidth: Kirigami.Units.gridUnit * 16
-        parent: QQC2.Overlay.overlay
 
-        ColumnLayout {
+        x: Math.round((parent.width - width) / 2)
+        y: Math.round((parent.height - height) / 2)
+        z: Kirigami.OverlayZStacking.z
+
+        title: controlRoot.text
+        implicitWidth: Math.min(parent.width - Kirigami.Units.gridUnit * 2, Kirigami.Units.gridUnit * 22)
+        parent: applicationWindow().QQC2.Overlay.overlay
+        background: Components.DialogRoundedBackground {}
+
+        implicitHeight: Math.min(
+            Math.max(implicitBackgroundHeight + topInset + bottomInset,
+                     contentHeight + topPadding + bottomPadding
+                     + (implicitHeaderHeight > 0 ? implicitHeaderHeight + spacing : 0)
+                     + (implicitFooterHeight > 0 ? implicitFooterHeight + spacing : 0)),
+            parent.height - Kirigami.Units.gridUnit * 2)
+
+        onClosed: destroy();
+
+        modal: true
+        focus: true
+        padding: 0
+
+        header: Kirigami.Heading {
+            text: dialog.title
+            elide: QQC2.Label.ElideRight
+            leftPadding: Kirigami.Units.largeSpacing
+            rightPadding: Kirigami.Units.largeSpacing
+            topPadding: Kirigami.Units.largeSpacing
+            bottomPadding: Kirigami.Units.largeSpacing
+        }
+
+        contentItem: ColumnLayout {
             spacing: 0
 
-            Repeater {
-                model: controlRoot.model
-                delegate: controlRoot.dialogDelegate
+            Kirigami.Separator {
+                visible: !listView.atYBeginning
+                Layout.fillWidth: true
+            }
+
+            QQC2.ScrollView {
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+
+                Layout.margins: 2
+
+                Component.onCompleted: if (background) {
+                    background.visible = false;
+                }
+
+                ListView {
+                    id: listView
+
+                    clip: true
+                    model: controlRoot.model
+                    delegate: controlRoot.dialogDelegate
+                }
+            }
+
+            Kirigami.Separator {
+                visible: controlRoot.editable
+                Layout.fillWidth: true
             }
 
             QQC2.TextField {
