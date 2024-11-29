@@ -17,16 +17,16 @@ import org.kde.kirigami as Kirigami
 *   consistentWidth: false
 *   actions: [
 *       Kirigami.Action {
-*           text: i18n("Week")
-*           icon.name:  "view-calendar-week"
+*           text: i18nc("@option:radio", "Week")
+*           icon.name: "view-calendar-week-symbolic"
 *       },
 *       Kirigami.Action {
-*           text: i18n("3 Days")
-*           icon.name:  "view-calendar-upcoming-days"
+*           text: i18nc("@option:radio", "3 Days")
+*           icon.name: "view-calendar-upcoming-days-symbolic"
 *       },
 *       Kirigami.Action {
-*           text: i18n("1 Day")
-*           icon.name:  "view-calendar-day"
+*           text: i18nc("@option:radio", "1 Day")
+*           icon.name: "view-calendar-day-symbolic"
 *       }
 *   ]
 * }
@@ -36,32 +36,36 @@ Item {
     id: root
 
     /**
-     * @brief This property holds a list of actions, each holding one of the options.
+     * @brief This property holds a list of actions, each holding one of the
+     * options.
      */
     property list<T.Action> actions
 
     /**
-     * @brief This property holds whether all the items should have the same width.
+     * @brief This property holds whether all the items should have the same
+     * width.
      */
     property bool consistentWidth: false
 
     /**
-     * @brief This property holds which option will be selected by default.
+     * @brief This property holds the currently selected option. By default,
+     * it's the first actions or -1 if no actions is set.
      */
-    property int defaultIndex: 0
-
-    /**
-     * @brief This property holds the currently selected option.
-     */
-    readonly property int selectedIndex: marker.selectedIndex
+    property int selectedIndex: actions.length > 0 ? 0 : -1
 
     Layout.minimumWidth: consistentWidth ? 0 : switchLayout.implicitWidth
     Layout.fillWidth: consistentWidth
 
     implicitHeight: switchLayout.implicitHeight
 
+    onSelectedIndexChanged: if (selectedIndex >= 0 && repeater.count < selectedIndex && !repeater.childAt(selectedIndex).checked) {
+        repeater.childAt(selectedIndex).clicked();
+    }
+
     QQC2.ButtonGroup {
-        buttons: switchLayout.children
+        id: buttonGroup
+
+        buttons: switchLayout.children.filter((child) => child !== repeater)
     }
 
     RowLayout {
@@ -85,9 +89,12 @@ Item {
 
                 Layout.fillWidth: true
                 Layout.preferredWidth: root.consistentWidth ? (root.width/repeater.count)-(switchLayout.spacing/repeater.count-1) : button.implicitWidth
+                Layout.minimumHeight: Kirigami.Units.gridUnit * 2
 
                 checkable: true
                 action: modelData
+                text: modelData.text
+                icon.name: modelData.icon.name
                 visible: !(modelData instanceof Kirigami.Action) || modelData.visible
 
                 icon {
@@ -117,9 +124,6 @@ Item {
                     Kirigami.Icon {
                         id: icon
 
-                        Layout.topMargin: (container.height - label.height) / 2
-                        Layout.bottomMargin: (container.height - label.height) / 2
-
                         color: button.checked ? Kirigami.Theme.hoverColor : Kirigami.Theme.textColor
                         visible: button.icon.name
                         source: button.icon.name
@@ -133,44 +137,21 @@ Item {
                         }
                     }
 
-                    Item {
-                        Layout.topMargin: (container.height - label.height) / 2
-                        Layout.bottomMargin: (container.height - label.height) / 2
+                    QQC2.Label {
+                        Layout.alignment: Qt.AlignVCenter
 
-                        Layout.preferredWidth: fakeLabel.width
-                        Layout.preferredHeight: fakeLabel.height
+                        font.bold: button.checked
+                        color: Kirigami.Theme.textColor
+                        text: button.text
 
-                        QQC2.Label {
-                            id: fakeLabel
-
-                            anchors.centerIn: parent
-                            font.bold: true
-                            color: Kirigami.Theme.hoverColor
-
-                            opacity: button.checked ? 1 : 0
-                            text: button.text
-                            Behavior on opacity {
-                                PropertyAnimation {
-                                    duration: Kirigami.Units.longDuration
-                                    easing.type: Easing.InOutCubic
-                                }
+                        Behavior on font.bold {
+                            PropertyAnimation {
+                                duration: Kirigami.Units.longDuration
+                                easing.type: Easing.InOutCubic
                             }
                         }
-                        QQC2.Label {
-                            id: label
 
-                            anchors.centerIn: parent
-                            color: Kirigami.Theme.textColor
-
-                            opacity: button.checked ? 0 : 1
-                            text: button.text
-                            Behavior on opacity {
-                                PropertyAnimation {
-                                    duration: Kirigami.Units.longDuration
-                                    easing.type: Easing.InOutCubic
-                                }
-                            }
-                        }
+                        Accessible.ignored: true
                     }
 
                     Item {
@@ -180,16 +161,13 @@ Item {
                 }
 
                 onClicked: {
-                    marker.width = Qt.binding(function() { return width; })
-                    marker.x = Qt.binding(function() { return x; });
-                    modelData.triggered();
-                    marker.selectedIndex = index;
-
-                }
-                Component.onCompleted: if (index === defaultIndex ) {
-                    marker.width = Qt.binding(function() { return width; });
-                    marker.x = Qt.binding(function() { return x; });
                     button.checked = true;
+                    button.selectedIndex = index;
+                }
+
+                Component.onCompleted: if (index === selectedIndex) {
+                    button.checked = true;
+                    button.selectedIndex = index;
                 }
             }
         }
@@ -198,21 +176,20 @@ Item {
     Kirigami.ShadowedRectangle {
         id: marker
 
-        property int selectedIndex: root.defaultIndex
-
+        x: buttonGroup.checkedButton.x
         y: switchLayout.y
         z: switchLayout.z - 1
+
         height: switchLayout.implicitHeight
+        width: buttonGroup.checkedButton.width
         radius: Kirigami.Units.cornerRadius
-        color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.8)
-        border {
-            width: 1
-            color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.5)
-        }
+
+        color: Kirigami.Theme.hoverColor
+        opacity: 0.4
         shadow {
-            size: 7
-            yOffset: 3
-            color: Qt.rgba(0, 0, 0, 0.15)
+            size: 10
+            yOffset: 4
+            color: Qt.rgba(0, 0, 0, 0.3)
         }
         Behavior on x {
             PropertyAnimation {
