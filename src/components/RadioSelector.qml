@@ -185,13 +185,17 @@ Item {
         width: buttonGroup.checkedButton.width
         radius: Kirigami.Units.cornerRadius
 
-        color: Kirigami.Theme.hoverColor
-        opacity: 0.4
-        shadow {
-            size: 10
-            yOffset: 4
-            color: Qt.rgba(0, 0, 0, 0.3)
+        color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.8)
+        border {
+            width: 1
+            color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.5)
         }
+        shadow {
+            size: 7
+            yOffset: 3
+            color: Qt.rgba(0, 0, 0, 0.15)
+        }
+
         Behavior on x {
             PropertyAnimation {
                 id: x_anim
