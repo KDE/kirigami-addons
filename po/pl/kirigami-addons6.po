@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-12 00:39+0000\n"
-"PO-Revision-Date: 2024-09-29 09:50+0200\n"
+"POT-Creation-Date: 2024-12-01 00:39+0000\n"
+"PO-Revision-Date: 2024-11-30 09:17+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -192,40 +192,40 @@ msgstr "Minuty"
 #, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: formcard/aboutcomponent.cpp:29
 #, kde-format
-msgctxt "@info"
-msgid "Underlying platform."
-msgstr ""
+msgid "KDE Frameworks"
+msgstr "KDE Frameworks"
 
 #: formcard/aboutcomponent.cpp:30
 #, kde-format
-msgid "Qt"
-msgstr ""
-
-#: formcard/aboutcomponent.cpp:31
-#, kde-format
 msgctxt "@info"
-msgid "Cross-platform application development framework."
-msgstr ""
-
-#: formcard/aboutcomponent.cpp:32
-#, kde-format
-msgid "Using %1 and built against %2"
-msgstr ""
+msgid "Collection of libraries created by the KDE Community to extend Qt."
+msgstr "Zbiór bibliotek stworzonych przez Społeczność KDE, aby rozszerzyć Qt."
 
 #: formcard/aboutcomponent.cpp:35
 #, kde-format
-msgid "KDE Frameworks"
-msgstr ""
+msgid "Qt"
+msgstr "Qt"
 
 #: formcard/aboutcomponent.cpp:36
 #, kde-format
 msgctxt "@info"
-msgid "Collection of libraries created by the KDE Community to extend Qt."
-msgstr ""
+msgid "Cross-platform application development framework."
+msgstr "Między-platformowy szkielet do rozwoju aplikacji"
+
+#: formcard/aboutcomponent.cpp:37
+#, kde-format
+msgid "Using %1 and built against %2"
+msgstr "Używany jest %1, który został zbudowany na %2"
+
+#: formcard/aboutcomponent.cpp:41
+#, kde-format
+msgctxt "@info"
+msgid "Underlying platform."
+msgstr "Platforma uruchomieniowa."
 
 #: formcard/AboutKDEPage.qml:23
 #: statefulapplication/abstractkirigamiapplication.cpp:174
@@ -423,13 +423,13 @@ msgstr "Biblioteki w użyciu"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Skopiuj do schowka"
 
 #: formcard/AboutPage.qml:291
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
-msgstr ""
+msgstr "Skopiowano szczegóły systemowe do schowka."
 
 #: formcard/AboutPage.qml:304
 #, kde-format

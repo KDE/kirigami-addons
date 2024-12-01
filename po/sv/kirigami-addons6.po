@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-12 00:39+0000\n"
+"POT-Creation-Date: 2024-12-01 00:39+0000\n"
 "PO-Revision-Date: 2024-11-24 18:24+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -195,36 +195,36 @@ msgstr "%1 (%2)"
 
 #: formcard/aboutcomponent.cpp:29
 #, kde-format
-msgctxt "@info"
-msgid "Underlying platform."
-msgstr "Underliggande plattform."
+msgid "KDE Frameworks"
+msgstr "KDE Ramverk"
 
 #: formcard/aboutcomponent.cpp:30
+#, kde-format
+msgctxt "@info"
+msgid "Collection of libraries created by the KDE Community to extend Qt."
+msgstr "Bibliotekssamling skapad av KDE-gemenskapen för att utöka Qt."
+
+#: formcard/aboutcomponent.cpp:35
 #, kde-format
 msgid "Qt"
 msgstr "Qt"
 
-#: formcard/aboutcomponent.cpp:31
+#: formcard/aboutcomponent.cpp:36
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
 msgstr "Ramverk för applikationsutveckling för flera plattformar."
 
-#: formcard/aboutcomponent.cpp:32
+#: formcard/aboutcomponent.cpp:37
 #, kde-format
 msgid "Using %1 and built against %2"
 msgstr "Använder %1 och byggd med %2"
 
-#: formcard/aboutcomponent.cpp:35
-#, kde-format
-msgid "KDE Frameworks"
-msgstr "KDE Ramverk"
-
-#: formcard/aboutcomponent.cpp:36
+#: formcard/aboutcomponent.cpp:41
 #, kde-format
 msgctxt "@info"
-msgid "Collection of libraries created by the KDE Community to extend Qt."
-msgstr "Bibliotekssamling skapad av KDE-gemenskapen för att utöka Qt."
+msgid "Underlying platform."
+msgstr "Underliggande plattform."
 
 #: formcard/AboutKDEPage.qml:23
 #: statefulapplication/abstractkirigamiapplication.cpp:174

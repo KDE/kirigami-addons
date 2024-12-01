@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-12 00:39+0000\n"
+"POT-Creation-Date: 2024-12-01 00:39+0000\n"
 "PO-Revision-Date: 2024-11-11 09:37+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -198,38 +198,38 @@ msgstr "%1 (%2)"
 
 #: formcard/aboutcomponent.cpp:29
 #, kde-format
-msgctxt "@info"
-msgid "Underlying platform."
-msgstr "Plataforma subjacent."
-
-#: formcard/aboutcomponent.cpp:30
-#, kde-format
-msgid "Qt"
-msgstr "Qt"
-
-#: formcard/aboutcomponent.cpp:31
-#, kde-format
-msgctxt "@info"
-msgid "Cross-platform application development framework."
-msgstr "Entorn de desenvolupament d'aplicacions multiplataforma."
-
-#: formcard/aboutcomponent.cpp:32
-#, kde-format
-msgid "Using %1 and built against %2"
-msgstr "S'utilitza %1 i s'ha construït amb %2"
-
-#: formcard/aboutcomponent.cpp:35
-#, kde-format
 msgid "KDE Frameworks"
 msgstr "Frameworks de KDE"
 
-#: formcard/aboutcomponent.cpp:36
+#: formcard/aboutcomponent.cpp:30
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr ""
 "Col·lecció de biblioteques creades per la Comunitat de KDE per a ampliar les "
 "Qt."
+
+#: formcard/aboutcomponent.cpp:35
+#, kde-format
+msgid "Qt"
+msgstr "Qt"
+
+#: formcard/aboutcomponent.cpp:36
+#, kde-format
+msgctxt "@info"
+msgid "Cross-platform application development framework."
+msgstr "Entorn de desenvolupament d'aplicacions multiplataforma."
+
+#: formcard/aboutcomponent.cpp:37
+#, kde-format
+msgid "Using %1 and built against %2"
+msgstr "S'utilitza %1 i s'ha construït amb %2"
+
+#: formcard/aboutcomponent.cpp:41
+#, kde-format
+msgctxt "@info"
+msgid "Underlying platform."
+msgstr "Plataforma subjacent."
 
 #: formcard/AboutKDEPage.qml:23
 #: statefulapplication/abstractkirigamiapplication.cpp:174

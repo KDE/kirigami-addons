@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-12 00:39+0000\n"
+"POT-Creation-Date: 2024-12-01 00:39+0000\n"
 "PO-Revision-Date: 2024-11-28 12:32+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -196,36 +196,36 @@ msgstr "%1 (%2)"
 
 #: formcard/aboutcomponent.cpp:29
 #, kde-format
-msgctxt "@info"
-msgid "Underlying platform."
-msgstr "المنصة الأساسية."
+msgid "KDE Frameworks"
+msgstr "إطار كِيدِي"
 
 #: formcard/aboutcomponent.cpp:30
+#, kde-format
+msgctxt "@info"
+msgid "Collection of libraries created by the KDE Community to extend Qt."
+msgstr "مجموعة من المكتبات التي أنشأها مجتمع كيدي لتوسيع كيو تي."
+
+#: formcard/aboutcomponent.cpp:35
 #, kde-format
 msgid "Qt"
 msgstr "كيوت"
 
-#: formcard/aboutcomponent.cpp:31
+#: formcard/aboutcomponent.cpp:36
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
 msgstr "إطار عمل لتطوير التطبيقات متعددة الأنظمة.."
 
-#: formcard/aboutcomponent.cpp:32
+#: formcard/aboutcomponent.cpp:37
 #, kde-format
 msgid "Using %1 and built against %2"
 msgstr "يستخدم %1 وبنيت على %2"
 
-#: formcard/aboutcomponent.cpp:35
-#, kde-format
-msgid "KDE Frameworks"
-msgstr "إطار كِيدِي"
-
-#: formcard/aboutcomponent.cpp:36
+#: formcard/aboutcomponent.cpp:41
 #, kde-format
 msgctxt "@info"
-msgid "Collection of libraries created by the KDE Community to extend Qt."
-msgstr "مجموعة من المكتبات التي أنشأها مجتمع كيدي لتوسيع كيو تي."
+msgid "Underlying platform."
+msgstr "المنصة الأساسية."
 
 #: formcard/AboutKDEPage.qml:23
 #: statefulapplication/abstractkirigamiapplication.cpp:174

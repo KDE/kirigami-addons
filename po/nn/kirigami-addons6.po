@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-12 00:39+0000\n"
+"POT-Creation-Date: 2024-12-01 00:39+0000\n"
 "PO-Revision-Date: 2024-10-06 14:05+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -197,35 +197,35 @@ msgstr ""
 
 #: formcard/aboutcomponent.cpp:29
 #, kde-format
-msgctxt "@info"
-msgid "Underlying platform."
+msgid "KDE Frameworks"
 msgstr ""
 
 #: formcard/aboutcomponent.cpp:30
 #, kde-format
-msgid "Qt"
-msgstr ""
-
-#: formcard/aboutcomponent.cpp:31
-#, kde-format
 msgctxt "@info"
-msgid "Cross-platform application development framework."
-msgstr ""
-
-#: formcard/aboutcomponent.cpp:32
-#, kde-format
-msgid "Using %1 and built against %2"
+msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr ""
 
 #: formcard/aboutcomponent.cpp:35
 #, kde-format
-msgid "KDE Frameworks"
+msgid "Qt"
 msgstr ""
 
 #: formcard/aboutcomponent.cpp:36
 #, kde-format
 msgctxt "@info"
-msgid "Collection of libraries created by the KDE Community to extend Qt."
+msgid "Cross-platform application development framework."
+msgstr ""
+
+#: formcard/aboutcomponent.cpp:37
+#, kde-format
+msgid "Using %1 and built against %2"
+msgstr ""
+
+#: formcard/aboutcomponent.cpp:41
+#, kde-format
+msgctxt "@info"
+msgid "Underlying platform."
 msgstr ""
 
 #: formcard/AboutKDEPage.qml:23
