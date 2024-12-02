@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
-# Tommi Nieminen <translator@legisign.org>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-01 00:39+0000\n"
-"PO-Revision-Date: 2023-07-27 15:01+0300\n"
+"PO-Revision-Date: 2024-11-06 17:19+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,17 +15,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Tommi Nieminen"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "translator@legisign.org"
 
 #: components/AbstractMaximizeComponent.qml:130
 #, kde-format
@@ -94,31 +94,31 @@ msgstr "Lataa"
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
-msgstr ""
+msgstr "Onnistui"
 
 #: components/MessageDialog.qml:85 components/MessageDialog.qml:91
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
-msgstr ""
+msgstr "Varoitus"
 
 #: components/MessageDialog.qml:87
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
-msgstr ""
+msgstr "Virhe"
 
 #: components/MessageDialog.qml:89
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
-msgstr ""
+msgstr "Tietoa"
 
 #: components/MessageDialog.qml:206
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
-msgstr ""
+msgstr "Älä näytä enää"
 
 #: components/VideoMaximizeDelegate.qml:267
 #, kde-format
@@ -127,8 +127,7 @@ msgid "Volume"
 msgstr "Äänenvoimakkuus"
 
 #: dateandtime/DatePopup.qml:87 dateandtime/TimePopup.qml:52
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Peru"
@@ -137,53 +136,45 @@ msgstr "Peru"
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
-msgstr ""
+msgstr "Valitse"
 
 #: dateandtime/private/DatePicker.qml:275
-#, fuzzy, kde-format
-#| msgctxt "kirigami-addons"
-#| msgid "Days"
+#, kde-format
 msgid "Day"
-msgstr "Päivät"
+msgstr "Päivä"
 
 #: dateandtime/private/DatePicker.qml:278
-#, fuzzy, kde-format
-#| msgctxt "kirigami-addons"
-#| msgid "Months"
+#, kde-format
 msgid "Month"
-msgstr "Kuukaudet"
+msgstr "Kuukausi"
 
 #: dateandtime/private/DatePicker.qml:281
-#, fuzzy, kde-format
-#| msgctxt "kirigami-addons"
-#| msgid "Years"
+#, kde-format
 msgid "Year"
-msgstr "Vuodet"
+msgstr "Vuosi"
 
 #: dateandtime/private/DatePicker.qml:366
-#, fuzzy, kde-format
-#| msgid "Previous"
+#, kde-format
 msgctxt "@action:button"
 msgid "Go Previous"
-msgstr "Edellinen"
+msgstr "Siirry edelliseen"
 
 #: dateandtime/private/DatePicker.qml:379
 #, kde-format
 msgctxt "@action:button"
 msgid "Jump to today"
-msgstr ""
+msgstr "Hyppää tänäiseen"
 
 #: dateandtime/private/DatePicker.qml:386
-#, fuzzy, kde-format
-#| msgid "Next"
+#, kde-format
 msgctxt "@action:button"
 msgid "Go Next"
-msgstr "Seuraava"
+msgstr "Siirry seuraavaan"
 
 #: dateandtime/TimePicker.qml:97
 #, kde-format
 msgid "Hours"
-msgstr ""
+msgstr "Tunnit"
 
 #: dateandtime/TimePicker.qml:119
 #, kde-format
@@ -194,7 +185,7 @@ msgstr ":"
 #: dateandtime/TimePicker.qml:134
 #, kde-format
 msgid "Minutes"
-msgstr ""
+msgstr "minuuttia"
 
 #: formcard/aboutcomponent.cpp:25
 #, kde-format
@@ -205,7 +196,7 @@ msgstr ""
 #: formcard/aboutcomponent.cpp:29
 #, kde-format
 msgid "KDE Frameworks"
-msgstr ""
+msgstr "KDE Frameworks"
 
 #: formcard/aboutcomponent.cpp:30
 #, kde-format
@@ -216,7 +207,7 @@ msgstr ""
 #: formcard/aboutcomponent.cpp:35
 #, kde-format
 msgid "Qt"
-msgstr ""
+msgstr "Qt"
 
 #: formcard/aboutcomponent.cpp:36
 #, kde-format
@@ -227,7 +218,7 @@ msgstr ""
 #: formcard/aboutcomponent.cpp:37
 #, kde-format
 msgid "Using %1 and built against %2"
-msgstr ""
+msgstr "Käytössä %1, koostettu kirjastolla %2"
 
 #: formcard/aboutcomponent.cpp:41
 #, kde-format
@@ -280,8 +271,7 @@ msgid "Homepage"
 msgstr "Kotisivu"
 
 #: formcard/AboutKDEPage.qml:81
-#, fuzzy, kde-format
-#| msgid "Report a bug"
+#, kde-format
 msgid "Report bugs"
 msgstr "Ilmoita viasta"
 
@@ -318,22 +308,17 @@ msgstr "Ilmoita viasta"
 #: formcard/AboutKDEPage.qml:101
 #, kde-format
 msgid "Join us"
-msgstr ""
+msgstr "Tule mukaan"
 
 #: formcard/AboutKDEPage.qml:106
-#, fuzzy, kde-format
-#| msgid ""
-#| "You do not have to be a software developer to be a member of the KDE "
-#| "team. You can join the national teams that translate program interfaces. "
-#| "You can provide graphics, themes, sounds, and improved documentation. You "
-#| "decide!"
+#, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
 "You can join the language teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
-"Sinun ei tarvitse olla ohjelmistokehittäjä liittyäksesi KDE-ryhmään. Voit "
-"liittyä käyttöliittymiä kääntävään kansalliseen ryhmään. Voit myös tehdä "
+"Ei tarvitse olla ohjelmistokehittäjä, jotta voi liittyä KDE-ryhmään. Voi "
+"liittyä käyttöliittymää kääntävään kansalliseen ryhmään. Voi myös tehdä "
 "grafiikkaa, teemoja, ääniä tai parantaa dokumentaatiota. Päätä itse!"
 
 #: formcard/AboutKDEPage.qml:114 formcard/AboutPage.qml:251
@@ -349,7 +334,7 @@ msgstr "Kehitysohjeistus"
 #: formcard/AboutKDEPage.qml:128
 #, kde-format
 msgid "Support us"
-msgstr ""
+msgstr "Tue meitä"
 
 #: formcard/AboutKDEPage.qml:133
 #, kde-format
@@ -408,11 +393,9 @@ msgid "Copyright"
 msgstr "Tekijänoikeudet"
 
 #: formcard/AboutPage.qml:142
-#, fuzzy, kde-format
-#| msgctxt "@action:intoolbar"
-#| msgid "Hide caption"
+#, kde-format
 msgid "Description"
-msgstr "Piilota selite"
+msgstr "Kuvaus"
 
 #: formcard/AboutPage.qml:155
 #, kde-format
@@ -422,8 +405,7 @@ msgstr[0] "Lisenssi"
 msgstr[1] "Lisenssit"
 
 #: formcard/AboutPage.qml:277
-#, fuzzy, kde-format
-#| msgid "Report a bug"
+#, kde-format
 msgid "Report a Bug"
 msgstr "Ilmoita viasta"
 
@@ -462,28 +444,27 @@ msgstr "Kääntäjät"
 #: formcard/AboutPage.qml:403
 #, kde-format
 msgid "Visit %1's KDE Store page"
-msgstr ""
+msgstr "Käy KDE Storen %1 -sivulla"
 
 #: formcard/AboutPage.qml:412
 #, kde-format
 msgid "Send an email to %1"
-msgstr ""
+msgstr "Lähetä sähköpostia: %1"
 
 #: formcard/android/FormColorDelegate.qml:42 formcard/FormColorDelegate.qml:42
 #, kde-format
 msgctxt "@action:button"
 msgid "Color"
-msgstr ""
+msgstr "Väri"
 
 #: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:43
 #, kde-format
 msgctxt "Accessible description"
 msgid "Current color \"%1\""
-msgstr ""
+msgstr "Nykyinen väri ”%1”"
 
 #: formcard/FormDateTimeDelegate.qml:195
-#, fuzzy, kde-format
-#| msgid "Today"
+#, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
 msgid "Today"
 msgstr "Tänään"
@@ -492,86 +473,86 @@ msgstr "Tänään"
 #, kde-format
 msgctxt "Date is not set"
 msgid "Not set"
-msgstr ""
+msgstr "Ei asetettu"
 
 #: formcard/FormPasswordFieldDelegate.qml:230
 #: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:253
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
-msgstr ""
+msgstr "%1/%2"
 
 #: settings/CategorizedSettings.qml:45 settings/ConfigurationView.qml:81
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings"
-msgstr ""
+msgstr "Asetukset"
 
 #: settings/CategorizedSettings.qml:45
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings — %1"
-msgstr ""
+msgstr "Asetukset — %1"
 
 #: settings/CategorizedSettings.qml:99
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Go back"
-msgstr ""
+msgstr "Siirry taaksepäin"
 
 #: settings/private/ConfigMobilePage.qml:26
 #, kde-format
 msgctxt "@title"
 msgid "Settings"
-msgstr ""
+msgstr "Asetukset"
 
 #: settings/private/ConfigMobilePage.qml:97
 #, kde-format
 msgctxt "@title:group"
 msgid "Settings"
-msgstr ""
+msgstr "Asetukset"
 
 #: settings/private/SonnetConfigPage.qml:41
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Enable automatic spell checking"
-msgstr ""
+msgstr "Käytä automaattista oikeinkirjoituksen tarkistusta"
 
 #: settings/private/SonnetConfigPage.qml:55
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore uppercase words"
-msgstr ""
+msgstr "Sivuuta suuraakkosin kirjoitetut sanat"
 
 #: settings/private/SonnetConfigPage.qml:69
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore hyphenated words"
-msgstr ""
+msgstr "Sivuuta yhdysmerkin sisältävät sanat"
 
 #: settings/private/SonnetConfigPage.qml:83
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Detect language automatically"
-msgstr ""
+msgstr "Tunnista kieli automaattisesti"
 
 #: settings/private/SonnetConfigPage.qml:96
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Selected default language:"
-msgstr ""
+msgstr "Valittu oletuskieli:"
 
 #: settings/private/SonnetConfigPage.qml:97
 #, kde-format
 msgctxt "No selected language"
 msgid "None"
-msgstr ""
+msgstr "Ei mitään"
 
 #: settings/private/SonnetConfigPage.qml:117
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Additional Spell Checking Languages"
-msgstr ""
+msgstr "Oikeinkirjoituksen tarkistuksen lisäkielet"
 
 #: settings/private/SonnetConfigPage.qml:118
 #, kde-format
@@ -579,64 +560,66 @@ msgid ""
 "%1 will provide spell checking and suggestions for the languages listed here "
 "when autodetection is enabled."
 msgstr ""
+"Käytettäessä automaattista tunnistusta %1 tarjoaa tässä luetelluille "
+"kielille oikeinkirjoituksen tarkistuksen ja ehdotukset."
 
 #: settings/private/SonnetConfigPage.qml:131
 #, kde-format
 msgctxt "@action:button"
 msgid "Open Personal Dictionary"
-msgstr ""
+msgstr "Avaa henkilökohtainen sanasto"
 
 #: settings/private/SonnetConfigPage.qml:143
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking languages"
-msgstr ""
+msgstr "Oikeinkirjoituksen tarkistuksen kielet"
 
 #: settings/private/SonnetConfigPage.qml:155
 #, kde-format
 msgid "Default Language"
-msgstr ""
+msgstr "Oletuskieli"
 
 #: settings/private/SonnetConfigPage.qml:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking dictionary"
-msgstr ""
+msgstr "Oikeinkirjoituksen tarkistuksen sanasto"
 
 #: settings/private/SonnetConfigPage.qml:174
 #, kde-format
 msgctxt "Placeholder message"
 msgid "Add a new word to your personal dictionary…"
-msgstr ""
+msgstr "Lisää omaan sanastoon uusi sana…"
 
 #: settings/private/SonnetConfigPage.qml:177
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Word"
-msgstr ""
+msgstr "Lisää sana"
 
 #: settings/private/SonnetConfigPage.qml:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete word"
-msgstr ""
+msgstr "Poista sana"
 
 #: settings/SpellcheckingConfigurationModule.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Spell Checking"
-msgstr ""
+msgstr "Oikeinkirjoituksen tarkistus"
 
 #: statefulapplication/abstractkirigamiapplication.cpp:145
 #, kde-format
 msgid "Open Command Bar"
-msgstr ""
+msgstr "Avaa komentopalkki"
 
 #: statefulapplication/private/keysequencehelper.cpp:117
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Reserved Shortcut"
-msgstr ""
+msgstr "Varattu pikanäppäin"
 
 #: statefulapplication/private/keysequencehelper.cpp:119
 #, kde-format
@@ -646,6 +629,9 @@ msgid ""
 "shortcut.\n"
 "Please choose another one."
 msgstr ""
+"Windowsissa F12-näppäin on varattu, joten sitä ei voi käyttää "
+"yleispikanäppäimeksi.\n"
+"Valitse toinen."
 
 #: statefulapplication/private/keysequencehelper.cpp:143
 #, kde-format
@@ -653,32 +639,32 @@ msgctxt ""
 "@title:dialog This happen when a global shortcut is already defined with the "
 "same shortcut"
 msgid "Global Shortcut Shadowing"
-msgstr ""
+msgstr "Yleispikanäppäimen varjostus"
 
 #: statefulapplication/private/keysequencehelper.cpp:146
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination is shadowed by following global actions:\n"
-msgstr ""
+msgstr "Seuraavat yleistoiminnot varjostavat näppäinyhdistelmää ”%1”:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:148
 #: statefulapplication/private/keysequencehelper.cpp:154
 #, kde-format
 msgctxt "@info"
 msgid "Action '%1' in context '%2'\n"
-msgstr ""
+msgstr "Toiminto ”%1” kontekstissa ”%2”\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:152
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination shadows following global actions:\n"
-msgstr ""
+msgstr "Näppäinyhdistelmä ”%1” varjostaa seuraavia yleistoimintoja:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:193
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Conflict with Standard Application Shortcut"
-msgstr ""
+msgstr "Ristiriita sovelluksen vakiopikanäppäimen kanssa"
 
 #: statefulapplication/private/keysequencehelper.cpp:195
 #, kde-format
@@ -688,18 +674,21 @@ msgid ""
 "some applications use.\n"
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
+"Näppäinyhdistelmä %1 on jo käytössä joidenkin sovellusten vakiotoiminnolle "
+"”%2”.\n"
+"Haluatko varmasti asettaa näppäinyhdistelmän myös yleispikanäppäimeksi?"
 
 #: statefulapplication/private/KeySequenceItem.qml:129
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
-msgstr ""
+msgstr "Yhdistelmä"
 
 #: statefulapplication/private/KeySequenceItem.qml:130
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
-msgstr ""
+msgstr "Ei mitään"
 
 #: statefulapplication/private/KeySequenceItem.qml:141
 #, kde-format
@@ -707,79 +696,79 @@ msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
+"Napsauta painiketta ja paina sen jälkeen haluaamasi pikanäppäintä.\n"
+"Esim. Ctrl+A:lle: paina Ctrl-näppäintä, sitten paina A."
 
 #: statefulapplication/private/KeySequenceItem.qml:182
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
-msgstr ""
+msgstr "Tyhjennä näppäinsarja"
 
 #: statefulapplication/private/KeySequenceItem.qml:198
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel Key Sequence Recording"
-msgstr ""
+msgstr "Peru näppäinsarjan nauhoitus"
 
 #: statefulapplication/private/KQuickCommandBarPage.qml:55
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No results found"
-msgstr ""
+msgstr "Ei hakutuloksia"
 
 #: statefulapplication/private/ShortcutsEditor.qml:18
 #: statefulapplication/StatefulWindow.qml:90
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcuts"
-msgstr ""
+msgstr "Pikanäppäimet"
 
 #: statefulapplication/private/ShortcutsEditor.qml:22
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Filter…"
-msgstr ""
+msgstr "Suodata…"
 
 #: statefulapplication/private/ShortcutsEditor.qml:52
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut: %1"
-msgstr ""
+msgstr "Pikanäppäin: %1"
 
 #: statefulapplication/private/ShortcutsEditor.qml:72
 #, kde-format
 msgctxt "@label"
 msgid "Shortcut:"
-msgstr ""
+msgstr "Pikanäppäin:"
 
 #: statefulapplication/private/ShortcutsEditor.qml:127
 #: statefulapplication/private/ShortcutsEditor.qml:155
 #, kde-format
 msgctxt "@label"
 msgid "Alternative:"
-msgstr ""
+msgstr "Vaihtoehtoinen:"
 
 #: statefulapplication/private/ShortcutsEditor.qml:193
 #, kde-format
 msgctxt "Placeholder message"
 msgid "No shortcuts found"
-msgstr ""
+msgstr "Pikanäppäimiä ei löytynyt"
 
 #: statefulapplication/shortcutsmodel.cpp:41
 #, kde-format
 msgctxt "List separator"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: statefulapplication/StatefulWindow.qml:100
-#, fuzzy, kde-format
-#| msgid "About %1"
+#, kde-format
 msgctxt "@title:window"
 msgid "About %1"
-msgstr "Tietoa – %1"
+msgstr "Tietoa: %1|/|Tietoa $[yleisnimi_pienellä $[elat %1] ]"
 
 #: statefulapplication/StatefulWindow.qml:113
-#, fuzzy, kde-format
-#| msgid "About KDE"
+#, kde-format
 msgctxt "@title:window"
 msgid "About KDE"
 msgstr "Tietoa KDE:stä"
