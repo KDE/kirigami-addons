@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-01 00:39+0000\n"
-"PO-Revision-Date: 2024-11-04 16:06+0200\n"
+"PO-Revision-Date: 2024-12-02 18:29+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -192,7 +192,7 @@ msgstr "Minūtes"
 #, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: formcard/aboutcomponent.cpp:29
 #, kde-format
@@ -200,12 +200,10 @@ msgid "KDE Frameworks"
 msgstr "KDE Frameworks"
 
 #: formcard/aboutcomponent.cpp:30
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Collection of libraries created by the KDE Community to extend Qt"
+#, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
-msgstr "KDE kopienas izveidotas bibliotēkas „Qt“ paplašināšanai"
+msgstr "KDE kopienas izveidotas bibliotēkas „Qt“ paplašināšanai."
 
 #: formcard/aboutcomponent.cpp:35
 #, kde-format
@@ -213,12 +211,10 @@ msgid "Qt"
 msgstr "Qt"
 
 #: formcard/aboutcomponent.cpp:36
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Cross-platform application development framework"
+#, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr "Vairāku platformu programmu izstrādes satvars"
+msgstr "Vairāku platformu programmu izstrādes satvars."
 
 #: formcard/aboutcomponent.cpp:37
 #, kde-format
@@ -229,7 +225,7 @@ msgstr "Izmanto „%1“ un ir būvēts pret „%2“"
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr ""
+msgstr "Pamata platforma."
 
 #: formcard/AboutKDEPage.qml:23
 #: statefulapplication/abstractkirigamiapplication.cpp:174
@@ -428,13 +424,13 @@ msgstr "Izmantotās bibliotēkas"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Kopēt starpliktuvē"
 
 #: formcard/AboutPage.qml:291
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
-msgstr ""
+msgstr "Sistēmas informācija ir nokopēta starpliktuvē."
 
 #: formcard/AboutPage.qml:304
 #, kde-format
