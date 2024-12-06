@@ -49,7 +49,7 @@ Kirigami.ScrollablePage {
             }
 
             onClicked: {
-                shortcutDialog.title = i18ndc("krigiami-addons6", "@title:window", "Shortcut: %1",  shortcutDelegate.text);
+                shortcutDialog.title = i18ndc("kirigami-addons6", "@title:window", "Shortcut: %1",  shortcutDelegate.text);
                 shortcutDialog.keySequence = shortcutDelegate.shortcut;
                 shortcutDialog.index = shortcutDelegate.index;
                 shortcutDialog.alternateShortcuts = shortcutDelegate.alternateShortcuts;
@@ -69,7 +69,7 @@ Kirigami.ScrollablePage {
             KeySequenceItem {
                 id: keySequenceItem
 
-                label: i18ndc("krigiami-addons6", "@label", "Shortcut:")
+                label: i18ndc("kirigami-addons6", "@label", "Shortcut:")
                 onKeySequenceModified: {
                     root.model.updateShortcut(shortcutDialog.index, 0, keySequence);
                 }
@@ -124,7 +124,7 @@ Kirigami.ScrollablePage {
                     required property int index
                     required property var modelData
 
-                    label: index === 0 ? i18ndc("krigiami-addons6", "@label", "Alternative:") : ''
+                    label: index === 0 ? i18ndc("kirigami-addons6", "@label", "Alternative:") : ''
 
                     keySequence: modelData
                     onKeySequenceModified: {
@@ -152,7 +152,7 @@ Kirigami.ScrollablePage {
             KeySequenceItem {
                 id: alternateKeySequenceItem
 
-                label: alternateRepeater.count === 0 ? i18ndc("krigiami-addons6", "@label", "Alternative:") : ''
+                label: alternateRepeater.count === 0 ? i18ndc("kirigami-addons6", "@label", "Alternative:") : ''
 
                 onKeySequenceModified: {
                     shortcutDialog.alternateShortcuts = root.model.updateShortcut(shortcutDialog.index, alternateRepeater.count + 1, keySequence);

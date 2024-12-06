@@ -250,7 +250,7 @@ AbstractFormDelegate {
                     font: Kirigami.Theme.smallFont
 
                     function label(current: int, maximum: int): string {
-                        return i18nc("@label %1 is current text length, %2 is maximum length of text field", "%1/%2", current, maximum)
+                        return i18ndc("kirigami-addons6", "@label %1 is current text length, %2 is maximum length of text field", "%1/%2", current, maximum)
                     }
                 }
                 // 32767 is the default value for TextField.maximumLength

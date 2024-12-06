@@ -10,7 +10,7 @@ ecm_add_qml_module(soundsplugin
         org.kde.kirigamiaddons.delegates
 )
 
-target_compile_definitions(soundsplugin PRIVATE -DTRANSLATION_DOMAIN=\"kirigami_sounds\")
+target_compile_definitions(soundsplugin PRIVATE -DTRANSLATION_DOMAIN=\"kirigami_sounds6\")
 
 target_sources(soundsplugin PRIVATE soundspickermodel.cpp)
 

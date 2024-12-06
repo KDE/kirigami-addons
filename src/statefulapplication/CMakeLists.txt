@@ -66,6 +66,8 @@ target_include_directories(KirigamiAddonsStatefulApp
         "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KirigamiAddonsStatefulApp>"
 )
 
+target_compile_definitions(KirigamiAddonsStatefulApp PRIVATE -DTRANSLATION_DOMAIN=\"kirigami-addons6\")
+
 # Qml plugin
 
 ecm_add_qml_module(KirigamiAddonsStatefulApp

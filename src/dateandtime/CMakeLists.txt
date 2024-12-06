@@ -24,7 +24,7 @@ ecm_add_qml_module(dateandtimeplugin
         org.kde.kirigamiaddons.delegates
 )
 
-target_compile_definitions(dateandtimeplugin PRIVATE -DTRANSLATION_DOMAIN=\"kirigami-addons\")
+target_compile_definitions(dateandtimeplugin PRIVATE -DTRANSLATION_DOMAIN=\"kirigami-addons6\")
 
 target_sources(dateandtimeplugin PRIVATE
     yearmodel.cpp

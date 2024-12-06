@@ -57,6 +57,7 @@ target_sources(formcardplugin PRIVATE
     aboutcomponent_p.h
     aboutcomponent.cpp
 )
+target_compile_definitions(formcardplugin PRIVATE -DTRANSLATION_DOMAIN=\"kirigami-addons6\")
 
 set_source_files_properties(private/FormCardUnits.qml PROPERTIES QT_QML_SINGLETON_TYPE TRUE)
 

@@ -498,7 +498,7 @@ FormCardPage {
 
                                     QQC2.ToolButton {
                                         icon.name: hovered ? "window-close" : "window-close-symbolic"
-                                        text: i18nc("@action:button", "Close")
+                                        text: i18ndc("kirigami-addons6", "@action:button", "Close")
                                         display: QQC2.ToolButton.IconOnly
                                         onClicked: licenseSheet.close()
                                     }
