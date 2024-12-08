@@ -22,6 +22,20 @@ Kirigami.ScrollablePage {
     leftPadding: 0
     rightPadding: 0
 
+    background: Rectangle {
+        Kirigami.Theme.colorSet: Kirigami.Theme.Window
+        Kirigami.Theme.inherit: false
+
+        Item {
+            id: view
+
+            Kirigami.Theme.colorSet: Kirigami.Theme.View
+            Kirigami.Theme.inherit: false
+        }
+
+        color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, view.Kirigami.Theme.backgroundColor, 0.5);
+    }
+
     ColumnLayout {
         id: internalLayout
 
