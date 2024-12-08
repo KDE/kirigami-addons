@@ -6,6 +6,7 @@ import QtQuick.Controls as QQC2
 import QtQuick.Window
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
+import org.kde.coreaddons as Core
 
 /**
  * @brief An "About KDE" page using Form components.
@@ -72,6 +73,7 @@ KDE is a cooperative enterprise: no single entity controls its direction or prod
         FormDelegateSeparator {}
 
         FormButtonDelegate {
+            icon.name: "globe-symbolic"
             text: i18nd("kirigami-addons6", "Homepage")
             onClicked: Qt.openUrlExternally("https://kde.org/")
         }
@@ -92,8 +94,22 @@ If you have a suggestion for improvement then you are welcome to use the bug tra
         FormDelegateSeparator {}
 
         FormButtonDelegate {
+            readonly property string theUrl: {
+                if (Core.AboutData.bugAddress !== "submit@bugs.kde.org") {
+                    return Core.AboutData.bugAddress
+                }
+                const elements = Core.AboutData.productName.split('/');
+                let url = `https://bugs.kde.org/enter_bug.cgi?format=guided&product=${elements[0]}&version=${aboutData.version}`;
+                if (elements.length === 2) {
+                    url += "&component=" + elements[1];
+                }
+                return url;
+            }
+
+            icon.name: "tools-report-bug-symbolic"
             text: i18nd("kirigami-addons6", "Report a bug")
-            onClicked: Qt.openUrlExternally("https://bugs.kde.org/")
+            onClicked: Qt.openUrlExternally(theUrl)
+            enabled: theUrl.length > 0
         }
     }
 
