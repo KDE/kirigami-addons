@@ -128,6 +128,7 @@ If you have a suggestion for improvement then you are welcome to use the bug tra
         FormButtonDelegate {
             id: getInvolved
             text: i18nd("kirigami-addons6", "Get Involved")
+            icon.name: "system-user-list"
             onClicked: Qt.openUrlExternally("https://community.kde.org/Get_Involved")
         }
 
@@ -135,6 +136,7 @@ If you have a suggestion for improvement then you are welcome to use the bug tra
 
         FormButtonDelegate {
             id: devDoc
+            icon.name: 'applications-development-symbolic'
             text: i18nd("kirigami-addons6", "Developer Documentation")
             onClicked: Qt.openUrlExternally("https://develop.kde.org/")
         }
@@ -158,7 +160,9 @@ Thank you very much in advance for your support.")
 
         FormButtonDelegate {
             id: ev
+
             text: i18nd("kirigami-addons6", "KDE e.V")
+            icon.name: 'kde-symbolic'
             onClicked: Qt.openUrlExternally("https://ev.kde.org/")
         }
 
@@ -166,7 +170,9 @@ Thank you very much in advance for your support.")
 
         FormButtonDelegate {
             id: donate
+
             text: i18nd("kirigami-addons6", "Donate")
+            icon.name: 'donate-symbolic'
             onClicked: Qt.openUrlExternally("https://www.kde.org/donate")
         }
     }
