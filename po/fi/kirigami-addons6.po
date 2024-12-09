@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-01 00:39+0000\n"
+"POT-Creation-Date: 2024-12-09 00:40+0000\n"
 "PO-Revision-Date: 2024-11-06 17:19+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -226,23 +226,23 @@ msgctxt "@info"
 msgid "Underlying platform."
 msgstr ""
 
-#: formcard/AboutKDEPage.qml:23
+#: formcard/AboutKDEPage.qml:24
 #: statefulapplication/abstractkirigamiapplication.cpp:174
 #, kde-format
 msgid "About KDE"
 msgstr "Tietoa KDE:stä"
 
-#: formcard/AboutKDEPage.qml:49
+#: formcard/AboutKDEPage.qml:50
 #, kde-format
 msgid "KDE"
 msgstr "KDE"
 
-#: formcard/AboutKDEPage.qml:58
+#: formcard/AboutKDEPage.qml:59
 #, kde-format
 msgid "Be Free!"
 msgstr "Ole vapaa!"
 
-#: formcard/AboutKDEPage.qml:67
+#: formcard/AboutKDEPage.qml:68
 #, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
@@ -265,17 +265,17 @@ msgstr ""
 "vapaata ohjelmistoa. Kaikki ovat tervetulleita liittymään ja avustamaan KDE:"
 "tä – myös sinä."
 
-#: formcard/AboutKDEPage.qml:75 formcard/AboutPage.qml:223
+#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:223
 #, kde-format
 msgid "Homepage"
 msgstr "Kotisivu"
 
-#: formcard/AboutKDEPage.qml:81
+#: formcard/AboutKDEPage.qml:83
 #, kde-format
 msgid "Report bugs"
 msgstr "Ilmoita viasta"
 
-#: formcard/AboutKDEPage.qml:86
+#: formcard/AboutKDEPage.qml:88
 #, kde-format
 msgid ""
 "Software can always be improved, and the KDE team is ready to do so. "
@@ -300,17 +300,17 @@ msgstr ""
 "vianjäljitysjärjestelmään. Varmista, että ongelman vakavuus on ”Wishlist”, "
 "toivelista."
 
-#: formcard/AboutKDEPage.qml:95
+#: formcard/AboutKDEPage.qml:110
 #, kde-format
 msgid "Report a bug"
 msgstr "Ilmoita viasta"
 
-#: formcard/AboutKDEPage.qml:101
+#: formcard/AboutKDEPage.qml:117
 #, kde-format
 msgid "Join us"
 msgstr "Tule mukaan"
 
-#: formcard/AboutKDEPage.qml:106
+#: formcard/AboutKDEPage.qml:122
 #, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
@@ -321,22 +321,22 @@ msgstr ""
 "liittyä käyttöliittymää kääntävään kansalliseen ryhmään. Voi myös tehdä "
 "grafiikkaa, teemoja, ääniä tai parantaa dokumentaatiota. Päätä itse!"
 
-#: formcard/AboutKDEPage.qml:114 formcard/AboutPage.qml:251
+#: formcard/AboutKDEPage.qml:130 formcard/AboutPage.qml:251
 #, kde-format
 msgid "Get Involved"
 msgstr "Ota osaa"
 
-#: formcard/AboutKDEPage.qml:122
+#: formcard/AboutKDEPage.qml:140
 #, kde-format
 msgid "Developer Documentation"
 msgstr "Kehitysohjeistus"
 
-#: formcard/AboutKDEPage.qml:128
+#: formcard/AboutKDEPage.qml:146
 #, kde-format
 msgid "Support us"
 msgstr "Tue meitä"
 
-#: formcard/AboutKDEPage.qml:133
+#: formcard/AboutKDEPage.qml:151
 #, kde-format
 msgid ""
 "KDE software is and will always be available free of charge, however "
@@ -371,12 +371,12 @@ msgstr ""
 "\n"
 "Kiitokset etukäteen tuestasi."
 
-#: formcard/AboutKDEPage.qml:145
+#: formcard/AboutKDEPage.qml:164
 #, kde-format
 msgid "KDE e.V"
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:153 formcard/AboutPage.qml:237
+#: formcard/AboutKDEPage.qml:174 formcard/AboutPage.qml:237
 #, kde-format
 msgid "Donate"
 msgstr "Lahjoita"
