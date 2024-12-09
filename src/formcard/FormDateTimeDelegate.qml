@@ -156,6 +156,7 @@ AbstractFormDelegate {
     horizontalPadding: undefined
 
     contentItem: ColumnLayout {
+        id: contentColumn
         spacing: 0
 
         QQC2.Label {
@@ -183,7 +184,7 @@ AbstractFormDelegate {
                 verticalPadding: Private.FormCardUnits.verticalPadding
 
                 Layout.fillWidth: true
-                Layout.maximumWidth: root.dateTimeDisplay === FormDateTimeDelegate.DateTimeDisplay.DateTime ? parent.width / 2 : parent.width
+                Layout.maximumWidth: root.dateTimeDisplay === FormDateTimeDelegate.DateTimeDisplay.DateTime ? contentColumn.width / 2 : contentColumn.width
 
                 visible: root.dateTimeDisplay === FormDateTimeDelegate.DateTimeDisplay.DateTime || root.dateTimeDisplay === FormDateTimeDelegate.DateTimeDisplay.Date
 
@@ -348,7 +349,7 @@ AbstractFormDelegate {
                 verticalPadding: Private.FormCardUnits.verticalPadding
 
                 Layout.fillWidth: true
-                Layout.maximumWidth: root.dateTimeDisplay === FormDateTimeDelegate.DateTimeDisplay.DateTime ? parent.width / 2 : parent.width
+                Layout.maximumWidth: root.dateTimeDisplay === FormDateTimeDelegate.DateTimeDisplay.DateTime ? contentColumn.width / 2 : contentColumn.width
 
                 text: if (!isNaN(root.value.valueOf())) {
                     const locale = Qt.locale();
