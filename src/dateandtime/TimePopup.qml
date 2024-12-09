@@ -16,12 +16,6 @@ QQC2.Dialog {
     property date value: new Date()
 
     /**
-     * Emitted when the user accepts the dialog.
-     * The selected date is available from the selectedDate property.
-     */
-    signal accepted()
-
-    /**
      * Emitted when the user cancells the popup
      */
     signal cancelled()
