@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-09 00:40+0000\n"
+"POT-Creation-Date: 2024-12-10 00:39+0000\n"
 "PO-Revision-Date: 2022-03-27 18:27+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -127,14 +127,14 @@ msgctxt "@action:button"
 msgid "Volume"
 msgstr ""
 
-#: dateandtime/DatePopup.qml:87 dateandtime/TimePopup.qml:52
+#: dateandtime/DatePopup.qml:87 dateandtime/TimePopup.qml:46
 #, fuzzy, kde-format
 #| msgid "Cancel"
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Ləğv edin"
 
-#: dateandtime/DatePopup.qml:99 dateandtime/TimePopup.qml:63
+#: dateandtime/DatePopup.qml:99 dateandtime/TimePopup.qml:57
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-09 00:40+0000\n"
-"PO-Revision-Date: 2024-08-20 23:35+0200\n"
+"POT-Creation-Date: 2024-12-10 00:39+0000\n"
+"PO-Revision-Date: 2024-12-10 00:53+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -126,13 +126,13 @@ msgctxt "@action:button"
 msgid "Volume"
 msgstr "음량"
 
-#: dateandtime/DatePopup.qml:87 dateandtime/TimePopup.qml:52
+#: dateandtime/DatePopup.qml:87 dateandtime/TimePopup.qml:46
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "취소"
 
-#: dateandtime/DatePopup.qml:99 dateandtime/TimePopup.qml:63
+#: dateandtime/DatePopup.qml:99 dateandtime/TimePopup.qml:57
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
@@ -191,40 +191,40 @@ msgstr "분"
 #, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1(%2)"
 
 #: formcard/aboutcomponent.cpp:29
 #, kde-format
 msgid "KDE Frameworks"
-msgstr ""
+msgstr "KDE 프레임워크"
 
 #: formcard/aboutcomponent.cpp:30
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
-msgstr ""
+msgstr "KDE 커뮤니티에서 제작한 Qt를 확장하는 라이브러리 모음입니다."
 
 #: formcard/aboutcomponent.cpp:35
 #, kde-format
 msgid "Qt"
-msgstr ""
+msgstr "Qt"
 
 #: formcard/aboutcomponent.cpp:36
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr ""
+msgstr "크로스 플랫폼 앱 개발 프레임워크입니다."
 
 #: formcard/aboutcomponent.cpp:37
 #, kde-format
 msgid "Using %1 and built against %2"
-msgstr ""
+msgstr "%1 사용, %2(으)로 빌드됨"
 
 #: formcard/aboutcomponent.cpp:41
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr ""
+msgstr "기반 플랫폼입니다."
 
 #: formcard/AboutKDEPage.qml:24
 #: statefulapplication/abstractkirigamiapplication.cpp:174
@@ -389,11 +389,9 @@ msgid "Copyright"
 msgstr "저작권"
 
 #: formcard/AboutPage.qml:142
-#, fuzzy, kde-format
-#| msgctxt "@action:intoolbar"
-#| msgid "Hide caption"
+#, kde-format
 msgid "Description"
-msgstr "캡션 숨기기"
+msgstr "설명"
 
 #: formcard/AboutPage.qml:155
 #, kde-format
@@ -415,13 +413,13 @@ msgstr "사용하는 라이브러리"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "클립보드에 복사"
 
 #: formcard/AboutPage.qml:291
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
-msgstr ""
+msgstr "클립보드에 시스템 정보를 복사했습니다."
 
 #: formcard/AboutPage.qml:304
 #, kde-format

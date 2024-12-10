@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-09 00:40+0000\n"
-"PO-Revision-Date: 2024-11-12 12:06+0100\n"
+"POT-Creation-Date: 2024-12-10 00:39+0000\n"
+"PO-Revision-Date: 2024-12-09 00:57+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -128,13 +128,13 @@ msgctxt "@action:button"
 msgid "Volume"
 msgstr "Volumen"
 
-#: dateandtime/DatePopup.qml:87 dateandtime/TimePopup.qml:52
+#: dateandtime/DatePopup.qml:87 dateandtime/TimePopup.qml:46
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: dateandtime/DatePopup.qml:99 dateandtime/TimePopup.qml:63
+#: dateandtime/DatePopup.qml:99 dateandtime/TimePopup.qml:57
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
@@ -733,7 +733,7 @@ msgstr "No hay resultados"
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcuts"
-msgstr "Accesos rápidos"
+msgstr "Atajos de teclado"
 
 #: statefulapplication/private/ShortcutsEditor.qml:22
 #, kde-format
@@ -745,13 +745,13 @@ msgstr "Filtro..."
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut: %1"
-msgstr "Acceso rápido: %1"
+msgstr "Atajo de teclado: %1"
 
 #: statefulapplication/private/ShortcutsEditor.qml:72
 #, kde-format
 msgctxt "@label"
 msgid "Shortcut:"
-msgstr "Acceso rápido:"
+msgstr "Atajo de teclado:"
 
 #: statefulapplication/private/ShortcutsEditor.qml:127
 #: statefulapplication/private/ShortcutsEditor.qml:155
