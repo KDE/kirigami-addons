@@ -89,6 +89,14 @@ Item {
     property alias cache: avatarImage.cache
 
     /**
+     * @brief Load the image asynchronously.
+     * @see QtQuick.Image::asynchronous
+     * @property bool asynchronous
+     * @since 1.7.0
+     */
+    property alias asynchronous: avatarImage.asynchronous
+
+    /**
      * @brief This property holds the source size of the user's profile picture.
      * @see QtQuick.Image::sourceSize
      * @property int sourceSize
