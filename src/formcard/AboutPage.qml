@@ -288,7 +288,7 @@ FormCardPage {
             icon.name: 'edit-copy-symbolic'
             onTriggered: {
                 FormCardModule.AboutComponent.copyToClipboard();
-                root.QQC2.ApplicationWindow.window.showPassiveNotification(i18ndc("kirigami-addons6", "@info", "System information copied to clipboard."), 'short');
+                page.QQC2.ApplicationWindow.window.showPassiveNotification(i18ndc("kirigami-addons6", "@info", "System information copied to clipboard."), 'short');
             }
         }
     }
