@@ -99,7 +99,7 @@ If you have a suggestion for improvement then you are welcome to use the bug tra
                     return Core.AboutData.bugAddress
                 }
                 const elements = Core.AboutData.productName.split('/');
-                let url = `https://bugs.kde.org/enter_bug.cgi?format=guided&product=${elements[0]}&version=${aboutData.version}`;
+                let url = `https://bugs.kde.org/enter_bug.cgi?format=guided&product=${elements[0]}&version=${Core.AboutData.version}`;
                 if (elements.length === 2) {
                     url += "&component=" + elements[1];
                 }
