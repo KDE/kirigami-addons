@@ -16,7 +16,7 @@
 
 #include "version-%{APPNAMELC}.h"
 #include <KAboutData>
-#include <KLocalizedContext>
+#include <KLocalizedQmlContext>
 #include <KLocalizedString>
 
 #include "%{APPNAMELC}config.h"
@@ -82,7 +82,7 @@ int main(int argc, char *argv[])
 
     qmlRegisterSingletonInstance("org.kde.%{APPNAMELC}.private", 1, 0, "Config", config);
 
-    engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
+    KLocalization::setupLocalizedContext(&engine);
     engine.loadFromModule("org.kde.%{APPNAMELC}", u"Main"_s);
 
     if (engine.rootObjects().isEmpty()) {

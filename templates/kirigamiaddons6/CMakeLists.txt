@@ -1,15 +1,15 @@
 # SPDX-FileCopyrightText: %{CURRENT_YEAR} %{AUTHOR} <%{EMAIL}>
 # SPDX-License-Identifier: BSD-3-Clause
 
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.24)
 
-project(%{APPNAMELC} VERSION 0.1)
+project(%{APPNAMELC} VERSION 1.0.0)
 
 include(FeatureSummary)
 
-set(QT6_MIN_VERSION 6.5.0)
-set(KF6_MIN_VERSION 6.0.0)
-set(KIRIGAMI_ADDONS_MIN_VERSION 1.2.40)
+set(QT6_MIN_VERSION 6.7.0)
+set(KF6_MIN_VERSION 6.8.0)
+set(KIRIGAMI_ADDONS_MIN_VERSION 1.6.0)
 
 find_package(ECM ${KF6_MIN_VERSION} REQUIRED NO_MODULE)
 
@@ -23,7 +23,6 @@ include(KDECompilerSettings NO_POLICY_SCOPE)
 
 include(ECMSetupVersion)
 include(ECMFindQmlModule)
-include(ECMQmlModule)
 include(ECMQmlModule)
 
 if (NOT ANDROID)
@@ -49,8 +48,6 @@ set_package_properties(KF6KirigamiAddons PROPERTIES
     TYPE REQUIRED
     PURPOSE "Required application components and runtime dependency"
 )
-
-qt_policy(SET QTP0001 NEW)
 
 ecm_find_qmlmodule(org.kde.kirigamiaddons.formcard)
 ecm_find_qmlmodule(org.kde.kirigamiaddons.statefulapp)
