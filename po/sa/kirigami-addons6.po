@@ -3,29 +3,31 @@
 # This file is distributed under the same license as the kirigami-addons package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-10 00:39+0000\n"
-"PO-Revision-Date: 2024-12-13 19:10+0530\n"
-"Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
+"PO-Revision-Date: 2024-12-14 01:48+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "भवतः नामानि"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "भवतः ईमेलपत्राणि"
 
 #: components/AbstractMaximizeComponent.qml:130
 #, kde-format
@@ -56,13 +58,13 @@ msgstr "दक्षिणतः परिभ्रमन्तु"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
-msgstr ""
+msgstr "शीर्षकं दर्शयतु"
 
 #: components/AlbumMaximizeComponent.qml:159
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
-msgstr ""
+msgstr "शीर्षकं गोपयन्तु"
 
 #: components/AlbumMaximizeComponent.qml:165
 #, kde-format
@@ -94,49 +96,49 @@ msgstr "अवाहरन"
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
-msgstr ""
+msgstr "सफलता"
 
 #: components/MessageDialog.qml:85 components/MessageDialog.qml:91
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
-msgstr ""
+msgstr "चेतवानी"
 
 #: components/MessageDialog.qml:87
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
-msgstr ""
+msgstr "त्रुटि"
 
 #: components/MessageDialog.qml:89
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
-msgstr ""
+msgstr "सूचना"
 
 #: components/MessageDialog.qml:206
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
-msgstr ""
+msgstr "पुनः न दर्शयतु"
 
 #: components/VideoMaximizeDelegate.qml:267
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
-msgstr ""
+msgstr "मात्रा"
 
 #: dateandtime/DatePopup.qml:87 dateandtime/TimePopup.qml:46
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "निरसयतु"
 
 #: dateandtime/DatePopup.qml:99 dateandtime/TimePopup.qml:57
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
-msgstr ""
+msgstr "विचि"
 
 #: dateandtime/private/DatePicker.qml:275
 #, kde-format
@@ -157,19 +159,19 @@ msgstr "वर्ष"
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Previous"
-msgstr ""
+msgstr "Go Previous इति"
 
 #: dateandtime/private/DatePicker.qml:379
 #, kde-format
 msgctxt "@action:button"
 msgid "Jump to today"
-msgstr ""
+msgstr "अद्यपर्यन्तं कूदन्तु"
 
 #: dateandtime/private/DatePicker.qml:386
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Next"
-msgstr ""
+msgstr "अग्रिमम् गच्छतु"
 
 #: dateandtime/TimePicker.qml:97
 #, kde-format
@@ -180,7 +182,7 @@ msgstr "घण्टानः"
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
-msgstr ""
+msgstr ": १."
 
 #: dateandtime/TimePicker.qml:134
 #, kde-format
@@ -191,7 +193,7 @@ msgstr "पन्चनिमेषः"
 #, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2) २."
 
 #: formcard/aboutcomponent.cpp:29
 #, kde-format
@@ -202,7 +204,7 @@ msgstr "KDE Frameworks इति"
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
-msgstr ""
+msgstr "Qt विस्तारयितुं KDE समुदायेन निर्मितानाम् पुस्तकालयानाम् संग्रहः ।"
 
 #: formcard/aboutcomponent.cpp:35
 #, kde-format
@@ -213,7 +215,7 @@ msgstr "Qt"
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr ""
+msgstr "पार-मञ्च-अनुप्रयोग-विकास-रूपरेखा।"
 
 #: formcard/aboutcomponent.cpp:37
 #, kde-format
@@ -224,7 +226,7 @@ msgstr "%1 इत्यस्य उपयोगेन %2 इत्यस्य 
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr ""
+msgstr "अन्तर्निहित मञ्च।"
 
 #: formcard/AboutKDEPage.qml:24
 #: statefulapplication/abstractkirigamiapplication.cpp:174
@@ -397,8 +399,8 @@ msgstr "वर्णनम्‌"
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "अनुज्ञापत्रम्"
+msgstr[1] "अनुज्ञापत्राणि"
 
 #: formcard/AboutPage.qml:277
 #, kde-format
@@ -414,13 +416,13 @@ msgstr "प्रयुक्ताः पुस्तकालयाः"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "क्लिप्बोर्ड् प्रति प्रतिलिख्यताम्"
 
 #: formcard/AboutPage.qml:291
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
-msgstr ""
+msgstr "सिस्टम् सूचना क्लिप्बोर्ड् प्रति प्रतिलिखिता।"
 
 #: formcard/AboutPage.qml:304
 #, kde-format
@@ -451,104 +453,104 @@ msgstr "%1 इत्यस्मै ईमेल प्रेषयन्तु"
 #, kde-format
 msgctxt "@action:button"
 msgid "Color"
-msgstr ""
+msgstr "वर्ण"
 
 #: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:43
 #, kde-format
 msgctxt "Accessible description"
 msgid "Current color \"%1\""
-msgstr ""
+msgstr "वर्तमानवर्णः \"%1\" ।"
 
 #: formcard/FormDateTimeDelegate.qml:195
 #, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
 msgid "Today"
-msgstr ""
+msgstr "अद्य"
 
 #: formcard/FormDateTimeDelegate.qml:222 formcard/FormDateTimeDelegate.qml:359
 #, kde-format
 msgctxt "Date is not set"
 msgid "Not set"
-msgstr ""
+msgstr "न सेट्"
 
 #: formcard/FormPasswordFieldDelegate.qml:230
 #: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:253
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
-msgstr ""
+msgstr "%1/%2"
 
 #: settings/CategorizedSettings.qml:45 settings/ConfigurationView.qml:81
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings"
-msgstr ""
+msgstr "सेटिंग्स्"
 
 #: settings/CategorizedSettings.qml:45
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings — %1"
-msgstr ""
+msgstr "सेटिंग्स् — %1"
 
 #: settings/CategorizedSettings.qml:99
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Go back"
-msgstr ""
+msgstr "पुनः गच्छतु"
 
 #: settings/private/ConfigMobilePage.qml:26
 #, kde-format
 msgctxt "@title"
 msgid "Settings"
-msgstr ""
+msgstr "सेटिंग्स्"
 
 #: settings/private/ConfigMobilePage.qml:97
 #, kde-format
 msgctxt "@title:group"
 msgid "Settings"
-msgstr ""
+msgstr "सेटिंग्स्"
 
 #: settings/private/SonnetConfigPage.qml:41
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Enable automatic spell checking"
-msgstr ""
+msgstr "स्वचालितं वर्तनीपरीक्षणं सक्षमं कुर्वन्तु"
 
 #: settings/private/SonnetConfigPage.qml:55
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore uppercase words"
-msgstr ""
+msgstr "उदात्तशब्दानां अवहेलनां कुर्वन्तु"
 
 #: settings/private/SonnetConfigPage.qml:69
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore hyphenated words"
-msgstr ""
+msgstr "हाइफनयुक्तशब्दानां अवहेलनां कुर्वन्तु"
 
 #: settings/private/SonnetConfigPage.qml:83
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Detect language automatically"
-msgstr ""
+msgstr "भाषां स्वयमेव ज्ञापयन्तु"
 
 #: settings/private/SonnetConfigPage.qml:96
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Selected default language:"
-msgstr ""
+msgstr "चयनिता पूर्वनिर्धारितभाषा : १."
 
 #: settings/private/SonnetConfigPage.qml:97
 #, kde-format
 msgctxt "No selected language"
 msgid "None"
-msgstr ""
+msgstr "न कश्चित्"
 
 #: settings/private/SonnetConfigPage.qml:117
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Additional Spell Checking Languages"
-msgstr ""
+msgstr "अतिरिक्त वर्तनीपरीक्षणभाषा"
 
 #: settings/private/SonnetConfigPage.qml:118
 #, kde-format
@@ -562,13 +564,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Open Personal Dictionary"
-msgstr ""
+msgstr "व्यक्तिगत शब्दकोशं उद्घाटयतु"
 
 #: settings/private/SonnetConfigPage.qml:143
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking languages"
-msgstr ""
+msgstr "वर्तनीपरीक्षा भाषाः"
 
 #: settings/private/SonnetConfigPage.qml:155
 #, kde-format
@@ -579,31 +581,31 @@ msgstr "पूर्वनिर्धारित भाषा"
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking dictionary"
-msgstr ""
+msgstr "वर्तनीपरीक्षा शब्दकोशः"
 
 #: settings/private/SonnetConfigPage.qml:174
 #, kde-format
 msgctxt "Placeholder message"
 msgid "Add a new word to your personal dictionary…"
-msgstr ""
+msgstr "स्वस्य व्यक्तिगतशब्दकोशे नूतनं शब्दं योजयन्तु…"
 
 #: settings/private/SonnetConfigPage.qml:177
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Word"
-msgstr ""
+msgstr "शब्दं योजयतु"
 
 #: settings/private/SonnetConfigPage.qml:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete word"
-msgstr ""
+msgstr "शब्दं विलोपयतु"
 
 #: settings/SpellcheckingConfigurationModule.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Spell Checking"
-msgstr ""
+msgstr "वर्तनीपरीक्षा"
 
 #: statefulapplication/abstractkirigamiapplication.cpp:145
 #, kde-format
@@ -614,7 +616,7 @@ msgstr "Command Bar उद्घाटयन्तु"
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Reserved Shortcut"
-msgstr ""
+msgstr "आरक्षित शॉर्टकट"
 
 #: statefulapplication/private/keysequencehelper.cpp:119
 #, kde-format
@@ -624,6 +626,8 @@ msgid ""
 "shortcut.\n"
 "Please choose another one."
 msgstr ""
+"F12 कीलम् विण्डोज इत्यत्र आरक्षितम् अस्ति, अतः वैश्विकशॉर्टकट् कृते उपयोक्तुं न शक्यते ।\n"
+"अन्यं चिनोतु ।"
 
 #: statefulapplication/private/keysequencehelper.cpp:143
 #, kde-format
@@ -631,32 +635,32 @@ msgctxt ""
 "@title:dialog This happen when a global shortcut is already defined with the "
 "same shortcut"
 msgid "Global Shortcut Shadowing"
-msgstr ""
+msgstr "वैश्विक शॉर्टकट छायाकरण"
 
 #: statefulapplication/private/keysequencehelper.cpp:146
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination is shadowed by following global actions:\n"
-msgstr ""
+msgstr "'%1' कीलसंयोजनं वैश्विकक्रियाणां अनुसरणं कृत्वा छायाकृतम् अस्ति:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:148
 #: statefulapplication/private/keysequencehelper.cpp:154
 #, kde-format
 msgctxt "@info"
 msgid "Action '%1' in context '%2'\n"
-msgstr ""
+msgstr "'%2' सन्दर्भे '%1' क्रिया ।\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:152
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination shadows following global actions:\n"
-msgstr ""
+msgstr "'%1' कीलसंयोजनं वैश्विकक्रियाणां अनुसरणं करोति:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:193
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Conflict with Standard Application Shortcut"
-msgstr ""
+msgstr "मानक-अनुप्रयोग-शॉर्टकट्-सहितं द्वन्द्वः"
 
 #: statefulapplication/private/keysequencehelper.cpp:195
 #, kde-format
@@ -666,18 +670,20 @@ msgid ""
 "some applications use.\n"
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
+"'%1' कीलसंयोजनं मानकक्रियायाः \"%2\" कृते अपि उपयुज्यते यत् केचन अनुप्रयोगाः उपयुञ्जते ।\n"
+"किं भवान् वास्तवमेव तस्य उपयोगं वैश्विकशॉर्टकट् रूपेण अपि कर्तुम् इच्छति?"
 
 #: statefulapplication/private/KeySequenceItem.qml:129
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
-msgstr ""
+msgstr "निवेशः"
 
 #: statefulapplication/private/KeySequenceItem.qml:130
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
-msgstr ""
+msgstr "न कश्चित्"
 
 #: statefulapplication/private/KeySequenceItem.qml:141
 #, kde-format
@@ -692,63 +698,63 @@ msgstr ""
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
-msgstr ""
+msgstr "स्पष्ट कुञ्जी अनुक्रम"
 
 #: statefulapplication/private/KeySequenceItem.qml:198
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel Key Sequence Recording"
-msgstr ""
+msgstr "कुंजी अनुक्रम अभिलेखनं रद्दं कुर्वन्तु"
 
 #: statefulapplication/private/KQuickCommandBarPage.qml:55
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No results found"
-msgstr ""
+msgstr "न परिणामः प्राप्तः"
 
 #: statefulapplication/private/ShortcutsEditor.qml:18
 #: statefulapplication/StatefulWindow.qml:90
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcuts"
-msgstr ""
+msgstr "शॉर्टकट"
 
 #: statefulapplication/private/ShortcutsEditor.qml:22
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Filter…"
-msgstr ""
+msgstr "फ़िल्टर…"
 
 #: statefulapplication/private/ShortcutsEditor.qml:52
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut: %1"
-msgstr ""
+msgstr "शॉर्टकटः %1"
 
 #: statefulapplication/private/ShortcutsEditor.qml:72
 #, kde-format
 msgctxt "@label"
 msgid "Shortcut:"
-msgstr ""
+msgstr "लघुमार्गः : १."
 
 #: statefulapplication/private/ShortcutsEditor.qml:127
 #: statefulapplication/private/ShortcutsEditor.qml:155
 #, kde-format
 msgctxt "@label"
 msgid "Alternative:"
-msgstr ""
+msgstr "वैकल्पिक:"
 
 #: statefulapplication/private/ShortcutsEditor.qml:193
 #, kde-format
 msgctxt "Placeholder message"
 msgid "No shortcuts found"
-msgstr ""
+msgstr "शॉर्टकट् न प्राप्ताः"
 
 #: statefulapplication/shortcutsmodel.cpp:41
 #, kde-format
 msgctxt "List separator"
 msgid ", "
-msgstr ""
+msgstr ", ९. "
 
 #: statefulapplication/StatefulWindow.qml:100
 #, kde-format
