@@ -33,7 +33,7 @@ FormCard.FormCardPage {
     }
 
     FormCard.FormCard {
-        Layout.topMargin: Kirigami.Units.largeSpacing * 2
+        Layout.topMargin: Kirigami.Units.largeSpacing * 4
 
         FormCard.FormCheckDelegate {
             id: enable
