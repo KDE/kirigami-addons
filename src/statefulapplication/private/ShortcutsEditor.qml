@@ -5,6 +5,7 @@ import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 
+import org.kde.kitemmodels
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCard
 import org.kde.kirigamiaddons.delegates as Delegates
@@ -13,13 +14,14 @@ import org.kde.kirigamiaddons.components as Components
 Kirigami.ScrollablePage {
     id: root
 
-    property alias model: listView.model
+    property alias model: searchFilterProxyModel.sourceModel
 
     title: i18ndc("kirigami-addons6", "@title:window", "Shortcuts")
 
     actions: Kirigami.Action {
         displayComponent: Kirigami.SearchField {
             placeholderText: i18ndc("kirigami-addons6", "@label:textbox", "Filter…")
+            onTextChanged: searchFilterProxyModel.setFilterFixedString(text);
         }
     }
 
@@ -27,6 +29,13 @@ Kirigami.ScrollablePage {
         id: listView
 
         currentIndex: -1
+
+        model: KSortFilterProxyModel {
+            id: searchFilterProxyModel
+
+            filterRoleName: 'actionName'
+            filterCaseSensitivity: Qt.CaseInsensitive
+        }
 
         delegate: Delegates.RoundedItemDelegate {
             id: shortcutDelegate
@@ -39,14 +48,20 @@ Kirigami.ScrollablePage {
 
             text: actionName.replace('&', '')
 
+            Accessible.description: shortcutDisplay
+
             contentItem: RowLayout {
+                spacing: Kirigami.Units.smallSpacing
+
                 QQC2.Label {
                     text: shortcutDelegate.text
                     Layout.fillWidth: true
+                    Accessible.ignored: true
                 }
 
                 QQC2.Label {
                     text: shortcutDelegate.shortcutDisplay
+                    Accessible.ignored: true
                 }
             }
 
