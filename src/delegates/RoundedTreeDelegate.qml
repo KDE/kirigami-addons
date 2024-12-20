@@ -38,6 +38,8 @@ Delegates.RoundedItemDelegate {
         parentDelegate: root
         model: root.ListView.view.model
 
+        z: 2
+
         index: root.index
         kDescendantLevel: root.kDescendantLevel
         kDescendantHasSiblings: root.kDescendantHasSiblings
