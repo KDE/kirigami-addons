@@ -26,6 +26,8 @@ Kirigami.ScrollablePage {
     ListView {
         id: listView
 
+        currentIndex: -1
+
         delegate: Delegates.RoundedItemDelegate {
             id: shortcutDelegate
 
