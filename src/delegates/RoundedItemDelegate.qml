@@ -67,6 +67,8 @@ T.ItemDelegate {
     topPadding: verticalPadding
     bottomPadding: verticalPadding
 
+    hoverEnabled: true
+
     topInset: if (root.index !== undefined && index === 0 && listView.view && listView.view.topMargin === 0) {
         Kirigami.Units.smallSpacing;
     } else {
