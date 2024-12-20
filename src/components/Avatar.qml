@@ -163,6 +163,8 @@ Item {
         }
     }
 
+    readonly property bool __unsuitableForInitials: Components.NameUtils.isStringUnsuitableForInitials(root.name)
+
     Item {
         id: clippedContent
 
@@ -176,7 +178,7 @@ Item {
 
             visible: root.initialsMode === Avatar.InitialsMode.UseInitials &&
                     !root.__showImage &&
-                    !Components.NameUtils.isStringUnsuitableForInitials(root.name) &&
+                    !root.__unsuitableForInitials &&
                     root.width > Kirigami.Units.gridUnit
 
             text: Components.NameUtils.initialsFromString(root.name)
@@ -201,7 +203,7 @@ Item {
 
             visible: !root.__showImage
                 && (root.initialsMode === Avatar.InitialsMode.UseIcon
-                    || Components.NameUtils.isStringUnsuitableForInitials(root.name))
+                    || root.__unsuitableForInitials)
 
             color: root.__textColor
             source: "user"
