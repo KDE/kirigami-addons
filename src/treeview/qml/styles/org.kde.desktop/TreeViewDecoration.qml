@@ -9,6 +9,8 @@ import org.kde.kitemmodels 1.0
 import org.kde.qqc2desktopstyle.private as StylePrivate
 
 RowLayout {
+    id: root
+
     required property int index
     required property int kDescendantLevel
     required property var kDescendantHasSiblings
@@ -38,8 +40,10 @@ RowLayout {
         id: controlRoot
         Layout.preferredWidth: contentItem.pixelMetric("treeviewindentation")
         Layout.fillHeight: true
-        enabled: kDescendantExpandable
-        onClicked: model.toggleChildren(index)
+        enabled: root.kDescendantExpandable
+        onClicked: {
+            root.model.toggleChildren(root.parentDelegate.index)
+        }
         contentItem: StylePrivate.StyleItem {
             id: styleitem
             control: controlRoot
@@ -48,8 +52,8 @@ RowLayout {
             on: kDescendantExpanded
             properties: {
                 "isItem": true,
-                "hasChildren": kDescendantExpandable,
-                "hasSibling": kDescendantHasSiblings[kDescendantHasSiblings.length - 1]
+                "hasChildren": root.kDescendantExpandable,
+                "hasSibling": root.kDescendantHasSiblings[root.kDescendantHasSiblings.length - 1]
             }
         }
         background: null
