@@ -180,6 +180,7 @@ Item {
                     root.width > Kirigami.Units.gridUnit
 
             text: Components.NameUtils.initialsFromString(root.name)
+            textFormat: Text.PlainText
             color: root.color
 
             font {
