@@ -61,3 +61,4 @@ target_link_libraries(%{APPNAMELC} PUBLIC
     %{APPNAMELC}_settingsplugin
 )
 install(TARGETS %{APPNAMELC} ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+ecm_add_android_apk(%{APPNAMELC} ANDROID_DIR ${CMAKE_SOURCE_DIR}/android)
