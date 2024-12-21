@@ -24,6 +24,7 @@ include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMSetupVersion)
 include(ECMFindQmlModule)
 include(ECMQmlModule)
+include(ECMAddAndroidApk)
 
 if (NOT ANDROID)
     include(KDEGitCommitHooks)
