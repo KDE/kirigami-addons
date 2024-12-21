@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-10 00:39+0000\n"
-"PO-Revision-Date: 2024-12-14 01:48+0530\n"
+"POT-Creation-Date: 2024-12-21 00:40+0000\n"
+"PO-Revision-Date: 2024-12-20 21:52+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
@@ -182,7 +182,7 @@ msgstr "घण्टानः"
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
-msgstr ": १."
+msgstr ":"
 
 #: dateandtime/TimePicker.qml:134
 #, kde-format
@@ -193,7 +193,7 @@ msgstr "पन्चनिमेषः"
 #, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
-msgstr "%1 (%2) २."
+msgstr "%1 (%2)"
 
 #: formcard/aboutcomponent.cpp:29
 #, kde-format
@@ -538,7 +538,7 @@ msgstr "भाषां स्वयमेव ज्ञापयन्तु"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Selected default language:"
-msgstr "चयनिता पूर्वनिर्धारितभाषा : १."
+msgstr "चयनिता पूर्वनिर्धारितभाषा :"
 
 #: settings/private/SonnetConfigPage.qml:97
 #, kde-format
@@ -600,6 +600,14 @@ msgstr "शब्दं योजयतु"
 msgctxt "@action:button"
 msgid "Delete word"
 msgstr "शब्दं विलोपयतु"
+
+#: settings/ShortcutsConfigurationModule.qml:23
+#, fuzzy, kde-format
+#| msgctxt "@title:dialog"
+#| msgid "Reserved Shortcut"
+msgctxt "@action:button"
+msgid "Keyboard Shortcuts"
+msgstr "आरक्षित शॉर्टकट"
 
 #: settings/SpellcheckingConfigurationModule.qml:14
 #, kde-format
@@ -712,39 +720,39 @@ msgctxt "@info:placeholder"
 msgid "No results found"
 msgstr "न परिणामः प्राप्तः"
 
-#: statefulapplication/private/ShortcutsEditor.qml:18
+#: statefulapplication/private/ShortcutsEditor.qml:19
 #: statefulapplication/StatefulWindow.qml:90
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcuts"
 msgstr "शॉर्टकट"
 
-#: statefulapplication/private/ShortcutsEditor.qml:22
+#: statefulapplication/private/ShortcutsEditor.qml:23
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Filter…"
 msgstr "फ़िल्टर…"
 
-#: statefulapplication/private/ShortcutsEditor.qml:52
+#: statefulapplication/private/ShortcutsEditor.qml:69
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut: %1"
 msgstr "शॉर्टकटः %1"
 
-#: statefulapplication/private/ShortcutsEditor.qml:72
+#: statefulapplication/private/ShortcutsEditor.qml:89
 #, kde-format
 msgctxt "@label"
 msgid "Shortcut:"
-msgstr "लघुमार्गः : १."
+msgstr "लघुमार्गः :"
 
-#: statefulapplication/private/ShortcutsEditor.qml:127
-#: statefulapplication/private/ShortcutsEditor.qml:155
+#: statefulapplication/private/ShortcutsEditor.qml:144
+#: statefulapplication/private/ShortcutsEditor.qml:172
 #, kde-format
 msgctxt "@label"
 msgid "Alternative:"
 msgstr "वैकल्पिक:"
 
-#: statefulapplication/private/ShortcutsEditor.qml:193
+#: statefulapplication/private/ShortcutsEditor.qml:210
 #, kde-format
 msgctxt "Placeholder message"
 msgid "No shortcuts found"

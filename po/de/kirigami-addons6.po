@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-10 00:39+0000\n"
+"POT-Creation-Date: 2024-12-21 00:40+0000\n"
 "PO-Revision-Date: 2024-09-29 18:27+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -618,6 +618,14 @@ msgctxt "@action:button"
 msgid "Delete word"
 msgstr "Wort löschen"
 
+#: settings/ShortcutsConfigurationModule.qml:23
+#, fuzzy, kde-format
+#| msgctxt "@title:dialog"
+#| msgid "Reserved Shortcut"
+msgctxt "@action:button"
+msgid "Keyboard Shortcuts"
+msgstr "Reservierter Kurzbefehl"
+
 #: settings/SpellcheckingConfigurationModule.qml:14
 #, kde-format
 msgctxt "@action:button"
@@ -736,39 +744,39 @@ msgctxt "@info:placeholder"
 msgid "No results found"
 msgstr "Keine Ergebnisse gefunden"
 
-#: statefulapplication/private/ShortcutsEditor.qml:18
+#: statefulapplication/private/ShortcutsEditor.qml:19
 #: statefulapplication/StatefulWindow.qml:90
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcuts"
 msgstr "Kurzbefehle"
 
-#: statefulapplication/private/ShortcutsEditor.qml:22
+#: statefulapplication/private/ShortcutsEditor.qml:23
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Filter…"
 msgstr "Filter …"
 
-#: statefulapplication/private/ShortcutsEditor.qml:52
+#: statefulapplication/private/ShortcutsEditor.qml:69
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut: %1"
 msgstr "Kurzbefehl: %1"
 
-#: statefulapplication/private/ShortcutsEditor.qml:72
+#: statefulapplication/private/ShortcutsEditor.qml:89
 #, kde-format
 msgctxt "@label"
 msgid "Shortcut:"
 msgstr "Kurzbefehl:"
 
-#: statefulapplication/private/ShortcutsEditor.qml:127
-#: statefulapplication/private/ShortcutsEditor.qml:155
+#: statefulapplication/private/ShortcutsEditor.qml:144
+#: statefulapplication/private/ShortcutsEditor.qml:172
 #, kde-format
 msgctxt "@label"
 msgid "Alternative:"
 msgstr "Alternative:"
 
-#: statefulapplication/private/ShortcutsEditor.qml:193
+#: statefulapplication/private/ShortcutsEditor.qml:210
 #, kde-format
 msgctxt "Placeholder message"
 msgid "No shortcuts found"

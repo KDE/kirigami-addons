@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-10 00:39+0000\n"
+"POT-Creation-Date: 2024-12-21 00:40+0000\n"
 "PO-Revision-Date: 2024-11-26 21:39+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -595,6 +595,14 @@ msgctxt "@action:button"
 msgid "Delete word"
 msgstr "刪除單詞"
 
+#: settings/ShortcutsConfigurationModule.qml:23
+#, fuzzy, kde-format
+#| msgctxt "@title:dialog"
+#| msgid "Reserved Shortcut"
+msgctxt "@action:button"
+msgid "Keyboard Shortcuts"
+msgstr "保留的捷徑"
+
 #: settings/SpellcheckingConfigurationModule.qml:14
 #, kde-format
 msgctxt "@action:button"
@@ -706,39 +714,39 @@ msgctxt "@info:placeholder"
 msgid "No results found"
 msgstr "找不到結果"
 
-#: statefulapplication/private/ShortcutsEditor.qml:18
+#: statefulapplication/private/ShortcutsEditor.qml:19
 #: statefulapplication/StatefulWindow.qml:90
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcuts"
 msgstr "快捷鍵"
 
-#: statefulapplication/private/ShortcutsEditor.qml:22
+#: statefulapplication/private/ShortcutsEditor.qml:23
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Filter…"
 msgstr "過濾…"
 
-#: statefulapplication/private/ShortcutsEditor.qml:52
+#: statefulapplication/private/ShortcutsEditor.qml:69
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut: %1"
 msgstr "快捷鍵：%1"
 
-#: statefulapplication/private/ShortcutsEditor.qml:72
+#: statefulapplication/private/ShortcutsEditor.qml:89
 #, kde-format
 msgctxt "@label"
 msgid "Shortcut:"
 msgstr "快捷鍵："
 
-#: statefulapplication/private/ShortcutsEditor.qml:127
-#: statefulapplication/private/ShortcutsEditor.qml:155
+#: statefulapplication/private/ShortcutsEditor.qml:144
+#: statefulapplication/private/ShortcutsEditor.qml:172
 #, kde-format
 msgctxt "@label"
 msgid "Alternative:"
 msgstr "替代："
 
-#: statefulapplication/private/ShortcutsEditor.qml:193
+#: statefulapplication/private/ShortcutsEditor.qml:210
 #, kde-format
 msgctxt "Placeholder message"
 msgid "No shortcuts found"
