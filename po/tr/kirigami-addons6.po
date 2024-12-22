@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-21 00:40+0000\n"
-"PO-Revision-Date: 2024-12-11 22:25+0300\n"
+"PO-Revision-Date: 2024-12-21 14:09+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -612,12 +612,10 @@ msgid "Delete word"
 msgstr "Sözcüğü Sil"
 
 #: settings/ShortcutsConfigurationModule.qml:23
-#, fuzzy, kde-format
-#| msgctxt "@title:dialog"
-#| msgid "Reserved Shortcut"
+#, kde-format
 msgctxt "@action:button"
 msgid "Keyboard Shortcuts"
-msgstr "Ayrılmış Kısayol"
+msgstr "Klavye Kısayolları"
 
 #: settings/SpellcheckingConfigurationModule.qml:14
 #, kde-format
