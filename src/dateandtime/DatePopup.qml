@@ -85,7 +85,7 @@ QQC2.Dialog {
 
         QQC2.Button {
             text: i18ndc("kirigami-addons6", "@action:button", "Cancel")
-            icon.name: "dialog-cancel"
+            icon.name: "dialog-cancel-symbolic"
             onClicked: {
                 root.cancelled()
                 root.rejected()
@@ -97,7 +97,7 @@ QQC2.Dialog {
 
         QQC2.Button {
             text: i18ndc("kirigami-addons6", "@action:button", "Select")
-            icon.name: "dialog-ok-apply"
+            icon.name: "dialog-ok-apply-symbolic"
 
             onClicked: {
                 root.value = datePicker.selectedDate;
