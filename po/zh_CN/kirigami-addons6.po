@@ -598,12 +598,10 @@ msgid "Delete word"
 msgstr "删除单词"
 
 #: settings/ShortcutsConfigurationModule.qml:23
-#, fuzzy, kde-format
-#| msgctxt "@title:dialog"
-#| msgid "Reserved Shortcut"
+#, kde-format
 msgctxt "@action:button"
 msgid "Keyboard Shortcuts"
-msgstr "系统保留的快捷方式"
+msgstr "键盘快捷键"
 
 #: settings/SpellcheckingConfigurationModule.qml:14
 #, kde-format
