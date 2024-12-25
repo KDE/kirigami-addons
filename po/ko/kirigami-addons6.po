@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-21 00:40+0000\n"
-"PO-Revision-Date: 2024-12-10 00:53+0100\n"
+"PO-Revision-Date: 2024-12-24 16:59+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -600,12 +600,10 @@ msgid "Delete word"
 msgstr "단어 삭제"
 
 #: settings/ShortcutsConfigurationModule.qml:23
-#, fuzzy, kde-format
-#| msgctxt "@title:dialog"
-#| msgid "Reserved Shortcut"
+#, kde-format
 msgctxt "@action:button"
 msgid "Keyboard Shortcuts"
-msgstr "예약된 단축키"
+msgstr "키보드 단축키"
 
 #: settings/SpellcheckingConfigurationModule.qml:14
 #, kde-format
