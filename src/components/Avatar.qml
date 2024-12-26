@@ -217,6 +217,7 @@ Item {
             visible: root.__showImage
 
             fillMode: Image.PreserveAspectCrop
+            asynchronous: true
             mipmap: true
             sourceSize {
                 width: root.__diameter * root.Screen.devicePixelRatio
