@@ -75,35 +75,17 @@ Item {
     /**
      * Whether the card's width is being restricted.
      */
-    readonly property bool cardWidthRestricted: root.width > root.maximumWidth
-
-    Kirigami.Theme.colorSet: Kirigami.Theme.View
-    Kirigami.Theme.inherit: false
+    property bool cardWidthRestricted: root.width > root.maximumWidth
 
     Layout.fillWidth: true
 
     implicitHeight: topPadding + bottomPadding + internalColumn.implicitHeight + rectangle.borderWidth * 2
 
-    Kirigami.ShadowedRectangle {
+    FormCardBackground {
         id: rectangle
-
-        readonly property real borderWidth: 1
-        readonly property bool isDarkColor: {
-            const temp = Qt.darker(Kirigami.Theme.backgroundColor, 1);
-            return temp.a > 0 && getDarkness(Kirigami.Theme.backgroundColor) >= 0.4;
-        }
 
         // only have card radius if it isn't filling the entire width
         radius: root.cardWidthRestricted ? Kirigami.Units.cornerRadius : 0
-        color: Kirigami.Theme.backgroundColor
-
-        function getDarkness(background: color): real {
-            // Thanks to Gojir4 from the Qt forum
-            // https://forum.qt.io/topic/106362/best-way-to-set-text-color-for-maximum-contrast-on-background-color/
-            var temp = Qt.darker(background, 1);
-            var a = 1 - ( 0.299 * temp.r + 0.587 * temp.g + 0.114 * temp.b);
-            return a;
-        }
 
         anchors {
             top: parent.top
@@ -113,16 +95,6 @@ Item {
 
             leftMargin: root.cardWidthRestricted ? Math.round((root.width - root.maximumWidth) / 2) : -1
             rightMargin: root.cardWidthRestricted ? Math.round((root.width - root.maximumWidth) / 2) : -1
-        }
-
-        border {
-            color: isDarkColor ? Qt.darker(Kirigami.Theme.backgroundColor, 1.2) : Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.15)
-            width: borderWidth
-        }
-
-        shadow {
-            size: isDarkColor ? Kirigami.Units.smallSpacing : Kirigami.Units.largeSpacing
-            color: Qt.alpha(Kirigami.Theme.textColor, 0.10)
         }
 
         ColumnLayout {

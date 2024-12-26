@@ -41,6 +41,7 @@ ecm_target_qml_sources(formcardplugin SOURCES
     FormDateTimeDelegate.qml
     FormGridContainer.qml
     FormCardDialog.qml
+    FormCardBackground.qml
 )
 
 if(ANDROID)
