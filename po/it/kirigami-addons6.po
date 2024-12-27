@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-21 00:40+0000\n"
-"PO-Revision-Date: 2024-11-12 15:45+0100\n"
+"PO-Revision-Date: 2024-12-26 19:07+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -609,12 +609,10 @@ msgid "Delete word"
 msgstr "Elimina la parola"
 
 #: settings/ShortcutsConfigurationModule.qml:23
-#, fuzzy, kde-format
-#| msgctxt "@title:dialog"
-#| msgid "Reserved Shortcut"
+#, kde-format
 msgctxt "@action:button"
 msgid "Keyboard Shortcuts"
-msgstr "Scorciatoia riservata"
+msgstr "Scorciatoie da tastiera"
 
 #: settings/SpellcheckingConfigurationModule.qml:14
 #, kde-format
