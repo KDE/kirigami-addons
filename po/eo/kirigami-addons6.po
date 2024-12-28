@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-21 00:40+0000\n"
-"PO-Revision-Date: 2024-07-13 10:51+0200\n"
+"PO-Revision-Date: 2024-12-27 17:40+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -396,11 +396,9 @@ msgid "Copyright"
 msgstr "Kopirajto"
 
 #: formcard/AboutPage.qml:142
-#, fuzzy, kde-format
-#| msgctxt "@action:intoolbar"
-#| msgid "Hide caption"
+#, kde-format
 msgid "Description"
-msgstr "Kaŝi bildotekston"
+msgstr "Priskribo"
 
 #: formcard/AboutPage.qml:155
 #, kde-format
@@ -610,12 +608,10 @@ msgid "Delete word"
 msgstr "Forigi vorton"
 
 #: settings/ShortcutsConfigurationModule.qml:23
-#, fuzzy, kde-format
-#| msgctxt "@title:dialog"
-#| msgid "Reserved Shortcut"
+#, kde-format
 msgctxt "@action:button"
 msgid "Keyboard Shortcuts"
-msgstr "Rezervita Ŝparvojo"
+msgstr "Klavaraj Ŝparvojoj"
 
 #: settings/SpellcheckingConfigurationModule.qml:14
 #, kde-format
