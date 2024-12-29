@@ -103,7 +103,7 @@ QQC2.Drawer {
         Kirigami.ShadowedRectangle {
             id: headerBackground
 
-            visible: headerContentItem
+            visible: headerContentItem && headerContentItem.enabled
             height: header.implicitHeight
 
             Kirigami.Theme.colorSet: Kirigami.Theme.Window
@@ -144,7 +144,7 @@ QQC2.Drawer {
 
         Handle {
             // drag indecator displayed when there is no headerContentItem
-            visible: !headerContentItem
+            visible: !(headerContentItem && headerContentItem.enabled)
             Layout.topMargin: Kirigami.Units.largeSpacing
             Layout.bottomMargin: Kirigami.Units.largeSpacing
         }

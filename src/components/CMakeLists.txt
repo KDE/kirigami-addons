@@ -63,6 +63,11 @@ ecm_target_qml_sources(componentsplugin SOURCES
     SearchPopupField.qml
     SegmentedButton.qml
     RadioSelector.qml
+    ContextMenu.qml
+)
+
+ecm_target_qml_sources(componentsplugin PRIVATE PATH private SOURCES
+    private/ContextMenuPage.qml
 )
 
 target_link_libraries(componentsplugin PRIVATE

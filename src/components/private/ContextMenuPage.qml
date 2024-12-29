@@ -1,0 +1,70 @@
+// SPDX-FileCopyrightText: 2024 Joshua Goins <josh@redstrate.com>
+// SPDX-FileCopyrightText: 2024 Carl Schwan <carl@carlschwan.eu>
+// SPDX-License-Identifier: LGPL-2.0-or-later
+
+pragma ComponentBehavior: Bound
+
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Controls as T
+import QtQuick.Layouts
+import Qt.labs.qmlmodels
+
+import org.kde.kirigami as Kirigami
+import org.kde.kirigamiaddons.components as KirigamiComponents
+import org.kde.kirigamiaddons.formcard as FormCard
+
+QQC2.ScrollView {
+    id: root
+
+    required property list<T.Action> actions
+    required property T.StackView stackView
+    property string title
+
+    Layout.fillWidth: true
+
+    ColumnLayout {
+        width: root.availableWidth
+        spacing: 0
+
+        Repeater {
+            model: root.actions
+
+            DelegateChooser {
+                role: "separator"
+
+                DelegateChoice {
+                    roleValue: true
+
+                    FormCard.FormDelegateSeparator {
+                        required property T.Action modelData
+
+                        visible: modelData.visible === undefined || modelData.visible
+                    }
+                }
+
+                DelegateChoice {
+                    FormCard.FormButtonDelegate {
+                        required property T.Action modelData
+
+                        action: modelData
+                        visible: modelData.visible === undefined || modelData.visible
+
+                        onClicked: {
+                            if (modelData instanceof Kirigami.Action && modelData.children.length > 0) {
+                                root.stackView.push(Qt.resolvedUrl('./ContextMenuPage.qml'), {
+                                    stackView: root.stackView,
+                                    actions: modelData.children,
+                                    title: modelData.text,
+                                });
+                                return;
+                            }
+                            drawer.close();
+                            modelData.trigger();
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
