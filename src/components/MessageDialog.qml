@@ -51,6 +51,10 @@ T.Dialog {
      */
     property string dontShowAgainName: ''
 
+    function standardButton(button) {
+        return dialogButtonBox.standardButton(button);
+    }
+
     default property alias mainContent: mainLayout.data
 
     property string iconName: switch (root.dialogType) {
@@ -165,8 +169,8 @@ T.Dialog {
     contentItem: GridLayout {
         id: gridLayout
 
-        columns: icon.visible && root.width > Kirigami.Units.gridUnit * 18 ? 2 : 1
-        rowSpacing: Kirigami.Units.largeSpacing
+        columns: !icon.visible || root._mobileLayout ? 1 : 2
+        rowSpacing: 0
 
         Kirigami.Icon {
             id: icon
@@ -190,30 +194,50 @@ T.Dialog {
                 visible: root.title
                 elide: QQC2.Label.ElideRight
                 wrapMode: Text.WordWrap
+                horizontalAlignment: gridLayout.columns === 2 ? Qt.AlignLeft : Qt.AlignHCenter
+
                 Layout.fillWidth: true
             }
         }
     }
 
-    footer: RowLayout {
-        spacing: Kirigami.Units.largeSpacing
+    readonly property bool _mobileLayout: {
+        if (root.width < Kirigami.Units.gridUnit * 20) {
+            return true;
+        }
+        let totalImplicitWidth = checkbox.implicitWidth + gridLayoutFooter.columnSpacing;
+        for (let i = 0; i < repeater.count; i++) {
+            totalImplicitWidth += repeater.itemAt(i).implicitWidth + gridLayoutFooter.columnSpacing
+        }
+
+        return totalImplicitWidth > footer.width;
+    }
+
+    footer: GridLayout {
+        id: gridLayoutFooter
+
+        columns: root._mobileLayout ? 1 : 1 + repeater.count + 1
+
+        rowSpacing: Kirigami.Units.mediumSpacing
+        columnSpacing: Kirigami.Units.mediumSpacing
 
         FormCard.FormCheckDelegate {
             id: checkbox
 
             visible: dontShowAgainName.length > 0
-
             text: i18ndc("kirigami-addons6", "@label:checkbox", "Do not show again")
             background: null
 
             Layout.fillWidth: true
         }
 
-        QQC2.DialogButtonBox {
-            leftPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
-            rightPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
-            bottomPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
-            topPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+        Repeater {
+            id: repeater
+            model: dialogButtonBox.contentModel
+        }
+
+        T.DialogButtonBox {
+            id: dialogButtonBox
 
             standardButtons: root.standardButtons
 
@@ -223,7 +247,18 @@ T.Dialog {
             onHelpRequested: root.helpRequested();
             onRejected: root.rejected();
 
-            Layout.fillWidth: true
+            implicitWidth: 0
+            implicitHeight: 0
+
+            contentItem: Item {}
+            delegate: QQC2.Button {
+                Kirigami.MnemonicData.controlType: Kirigami.MnemonicData.DialogButton
+
+                Layout.fillWidth: root._mobileLayout
+                Layout.leftMargin: root._mobileLayout ? Kirigami.Units.largeSpacing : 0
+                Layout.rightMargin: root._mobileLayout ? Kirigami.Units.largeSpacing : 0
+                Layout.bottomMargin: root._mobileLayout ? 0 : 2
+            }
         }
     }
 
