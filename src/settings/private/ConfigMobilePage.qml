@@ -28,12 +28,14 @@ FormCard.FormCardPage {
     Connections {
         target: window.pageStack.layers
 
-        onBusyChanged: if (!window.pageStack.layers.busy && !initDone) {
-            const module = getModuleByName(defaultModule);
-            if (module) {
-                window.pageStack.layers.push(pageForModule(module));
+        function onBusyChanged(): void {
+            if (!window.pageStack.layers.busy && !initDone) {
+                const module = getModuleByName(defaultModule);
+                if (module) {
+                    window.pageStack.layers.push(pageForModule(module));
+                }
+                initDone = true;
             }
-            initDone = true;
         }
     }
 
