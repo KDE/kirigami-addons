@@ -68,6 +68,8 @@ ecm_target_qml_sources(componentsplugin SOURCES
 
 ecm_target_qml_sources(componentsplugin PRIVATE PATH private SOURCES
     private/ContextMenuPage.qml
+    private/ActionsMenu.qml
+    private/ActionMenuItem.qml
 )
 
 target_link_libraries(componentsplugin PRIVATE

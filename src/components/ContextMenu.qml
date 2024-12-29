@@ -44,36 +44,10 @@ Item {
         id: desktopMenu
         active: !Kirigami.Settings.isMobile
 
-        sourceComponent: QQC2.Menu {
+        sourceComponent: P.ActionsMenu {
+            actions: root.actions
+            submenuComponent: P.ActionsMenu { }
             onClosed: root.closed()
-
-            Repeater {
-                model: root.actions
-
-                DelegateChooser {
-                    role: "separator"
-
-                    DelegateChoice {
-                        roleValue: true
-
-                        QQC2.MenuSeparator {
-                            required property T.Action modelData
-
-                            visible: modelData.visible === undefined || modelData.visible
-                        }
-                    }
-
-                    DelegateChoice {
-                        QQC2.MenuItem {
-                            required property T.Action modelData
-                            action: modelData
-                            visible: modelData.visible === undefined || modelData.visible
-
-                            onTriggered: modelData.trigger()
-                        }
-                    }
-                }
-            }
         }
     }
 
