@@ -205,6 +205,9 @@ T.Dialog {
         if (root.width < Kirigami.Units.gridUnit * 20) {
             return true;
         }
+        if (!footer) {
+            return false;
+        }
         let totalImplicitWidth = checkbox.implicitWidth + gridLayoutFooter.columnSpacing;
         for (let i = 0; i < repeater.count; i++) {
             totalImplicitWidth += repeater.itemAt(i).implicitWidth + gridLayoutFooter.columnSpacing
