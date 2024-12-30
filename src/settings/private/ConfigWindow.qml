@@ -114,9 +114,9 @@ Kirigami.ApplicationWindow {
                         required property int index
                         required property ConfigurationModule modelData
 
-                        text: modelData.text
-                        icon.name: modelData.icon.name
-                        icon.source: modelData.icon.source
+                        text: modelData?.text
+                        icon.name: modelData?.icon.name
+                        icon.source: modelData?.icon.source
                         checked: ListView.view.currentIndex === settingDelegate.index
 
                         onClicked: {
