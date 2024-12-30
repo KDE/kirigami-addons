@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-21 00:40+0000\n"
+"POT-Creation-Date: 2024-12-30 00:40+0000\n"
 "PO-Revision-Date: 2024-11-24 18:24+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -85,36 +85,42 @@ msgctxt "@action:button"
 msgid "Close"
 msgstr "Stäng"
 
+#: components/ContextMenu.qml:72
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Back"
+msgstr ""
+
 #: components/DownloadAction.qml:37
 #, kde-format
 msgid "Download"
 msgstr "Ladda ner"
 
-#: components/MessageDialog.qml:83
+#: components/MessageDialog.qml:87
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
 msgstr "Lyckades"
 
-#: components/MessageDialog.qml:85 components/MessageDialog.qml:91
+#: components/MessageDialog.qml:89 components/MessageDialog.qml:95
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
 msgstr "Varning"
 
-#: components/MessageDialog.qml:87
+#: components/MessageDialog.qml:91
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
 msgstr "Fel"
 
-#: components/MessageDialog.qml:89
+#: components/MessageDialog.qml:93
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
 msgstr "Information"
 
-#: components/MessageDialog.qml:206
+#: components/MessageDialog.qml:231
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"

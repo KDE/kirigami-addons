@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-21 00:40+0000\n"
+"POT-Creation-Date: 2024-12-30 00:40+0000\n"
 "PO-Revision-Date: 2024-12-21 10:02+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -86,36 +86,42 @@ msgctxt "@action:button"
 msgid "Close"
 msgstr "Закрити"
 
+#: components/ContextMenu.qml:72
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Back"
+msgstr ""
+
 #: components/DownloadAction.qml:37
 #, kde-format
 msgid "Download"
 msgstr "Отримати"
 
-#: components/MessageDialog.qml:83
+#: components/MessageDialog.qml:87
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
 msgstr "Успіх"
 
-#: components/MessageDialog.qml:85 components/MessageDialog.qml:91
+#: components/MessageDialog.qml:89 components/MessageDialog.qml:95
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
 msgstr "Попередження"
 
-#: components/MessageDialog.qml:87
+#: components/MessageDialog.qml:91
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
 msgstr "Помилка"
 
-#: components/MessageDialog.qml:89
+#: components/MessageDialog.qml:93
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
 msgstr "Інформація"
 
-#: components/MessageDialog.qml:206
+#: components/MessageDialog.qml:231
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
