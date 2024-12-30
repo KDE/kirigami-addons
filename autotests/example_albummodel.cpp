@@ -16,13 +16,13 @@ QUrl ExampleAlbumModel::testImage() const
     return m_testImage;
 }
 
-void ExampleAlbumModel::setTestImage(QUrl image)
+void ExampleAlbumModel::setTestImage(const QUrl &image)
 {
     if (image == m_testImage) {
         return;
     }
     m_testImage = image;
-    testImageChanged();
+    Q_EMIT testImageChanged();
 
     resetModel();
 }
@@ -32,13 +32,13 @@ QUrl ExampleAlbumModel::testVideo() const
     return m_testVideo;
 }
 
-void ExampleAlbumModel::setTestVideo(QUrl video)
+void ExampleAlbumModel::setTestVideo(const QUrl &video)
 {
     if (video == m_testVideo) {
         return;
     }
     m_testVideo = video;
-    testVideoChanged();
+    Q_EMIT testVideoChanged();
 
     resetModel();
 }
@@ -104,7 +104,7 @@ void ExampleAlbumModel::resetModel()
     // Create dummy data using latest image and video sources.
     m_items.append(new ItemObject(this, m_testImage, 200, 100, m_testImage, ItemObject::Type::Image, QStringLiteral("A test image")));
     m_items.append(new ItemObject(this, m_testVideo, 300, 150, m_testImage, ItemObject::Type::Video, QStringLiteral("A test video")));
-    m_items.append(new ItemObject(this, m_testImage, 400, 200, m_testImage, ItemObject::Type::Image, QStringLiteral("")));
+    m_items.append(new ItemObject(this, m_testImage, 400, 200, m_testImage, ItemObject::Type::Image, QString()));
 
     endResetModel();
 }

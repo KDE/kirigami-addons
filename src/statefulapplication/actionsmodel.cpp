@@ -40,12 +40,9 @@ void KCommandBarModel::refresh(const QList<ActionGroup> &actionGroups)
     QList<Item> temp_rows;
     std::unordered_set<QAction *> uniqueActions;
     temp_rows.reserve(totalActions);
-    int actionGroupIdx = 0;
     for (const auto &ag : actionGroups) {
         const auto &agActions = ag.actions;
         fillRows(temp_rows, ag.name, agActions, uniqueActions);
-
-        actionGroupIdx++;
     }
 
     /**

@@ -91,7 +91,7 @@ void ShortcutsModel::refresh(const QList<KirigamiActionCollection *> &actionColl
     endResetModel();
 }
 
-QList<QKeySequence> ShortcutsModel::updateShortcut(int row, int shortcutIndex, QKeySequence keySequence)
+QList<QKeySequence> ShortcutsModel::updateShortcut(int row, int shortcutIndex, const QKeySequence &keySequence)
 {
     Q_ASSERT(row >= 0 && row < rowCount());
 

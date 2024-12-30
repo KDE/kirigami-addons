@@ -37,7 +37,7 @@ public:
     QHash<int, QByteArray> roleNames() const override;
 
     void refresh(const QList<KirigamiActionCollection*> &actionCollections);
-    Q_INVOKABLE QList<QKeySequence> updateShortcut(int index, int shortcutIndex, QKeySequence keySequence);
+    Q_INVOKABLE QList<QKeySequence> updateShortcut(int index, int shortcutIndex, const QKeySequence &keySequence);
     Q_INVOKABLE QList<QKeySequence> reset(int index);
     Q_INVOKABLE void save();
     Q_INVOKABLE void resetAll();

@@ -57,7 +57,7 @@ public:
     QDateTime maximumDate() const;
     void setMaximumDate(const QDateTime &maximumDate);
 
-    Q_INVOKABLE void addDates(bool atEnd, const QDateTime startFrom = {});
+    Q_INVOKABLE void addDates(bool atEnd, const QDateTime &startFrom = {});
 
     int datesToAdd() const;
     void setDatesToAdd(int datesToAdd);

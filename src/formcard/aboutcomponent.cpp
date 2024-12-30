@@ -18,7 +18,6 @@ AboutComponent::~AboutComponent() = default;
 QList<KAboutComponent> AboutComponent::components() const
 {
     QList<KAboutComponent> allComponents = KAboutData::applicationData().components();
-    QString platformName;
     auto platform = QGuiApplication::platformName();
     platform.replace(0, 1, platform[0].toUpper());
     if (platform == u"Wayland"_s || platform == u"Xcb"_s) {

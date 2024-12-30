@@ -63,12 +63,12 @@ public:
     Q_ENUM(Type);
 
     ItemObject(QObject *parent = nullptr,
-               QUrl source = {},
+               const QUrl &source = {},
                qreal sourceWidth = {},
                qreal sourceHeight = {},
-               QUrl tempSource = {},
+               const QUrl &tempSource = {},
                Type type = Type::Image,
-               QString caption = {})
+               const QString &caption = {})
         : QObject(parent)
         , m_source(source)
         , m_sourceWidth(sourceWidth)
@@ -174,10 +174,10 @@ public:
     ExampleAlbumModel(QObject *parent = nullptr);
 
     QUrl testImage() const;
-    void setTestImage(QUrl image);
+    void setTestImage(const QUrl &image);
 
     QUrl testVideo() const;
-    void setTestVideo(QUrl image);
+    void setTestVideo(const QUrl &image);
 
     /**
      * @brief Get the given role value at the given index.

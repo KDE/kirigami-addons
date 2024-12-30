@@ -158,7 +158,7 @@ void InfiniteCalendarViewModel::setMaximumDate(const QDateTime &maximumDate)
     Q_EMIT maximumDateChanged();
 }
 
-void InfiniteCalendarViewModel::addDates(bool atEnd, const QDateTime startFrom)
+void InfiniteCalendarViewModel::addDates(bool atEnd, const QDateTime &startFrom)
 {
     switch (m_scale) {
     case WeekScale:

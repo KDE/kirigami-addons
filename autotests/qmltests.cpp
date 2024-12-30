@@ -30,7 +30,7 @@ public Q_SLOTS:
 
         qmlRegisterType<ExampleAlbumModel>("test.artefacts", 1, 0, "ExampleAlbumModel");
 
-        engine->rootContext()->setContextProperty(QLatin1String("dataDir"), QVariant(QLatin1String(DATA_DIR)));
+        engine->rootContext()->setContextProperty(QStringLiteral("dataDir"), QVariant(QLatin1String(DATA_DIR)));
     }
 };
 
