@@ -19,6 +19,7 @@ QQC2.ScrollView {
 
     required property list<T.Action> actions
     required property T.StackView stackView
+    required property KirigamiComponents.BottomDrawer drawer
     property string title
 
     Layout.fillWidth: true
@@ -56,11 +57,11 @@ QQC2.ScrollView {
                                     stackView: root.stackView,
                                     actions: modelData.children,
                                     title: modelData.text,
+                                    drawer: root.drawer,
                                 });
                                 return;
                             }
                             drawer.close();
-                            modelData.trigger();
                         }
                     }
                 }

@@ -30,6 +30,13 @@ Item {
      */
     default property list<T.Action> actions
 
+    /**
+     * Optional item which will be displayed as header of the internal ButtonDrawer.
+     *
+     * Note: This is only displayed on the first level of the ContextMenu mobile mode.
+     */
+    property Item headerContentItem
+
     signal closed
 
     function popup(): void {
@@ -61,17 +68,25 @@ Item {
             parent: root.QQC2.Overlay.overlay
             onClosed: root.closed()
 
-            headerContentItem: RowLayout {
+            headerContentItem: ColumnLayout {
+                children: if (stackViewMenu.depth > 1 || root.headerContentItem === null) {
+                    return nestedHeader;
+                } else {
+                    return root.headerContentItem;
+                }
+            }
+
+            property Item nestedHeader: RowLayout {
                 Layout.fillWidth: true
                 spacing: Kirigami.Units.smallSpacing
 
-                enabled: stackView.currentItem?.title.length > 0
+                enabled: stackViewMenu.currentItem?.title.length > 0
 
                 QQC2.ToolButton {
                     icon.name: 'draw-arrow-back-symbolic'
                     text: i18ndc("kirigami-addons6", "@action:button", "Go Back")
                     display: QQC2.ToolButton.IconOnly
-                    onClicked: stackView.pop();
+                    onClicked: stackViewMenu.pop();
 
                     QQC2.ToolTip.visible: hovered
                     QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
@@ -80,21 +95,22 @@ Item {
 
                 Kirigami.Heading {
                     level: 2
-                    text: stackView.currentItem?.title
+                    text: stackViewMenu.currentItem?.title
                     elide: Text.ElideRight
                     Layout.fillWidth: true
                 }
             }
 
             QQC2.StackView {
-                id: stackView
+                id: stackViewMenu
 
                 implicitHeight: currentItem?.implicitHeight
                 implicitWidth: currentItem?.implicitWidth
 
                 initialItem: P.ContextMenuPage {
-                    stackView: stackView
+                    stackView: stackViewMenu
                     actions: root.actions
+                    drawer: drawer
                 }
             }
         }
