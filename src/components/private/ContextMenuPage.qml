@@ -46,10 +46,19 @@ QQC2.ScrollView {
 
                 DelegateChoice {
                     FormCard.FormButtonDelegate {
+                        id: button
+
                         required property T.Action modelData
 
                         action: modelData
                         visible: modelData.visible === undefined || modelData.visible
+
+                        Binding {
+                            when: !(modelData instanceof Kirigami.Action) || modelData.children.length === 0
+                            target: button.trailingLogo
+                            property: "source"
+                            value: ""
+                        }
 
                         onClicked: {
                             if (modelData instanceof Kirigami.Action && modelData.children.length > 0) {

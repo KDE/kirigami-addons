@@ -61,6 +61,8 @@ AbstractFormDelegate {
      */
     property real leadingPadding: Kirigami.Units.smallSpacing
 
+    readonly property alias trailingLogo: formArrow
+
     focusPolicy: Qt.StrongFocus
 
     contentItem: RowLayout {
@@ -110,6 +112,8 @@ AbstractFormDelegate {
         }
 
         FormArrow {
+            id: formArrow
+
             Layout.leftMargin: Kirigami.Units.smallSpacing
             Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
             direction: Qt.RightArrow
