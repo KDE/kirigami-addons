@@ -9,6 +9,7 @@ import org.kde.kirigami as Kirigami
 
 QQC2.MenuItem {
     visible: !(action instanceof Kirigami.Action) || action.visible
+    autoExclusive: !(action instanceof Kirigami.Action) || action.autoExclusive === true
     height: visible ? implicitHeight : 0
 
     QQC2.ToolTip.text: (action instanceof Kirigami.Action) ? action.tooltip : ""
