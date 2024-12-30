@@ -3,9 +3,8 @@
 
 #pragma once
 
-#include <QObject>
-#include <QtQml>
 #include <QAction>
+#include <QObject>
 #include <QQuickWindow>
 
 using namespace Qt::StringLiterals;

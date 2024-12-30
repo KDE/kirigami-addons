@@ -4,9 +4,9 @@
  *  SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
-#include <QtQuickTest>
-#include <QQmlEngine>
 #include <QQmlContext>
+#include <QQmlEngine>
+#include <QtQuickTest/quicktest.h>
 
 #include <KLocalizedContext>
 #include <KLocalizedString>
