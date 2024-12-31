@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-30 00:40+0000\n"
-"PO-Revision-Date: 2024-12-29 01:43+0900\n"
+"POT-Creation-Date: 2024-12-31 00:40+0000\n"
+"PO-Revision-Date: 2024-12-30 16:15+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -88,11 +88,11 @@ msgctxt "@action:button"
 msgid "Close"
 msgstr "關閉"
 
-#: components/ContextMenu.qml:72
+#: components/ContextMenu.qml:87
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "返回"
 
 #: components/DownloadAction.qml:37
 #, kde-format
@@ -505,7 +505,7 @@ msgctxt "@title"
 msgid "Settings"
 msgstr "設定"
 
-#: settings/private/ConfigMobilePage.qml:97
+#: settings/private/ConfigMobilePage.qml:99
 #, kde-format
 msgctxt "@title:group"
 msgid "Settings"

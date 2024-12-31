@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-30 00:40+0000\n"
-"PO-Revision-Date: 2024-12-21 10:29+0100\n"
+"POT-Creation-Date: 2024-12-31 00:40+0000\n"
+"PO-Revision-Date: 2024-12-30 08:45+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -88,11 +88,11 @@ msgctxt "@action:button"
 msgid "Close"
 msgstr "Tanca"
 
-#: components/ContextMenu.qml:72
+#: components/ContextMenu.qml:87
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "Retrocedeix"
 
 #: components/DownloadAction.qml:37
 #, kde-format
@@ -522,7 +522,7 @@ msgctxt "@title"
 msgid "Settings"
 msgstr "Configuració"
 
-#: settings/private/ConfigMobilePage.qml:97
+#: settings/private/ConfigMobilePage.qml:99
 #, kde-format
 msgctxt "@title:group"
 msgid "Settings"

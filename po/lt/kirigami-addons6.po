@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-30 00:40+0000\n"
+"POT-Creation-Date: 2024-12-31 00:40+0000\n"
 "PO-Revision-Date: 2024-09-05 00:33+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -87,7 +87,7 @@ msgctxt "@action:button"
 msgid "Close"
 msgstr "Užverti"
 
-#: components/ContextMenu.qml:72
+#: components/ContextMenu.qml:87
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
@@ -526,7 +526,7 @@ msgctxt "@title"
 msgid "Settings"
 msgstr "Nuostatos"
 
-#: settings/private/ConfigMobilePage.qml:97
+#: settings/private/ConfigMobilePage.qml:99
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Settings"

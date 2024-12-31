@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-30 00:40+0000\n"
-"PO-Revision-Date: 2024-12-21 04:54+0100\n"
+"POT-Creation-Date: 2024-12-31 00:40+0000\n"
+"PO-Revision-Date: 2024-12-30 03:06+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -86,11 +86,11 @@ msgctxt "@action:button"
 msgid "Close"
 msgstr "დახურვა"
 
-#: components/ContextMenu.qml:72
+#: components/ContextMenu.qml:87
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "უკან დაბრუნება"
 
 #: components/DownloadAction.qml:37
 #, kde-format
@@ -516,7 +516,7 @@ msgctxt "@title"
 msgid "Settings"
 msgstr "მორგება"
 
-#: settings/private/ConfigMobilePage.qml:97
+#: settings/private/ConfigMobilePage.qml:99
 #, kde-format
 msgctxt "@title:group"
 msgid "Settings"
