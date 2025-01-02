@@ -39,13 +39,17 @@ Item {
 
     signal closed
 
-    function popup(): void {
+    function popup(position = null): void {
         if (Kirigami.Settings.isMobile) {
             const item = mobileMenu.createObject(root);
             item.open();
         } else {
             const item = desktopMenu.createObject(root);
-            item.popup();
+            if (position) {
+                item.popup(position);
+            } else {
+                item.popup();
+            }
         }
     }
 
