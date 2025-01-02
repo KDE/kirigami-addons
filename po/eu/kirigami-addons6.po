@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-31 00:40+0000\n"
+"POT-Creation-Date: 2025-01-02 00:39+0000\n"
 "PO-Revision-Date: 2024-12-31 19:14+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -196,40 +196,40 @@ msgstr ":"
 msgid "Minutes"
 msgstr "Minutu"
 
-#: formcard/aboutcomponent.cpp:25
+#: formcard/aboutcomponent.cpp:24
 #, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: formcard/aboutcomponent.cpp:29
+#: formcard/aboutcomponent.cpp:28
 #, kde-format
 msgid "KDE Frameworks"
 msgstr "KDE Frameworks"
 
-#: formcard/aboutcomponent.cpp:30
+#: formcard/aboutcomponent.cpp:29
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr "Qt hedatzeko KDE Komunitateak eraikitako liburutegi-bilduma."
 
-#: formcard/aboutcomponent.cpp:35
+#: formcard/aboutcomponent.cpp:34
 #, kde-format
 msgid "Qt"
 msgstr "Qt"
 
-#: formcard/aboutcomponent.cpp:36
+#: formcard/aboutcomponent.cpp:35
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
 msgstr "Plataforma anitzeko aplikazioak garatzeko armazoia."
 
-#: formcard/aboutcomponent.cpp:37
+#: formcard/aboutcomponent.cpp:36
 #, kde-format
 msgid "Using %1 and built against %2"
 msgstr "%1 erabiltzen du eta %2 erabiliz eraikia"
 
-#: formcard/aboutcomponent.cpp:41
+#: formcard/aboutcomponent.cpp:40
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
