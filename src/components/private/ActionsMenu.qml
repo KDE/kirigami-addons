@@ -17,12 +17,15 @@ QQC2.Menu {
     property Component itemDelegate: ActionMenuItem {}
     property Component separatorDelegate: QQC2.MenuSeparator {
         property T.Action action
+        visible: !(action instanceof Kirigami.Action) || action.visible
     }
     property Component loaderDelegate: Loader {
         property T.Action action
     }
     property T.Action parentAction
     property T.MenuItem parentItem
+
+    visible: !(parentAction instanceof Kirigami.Action) || parentAction.visible
 
     Instantiator {
         id: actionsInstantiator
@@ -50,7 +53,7 @@ QQC2.Menu {
                     } else {
                         item = root.itemDelegate.createObject(null, { action: delegate.action });
                     }
-                    root.addItem(item)
+                    root.addItem(item);
                 } else if (root.submenuComponent) {
                     item = root.submenuComponent.createObject(null, {
                         parentAction: delegate.action,
@@ -59,10 +62,12 @@ QQC2.Menu {
                         submenuComponent: root.submenuComponent,
                     });
 
-                    root.insertMenu(root.count, item);
-                    item.parentItem = root.contentData[root.contentData.length - 1];
-                    item.parentItem.icon = delegate.action.icon;
-                    isSubMenu = true;
+                    if (item.visible) {
+                        root.insertMenu(root.count, item);
+                        item.parentItem = root.contentData[root.contentData.length - 1];
+                        item.parentItem.icon = delegate.action.icon;
+                        isSubMenu = true;
+                    }
                 }
             }
 
