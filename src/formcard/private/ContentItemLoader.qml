@@ -10,16 +10,15 @@ import QtQuick
  */
 Item {
     id: root
-    property var contentItem: Item {}
+    property var contentItem: null
 
     onContentItemChanged: {
         // clear old items
-        root.children = "";
+        root.children = [];
 
         if (contentItem instanceof Item) {
             contentItem.parent = root;
             contentItem.anchors.fill = root;
-            root.children.push(contentItem);
         }
     }
 }
