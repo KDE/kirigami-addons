@@ -19,7 +19,36 @@ import './private' as P
  * Menu popup that appears as a tradional menu on desktop and as a bottom
  * drawer mobile.
  *
- * @since 1.7.0.
+ * \code{qml}
+ * import QtQuick
+ * import QtQuick.Controls as Controls
+ * import org.kde.kirigamiaddons.components as Addons
+ *
+ * ListView {
+ *     model: 10
+ *     delegate: Controls.ItemDelegate {
+ *         text: index
+ *         onPressAndHold: contextMenu.popup();
+ *     }
+ *
+ *     Addons.ConvergentContextMenu {
+ *         id: menu
+ *         Controls.Action {
+ *             text: i18nc("@action:inmenu", "Action 1")
+ *         }
+ *
+ *         Kirigami.Action {
+ *             text: i18nc("@action:inmenu", "Action 2")
+ *
+ *             Controls.Action {
+ *                 text: i18nc("@action:inmenu", "Sub-action")
+ *             }
+ *         }
+ *     }
+ * }
+ * \endcode{qml}
+ *
+ * \since 1.7.0.
  */
 Item {
     id: root

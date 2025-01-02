@@ -63,7 +63,7 @@ ecm_target_qml_sources(componentsplugin SOURCES
     SearchPopupField.qml
     SegmentedButton.qml
     RadioSelector.qml
-    ContextMenu.qml
+    ConvergentContextMenu.qml
 )
 
 ecm_target_qml_sources(componentsplugin PRIVATE PATH private SOURCES
