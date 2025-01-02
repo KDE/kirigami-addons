@@ -27,10 +27,20 @@ import './private' as P
  * ListView {
  *     model: 10
  *     delegate: Controls.ItemDelegate {
+ *         id: delegate
+ *
  *         text: index
- *         onPressAndHold: contextMenu.popup();
+ *         onPressAndHold: menu.popup();
  *         // Since Qt 6.9
- *         Controls.ContextMenu.onRequested: (position) => contextMenu.popup(position);
+ *         Controls.ContextMenu.onRequested: (position) => menu.popup(delegate, position);
+ *
+ *         // Before Qt 6.9
+ *         TapHandler {
+ *             acceptedButtons: Qt.RightButton
+ *             onSingleTapped: (eventPoint, button) => {
+ *                 menu.popup(delegate, eventPoint.position);
+ *             }
+ *         }
  *     }
  *
  *     Addons.ConvergentContextMenu {
@@ -70,15 +80,16 @@ Item {
 
     signal closed
 
-    function popup(position = null): void {
+    function popup(parent = null, position = null): void {
         if (Kirigami.Settings.isMobile) {
             const item = mobileMenu.createObject(root);
             item.open();
         } else {
-            const item = desktopMenu.createObject(root);
-            if (position) {
+            if (position && parent) {
+                const item = desktopMenu.createObject(parent);
                 item.popup(position);
             } else {
+                const item = desktopMenu.createObject(root);
                 item.popup();
             }
         }
