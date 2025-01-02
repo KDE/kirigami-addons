@@ -74,8 +74,8 @@ QQC2.Drawer {
     }
 
     edge: Qt.BottomEdge
-    width: applicationWindow().width
-    height: Math.min(contentItem.implicitHeight, Math.round(applicationWindow().height * 0.8))
+    width: QQC2.ApplicationWindow.window.width
+    height: Math.min(contentItem.implicitHeight, Math.round(QQC2.ApplicationWindow.window.height * 0.8))
 
     // makes sure the drawer is not able to be opened when not trigered
     interactive : false
