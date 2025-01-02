@@ -41,32 +41,38 @@ Item {
 
     function popup(): void {
         if (Kirigami.Settings.isMobile) {
-            mobileMenu.item.open();
+            const item = mobileMenu.createObject(root);
+            item.open();
         } else {
-            desktopMenu.item.popup();
+            const item = desktopMenu.createObject(root);
+            item.popup();
         }
     }
 
-    Loader {
+    Component {
         id: desktopMenu
-        active: !Kirigami.Settings.isMobile
 
-        sourceComponent: P.ActionsMenu {
+        P.ActionsMenu {
             actions: root.actions
             submenuComponent: P.ActionsMenu { }
-            onClosed: root.closed()
+            onClosed: {
+                root.closed();
+                destroy();
+            }
         }
     }
 
-    Loader {
+    Component {
         id: mobileMenu
-        active: Kirigami.Settings.isMobile
 
-        sourceComponent: KirigamiComponents.BottomDrawer {
+        KirigamiComponents.BottomDrawer {
             id: drawer
 
             parent: root.QQC2.Overlay.overlay
-            onClosed: root.closed()
+            onClosed: {
+                root.closed();
+                destroy();
+            }
 
             headerContentItem: ColumnLayout {
                 children: if (stackViewMenu.depth > 1 || root.headerContentItem === null) {
