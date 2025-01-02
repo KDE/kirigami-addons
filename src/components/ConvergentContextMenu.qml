@@ -29,6 +29,8 @@ import './private' as P
  *     delegate: Controls.ItemDelegate {
  *         text: index
  *         onPressAndHold: contextMenu.popup();
+ *         // Since Qt 6.9
+ *         Controls.ContextMenu.onRequested: (position) => contextMenu.popup(position);
  *     }
  *
  *     Addons.ConvergentContextMenu {
