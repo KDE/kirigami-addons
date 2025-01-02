@@ -68,15 +68,24 @@ Item {
 
     signal closed
 
-    function popup(position = null): void {
+    function popup(parent = null, position = null): void {
         if (Kirigami.Settings.isMobile) {
-            const item = mobileMenu.createObject(root);
-            item.open();
-        } else {
-            const item = desktopMenu.createObject(root);
-            if (position) {
-                item.popup(position);
+            if (parent) {
+                const item = mobileMenu.createObject(parent);
+                item.open();
             } else {
+                const item = mobileMenu.createObject(root);
+                item.open();
+            }
+        } else {
+            if (position && parent) {
+                const item = desktopMenu.createObject(parent);
+                item.popup(position);
+            } else if (parent) {
+                const item = desktopMenu.createObject(parent);
+                item.popup();
+            } else {
+                const item = desktopMenu.createObject(root);
                 item.popup();
             }
         }
@@ -101,7 +110,6 @@ Item {
         KirigamiComponents.BottomDrawer {
             id: drawer
 
-            parent: root.QQC2.Overlay.overlay
             onClosed: {
                 root.closed();
                 destroy();
