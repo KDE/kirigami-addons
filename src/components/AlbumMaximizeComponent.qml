@@ -120,6 +120,12 @@ AbstractMaximizeComponent {
     property alias currentItem: view.currentItem
 
     /**
+     * @brief The current index in the view.
+     * @since 1.7.0
+     */
+    property alias currentIndex: view.currentIndex
+
+    /**
      * @brief Emitted when the content image is right clicked.
      */
     signal itemRightClicked()
