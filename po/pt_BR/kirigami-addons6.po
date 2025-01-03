@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-02 00:39+0000\n"
+"POT-Creation-Date: 2025-01-03 00:40+0000\n"
 "PO-Revision-Date: 2023-11-26 01:32-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -87,7 +87,7 @@ msgctxt "@action:button"
 msgid "Close"
 msgstr "Fechar"
 
-#: components/ContextMenu.qml:87
+#: components/ConvergentContextMenu.qml:126
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
