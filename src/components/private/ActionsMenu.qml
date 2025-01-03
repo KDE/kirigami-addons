@@ -62,11 +62,11 @@ QQC2.Menu {
                         submenuComponent: root.submenuComponent,
                     });
 
-                    if (item.visible) {
+                    isSubMenu = true;
+                    if (delegate.action.visible) {
                         root.insertMenu(root.count, item);
                         item.parentItem = root.contentData[root.contentData.length - 1];
                         item.parentItem.icon = delegate.action.icon;
-                        isSubMenu = true;
                     }
                 }
             }
