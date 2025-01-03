@@ -24,100 +24,120 @@ QQC2.ScrollView {
 
     Layout.fillWidth: true
 
-    ColumnLayout {
-        width: root.availableWidth
-        spacing: 0
+    property Component itemDelegate: FormCard.FormButtonDelegate {
+        id: button
 
-        Repeater {
-            model: root.actions
+        required property T.Action modelData
 
-            DelegateChooser {
-                role: "separator"
+        action: modelData
+        visible: modelData.visible === undefined || modelData.visible
 
-                DelegateChoice {
-                    roleValue: true
+        leading: RowLayout {
+            spacing: 0
+            visible: modelData.checkable
 
-                    FormCard.FormDelegateSeparator {
-                        required property T.Action modelData
+            QQC2.CheckBox {
+                id: checkBoxItem
 
-                        visible: modelData.visible === undefined || modelData.visible
-                    }
-                }
+                focusPolicy: Qt.NoFocus // provided by delegate
+                visible: !(modelData instanceof Kirigami.Action) || !modelData.autoExclusive
 
-                DelegateChoice {
-                    FormCard.FormButtonDelegate {
-                        id: button
+                action: modelData
 
-                        required property T.Action modelData
+                topPadding: 0
+                leftPadding: 0
+                rightPadding: 0
+                bottomPadding: 0
 
-                        action: modelData
-                        visible: modelData.visible === undefined || modelData.visible
+                contentItem: null // Remove right margin
+                spacing: 0
 
-                        leading: RowLayout {
-                            spacing: 0
-                            visible: modelData.checkable
+                Accessible.ignored: true
+            }
 
-                            QQC2.CheckBox {
-                                id: checkBoxItem
+            QQC2.RadioButton {
+                id: radioBoxItem
 
-                                focusPolicy: Qt.NoFocus // provided by delegate
-                                visible: !(modelData instanceof Kirigami.Action) || !modelData.autoExclusive
+                focusPolicy: Qt.NoFocus // provided by delegate
+                visible: modelData instanceof Kirigami.Action && modelData.autoExclusive
 
-                                action: modelData
+                action: modelData
 
-                                topPadding: 0
-                                leftPadding: 0
-                                rightPadding: 0
-                                bottomPadding: 0
+                topPadding: 0
+                leftPadding: 0
+                rightPadding: 0
+                bottomPadding: 0
 
-                                contentItem: null // Remove right margin
-                                spacing: 0
+                contentItem: null // Remove right margin
+                spacing: 0
 
-                                Accessible.ignored: true
-                            }
-
-                            QQC2.RadioButton {
-                                id: radioBoxItem
-
-                                focusPolicy: Qt.NoFocus // provided by delegate
-                                visible: modelData instanceof Kirigami.Action && modelData.autoExclusive
-
-                                action: modelData
-
-                                topPadding: 0
-                                leftPadding: 0
-                                rightPadding: 0
-                                bottomPadding: 0
-
-                                contentItem: null // Remove right margin
-                                spacing: 0
-
-                                Accessible.ignored: true
-                            }
-                        }
-
-                        Binding {
-                            when: !(modelData instanceof Kirigami.Action) || modelData.children.length === 0
-                            target: button.trailingLogo
-                            property: "source"
-                            value: ""
-                        }
-
-                        onClicked: {
-                            if (modelData instanceof Kirigami.Action && modelData.children.length > 0) {
-                                root.stackView.push(Qt.resolvedUrl('./ContextMenuPage.qml'), {
-                                    stackView: root.stackView,
-                                    actions: modelData.children,
-                                    title: modelData.text,
-                                    drawer: root.drawer,
-                                });
-                                return;
-                            }
-                            drawer.close();
-                        }
-                    }
-                }
+                Accessible.ignored: true
             }
         }
+
+        Binding {
+            when: !(modelData instanceof Kirigami.Action) || modelData.children.length === 0
+            target: button.trailingLogo
+            property: "source"
+            value: ""
+        }
+
+        onClicked: {
+            if (modelData instanceof Kirigami.Action && modelData.children.length > 0) {
+                root.stackView.push(Qt.resolvedUrl('./ContextMenuPage.qml'), {
+                    stackView: root.stackView,
+                    actions: modelData.children,
+                    title: modelData.text,
+                    drawer: root.drawer,
+                });
+                return;
+            }
+            drawer.close();
+        }
+    }
+    property Component separatorDelegate: FormCard.FormDelegateSeparator {
+        property T.Action action
+        visible: !(action instanceof Kirigami.Action) || action.visible
+    }
+    property Component loaderDelegate: Loader {
+        property T.Action action
+        Layout.fillWidth: item?.Layout.fillWidth ?? true
+    }
+
+    Instantiator {
+        id: actionsInstantiator
+
+        model: root.actions
+        delegate: QtObject {
+            id: delegate
+
+            required property T.Action modelData
+            readonly property T.Action action: modelData
+
+            property QtObject item: null
+            property bool isSubMenu: false
+
+            Component.onCompleted: {
+                const isKirigamiAction = delegate.action instanceof Kirigami.Action;
+                if (isKirigamiAction && delegate.action.separator) {
+                    item = root.separatorDelegate.createObject(null, { action: delegate.action });
+                } else if (delegate.action.displayComponent) {
+                    item = root.loaderDelegate.createObject(null, {
+                        actions: delegate.action,
+                        sourceComponent: action.displayComponent,
+                    });
+                } else {
+                    item = root.itemDelegate.createObject(null, { modelData: delegate.action });
+                }
+                columnLayout.children.push(item);
+            }
+        }
+    }
+
+    ColumnLayout {
+        id: columnLayout
+
+        width: root.availableWidth
+        spacing: 0
     }
 }
