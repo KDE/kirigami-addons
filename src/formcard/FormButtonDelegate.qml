@@ -59,7 +59,7 @@ AbstractFormDelegate {
      *
      * @see Kirigami.Units
      */
-    property real leadingPadding: Kirigami.Units.smallSpacing
+    property real leadingPadding: Kirigami.Units.largeSpacing
 
     readonly property alias trailingLogo: formArrow
 
@@ -69,10 +69,10 @@ AbstractFormDelegate {
         spacing: 0
 
         Private.ContentItemLoader {
-            Layout.rightMargin: visible ? root.leadingPadding : 0
-            visible: root.leading
-            implicitHeight: visible ? root.leading.implicitHeight : 0
-            implicitWidth: visible ? root.leading.implicitWidth : 0
+            readonly property bool _visible: root.leading && root.leading.visible
+            Layout.rightMargin: _visible ? root.leadingPadding : 0
+            implicitHeight: _visible ? root.leading.implicitHeight : 0
+            implicitWidth: _visible ? root.leading.implicitWidth : 0
             contentItem: root.leading
         }
 

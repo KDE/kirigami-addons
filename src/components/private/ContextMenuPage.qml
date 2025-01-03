@@ -53,6 +53,49 @@ QQC2.ScrollView {
                         action: modelData
                         visible: modelData.visible === undefined || modelData.visible
 
+                        leading: RowLayout {
+                            spacing: 0
+                            visible: modelData.checkable
+
+                            QQC2.CheckBox {
+                                id: checkBoxItem
+
+                                focusPolicy: Qt.NoFocus // provided by delegate
+                                visible: !(modelData instanceof Kirigami.Action) || !modelData.autoExclusive
+
+                                action: modelData
+
+                                topPadding: 0
+                                leftPadding: 0
+                                rightPadding: 0
+                                bottomPadding: 0
+
+                                contentItem: null // Remove right margin
+                                spacing: 0
+
+                                Accessible.ignored: true
+                            }
+
+                            QQC2.RadioButton {
+                                id: radioBoxItem
+
+                                focusPolicy: Qt.NoFocus // provided by delegate
+                                visible: modelData instanceof Kirigami.Action && modelData.autoExclusive
+
+                                action: modelData
+
+                                topPadding: 0
+                                leftPadding: 0
+                                rightPadding: 0
+                                bottomPadding: 0
+
+                                contentItem: null // Remove right margin
+                                spacing: 0
+
+                                Accessible.ignored: true
+                            }
+                        }
+
                         Binding {
                             when: !(modelData instanceof Kirigami.Action) || modelData.children.length === 0
                             target: button.trailingLogo
