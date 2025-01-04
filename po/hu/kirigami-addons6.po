@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-03 00:40+0000\n"
+"POT-Creation-Date: 2025-01-04 00:40+0000\n"
 "PO-Revision-Date: 2024-11-16 20:22+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -32,49 +32,49 @@ msgstr "ulysses@fsf.hu"
 msgid "Close"
 msgstr "Bezárás"
 
-#: components/AlbumMaximizeComponent.qml:137
+#: components/AlbumMaximizeComponent.qml:143
 #, kde-format
 msgid "Zoom in"
 msgstr "Nagyítás"
 
-#: components/AlbumMaximizeComponent.qml:142
+#: components/AlbumMaximizeComponent.qml:148
 #, kde-format
 msgid "Zoom out"
 msgstr "Kicsinyítés"
 
-#: components/AlbumMaximizeComponent.qml:148
+#: components/AlbumMaximizeComponent.qml:154
 #, kde-format
 msgid "Rotate left"
 msgstr "Forgatás balra"
 
-#: components/AlbumMaximizeComponent.qml:154
+#: components/AlbumMaximizeComponent.qml:160
 #, kde-format
 msgid "Rotate right"
 msgstr "Forgatás jobbra"
 
-#: components/AlbumMaximizeComponent.qml:159
+#: components/AlbumMaximizeComponent.qml:165
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
 msgstr "Felirat megjelenítése"
 
-#: components/AlbumMaximizeComponent.qml:159
+#: components/AlbumMaximizeComponent.qml:165
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
 msgstr "Felirat elrejtése"
 
-#: components/AlbumMaximizeComponent.qml:165
+#: components/AlbumMaximizeComponent.qml:171
 #, kde-format
 msgid "Save as"
 msgstr "Mentés másként"
 
-#: components/AlbumMaximizeComponent.qml:243
+#: components/AlbumMaximizeComponent.qml:249
 #, kde-format
 msgid "Previous image"
 msgstr "Előző kép"
 
-#: components/AlbumMaximizeComponent.qml:263
+#: components/AlbumMaximizeComponent.qml:269
 #, kde-format
 msgid "Next image"
 msgstr "Következő kép"
@@ -85,7 +85,7 @@ msgctxt "@action:button"
 msgid "Close"
 msgstr "Bezárás"
 
-#: components/ConvergentContextMenu.qml:126
+#: components/ConvergentContextMenu.qml:134
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"

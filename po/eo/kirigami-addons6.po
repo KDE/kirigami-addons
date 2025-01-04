@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-03 00:40+0000\n"
+"POT-Creation-Date: 2025-01-04 00:40+0000\n"
 "PO-Revision-Date: 2024-12-20 16:53+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -33,49 +33,49 @@ msgstr "olivermkellogg@gmail.com"
 msgid "Close"
 msgstr "Fermi"
 
-#: components/AlbumMaximizeComponent.qml:137
+#: components/AlbumMaximizeComponent.qml:143
 #, kde-format
 msgid "Zoom in"
 msgstr "Zomi"
 
-#: components/AlbumMaximizeComponent.qml:142
+#: components/AlbumMaximizeComponent.qml:148
 #, kde-format
 msgid "Zoom out"
 msgstr "Malzomi"
 
-#: components/AlbumMaximizeComponent.qml:148
+#: components/AlbumMaximizeComponent.qml:154
 #, kde-format
 msgid "Rotate left"
 msgstr "Rotacii maldekstren"
 
-#: components/AlbumMaximizeComponent.qml:154
+#: components/AlbumMaximizeComponent.qml:160
 #, kde-format
 msgid "Rotate right"
 msgstr "Rotacii dekstren"
 
-#: components/AlbumMaximizeComponent.qml:159
+#: components/AlbumMaximizeComponent.qml:165
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
 msgstr "Montri bildotekston"
 
-#: components/AlbumMaximizeComponent.qml:159
+#: components/AlbumMaximizeComponent.qml:165
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
 msgstr "Kaŝi bildotekston"
 
-#: components/AlbumMaximizeComponent.qml:165
+#: components/AlbumMaximizeComponent.qml:171
 #, kde-format
 msgid "Save as"
 msgstr "Konservi kiel"
 
-#: components/AlbumMaximizeComponent.qml:243
+#: components/AlbumMaximizeComponent.qml:249
 #, kde-format
 msgid "Previous image"
 msgstr "Antaŭa bildo"
 
-#: components/AlbumMaximizeComponent.qml:263
+#: components/AlbumMaximizeComponent.qml:269
 #, kde-format
 msgid "Next image"
 msgstr "Sekva bildo"
@@ -86,7 +86,7 @@ msgctxt "@action:button"
 msgid "Close"
 msgstr "Fermi"
 
-#: components/ConvergentContextMenu.qml:126
+#: components/ConvergentContextMenu.qml:134
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
