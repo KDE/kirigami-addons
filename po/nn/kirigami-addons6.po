@@ -613,8 +613,6 @@ msgstr "Fjern ord"
 
 #: settings/ShortcutsConfigurationModule.qml:23
 #, fuzzy, kde-format
-#| msgctxt "@title:dialog"
-#| msgid "Reserved Shortcut"
 msgctxt "@action:button"
 msgid "Keyboard Shortcuts"
 msgstr "Reservert snarveg"
