@@ -200,7 +200,6 @@ AbstractFormDelegate {
     property Component dialogDelegate: Delegates.RoundedItemDelegate {
         implicitWidth: ListView.view ? ListView.view.width : Kirigami.Units.gridUnit * 16
         text: controlRoot.textRole ? (Array.isArray(controlRoot.model) ? modelData[controlRoot.textRole] : model[controlRoot.textRole]) : modelData
-        checked: controlRoot.currentIndex === index
 
         Layout.topMargin: index == 0 ? Math.round(Kirigami.Units.smallSpacing / 2) : 0
 
@@ -255,12 +254,13 @@ AbstractFormDelegate {
             _selectionPageItem = null;
         }
 
-        if (dialog) {
-            dialog.close();
+        if (_selectionDialogItem) {
+            _selectionDialogItem.close();
         }
     }
 
     property var _selectionPageItem: null
+    property var _selectionDialogItem: null
     property real __indicatorMargin: controlRoot.indicator && controlRoot.indicator.visible && controlRoot.indicator.width > 0 ? controlRoot.spacing + indicator.width + controlRoot.spacing : 0
 
     leftPadding: horizontalPadding + (!controlRoot.mirrored ? 0 : __indicatorMargin)
@@ -273,8 +273,8 @@ AbstractFormDelegate {
         target: controlRoot
         function onClicked() {
             if (controlRoot.displayMode === FormComboBoxDelegate.Dialog) {
-                const dialogObject = controlRoot.dialog.createObject();
-                dialogObject.open();
+                controlRoot._selectionDialogItem = controlRoot.dialog.createObject();
+                controlRoot._selectionDialogItem.open();
             } else if (controlRoot.displayMode === FormComboBoxDelegate.Page) {
                 controlRoot._selectionPageItem = controlRoot.QQC2.ApplicationWindow.window.pageStack.pushDialogLayer(page)
             } else {
@@ -299,7 +299,7 @@ AbstractFormDelegate {
 
         title: controlRoot.text
         implicitWidth: Math.min(parent.width - Kirigami.Units.gridUnit * 2, Kirigami.Units.gridUnit * 22)
-        parent: applicationWindow().QQC2.Overlay.overlay
+        parent: controlRoot.QQC2.Overlay.overlay
         background: Components.DialogRoundedBackground {}
 
         implicitHeight: Math.min(
@@ -348,6 +348,8 @@ AbstractFormDelegate {
                     clip: true
                     model: controlRoot.model
                     delegate: controlRoot.dialogDelegate
+                    currentIndex: controlRoot.currentIndex
+                    onCurrentIndexChanged: controlRoot.currentIndex = currentIndex
                 }
             }
 
