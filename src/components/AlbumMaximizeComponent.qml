@@ -250,7 +250,7 @@ AbstractMaximizeComponent {
             onClicked: {
                 view.currentItem.pause()
                 view.currentIndex -= 1
-                if (root.autoPlay) {
+                if (root.autoPlay && view.currentItem.playAction) {
                     view.currentItem.playAction.trigger()
                 }
             }
@@ -270,7 +270,7 @@ AbstractMaximizeComponent {
             onClicked: {
                 view.currentItem.pause()
                 view.currentIndex += 1
-                if (root.autoPlay) {
+                if (root.autoPlay && view.currentItem.playAction) {
                     view.currentItem.playAction.trigger()
                 }
             }
