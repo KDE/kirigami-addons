@@ -89,7 +89,7 @@ msgstr "Zavřít"
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "Jít zpět"
 
 #: components/DownloadAction.qml:37
 #, kde-format
@@ -202,7 +202,7 @@ msgstr ""
 #: formcard/aboutcomponent.cpp:28
 #, kde-format
 msgid "KDE Frameworks"
-msgstr ""
+msgstr "KDE Frameworks "
 
 #: formcard/aboutcomponent.cpp:29
 #, kde-format
@@ -213,7 +213,7 @@ msgstr ""
 #: formcard/aboutcomponent.cpp:34
 #, kde-format
 msgid "Qt"
-msgstr ""
+msgstr "Qt"
 
 #: formcard/aboutcomponent.cpp:35
 #, kde-format
@@ -424,7 +424,7 @@ msgstr "Použité knihovny"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Zkopírovat do schránky"
 
 #: formcard/AboutPage.qml:291
 #, kde-format
