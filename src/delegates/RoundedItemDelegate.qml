@@ -32,6 +32,14 @@ T.ItemDelegate {
      */
     property var gridView: GridView
 
+    /**
+     * This property holds whether the drop area is hovered.
+     *
+     * This allow to emulate an hover effect which can't be done with the
+     * normal hovered property as it is read only.
+     */
+    property bool dropAreaHovered: false
+
     implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
                             implicitContentWidth + leftPadding + rightPadding,
                             implicitIndicatorWidth + leftPadding + rightPadding)
@@ -107,12 +115,12 @@ T.ItemDelegate {
 
         color: if (root.highlighted || root.checked || (root.down && !root.checked) || root.visualFocus) {
             const highlight = Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.highlightColor, 0.3);
-            if (root.hovered) {
+            if (root.hovered || root.dropAreaHovered) {
                 Kirigami.ColorUtils.tintWithAlpha(highlight, Kirigami.Theme.textColor, 0.10)
             } else {
                 highlight
             }
-        } else if (root.hovered) {
+        } else if (root.hovered || root.dropAreaHovered) {
             Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.10)
         } else {
            Kirigami.Theme.backgroundColor
