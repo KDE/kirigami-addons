@@ -17,7 +17,12 @@ T.ItemDelegate {
     required property int index
     required property bool unread
 
-    readonly property bool showSeparator: root.index !== ListView.view.count
+    /**
+     * The listview associated with this item delegate.
+     */
+    property ListView listView: ListView.view
+
+    readonly property bool showSeparator: root.index !== listView.count
 
     implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
                             implicitContentWidth + leftPadding + rightPadding,
@@ -27,7 +32,7 @@ T.ItemDelegate {
                              implicitIndicatorHeight + topPadding + bottomPadding,
                              Kirigami.Units.gridUnit * 2)
 
-    width: ListView.view ? ListView.view.width : implicitWidth
+    width: listView ? listView.width : implicitWidth
     highlighted: ListView.isCurrentItem
 
     padding: Kirigami.Units.largeSpacing
