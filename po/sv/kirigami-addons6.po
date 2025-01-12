@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-04 00:40+0000\n"
-"PO-Revision-Date: 2024-11-24 18:24+0100\n"
+"PO-Revision-Date: 2025-01-11 12:45+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -89,7 +89,7 @@ msgstr "Stäng"
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "Gå tillbaka"
 
 #: components/DownloadAction.qml:37
 #, kde-format
@@ -614,12 +614,10 @@ msgid "Delete word"
 msgstr "Ta bort ord"
 
 #: settings/ShortcutsConfigurationModule.qml:23
-#, fuzzy, kde-format
-#| msgctxt "@title:dialog"
-#| msgid "Reserved Shortcut"
+#, kde-format
 msgctxt "@action:button"
 msgid "Keyboard Shortcuts"
-msgstr "Reserverad genväg"
+msgstr "Snabbtangenter"
 
 #: settings/SpellcheckingConfigurationModule.qml:14
 #, kde-format
