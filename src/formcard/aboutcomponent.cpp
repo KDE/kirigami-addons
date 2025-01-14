@@ -3,6 +3,7 @@
 
 #include "aboutcomponent_p.h"
 
+#include <KCoreAddons>
 #include <KLocalizedString>
 #include <QGuiApplication>
 #include <QClipboard>
@@ -27,7 +28,7 @@ QList<KAboutComponent> AboutComponent::components() const
     }
     allComponents.append(KAboutComponent(i18n("KDE Frameworks"),
                                           i18nc("@info", "Collection of libraries created by the KDE Community to extend Qt."),
-                                          QStringLiteral(KI18N_VERSION_STRING),
+                                          KCoreAddons::versionString(),
                                           QStringLiteral("https://develop.kde.org/products/frameworks/"),
                                           KAboutLicense::LGPL_V2_1));
 
