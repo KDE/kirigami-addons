@@ -397,7 +397,7 @@ FormCardPage {
 
                     QQC2.ToolButton {
                         visible: typeof(modelData.ocsUsername) !== "undefined" && modelData.ocsUsername.length > 0
-                        icon.name: "get-hot-new-stuff"
+                        icon.name: "get-hot-new-stuff-symbolic"
                         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                         QQC2.ToolTip.visible: hovered
                         QQC2.ToolTip.text: i18nd("kirigami-addons6", "Visit %1's KDE Store page", modelData.name)
@@ -406,7 +406,7 @@ FormCardPage {
 
                     QQC2.ToolButton {
                         visible: typeof(modelData.emailAddress) !== "undefined" && modelData.emailAddress.length > 0
-                        icon.name: "mail-sent"
+                        icon.name: "mail-sent-symbolic"
                         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                         QQC2.ToolTip.visible: hovered
                         QQC2.ToolTip.text: i18nd("kirigami-addons6", "Send an email to %1", modelData.emailAddress)
@@ -415,7 +415,7 @@ FormCardPage {
 
                     QQC2.ToolButton {
                         visible: typeof(modelData.webAddress) !== "undefined" && modelData.webAddress.length > 0
-                        icon.name: "globe"
+                        icon.name: "globe-symbolic"
                         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                         QQC2.ToolTip.visible: hovered
                         QQC2.ToolTip.text: (typeof(modelData.webAddress) === "undefined" && modelData.webAddress.length > 0) ? "" : modelData.webAddress
@@ -461,7 +461,7 @@ FormCardPage {
                     QQC2.ToolButton {
                         id: licenseButton
                         visible: modelData.licenses !== 0
-                        icon.name: "license"
+                        icon.name: "license-symbolic"
 
                         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                         QQC2.ToolTip.visible: hovered

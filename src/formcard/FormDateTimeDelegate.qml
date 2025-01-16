@@ -226,7 +226,7 @@ AbstractFormDelegate {
                     spacing: 0
 
                     Kirigami.Icon {
-                        source: "view-calendar"
+                        source: "view-calendar-symbolic"
                         Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
                         Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium
                         Layout.rightMargin: Private.FormCardUnits.horizontalSpacing
@@ -421,7 +421,7 @@ AbstractFormDelegate {
                     spacing: 0
 
                     Kirigami.Icon {
-                        source: "clock"
+                        source: "clock-symbolic"
 
                         Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
                         Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium

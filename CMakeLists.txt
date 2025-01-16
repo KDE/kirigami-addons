@@ -86,6 +86,7 @@ endif()
 install(FILES
     "${CMAKE_CURRENT_BINARY_DIR}/KF6KirigamiAddonsConfig.cmake"
     "${CMAKE_CURRENT_BINARY_DIR}/KF6KirigamiAddonsConfigVersion.cmake"
+    "${CMAKE_CURRENT_SOURCE_DIR}/KirigamiAddonsMacros.cmake"
     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
     COMPONENT Devel
 )

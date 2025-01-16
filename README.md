@@ -47,6 +47,21 @@ In particular, Kirigami Addons is not the right place for:
 - QML bindings for other libraries
 - API for a specific platform
 
+## Android
+
+For Android, Kirigami Addons provides a list of icons that Kirigami Addons needs and these can then
+be passed down to `kirigami_package_breeze_icons`.
+
+```cmake
+if (ANDROID)
+    kirigami_package_breeze_icons(ICONS
+        # your own icons
+
+        ${KIRIGAMI_ADDONS_ICONS}
+    )
+endif()
+```
+
 ## Building
 
 To build locally and use it in your application:
