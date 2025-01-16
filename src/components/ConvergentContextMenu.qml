@@ -19,6 +19,77 @@ import './private' as P
  * Menu popup that appears as a tradional menu on desktop and as a bottom
  * drawer mobile.
  *
+ * ConvergentContextMenu uses abstract Controls.Action and Kirigami.Action to build
+ * the traditional menu on desktopn and the bottom drawer on mobile. Most properties
+ * of Kirigami.Action are supported including nested actions.
+ *
+ * \code{qml}
+ * import QtQuick.Controls as Controls
+ * import org.kde.kirigami as Kirigami
+ * import org.kde.kirigamiaddons.components as Components
+ * import org.kde.kirigamiaddons.formcard as FormCard
+ * 
+ * Components.ConvergentContextMenu {
+ *     id: root
+ * 
+ *     headerContentItem: RowLayout {
+ *         spacing: Kirigami.Units.smallSpacing
+ *         Kirigami.Avatar { ... }
+ * 
+ *         Kirigami.Heading {
+ *             level: 2
+ *             text: "Room Name"
+ *         }
+ *     }
+ * 
+ *     Controls.Action {
+ *         text: i18nc("@action:inmenu", "Simple Action")
+ *     }
+ * 
+ *     Kirigami.Action {
+ *         text: i18nc("@action:inmenu", "Nested Action")
+ * 
+ *         Controls.Action { ... }
+ * 
+ *         Controls.Action { ... }
+ * 
+ *         Controls.Action { ... }
+ *     }
+ * 
+ *     Kirigami.Action {
+ *         text: i18nc("@action:inmenu", "Nested Action with Multiple Choices")
+ * 
+ *         Kirigami.Action {
+ *             text: i18nc("@action:inmenu", "Follow Global Settings")
+ *             checkable: true
+ *             autoExclusive: true // Since KF 6.10
+ *         }
+ * 
+ *         Kirigami.Action {
+ *             text: i18nc("@action:inmenu", "Enabled")
+ *             checkable: true
+ *             autoExclusive: true // Since KF 6.10
+ *         }
+ * 
+ *         Kirigami.Action {
+ *             text: i18nc("@action:inmenu", "Disabled")
+ *             checkable: true
+ *             autoExclusive: true // Since KF 6.10
+ *         }
+ *     }
+ * 
+ *     // custom FormCard delegate only supported on mobile
+ *     Kirigami.Action {
+ *         visible: Kirigami.Settings.isMobile
+ *         displayComponent: FormCard.FormButtonDelegate { ... }
+ *     }
+ * }
+ * \endcode{qml}
+ *
+ * When creating a menu for a ListView, avoid creating a ConvergentContextMenu for each delegate
+ * and instead create a global ConvergentContextMenu for the ListView or use a Component and dynamically
+ * instanciate the context menu on demand:
+ *
  * \code{qml}
  * import QtQuick
  * import QtQuick.Controls as Controls
@@ -28,20 +99,31 @@ import './private' as P
  *     model: 10
  *     delegate: Controls.ItemDelegate {
  *         text: index
- *         onPressAndHold: contextMenu.popup();
+ *         onPressAndHold: {
+ *             const item = menu.createObject(Controls.Overlay.overlay, {
+ *                 index,
+ *             });
+ *             item.popup();
+ *             item.closed.connect(() => item.destroy());
+ *         }
  *     }
  *
- *     Addons.ConvergentContextMenu {
+ *     Component {
  *         id: menu
- *         Controls.Action {
- *             text: i18nc("@action:inmenu", "Action 1")
- *         }
  *
- *         Kirigami.Action {
- *             text: i18nc("@action:inmenu", "Action 2")
+ *         Addons.ConvergentContextMenu {
+ *             required property int index
  *
  *             Controls.Action {
- *                 text: i18nc("@action:inmenu", "Sub-action")
+ *                 text: i18nc("@action:inmenu", "Action 1")
+ *             }
+ *
+ *             Kirigami.Action {
+ *                 text: i18nc("@action:inmenu", "Action 2")
+ *
+ *                 Controls.Action {
+ *                     text: i18nc("@action:inmenu", "Sub-action")
+ *                 }
  *             }
  *         }
  *     }
