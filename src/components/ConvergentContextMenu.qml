@@ -179,6 +179,7 @@ Item {
         P.ActionsMenu {
             actions: root.actions
             submenuComponent: P.ActionsMenu { }
+            modal: true
             onClosed: {
                 root.closed();
                 destroy();
