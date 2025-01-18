@@ -23,6 +23,10 @@
 
 #include "%{APPNAMELC}config.h"
 
+#ifdef Q_OS_WINDOWS
+#include <Windows.h>
+#endif
+
 using namespace Qt::Literals::StringLiterals;
 
 #ifdef Q_OS_ANDROID
