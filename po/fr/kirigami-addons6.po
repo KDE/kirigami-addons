@@ -1,11 +1,11 @@
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Xavier Besnard <xavier.besnard@kde.org>
 # Xavier Besnard <xavier.besnard@kde.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-19 00:40+0000\n"
-"PO-Revision-Date: 2024-12-31 09:56+0100\n"
+"PO-Revision-Date: 2025-01-20 19:17+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.1\n"
 "X-Text-Markup: kde4\n"
 
 #, kde-format
@@ -221,7 +221,7 @@ msgstr "Qt"
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr "Environnement de développement d'applications multi-plateforme"
+msgstr "Environnement de développement d'applications multi-plate-forme"
 
 #: formcard/aboutcomponent.cpp:37
 #, kde-format
@@ -650,8 +650,8 @@ msgid ""
 "shortcut.\n"
 "Please choose another one."
 msgstr ""
-"La touche « F12 » est réservée sous Windows. Ainsi, il ne peut pas être "
-"utilisé pour un raccourci global. \n"
+"La touche « F12 » est réservée sous Windows. Ainsi, il est impossible de "
+"l'utiliser pour un raccourci global. \n"
 "Veuillez en sélectionner un autre."
 
 #: statefulapplication/private/keysequencehelper.cpp:143
@@ -682,7 +682,7 @@ msgstr "Action « %1 » dans le contexte « %2 »\n"
 msgctxt "@info"
 msgid "The '%1' key combination shadows following global actions:\n"
 msgstr ""
-"La combinaison de touches« %1 » suit les actions globales suivantes :\n"
+"La combinaison de touches « %1 » suit les actions globales suivantes :\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:193
 #, kde-format
@@ -698,8 +698,8 @@ msgid ""
 "some applications use.\n"
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
-"La combinaison de touches « %1 » est aussi utilisée pour l'action "
-"standard« %2  que certaines applications utilisent.\n"
+"La combinaison de touches « %1 » est aussi utilisée pour l'action standard "
+"« %2 » que certaines applications utilisent.\n"
 "Voulez-vous vraiment l'utiliser comme raccourci également ?"
 
 #: statefulapplication/private/KeySequenceItem.qml:129
