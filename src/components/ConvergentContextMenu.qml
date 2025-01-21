@@ -99,12 +99,25 @@ import './private' as P
  *     model: 10
  *     delegate: Controls.ItemDelegate {
  *         text: index
- *         onPressAndHold: {
+ *
+ *         function openContextMenu(): void {
  *             const item = menu.createObject(Controls.Overlay.overlay, {
  *                 index,
  *             });
  *             item.popup();
- *             item.closed.connect(() => item.destroy());
+ *         }
+ *
+ *         onPressAndHold: openContextMenu()
+ *
+ *         // Since Qt 6.9
+ *         Controls.ContextMenu.onRequested: (position) => openContextMenu()
+ *
+ *         // Before Qt 6.9
+ *         TapHandler {
+ *             acceptedButtons: Qt.RightButton
+ *             onSingleTapped: (eventPoint, button) => {
+ *                 openContextMenu();
+ *             }
  *         }
  *     }
  *
