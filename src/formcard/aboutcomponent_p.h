@@ -23,4 +23,5 @@ public:
     QList<KAboutComponent> components() const;
 
     Q_INVOKABLE void copyToClipboard();
+    Q_INVOKABLE void copyTextToClipboard(const QString &url);
 };

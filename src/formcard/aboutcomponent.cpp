@@ -63,3 +63,9 @@ void AboutComponent::copyToClipboard()
     QClipboard *clipboard = QGuiApplication::clipboard();
     clipboard->setText(info);
 }
+
+void AboutComponent::copyTextToClipboard(const QString &url)
+{
+    QClipboard *clipboard = QGuiApplication::clipboard();
+    clipboard->setText(url);
+}

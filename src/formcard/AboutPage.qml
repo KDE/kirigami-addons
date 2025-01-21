@@ -217,11 +217,11 @@ FormCardPage {
     FormCard {
         Layout.topMargin: Kirigami.Units.gridUnit
 
-        FormButtonDelegate {
+        FormLinkDelegate {
             id: getInvolvedDelegate
             icon.name: "globe-symbolic"
             text: i18nd("kirigami-addons6", "Homepage")
-            onClicked: Qt.openUrlExternally(aboutData.homepage)
+            url: aboutData.homepage
             visible: aboutData.homepage.length > 0
         }
 
@@ -231,11 +231,11 @@ FormCardPage {
             visible: aboutData.homepage.length > 0
         }
 
-        FormButtonDelegate {
+        FormLinkDelegate {
             id: donateDelegate
             icon.name: "donate-symbolic"
             text: i18nd("kirigami-addons6", "Donate")
-            onClicked: Qt.openUrlExternally(donateUrl + "?app=" + page.aboutData.componentName)
+            url: donateUrl + "?app=" + page.aboutData.componentName
             visible: donateUrl.toString().length > 0
         }
 
@@ -245,11 +245,11 @@ FormCardPage {
             visible: donateUrl.toString().length > 0
         }
 
-        FormButtonDelegate {
+        FormLinkDelegate {
             id: homepageDelegate
             icon.name: "applications-development-symbolic"
             text: i18nd("kirigami-addons6", "Get Involved")
-            onClicked: Qt.openUrlExternally(page.getInvolvedUrl)
+            url: page.getInvolvedUrl
             visible: page.getInvolvedUrl != ""
         }
 
@@ -259,9 +259,9 @@ FormCardPage {
             visible: page.getInvolvedUrl != ""
         }
 
-        FormButtonDelegate {
+        FormLinkDelegate {
             id: bugDelegate
-            readonly property string theUrl: {
+            url: {
                 if (aboutData.bugAddress !== "submit@bugs.kde.org") {
                     return aboutData.bugAddress
                 }
@@ -275,8 +275,7 @@ FormCardPage {
 
             icon.name: "tools-report-bug-symbolic"
             text: i18nd("kirigami-addons6", "Report a Bug")
-            onClicked: Qt.openUrlExternally(theUrl)
-            visible: theUrl.length > 0
+            visible: url.length > 0
         }
     }
 

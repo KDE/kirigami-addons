@@ -45,6 +45,6 @@ Kirigami.Icon {
                 return "arrow-right-symbolic";
         }
     }
-    implicitWidth: Math.round(Kirigami.Units.iconSizes.small * 0.75)
-    implicitHeight: Math.round(Kirigami.Units.iconSizes.small * 0.75)
+    implicitWidth: 12
+    implicitHeight: 12
 }
