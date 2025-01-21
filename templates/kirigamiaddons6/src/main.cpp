@@ -18,6 +18,7 @@
 
 #include "version-%{APPNAMELC}.h"
 #include <KAboutData>
+#include <KIconTheme>
 #include <KLocalizedQmlContext>
 #include <KLocalizedString>
 
@@ -38,6 +39,8 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
     QQuickStyle::setStyle(QStringLiteral("org.kde.breeze"));
 #else
+    KIconTheme::initTheme();
+    QIcon::setFallbackThemeName("breeze"_L1);
     QApplication app(argc, argv);
 
     // Default to org.kde.desktop style unless the user forces another style
