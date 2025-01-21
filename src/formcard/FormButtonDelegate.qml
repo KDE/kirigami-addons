@@ -61,6 +61,14 @@ AbstractFormDelegate {
      */
     property real leadingPadding: Kirigami.Units.largeSpacing
 
+    /**
+     * @brief This property holds an alias to the internal FormCard.FormArrow.
+     *
+     * This allow to hide it completely or change the direction (e.g. to
+     * implement a collapsible section).
+     *
+     * @since 1.7.0
+     */
     readonly property alias trailingLogo: formArrow
 
     focusPolicy: Qt.StrongFocus
