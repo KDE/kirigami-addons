@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-19 00:40+0000\n"
+"POT-Creation-Date: 2025-01-22 00:40+0000\n"
 "PO-Revision-Date: 2024-08-28 09:36+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -85,7 +85,7 @@ msgctxt "@action:button"
 msgid "Close"
 msgstr "Zavřít"
 
-#: components/ConvergentContextMenu.qml:217
+#: components/ConvergentContextMenu.qml:230
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
@@ -469,13 +469,13 @@ msgctxt "Accessible description"
 msgid "Current color \"%1\""
 msgstr "Aktuální barva \"%1\"."
 
-#: formcard/FormDateTimeDelegate.qml:195
+#: formcard/FormDateTimeDelegate.qml:196
 #, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
 msgid "Today"
 msgstr "Dnes"
 
-#: formcard/FormDateTimeDelegate.qml:222 formcard/FormDateTimeDelegate.qml:359
+#: formcard/FormDateTimeDelegate.qml:223 formcard/FormDateTimeDelegate.qml:360
 #, kde-format
 msgctxt "Date is not set"
 msgid "Not set"
