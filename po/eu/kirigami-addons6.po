@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-22 00:40+0000\n"
+"POT-Creation-Date: 2025-01-23 00:39+0000\n"
 "PO-Revision-Date: 2024-12-31 19:14+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -82,7 +82,7 @@ msgstr "Aurreko irudia"
 msgid "Next image"
 msgstr "Hurrengo irudia"
 
-#: components/Banner.qml:187 formcard/AboutPage.qml:501
+#: components/Banner.qml:187 formcard/AboutPage.qml:500
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -315,12 +315,12 @@ msgstr ""
 msgid "Report a bug"
 msgstr "Eman akats baten berri"
 
-#: formcard/AboutKDEPage.qml:117
+#: formcard/AboutKDEPage.qml:116
 #, kde-format
 msgid "Join us"
 msgstr "Elkartu gurekin"
 
-#: formcard/AboutKDEPage.qml:122
+#: formcard/AboutKDEPage.qml:121
 #, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
@@ -332,22 +332,22 @@ msgstr ""
 "dezakezu. Irudiak, gaiak, soinuak, eta dokumentu hobetuak eman ditzakezu. "
 "Erabakia zurea da!"
 
-#: formcard/AboutKDEPage.qml:130 formcard/AboutPage.qml:251
+#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:251
 #, kde-format
 msgid "Get Involved"
 msgstr "Engaia zaitez"
 
-#: formcard/AboutKDEPage.qml:140
+#: formcard/AboutKDEPage.qml:139
 #, kde-format
 msgid "Developer Documentation"
 msgstr "Garatzailearen dokumentazioa"
 
-#: formcard/AboutKDEPage.qml:146
+#: formcard/AboutKDEPage.qml:145
 #, kde-format
 msgid "Support us"
 msgstr "Babestu gaitzazu"
 
-#: formcard/AboutKDEPage.qml:151
+#: formcard/AboutKDEPage.qml:150
 #, kde-format
 msgid ""
 "KDE software is and will always be available free of charge, however "
@@ -384,12 +384,12 @@ msgstr ""
 "\n"
 "Mila esker aldez aurretik zure laguntzagatik."
 
-#: formcard/AboutKDEPage.qml:164
+#: formcard/AboutKDEPage.qml:163
 #, kde-format
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDEPage.qml:174 formcard/AboutPage.qml:237
+#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:237
 #, kde-format
 msgid "Donate"
 msgstr "Egin dohaintza"
@@ -422,44 +422,44 @@ msgstr[1] "Lizentziak"
 msgid "Report a Bug"
 msgstr "Eman akats baten berri"
 
-#: formcard/AboutPage.qml:284
+#: formcard/AboutPage.qml:283
 #, kde-format
 msgid "Libraries in use"
 msgstr "Erabiltzen ari diren liburutegiak"
 
-#: formcard/AboutPage.qml:287
+#: formcard/AboutPage.qml:286
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "Kopiatu arbelera"
 
-#: formcard/AboutPage.qml:291
+#: formcard/AboutPage.qml:290
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "Sistemaren informazioa arbelera kopiatu da."
 
-#: formcard/AboutPage.qml:304
+#: formcard/AboutPage.qml:303
 #, kde-format
 msgid "Authors"
 msgstr "Egileak"
 
-#: formcard/AboutPage.qml:319
+#: formcard/AboutPage.qml:318
 #, kde-format
 msgid "Credits"
 msgstr "Merituak"
 
-#: formcard/AboutPage.qml:334
+#: formcard/AboutPage.qml:333
 #, kde-format
 msgid "Translators"
 msgstr "Itzultzaileak"
 
-#: formcard/AboutPage.qml:403
+#: formcard/AboutPage.qml:402
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Bisitatu %1(e)ren KDE biltegiaren orria"
 
-#: formcard/AboutPage.qml:412
+#: formcard/AboutPage.qml:411
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Bidali e-posta bat %1(e)ri"
@@ -487,6 +487,28 @@ msgstr "Gaur"
 msgctxt "Date is not set"
 msgid "Not set"
 msgstr "Ezarri gabe"
+
+#: formcard/FormLinkDelegate.qml:51
+#, kde-format
+msgctxt "@action:inmnenu"
+msgid "Open Link"
+msgstr ""
+
+#: formcard/FormLinkDelegate.qml:57
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Copy to Clipboard"
+msgctxt "@action:inmnenu"
+msgid "Copy Link to Clipboard"
+msgstr "Kopiatu arbelera"
+
+#: formcard/FormLinkDelegate.qml:63
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "System information copied to clipboard."
+msgctxt "@info:status"
+msgid "Url copied to clipboard."
+msgstr "Sistemaren informazioa arbelera kopiatu da."
 
 #: formcard/FormPasswordFieldDelegate.qml:230
 #: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:253

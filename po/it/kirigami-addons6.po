@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-22 00:40+0000\n"
+"POT-Creation-Date: 2025-01-23 00:39+0000\n"
 "PO-Revision-Date: 2024-12-31 00:00+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -80,7 +80,7 @@ msgstr "Immagine precedente"
 msgid "Next image"
 msgstr "Immagine successiva"
 
-#: components/Banner.qml:187 formcard/AboutPage.qml:501
+#: components/Banner.qml:187 formcard/AboutPage.qml:500
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -313,12 +313,12 @@ msgstr ""
 msgid "Report a bug"
 msgstr "Segnala un bug"
 
-#: formcard/AboutKDEPage.qml:117
+#: formcard/AboutKDEPage.qml:116
 #, kde-format
 msgid "Join us"
 msgstr "Unisciti a noi"
 
-#: formcard/AboutKDEPage.qml:122
+#: formcard/AboutKDEPage.qml:121
 #, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
@@ -330,22 +330,22 @@ msgstr ""
 "interfacce dei programmi. Puoi produrre lavori grafici, temi, suoni, e "
 "migliorare la documentazione. Sei tu che decidi!"
 
-#: formcard/AboutKDEPage.qml:130 formcard/AboutPage.qml:251
+#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:251
 #, kde-format
 msgid "Get Involved"
 msgstr "Partecipa"
 
-#: formcard/AboutKDEPage.qml:140
+#: formcard/AboutKDEPage.qml:139
 #, kde-format
 msgid "Developer Documentation"
 msgstr "Documentazione per gli sviluppatori"
 
-#: formcard/AboutKDEPage.qml:146
+#: formcard/AboutKDEPage.qml:145
 #, kde-format
 msgid "Support us"
 msgstr "Supportaci"
 
-#: formcard/AboutKDEPage.qml:151
+#: formcard/AboutKDEPage.qml:150
 #, kde-format
 msgid ""
 "KDE software is and will always be available free of charge, however "
@@ -381,12 +381,12 @@ msgstr ""
 "\n"
 "Grazie in anticipo per il tuo supporto."
 
-#: formcard/AboutKDEPage.qml:164
+#: formcard/AboutKDEPage.qml:163
 #, kde-format
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDEPage.qml:174 formcard/AboutPage.qml:237
+#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:237
 #, kde-format
 msgid "Donate"
 msgstr "Fai una donazione"
@@ -419,44 +419,44 @@ msgstr[1] "Licenze"
 msgid "Report a Bug"
 msgstr "Segnala un bug"
 
-#: formcard/AboutPage.qml:284
+#: formcard/AboutPage.qml:283
 #, kde-format
 msgid "Libraries in use"
 msgstr "Librerie in uso"
 
-#: formcard/AboutPage.qml:287
+#: formcard/AboutPage.qml:286
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "Copia negli appunti"
 
-#: formcard/AboutPage.qml:291
+#: formcard/AboutPage.qml:290
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "Informazioni sul sistema copiate negli appunti."
 
-#: formcard/AboutPage.qml:304
+#: formcard/AboutPage.qml:303
 #, kde-format
 msgid "Authors"
 msgstr "Autori"
 
-#: formcard/AboutPage.qml:319
+#: formcard/AboutPage.qml:318
 #, kde-format
 msgid "Credits"
 msgstr "Riconoscimenti"
 
-#: formcard/AboutPage.qml:334
+#: formcard/AboutPage.qml:333
 #, kde-format
 msgid "Translators"
 msgstr "Traduttori"
 
-#: formcard/AboutPage.qml:403
+#: formcard/AboutPage.qml:402
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Visita la pagina del KDE Store di %1"
 
-#: formcard/AboutPage.qml:412
+#: formcard/AboutPage.qml:411
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Invia un messaggio di posta elettronica a %1"
@@ -484,6 +484,28 @@ msgstr "Oggi"
 msgctxt "Date is not set"
 msgid "Not set"
 msgstr "Non impostato"
+
+#: formcard/FormLinkDelegate.qml:51
+#, kde-format
+msgctxt "@action:inmnenu"
+msgid "Open Link"
+msgstr ""
+
+#: formcard/FormLinkDelegate.qml:57
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Copy to Clipboard"
+msgctxt "@action:inmnenu"
+msgid "Copy Link to Clipboard"
+msgstr "Copia negli appunti"
+
+#: formcard/FormLinkDelegate.qml:63
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "System information copied to clipboard."
+msgctxt "@info:status"
+msgid "Url copied to clipboard."
+msgstr "Informazioni sul sistema copiate negli appunti."
 
 #: formcard/FormPasswordFieldDelegate.qml:230
 #: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:253

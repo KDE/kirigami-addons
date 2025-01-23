@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-22 00:40+0000\n"
+"POT-Creation-Date: 2025-01-23 00:39+0000\n"
 "PO-Revision-Date: 2024-04-28 18:58+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -78,7 +78,7 @@ msgstr "前の画像"
 msgid "Next image"
 msgstr "次の画像"
 
-#: components/Banner.qml:187 formcard/AboutPage.qml:501
+#: components/Banner.qml:187 formcard/AboutPage.qml:500
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -313,13 +313,13 @@ msgstr ""
 msgid "Report a bug"
 msgstr "バグを報告"
 
-#: formcard/AboutKDEPage.qml:117
+#: formcard/AboutKDEPage.qml:116
 #, kde-format
 msgid "Join us"
 msgstr "KDE に参加"
 
 # /trunk/l10n-support/ja/summit/messages/kxmlgui/kxmlgui6.po の Revision 1676811 から一部転載
-#: formcard/AboutKDEPage.qml:122
+#: formcard/AboutKDEPage.qml:121
 #, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
@@ -331,23 +331,23 @@ msgstr ""
 "フィック、テーマ、サウンドあるいはドキュメントの改善で貢献していただくことも"
 "できます。さあ、あとはあなた次第です!"
 
-#: formcard/AboutKDEPage.qml:130 formcard/AboutPage.qml:251
+#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:251
 #, kde-format
 msgid "Get Involved"
 msgstr "参加する"
 
-#: formcard/AboutKDEPage.qml:140
+#: formcard/AboutKDEPage.qml:139
 #, kde-format
 msgid "Developer Documentation"
 msgstr "開発者向けの文書"
 
-#: formcard/AboutKDEPage.qml:146
+#: formcard/AboutKDEPage.qml:145
 #, kde-format
 msgid "Support us"
 msgstr "KDE を支援"
 
 # /trunk/l10n-support/ja/summit/messages/kxmlgui/kxmlgui6.po の Revision 1676811 から一部転載
-#: formcard/AboutKDEPage.qml:151
+#: formcard/AboutKDEPage.qml:150
 #, kde-format
 msgid ""
 "KDE software is and will always be available free of charge, however "
@@ -380,12 +380,12 @@ msgstr ""
 "\n"
 "将来のあなたのサポートに感謝します。"
 
-#: formcard/AboutKDEPage.qml:164
+#: formcard/AboutKDEPage.qml:163
 #, kde-format
 msgid "KDE e.V"
 msgstr "KDE e.V"
 
-#: formcard/AboutKDEPage.qml:174 formcard/AboutPage.qml:237
+#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:237
 #, kde-format
 msgid "Donate"
 msgstr "寄付"
@@ -420,44 +420,44 @@ msgstr[0] "ライセンス"
 msgid "Report a Bug"
 msgstr "バグを報告"
 
-#: formcard/AboutPage.qml:284
+#: formcard/AboutPage.qml:283
 #, kde-format
 msgid "Libraries in use"
 msgstr "使用されているライブラリ"
 
-#: formcard/AboutPage.qml:287
+#: formcard/AboutPage.qml:286
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: formcard/AboutPage.qml:291
+#: formcard/AboutPage.qml:290
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr ""
 
-#: formcard/AboutPage.qml:304
+#: formcard/AboutPage.qml:303
 #, kde-format
 msgid "Authors"
 msgstr "作者"
 
-#: formcard/AboutPage.qml:319
+#: formcard/AboutPage.qml:318
 #, kde-format
 msgid "Credits"
 msgstr "クレジット"
 
-#: formcard/AboutPage.qml:334
+#: formcard/AboutPage.qml:333
 #, kde-format
 msgid "Translators"
 msgstr "翻訳者"
 
-#: formcard/AboutPage.qml:403
+#: formcard/AboutPage.qml:402
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "%1 の KDE Store ページを訪れる"
 
-#: formcard/AboutPage.qml:412
+#: formcard/AboutPage.qml:411
 #, kde-format
 msgid "Send an email to %1"
 msgstr "%1 にメールを送る"
@@ -485,6 +485,24 @@ msgstr "今日"
 msgctxt "Date is not set"
 msgid "Not set"
 msgstr "設定されていません"
+
+#: formcard/FormLinkDelegate.qml:51
+#, kde-format
+msgctxt "@action:inmnenu"
+msgid "Open Link"
+msgstr ""
+
+#: formcard/FormLinkDelegate.qml:57
+#, kde-format
+msgctxt "@action:inmnenu"
+msgid "Copy Link to Clipboard"
+msgstr ""
+
+#: formcard/FormLinkDelegate.qml:63
+#, kde-format
+msgctxt "@info:status"
+msgid "Url copied to clipboard."
+msgstr ""
 
 #: formcard/FormPasswordFieldDelegate.qml:230
 #: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:253

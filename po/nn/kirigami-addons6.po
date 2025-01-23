@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-22 00:40+0000\n"
+"POT-Creation-Date: 2025-01-23 00:39+0000\n"
 "PO-Revision-Date: 2024-10-06 14:05+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -81,7 +81,7 @@ msgstr "Førre bilete"
 msgid "Next image"
 msgstr "Neste bilete"
 
-#: components/Banner.qml:187 formcard/AboutPage.qml:501
+#: components/Banner.qml:187 formcard/AboutPage.qml:500
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -314,12 +314,12 @@ msgstr ""
 msgid "Report a bug"
 msgstr "Meld frå om feil"
 
-#: formcard/AboutKDEPage.qml:117
+#: formcard/AboutKDEPage.qml:116
 #, kde-format
 msgid "Join us"
 msgstr "Vert med"
 
-#: formcard/AboutKDEPage.qml:122
+#: formcard/AboutKDEPage.qml:121
 #, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
@@ -330,22 +330,22 @@ msgstr ""
 "med omsetjingar, laga grafikk, tema, lydar eller betre hjelpetekstar. Her er "
 "noko for alle!"
 
-#: formcard/AboutKDEPage.qml:130 formcard/AboutPage.qml:251
+#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:251
 #, kde-format
 msgid "Get Involved"
 msgstr "Vert med"
 
-#: formcard/AboutKDEPage.qml:140
+#: formcard/AboutKDEPage.qml:139
 #, kde-format
 msgid "Developer Documentation"
 msgstr "Dokumentasjon for utviklarar"
 
-#: formcard/AboutKDEPage.qml:146
+#: formcard/AboutKDEPage.qml:145
 #, kde-format
 msgid "Support us"
 msgstr "Støtt oss"
 
-#: formcard/AboutKDEPage.qml:151
+#: formcard/AboutKDEPage.qml:150
 #, kde-format
 msgid ""
 "KDE software is and will always be available free of charge, however "
@@ -378,12 +378,12 @@ msgstr ""
 "\n"
 "På førehand tusen takk for støtta di."
 
-#: formcard/AboutKDEPage.qml:164
+#: formcard/AboutKDEPage.qml:163
 #, kde-format
 msgid "KDE e.V"
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:174 formcard/AboutPage.qml:237
+#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:237
 #, kde-format
 msgid "Donate"
 msgstr "Gje pengegåve"
@@ -416,44 +416,44 @@ msgstr[1] "Lisensar"
 msgid "Report a Bug"
 msgstr "Meld frå om feil"
 
-#: formcard/AboutPage.qml:284
+#: formcard/AboutPage.qml:283
 #, kde-format
 msgid "Libraries in use"
 msgstr "Brukte bibliotek"
 
-#: formcard/AboutPage.qml:287
+#: formcard/AboutPage.qml:286
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: formcard/AboutPage.qml:291
+#: formcard/AboutPage.qml:290
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr ""
 
-#: formcard/AboutPage.qml:304
+#: formcard/AboutPage.qml:303
 #, kde-format
 msgid "Authors"
 msgstr "Utviklarar"
 
-#: formcard/AboutPage.qml:319
+#: formcard/AboutPage.qml:318
 #, kde-format
 msgid "Credits"
 msgstr "Bidragsytarar"
 
-#: formcard/AboutPage.qml:334
+#: formcard/AboutPage.qml:333
 #, kde-format
 msgid "Translators"
 msgstr "Omsetjarar"
 
-#: formcard/AboutPage.qml:403
+#: formcard/AboutPage.qml:402
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Gå til %1-sida i KDE-butikken"
 
-#: formcard/AboutPage.qml:412
+#: formcard/AboutPage.qml:411
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Send e-post til %1"
@@ -481,6 +481,24 @@ msgstr "I dag"
 msgctxt "Date is not set"
 msgid "Not set"
 msgstr "Ikkje vald"
+
+#: formcard/FormLinkDelegate.qml:51
+#, kde-format
+msgctxt "@action:inmnenu"
+msgid "Open Link"
+msgstr ""
+
+#: formcard/FormLinkDelegate.qml:57
+#, kde-format
+msgctxt "@action:inmnenu"
+msgid "Copy Link to Clipboard"
+msgstr ""
+
+#: formcard/FormLinkDelegate.qml:63
+#, kde-format
+msgctxt "@info:status"
+msgid "Url copied to clipboard."
+msgstr ""
 
 #: formcard/FormPasswordFieldDelegate.qml:230
 #: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:253
