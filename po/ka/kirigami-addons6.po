@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-23 00:39+0000\n"
-"PO-Revision-Date: 2024-12-30 03:06+0100\n"
+"PO-Revision-Date: 2025-01-23 04:25+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -489,23 +489,19 @@ msgstr "დაყენებული არაა"
 #, kde-format
 msgctxt "@action:inmnenu"
 msgid "Open Link"
-msgstr ""
+msgstr "ბმულის გახსნა"
 
 #: formcard/FormLinkDelegate.qml:57
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Copy to Clipboard"
+#, kde-format
 msgctxt "@action:inmnenu"
 msgid "Copy Link to Clipboard"
-msgstr "ბუფერში კოპირება"
+msgstr "ბმულის კოპირება ბუფერში"
 
 #: formcard/FormLinkDelegate.qml:63
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "System information copied to clipboard."
+#, kde-format
 msgctxt "@info:status"
 msgid "Url copied to clipboard."
-msgstr "ინფორმაცია სისტემის შესახებ დაკოპირდა ბუფერში."
+msgstr "URL დაკოპირდა ბუფერში."
 
 #: formcard/FormPasswordFieldDelegate.qml:230
 #: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:253

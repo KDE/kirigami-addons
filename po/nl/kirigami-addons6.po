@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-23 00:39+0000\n"
-"PO-Revision-Date: 2024-12-30 23:21+0100\n"
+"PO-Revision-Date: 2025-01-23 16:57+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,12 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Freek de Kruijf - 2024"
+msgstr "Freek de Kruijf - 2024 t/m 2025"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -490,23 +490,19 @@ msgstr "Niet gezet"
 #, kde-format
 msgctxt "@action:inmnenu"
 msgid "Open Link"
-msgstr ""
+msgstr "Koppeling openen"
 
 #: formcard/FormLinkDelegate.qml:57
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Copy to Clipboard"
+#, kde-format
 msgctxt "@action:inmnenu"
 msgid "Copy Link to Clipboard"
-msgstr "Naar klembord kopiëren"
+msgstr "Koppeling naar klembord kopiëren"
 
 #: formcard/FormLinkDelegate.qml:63
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "System information copied to clipboard."
+#, kde-format
 msgctxt "@info:status"
 msgid "Url copied to clipboard."
-msgstr "Systeeminformatie gekopieerd naar het klembord."
+msgstr "URL gekopieerd naar het klembord."
 
 #: formcard/FormPasswordFieldDelegate.qml:230
 #: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:253
