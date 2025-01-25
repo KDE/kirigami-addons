@@ -480,19 +480,19 @@ msgstr "未设置"
 #, kde-format
 msgctxt "@action:inmnenu"
 msgid "Open Link"
-msgstr ""
+msgstr "打开链接"
 
 #: formcard/FormLinkDelegate.qml:57
 #, kde-format
 msgctxt "@action:inmnenu"
 msgid "Copy Link to Clipboard"
-msgstr ""
+msgstr "复制链接至剪贴板"
 
 #: formcard/FormLinkDelegate.qml:63
 #, kde-format
 msgctxt "@info:status"
 msgid "Url copied to clipboard."
-msgstr ""
+msgstr "URL 已复制到剪贴板。"
 
 #: formcard/FormPasswordFieldDelegate.qml:230
 #: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:253
