@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-23 00:39+0000\n"
-"PO-Revision-Date: 2025-01-20 19:17+0100\n"
+"PO-Revision-Date: 2025-01-24 11:17+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -494,23 +494,19 @@ msgstr "Non défini"
 #, kde-format
 msgctxt "@action:inmnenu"
 msgid "Open Link"
-msgstr ""
+msgstr "Ouvrir le lien"
 
 #: formcard/FormLinkDelegate.qml:57
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Copy to Clipboard"
+#, kde-format
 msgctxt "@action:inmnenu"
 msgid "Copy Link to Clipboard"
-msgstr "Copier dans le presse-papier"
+msgstr "Copier le lien dans le presse-papier"
 
 #: formcard/FormLinkDelegate.qml:63
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "System information copied to clipboard."
+#, kde-format
 msgctxt "@info:status"
 msgid "Url copied to clipboard."
-msgstr "Informations sur le système copiées dans le presse-papier."
+msgstr "URL copiée dans le presse-papier."
 
 #: formcard/FormPasswordFieldDelegate.qml:230
 #: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:253

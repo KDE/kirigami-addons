@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
-# SPDX-FileCopyrightText: 2023, 2024 Adrián Chaves (Gallaecio)
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-23 00:39+0000\n"
-"PO-Revision-Date: 2024-12-31 09:31+0100\n"
+"PO-Revision-Date: 2025-01-25 11:57+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -489,23 +489,19 @@ msgstr "Non definida"
 #, kde-format
 msgctxt "@action:inmnenu"
 msgid "Open Link"
-msgstr ""
+msgstr "Abrir a ligazón"
 
 #: formcard/FormLinkDelegate.qml:57
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Copy to Clipboard"
+#, kde-format
 msgctxt "@action:inmnenu"
 msgid "Copy Link to Clipboard"
-msgstr "Copiar no portapapeis"
+msgstr "Copiar a ligazón no portapapeis"
 
 #: formcard/FormLinkDelegate.qml:63
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "System information copied to clipboard."
+#, kde-format
 msgctxt "@info:status"
 msgid "Url copied to clipboard."
-msgstr "A información do sistema copiouse no portapapeis."
+msgstr "O URL copiouse no portapapeis."
 
 #: formcard/FormPasswordFieldDelegate.qml:230
 #: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:253

@@ -4,13 +4,13 @@
 # This file is distributed under the same license as the kirigami-addons package.
 #
 # Automatically generated, 2022.
-# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-23 00:39+0000\n"
-"PO-Revision-Date: 2024-12-30 16:15+0900\n"
+"PO-Revision-Date: 2025-01-24 23:07+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -478,23 +478,19 @@ msgstr "未設定"
 #, kde-format
 msgctxt "@action:inmnenu"
 msgid "Open Link"
-msgstr ""
+msgstr "開啟連結"
 
 #: formcard/FormLinkDelegate.qml:57
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Copy to Clipboard"
+#, kde-format
 msgctxt "@action:inmnenu"
 msgid "Copy Link to Clipboard"
-msgstr "複製到剪貼簿"
+msgstr "複製連結至剪貼簿"
 
 #: formcard/FormLinkDelegate.qml:63
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "System information copied to clipboard."
+#, kde-format
 msgctxt "@info:status"
 msgid "Url copied to clipboard."
-msgstr "已將系統資訊複製到剪貼簿。"
+msgstr "URL 已複製到剪貼簿。"
 
 #: formcard/FormPasswordFieldDelegate.qml:230
 #: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:253
