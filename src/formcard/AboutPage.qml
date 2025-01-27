@@ -459,7 +459,7 @@ FormCardPage {
 
                     QQC2.ToolButton {
                         id: licenseButton
-                        visible: modelData.licenses !== 0
+                        visible: modelData.licenses.key !== 0
                         icon.name: "license-symbolic"
 
                         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
