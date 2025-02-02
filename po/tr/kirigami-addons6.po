@@ -211,7 +211,7 @@ msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr ""
 "Qt’yi genişletmek üzere KDE Topluluğu tarafından oluşturulan kitaplıklar "
-"koleksiyonu."
+"koleksiyonu"
 
 #: formcard/aboutcomponent.cpp:35
 #, kde-format
@@ -222,18 +222,18 @@ msgstr "Qt"
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr "Çapraz platform uygulama geliştirme çatısı."
+msgstr "Çapraz platform uygulama geliştirme çatısı"
 
 #: formcard/aboutcomponent.cpp:37
 #, kde-format
 msgid "Using %1 and built against %2"
-msgstr "%1 kullanarak %2 üzerine yapılmıştır"
+msgstr "%1 kullanarak %2 üzerine yapılı"
 
 #: formcard/aboutcomponent.cpp:41
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr "Altta yatan platform."
+msgstr "Altındaki platform"
 
 #: formcard/AboutKDEPage.qml:24
 #: statefulapplication/abstractkirigamiapplication.cpp:174
@@ -810,6 +810,3 @@ msgstr "%1 Hakkında"
 msgctxt "@title:window"
 msgid "About KDE"
 msgstr "KDE Hakkında"
-
-#~ msgid "Windowing system"
-#~ msgstr "Pencereleme sistemi"
