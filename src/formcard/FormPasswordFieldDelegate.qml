@@ -139,6 +139,14 @@ AbstractFormDelegate {
     property string statusMessage: ""
 
     /**
+     * @brief This property hodls whether the password quality is shown.
+     *
+     * This is allow people to see whether heir password is secure when choosing
+     * a new password.
+     */
+    property bool showPasswordQuality: false
+
+    /**
      * @This signal is emitted when the Return or Enter key is pressed.
      *
      * Note that if there is a validator or inputMask set on the text input,
@@ -243,6 +251,7 @@ AbstractFormDelegate {
                 Layout.preferredWidth: metrics.advanceWidth
             }
         }
+
         Kirigami.PasswordField {
             id: textField
             Accessible.description: label
@@ -254,6 +263,73 @@ AbstractFormDelegate {
             onEditingFinished: root.editingFinished()
             onTextEdited: root.textEdited()
             activeFocusOnTab: false
+        }
+
+        Loader {
+            active: root.showPasswordQuality
+            Layout.fillWidth: true
+            sourceComponent: RowLayout {
+                spacing: 2
+
+                PasswordHealth {
+                    id: passwordHealth
+                    password: textField.text
+                }
+
+                Repeater {
+                    model: 4
+
+                    Rectangle {
+                        id: rect
+
+                        required property int index
+
+                        height: Kirigami.Units.smallSpacing
+
+                        radius: 1
+
+                        color: switch (passwordHealth.quality) {
+                        case PasswordHealth.Bad:
+                        case PasswordHealth.Poor:
+                            return Kirigami.Theme.negativeBackgroundColor;
+                        case PasswordHealth.Weak:
+                            return Kirigami.Theme.neutralBackgroundColor;
+                        case PasswordHealth.Good:
+                        case PasswordHealth.Excellent:
+                            return Kirigami.Theme.positiveBackgroundColor;
+                        }
+
+                        Layout.fillWidth: true
+
+                        Rectangle {
+                            height: Kirigami.Units.smallSpacing
+                            width: {
+                                const entropy = Math.min(passwordHealth.entropy, 200);
+                                if (entropy > (index + 1) * 50) {
+                                    return parent.width;
+                                } else if (entropy < (index) * 50) {
+                                    return 0;
+                                }
+                                const percent = entropy / 200;
+                                return Math.max(0, parent.width * (percent * 4 - index))
+                            }
+
+                            radius: 1
+
+                            color: switch (passwordHealth.quality) {
+                            case PasswordHealth.Bad:
+                            case PasswordHealth.Poor:
+                                return Kirigami.Theme.negativeTextColor;
+                            case PasswordHealth.Weak:
+                                return Kirigami.Theme.neutralTextColor;
+                            case PasswordHealth.Good:
+                            case PasswordHealth.Excellent:
+                                return Kirigami.Theme.positiveTextColor;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         Kirigami.InlineMessage {

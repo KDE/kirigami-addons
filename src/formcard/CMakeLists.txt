@@ -57,6 +57,10 @@ endif()
 target_sources(formcardplugin PRIVATE
     aboutcomponent_p.h
     aboutcomponent.cpp
+    passwordhealth.h
+    passwordhealth.cpp
+    zxcvbn/zxcvbn.h
+    zxcvbn/zxcvbn.c
 )
 target_compile_definitions(formcardplugin PRIVATE -DTRANSLATION_DOMAIN=\"kirigami-addons6\")
 

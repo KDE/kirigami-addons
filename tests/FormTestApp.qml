@@ -451,18 +451,19 @@ Kirigami.ApplicationWindow {
 
                 FormCard.FormDelegateSeparator {}
 
-                FormCard.FormTextFieldDelegate {
+                FormCard.FormPasswordFieldDelegate {
                     id: password1
                     label: "Password"
                     statusMessage: "Password incorrect"
                     status: Kirigami.MessageType.Error
                     echoMode: TextInput.Password
                     text: "666666666"
+                    showPasswordQuality: true
                 }
 
                 FormCard.FormDelegateSeparator {}
 
-                FormCard.FormTextFieldDelegate {
+                FormCard.FormPasswordFieldDelegate {
                     id: password2
                     label: "Password"
                     statusMessage: "Password match"
