@@ -19,7 +19,7 @@ ecm_add_qml_module(%{APPNAMELC}_static
         org.kde.%{APPNAMELC}.settings
 )
 
-target_sources(%{APPNAMELC}_static PUBLIC
+target_sources(%{APPNAMELC}_static PRIVATE
     %{APPNAMELC}application.cpp
     %{APPNAMELC}application.h
 )
