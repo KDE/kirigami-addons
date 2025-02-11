@@ -95,6 +95,8 @@ T.RadioDelegate {
 
     Layout.fillWidth: true
 
+    onCheckedChanged: radioButtonItem.checked = checked;
+
     contentItem: ColumnLayout {
         spacing: Private.FormCardUnits.verticalSpacing
 
@@ -129,15 +131,10 @@ T.RadioDelegate {
                 rightPadding: 0
                 bottomPadding: 0
 
-                onToggled: root.toggled()
+                onToggled: root.toggle()
                 onClicked: root.clicked()
                 onPressAndHold: root.pressAndHold()
                 onDoubleClicked: root.doubleClicked()
-
-                onCheckedChanged: {
-                    root.checked = checked;
-                    checked = Qt.binding(() => root.checked);
-                }
             }
 
             Kirigami.Icon {
