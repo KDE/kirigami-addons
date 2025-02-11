@@ -488,20 +488,16 @@ msgid "Open Link"
 msgstr ""
 
 #: formcard/FormLinkDelegate.qml:57
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Copy to Clipboard"
+#, kde-format
 msgctxt "@action:inmnenu"
 msgid "Copy Link to Clipboard"
-msgstr "Zkopírovat do schránky"
+msgstr ""
 
 #: formcard/FormLinkDelegate.qml:63
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Copy to Clipboard"
+#, kde-format
 msgctxt "@info:status"
 msgid "Url copied to clipboard."
-msgstr "Zkopírovat do schránky"
+msgstr ""
 
 #: formcard/FormPasswordFieldDelegate.qml:230
 #: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:253
@@ -634,12 +630,10 @@ msgid "Delete word"
 msgstr "Odstranit slovo"
 
 #: settings/ShortcutsConfigurationModule.qml:23
-#, fuzzy, kde-format
-#| msgctxt "@title:dialog"
-#| msgid "Reserved Shortcut"
+#, kde-format
 msgctxt "@action:button"
 msgid "Keyboard Shortcuts"
-msgstr "Rezervovaná klávesová zkratka"
+msgstr ""
 
 #: settings/SpellcheckingConfigurationModule.qml:14
 #, kde-format
