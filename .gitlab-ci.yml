@@ -11,6 +11,7 @@ include:
       - /gitlab-templates/freebsd-qt6.yml
       - /gitlab-templates/android-qt6.yml
       - /gitlab-templates/windows-qt6.yml
+      - /gitlab-templates/linux-qt6-next.yml
 
 qml-check-i18n:
   stage: build
@@ -33,5 +34,3 @@ qml-check-i18n:
      if [ $CI_JOB_STATUS != 'success' ]; then
          git --no-pager diff
      fi
-
-      - /gitlab-templates/linux-qt6-next.yml
