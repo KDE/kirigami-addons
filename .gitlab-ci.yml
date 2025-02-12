@@ -34,3 +34,4 @@ qml-check-i18n:
          git --no-pager diff
      fi
 
+      - /gitlab-templates/linux-qt6-next.yml
