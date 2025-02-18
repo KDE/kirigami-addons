@@ -69,6 +69,7 @@ T.ItemDelegate {
 
     background: Rectangle {
         color: if (root.highlighted || root.checked || (root.down && !root.checked) || root.visualFocus) {
+            behavior.enabled = true;
             const highlight = Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.highlightColor, 0.3);
             if (root.hovered) {
                 Kirigami.ColorUtils.tintWithAlpha(highlight, Kirigami.Theme.textColor, 0.10)
@@ -76,6 +77,7 @@ T.ItemDelegate {
                 highlight
             }
         } else if (root.hovered) {
+            behavior.enabled = true;
             Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.10)
         } else {
             Kirigami.Theme.backgroundColor
@@ -106,6 +108,15 @@ T.ItemDelegate {
             }
             visible: root.showSeparator && !root.hovered
             opacity: 0.5
+        }
+
+        Behavior on color {
+            id: behavior
+
+            enabled: false
+            ColorAnimation {
+                duration: Kirigami.Units.shortDuration
+            }
         }
     }
 
