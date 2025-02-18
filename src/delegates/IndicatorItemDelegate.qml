@@ -45,7 +45,7 @@ T.ItemDelegate {
     topPadding: verticalPadding
     bottomPadding: verticalPadding
 
-    hoverEnabled: true
+    hoverEnabled: !Kirigami.Settings.isMobile
 
     icon {
         width: if (contentItem instanceof SubtitleContentItem) {
