@@ -63,9 +63,8 @@ T.ItemDelegate {
     }
     highlighted: listView.isCurrentItem || gridView.isCurrentItem
 
-    spacing: Kirigami.Units.mediumSpacing
-
-    padding: Kirigami.Units.mediumSpacing
+    padding: Kirigami.Settings.tabletMode ? Kirigami.Units.largeSpacing : Kirigami.Units.mediumSpacing
+    spacing: Kirigami.Settings.tabletMode ? Kirigami.Units.largeSpacing * 2 : Kirigami.Units.smallSpacing
 
     horizontalPadding: padding + Math.round(Kirigami.Units.smallSpacing / 2)
     leftPadding: horizontalPadding
@@ -92,15 +91,15 @@ T.ItemDelegate {
 
     icon {
         width: if (contentItem instanceof SubtitleContentItem) {
-            Kirigami.Units.iconSizes.large
+            return Kirigami.Units.iconSizes.large
         } else {
-            Kirigami.Units.iconSizes.sizeForLabels
+            return Kirigami.Settings.tabletMode ? Kirigami.Units.iconSizes.smallMedium : Kirigami.Units.iconSizes.sizeForLabels
         }
 
         height: if (contentItem instanceof SubtitleContentItem) {
-            Kirigami.Units.iconSizes.large
+            return Kirigami.Units.iconSizes.large
         } else {
-            Kirigami.Units.iconSizes.sizeForLabels
+            return Kirigami.Settings.tabletMode ? Kirigami.Units.iconSizes.smallMedium : Kirigami.Units.iconSizes.sizeForLabels
         }
     }
 

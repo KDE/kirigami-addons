@@ -38,7 +38,7 @@ RowLayout {
      */
     readonly property alias iconItem: iconItem
 
-    spacing: Kirigami.Units.smallSpacing
+    spacing: itemDelegate instanceof T.ItemDelegate ? itemDelegate.spacing : Kirigami.Units.mediumSpacing
 
     Kirigami.Icon {
         id: iconItem

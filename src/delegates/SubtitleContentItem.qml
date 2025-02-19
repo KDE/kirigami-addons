@@ -18,14 +18,15 @@ RowLayout {
     readonly property alias subtitleItem: subtitleItem
     readonly property alias iconItem: iconItem
 
-    spacing: Kirigami.Units.smallSpacing
+    spacing: itemDelegate instanceof T.ItemDelegate ? itemDelegate.spacing : Kirigami.Units.mediumSpacing
 
     Kirigami.Icon {
         id: iconItem
-        Layout.alignment: Qt.AlignVCenter
+
         visible: itemDelegate.icon.name.length > 0 || itemDelegate.icon.source.toString().length > 0
         source: itemDelegate.icon.name.length > 0 ? itemDelegate.icon.name : itemDelegate.icon.source
 
+        Layout.alignment: Qt.AlignVCenter
         Layout.preferredHeight: itemDelegate.icon.width
         Layout.preferredWidth: itemDelegate.icon.height
         Layout.leftMargin: Kirigami.Units.smallSpacing
