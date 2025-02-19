@@ -82,7 +82,7 @@ T.ItemDelegate {
             behavior.enabled = true;
             return Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.10)
         } else {
-            return !Kirigami.Theme.backgroundColor.valid ? 'transparent' : Kirigami.Theme.backgroundColor;
+            return 'transparent'
         }
 
         // indicator rectangle
@@ -110,15 +110,6 @@ T.ItemDelegate {
             }
             visible: root.showSeparator && !root.hovered
             opacity: 0.5
-        }
-
-        Behavior on color {
-            id: behavior
-
-            enabled: false
-            ColorAnimation {
-                duration: Kirigami.Units.shortDuration
-            }
         }
     }
 

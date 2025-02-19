@@ -116,33 +116,21 @@ T.ItemDelegate {
         color: if (root.highlighted || root.checked || (root.down && !root.checked) || root.visualFocus) {
             const highlight = Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.highlightColor, 0.3);
             if (root.hovered || root.dropAreaHovered) {
-                behavior.enabled = true;
                 return Kirigami.ColorUtils.tintWithAlpha(highlight, Kirigami.Theme.textColor, 0.10);
             } else if (highlight.valid) {
-                behavior.enabled = true;
                 return highlight;
             } else {
                 return 'transparent';
             }
         } else if (root.hovered || root.dropAreaHovered) {
-            behavior.enabled = true;
             return Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.10)
         } else {
-            return !Kirigami.Theme.backgroundColor.valid ? 'transparent' : Kirigami.Theme.backgroundColor;
+            return 'transparent'
         }
 
         border {
             color: Kirigami.Theme.highlightColor
             width: root.visualFocus || root.activeFocus ? 1 : 0
-        }
-
-        Behavior on color {
-            id: behavior
-
-            enabled: false
-            ColorAnimation {
-                duration: Kirigami.Units.shortDuration
-            }
         }
     }
 
