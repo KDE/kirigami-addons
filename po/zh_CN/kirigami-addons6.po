@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-23 00:39+0000\n"
+"POT-Creation-Date: 2025-02-19 00:40+0000\n"
 "PO-Revision-Date: 2024-04-23 19:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -494,7 +494,7 @@ msgctxt "@info:status"
 msgid "Url copied to clipboard."
 msgstr "URL 已复制到剪贴板。"
 
-#: formcard/FormPasswordFieldDelegate.qml:230
+#: formcard/FormPasswordFieldDelegate.qml:238
 #: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:253
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
