@@ -72,15 +72,17 @@ T.ItemDelegate {
             behavior.enabled = true;
             const highlight = Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.highlightColor, 0.3);
             if (root.hovered) {
-                Kirigami.ColorUtils.tintWithAlpha(highlight, Kirigami.Theme.textColor, 0.10)
+                return Kirigami.ColorUtils.tintWithAlpha(highlight, Kirigami.Theme.textColor, 0.10)
+            } else if (highlight.valid) {
+                return highlight
             } else {
-                highlight
+                return 'transparent';
             }
         } else if (root.hovered) {
             behavior.enabled = true;
-            Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.10)
+            return Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.10)
         } else {
-            Kirigami.Theme.backgroundColor
+            return !Kirigami.Theme.backgroundColor.valid ? 'transparent' : Kirigami.Theme.backgroundColor;
         }
 
         // indicator rectangle

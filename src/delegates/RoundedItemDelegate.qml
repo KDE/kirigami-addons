@@ -114,18 +114,21 @@ T.ItemDelegate {
         radius: Kirigami.Units.cornerRadius
 
         color: if (root.highlighted || root.checked || (root.down && !root.checked) || root.visualFocus) {
-            behavior.enabled = true;
             const highlight = Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.highlightColor, 0.3);
             if (root.hovered || root.dropAreaHovered) {
-                Kirigami.ColorUtils.tintWithAlpha(highlight, Kirigami.Theme.textColor, 0.10)
+                behavior.enabled = true;
+                return Kirigami.ColorUtils.tintWithAlpha(highlight, Kirigami.Theme.textColor, 0.10);
+            } else if (highlight.valid) {
+                behavior.enabled = true;
+                return highlight;
             } else {
-                highlight
+                return 'transparent';
             }
         } else if (root.hovered || root.dropAreaHovered) {
             behavior.enabled = true;
-            Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.10)
+            return Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.10)
         } else {
-           Kirigami.Theme.backgroundColor
+            return !Kirigami.Theme.backgroundColor.valid ? 'transparent' : Kirigami.Theme.backgroundColor;
         }
 
         border {
