@@ -413,10 +413,9 @@ QQC2.Control {
         }
 
         contentItem: Item {
-            // clip with rounded corners
-            layer.enabled: popup.enter.running || popup.exit.running
-            layer.effect: Kirigami.ShadowedTexture {
-                // color is not needed, we are here for the clipping only.
+            clip: true
+
+            Rectangle {
                 color: "transparent"
                 // border is not needed, as is is already accounted by
                 // padding. But radius has to be adjusted for that padding.
