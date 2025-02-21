@@ -161,6 +161,13 @@ Item {
      */
     property Item headerContentItem
 
+    /**
+     * This property holds whether the popup is fully open.
+     *
+     * Note: Setting this property yourself does nothing. You must open the popup using popup().
+     */
+    property bool opened
+
     signal closed
 
     function popup(parent = null, position = null): void {
@@ -184,6 +191,7 @@ Item {
                 item.popup();
             }
         }
+        root.opened = true;
     }
 
     Component {
@@ -194,6 +202,7 @@ Item {
             submenuComponent: P.ActionsMenu { }
             modal: true
             onClosed: {
+                root.opened = false;
                 root.closed();
                 destroy();
             }
@@ -207,6 +216,7 @@ Item {
             id: drawer
 
             onClosed: {
+                root.opened = false;
                 root.closed();
                 destroy();
             }
