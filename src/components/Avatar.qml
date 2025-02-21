@@ -173,6 +173,18 @@ Item {
         width: root.__diameter
         height: root.__diameter
 
+        Rectangle {
+            id: circleBorder
+
+            visible: !root.__showImage
+            anchors.fill: parent
+            radius: root.__diameter
+
+            border.width: 1.25
+            border.color: root.color
+            color: Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, border.color, 0.07)
+        }
+
         Text {
             anchors.fill: parent
 
@@ -223,19 +235,11 @@ Item {
                 width: root.__diameter * root.Screen.devicePixelRatio
                 height: root.__diameter * root.Screen.devicePixelRatio
             }
-        }
-
-        layer {
-            enabled: true
-            effect: Kirigami.ShadowedTexture {
-                radius: root.__diameter
-
-                border {
-                    width: root.__showImage ? 0 : 1.25
-                    color: root.color
+            layer {
+                enabled: GraphicsInfo.api !== GraphicsInfo.Software
+                effect: Kirigami.ShadowedTexture {
+                    radius: root.__diameter
                 }
-
-                color: Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, border.color, 0.07)
             }
         }
     }
