@@ -234,6 +234,11 @@ T.Dialog {
             Layout.fillWidth: true
         }
 
+        Item {
+            visible: !checkbox.visible
+            Layout.fillWidth: true
+        }
+
         Repeater {
             id: repeater
             model: dialogButtonBox.contentModel
@@ -255,12 +260,22 @@ T.Dialog {
 
             contentItem: Item {}
             delegate: QQC2.Button {
+                property int index: repeater.model.children.indexOf(this)
+
                 Kirigami.MnemonicData.controlType: Kirigami.MnemonicData.DialogButton
 
                 Layout.fillWidth: root._mobileLayout
-                Layout.leftMargin: root._mobileLayout ? Kirigami.Units.largeSpacing : 0
-                Layout.rightMargin: root._mobileLayout ? Kirigami.Units.largeSpacing : 0
-                Layout.bottomMargin: root._mobileLayout ? 0 : 2
+                Layout.leftMargin: if (root._mobileLayout) {
+                    return Kirigami.Units.largeSpacing * 2;
+                } else {
+                    return index === 0 ? Kirigami.Units.largeSpacing : 0;
+                }
+                Layout.rightMargin: if (root._mobileLayout) {
+                    return Kirigami.Units.largeSpacing * 2;
+                } else {
+                    return index === repeater.count - 1 ? Kirigami.Units.largeSpacing : 0;
+                }
+                Layout.bottomMargin: root._mobileLayout && index !== repeater.count - 1 ? 0 : Kirigami.Units.largeSpacing * 2
             }
         }
     }
