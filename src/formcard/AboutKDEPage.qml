@@ -160,7 +160,7 @@ Thank you very much in advance for your support.")
         FormLinkDelegate {
             id: ev
 
-            text: i18nd("kirigami-addons6", "KDE e.V")
+            text: i18nd("kirigami-addons6", "KDE e.V.")
             icon.name: 'kde-symbolic'
             url: "https://ev.kde.org/"
         }
