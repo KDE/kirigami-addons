@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:40+0000\n"
+"POT-Creation-Date: 2025-03-05 00:41+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -376,8 +376,9 @@ msgstr ""
 "भवतः समर्थनार्थं पूर्वमेव बहु धन्यवादः।"
 
 #: formcard/AboutKDEPage.qml:163
-#, kde-format
-msgid "KDE e.V"
+#, fuzzy, kde-format
+#| msgid "KDE e.V"
+msgid "KDE e.V."
 msgstr "केडीई ई.वि"
 
 #: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:237
