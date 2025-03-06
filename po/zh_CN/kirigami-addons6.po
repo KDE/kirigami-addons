@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:40+0000\n"
+"POT-Creation-Date: 2025-03-05 00:41+0000\n"
 "PO-Revision-Date: 2024-04-23 19:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -375,8 +375,8 @@ msgstr ""
 
 #: formcard/AboutKDEPage.qml:163
 #, kde-format
-msgid "KDE e.V"
-msgstr "KDE e.V"
+msgid "KDE e.V."
+msgstr ""
 
 #: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:237
 #, kde-format
