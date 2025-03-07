@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-05 00:41+0000\n"
-"PO-Revision-Date: 2025-01-28 19:09+0400\n"
+"PO-Revision-Date: 2025-03-06 09:04+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -374,10 +374,9 @@ msgstr ""
 "شكرًا جزيلًا مقدمًا لدعمك."
 
 #: formcard/AboutKDEPage.qml:163
-#, fuzzy, kde-format
-#| msgid "KDE e.V"
+#, kde-format
 msgid "KDE e.V."
-msgstr "كِيدِي e.V."
+msgstr "كِيدِي إي. في."
 
 #: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:237
 #, kde-format

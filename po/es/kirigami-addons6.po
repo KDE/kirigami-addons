@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-05 00:41+0000\n"
-"PO-Revision-Date: 2025-01-24 00:33+0100\n"
+"PO-Revision-Date: 2025-03-06 20:21+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -385,10 +385,9 @@ msgstr ""
 "Muchas gracias de antemano por su apoyo."
 
 #: formcard/AboutKDEPage.qml:163
-#, fuzzy, kde-format
-#| msgid "KDE e.V"
+#, kde-format
 msgid "KDE e.V."
-msgstr "KDE e.V"
+msgstr "KDE e.V."
 
 #: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:237
 #, kde-format
@@ -622,7 +621,7 @@ msgstr "Diccionario para comprobación ortográfica"
 #, kde-format
 msgctxt "Placeholder message"
 msgid "Add a new word to your personal dictionary…"
-msgstr "Añadir una nueva palabra al diccionario personal..."
+msgstr "Añadir una nueva palabra al diccionario personal…"
 
 #: settings/private/SonnetConfigPage.qml:177
 #, kde-format
@@ -770,7 +769,7 @@ msgstr "Atajos de teclado"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Filter…"
-msgstr "Filtro..."
+msgstr "Filtro…"
 
 #: statefulapplication/private/ShortcutsEditor.qml:69
 #, kde-format
