@@ -52,7 +52,7 @@ MenuItem {
     visible: _action && _action.text.length > 0
     checkable: _action?.checkable
     checked: _action?.checked
-    enabled: _action && _action.enabled && parent.enabled
+    enabled: _action && _action.enabled
 
     readonly property Shortcut alternateShortcut : Shortcut {
         sequences: Private.Helper.alternateShortcuts(_action)
