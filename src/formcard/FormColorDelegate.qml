@@ -9,36 +9,46 @@ import Qt.labs.platform
 import org.kde.kirigamiaddons.formcard as FormCard
 import org.kde.kirigami as Kirigami
 
-/**
- * @brief A FormCard delegate for colors.
- *
- * Allow users to select colors. By default "Color" is the default label
- * but this can be overwritten with the `text` property.
- *
- * @code{qml}
- * FormCard.FormCard {
- *     FormCard.FormColorDelegate {
- *         color: "blue"
- *     }
- *
- *     FormCard.FormDelegateSeparator {}
- *
- *     FormCard.FormColorDelegate {
- *         text: i18nc("@label", "Active color")
- *         color: "blue"
- *     }
- * }
- * @endcode
- * @image html formcardcolor.png
+/*!
+   \qmltype FormColorDelegate
+   \inqmlmodule org.kde.kirigamiaddons.formcard
+   \brief A FormCard delegate for colors.
+
+   Allow users to select colors. By default "Color" is the default label
+   but this can be overwritten with the text property.
+
+   \qml
+   FormCard.FormCard {
+       FormCard.FormColorDelegate {
+           color: "blue"
+       }
+
+       FormCard.FormDelegateSeparator {}
+
+       FormCard.FormColorDelegate {
+           text: i18nc("@label", "Active color")
+           color: "blue"
+       }
+   }
+   \endqml
+   \image formcardcolor.png
  */
 FormCard.AbstractFormDelegate {
     id: root
 
+    /*!
+       The currently selected color.
+     */
     property color color: "transparent"
 
     icon.name: "color-picker"
     onClicked: colorDialog.open()
 
+    /*!
+       // Todo change to property string
+       \qmlproperty FormColorDelegate::text
+       \default "Color"
+     */
     text: i18ndc("kirigami-addons6", "@action:button", "Color")
     Accessible.description: i18ndc("kirigami-addons6", "Accessible description", "Current color \"%1\"", color)
 
