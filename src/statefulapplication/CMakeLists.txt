@@ -16,6 +16,8 @@ add_library(KirigamiAddonsStatefulApp
     shortcutsmodel_p.h
 )
 
+ecm_generate_qdoc(KirigamiAddonsStatefulApp statefulapplication.qdocconf)
+
 set_target_properties(KirigamiAddonsStatefulApp PROPERTIES
     VERSION     ${PROJECT_VERSION}
     SOVERSION   6

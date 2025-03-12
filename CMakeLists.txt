@@ -32,6 +32,7 @@ include(ECMQtDeclareLoggingCategory)
 include(ECMAddQch)
 include(ECMQmlModule)
 include(KDEClangFormat)
+include(ECMGenerateQDoc)
 
 find_package(Qt6 ${QT_REQUIRED_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick QuickControls2)
 

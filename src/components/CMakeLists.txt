@@ -5,6 +5,8 @@
 
 ecm_add_qml_module(componentslabsplugin URI "org.kde.kirigamiaddons.labs.components" VERSION 1.0 CLASS_NAME ComponentsLabsPlugin)
 
+ecm_generate_qdoc(componentslabsplugin components.qdocconf)
+
 target_sources(componentslabsplugin PRIVATE
     nameutils.h
     nameutils.cpp

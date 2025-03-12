@@ -1,0 +1,31 @@
+/*!
+    \page kirigami-addons-index.html
+    \title Kirigami Addons
+
+    Todo
+
+    \section1 Using the Module
+
+    \include {module-use.qdocinc} {using the c++ api}
+
+    \section2 Building with CMake
+
+    \include {module-use.qdocinc} {building with cmake} {Widgets}
+
+    \section1 API Reference
+
+    \list
+        \li \l{Kirigami Addons FormCard QML Types}
+        \li \l{Kirigami Addons Delegates QML Types}
+        \li \l{Kirigami Addons Settings QML Types}
+        \li \l{Kirigami Addons TreeView QML Types}
+        \li \l{Kirigami Addons TableView QML Types}
+        \li \l{Kirigami Addons Labs Components QML Types}
+        \li \l{Kirigami Addons Sounds QML Types}
+        \li \l{Kirigami Addons StatefulApplication QML Types}
+    \endlist
+
+    \section1 Licenses
+
+    TODO
+*/

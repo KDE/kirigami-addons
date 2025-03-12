@@ -1,0 +1,5 @@
+/*!
+   \qmlmodule org.kde.kirigamiaddons.treeview
+   \title Kirigami Addons TreeView QML Types
+   \brief QML types for creating treeviews
+ */

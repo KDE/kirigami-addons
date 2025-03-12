@@ -9,6 +9,8 @@ ecm_add_qml_module(tableviewplugin
         org.kde.kirigami
 )
 
+ecm_generate_qdoc(tableviewplugin tableview.qdocconf)
+
 ecm_target_qml_sources(tableviewplugin SOURCES
     qml/ListTableView.qml
     qml/KTableView.qml

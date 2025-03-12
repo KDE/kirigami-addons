@@ -1,0 +1,5 @@
+/*!
+   \qmlmodule org.kde.kirigamiaddons.tableview
+   \title Kirigami Addons TableView QML Types
+   \brief QML types for creating table views
+ */
