@@ -11,40 +11,42 @@ import org.kde.kirigamiaddons.formcard as FormCard
 
 import './private' as Private
 
-/**
- * A dialog designed to use FormCard delegates as it's content.
- *
- * \code{.qml}
- * import org.kde.kirigamiaddons.formcard as FormCard
- * import QtQuick.Controls
- *
- * FormCard.FormCardDialog {
- *     title: "Add Thingy"
- *
- *     standardButtons: Dialog.Ok | Dialog.Cancel
- *     FormCard.FormTextFieldDelegate {
- *         label: i18nc("@label:textbox Notebook name", "Name:")
- *     }
- *
- *     FormCard.FormDelegateSeparator {}
- *
- *     FormCard.FormButtonDelegate {
- *         text: i18nc("@action:button", "Color")
- *         icon.name: "color-picker"
- *     }
- *
- *     FormCard.FormDelegateSeparator {}
- *
- *     FormCard.FormButtonDelegate {
- *         text: i18nc("@action:button", "Icon")
- *         icon.name: "preferences-desktop-emoticons"
- *     }
- * }
- * \endcode{}
- *
- * \image html formcarddialog.png
- *
- * \since 1.1.0
+/*!
+   \qmltype FormCardDialog
+   \inqmlmodule org.kde.kirigamiaddons.formcard
+   \brief A dialog designed to use FormCard delegates as its content.
+
+   \qml
+   import org.kde.kirigamiaddons.formcard as FormCard
+   import QtQuick.Controls
+
+   FormCard.FormCardDialog {
+       title: "Add Thingy"
+
+       standardButtons: Dialog.Ok | Dialog.Cancel
+       FormCard.FormTextFieldDelegate {
+           label: i18nc("@label:textbox Notebook name", "Name:")
+       }
+
+       FormCard.FormDelegateSeparator {}
+
+       FormCard.FormButtonDelegate {
+           text: i18nc("@action:button", "Color")
+           icon.name: "color-picker"
+       }
+
+       FormCard.FormDelegateSeparator {}
+
+       FormCard.FormButtonDelegate {
+           text: i18nc("@action:button", "Icon")
+           icon.name: "preferences-desktop-emoticons"
+       }
+   }
+   \endqml
+
+   \image formcarddialog.png
+
+   \since 1.1.0
  */
 QQC2.Dialog {
     id: root
