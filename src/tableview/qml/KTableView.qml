@@ -10,6 +10,10 @@ import org.kde.kirigami as Kirigami
 
 import "private" as Private
 
+/*!
+   \qmltype KTableView
+   \inqmlmodule org.kde.kirigamiaddons.tableview
+ */
 Private.AbstractTable {
     id: root
 
