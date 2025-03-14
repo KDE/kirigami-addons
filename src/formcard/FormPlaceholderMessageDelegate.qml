@@ -1,75 +1,77 @@
-// SPDX-FileCopyrightText: 2024 Carl Schwan <carl@carlschwan.eu>
+// SPDX-FileCopyrightText: 2024 Carl Schwan <carl\carlschwan.eu>
 // SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 
 import QtQuick
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 
-/**
- * @brief A placeholder message indicating that a FormCard is empty.
- *
- * Example usage:
- *
- * import org.kde.kirigamiaddons.formcard as FormCard
- *
- * FormCard.FormCardPage {
- *     FormCard.FormHeader {
- *         title: i18nc("@title:group", "Items")
- *     }
- *
- *     FormCard.FormCard {
- *         FormCard.FormPlaceholderMessageDelegate {
- *             text: i18nc("@info:placeholder", "There are no items in this list")
- *             visible: repeater.count === 0
- *         }
- *
- *         Repeater {
- *             id: repeater
- *             model: [ ... ]
- *             delegate: [ ... ]
- *         }
- *
- *         FormCard.FormDelegateSeparator {}
- *
- *         FormCard.FormButtonDelegate {
- *             text: i18nc("@action:button", "Add Item")
- *             icon.name: "list-add-symbolic"
- *         }
- *     }
- * }
- *
- * @since 6.9
+/*!
+   \qmltype FormPlaceholderMessageDelegate
+   \inqmlmodule org.kde.kirigamiaddons.formcard
+   \brief A placeholder message indicating that a FormCard is empty.
+
+   Example usage:
+
+   \qml
+   import org.kde.kirigamiaddons.formcard as FormCard
+
+   FormCard.FormCardPage {
+       FormCard.FormHeader {
+           title: i18nc("@title:group", "Items")
+       }
+
+       FormCard.FormCard {
+           FormCard.FormPlaceholderMessageDelegate {
+               text: i18nc("@info:placeholder", "There are no items in this list")
+               visible: repeater.count === 0
+           }
+
+           Repeater {
+               id: repeater
+               model: [ ... ]
+               delegate: [ ... ]
+           }
+
+           FormCard.FormDelegateSeparator {}
+
+           FormCard.FormButtonDelegate {
+               text: i18nc("@action:button", "Add Item")
+               icon.name: "list-add-symbolic"
+           }
+       }
+   }
+   \endqml
+
+   \since 6.9
  */
 AbstractFormDelegate {
     id: root
 
-    /**
-     * @brief This property holds the smaller explanatory text to show below the larger title-style text
-     *
-     * Useful for providing a user-friendly explanation on how to proceed.
-     *
-     * Optional; if not defined, the message will have no supplementary
-     * explanatory text.
+    /*!
+       \brief This property holds the smaller explanatory text to show below the larger title-style text.
+
+       Useful for providing a user-friendly explanation on how to proceed.
+
+       Optional; if not defined, the message will have no supplementary
+       explanatory text.
      */
     property string explanation
 
-    /**
-     * This property holds the link embedded in the explanatory message text that
-     * the user is hovering over.
+    /*!
+       This property holds the link embedded in the explanatory message text that
+       the user is hovering over.
      */
     property alias hoveredLink: label.hoveredLink
 
-    /**
-     * This signal is emitted when a link is hovered in the explanatory message
-     * text.
-     * @param The hovered link.
+    /*!
+       This signal is emitted when a \a link is hovered in the explanatory message
+       text.
      */
     signal linkHovered(string link)
 
-    /**
-     * This signal is emitted when a link is clicked or tapped in the explanatory
-     * message text.
-     * @param The clicked or tapped link.
+    /*!
+       This signal is emitted when a \a link is clicked or tapped in the explanatory
+       message text.
      */
     signal linkActivated(string link)
 
