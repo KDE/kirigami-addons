@@ -9,6 +9,10 @@ import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 
+/*!
+   \qmltype ListRowDelegate
+   \inqmlmodule org.kde.kirigamiaddons.tableview
+ */
 QQC2.ItemDelegate {
     id: delegate
 
@@ -17,9 +21,15 @@ QQC2.ItemDelegate {
     padding: 0
     horizontalPadding: 0
 
+    /*!
+     */
     required property var model
+    /*!
+     */
     required property int index
 
+    /*!
+     */
     property bool alternatingRows
 
     background: Rectangle {
