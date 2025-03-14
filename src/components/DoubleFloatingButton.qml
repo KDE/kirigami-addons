@@ -1,5 +1,5 @@
 // SPDX-FileCopyrightText: 2023 Mathis Brüchert <mbb@kaidan.im>
-// SPDX-FileCopyrightText: 2023 Carl Schwan <carl@carlschwan.eu>
+// SPDX-FileCopyrightText: 2023 Carl Schwan <carl\carlschwan.eu>
 //
 // SPDX-License-Identifier: LGPL-2.0-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 
@@ -9,57 +9,59 @@ import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Templates 2.15 as T
 import org.kde.kirigami 2.20 as Kirigami
 
-/**
- * This component allows to display two buttons at the bottom of a page.
- *
- * @code{.qml}
- * import QtQuick 2.15
- * import QtQuick.Controls 2.15 as QQC2
- * import org.kde.kirigami 2.20 as Kirigami
- * import org.kde.kirigamiaddons.components 1.0 as KirigamiComponents
- *
- * Kirigami.ScrollablePage {
- *     ListView {
- *         model: []
- *         delegate: QQC2.ItemDelegate {}
- *
- *         KirigamiComponents.DoubleFloatingButton {
- *             anchors {
- *                 right: parent.right
- *                 bottom: parent.bottom
- *                 margins: Kirigami.Units.largeSpacing
- *             }
- *
- *             leadingAction: Kirigami.Action {
- *                 text: "Zoom Out"
- *                 icon.name: "list-remove"
- *             }
- *
- *             trailingAction: Kirigami.Action {
- *                 text: "Zoom In"
- *                 icon.name: "list-add"
- *             }
- *         }
- *     }
- * }
- * @endcode
- *
- * @since Kirigami Addons 0.11
+/*!
+   \qmltype DoubleFloatingButton
+   \inqmlmodule org.kde.kirigamiaddons.labs.components
+   \brief This component allows to display two buttons at the bottom of a page.
+
+   \qml
+   import QtQuick 2.15
+   import QtQuick.Controls 2.15 as QQC2
+   import org.kde.kirigami 2.20 as Kirigami
+   import org.kde.kirigamiaddons.components 1.0 as KirigamiComponents
+
+   Kirigami.ScrollablePage {
+       ListView {
+           model: []
+           delegate: QQC2.ItemDelegate {}
+
+           KirigamiComponents.DoubleFloatingButton {
+               anchors {
+                   right: parent.right
+                   bottom: parent.bottom
+                   margins: Kirigami.Units.largeSpacing
+               }
+
+               leadingAction: Kirigami.Action {
+                   text: "Zoom Out"
+                   icon.name: "list-remove"
+               }
+
+               trailingAction: Kirigami.Action {
+                   text: "Zoom In"
+                   icon.name: "list-add"
+               }
+           }
+       }
+   }
+   \endqml
+
+   \since 0.11
  */
 Kirigami.ShadowedRectangle {
     id: root
 
-    /**
-     * This property holds the leading action.
+    /*!
+       This property holds the leading action.
      */
     property Kirigami.Action leadingAction
 
-    /**
-     * This property holds the trailing action.
+    /*!
+       This property holds the trailing action.
      */
     property Kirigami.Action trailingAction
 
-    // Note: binding corners to each other results in binding loops, because
+    // \note binding corners to each other results in binding loops, because
     // they share one common NOTIFY signal. Storing properties wastes memory.
     // So these two expressions are implemented as little helper functions.
 
@@ -79,7 +81,15 @@ Kirigami.ShadowedRectangle {
 
 
 
-    // Extra clickable area that adjusts both paddings and insets.
+    /*!
+       \qmlproperty real margins
+       \qmlproperty real topMargin
+       \qmlproperty real leftMargin
+       \qmlproperty real rightMargin
+       \qmlproperty real bottomMargin
+       \default 0
+       \brief Extra clickable area that adjusts both paddings and insets.
+    */
     property real margins: 0
     property real topMargin: margins
     property real leftMargin: margins
