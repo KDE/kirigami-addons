@@ -7,7 +7,7 @@ documentationinheaders = true
 
 headerdirs += .
 sourcedirs += .
-
+imagedirs  += ../../docs/pics
 outputformats = HTML
 
 depends += kde qtcore qtquick qtquickcontrols qtgui
