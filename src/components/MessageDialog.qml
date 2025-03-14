@@ -1,5 +1,5 @@
 // SPDX-FileCopyrightText: 2021 Claudio Cambra <claudio.cambra@gmail.com>
-// SPDX-FileCopyrightText: 2023 Carl Schwan <carl@carlschwan.eu>
+// SPDX-FileCopyrightText: 2023 Carl Schwan <carl\carlschwan.eu>
 // SPDX-License-Identifier: LGPL-2.1-or-later
 
 import QtQuick
@@ -11,10 +11,12 @@ import org.kde.kirigamiaddons.components as Components
 import org.kde.kirigamiaddons.formcard as FormCard
 import org.kde.kirigamiaddons.delegates as Delegates
 
-/**
- * A dialog to show a message. This dialog exists has 4 modes: success, warning, error, information.
- *
- * @image html messagedialog.png
+/*!
+   \qmltype MessageDialog
+   \inqmlmodule org.kde.kirigamiaddons.labs.components
+   \brief A dialog to show a message. This dialog exists has 4 modes: success, warning, error, information.
+
+   \image messagedialog.png
  */
 T.Dialog {
     id: root
@@ -26,28 +28,33 @@ T.Dialog {
         Information
     }
 
-    /**
-     * This property holds the dialogType. It can be either:
-     *
-     * - `MessageDialog.Success`: For a sucess message
-     * - `MessageDialog.Warning`: For a warning message
-     * - `MessageDialog.Error`: For an actual error
-     * - `MessageDialog.Information`: For an informational message
-     *
-     * By default, the dialogType is `MessageDialog.Success`
+    /*!
+       This property holds the dialogType. It can be either:
+
+       \value MessageDialog.Success
+              For a sucess message.
+       \value MessageDialog.Warning
+              For a warning message.
+       \value MessageDialog.Error
+              For an actual error.
+       \value MessageDialog.Information
+              For an informational message.
+
+       \default MessageDialog.Success
      */
     property int dialogType: Components.MessageDialog.Success
 
-    /**
-     * @brief This property holds the name of setting to store the "dont's show again" preference.
-     *
-     * If provided, a checkbox is added with which further notifications can be turned off.
-     * The string is used to lookup and store the setting in the applications config file.
-     * The setting is stored in the "Notification Messages" group.
-     *
-     * When set use, openDialog() instead of open() to open this dialog.
-     *
-     * @warning Overwriting the dialog's footer will disable this feature.
+    /*!
+       \brief This property holds the name of setting to store the "Don't show again" preference.
+
+       If provided, a checkbox is added with which further notifications can be turned off.
+       The string is used to lookup and store the setting in the applications config file.
+       The setting is stored in the "Notification Messages" group.
+
+       When set, use openDialog() instead of open() to open this dialog.
+
+       \warning Overwriting the dialog's footer will disable this feature.
+       \default ""
      */
     property string dontShowAgainName: ''
 
@@ -55,8 +62,12 @@ T.Dialog {
         return dialogButtonBox.standardButton(button);
     }
 
+    /*!
+     */
     default property alias mainContent: mainLayout.data
 
+    /*!
+     */
     property string iconName: switch (root.dialogType) {
     case MessageDialog.Success:
         return "data-success";
@@ -100,9 +111,9 @@ T.Dialog {
 
     property bool _automaticallyClosed: false
 
-    /**
-     * Open the dialog only if the user didn't check the "do not remind me" checkbox
-     * previously.
+    /*!
+       Open the dialog only if the user didn't check the "Do not remind me" checkbox
+       previously.
      */
     function openDialog(): void {
         if (root.dontShowAgainName.length > 0) {
