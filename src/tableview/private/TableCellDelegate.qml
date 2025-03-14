@@ -8,19 +8,37 @@ import QtQuick.Controls as QQC2
 
 import org.kde.kirigami as Kirigami
 
+/*!
+   \qmltype TableCellDelegate
+   \inqmlmodule org.kde.kirigamiaddons.tableview
+ */
 QQC2.ItemDelegate {
     id: delegate
 
     Accessible.role: Accessible.Cell
     highlighted: selected
 
+    /*!
+     */
     required property int row
+    /*!
+     */
     required property var index
+    /*!
+     */
     required property int column
+    /*!
+     */
     required property bool current
+    /*!
+     */
     required property bool selected
+    /*!
+     */
     required property var model
 
+    /*!
+     */
     readonly property AbstractHeaderComponent headerComponent: __columnModel.get(column).headerComponent
 
     Rectangle {
