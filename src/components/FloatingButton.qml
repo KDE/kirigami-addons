@@ -1,5 +1,5 @@
 // SPDX-FileCopyrightText: 2023 Mathis Brüchert <mbb@kaidan.im>
-// SPDX-FileCopyrightText: 2023 Carl Schwan <carl@carlschwan.eu>
+// SPDX-FileCopyrightText: 2023 Carl Schwan <carl\carlschwan.eu>
 // SPDX-FileCopyrightText: 2023 ivan tkachenko <me@ratijas.tk>
 //
 // SPDX-License-Identifier: LGPL-2.0-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
@@ -10,37 +10,39 @@ import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Templates 2.15 as T
 import org.kde.kirigami 2.20 as Kirigami
 
-/**
- * This component is a button that can be displayed at the bottom of a page.
- *
- * @code{.qml}
- * import QtQuick 2.15
- * import QtQuick.Controls 2.15 as QQC2
- * import org.kde.kirigami 2.20 as Kirigami
- * import org.kde.kirigamiaddons.components 1.0 as KirigamiComponents
- *
- * Kirigami.ScrollablePage {
- *     ListView {
- *         model: []
- *         delegate: QQC2.ItemDelegate {}
- *
- *         KirigamiComponents.FloatingButton {
- *             anchors {
- *                 right: parent.right
- *                 bottom: parent.bottom
- *             }
- *             margins: Kirigami.Units.largeSpacing
- *
- *             action: Kirigami.Action {
- *                 text: "Add new item"
- *                 icon.name: "list-add"
- *             }
- *         }
- *     }
- * }
- * @endcode
- *
- * @since Kirigami Addons 0.11
+/*!
+   \qmltype FloatingButton
+   \inqmlmodule org.kde.kirigamiaddons.labs.components
+   \brief This component is a button that can be displayed at the bottom of a page.
+
+   \qml
+   import QtQuick 2.15
+   import QtQuick.Controls 2.15 as QQC2
+   import org.kde.kirigami 2.20 as Kirigami
+   import org.kde.kirigamiaddons.components 1.0 as KirigamiComponents
+
+   Kirigami.ScrollablePage {
+       ListView {
+           model: []
+           delegate: QQC2.ItemDelegate {}
+
+           KirigamiComponents.FloatingButton {
+               anchors {
+                   right: parent.right
+                   bottom: parent.bottom
+               }
+               margins: Kirigami.Units.largeSpacing
+
+               action: Kirigami.Action {
+                   text: "Add new item"
+                   icon.name: "list-add"
+               }
+           }
+       }
+   }
+   \endqml
+
+   \since 0.11
  */
 T.RoundButton {
     id: controlRoot
@@ -63,7 +65,15 @@ T.RoundButton {
         ? Math.round(Math.max(__effectiveIconSize.width, __effectiveIconSize.height) * (Math.sqrt(2) - 1))
         : Kirigami.Settings.hasTransientTouchInput ? (Kirigami.Units.largeSpacing * 2) : Kirigami.Units.largeSpacing
 
-    // Extra clickable area that adjusts both paddings and insets.
+    /*!
+       \qmlproperty real margins
+       \qmlproperty real topMargin
+       \qmlproperty real leftMargin
+       \qmlproperty real rightMargin
+       \qmlproperty real bottomMargin
+       \default 0
+       \brief Extra clickable area that adjusts both paddings and insets.
+    */
     property real margins: 0
     property real topMargin: margins
     property real leftMargin: margins
