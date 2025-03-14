@@ -7,50 +7,53 @@ import QtQuick.Templates as T
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 
-/**
-* @brief A Component that allows sitching between multiple options.
-*
-* Example:
-*
-* @code{.qml}
-* Components.RadioSelector {
-*   consistentWidth: false
-*   actions: [
-*       Kirigami.Action {
-*           text: i18nc("@option:radio", "Week")
-*           icon.name: "view-calendar-week-symbolic"
-*       },
-*       Kirigami.Action {
-*           text: i18nc("@option:radio", "3 Days")
-*           icon.name: "view-calendar-upcoming-days-symbolic"
-*       },
-*       Kirigami.Action {
-*           text: i18nc("@option:radio", "1 Day")
-*           icon.name: "view-calendar-day-symbolic"
-*       }
-*   ]
-* }
-* @endcode
-* @since Kirigami Addons 1.6.0.
+/*!
+   \qmltype RadioSelector
+   \inqmlmodule org.kde.kirigamiaddons.labs.components
+   \brief A Component that allows sitching between multiple options.
+   Example:
+   \qml
+   Components.RadioSelector {
+     consistentWidth: false
+     actions: [
+         Kirigami.Action {
+             text: i18nc("@option:radio", "Week")
+             icon.name: "view-calendar-week-symbolic"
+         },
+         Kirigami.Action {
+             text: i18nc("@option:radio", "3 Days")
+             icon.name: "view-calendar-upcoming-days-symbolic"
+         },
+         Kirigami.Action {
+             text: i18nc("@option:radio", "1 Day")
+             icon.name: "view-calendar-day-symbolic"
+         }
+     ]
+   }
+   \endqml
+   \since 1.6.0.
 */
 Item {
     id: root
 
-    /**
-     * @brief This property holds a list of actions, each holding one of the
-     * options.
+    /*!
+       \qmlproperty list<Action> actions
+       \brief This property holds a list of actions, each holding one of the
+       options.
      */
     property list<T.Action> actions
 
-    /**
-     * @brief This property holds whether all the items should have the same
-     * width.
+    /*!
+       \brief This property holds whether all the items should have the same
+       width.
+       \default false
      */
     property bool consistentWidth: false
 
-    /**
-     * @brief This property holds the currently selected option. By default,
-     * it's the first actions or -1 if no actions is set.
+    /*!
+       \brief This property holds the currently selected option.
+
+       By default, it's the first actions or -1 if no actions is set.
      */
     property int selectedIndex: actions.length > 0 ? 0 : -1
 
