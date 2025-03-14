@@ -1,16 +1,18 @@
-// SPDX-FileCopyrightText: 2023 Carl Schwan <carl@carlschwan.eu>
+// SPDX-FileCopyrightText: 2023 Carl Schwan <carl\carlschwan.eu>
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
 import QtQuick 2.15
 import org.kde.kirigami 2.20 as Kirigami
 
-/**
- * @brief Stylish background for dialogs
- *
- * This item can be used as background for any dialog in your application
- * and will have a rounded style.
- *
- * @since KirigamiAddons 0.12
+/*!
+   \qmltype DialogRoundedBackground
+   \inqmlmodule org.kde.kirigamiaddons.labs.components
+   \brief Stylish background for dialogs.
+
+   This item can be used as background for any dialog in your application
+   and will have a rounded style.
+
+   \since 0.12
  */
 Kirigami.ShadowedRectangle {
     // perfect concentric border radius
