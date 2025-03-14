@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2023 Carl Schwan <carl@carlschwan.eu>
+// SPDX-FileCopyrightText: 2023 Carl Schwan <carl\carlschwan.eu>
 // SPDX-License-Identifier: LGPL-2.0-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
 import QtQuick 2.15
@@ -7,107 +7,105 @@ import QtQuick.Templates 2.15 as T
 import QtQuick.Layouts 1.15
 import org.kde.kirigami 2.20 as Kirigami
 
-/**
- * @brief An banner Item with support for informational, positive,
- * warning and error types, and with support for associated actions.
- *
- * Banner can be used to inform or interact with the user
- * without requiring the use of a dialog and are positionned in the footer
- * or header of a page. For inline content, see org::kde::kirigami::InlineMessage.
- *
- * The Banner is hidden by default.
- *
- * Optionally, actions can be added which are shown alongside an
- * optional close button on the right side of the Item. If more
- * actions are set than can fit, an overflow menu is provided.
- *
- * Example usage:
- * @code{.qml}
- * Banner {
- *     type: Kirigami.MessageType.Error
- *
- *     text: "My error message"
- *
- *     actions: [
- *         Kirigami.Action {
- *             icon.name: "edit"
- *             text: "Action text"
- *             onTriggered: {
- *                 // do stuff
- *             }
- *         },
- *         Kirigami.Action {
- *             icon.name: "edit"
- *             text: "Action text"
- *             onTriggered: {
- *                 // do stuff
- *             }
- *         }
- *     ]
- * }
- * @endcode
- * @since KirigamiAddons 0.10.0
- * @inherit QtQuick.Controls.Control
- * @deprecatde Since 1.5.0, use Kirigami.InlineMessage with the appropriate `position` property.
+/*!
+   \qmltype Banner
+   \inqmlmodule org.kde.kirigamiaddons.labs.components
+   \brief An banner Item with support for informational, positive,
+   warning and error types, and with support for associated actions.
+
+   Banner can be used to inform or interact with the user
+   without requiring the use of a dialog and are positionned in the footer
+   or header of a page. For inline content, see Kirigami.InlineMessage.
+
+   The Banner is hidden by default.
+
+   Optionally, actions can be added which are shown alongside an
+   optional close button on the right side of the Item. If more
+   actions are set than can fit, an overflow menu is provided.
+
+   Example usage:
+   \qml
+   Banner {
+       type: Kirigami.MessageType.Error
+
+       text: "My error message"
+
+       actions: [
+           Kirigami.Action {
+               icon.name: "edit"
+               text: "Action text"
+               onTriggered: {
+                   // do stuff
+               }
+           },
+           Kirigami.Action {
+               icon.name: "edit"
+               text: "Action text"
+               onTriggered: {
+                   // do stuff
+               }
+           }
+       ]
+   }
+   \endqml
+   \since 0.10.0
+   \deprecated Since 1.5.0, use Kirigami.InlineMessage with the appropriate \c position property.
  */
 T.ToolBar {
     id: root
 
-    /**
-     * @brief This signal is emitted when a link is hovered in the message text.
-     * @param The hovered link.
+    /*!
+       \brief This signal is emitted when a \a link is hovered in the message text.
      */
     signal linkHovered(string link)
 
-    /**
-     * @brief This signal is emitted when a link is clicked or tapped in the message text.
-     * @param The clicked or tapped link.
+    /*!
+       \brief This signal is emitted when a \a link is clicked or tapped in the message text.
      */
     signal linkActivated(string link)
 
-    /**
-     * @brief This property holds the link embedded in the message text that the user is hovering over.
+    /*!
+       \qmlproperty string hoveredLink
+       \brief This property holds the link embedded in the message text that the user is hovering over.
      */
     readonly property alias hoveredLink: label.hoveredLink
 
-    /**
-     * @brief This property holds the message type.
-     *
-     * The following values are allowed:
-     * * ``Kirigami.MessageType.Information``
-     * * ``Kirigami.MessageType.Positive``
-     * * ``Kirigami.MessageType.Warning``
-     * * ``Kirigami.MessageType.Error``
-     *
-     * default: ``Kirigami.MessageType.Information``
-     *
-     * @property Kirigami.MessageType type
+    /*!
+       \qmlproperty Kirigami.MessageType type
+       \brief This property holds the message type.
+
+       The following values are allowed:
+       \value Kirigami.MessageType.Information
+       \value Kirigami.MessageType.Positive
+       \value Kirigami.MessageType.Warning
+       \value Kirigami.MessageType.Error
+       \default Kirigami.MessageType.Information
      */
     property int type: Kirigami.MessageType.Information
 
-    /**
-     * @brief This property holds the message title.
+    /*!
+       \brief This property holds the message title.
      */
     property string title
 
-    /**
-     * @brief This property holds the message text.
+    /*!
+       \brief This property holds the message text.
      */
     property string text
 
-    /**
-     * @brief This property holds whether the close button is displayed.
-     *
-     * default: ``false``
+    /*!
+       \brief This property holds whether the close button is displayed.
+
+       \default false
      */
     property bool showCloseButton: false
 
-    /**
-     * This property holds the list of Kirigami Actions to show in the banner's
-     * internal kirigami::ActionToolBar.
-     *
-     * Actions are added from left to right. If more actions
-     * are set than can fit, an overflow menu is provided.
+    /*!
+       This property holds the list of Kirigami Actions to show in the banner's
+       internal ActionToolBar.
+
+       Actions are added from left to right. If more actions
+       are set than can fit, an overflow menu is provided.
      */
     property list<Kirigami.Action> actions
 
