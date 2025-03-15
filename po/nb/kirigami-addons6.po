@@ -1,0 +1,807 @@
+# Translation of kirigami-addons6 to Norwegian Bokmål
+#
+# SPDX-FileCopyrightText: 2025 Martin Hansen <mh306602@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kirigami-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-03-05 00:41+0000\n"
+"PO-Revision-Date: 2025-03-13 15:25+0100\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
+"Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
+"Language: nb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.12.3\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Martin Hansen"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "mh306602@gmail.com"
+
+#: components/AbstractMaximizeComponent.qml:130
+#, kde-format
+msgid "Close"
+msgstr "Lukk"
+
+#: components/AlbumMaximizeComponent.qml:143
+#, kde-format
+msgid "Zoom in"
+msgstr "Forstørr"
+
+#: components/AlbumMaximizeComponent.qml:148
+#, kde-format
+msgid "Zoom out"
+msgstr "Forminsk"
+
+#: components/AlbumMaximizeComponent.qml:154
+#, kde-format
+msgid "Rotate left"
+msgstr "Roter til venstre"
+
+#: components/AlbumMaximizeComponent.qml:160
+#, kde-format
+msgid "Rotate right"
+msgstr "Roter til høyre"
+
+#: components/AlbumMaximizeComponent.qml:165
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "Show caption"
+msgstr "Vis tekst"
+
+#: components/AlbumMaximizeComponent.qml:165
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "Hide caption"
+msgstr "Skjul tekst"
+
+#: components/AlbumMaximizeComponent.qml:171
+#, kde-format
+msgid "Save as"
+msgstr "Lagre som"
+
+#: components/AlbumMaximizeComponent.qml:249
+#, kde-format
+msgid "Previous image"
+msgstr "Forrige bilde"
+
+#: components/AlbumMaximizeComponent.qml:269
+#, kde-format
+msgid "Next image"
+msgstr "Neste bilde"
+
+#: components/Banner.qml:187 formcard/AboutPage.qml:500
+#, kde-format
+msgctxt "@action:button"
+msgid "Close"
+msgstr "Lukk"
+
+#: components/ConvergentContextMenu.qml:240
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Back"
+msgstr "Gå tilbake"
+
+#: components/DownloadAction.qml:37
+#, kde-format
+msgid "Download"
+msgstr "Last ned"
+
+#: components/MessageDialog.qml:87
+#, kde-format
+msgctxt "@title:dialog"
+msgid "Success"
+msgstr "Vellykket"
+
+#: components/MessageDialog.qml:89 components/MessageDialog.qml:95
+#, kde-format
+msgctxt "@title:dialog"
+msgid "Warning"
+msgstr "Advarsel"
+
+#: components/MessageDialog.qml:91
+#, kde-format
+msgctxt "@title:dialog"
+msgid "Error"
+msgstr "Feil"
+
+#: components/MessageDialog.qml:93
+#, kde-format
+msgctxt "@title:dialog"
+msgid "Information"
+msgstr "Informasjon"
+
+#: components/MessageDialog.qml:231
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Do not show again"
+msgstr "Ikke vis igjen"
+
+#: components/VideoMaximizeDelegate.qml:267
+#, kde-format
+msgctxt "@action:button"
+msgid "Volume"
+msgstr "Lydstyrke"
+
+#: dateandtime/DatePopup.qml:87 dateandtime/TimePopup.qml:46
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: dateandtime/DatePopup.qml:99 dateandtime/TimePopup.qml:57
+#, kde-format
+msgctxt "@action:button"
+msgid "Select"
+msgstr "Velg"
+
+#: dateandtime/private/DatePicker.qml:275
+#, kde-format
+msgid "Day"
+msgstr "Dag"
+
+#: dateandtime/private/DatePicker.qml:278
+#, kde-format
+msgid "Month"
+msgstr "Måned"
+
+#: dateandtime/private/DatePicker.qml:281
+#, kde-format
+msgid "Year"
+msgstr "År"
+
+#: dateandtime/private/DatePicker.qml:366
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Previous"
+msgstr "Gå til forrige"
+
+#: dateandtime/private/DatePicker.qml:379
+#, kde-format
+msgctxt "@action:button"
+msgid "Jump to today"
+msgstr "Hopp til i dag"
+
+#: dateandtime/private/DatePicker.qml:386
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Next"
+msgstr "Gå til neste"
+
+#: dateandtime/TimePicker.qml:97
+#, kde-format
+msgid "Hours"
+msgstr "Timer"
+
+#: dateandtime/TimePicker.qml:119
+#, kde-format
+msgctxt "Time separator"
+msgid ":"
+msgstr ":"
+
+#: dateandtime/TimePicker.qml:134
+#, kde-format
+msgid "Minutes"
+msgstr "Minutter"
+
+#: formcard/aboutcomponent.cpp:25
+#, kde-format
+msgctxt "@info Platform name"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: formcard/aboutcomponent.cpp:29
+#, kde-format
+msgid "KDE Frameworks"
+msgstr "KDE Frameworks"
+
+#: formcard/aboutcomponent.cpp:30
+#, kde-format
+msgctxt "@info"
+msgid "Collection of libraries created by the KDE Community to extend Qt."
+msgstr "Samling av biblioteker laget av KDE-fellesskapet for å utvide Qt."
+
+#: formcard/aboutcomponent.cpp:35
+#, kde-format
+msgid "Qt"
+msgstr "Qt"
+
+#: formcard/aboutcomponent.cpp:36
+#, kde-format
+msgctxt "@info"
+msgid "Cross-platform application development framework."
+msgstr "Rammeverk for programvareutvikling på tvers av plattformer."
+
+#: formcard/aboutcomponent.cpp:37
+#, kde-format
+msgid "Using %1 and built against %2"
+msgstr "Bruker %1 og bygd mot %2"
+
+#: formcard/aboutcomponent.cpp:41
+#, kde-format
+msgctxt "@info"
+msgid "Underlying platform."
+msgstr "Underliggende plattform."
+
+#: formcard/AboutKDEPage.qml:24
+#: statefulapplication/abstractkirigamiapplication.cpp:174
+#, kde-format
+msgid "About KDE"
+msgstr "Om KDE"
+
+#: formcard/AboutKDEPage.qml:50
+#, kde-format
+msgid "KDE"
+msgstr "KDE"
+
+#: formcard/AboutKDEPage.qml:59
+#, kde-format
+msgid "Be Free!"
+msgstr "Vær fri!"
+
+#: formcard/AboutKDEPage.qml:68
+#, kde-format
+msgid ""
+"KDE is a world-wide community of software engineers, artists, writers, "
+"translators and creators who are committed to Free Software development. KDE "
+"produces the Plasma desktop environment, hundreds of applications, and the "
+"many software libraries that support them.\n"
+"\n"
+"KDE is a cooperative enterprise: no single entity controls its direction or "
+"products. Instead, we work together to achieve the common goal of building "
+"the world's finest Free Software. Everyone is welcome to join and contribute "
+"to KDE, including you."
+msgstr ""
+"KDE er et  verdensomspennende fellesskap av programmere, tegnere, "
+"skribenter, oversettere og skapere som bidrar til utvikling av fri "
+"programvare. KDE utvikler skrivebordsmiljøet Plasma, hundrevis av "
+"programmer, og de mange programbibliotekene disse bygger på.\n"
+"\n"
+"KDE er et fellesskap der ingen enkelt gruppe, firma eller organisasjon har "
+"eierskap til produktene eller styrer retningen den videre utviklingen skal "
+"gå i. Derimot arbeider vi sammen for å oppnå vårt felles mål om å lage fri "
+"programvare i verdensklasse. Alle er velkomne til å bidra til KDE, du også."
+
+#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:223
+#, kde-format
+msgid "Homepage"
+msgstr "Hjemmeside"
+
+#: formcard/AboutKDEPage.qml:83
+#, kde-format
+msgid "Report bugs"
+msgstr "Meld fra om feil"
+
+#: formcard/AboutKDEPage.qml:88
+#, kde-format
+msgid ""
+"Software can always be improved, and the KDE team is ready to do so. "
+"However, you - the user - must tell us when something does not work as "
+"expected or could be done better.\n"
+"\n"
+"KDE has a bug tracking system. Use the button below to file a bug, or use "
+"the program's About page to report a bug specific to this application.\n"
+"\n"
+"If you have a suggestion for improvement then you are welcome to use the bug "
+"tracking system to register your wish. Make sure you use the severity called "
+"\"Wishlist\"."
+msgstr ""
+"Programvare kan alltid forbedres, og KDE-gruppa er klare til å gjøre det. "
+"Men du som bruker, må si fra når noe ikke fungerer som det skal, eller kunne "
+"vært bedre.\n"
+"\n"
+"KDE har et feilsporingssystem. Bruk knappen nedenfor for å melde fra om "
+"generelle feil du finner, eller bruk «Om»-siden i programmet for å melde fra "
+"om feil i akkurat dette programmet.\n"
+"\n"
+"Hvis du har forslag til forbedringer er du velkommen til å bruke "
+"feilsporingssystemet for å rapportere ditt ønske. Merk at du må bruke "
+"alvorlighetsgraden «Ønskeliste»."
+
+#: formcard/AboutKDEPage.qml:110
+#, kde-format
+msgid "Report a bug"
+msgstr "Meld fra om feil"
+
+#: formcard/AboutKDEPage.qml:116
+#, kde-format
+msgid "Join us"
+msgstr "Bli med"
+
+#: formcard/AboutKDEPage.qml:121
+#, kde-format
+msgid ""
+"You do not have to be a software developer to be a member of the KDE team. "
+"You can join the language teams that translate program interfaces. You can "
+"provide graphics, themes, sounds, and improved documentation. You decide!"
+msgstr ""
+"Du trenger ikke være programvareutvikler for å være medlem av KDE-gruppa. Du "
+"kan bidra med oversettelser, lage grafikk, tema, lyder eller bedre "
+"hjelpetekster. Her er det noe for alle!"
+
+#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:251
+#, kde-format
+msgid "Get Involved"
+msgstr "Bli med"
+
+#: formcard/AboutKDEPage.qml:139
+#, kde-format
+msgid "Developer Documentation"
+msgstr "Dokumentasjon for utviklere"
+
+#: formcard/AboutKDEPage.qml:145
+#, kde-format
+msgid "Support us"
+msgstr "Støtt oss"
+
+#: formcard/AboutKDEPage.qml:150
+#, kde-format
+msgid ""
+"KDE software is and will always be available free of charge, however "
+"creating it is not free.\n"
+"\n"
+"To support development the KDE community has formed the KDE e.V., a non-"
+"profit organization legally founded in Germany. KDE e.V. represents the KDE "
+"community in legal and financial matters.\n"
+"\n"
+"KDE benefits from many kinds of contributions, including financial. We use "
+"the funds to reimburse members and others for expenses they incur when "
+"contributing. Further funds are used for legal support and organizing "
+"conferences and meetings.\n"
+"\n"
+"We would like to encourage you to support our efforts with a financial "
+"donation.\n"
+"\n"
+"Thank you very much in advance for your support."
+msgstr ""
+"KDE-programmene er og vil alltid være tilgjengelige vederlagsfritt, men det "
+"koster å utvikle dem.\n"
+"\n"
+"KDE-fellesskapet har derfor opprettet KDE e.V., en ikke-kommersiell "
+"organisasjon registrert i Tyskland. KDE e.V. representerer KDE-fellesskapet "
+"i juridiske og finansielle saker.\n"
+"\n"
+"KDE drar fordel av mange slags bidrag, også pengestøtte. Det meste av "
+"midlene brukes til å dekke utgifter som medlemmene pådrar seg ved å bidra "
+"til KDE. Midler brukes også til juridisk hjelp og til å organisere "
+"konferanser og møter.\n"
+"\n"
+"På forhånd mange takk for støtten."
+
+#: formcard/AboutKDEPage.qml:163
+#, kde-format
+msgid "KDE e.V."
+msgstr "KDE e.V."
+
+#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:237
+#, kde-format
+msgid "Donate"
+msgstr "Gi pengegave"
+
+#: formcard/AboutPage.qml:89
+#: statefulapplication/abstractkirigamiapplication.cpp:167
+#, kde-format
+msgid "About %1"
+msgstr "Om %1"
+
+#: formcard/AboutPage.qml:134
+#, kde-format
+msgid "Copyright"
+msgstr "Opphavsrett"
+
+#: formcard/AboutPage.qml:142
+#, kde-format
+msgid "Description"
+msgstr "Beskrivelse"
+
+#: formcard/AboutPage.qml:155
+#, kde-format
+msgid "License"
+msgid_plural "Licenses"
+msgstr[0] "Lisens"
+msgstr[1] "Lisenser"
+
+#: formcard/AboutPage.qml:277
+#, kde-format
+msgid "Report a Bug"
+msgstr "Meld fra om feil"
+
+#: formcard/AboutPage.qml:283
+#, kde-format
+msgid "Libraries in use"
+msgstr "Brukte bibliotek"
+
+#: formcard/AboutPage.qml:286
+#, kde-format
+msgctxt "@action:button"
+msgid "Copy to Clipboard"
+msgstr "Kopier til utklippstavla"
+
+#: formcard/AboutPage.qml:290
+#, kde-format
+msgctxt "@info"
+msgid "System information copied to clipboard."
+msgstr "Systeminformasjon kopiert til utklippstavla"
+
+#: formcard/AboutPage.qml:303
+#, kde-format
+msgid "Authors"
+msgstr "Utviklere"
+
+#: formcard/AboutPage.qml:318
+#, kde-format
+msgid "Credits"
+msgstr "Bidragsytere"
+
+#: formcard/AboutPage.qml:333
+#, kde-format
+msgid "Translators"
+msgstr "Oversettere"
+
+#: formcard/AboutPage.qml:402
+#, kde-format
+msgid "Visit %1's KDE Store page"
+msgstr "Besøk %1-siden i KDE-butikken"
+
+#: formcard/AboutPage.qml:411
+#, kde-format
+msgid "Send an email to %1"
+msgstr "Send e-post til %1"
+
+#: formcard/android/FormColorDelegate.qml:42 formcard/FormColorDelegate.qml:42
+#, kde-format
+msgctxt "@action:button"
+msgid "Color"
+msgstr "Farge"
+
+#: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:43
+#, kde-format
+msgctxt "Accessible description"
+msgid "Current color \"%1\""
+msgstr "Gjeldende farge er «%1»"
+
+#: formcard/FormDateTimeDelegate.qml:196
+#, kde-format
+msgctxt "Displayed in place of the date if the selected day is today"
+msgid "Today"
+msgstr "I dag"
+
+#: formcard/FormDateTimeDelegate.qml:223 formcard/FormDateTimeDelegate.qml:360
+#, kde-format
+msgctxt "Date is not set"
+msgid "Not set"
+msgstr "Ikke valgt"
+
+#: formcard/FormLinkDelegate.qml:51
+#, kde-format
+msgctxt "@action:inmnenu"
+msgid "Open Link"
+msgstr "Åpne lenka"
+
+#: formcard/FormLinkDelegate.qml:57
+#, kde-format
+msgctxt "@action:inmnenu"
+msgid "Copy Link to Clipboard"
+msgstr "Kopier lenka til utklippstavla"
+
+#: formcard/FormLinkDelegate.qml:63
+#, kde-format
+msgctxt "@info:status"
+msgid "Url copied to clipboard."
+msgstr "URL kopiert til utklippstavla."
+
+#: formcard/FormPasswordFieldDelegate.qml:238
+#: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:253
+#, kde-format
+msgctxt "@label %1 is current text length, %2 is maximum length of text field"
+msgid "%1/%2"
+msgstr "%1/%2"
+
+#: settings/CategorizedSettings.qml:45 settings/ConfigurationView.qml:81
+#, kde-format
+msgctxt "@title:window"
+msgid "Settings"
+msgstr "Innstillinger"
+
+#: settings/CategorizedSettings.qml:45
+#, kde-format
+msgctxt "@title:window"
+msgid "Settings — %1"
+msgstr "Innstillinger – %1"
+
+#: settings/CategorizedSettings.qml:99
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "Go back"
+msgstr "Gå tilbake"
+
+#: settings/private/ConfigMobilePage.qml:26
+#, kde-format
+msgctxt "@title"
+msgid "Settings"
+msgstr "Innstillinger"
+
+#: settings/private/ConfigMobilePage.qml:99
+#, kde-format
+msgctxt "@title:group"
+msgid "Settings"
+msgstr "Innstillinger"
+
+#: settings/private/SonnetConfigPage.qml:41
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Enable automatic spell checking"
+msgstr "Bruk automatisk stavekontroll"
+
+#: settings/private/SonnetConfigPage.qml:55
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Ignore uppercase words"
+msgstr "Ignorer ord med store bokstaver"
+
+#: settings/private/SonnetConfigPage.qml:69
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Ignore hyphenated words"
+msgstr "Ignorer ord med bindestreker"
+
+#: settings/private/SonnetConfigPage.qml:83
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Detect language automatically"
+msgstr "Oppdag automatisk rett språk"
+
+#: settings/private/SonnetConfigPage.qml:96
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Selected default language:"
+msgstr "Valgt standardspråk:"
+
+#: settings/private/SonnetConfigPage.qml:97
+#, kde-format
+msgctxt "No selected language"
+msgid "None"
+msgstr "Ingen"
+
+#: settings/private/SonnetConfigPage.qml:117
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Additional Spell Checking Languages"
+msgstr "Flere stavekontroll-språk"
+
+#: settings/private/SonnetConfigPage.qml:118
+#, kde-format
+msgid ""
+"%1 will provide spell checking and suggestions for the languages listed here "
+"when autodetection is enabled."
+msgstr ""
+"%1 vil kontrollere stavinga og gi staveforslag for disse språkene når "
+"automatisk språkgjenkjenning er slått på."
+
+#: settings/private/SonnetConfigPage.qml:131
+#, kde-format
+msgctxt "@action:button"
+msgid "Open Personal Dictionary"
+msgstr "Åpne personlig ordliste"
+
+#: settings/private/SonnetConfigPage.qml:143
+#, kde-format
+msgctxt "@title:window"
+msgid "Spell checking languages"
+msgstr "Språk for stavekontroll"
+
+#: settings/private/SonnetConfigPage.qml:155
+#, kde-format
+msgid "Default Language"
+msgstr "Standardspråk"
+
+#: settings/private/SonnetConfigPage.qml:167
+#, kde-format
+msgctxt "@title:window"
+msgid "Spell checking dictionary"
+msgstr "Stavekontroll-ordliste"
+
+#: settings/private/SonnetConfigPage.qml:174
+#, kde-format
+msgctxt "Placeholder message"
+msgid "Add a new word to your personal dictionary…"
+msgstr "Legg nytt ord til personlig ordliste …"
+
+#: settings/private/SonnetConfigPage.qml:177
+#, kde-format
+msgctxt "@action:button"
+msgid "Add Word"
+msgstr "Legg til ord"
+
+#: settings/private/SonnetConfigPage.qml:212
+#, kde-format
+msgctxt "@action:button"
+msgid "Delete word"
+msgstr "Fjern ord"
+
+#: settings/ShortcutsConfigurationModule.qml:23
+#, kde-format
+msgctxt "@action:button"
+msgid "Keyboard Shortcuts"
+msgstr "Tastatursnarveier"
+
+#: settings/SpellcheckingConfigurationModule.qml:14
+#, kde-format
+msgctxt "@action:button"
+msgid "Spell Checking"
+msgstr "Stavekontroll"
+
+#: statefulapplication/abstractkirigamiapplication.cpp:145
+#, kde-format
+msgid "Open Command Bar"
+msgstr "Åpne kommandolinje"
+
+#: statefulapplication/private/keysequencehelper.cpp:117
+#, kde-format
+msgctxt "@title:dialog"
+msgid "Reserved Shortcut"
+msgstr "Reservert snarvei"
+
+#: statefulapplication/private/keysequencehelper.cpp:119
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The F12 key is reserved on Windows, so cannot be used for a global "
+"shortcut.\n"
+"Please choose another one."
+msgstr ""
+"«F12»-tasten er reservert på Windows og kan derfor ikke brukes som en global "
+"snarvei.\n"
+"Velg en annen snarveistast."
+
+#: statefulapplication/private/keysequencehelper.cpp:143
+#, kde-format
+msgctxt ""
+"@title:dialog This happen when a global shortcut is already defined with the "
+"same shortcut"
+msgid "Global Shortcut Shadowing"
+msgstr "Overstyring av global hurtigtast"
+
+#: statefulapplication/private/keysequencehelper.cpp:146
+#, kde-format
+msgctxt "@info"
+msgid "The '%1' key combination is shadowed by following global actions:\n"
+msgstr "Hurtigtasten «%1» ble overstyrt av disse globale handlingene:\n"
+
+#: statefulapplication/private/keysequencehelper.cpp:148
+#: statefulapplication/private/keysequencehelper.cpp:154
+#, kde-format
+msgctxt "@info"
+msgid "Action '%1' in context '%2'\n"
+msgstr "Handlinga «%1» i sammenhengen «%2»\n"
+
+#: statefulapplication/private/keysequencehelper.cpp:152
+#, kde-format
+msgctxt "@info"
+msgid "The '%1' key combination shadows following global actions:\n"
+msgstr "Hurtigtasten «%1» overstyrer disse globale handlingene:\n"
+
+#: statefulapplication/private/keysequencehelper.cpp:193
+#, kde-format
+msgctxt "@title:dialog"
+msgid "Conflict with Standard Application Shortcut"
+msgstr "Konflikt med standard programsnarvei"
+
+#: statefulapplication/private/keysequencehelper.cpp:195
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The '%1' key combination is also used for the standard action \"%2\" that "
+"some applications use.\n"
+"Do you really want to use it as a global shortcut as well?"
+msgstr ""
+"Hurtigtasten «%1» er allerede i bruk for standardhandlinga «%2» som noen "
+"programmer bruker.\n"
+"Er du sikker på at du likevel vil bruke den som en global hurtigtast?"
+
+#: statefulapplication/private/KeySequenceItem.qml:129
+#, kde-format
+msgctxt "What the user inputs now will be taken as the new shortcut"
+msgid "Input"
+msgstr "Inndata"
+
+#: statefulapplication/private/KeySequenceItem.qml:130
+#, kde-format
+msgctxt "No shortcut defined"
+msgid "None"
+msgstr "Ingen"
+
+#: statefulapplication/private/KeySequenceItem.qml:141
+#, kde-format
+msgid ""
+"Click on the button, then enter the shortcut like you would in the program.\n"
+"Example for Ctrl+A: hold the Ctrl key and press A."
+msgstr ""
+"Trykk på knappen, og skriv inn hurtigtasten du ønsker å bruke.\n"
+"For eksempel for «Ctrl + A»: Hold inne «Ctrl»-tasten og trykk «A»."
+
+#: statefulapplication/private/KeySequenceItem.qml:182
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Clear Key Sequence"
+msgstr "Tøm tastesekvens"
+
+#: statefulapplication/private/KeySequenceItem.qml:198
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cancel Key Sequence Recording"
+msgstr "Avbryt hurtigtast-registrering"
+
+#: statefulapplication/private/KQuickCommandBarPage.qml:55
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "No results found"
+msgstr "Fant ingen treff"
+
+#: statefulapplication/private/ShortcutsEditor.qml:19
+#: statefulapplication/StatefulWindow.qml:90
+#, kde-format
+msgctxt "@title:window"
+msgid "Shortcuts"
+msgstr "Snarveier"
+
+#: statefulapplication/private/ShortcutsEditor.qml:23
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Filter…"
+msgstr "Filtrer …"
+
+#: statefulapplication/private/ShortcutsEditor.qml:69
+#, kde-format
+msgctxt "@title:window"
+msgid "Shortcut: %1"
+msgstr "Hurtigtast: %1"
+
+#: statefulapplication/private/ShortcutsEditor.qml:89
+#, kde-format
+msgctxt "@label"
+msgid "Shortcut:"
+msgstr "Hurtigtast:"
+
+#: statefulapplication/private/ShortcutsEditor.qml:144
+#: statefulapplication/private/ShortcutsEditor.qml:172
+#, kde-format
+msgctxt "@label"
+msgid "Alternative:"
+msgstr "Alternativ:"
+
+#: statefulapplication/private/ShortcutsEditor.qml:210
+#, kde-format
+msgctxt "Placeholder message"
+msgid "No shortcuts found"
+msgstr "Fant ingen hurtigtaster"
+
+#: statefulapplication/shortcutsmodel.cpp:41
+#, kde-format
+msgctxt "List separator"
+msgid ", "
+msgstr ", "
+
+#: statefulapplication/StatefulWindow.qml:100
+#, kde-format
+msgctxt "@title:window"
+msgid "About %1"
+msgstr "Om %1"
+
+#: statefulapplication/StatefulWindow.qml:113
+#, kde-format
+msgctxt "@title:window"
+msgid "About KDE"
+msgstr "Om KDE"
