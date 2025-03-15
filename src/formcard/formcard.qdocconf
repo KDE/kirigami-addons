@@ -11,4 +11,4 @@ imagedirs  += ../../docs/pics
 
 outputformats = HTML
 
-depends += kde kirigami qtcore qtquick qtquickcontrols qtgui
+depends += kde kirigami kcoreaddons qtcore qtquick qtquickcontrols qtgui
