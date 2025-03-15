@@ -29,7 +29,7 @@ import org.kde.kirigami as Kirigami
        }
    }
    \endqml
-   image formcardcolor.png
+   \image formcardcolor.png
  */
 FormCard.AbstractFormDelegate {
     id: root
