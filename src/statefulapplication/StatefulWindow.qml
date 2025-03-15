@@ -43,7 +43,7 @@ import org.kde.coreaddons as Core
    }
    \endqml
 
-   \since KirigamiAddons 1.4.0
+   \since 1.4.0
  */
 Kirigami.ApplicationWindow {
     id: root

@@ -41,7 +41,7 @@ import org.kde.kirigami as Kirigami
    }
    \endqml
 
-   \since KirigamiAddons 0.11.0
+   \since 0.11.0
  */
 AbstractFormDelegate {
     id: root
@@ -203,7 +203,7 @@ AbstractFormDelegate {
 
     /*!
        Causes all text to be selected.
-       \since Kirigami Addons 1.4.0
+       \since 1.4.0
      */
     function selectAll(): void {
         textField.selectAll();
@@ -211,7 +211,7 @@ AbstractFormDelegate {
 
     /*!
        Causes the text from \a start to \a end to be selected.
-       \since Kirigami Addons 1.4.0
+       \since 1.4.0
      */
     function select(start: int, end: int): void {
         textField.select(start, end);

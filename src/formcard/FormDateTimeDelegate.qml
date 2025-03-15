@@ -53,7 +53,7 @@ import "private" as Private
    \warning This will use the native date and time picker from the platform if
    available. For example this happens on Android.
 
-   \since KirigamiAddons 0.12.0
+   \since 0.12.0
  */
 AbstractFormDelegate {
     id: root

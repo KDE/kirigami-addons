@@ -26,7 +26,7 @@ import org.kde.kirigami as Kirigami
    }
    \endqml
 
-   \since KirigamiAddons 0.11.0
+   \since 0.11.0
  */
 AbstractFormDelegate {
     id: root

@@ -33,7 +33,7 @@ import "private" as Private
 
    If you need an on/off/tristate toggle, use a FormCheckDelegate instead.
 
-   \since KirigamiAddons 0.11.0
+   \since 0.11.0
 
    \sa AbstractButton
    \sa FormSwitchDelegate

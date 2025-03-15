@@ -24,7 +24,7 @@ import "private" as Private
    It allows to show the copyright notice of the application together with
    the contributors and some information of which platform it's running on.
 
-   \since KirigamiAddons 0.11.0
+   \since 0.11.0
  */
 FormCardPage {
     id: page

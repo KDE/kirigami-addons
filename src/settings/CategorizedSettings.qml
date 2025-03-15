@@ -19,7 +19,7 @@ import org.kde.kirigamiaddons.delegates 1.0 as Delegates
 
    To open a setting page, you should use PageRow::pushDialogLayers.
 
-   \since KirigamiAddons 0.11.0
+   \since 0.11.0
    \deprecated Since 1.3.0, use ConfigurationsView instead.
  */
 Kirigami.PageRow {

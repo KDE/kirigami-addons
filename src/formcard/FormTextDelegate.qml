@@ -23,7 +23,7 @@ import "private" as Private
    If you need just a secondary text component, use a FormSectionText
    instead.
 
-   \since KirigamiAddons 0.11.0
+   \since 0.11.0
 
    \sa FormSectionText
    \sa AbstractButton

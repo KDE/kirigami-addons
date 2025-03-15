@@ -19,7 +19,7 @@ import org.kde.kirigami as Kirigami
    This is used in AbstractFormDelegate so that new delegates provide this
    feedback by default, and can be easily overriden with an Item.
 
-   \since KirigamiAddons 0.11.0
+   \since 0.11.0
 
    \sa AbstractFormDelegate
  */

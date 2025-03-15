@@ -20,7 +20,7 @@ import './private' as P
    By default, it includes a background with hover and click feedback.
    Set the \c background property to \c {Item {}} to remove it.
 
-   \since KirigamiAddons 0.11.0
+   \since 0.11.0
 
    \sa FormDelegateBackground
  */

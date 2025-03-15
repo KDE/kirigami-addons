@@ -31,7 +31,7 @@ import "private" as Private
    If you need multiple toggles for the same setting, use a FormRadioDelegate
    instead.
 
-   \since KirigamiAddons 0.11.0
+   \since 0.11.0
 
    \sa AbstractButton
    \sa FormCheckDelegate

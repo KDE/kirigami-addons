@@ -20,7 +20,7 @@ import org.kde.kirigami as Kirigami
    If you need a primary text label with optional secondary text, use
    FormTextDelegate instead.
 
-   \since KirigamiAddons 0.11.0
+   \since 0.11.0
 
    \sa FormTextDelegate
  */

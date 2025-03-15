@@ -33,7 +33,7 @@ import org.kde.kirigamiaddons.components as Components
      ]
    }
    \endqml
-   \since Kirigami Addons 1.6.0.
+   \since 1.6.0.
  */
 AbstractFormDelegate {
     id: root

@@ -43,7 +43,7 @@ import "private" as Private
    }
    \endqml
 
-   \since KirigamiAddons 0.11.0
+   \since 0.11.0
  */
 Item {
     id: root

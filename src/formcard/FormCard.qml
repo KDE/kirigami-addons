@@ -35,7 +35,7 @@ import "private" as Private
    contentItem and does not need to be set, while the width is expected
    to be given by the parent, for example, via a \l {Layout::fillWidth} {Layout.fillWidth}.
 
-   \since KirigamiAddons 0.11.0
+   \since 0.11.0
  */
 Item {
     id: root

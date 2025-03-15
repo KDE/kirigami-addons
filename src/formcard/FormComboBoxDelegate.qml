@@ -31,7 +31,7 @@ import org.kde.kirigamiaddons.components as Components
    If you need multiple toggles instead of multiple values for the same
    setting, consider using a FormRadioDelegate.
 
-   \since KirigamiAddons 0.11.0
+   \since 0.11.0
 
    \sa AbstractButton
    \sa FormSwitchDelegate
@@ -90,7 +90,7 @@ AbstractFormDelegate {
     /*!
        \qmlproperty int count
        \brief This property holds the \l {ComboBox::count} {count} of the internal ComboBox.
-       \since Kirigami Addons 1.4.0
+       \since 1.4.0
      */
     property alias count: combobox.count
 

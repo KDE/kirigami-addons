@@ -12,7 +12,7 @@ import org.kde.kirigami as Kirigami
    \inqmlmodule org.kde.kirigamiaddons.formcard
    \brief A scrollable page used as a container for one or more FormCards.
 
-   \since KirigamiAddons 0.11.0
+   \since 0.11.0
  */
 Kirigami.ScrollablePage {
     id: root

@@ -8,7 +8,7 @@ import org.kde.kirigamiaddons.settings.private as Private
    \qmltype SpellcheckingConfigurationModule
    \inqmlmodule org.kde.kirigamiaddons.settings
    \brief Configuration module for spellchecking.
-   \since KirigamiAddons 1.3.0
+   \since 1.3.0
  */
 ConfigurationModule {
     moduleId: "spellchecking"

@@ -15,7 +15,7 @@ import org.kde.kitemmodels
    \inqmlmodule org.kde.kirigamiaddons.delegates
    \brief Rounded item delegate meant to be used in combination with
    a ListView and a KDescendantsProxyModel to create a TreeView.
-   \since KirigamiAddons 0.12.0
+   \since 0.12.0
  */
 Delegates.RoundedItemDelegate {
     id: root

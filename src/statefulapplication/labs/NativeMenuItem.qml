@@ -30,7 +30,7 @@ import org.kde.kirigamiaddons.statefulapp as StatefulApp
        }
    }
    \endqml
-   \since KirigamiAddons 1.4.0
+   \since 1.4.0
  */
 MenuItem {
     /*!

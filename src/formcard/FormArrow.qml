@@ -20,7 +20,7 @@ import org.kde.kirigami as Kirigami
    Each FormArrow instance corresponds to a single arrow that may point
    upwards, downwards, to the left or to the right.
 
-   \since KirigamiAddons 0.11.0
+   \since 0.11.0
  */
 Kirigami.Icon {
     /*!

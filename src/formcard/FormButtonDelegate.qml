@@ -22,7 +22,7 @@ import "private" as Private
    The trailing property (right-most side of the button) includes an arrow
    pointing to the right by default and cannot be overridden.
 
-   \since KirigamiAddons 0.11.0
+   \since 0.11.0
  */
 AbstractFormDelegate {
     id: root

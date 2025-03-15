@@ -29,7 +29,7 @@ import "private" as Private
    If you need multiple values for the same setting, use a
    FormComboBoxDelegate instead.
 
-   \since KirigamiAddons 0.11.0
+   \since 0.11.0
 
    \sa AbstractButton
    \sa FormSwitchDelegate

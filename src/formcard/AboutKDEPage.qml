@@ -16,7 +16,7 @@ import org.kde.coreaddons as Core
    This component consists of a full, internationalized "About KDE" page
    that can be instantiated directly without passing any properties.
 
-   \since KirigamiAddons 0.11.0
+   \since 0.11.0
  */
 FormCardPage {
     id: page

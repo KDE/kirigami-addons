@@ -11,7 +11,7 @@ import org.kde.kirigamiaddons.statefulapp as StatefulApp
    \inqmlmodule org.kde.kirigamiaddons.settings
    \brief Configuration module for keyboard shortcuts.
 
-   \since KirigamiAddons 1.7.0
+   \since 1.7.0
  */
 ConfigurationModule {
     id: root
