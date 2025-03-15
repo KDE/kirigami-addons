@@ -2,7 +2,12 @@
     \page kirigami-addons-index.html
     \title Kirigami Addons
 
-    Todo
+    Kirigami Addons is an additional set of visual components that work well on mobile and desktop
+    and are guaranteed to be cross-platform.
+
+    It uses \l {org.kde.kirigami} {Kirigami} under the hood to create its components and should look native with any QtQuick Controls style.
+
+    A tutorial for Kirigami Addons can be found over the \l {https://develop.kde.org/docs/getting-started/kirigami/addons-introduction}{KDE Developer Platform}.
 
     \section1 Using the Module
 
@@ -10,7 +15,15 @@
 
     \section2 Building with CMake
 
-    \include {module-use.qdocinc} {building with cmake} {Widgets}
+    To import only the Kirigami Addons QML modules:
+
+    \code
+    ecm_find_qml_module(org.kde.kirigamiaddons REQUIRED)
+    \endcode
+
+    To import Kirigami Addons into your project using CMake:
+
+    \include {module-use.qdocinc} {building with cmake} {KF6} {KirigamiAddons} {KF6::KirigamiAddons}
 
     \section1 API Reference
 
