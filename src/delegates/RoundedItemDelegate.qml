@@ -19,6 +19,7 @@ T.ItemDelegate {
     id: root
 
     /*!
+       \qmlproperty ListView listView
        This property holds a ListView.
 
        It is automatically set if the RoundedItemDelegate is the direct delegate
@@ -27,6 +28,7 @@ T.ItemDelegate {
     property var listView: ListView
 
     /*!
+       \qmlproperty GridView gridView
        This property holds a GridView.
 
        It is automatically set if the RoundedItemDelegate is the direct delegate
