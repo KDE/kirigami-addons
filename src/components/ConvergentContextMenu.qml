@@ -151,6 +151,7 @@ Item {
     id: root
 
     /*!
+       \qmlproperty list<Action> actions
        This property holds the list of actions.
 
        This can be either a traditional \l {Action} {QtQuick.Controls.Action}
