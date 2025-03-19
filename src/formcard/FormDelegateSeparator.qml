@@ -13,7 +13,7 @@ import org.kde.kirigami as Kirigami
    \inqmlmodule org.kde.kirigamiaddons.formcard
    \brief A context-aware separator.
 
-   This is a standard Kirigami.Separator that can be hidden upon hovering
+   This is a standard \l {Separator} {Kirigami.Separator} that can be hidden upon hovering
    the mouse over the \l above or \l below delegate, allowing for a subtle
    but smooth animation feedback.
 
