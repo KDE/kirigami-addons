@@ -21,7 +21,7 @@ import org.kde.kirigami as Kirigami
    which delegate will fill the \l above or \l below position, such as delegates
    provided from a model or managed by a Loader.
 
-   \sa Kirigami.Separator
+   \sa {Separator} {Kirigami.Separator}
  */
 Kirigami.Separator {
     id: root
