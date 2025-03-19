@@ -57,9 +57,9 @@ AbstractFormDelegate {
     /*!
        \brief This property holds the padding after the leading item.
 
-       It is recommended to use Kirigami.Units here instead of direct values.
+       It is recommended to use \l {Units} {Kirigami.Units} here instead of direct values.
 
-       \sa Kirigami.Units
+       \sa {Units} {Kirigami.Units}
      */
     property real leadingPadding: Kirigami.Units.largeSpacing
 
