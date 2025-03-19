@@ -36,7 +36,7 @@ RowLayout {
 
     /*!
        \qmlproperty Kirigami.Icon iconItem
-       This property holds the Kirigami.Icon containing the icon of the item delegate.
+       This property holds the \l {Icon} {Kirigami.Icon} containing the icon of the item delegate.
        \since 0.10.1
      */
     readonly property alias iconItem: iconItem
