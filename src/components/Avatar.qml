@@ -41,7 +41,7 @@ Item {
     /*!
        \qmlproperty url source
        \brief This property holds the source of the user's profile picture; an image.
-       \sa Image::source
+       \sa {Image::source} {Image.source}
      */
     property alias source: avatarImage.source
 
