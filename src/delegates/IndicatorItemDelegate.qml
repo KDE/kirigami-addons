@@ -10,7 +10,7 @@ import QtQuick.Templates as T
 /*!
    \qmltype IndicatorItemDelegate
    \inqmlmodule org.kde.kirigamiaddons.delegates
-   \warning This component is expected to be used as a ListView.delegate.
+   \warning This component is expected to be used as a \l ListView::delegate {ListView.delegate}.
    If this is not the case, make sure to set \l index and listView.
  */
 T.ItemDelegate {
