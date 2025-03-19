@@ -11,8 +11,8 @@ import QtQuick.Controls
    \inqmlmodule org.kde.kirigamiaddons.labs.components
    \brief A floating toolbar to use for example in a canvas.
 
-   The toolbar should be positioned with Kirigami.Units.largeSpacing from
-   the border of the page.
+   The toolbar should be positioned with \l {Units::largeSpacing}
+   {Kirigami.Units.largeSpacing} from the border of the page.
 
    \qml
    import org.kde.kirigamiaddons.components
