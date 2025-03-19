@@ -165,11 +165,11 @@ AbstractFormDelegate {
               A standard ComboBox component containing a vertical list of values.
        \value FormComboBoxDelegate.Dialog
               A button with similar appearance to a ComboBox that, when clicked,
-              shows a Kirigami.OverlaySheet at the middle of the window
+              shows a \l OverlaySheet {Kirigami.OverlaySheet} at the middle of the window
               containing a vertical list of values.
        \value FormComboBoxDelegate.Page
               A button with similar appearance to a ComboBox that, when clicked,
-              shows a Kirigami.ScrollablePage in a new window containing a
+              shows a \l ScrollablePage {Kirigami.ScrollablePage} in a new window containing a
               vertical list of values.
      */
     property int displayMode: Kirigami.Settings.isMobile ? FormComboBoxDelegate.Dialog : FormComboBoxDelegate.ComboBox
@@ -359,7 +359,7 @@ AbstractFormDelegate {
        \brief The page component used for the ComboBox, if applicable.
 
        This property allows to override the internal
-       Kirigami.ScrollablePage with a custom component.
+       \l ScrollablePage {Kirigami.ScrollablePage} with a custom component.
      */
     property Component page: Kirigami.ScrollablePage {
         title: controlRoot.text
