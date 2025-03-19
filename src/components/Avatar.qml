@@ -52,7 +52,7 @@ Item {
        This icon  is displayed when using an icon with Avatar.InitialsMode.UseIcon and
        Avatar.ImageNode.AlwaysShowInitials enabled.
 
-       \sa Kirigami.Icon.source
+       \sa {Icon::source} {Kirigami.Icon.source}
      */
     property alias iconSource: avatarIcon.source
 
