@@ -21,7 +21,8 @@ import './private' as P
    \brief Menu popup that appears as a tradional menu on desktop and as a bottom
    drawer mobile.
 
-   ConvergentContextMenu uses abstract \l {Action} {QtQuick.Controls.Action} and Kirigami.Action to build
+   ConvergentContextMenu uses abstract \l {QtQuick.Controls::Action} {QtQuick.Controls.Action}
+   and \l {Action} {Kirigami.Action} to build
    the traditional menu on desktop and the bottom drawer on mobile. Most properties
    of Kirigami.Action are supported including nested actions.
 
@@ -154,8 +155,8 @@ Item {
        \qmlproperty list<Action> actions
        This property holds the list of actions.
 
-       This can be either a traditional \l {Action} {QtQuick.Controls.Action}
-       or a Kirigami.Action with sub actions.
+       This can be either a traditional \l {QtQuick.Controls::Action} {QtQuick.Controls.Action}
+       or a \l {Action} {Kirigami.Action} with sub actions.
      */
     default property list<T.Action> actions
 
