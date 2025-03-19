@@ -17,7 +17,7 @@ ConfigurationModule {
     id: root
 
     /*!
-       This property holds the abstract KirigamiApplication from the
+       This property holds the \l AbstractKirigamiApplication from the
        \l {Kirigami Addons StatefulApplication QML Types} module.
      */
     required property StatefulApp.AbstractKirigamiApplication application
