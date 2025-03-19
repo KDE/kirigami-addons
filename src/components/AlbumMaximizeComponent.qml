@@ -51,7 +51,7 @@ AbstractMaximizeComponent {
        \brief Model containing the media item to be shown.
 
        The model can be either a qml or a c++ model but each item needs to have the
-       values defined in AlbumModelItem.qml (note a list of these is the easiest
+       values defined in AlbumModelItem (note a list of these is the easiest
        way to create a qml model).
      */
     property var model
