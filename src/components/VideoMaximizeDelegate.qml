@@ -113,7 +113,7 @@ Item {
               The media is paused.
        \value MediaPlayer.StoppedState
               The media is stopped.
-       \sa QtMultimedia.Video
+       \sa {QtMultimedia::MediaPlayer::playbackState} {QtMultimedia.MediaPlayer.playBackState}
      */
     property alias playbackState: videoItem.playbackState
 
