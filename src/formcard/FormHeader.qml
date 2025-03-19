@@ -50,7 +50,7 @@ Item {
        \qmlproperty real rightPadding
        Padding property.
 
-       The default value is based on Kirigami.Units.
+       The default value is based on \l {Units} {Kirigami.Units}.
        To ensure consistency it's recommended that you do not change this property.
      */
     property real topPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
