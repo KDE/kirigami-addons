@@ -47,10 +47,12 @@ ecm_target_qml_sources(formcardplugin SOURCES
 if(ANDROID)
     ecm_target_qml_sources(formcardplugin SOURCES
         android/FormColorDelegate.qml
+        android/FormIconDelegate.qml
     )
 else()
     ecm_target_qml_sources(formcardplugin SOURCES
         FormColorDelegate.qml
+        FormIconDelegate.qml
     )
 endif()
 
