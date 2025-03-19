@@ -23,7 +23,7 @@ import org.kde.coreaddons as Core
    This includes:
    \list
    \li Restoration of the window size accross restarts
-   \li Handling some of the standard actions defined in your KirigamiAbstractApplication
+   \li Handling some of the standard actions defined in your AbstractKirigamiApplication
        (AboutKDE and AboutApp)
    \li A command bar to access all the defined actions
    \li A shortcut editor
