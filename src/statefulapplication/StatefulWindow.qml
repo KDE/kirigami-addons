@@ -54,7 +54,7 @@ Kirigami.ApplicationWindow {
 
        This needs to be an unique identifier for your application and will be used to store
        the state of the window in your application config.
-       \sa {KConfig QML Types}
+       \sa WindowStateSaver
      */
     property alias windowName: windowStateSaver.configGroupName
 
