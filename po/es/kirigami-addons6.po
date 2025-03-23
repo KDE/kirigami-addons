@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-05 00:41+0000\n"
+"POT-Creation-Date: 2025-03-23 00:40+0000\n"
 "PO-Revision-Date: 2025-03-06 20:21+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -475,6 +475,12 @@ msgstr "Color"
 msgctxt "Accessible description"
 msgid "Current color \"%1\""
 msgstr "Color actual «%1»"
+
+#: formcard/android/FormIconDelegate.qml:43
+#, kde-format
+msgctxt "@action:button"
+msgid "Icon"
+msgstr ""
 
 #: formcard/FormDateTimeDelegate.qml:196
 #, kde-format
