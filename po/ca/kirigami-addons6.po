@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-23 00:40+0000\n"
-"PO-Revision-Date: 2025-03-05 09:49+0100\n"
+"PO-Revision-Date: 2025-03-23 09:49+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -483,7 +483,7 @@ msgstr "Color actual «%1»"
 #, kde-format
 msgctxt "@action:button"
 msgid "Icon"
-msgstr ""
+msgstr "Icona"
 
 #: formcard/FormDateTimeDelegate.qml:196
 #, kde-format
@@ -822,14 +822,3 @@ msgstr "Quant al %1"
 msgctxt "@title:window"
 msgid "About KDE"
 msgstr "Quant a KDE"
-
-#~ msgid "Windowing system"
-#~ msgstr "Sistema de finestres"
-
-#~ msgctxt "time in hour (PM)"
-#~ msgid "%1 PM"
-#~ msgstr "%1 PM"
-
-#~ msgctxt "time in hour (AM)"
-#~ msgid "%1 AM"
-#~ msgstr "%1 AM"
