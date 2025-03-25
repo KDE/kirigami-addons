@@ -24,7 +24,7 @@ FormCard.FormButtonDelegate {
      */
     property string url
 
-    trailingLogo.source: 'open-link-symbolic'
+    // trailingLogo.source: 'open-link-symbolic'
     visible: url.length > 0
 
     onClicked: Qt.openUrlExternally(url);

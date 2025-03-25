@@ -8,7 +8,7 @@ import QtQuick.Templates as T
 import QtQuick.Controls as Controls
 import QtQuick.Layouts
 
-import org.kde.kirigami 2.19 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.kirigami.delegates as KirigamiDelegates
 
 import "private" as Private

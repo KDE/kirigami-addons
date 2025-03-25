@@ -3,14 +3,14 @@
  * SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
-import QtQuick 2.15
-import QtQuick.Controls 2.15 as Controls
-import QtQuick.Layouts 1.2
-import QtQuick.Layouts 1.15
+import QtQuick
+import QtQuick.Controls as Controls
+import QtQuick.Layouts
+import QtQuick.Layouts
 
-import org.kde.kirigami 2.20 as Kirigami
-import org.kde.kirigamiaddons.formcard 1.0 as FormCard
-import org.kde.kirigamiaddons.components 1.0 as Components
+import org.kde.kirigami as Kirigami
+import org.kde.kirigamiaddons.formcard as FormCard
+import org.kde.kirigamiaddons.components as Components
 
 Kirigami.ApplicationWindow {
     id: appwindow
@@ -138,10 +138,9 @@ Kirigami.ApplicationWindow {
                 ]
             }
 
-            FormCard.FormHeader {
+            FormCard.FormGroup {
                 title: "About"
-            }
-            FormCard.FormCard {
+
                 FormCard.FormButtonDelegate {
                     id: aboutDelegate
                     text: "About"
@@ -149,11 +148,9 @@ Kirigami.ApplicationWindow {
                 }
             }
 
-            FormCard.FormHeader {
+            FormCard.FormGroup {
                 title: "Date and time"
-            }
 
-            FormCard.FormCard {
                 FormCard.FormDateTimeDelegate {}
 
                 FormCard.FormDelegateSeparator {}
@@ -174,10 +171,9 @@ Kirigami.ApplicationWindow {
                 }
             }
 
-            FormCard.FormHeader {
+            FormCard.FormGroup {
                 title: "Buttons"
-            }
-            FormCard.FormCard {
+
                 Layout.fillWidth: true
 
                 FormCard.FormButtonDelegate {
@@ -209,16 +205,30 @@ Kirigami.ApplicationWindow {
             }
 
             // checkboxes
-            FormCard.FormHeader {
+            FormCard.FormGroup {
                 title: "Checkboxes"
-            }
-            FormCard.FormCard {
+
                 FormCard.FormCheckDelegate {
                     id: checkbox1
                     text: "Check the first box"
                 }
 
-                FormCard.FormGroup {
+                FormCard.FormCheckDelegate {
+                    id: checkbox2
+                    text: "Check the second box"
+                }
+
+                FormCard.FormCheckDelegate {
+                    id: checkbox3
+                    text: "Check the third box"
+                }
+            }
+            
+            FormCard.FormSectionText {
+                text: "Use cards to denote relevant groups of settings."
+            }
+
+            FormCard.FormGroup {
                     Layout.fillWidth: true
                     title: "Buttons"
 
@@ -246,34 +256,14 @@ Kirigami.ApplicationWindow {
                     }
                 }
 
-                FormCard.FormCheckDelegate {
-                    id: checkbox3
-                    text: "Check the third box"
-                }
-            }
-            
-            FormCard.FormSectionText {
-                text: "Use cards to denote relevant groups of settings."
-            }
-
             // switches
-            FormCard.FormHeader {
-                title: "Switches"
-            }
             FormCard.FormCard {
+                title: "Switches"
+
                 FormCard.FormSwitchDelegate {
                     id: switch1
                     text: "Toggle the first switch"
                 }
-
-                // checkboxes
-                FormCard.FormGroup {
-                    title: "Checkboxes"
-
-                    FormCard.FormCheckDelegate {
-                        id: checkbox1
-                        text: "Check the first box"
-                    }
 
                 FormCard.FormDelegateSeparator { above: switch2; below: switch3 }
 
@@ -298,10 +288,9 @@ Kirigami.ApplicationWindow {
             // dropdowns
             // large amount of options -> push a new page
             // small amount of options -> open dialog
-            FormCard.FormHeader {
+            FormCard.FormGroup {
                 title: "Dropdowns"
-            }
-            FormCard.FormCard {
+
                 FormCard.FormComboBoxDelegate {
                     id: dropdown1
                     text: "Select a color"
@@ -340,10 +329,9 @@ Kirigami.ApplicationWindow {
             }
 
             // radio buttons
-            FormCard.FormHeader {
+            FormCard.FormGroup {
                 title: "Radio buttons"
-            }
-            FormCard.FormCard {
+
                 FormCard.FormRadioDelegate {
                     id: radio1
                     text: "Always on"
@@ -361,7 +349,7 @@ Kirigami.ApplicationWindow {
             }
 
             // misc
-            FormCard.FormCard {
+            FormCard.FormGroup {
                 Layout.topMargin: Kirigami.Units.largeSpacing
 
                 FormCard.AbstractFormDelegate {
@@ -428,10 +416,9 @@ Kirigami.ApplicationWindow {
             }
 
             // info block
-            FormCard.FormHeader {
+            FormCard.FormGroup {
                 title: "Information"
-            }
-            FormCard.FormCard {
+
                 FormCard.FormTextDelegate {
                     id: info1
                     text: "Color"
@@ -464,11 +451,9 @@ Kirigami.ApplicationWindow {
             }
 
             // text fields
-            FormCard.FormHeader {
+            FormCard.FormGroup {
                 title: "Text Fields"
-            }
 
-            FormCard.FormCard {
                 FormCard.FormTextFieldDelegate {
                     id: account
                     label: "Account name"
@@ -499,10 +484,9 @@ Kirigami.ApplicationWindow {
             }
 
             // spin boxes fields
-            FormCard.FormHeader {
+            FormCard.FormGroup {
                 title: "Spin boxes"
-            }
-            FormCard.FormCard {
+
                 FormCard.FormSpinBoxDelegate {
                     label: "Amount"
                     value: 42

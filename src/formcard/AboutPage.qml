@@ -130,7 +130,6 @@ FormPage {
         FormTextDelegate {
             id: copyrightDelegate
             text: i18nd("kirigami-addons6", "Copyright")
-            descriptionItem.textFormat: Text.PlainText
             description: aboutData.copyrightStatement
         }
     }
@@ -140,7 +139,6 @@ FormPage {
         visible: aboutData.otherText.length > 0
         FormTextDelegate {
             Layout.fillWidth: true
-            textItem.wrapMode: Text.WordWrap
             text: aboutData.otherText
         }
     }
@@ -205,7 +203,7 @@ FormPage {
     }
 
     FormGroup {
-        FormButtonDelegate {
+        FormLinkDelegate {
             id: getInvolvedDelegate
             icon.name: "globe-symbolic"
             text: i18nd("kirigami-addons6", "Homepage")
