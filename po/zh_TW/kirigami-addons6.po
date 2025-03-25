@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-23 00:40+0000\n"
-"PO-Revision-Date: 2025-03-10 20:38+0900\n"
+"PO-Revision-Date: 2025-03-24 20:00+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -466,7 +466,7 @@ msgstr "目前顏色「%1」"
 #, kde-format
 msgctxt "@action:button"
 msgid "Icon"
-msgstr ""
+msgstr "圖示"
 
 #: formcard/FormDateTimeDelegate.qml:196
 #, kde-format

@@ -468,7 +468,7 @@ msgstr "当前颜色是“%1”。"
 #, kde-format
 msgctxt "@action:button"
 msgid "Icon"
-msgstr ""
+msgstr "图标"
 
 #: formcard/FormDateTimeDelegate.qml:196
 #, kde-format
