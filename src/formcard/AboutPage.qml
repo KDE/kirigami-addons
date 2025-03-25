@@ -443,7 +443,7 @@ FormCardPage {
                         QQC2.Label {
                             Layout.fillWidth: true
                             text: delegate.modelData.name + ' ' + delegate.modelData.version
-                            elide: Text.ElideRight
+                            wrapMode: Text.WordWrap
                         }
 
                         QQC2.Label {
@@ -452,7 +452,7 @@ FormCardPage {
                             text: delegate.modelData.description
                             color: Kirigami.Theme.disabledTextColor
                             font: Kirigami.Theme.smallFont
-                            elide: Text.ElideRight
+                            wrapMode: Text.WordWrap
                             visible: text.length > 0
                         }
                     }
