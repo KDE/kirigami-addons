@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-23 00:40+0000\n"
-"PO-Revision-Date: 2025-01-25 08:17+0100\n"
+"PO-Revision-Date: 2025-03-26 17:58+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -381,10 +381,9 @@ msgstr ""
 "Tack på förhand för ditt stöd."
 
 #: formcard/AboutKDEPage.qml:163
-#, fuzzy, kde-format
-#| msgid "KDE e.V"
+#, kde-format
 msgid "KDE e.V."
-msgstr "KDE e.V"
+msgstr "KDE e.V."
 
 #: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:237
 #, kde-format
@@ -477,7 +476,7 @@ msgstr "Nuvarande färg \"%1\""
 #, kde-format
 msgctxt "@action:button"
 msgid "Icon"
-msgstr ""
+msgstr "Ikon"
 
 #: formcard/FormDateTimeDelegate.qml:196
 #, kde-format
