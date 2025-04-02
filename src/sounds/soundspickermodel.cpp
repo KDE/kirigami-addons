@@ -41,7 +41,11 @@ void SoundsPickerModel::loadFiles()
 
             QDirIterator it(subPath, QDir::Files, QDirIterator::Subdirectories);
             while (it.hasNext()) {
-                d->soundsVec.push_back(it.next());
+                const QString fileName = it.next();
+                if (fileName.endsWith(QLatin1String(".license"))) {
+                    continue;
+                }
+                d->soundsVec.push_back(fileName);
             }
         }
     }
