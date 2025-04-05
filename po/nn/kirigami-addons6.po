@@ -380,7 +380,6 @@ msgstr ""
 
 #: formcard/AboutKDEPage.qml:163
 #, fuzzy, kde-format
-#| msgid "KDE e.V"
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
