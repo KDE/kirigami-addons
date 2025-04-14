@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-23 00:40+0000\n"
-"PO-Revision-Date: 2025-03-09 17:14+0530\n"
+"PO-Revision-Date: 2025-04-13 18:02+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -469,7 +469,7 @@ msgstr "தற்போதைய நிறம் \"%1\""
 #, kde-format
 msgctxt "@action:button"
 msgid "Icon"
-msgstr ""
+msgstr "சின்னம்"
 
 #: formcard/FormDateTimeDelegate.qml:196
 #, kde-format
