@@ -8,7 +8,7 @@ project(%{APPNAMELC} VERSION 1.0.0)
 include(FeatureSummary)
 
 set(QT6_MIN_VERSION 6.7.0)
-set(KF6_MIN_VERSION 6.8.0)
+set(KF6_MIN_VERSION 6.12.0)
 set(KIRIGAMI_ADDONS_MIN_VERSION 1.2.40)
 
 find_package(ECM ${KF6_MIN_VERSION} REQUIRED NO_MODULE)
@@ -52,10 +52,6 @@ set_package_properties(KF6KirigamiAddons PROPERTIES
 
 ecm_find_qmlmodule(org.kde.kirigamiaddons.formcard)
 ecm_find_qmlmodule(org.kde.kirigamiaddons.statefulapp)
-
-if (ANDROID)
-    configure_file(${CMAKE_CURRENT_SOURCE_DIR}/android/version.gradle.in ${CMAKE_BINARY_DIR}/version.gradle)
-endif()
 
 add_subdirectory(src)
 
