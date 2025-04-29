@@ -158,6 +158,13 @@ AbstractFormDelegate {
     property string statusMessage: ""
 
     /**
+     * @brief This property holds child items to be displayed on the right of
+     * the text field.
+     * @since 1.8.0
+     */
+    property alias trailing: innerRow.children
+
+    /**
      * @This signal is emitted when the Return or Enter key is pressed.
      *
      * Note that if there is a validator or inputMask set on the text input,
@@ -267,17 +274,26 @@ AbstractFormDelegate {
                 Layout.preferredWidth: metrics.advanceWidth
             }
         }
-        TextField {
-            id: textField
-            Accessible.name: root.label
+
+        RowLayout {
+            id: innerRow
+
+            spacing: Kirigami.Units.smallSpacing
+
             Layout.fillWidth: true
-            placeholderText: root.placeholderText
-            text: root.text
-            onTextChanged: root.text = text
-            onAccepted: root.accepted()
-            onEditingFinished: root.editingFinished()
-            onTextEdited: root.textEdited()
-            activeFocusOnTab: false
+
+            TextField {
+                id: textField
+                Accessible.name: root.label
+                Layout.fillWidth: true
+                placeholderText: root.placeholderText
+                text: root.text
+                onTextChanged: root.text = text
+                onAccepted: root.accepted()
+                onEditingFinished: root.editingFinished()
+                onTextEdited: root.textEdited()
+                activeFocusOnTab: false
+            }
         }
 
         Kirigami.InlineMessage {
