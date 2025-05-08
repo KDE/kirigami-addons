@@ -66,11 +66,11 @@ QQC2.Control {
         }
         _runSetDate = true;
 
-        if (root.minimumDate.valueOf() && date.valueOf() < minimumDate.valueOf()) {
+        if (root.minimumDate instanceof Date && date.valueOf() < minimumDate.valueOf()) {
             date = minimumDate;
         }
 
-        if (root.maximumDate.valueOf() && date.valueOf() > maximumDate.valueOf()) {
+        if (root.maximumDate instanceof Date && date.valueOf() > maximumDate.valueOf()) {
             date = maximumDate;
         }
 
@@ -156,7 +156,7 @@ QQC2.Control {
 
     function prevMonth() {
         const newDate = new Date(selectedDate.getFullYear(), selectedDate.getMonth() - 1, selectedDate.getDate());
-        if (root.minimumDate.valueOf() && newDate.valueOf() < minimumDate.valueOf()) {
+        if (root.minimumDate instanceof Date && newDate.valueOf() < minimumDate.valueOf()) {
             if (selectedDate == minimumDate) {
                 return;
             }
@@ -168,7 +168,7 @@ QQC2.Control {
 
     function nextMonth() {
         const newDate = new Date(selectedDate.getFullYear(), selectedDate.getMonth() + 1, selectedDate.getDate());
-        if (root.maximumDate.valueOf() && newDate.valueOf() > maximumDate.valueOf()) {
+        if (root.maximumDate instanceof Date && newDate.valueOf() > maximumDate.valueOf()) {
             if (selectedDate == maximumDate) {
                 return;
             }
@@ -181,7 +181,7 @@ QQC2.Control {
 
     function prevYear() {
         const newDate = new Date(selectedDate.getFullYear() - 1, selectedDate.getMonth(), selectedDate.getDate())
-        if (root.minimumDate.valueOf() && newDate.valueOf() < minimumDate.valueOf()) {
+        if (root.minimumDate instanceof Date && newDate.valueOf() < minimumDate.valueOf()) {
             if (selectedDate == minimumDate) {
                 return;
             }
@@ -193,7 +193,7 @@ QQC2.Control {
 
     function nextYear() {
         const newDate = new Date(selectedDate.getFullYear() + 1, selectedDate.getMonth(), selectedDate.getDate());
-        if (root.maximumDate && newDate.valueOf() > maximumDate.valueOf()) {
+        if (root.maximumDate instanceof Date && newDate.valueOf() > maximumDate.valueOf()) {
             if (selectedDate == maximumDate) {
                 return;
             }
@@ -567,8 +567,10 @@ QQC2.Control {
 
                                 date: new Date(yearViewLoader.startDate.getFullYear(), index)
 
-                                minimumDate: root.minimumDate.valueOf() ? new Date(root.minimumDate).setDate(0) : new Date("invalid")
-                                maximumDate: root.maximumDate.valueOf() ? new Date(root.maximumDate.getFullYear(), root.maximumDate.getMonth() + 1, 0) : new Date("invalid")
+                                minimumDate: root.minimumDate instanceof Date
+                                              ? new Date(root.minimumDate.getFullYear(), root.minimumDate.getMonth(), 0)
+                                              : new Date("invalid")
+                                maximumDate: root.maximumDate instanceof Date ? new Date(root.maximumDate.getFullYear(), root.maximumDate.getMonth() + 1, 0) : new Date("invalid")
                                 repeater: monthRepeater
                                 previousAction: goPreviousAction
                                 nextAction: goNextAction
@@ -659,8 +661,10 @@ QQC2.Control {
                                 QQC2.ButtonGroup.group: decadeGroup
 
                                 date: new Date(startDate.getFullYear() + index, 0)
-                                minimumDate: root.minimumDate.valueOf() ? new Date(root.minimumDate.getFullYear(), 0, 0) : new Date("invalid")
-                                maximumDate: root.maximumDate.valueOf() ? new Date(root.maximumDate.getFullYear(), 12, 0) : new Date("invalid")
+                                minimumDate: root.minimumDate instanceof Date
+                                              ? new Date(root.minimumDate.getFullYear(), root.minimumDate.getMonth(), 0)
+                                              : new Date("invalid")
+                                maximumDate: root.maximumDate instanceof Date ? new Date(root.maximumDate.getFullYear(), 12, 0) : new Date("invalid")
                                 repeater: decadeRepeater
                                 previousAction: goPreviousAction
                                 nextAction: goNextAction
