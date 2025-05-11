@@ -93,29 +93,47 @@ QtObject {
     property Kirigami.ApplicationWindow window
 
     /**
+     * @brief The current config page/window depending on platform.
+     *
+     * Null if one currently doesn't exist.
+     */
+    property QtObject configViewItem: null
+
+    /**
      * Open the configuration window.
      * @params defaultModule The moduleId of the default configuration that should be preselected when opening the configuration view. By default is not specified, this will choose the first module.
      */
     function open(defaultModule = ''): void {
+        if (root.configViewItem) {
+            if (typeof root.configViewItem.requestActivate === "function") {
+                Qt.callLater(root.configViewItem.requestActivate);
+            }
+            return;
+        }
+
         if (Kirigami.Settings.isMobile) {
             const component = Qt.createComponent('org.kde.kirigamiaddons.settings.private', 'ConfigMobilePage');
             if (component.status === Component.Failed) {
                 console.error(component.errorString());
                 return;
             }
-            root.window.pageStack.layers.push(component, {
+            root.configViewItem = root.window.pageStack.layers.push(component, {
                 defaultModule: defaultModule,
                 modules: root.modules,
                 title: root.title,
                 window: root.window,
             })
+            root.configViewItem.backRequested.connect(() => {
+                root.configViewItem.destroy();
+                root.configViewItem = null;
+            });
         } else {
             const component = Qt.createComponent('org.kde.kirigamiaddons.settings.private', 'ConfigWindow');
             if (component.status === Component.Failed) {
                 console.error(component.errorString());
                 return;
             }
-            component.createObject(null, {
+            root.configViewItem = component.createObject(null, {
                 defaultModule: defaultModule,
                 modules: root.modules,
                 width: Kirigami.Units.gridUnit * 50,
@@ -123,6 +141,10 @@ QtObject {
                 minimumWidth: Kirigami.Units.gridUnit * 50,
                 minimumHeight: Kirigami.Units.gridUnit * 30,
                 title: root.title,
+            });
+            root.configViewItem.closing.connect(() => {
+                root.configViewItem.destroy();
+                root.configViewItem = null;
             });
         }
     }
