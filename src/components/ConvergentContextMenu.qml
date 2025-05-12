@@ -168,27 +168,34 @@ Item {
      */
     property bool opened
 
+    /**
+     * @brief The current menu depending on platform.
+     *
+     * Null if one currently doesn't exist.
+     */
+    property QtObject menuItem: null
+
     signal closed
 
     function popup(parent = null, position = null): void {
         if (Kirigami.Settings.isMobile) {
             if (parent) {
-                const item = mobileMenu.createObject(parent);
-                item.open();
+                root.menuItem = mobileMenu.createObject(parent);
+                root.menuItem.open();
             } else {
-                const item = mobileMenu.createObject(root);
-                item.open();
+                root.menuItem = mobileMenu.createObject(root);
+                root.menuItem.open();
             }
         } else {
             if (position && parent) {
-                const item = desktopMenu.createObject(parent);
-                item.popup(position);
+                root.menuItem = desktopMenu.createObject(parent);
+                root.menuItem.popup(position);
             } else if (parent) {
-                const item = desktopMenu.createObject(parent);
-                item.popup();
+                root.menuItem = desktopMenu.createObject(parent);
+                root.menuItem.popup();
             } else {
-                const item = desktopMenu.createObject(root);
-                item.popup();
+                root.menuItem = desktopMenu.createObject(root);
+                root.menuItem.popup();
             }
         }
         root.opened = true;
@@ -205,6 +212,7 @@ Item {
                 root.opened = false;
                 root.closed();
                 destroy();
+                root.menuItem = null;
             }
         }
     }
@@ -219,6 +227,7 @@ Item {
                 root.opened = false;
                 root.closed();
                 destroy();
+                root.menuItem = null;
             }
 
             headerContentItem: ColumnLayout {
