@@ -190,8 +190,7 @@ Item {
 
             visible: root.initialsMode === Avatar.InitialsMode.UseInitials &&
                     !root.__showImage &&
-                    !root.__unsuitableForInitials &&
-                    root.width > Kirigami.Units.gridUnit
+                    !root.__unsuitableForInitials
 
             text: Components.NameUtils.initialsFromString(root.name)
             textFormat: Text.PlainText
@@ -200,7 +199,11 @@ Item {
             font {
                 // this ensures we don't get a both point and pixel size are set warning
                 pointSize: -1
-                pixelSize: Math.round((root.height - Kirigami.Units.largeSpacing) / 2)
+                pixelSize: {
+                     // Shrink padding as avatar gets tiny to improve readability.
+                     const padding = Math.max(0, Math.min(Kirigami.Units.largeSpacing, root.height - Kirigami.Units.largeSpacing * 2));
+                     return Math.round((root.height - padding) / 2);
+                }
             }
             fontSizeMode: Text.Fit
             verticalAlignment: Text.AlignVCenter
