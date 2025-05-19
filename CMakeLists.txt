@@ -1,9 +1,9 @@
 # SPDX-FileCopyrightText: 2019 David Edmundson <kde@davidedmundson.co.uk>
 # SPDX-License-Identifier: BSD-2-Clause
 
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.20)
 
-project(kirigami-addons VERSION 1.7.0)
+project(kirigami-addons VERSION 1.8.0)
 
 include(FeatureSummary)
 
