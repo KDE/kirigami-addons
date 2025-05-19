@@ -174,36 +174,53 @@ Item {
      */
     property bool opened
 
-    /*!
-      The current menu depending on platform.
+    /*! \internal */
+    property KirigamiComponents.BottomDrawer _mobileMenuItem: null
 
-      Null if one currently doesn't exist.
-     */
-    property QtObject menuItem: null
+    /*! \internal */
+    property P.ActionsMenu _desktopMenuItem: null
 
     /*!
+       Emitted when the context menu is closed.
      */
     signal closed
 
+    /*!
+       Close the context menu.
+     */
+    function close(): void {
+        if (_mobileMenuItem) {
+            _mobileMenuItem.close();
+            return;
+        }
+
+        if (_desktopMenuItem) {
+            _desktopMenuItem.close();
+        }
+    }
+
+    /*!
+       Open the context menu.
+     */
     function popup(parent = null, position = null): void {
         if (Kirigami.Settings.isMobile) {
             if (parent) {
-                root.menuItem = mobileMenu.createObject(parent);
-                root.menuItem.open();
+                root._mobileMenuItem = mobileMenu.createObject(parent);
+                root._mobileMenuItem.open();
             } else {
-                root.menuItem = mobileMenu.createObject(root);
-                root.menuItem.open();
+                root._mobileMenuItem = mobileMenu.createObject(root);
+                root._mobileMenuItem.open();
             }
         } else {
             if (position && parent) {
-                root.menuItem = desktopMenu.createObject(parent);
-                root.menuItem.popup(position);
+                root._desktopMenuItem = desktopMenu.createObject(parent);
+                root._desktopMenuItem.popup(position);
             } else if (parent) {
-                root.menuItem = desktopMenu.createObject(parent);
-                root.menuItem.popup();
+                root._desktopMenuItem = desktopMenu.createObject(parent);
+                root._desktopMenuItem.popup();
             } else {
-                root.menuItem = desktopMenu.createObject(root);
-                root.menuItem.popup();
+                root._desktopMenuItem = desktopMenu.createObject(root);
+                root._desktopMenuItem.popup();
             }
         }
         root.opened = true;
@@ -220,7 +237,7 @@ Item {
                 root.opened = false;
                 root.closed();
                 destroy();
-                root.menuItem = null;
+                root._desktopMenuItem = null;
             }
         }
     }
@@ -235,7 +252,7 @@ Item {
                 root.opened = false;
                 root.closed();
                 destroy();
-                root.menuItem = null;
+                root._mobileMenuItem = null;
             }
 
             headerContentItem: ColumnLayout {
