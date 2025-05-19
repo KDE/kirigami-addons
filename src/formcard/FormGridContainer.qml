@@ -13,51 +13,57 @@ import org.kde.kirigami as Kirigami
 
 import "private" as Private
 
-/**
- * This component render a grid of small cards.
- *
- * This is used to display multiple information in a FormCard.FormLayout
- * without taking too much vertical space.
- *
- * @code{.qml}
- * import org.kde.kirigamiaddons.formcard as FormCard
- *
- * FormCard.FormGridContainer {
- *     id: container
- *
- *     Layout.topMargin: Kirigami.Units.largeSpacing
- *     Layout.fillWidth: true
- *
- *     infoCards: [
- *         FormCard.FormGridContainer.InfoCard {
- *             title: "42"
- *             subtitle: i18nc("@info:Number of Posts", "Posts")
- *         },
- *         FormCard.FormGridContainer.InfoCard {
- *             title: "42"
- *             subtitle: i18nc("@info:Number of followers.", "Followers")
- *         }
- *     ]
- * }
- * @endcode
- *
- *
- * @since KirigamiAddons 0.11.0
- *
- * @inherit QtQuick.Item
+/*!
+   \qmltype FormGridContainer
+   \inqmlmodule org.kde.kirigamiaddons.formcard
+   \brief This component render a grid of small cards.
+
+   This is used to display multiple information in a FormCard.FormLayout
+   without taking too much vertical space.
+
+   \qml
+   import org.kde.kirigamiaddons.formcard as FormCard
+
+   FormCard.FormGridContainer {
+       id: container
+
+       Layout.topMargin: Kirigami.Units.largeSpacing
+       Layout.fillWidth: true
+
+       infoCards: [
+           FormCard.FormGridContainer.InfoCard {
+               title: "42"
+               subtitle: i18nc("@info:Number of Posts", "Posts")
+           },
+           FormCard.FormGridContainer.InfoCard {
+               title: "42"
+               subtitle: i18nc("@info:Number of followers.", "Followers")
+           }
+       ]
+   }
+   \endqml
+
+   \since 0.11.0
  */
 Item {
     id: root
 
-    /**
-     * This property holds the maximum width of the grid.
+    /*!
+       This property holds the maximum width of the grid.
+       \default Kirigami.Units.gridUnit * 30
      */
     property real maximumWidth: Kirigami.Units.gridUnit * 30
 
-    /**
-     * @brief This property holds the padding used around the content edges.
-     *
-     * default: `0`
+    /*!
+       \qmlproperty real padding
+       \qmlproperty real verticalPadding
+       \qmlproperty real horizontalPadding
+       \qmlproperty real topPadding
+       \qmlproperty real bottomPadding
+       \qmlproperty real leftPadding
+       \qmlproperty real rightPadding
+       \brief Padding property used around the content edges.
+       \default 0
      */
     property real padding: 0
     property real verticalPadding: padding
@@ -67,40 +73,41 @@ Item {
     property real leftPadding: horizontalPadding
     property real rightPadding: horizontalPadding
 
-    /**
-     * This property holds whether the card's width is being restricted.
+    /*!
+       This property holds whether the card's width is being restricted.
      */
     readonly property bool cardWidthRestricted: root.width > root.maximumWidth
 
-    /**
-     * This property holds the InfoCards which should be displayed.
-     *
-     * Each InfoCard contains a title and an optional subtitle
-     *
-     * @code{.qml}
-     * import org.kde.kirigamiaddons.formcard as FormCard
-     *
-     * FormCard.FormGridContainer {
-     *     infoCards: [
-     *         FormCard.FormGridContainer.InfoCard {
-     *             title: "42"
-     *             subtitle: i18nc("@info:Number of Posts", "Posts")
-     *         },
-     *         FormCard.FormGridContainer.InfoCard {
-     *             title: "42"
-     *         },
-     *         FormCard.FormGridContainer.InfoCard {
-     *             title: "Details"
-     *             action: Kirigami.Action {
-     *                 onClicked: pageStack.push("Details.qml")
-     *             }
-     *         }
-     *     ]
-     * }
-     * @endcode
+    /*!
+       This property holds the InfoCards which should be displayed.
+
+       Each InfoCard contains a title and an optional subtitle
+
+       \qml
+       import org.kde.kirigamiaddons.formcard as FormCard
+
+       FormCard.FormGridContainer {
+           infoCards: [
+               FormCard.FormGridContainer.InfoCard {
+                   title: "42"
+                   subtitle: i18nc("@info:Number of Posts", "Posts")
+               },
+               FormCard.FormGridContainer.InfoCard {
+                   title: "42"
+               },
+               FormCard.FormGridContainer.InfoCard {
+                   title: "Details"
+                   action: Kirigami.Action {
+                       onClicked: pageStack.push("Details.qml")
+                   }
+               }
+           ]
+       }
+       \endqml
      */
     property list<QtObject> infoCards
 
+    // Todo how to document FormGridContainer.InfoCard?
     component InfoCard: QtObject {
         property bool visible: true
         property string title

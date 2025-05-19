@@ -1,0 +1,13 @@
+include($KDE_DOCS/global/qt-module-defaults.qdocconf)
+
+project = KirigamiAddonsStatefulApplication
+description = Todo
+
+documentationinheaders = true
+
+headerdirs += .
+sourcedirs += .
+
+outputformats = HTML
+
+depends += kde kirigami kconfigqml kconfiggui qtcore qtquick qtquickcontrols qtgui

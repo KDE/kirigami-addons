@@ -11,58 +11,64 @@ import org.kde.kirigami as Kirigami
 
 import "private" as Private
 
-/**
- * @brief A single card that follows a form style.
- *
- * This is the entrypoint component for FormCard.
- *
- * A FormCard consists of a container that can be used to create your
- * own Settings pages. It has a different color than the background.
- *
- * Each FormCard can contain one or more Form delegates in its ::contentItem.
- * To add more than one Form delegate to a FormCard, use a
- * QtQuick.Layouts.ColumnLayout to group them.
- *
- * Multiple FormCards can be grouped with a QtQuick.Layouts.ColumnLayout to
- * represent different Settings sections.
- *
- * Each section is expected to contain a FormCardHeader as the first
- * delegate, which serves the role of a section title.
- *
- * The height of the FormCard matches the implicit height of the
- * ::contentItem and does not need to be set, while the width is expected
- * to be given by the parent, for example, via a Layout.fillWidth.
- *
- * @since KirigamiAddons 0.11.0
- *
- * @inherit QtQuick.Item
+/*!
+   \qmltype FormCard
+   \inqmlmodule org.kde.kirigamiaddons.formcard
+   \brief A single card that follows a form style.
+
+   This is the entrypoint component for FormCard.
+
+   A FormCard consists of a container that can be used to create your
+   own Settings pages. It has a different color than the background.
+
+   Each FormCard can contain one or more Form delegates in its contentItem.
+   To add more than one Form delegate to a FormCard, use a
+   ColumnLayout to group them.
+
+   Multiple FormCards can be grouped with a ColumnLayout to
+   represent different Settings sections.
+
+   Each section is expected to contain a FormHeader as the first
+   delegate, which serves the role of a section title.
+
+   The height of the FormCard matches the implicit height of the
+   contentItem and does not need to be set, while the width is expected
+   to be given by the parent, for example, via a \l {Layout::fillWidth} {Layout.fillWidth}.
+
+   \since 0.11.0
  */
 Item {
     id: root
 
-    /**
-     * @brief The delegates inside the Form card.
-     *
-     * This is where you should add new Form delegates.
+    /*!
+       \brief The delegates inside the Form card.
+
+       This is where you should add new Form delegates.
      */
     default property alias delegates: internalColumn.data
 
-    /**
-     * @brief The maximum width of the card.
-     *
-     * This can be set to a specific value to force its delegates to wrap
-     * instead of using the entire width of the parent.
-     *
-     * default: `Kirigami.Units.gridUnit * 30`
-     *
-     * @see cardWidthRestricted
+    /*!
+       \brief The maximum width of the card.
+
+       This can be set to a specific value to force its delegates to wrap
+       instead of using the entire width of the parent.
+
+       \default Kirigami.Units.gridUnit * 30
+
+       \sa cardWidthRestricted
      */
     property real maximumWidth: Kirigami.Units.gridUnit * 30
 
-    /**
-     * @brief The padding used around the content edges.
-     *
-     * default: `0`
+    /*!
+       \qmlproperty real padding
+       \qmlproperty real verticalPadding
+       \qmlproperty real horizontalPadding
+       \qmlproperty real topPadding
+       \qmlproperty real bottomPadding
+       \qmlproperty real leftPadding
+       \qmlproperty real rightPadding
+       \brief Padding property used around the content edges.
+       \default 0
      */
     property real padding: 0
     property real verticalPadding: padding
@@ -72,8 +78,8 @@ Item {
     property real leftPadding: horizontalPadding
     property real rightPadding: horizontalPadding
 
-    /**
-     * Whether the card's width is being restricted.
+    /*!
+       Whether the card's width is being restricted.
      */
     readonly property bool cardWidthRestricted: root.width > root.maximumWidth
 

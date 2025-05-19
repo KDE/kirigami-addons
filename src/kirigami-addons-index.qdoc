@@ -1,0 +1,45 @@
+/*!
+    \page kirigami-addons-index.html
+    \title Kirigami Addons
+
+    Kirigami Addons is an additional set of visual components that work well on mobile and desktop
+    and are guaranteed to be cross-platform.
+
+    It uses \l {org.kde.kirigami} {Kirigami} under the hood to create its components and should look native with any QtQuick Controls style.
+
+    A tutorial for Kirigami Addons can be found over the \l {https://develop.kde.org/docs/getting-started/kirigami/addons-introduction}{KDE Developer Platform}.
+
+    \section1 Using the Module
+
+    \include {module-use.qdocinc} {using the c++ api}
+
+    \section2 Building with CMake
+
+    To import only the Kirigami Addons QML modules:
+
+    \code
+    ecm_find_qml_module(org.kde.kirigamiaddons REQUIRED)
+    \endcode
+
+    To import Kirigami Addons into your project using CMake:
+
+    \include {module-use.qdocinc} {building with cmake} {KF6} {KirigamiAddons} {KF6::KirigamiAddons}
+
+    \section1 API Reference
+
+    \list
+        \li \l{Kirigami Addons FormCard QML Types}
+        \li \l{Kirigami Addons Delegates QML Types}
+        \li \l{Kirigami Addons Settings QML Types}
+        \li \l{Kirigami Addons TreeView QML Types}
+        \li \l{Kirigami Addons TableView QML Types}
+        \li \l{Kirigami Addons Labs Components QML Types}
+        \li \l{Kirigami Addons Sounds QML Types}
+        \li \l{Kirigami Addons StatefulApplication QML Types}
+        \li \l{Kirigami Addons StatefulApplication Labs QML Types}
+    \endlist
+
+    \section1 Licenses
+
+    TODO
+*/

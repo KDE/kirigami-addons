@@ -10,9 +10,10 @@ import QtQuick.Window 2.15
 import org.kde.kirigami 2.15 as Kirigami
 import org.kde.kirigamiaddons.components 1.0 as Components
 
-/**
- * @brief An element that represents a user, either with initials, an icon, or a profile image.
- * @inherit QtQuick.Item
+/*!
+   \qmltype Avatar
+   \inqmlmodule org.kde.kirigamiaddons.labs.components
+   \brief An element that represents a user, either with initials, an icon, or a profile image.
  */
 Item {
     id: root
@@ -29,113 +30,115 @@ Item {
     }
 
 //BEGIN properties
-    /**
-     * @brief This property holds the given name of a user.
-     *
-     * The user's name will be used for generating initials and to provide the
-     * accessible name for assistive technology.
+    /*!
+       \brief This property holds the given name of a user.
+
+       The user's name will be used for generating initials and to provide the
+       accessible name for assistive technology.
      */
     property string name
 
-    /**
-     * @brief This property holds the source of the user's profile picture; an image.
-     * @see QtQuick.Image::source
-     * @property url source
+    /*!
+       \qmlproperty url source
+       \brief This property holds the source of the user's profile picture; an image.
+       \sa {Image::source} {Image.source}
      */
     property alias source: avatarImage.source
 
-    /**
-     * @brief This property holds avatar's icon source.
-     *
-     * This icon  is displayed when using an icon with ``Avatar.InitialsMode.UseIcon`` and
-     * ``Avatar.ImageNode.AlwaysShowInitials`` enabled.
-     *
-     * @see org::kde::kirigami::Icon::source
-     * @property var iconSource
+    /*!
+       \qmlproperty var iconSource
+       \brief This property holds avatar's icon source.
+
+       This icon  is displayed when using an icon with Avatar.InitialsMode.UseIcon and
+       Avatar.ImageNode.AlwaysShowInitials enabled.
+
+       \sa {Icon::source} {Kirigami.Icon.source}
      */
     property alias iconSource: avatarIcon.source
 
-    /**
-     * @brief This property holds how the button should represent the user when no user-set image is available.
-     *
-     * Possible values are:
-     * * ``Avatar.InitialsMode.UseInitials``: Show the user's initials.
-     * * ``Avatar.InitialsMode.UseIcon``: Show a generic icon.
-     *
-     * @see org::kde::kirigamiaddons::components::Avatar::InitialsMode
+    /*!
+       \brief This property holds how the button should represent the user when no user-set image is available.
+
+       Possible values are:
+       \value Avatar.InitialsMode.UseInitials
+              Show the user's initials.
+       \value Avatar.InitialsMode.UseIcon
+              Show a generic icon.
+
+       \sa initialsMode
      */
     property int initialsMode: Avatar.InitialsMode.UseInitials
 
-    /**
-     * @brief This property holds how the avatar should be shown.
-     *
-     * This property holds whether the button should always show the image; show the image if one is
-     * available and show initials when it is not; or always show initials.
-     *
-     * Possible values are:
-     * * ``Avatar.ImageMode.AlwaysShowImage``: Always try to show the image; even if it hasn't loaded yet or is undefined.
-     * * ``Avatar.ImageMode.AdaptiveImageOrInitals``: Show the image if it is valid; or show initials if it is not
-     * * ``Avatar.ImageMode.AlwaysShowInitials``: Always show initials
-     *
-     * @see org::kde::kirigamiaddons::components::Avatar::ImageMode
+    /*!
+       \brief This property holds how the avatar should be shown.
+
+       This property holds whether the button should always show the image; show the image if one is
+       available and show initials when it is not; or always show initials.
+
+       Possible values are:
+       \value Avatar.ImageMode.AlwaysShowImage
+              Always try to show the image even if it hasn't loaded yet or is undefined.
+       \value Avatar.ImageMode.AdaptiveImageOrInitals
+              Show the image if it is valid or initials if it is not.
+       \value Avatar.ImageMode.AlwaysShowInitials
+              Always show initials.
+
+       \sa imageMode
      */
     property int imageMode: Avatar.ImageMode.AdaptiveImageOrInitals
 
-    /**
-     * @brief This property sets whether the provided image should be cached.
-     * @see QtQuick.Image::cache
-     * @property bool cache
+    /*!
+       \qmlproperty bool cache
+       \brief This property sets whether the provided image should be cached.
+       \sa {Image::cache} {Image.cache}
      */
     property alias cache: avatarImage.cache
 
-    /**
-     * @brief Load the image asynchronously.
-     * @see QtQuick.Image::asynchronous
-     * @property bool asynchronous
-     * @since 1.7.0
+    /*!
+       \qmlproperty bool asynchronous
+       \brief Load the image asynchronously.
+       \sa {Image::asynchronous} {Image.asynchronous}
+       \since 1.7.0
      */
     property alias asynchronous: avatarImage.asynchronous
 
-    /**
-     * @brief This property holds the source size of the user's profile picture.
-     * @see QtQuick.Image::sourceSize
-     * @property int sourceSize
+    /*!
+       \qmlproperty int sourceSize
+       \brief This property holds the source size of the user's profile picture.
+       \sa {Image::sourceSize} {Image.sourceSize}
      */
     property alias sourceSize: avatarImage.sourceSize
 
-    /**
-     * @brief This property holds the color to use for this avatar.
-     *
-     * If not explicitly set, this defaults to generating a color from the name.
-     *
-     * @property color color
+    /*!
+       \brief This property holds the color to use for this avatar.
+
+       If not explicitly set, this defaults to generating a color from the name.
      */
     property color color: Components.NameUtils.colorsFromString(name)
 
-    /**
-     * @brief This property holds the color of the avatar's initials.
-     *
-     * If not explicitly set, this defaults to defaultInitialsColor.
-     *
-     * @see defaultInitialsColor
-     * @property color initialsColor
+    /*!
+       \brief This property holds the color of the avatar's initials.
+
+       If not explicitly set, this defaults to defaultInitialsColor.
+
+       \sa defaultInitialsColor
      */
     property color initialsColor: defaultInitialsColor
 
-    /**
-     * @brief This property holds the default color of the avatar's initials.
-     *
-     * It depends on the avatar's color.
-     *
-     * @property color defaultInitialsColor
+    /*!
+       \qmlproperty color defaultInitialsColor
+       \brief This property holds the default color of the avatar's initials.
+
+       It depends on the avatar's color.
      */
     readonly property alias defaultInitialsColor: root.__textColor
 
-    /**
-     * @brief This item holds the parent item on the clipped circle.
-     *
-     * Implementations may add custom graphics which will be clipped along with
-     * the rest of the avatar content.
+    /*!
+       \qmlproperty Item clippedContent
+       \brief This item holds the parent item on the clipped circle.
+
+       Implementations may add custom graphics which will be clipped along with
+       the rest of the avatar content.
      */
     readonly property alias clippedContent: clippedContent
 

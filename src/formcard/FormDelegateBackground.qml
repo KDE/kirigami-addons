@@ -8,26 +8,27 @@ import QtQuick.Layouts
 import QtQuick.Templates as T
 import org.kde.kirigami as Kirigami
 
-/**
- * @brief A background for Form delegates.
- *
- * This is a simple background that provides opacity feedback to the user
- * when the control has focus or is currently being pressed, for example.
- *
- * This is used in AbstractFormDelegate so that new delegates provide this
- * feedback by default, and can be easily overriden with a QtQuick.Item.
- *
- * @since KirigamiAddons 0.11.0
- *
- * @see AbstractFormDelegate
- *
- * @inherit QtQuick.Rectangle
+/*!
+   \qmltype FormDelegateBackground
+   \inqmlmodule org.kde.kirigamiaddons.formcard
+   \brief A background for Form delegates.
+
+   This is a simple background that provides opacity feedback to the user
+   when the control has focus or is currently being pressed, for example.
+
+   This is used in AbstractFormDelegate so that new delegates provide this
+   feedback by default, and can be easily overriden with an Item.
+
+   \since 0.11.0
+
+   \sa AbstractFormDelegate
  */
 Kirigami.ShadowedRectangle {
     id: root
 
-    /**
-     * @brief The control to which the background will be assigned.
+    /*!
+       \qmlproperty Control control
+       \brief The control to which the background will be assigned.
      */
     required property T.Control control
 

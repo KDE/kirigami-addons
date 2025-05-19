@@ -13,33 +13,36 @@ import QtMultimedia
 import org.kde.kirigamiaddons.sounds
 import org.kde.kirigamiaddons.delegates as Delegates
 
-/**
- * A sound picker component for picking ringtones and notifications.
- * \inherits QtQuick.ListView
+/*!
+   \qmltype SoundsPicker
+   \inqmlmodule org.kde.kirigamiaddons.sounds
+   \brief A sound picker component for picking ringtones and notifications.
  */
 ListView {
     id: listView
 
-    /**
-     * This property holds the selected audio url.
+    /*!
+       This property holds the selected audio url.
      */
     property string selectedUrl: soundsModel.initialSourceUrl(listView.currentIndex)
 
-    /**
-     * This property controls the sound type (ringtone or notification).
-     * \property bool notification
+    /*!
+       This property controls the sound type (ringtone or notification).
+       \default true
      */
     property bool notification: true
 
-    /**
-     * This property lets you choose sound theme, default to "plasma-mobile"
-     * \property string theme
+    /*!
+       \qmlproperty string theme
+       This property lets you choose the sound theme.
+       \default "plasma-mobile"
      */
     property alias theme: soundsModel.theme
 
-    /**
-     * This property is the internal Audio qml type used for play sound
-     * \property QtMultimedia.Audio playMusic
+    /*!
+       \qmlproperty MediaPlayer audioPlayer
+       This property is the internal Audio qml type used for play sound.
+       \sa {QtMultimedia::MediaPlayer} {QtMultimedia.MediaPlayer}
      */
     property alias audioPlayer: playMusic
 

@@ -13,29 +13,30 @@ import org.kde.coreaddons as Core
 
 import "private" as Private
 
-/**
- * @brief An AboutPage that displays the about data using Form components.
- *
- * This component consists of an internationalized "About" page with the
- * metadata of your program.
- *
- * It allows to show the copyright notice of the application together with
- * the contributors and some information of which platform it's running on.
- *
- * @since KirigamiAddons 0.11.0
- * @inherit org:kde::kirigami::ScrollablePage
+/*!
+   \qmltype AboutPage
+   \inqmlmodule org.kde.kirigamiaddons.formcard
+   \brief An AboutPage that displays the about data using Form components.
+
+   This component consists of an internationalized "About" page with the
+   metadata of your program.
+
+   It allows to show the copyright notice of the application together with
+   the contributors and some information of which platform it's running on.
+
+   \since 0.11.0
  */
 FormCardPage {
     id: page
 
-    /**
-     * @brief This property holds an object with the same shape as KAboutData.
-     *
-     * Set this property to either a KAboutData instance exposed from C++, or directly via a JSON object.
-     *
-     * Example usage:
-     * @code{json}
-     * aboutData: {
+    /*!
+       \brief This property holds an object with the same shape as KAboutData.
+
+       Set this property to either a KAboutData instance exposed from C++, or directly via a JSON object.
+
+       Example usage:
+       \code{json}
+       aboutData: {
           "displayName" : "KirigamiApp",
           "productName" : "kirigami/app",
           "componentName" : "kirigamiapp",
@@ -65,24 +66,25 @@ FormCardPage {
           "copyrightStatement" : "© 2010-2018 Plasma Development Team",
           "desktopFileName" : "org.kde.kirigamiapp"
        }
-       @endcode
-     *
-     * @see KAboutData
+       \endcode
+
+       \sa KAboutData
      */
     property var aboutData: Core.AboutData
 
-    /**
-     * @brief This property holds a link to a "Get Involved" page.
-     *
-     * default: `"https://community.kde.org/Get_Involved" when the
-     * application ID starts with "org.kde.", otherwise empty.`
+    /*!
+       \brief This property holds a link to a "Get Involved" page.
+
+       Default: "https://community.kde.org/Get_Involved" when the
+       application ID starts with "org.kde.", otherwise empty.
      */
     property url getInvolvedUrl: aboutData.desktopFileName.startsWith("org.kde.") ? "https://community.kde.org/Get_Involved" : ""
 
-    /**
-     * @brief This property holds a link to a "Donate" page.
-     *
-     * default: `"https://www.kde.org/donate" when the application ID starts with "org.kde.", otherwise empty.`
+    /*!
+       \brief This property holds a link to a "Donate" page.
+
+       Default: "https://www.kde.org/donate" when the
+       application ID starts with "org.kde.", otherwise empty.
      */
     property url donateUrl: aboutData.desktopFileName.startsWith("org.kde.") ? "https://www.kde.org/donate" : ""
 

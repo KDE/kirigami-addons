@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2024 Carl Schwan <carl@carlschwan.eu>
+// SPDX-FileCopyrightText: 2024 Carl Schwan <carl\carlschwan.eu>
 // SPDX-License-Identifier: LGPL-2.1-only or LGPL-3.0-only or LicenseRef-KDE-Accepted-LGPL
 
 #pragma once
@@ -9,18 +9,19 @@
 #include <QSortFilterProxyModel>
 #include <QtQml/qqmlregistration.h>
 
-/**
- * @class AbstractKirigamiApplication AbstractKirigamiApplication
- * @short The main container for your actions.
+/*!
+ * \class AbstractKirigamiApplication
+ * \brief The main container for your actions.
  *
  * AbstractKirigamiApplication is a class that needs to be inherited in your application.
+ *
  * It allows to expose the various actions of your application to the QML frontend. Depending
  * on the complexitiy of the application, you can either reimplement setupActions only
  * and put all your actions inside the mainCollection, or, if you want to organize your actions
  * in multiple collections, you can also expose the custom collections by overwriting
  * actionCollections.
  *
- * @code{.cpp}
+ * \code{.cpp}
  * class MyKoolApp : public AbstractKirigamiApplication
  * {
  *     Q_OBJECT
@@ -51,11 +52,11 @@
  *         mainCollection()->setDefaultShortcut(action, QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_N));
  *     }
  * }
- * @endcode
+ * \endcode
  *
  * The application object then need to be assigned to the application property in a StatefulWindow.
  *
- * @code{.qml}
+ * \code{.qml}
  * import org.kde.kirigamiaddons.StatefulApplication as StatefulApplication
  *
  * StatefulApplication.StatefulWindow {
@@ -68,9 +69,9 @@
  *         application: root.application
  *     }
  * }
- * @endcode{}
+ * \endcode{}
  *
- * @since KirigamiAddons 1.4.0
+ * \since 1.4.0
  */
 class KIRIGAMIADDONSSTATEFULAPP_EXPORT AbstractKirigamiApplication : public QObject
 {
@@ -78,79 +79,85 @@ class KIRIGAMIADDONSSTATEFULAPP_EXPORT AbstractKirigamiApplication : public QObj
     QML_ELEMENT
     QML_UNCREATABLE("Abstract class")
 
-    /// @internal Used by StatefulApp.ManagedWindow
+    /// \internal Used by StatefulApp.ManagedWindow
     Q_PROPERTY(QSortFilterProxyModel *actionsModel READ actionsModel CONSTANT)
 
-    /// @internal Used by StatefulApp.ManagedWindow
+    /// \internal Used by StatefulApp.ManagedWindow
     Q_PROPERTY(QAbstractListModel *shortcutsModel READ shortcutsModel CONSTANT)
 
-    /// This property holds the configurationView of the application
-    ///
-    /// When set, AbstractKirigamiApplication will setup a "options_configure" action
-    /// that will open the configurationView when triggered.
+    /*!
+     * \qmlproperty QObject AbstractKirigamiApplication::configurationView
+     * This property holds the configurationView of the application
+     *
+     * When set, AbstractKirigamiApplication will setup a "options_configure" action
+     * that will open the configurationView when triggered.
+     */
     Q_PROPERTY(QObject *configurationView READ configurationView WRITE setConfigurationView NOTIFY configurationViewChanged)
 
 public:
-    /// Default constructor of AbstractKirigamiApplication
+    /*! Default constructor of AbstractKirigamiApplication */
     explicit AbstractKirigamiApplication(QObject *parent = nullptr);
 
-    /// Default destructor of AbstractKirigamiApplication
+    /*! Default destructor of AbstractKirigamiApplication */
     virtual ~AbstractKirigamiApplication();
 
-    /// Return the list of KirigamiActionCollection setup in your application.
-    ///
-    /// Overwrite this method if you are using custom collections.
+    /*! Return the list of KirigamiActionCollection setup in your application.
+     *  Overwrite this method if you are using custom collections.
+     */
     virtual QList<KirigamiActionCollection *> actionCollections() const;
 
-    /// Return the main action collection.
+    /*! Return the main action collection. */
     KirigamiActionCollection *mainCollection() const;
 
-    /// @internal Used by StatefulApp.StatefulWindow
+    /*! \internal Used by StatefulApp.StatefulWindow */
     QSortFilterProxyModel *actionsModel();
 
-    /// @internal Used by the shortcuts editor
+    /*! \internal Used by the shortcuts editor */
     QAbstractListModel *shortcutsModel();
 
-    /// Get the named action.
-    /// \return nullptr is not such action is defined.
+    /*! Get the named action.
+     *  \return nullptr is not such action is defined.
+     */
     Q_INVOKABLE QAction *action(const QString &actionName);
 
-    /// Getter for the configurationView property.
+    /*! Getter for the configurationView property. */
     QObject *configurationView() const;
 
-    /// Setter for the configurationView property.
+    /*! Setter for the configurationView property. */
     void setConfigurationView(QObject *configurationView);
 
 Q_SIGNALS:
-    /// @internal Used by StatefulApp.StatefulWindow
+    /*! \internal Used by StatefulApp.StatefulWindow */
     void openAboutPage();
 
-    /// @internal Used by StatefulApp.StatefulWindow
+    /*! \internal Used by StatefulApp.StatefulWindow */
     void openAboutKDEPage();
 
-    /// @internal Used by StatefulApp.StatefulWindow
+    /*! \internal Used by StatefulApp.StatefulWindow */
     void openKCommandBarAction();
 
-    /// @internal Used by StatefulApp.StatefulWindow
+    /*! \internal Used by StatefulApp.StatefulWindow */
     void shortcutsEditorAction();
 
-    /// Changed signal for the configurationView property.
+    /*! Changed signal for the configurationView property. */
     void configurationViewChanged();
 
 protected:
-    /// Entry points to declare your actions.
-    ///
-    /// Don't forget to call the parent implementation to get the following actions
-    /// setup for you:
-    ///
-    /// - CommandBar
-    /// - About page for your application
-    /// - About page for KDE
-    ///
-    /// Once the actions are setup, call readSettings to read the configured shortcuts.
+    /*! Entry points to declare your actions.
+     *
+     *  Don't forget to call the parent implementation to get the following actions
+     *  setup for you:
+     *
+     * \list
+     * \li CommandBar
+     * \li About page for your application
+     * \li About page for KDE
+     * \endlist
+     *
+     *  Once the actions are setup, call readSettings to read the configured shortcuts.
+     */
     virtual void setupActions();
-
-    /// Read the configured settings for the action.
+     /*! Read the configured settings for the action. */
     void readSettings();
 
 private:

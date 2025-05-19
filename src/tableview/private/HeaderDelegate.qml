@@ -11,6 +11,10 @@ import org.kde.kirigami as Kirigami
 
 import org.kde.kirigamiaddons.tableview as Tables
 
+/*!
+   \qmltype HeaderDelegate
+   \inqmlmodule org.kde.kirigamiaddons.tableview
+ */
 QQC2.Control {
     id: delegate
 
@@ -22,10 +26,18 @@ QQC2.Control {
     Drag.hotSpot.x: width / 2
     Drag.hotSpot.y: height / 2
 
+    /*!
+     */
     required property int index
+    /*!
+     */
     required property var headerComponent
 
+    /*!
+     */
     property bool sortEnabled
+    /*!
+     */
     property int sortOrder
 
     signal clicked()

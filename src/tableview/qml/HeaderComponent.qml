@@ -5,4 +5,8 @@
 
 import "private" as Private
 
+/*!
+   \qmltype HeaderComponent
+   \inqmlmodule org.kde.kirigamiaddons.tableview
+ */
 Private.AbstractHeaderComponent {}

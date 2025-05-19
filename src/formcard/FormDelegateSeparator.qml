@@ -8,30 +8,30 @@ import QtQuick
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 
-/**
- * @brief A context-aware separator.
- *
- * This is a standard Kirigami.Separator that can be hidden upon hovering
- * the mouse over the ::above or ::below delegate, allowing for a subtle
- * but smooth animation feedback.
- *
- * Its two properties are particularly useful when it is not immediately known
- * which delegate will fill the ::above or ::below position, such as delegates
- * provided from a model or managed by a Loader.
- *
- * @see Kirigami.Separator
- *
- * @inherit Kirigami.Separator
+/*!
+   \qmltype FormDelegateSeparator
+   \inqmlmodule org.kde.kirigamiaddons.formcard
+   \brief A context-aware separator.
+
+   This is a standard \l {Separator} {Kirigami.Separator} that can be hidden upon hovering
+   the mouse over the \l above or \l below delegate, allowing for a subtle
+   but smooth animation feedback.
+
+   Its two properties are particularly useful when it is not immediately known
+   which delegate will fill the \l above or \l below position, such as delegates
+   provided from a model or managed by a Loader.
+
+   \sa {Separator} {Kirigami.Separator}
  */
 Kirigami.Separator {
     id: root
 
-    /**
-     * @brief The delegate immediately above the separator.
+    /*!
+       \brief The delegate immediately above the separator.
      */
     property Item above
-    /**
-     * @brief The delegate immediately below the separator.
+    /*!
+       \brief The delegate immediately below the separator.
      */
     property Item below
 

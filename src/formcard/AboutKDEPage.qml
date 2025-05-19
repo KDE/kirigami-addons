@@ -8,15 +8,15 @@ import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 import org.kde.coreaddons as Core
 
-/**
- * @brief An "About KDE" page using Form components.
- *
- * This component consists of a full, internationalized "About KDE" page
- * that can be instantiated directly without passing any properties.
- *
- * @since KirigamiAddons 0.11.0
- *
- * @inherit Kirigami.ScrollablePage
+/*!
+   \qmltype AboutKDEPage
+   \inqmlmodule org.kde.kirigamiaddons.formcard
+   \brief An "About KDE" page using Form components.
+
+   This component consists of a full, internationalized "About KDE" page
+   that can be instantiated directly without passing any properties.
+
+   \since 0.11.0
  */
 FormCardPage {
     id: page

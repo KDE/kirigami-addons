@@ -7,93 +7,100 @@ import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 
+/*!
+   \qmltype ImageMaximizeDelegate
+   \inqmlmodule org.kde.kirigamiaddons.labs.components
+ */
 Item {
     id: root
 
-    /**
-     * @brief The source for the image to be viewed.
+    /*!
+       \brief The source for the image to be viewed.
      */
     required property string source
 
-    /**
-     * @brief The size of the source image.
-     *
-     * This is used to calculate the maximum size of the content and temporary image.
+    /*!
+       \brief The size of the source image.
+
+       This is used to calculate the maximum size of the content and temporary image.
      */
     required property real sourceWidth
 
-    /**
-     * @brief The size of the source image.
-     *
-     * This is used to calculate the maximum size of the content and temporary image.
+    /*!
+       \brief The size of the source image.
+
+       This is used to calculate the maximum size of the content and temporary image.
      */
     required property real sourceHeight
 
-    /**
-     * @brief Source for the temporary content.
-     *
-     * Typically used when downloading the image to show a thumbnail or other
-     * temporary image while the main image downloads.
+    /*!
+       \brief Source for the temporary content.
+
+       Typically used when downloading the image to show a thumbnail or other
+       temporary image while the main image downloads.
      */
     required property string tempSource
 
-    /**
-     * @brief The caption for the item.
-     *
-     * Typically set to the filename if no caption is available.
-     *
-     * @note Declared here so that parent components can access this parameter
-     *       when used as a listView delegate.
+    /*!
+       \brief The caption for the item.
+
+       Typically set to the filename if no caption is available.
+
+       \note Declared here so that parent components can access this parameter
+             when used as a ListView delegate.
      */
     required property string caption
 
-    /**
-     * @brief The delegate type for this item.
-     *
-     * @note Declared here so that parent components can access this parameter
-     *       when used as a listView delegate.
+    /*!
+       \brief The delegate type for this item.
+
+       \note Declared here so that parent components can access this parameter
+             when used as a ListView delegate.
      */
     readonly property int type: AlbumModelItem.Image
 
-    /**
-     * @brief The padding around the content image.
-     *
-     * The padding is factored in when calculating the maximum size of the content
-     * image.
+    /*!
+       \brief The padding around the content image.
+
+       The padding is factored in when calculating the maximum size of the content
+       image.
+       \default Kirigami.Units.largeSpacing
      */
     property var padding: Kirigami.Units.largeSpacing
 
-    /**
-     * @brief Multiple by which the image is scaled.
+    /*!
+       \brief Multiple by which the image is scaled.
+       \default 1
      */
     property var scaleFactor: 1
 
-    /**
-     * @brief The angle by which the content image is rotated.
-     *
-     * The default orientation of the image is 0 degrees.
+    /*!
+       \brief The angle by which the content image is rotated.
+       \default 0
      */
     property int rotationAngle: 0
 
-    /**
-     * @brief Emitted when the background space around the content item is clicked.
+    /*!
+       \qmlsignal ImageMaximizeDelegate::backgroundClicked
+       \brief Emitted when the background space around the content item is clicked.
      */
     signal backgroundClicked()
 
-    /**
-     * @brief Emitted when the content image is right clicked.
+    /*!
+       \qmlsignal ImageMaximizeDelegate::itemRightClicked
+       \brief Emitted when the content image is right clicked.
      */
     signal itemRightClicked()
 
-    /**
-     * @brief Start media playback.
+    /*!
+       \brief Start media playback.
      */
     function play() {
         image.paused = false
     }
 
-    /**
-     * @brief Pause media playback.
+    /*!
+       \brief Pause media playback.
      */
     function pause() {
         image.paused = true

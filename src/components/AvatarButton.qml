@@ -1,79 +1,91 @@
-// SPDX-FileCopyrightText: 2023 Carl Schwan <carl@carlschwan.eu>
+// SPDX-FileCopyrightText: 2023 Carl Schwan <carl\carlschwan.eu>
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
 import org.kde.kirigami 2.15 as Kirigami
 
-/**
- * @brief An button that represents a user, either with initials, an icon, or a profile image.
+/*!
+   \qmltype AvatarButton
+   \inqmlmodule org.kde.kirigamiaddons.labs.components
+   \brief An button that represents a user, either with initials, an icon, or a profile image.
  */
 QQC2.AbstractButton {
     id: root
 
-    /**
-     * @brief This property holds the given name of a user.
-     * @see org:kde::kirigamiaddons::components::Avatar::source
+    /*!
+       \qmlproperty string name
+       \brief This property holds the given name of a user.
+       \sa {Avatar::name} {Avatar.name}
      */
     property alias name: avatar.name
 
-    /**
-     * @brief This property holds avatar's icon source.
-     * @see org:kde::kirigamiaddons::components::Avatar::source
+    /*!
+       \qmlproperty url source
+       \brief This property holds avatar's icon source.
+       \sa {Avatar::source} {Avatar.source}
      */
     property alias source: avatar.source
 
-    /**
-     * @brief This property holds how the button should represent the user when no user-set image is available.
-     * @see org:kde::kirigamiaddons::components::Avatar::initialsMode
+    /*!
+       \qmlproperty int initialsMode
+       \brief This property holds how the button should represent the user when no user-set image is available.
+       \sa {Avatar::initialsMode} {Avatar.initialsMode}
      */
     property alias initialsMode: avatar.initialsMode
 
-    /**
-     * @brief This property holds how the avatar should be shown.
-     * @see org:kde::kirigamiaddons::components::Avatar::imageMode
+    /*!
+       \qmlproperty int imageMode
+       \brief This property holds how the avatar should be shown.
+       \sa {Avatar::imageMode} {Avatar.imageMode}
      */
     property alias imageMode: avatar.imageMode
 
-    /**
-     * @brief This property sets whether the provided image should be cached.
-     * @see QtQuick.Image::cache
+    /*!
+       \qmlproperty bool cache
+       \brief This property sets whether the provided image should be cached.
+       \sa {Image::cache} {Image.cache}
      */
     property alias cache: avatar.cache
 
-    /**
-     * @brief Load the image asynchronously.
-     * @see QtQuick.Image::asynchronous
-     * @property bool asynchronous
-     * @since 1.7.0
+    /*!
+       \qmlproperty bool asynchronous
+       \brief Load the image asynchronously.
+       \sa {Image::asynchronous} {Image.asynchronous}
+       \since 1.7.0
      */
     property alias asynchronous: avatar.asynchronous
 
-    /**
-     * @brief This property holds the source size of the user's profile picture.
+    /*!
+       \qmlproperty int sourceSize
+       \brief This property holds the source size of the user's profile picture.
      */
     property alias sourceSize: avatar.sourceSize
 
-    /**
-     * @brief This property holds the color to use for this avatar.
+    /*!
+       \qmlproperty color color
+       \brief This property holds the color to use for this avatar.
      */
     property alias color: avatar.color
 
-    /**
-     * @brief This property holds the color of the avatar's initials.
+    /*!
+       \qmlproperty color initialsColor
+       \brief This property holds the color of the avatar's initials.
      */
     property alias initialsColor: avatar.initialsColor
 
-    /**
-     * @brief This property holds the default color of the avatar's initials.
+    /*!
+       \qmlproperty color defaultInitialsColor
+       \brief This property holds the default color of the avatar's initials.
      */
     readonly property alias defaultInitialsColor: avatar.defaultInitialsColor
 
-    /**
-     * @brief This item holds the parent item on the clipped circle.
-     *
-     * Implementations may add custom graphics which will be clipped along with
-     * the rest of the avatar content.
+    /*!
+       \qmlproperty Item clippedContent
+       \brief This item holds the parent item on the clipped circle.
+
+       Implementations may add custom graphics which will be clipped along with
+       the rest of the avatar content.
      */
     readonly property alias clippedContent: avatar.clippedContent
 

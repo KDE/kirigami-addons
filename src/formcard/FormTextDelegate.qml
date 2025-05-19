@@ -11,66 +11,76 @@ import org.kde.kirigami as Kirigami
 
 import "private" as Private
 
-/**
- * @brief A Form delegate that corresponds to a text label and a description.
- *
- * This component is used to create primary text with the inherited
- * QtQuick.Controls.AbstractButton.text property, with an optional
- * ::description that serves as secondary text/subtitle.
- *
- * If you need just a secondary text component, use a FormSectionText
- * instead.
- *
- * @since KirigamiAddons 0.11.0
- *
- * @see FormSectionText
- * @see QtQuick.Controls.AbstractButton
- *
- * @inherit AbstractFormDelegate
+/*!
+   \qmltype FormTextDelegate
+   \inqmlmodule org.kde.kirigamiaddons.formcard
+   \brief A Form delegate that corresponds to a text label and a description.
+
+   This component is used to create primary text with the inherited
+   \l {AbstractButton::text} {AbstractButton.text} property, with an optional
+   description that serves as secondary text/subtitle.
+
+   If you need just a secondary text component, use a FormSectionText
+   instead.
+
+   \since 0.11.0
+
+   \sa FormSectionText
+   \sa AbstractButton
  */
 AbstractFormDelegate {
     id: root
 
-    /**
-     * @brief A label containing secondary text that appears under the
-     * inherited text property.
-     *
-     * This provides additional information shown in a faint gray color.
+    /*!
+       \brief A label containing secondary text that appears under the
+       inherited text property.
+
+       This provides additional information shown in a faint gray color.
+       \default ""
      */
     property string description: ""
 
-    /**
-     * @brief This property allows for access to the description label item.
+    /*!
+       \qmlproperty Label descriptionItem
+       \brief This property allows for access to the description label item.
      */
     property alias descriptionItem: internalDescriptionItem
 
-    /**
-     * @brief This property holds allows for access to the text label item.
+    /*!
+       \qmlproperty Label textItem
+       \brief This property holds allows for access to the text label item.
      */
     property alias textItem: internalTextItem
 
-    /**
-     * @brief This property holds an item that will be displayed before
-     * the delegate's contents.
+    /*!
+       \brief This property holds an item that will be displayed before
+       the delegate's contents.
+       \default null
      */
     property var leading: null
 
-    /**
-     * @brief This property holds the padding after the leading item.
+    /*!
+       \brief This property holds the padding after the leading item.
+       \default Kirigami.Units.smallSpacing
      */
     property real leadingPadding: Kirigami.Units.smallSpacing
 
-    /**
-     * @brief This property holds an item that will be displayed after
-     * the delegate's contents.
+    /*!
+       \brief This property holds an item that will be displayed after
+       the delegate's contents.
+       \default null
      */
     property var trailing: null
 
-    /**
-     * @brief This property holds the padding before the trailing item.
+    /*!
+       \brief This property holds the padding before the trailing item.
+       \default Kirigami.Units.smallSpacing
      */
     property real trailingPadding: Kirigami.Units.smallSpacing
 
+    /*!
+       This signal is emitted when the \a link is activated.
+     */
     signal linkActivated(string link)
 
     focusPolicy: Qt.NoFocus

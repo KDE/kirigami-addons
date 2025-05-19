@@ -9,27 +9,27 @@ import QtQuick.Dialogs
 import org.kde.kirigamiaddons.formcard as FormCard
 import org.kde.kirigami as Kirigami
 
-/**
- * @brief A FormCard delegate for colors.
- *
- * Allow users to select colors. By default "Color" is the default label
- * but this can be overwritten with the `text` property.
- *
- * @code{qml}
- * FormCard.FormCard {
- *     FormCard.FormColorDelegate {
- *         color: "blue"
- *     }
- *
- *     FormCard.FormDelegateSeparator {}
- *
- *     FormCard.FormColorDelegate {
- *         text: i18nc("@label", "Active color")
- *         color: "blue"
- *     }
- * }
- * @endcode
- * @image html formcardcolor.png
+/*
+   \brief A FormCard delegate for colors.
+
+   Allow users to select colors. By default "Color" is the default label
+   but this can be overwritten with the `text` property.
+
+   \qml
+   FormCard.FormCard {
+       FormCard.FormColorDelegate {
+           color: "blue"
+       }
+
+       FormCard.FormDelegateSeparator {}
+
+       FormCard.FormColorDelegate {
+           text: i18nc("@label", "Active color")
+           color: "blue"
+       }
+   }
+   \endqml
+   \image formcardcolor.png
  */
 FormCard.AbstractFormDelegate {
     id: root

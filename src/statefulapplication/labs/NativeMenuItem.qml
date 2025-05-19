@@ -7,37 +7,40 @@ import Qt.labs.platform
 import org.kde.kirigamiaddons.statefulapp.private as Private
 import org.kde.kirigamiaddons.statefulapp as StatefulApp
 
-/**
- * A Labs.MenuItem defined by a QAction.
- *
- * @code{qml}
- * import Qt.labs.platform as Labs
- * import org.kde.kirigamiaddons.statefulapp as StatefulApp
- * import org.kde.kirigamiaddons.statefulapp.labs as StatefulAppLabs
- *
- * StatefulApp.StatefulWindow {
- *     application: MyKoolApp
- *
- *     Labs.MenuBar {
- *         Labs.Menu {
- *             StatefulAppLabs.MenuItem {
- *                 actionName: 'add_notebook'
- *                 application: MyKoolApp
- *             }
- *         }
- *     }
- * }
- * @endcode{}
- * @since KirigamiAddons 1.4.0
+/*!
+   \qmltype NativeMenuItem
+   \inqmlmodule org.kde.kirigamiaddons.statefulapp.labs
+   \brief A Qt.labs.platform.MenuItem defined by a QAction.
+
+   \qml
+   import Qt.labs.platform as Labs
+   import org.kde.kirigamiaddons.statefulapp as StatefulApp
+   import org.kde.kirigamiaddons.statefulapp.labs as StatefulAppLabs
+
+   StatefulApp.StatefulWindow {
+       application: MyKoolApp
+
+       Labs.MenuBar {
+           Labs.Menu {
+               StatefulAppLabs.MenuItem {
+                   actionName: 'add_notebook'
+                   application: MyKoolApp
+               }
+           }
+       }
+   }
+   \endqml
+   \since 1.4.0
  */
 MenuItem {
-    /**
-     * This property holds the action name defined in your AbstractKirigamiApplication implementation.
+    /*!
+       This property holds the action name defined in your AbstractKirigamiApplication implementation.
      */
     required property string actionName
 
-    /**
-     * This property holds the AbstractKirigamiApplication where the action is defined.
+    /*!
+       \qmlproperty AbstractKirigamiApplication application
+       This property holds the AbstractKirigamiApplication where the action is defined.
      */
     required property StatefulApp.AbstractKirigamiApplication application
 
@@ -54,6 +57,8 @@ MenuItem {
     checked: _action?.checked
     enabled: _action && _action.enabled
 
+    /*!
+     */
     readonly property Shortcut alternateShortcut : Shortcut {
         sequences: Private.Helper.alternateShortcuts(_action)
         onActivated: root.trigger()

@@ -12,69 +12,75 @@ import org.kde.kirigami as Kirigami
 
 import "private" as Private
 
-/**
- * @brief A Form delegate that corresponds to a radio button.
- *
- * This component is used for creating multiple on/off toggles for the same
- * setting. In other words, by grouping multiple radio buttons under the same
- * parent, only one of the radio buttons should be checkable and applied to a
- * setting.
- *
- * Use the inherited QtQuick.Controls.AbstractButton.text property to define
- * the main text of the radio button.
- *
- * If you need multiple values for the same setting, use a
- * FormComboBoxDelegate instead.
- *
- * If you need a purely on/off toggle for a single setting, use a
- * FormSwitchDelegate instead.
- *
- * If you need an on/off/tristate toggle, use a FormCheckDelegate instead.
- *
- * @since KirigamiAddons 0.11.0
- *
- * @see QtQuick.Controls.AbstractButton
- * @see FormSwitchDelegate
- * @see FormCheckDelegate
- * @see FormComboBoxDelegate
- *
- * @inherit QtQuick.Controls.RadioDelegate
+/*!
+   \qmltype FormRadioDelegate
+   \inqmlmodule org.kde.kirigamiaddons.formcard
+   \brief A Form delegate that corresponds to a radio button.
+
+   This component is used for creating multiple on/off toggles for the same
+   setting. In other words, by grouping multiple radio buttons under the same
+   parent, only one of the radio buttons should be checkable and applied to a
+   setting.
+
+   Use the inherited \l {AbstractButton::text} {AbstractButton.text} property to define
+   the main text of the radio button.
+
+   If you need multiple values for the same setting, use a
+   FormComboBoxDelegate instead.
+
+   If you need a purely on/off toggle for a single setting, use a
+   FormSwitchDelegate instead.
+
+   If you need an on/off/tristate toggle, use a FormCheckDelegate instead.
+
+   \since 0.11.0
+
+   \sa AbstractButton
+   \sa FormSwitchDelegate
+   \sa FormCheckDelegate
+   \sa FormComboBoxDelegate
  */
 T.RadioDelegate {
     id: root
 
-    /**
-     * @brief A label containing secondary text that appears under the
-     * inherited text property.
-     *
-     * This provides additional information shown in a faint gray color.
+    /*!
+       \brief A label containing secondary text that appears under the
+       inherited text property.
+
+       This provides additional information shown in a faint gray color.
+       \default ""
      */
     property string description: ""
 
-    /**
-     * @brief This property holds an item that will be displayed to the left of the delegate's contents.
+    /*!
+       \brief This property holds an item that will be displayed to the left of the delegate's contents.
+       \default null
      */
     property var leading: null
 
-    /**
-     * @brief This property holds the padding after the leading item.
+    /*!
+       \brief This property holds the padding after the leading item.
+       \default Kirigami.Units.smallSpacing
      */
     property real leadingPadding: Kirigami.Units.smallSpacing
 
-    /**
-     * @brief This property holds an item that will be displayed after the
-     * delegate's contents.
+    /*!
+       \brief This property holds an item that will be displayed after the
+       delegate's contents.
+       \default null
      */
     property var trailing: null
 
-    /**
-     * @brief This property holds the padding before the trailing item.
+    /*!
+       \brief This property holds the padding before the trailing item.
+       \default Kirigami.Units.smallSpacing
      */
     property real trailingPadding: Kirigami.Units.smallSpacing
 
-    /**
-     * @brief This property allows to override the internal description
-     * item (a QtQuick.Controls.Label) with a custom component.
+    /*!
+       \qmlproperty Label descriptionItem
+       \brief This property allows to override the internal description
+       item with a custom component.
      */
     property alias descriptionItem: internalDescriptionItem
 

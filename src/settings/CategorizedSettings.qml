@@ -1,5 +1,5 @@
 // SPDX-FileCopyrightText: 2020 Tobias Fella <fella@posteo.de>
-// SPDX-FileCopyrightText: 2021 Carl Schwan <carl@carlschwan.eu>
+// SPDX-FileCopyrightText: 2021 Carl Schwan <carl\carlschwan.eu>
 // SPDX-FileCopyrightText: 2021 Felipe Kinoshita <kinofhek@gmail.com>
 // SPDX-FileCopyrightText: 2021 Marco Martin <mart@kde.org>
 // SPDX-License-Identifier: LGPL-2.0-or-later
@@ -11,31 +11,32 @@ import QtQuick.Layouts 1.15
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kirigamiaddons.delegates 1.0 as Delegates
 
-/**
- * A container for setting actions showing them in a list view and displaying
- * the actual page next to it.
- *
- * To open a setting page, you should use `PageRow::pushDialogLayers`
- *
- * @since KirigamiAddons 0.11.0
- * @inherit kde::org::kirigami::PageRow
- * @deprecated Since 1.3.0, use ConfigurationsView instead.
+/*!
+   \qmltype CategorizedSettings
+   \inqmlmodule org.kde.kirigamiaddons.settings
+   \brief A container for setting actions showing them in a list view and displaying
+   the actual page next to it.
+
+   To open a setting page, you should use PageRow::pushDialogLayers.
+
+   \since 0.11.0
+   \deprecated Since 1.3.0, use ConfigurationsView instead.
  */
 Kirigami.PageRow {
     id: root
 
-    /**
-     * @brief The default page that will be shown when opened.
-     *
-     * This only applies when the categorized settings object is wide enough to
-     * show multiple pages.
-     *
-     * @see actions
+    /*!
+       \brief The default page that will be shown when opened.
+
+       This only applies when the categorized settings object is wide enough to
+       show multiple pages.
+
+       \sa actions
      */
     property string defaultPage
 
-    /**
-     * @brief The list of pages for the settings
+    /*!
+       \brief The list of pages for the settings.
      */
     property list<Kirigami.PagePoolAction> actions
 

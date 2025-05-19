@@ -11,63 +11,65 @@ import org.kde.kirigami as Kirigami
 
 import "private" as Private
 
-/**
- * @brief A Form delegate that corresponds to a clickable button.
- *
- * Use the inherited QtQuick.Controls.AbstractButton.text property to define
- * the main text of the button.
- *
- * The trailing property (right-most side of the button) includes an arrow
- * pointing to the right by default and cannot be overridden.
- *
- * @since KirigamiAddons 0.11.0
- *
- * @inherit AbstractFormDelegate
+/*!
+   \qmltype FormButtonDelegate
+   \inqmlmodule org.kde.kirigamiaddons.formcard
+   \brief A Form delegate that corresponds to a clickable button.
+
+   Use the inherited \l {AbstractButton::text} {AbstractButton.text} property to define
+   the main text of the button.
+
+   The trailing property (right-most side of the button) includes an arrow
+   pointing to the right by default and cannot be overridden.
+
+   \since 0.11.0
  */
 AbstractFormDelegate {
     id: root
 
-    /**
-     * @brief A label containing secondary text that appears under the
-     * inherited text property.
-     *
-     * This provides additional information shown in a faint gray color.
-     *
-     * This is supposed to be a short text and the API user should avoid
-     * making it longer than two lines.
+    /*!
+       \qmlproperty string description
+       \brief A label containing secondary text that appears under the
+       inherited text property.
+
+       This provides additional information shown in a faint gray color.
+
+       This is supposed to be a short text and the API user should avoid
+       making it longer than two lines.
      */
     property string description: ""
 
-    /**
-     * @brief This property allows to override the internal description
-     * item (a QtQuick.Controls.Label) with a custom component.
+    /*!
+       \qmlproperty Label descriptionItem
+       \brief This property allows to override the internal description
+       item with a custom component.
      */
     property alias descriptionItem: internalDescriptionItem
 
-    /**
-     * @brief This property holds an item that will be displayed to the
-     * left of the delegate's contents.
-     *
-     * default: `null`
+    /*!
+       \brief This property holds an item that will be displayed to the
+       left of the delegate's contents.
+
+       \default null
      */
     property var leading: null
 
-    /**
-     * @brief This property holds the padding after the leading item.
-     *
-     * It is recommended to use Kirigami.Units here instead of direct values.
-     *
-     * @see Kirigami.Units
+    /*!
+       \brief This property holds the padding after the leading item.
+
+       It is recommended to use \l {Units} {Kirigami.Units} here instead of direct values.
+
+       \sa {Units} {Kirigami.Units}
      */
     property real leadingPadding: Kirigami.Units.largeSpacing
 
-    /**
-     * @brief This property holds an alias to the internal FormCard.FormArrow.
-     *
-     * This allow to hide it completely or change the direction (e.g. to
-     * implement a collapsible section).
-     *
-     * @since 1.7.0
+    /*!
+       \brief This property holds an alias to the internal FormArrow.
+
+       This allow to hide it completely or change the direction (e.g. to
+       implement a collapsible section).
+
+       \since 1.7.0
      */
     readonly property alias trailingLogo: formArrow
 

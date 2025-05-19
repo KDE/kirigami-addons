@@ -14,58 +14,67 @@ import org.kde.kirigamiaddons.statefulapp as StatefulApp
 import org.kde.kirigamiaddons.statefulapp.private as Private
 import org.kde.coreaddons as Core
 
-/**
- * @brief StatefulWindow takes care of providing standard functionalities
- * for your application main window.
- *
- * This includes:
- * * Restoration of the window size accross restarts
- * * Handling some of the standard actions defined in your KirigamiAbstractApplication
- *   (AboutKDE and AboutApp)
- * * A command bar to access all the defined actions
- * * A shortcut editor
- *
- * @code
- * import org.kde.kirigamiaddons.statefulapp as StatefulApp
- * import org.kde.kirigamiaddons.settings as Settings
- *
- * StatefulApp.StatefulWindow {
- *     id: root
- *
- *     windowName: 'Main'
- *     application: MyApplication {
- *         configurationView: Settings.ConfigurationView { ... }
- *     }
- * }
- * @endcode
- *
- * @since KirigamiAddons 1.4.0
+/*!
+   \qmltype StatefulWindow
+   \inqmlmodule org.kde.kirigamiaddons.statefulapp
+   \brief StatefulWindow takes care of providing standard functionalities
+   for your application main window.
+
+   This includes:
+   \list
+   \li Restoration of the window size accross restarts
+   \li Handling some of the standard actions defined in your AbstractKirigamiApplication
+       (AboutKDE and AboutApp)
+   \li A command bar to access all the defined actions
+   \li A shortcut editor
+   \endlist
+
+   \qml
+   import org.kde.kirigamiaddons.statefulapp as StatefulApp
+   import org.kde.kirigamiaddons.settings as Settings
+
+   StatefulApp.StatefulWindow {
+       id: root
+
+       windowName: 'Main'
+       application: MyApplication {
+           configurationView: Settings.ConfigurationView { ... }
+       }
+   }
+   \endqml
+
+   \since 1.4.0
  */
 Kirigami.ApplicationWindow {
     id: root
 
-    /**
-     * This property holds the window's name.
-     *
-     * This needs to be an unique identifier for your application and will be used to store
-     * the state of the window in your application config.
+    /*!
+       \qmlproperty string windowName
+       This property holds the window's name.
+
+       This needs to be an unique identifier for your application and will be used to store
+       the state of the window in your application config.
+       \sa WindowStateSaver
      */
     property alias windowName: windowStateSaver.configGroupName
 
-    /**
-     * This property holds the AbstractKirigamiApplication of your application.
-     *
-     * The default AbstractKirigamiApplication provides the following actions:
-     * * KStandardActions::quit
-     * * KStandardActions::keyBindings
-     * * "Open Command Bar"
-     * * "About App"
-     * * "About KDE" (if your application id starts with org.kde.)
-     *
-     * If you need more actions provide your own AbstractKirigamiApplication and overwrite
-     * AbstractKirigamiApplication::setupActions.
-     *
-     * @see AbstractKirigamiApplication
+    /*!
+       \qmlproperty AbstractKirigamiApplication application
+       This property holds the AbstractKirigamiApplication of your application.
+
+       The default AbstractKirigamiApplication provides the following actions:
+       \list
+       \li KStandardActions::quit
+       \li KStandardActions::keyBindings
+       \li "Open Command Bar"
+       \li "About App"
+       \li "About KDE" (if your application id starts with org.kde.)
+       \endlist
+
+       If you need more actions provide your own AbstractKirigamiApplication and overwrite
+       AbstractKirigamiApplication::setupActions.
+
+       \sa AbstractKirigamiApplication
      */
     property StatefulApp.AbstractKirigamiApplication application: Private.DefaultKirigamiApplication
 

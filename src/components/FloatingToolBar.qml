@@ -1,33 +1,35 @@
 // SPDX-FileCopyrightText: 2024 Mathis Brüchert <mbb@kaidan.im>
-// SPDX-FileCopyrightText: 2024 Carl Schwan <carl@carlschwan.eu>
+// SPDX-FileCopyrightText: 2024 Carl Schwan <carl\carlschwan.eu>
 // SPDX-License-Identifier: LGPL-2.0-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 
 import QtQuick
 import org.kde.kirigami as Kirigami
 import QtQuick.Controls
 
-/**
- * A floating toolbar to use for example in a canvas.
- *
- * The toolbar should be positioned with Kirigami.Units.largeSpacing from
- * the border of the page.
- *
- * @code{qml}
- * import org.kde.kirigamiaddons.components
- * import org.kde.kirigami as Kirigami
- *
- * FloatingToolBar {
- *     contentItem: Kirigami.ActionToolBar {
- *         actions: [
- *             Kirigami.Action {
- *                 ...
- *             }
- *         ]
- *     }
- * }
- * @endcode{}
- *
- * @image html floatingtoolbar.png
+/*!
+   \qmltype FloatingToolBar
+   \inqmlmodule org.kde.kirigamiaddons.labs.components
+   \brief A floating toolbar to use for example in a canvas.
+
+   The toolbar should be positioned with \l {Units::largeSpacing}
+   {Kirigami.Units.largeSpacing} from the border of the page.
+
+   \qml
+   import org.kde.kirigamiaddons.components
+   import org.kde.kirigami as Kirigami
+
+   FloatingToolBar {
+       contentItem: Kirigami.ActionToolBar {
+           actions: [
+               Kirigami.Action {
+                   ...
+               }
+           ]
+       }
+   }
+   \endqml
+
+   \image floatingtoolbar.png
  */
 ToolBar {
     background: Kirigami.ShadowedRectangle {
