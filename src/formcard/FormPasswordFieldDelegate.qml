@@ -315,13 +315,14 @@ AbstractFormDelegate {
                         Rectangle {
                             height: Kirigami.Units.smallSpacing
                             width: {
-                                const entropy = Math.min(passwordHealth.entropy, 200);
-                                if (entropy > (index + 1) * 50) {
+                                const maxEntropy = 100;
+                                const entropy = Math.min(passwordHealth.entropy, maxEntropy);
+                                if (entropy > (index + 1) * (maxEntropy / 4)) {
                                     return parent.width;
-                                } else if (entropy < (index) * 50) {
+                                } else if (entropy < (index) * (maxEntropy / 4)) {
                                     return 0;
                                 }
-                                const percent = entropy / 200;
+                                const percent = entropy / maxEntropy;
                                 return Math.max(0, parent.width * (percent * 4 - index))
                             }
 
