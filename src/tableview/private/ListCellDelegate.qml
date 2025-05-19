@@ -9,17 +9,29 @@ import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 
+/*!
+   \qmltype ListCellDelegate
+   \inqmlmodule org.kde.kirigamiaddons.tableview
+ */
 QQC2.Control {
     id: delegate
 
     Accessible.role: Accessible.Cell
     hoverEnabled: false
 
+    /*!
+     */
     required property int index
+    /*!
+     */
     required property var model
 
     // Reference for current entry of root.model
+    /*!
+     */
     property var entry
+    /*!
+     */
     property int rowIndex
 
     contentItem: Loader {

@@ -11,182 +11,171 @@ import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.delegates as Delegates
 import org.kde.kirigamiaddons.components as Components
 
-/**
- * @brief A Form delegate that corresponds to a combobox.
- *
- * This component is used for individual settings that can have multiple
- * possible values shown in a vertical list, typically defined in a ::model.
- *
- * Many of its properties require familiarity with QtQuick.Controls.ComboBox.
- *
- * Use the inherited QtQuick.Controls.AbstractButton.text property to define
- * the main text of the combobox.
- *
- * If you need a purely on/off toggle, use a FormSwitchDelegate instead.
- *
- * If you need an on/off/tristate toggle, use a FormCheckDelegate instead.
- *
- * If you need multiple toggles instead of multiple values for the same
- * setting, consider using a FormRadioDelegate.
- *
- * @since KirigamiAddons 0.11.0
- *
- * @see QtQuick.Controls.AbstractButton
- * @see FormSwitchDelegate
- * @see FormCheckDelegate
- * @see FormRadioDelegate
- *
- * @inherit AbstractFormDelegate
+/*!
+   \qmltype FormComboBoxDelegate
+   \inqmlmodule org.kde.kirigamiaddons.formcard
+   \brief A Form delegate that corresponds to a ComboBox.
+
+   This component is used for individual settings that can have multiple
+   possible values shown in a vertical list, typically defined in a model.
+
+   Many of its properties require familiarity with ComboBox.
+
+   Use the inherited \l {AbstractButton::text} {AbstractButton.text} property to define
+   the main text of the combobox.
+
+   If you need a purely on/off toggle, use a FormSwitchDelegate instead.
+
+   If you need an on/off/tristate toggle, use a FormCheckDelegate instead.
+
+   If you need multiple toggles instead of multiple values for the same
+   setting, consider using a FormRadioDelegate.
+
+   \since 0.11.0
+
+   \sa AbstractButton
+   \sa FormSwitchDelegate
+   \sa FormCheckDelegate
+   \sa FormRadioDelegate
  */
 AbstractFormDelegate {
     id: controlRoot
 
-    /**
-     * @brief This signal is emitted when the item at @p index is activated
-     * by the user.
+    /*!
+       \brief This signal is emitted when the item at \a index is activated
+       by the user.
      */
     signal activated(int index)
 
-    /**
-     * @brief This signal is emitted when the Return or Enter key is pressed
-     * while an editable combo box is focused.
-     *
-     * @see editable
+    /*!
+       \brief This signal is emitted when the Return or Enter key is pressed
+       while an editable combo box is focused.
+
+       \sa editable
      */
     signal accepted()
 
-    /**
-     * @brief A label that contains secondary text that appears under the
-     * inherited text property.
-     *
-     * This provides additional information shown in a faint gray color.
-     *
-     * This is supposed to be a short text and the API user should avoid
-     * making it longer than two lines.
+    /*!
+       \brief A label that contains secondary text that appears under the
+       inherited text property.
+
+       This provides additional information shown in a faint gray color.
+
+       This is supposed to be a short text and the API user should avoid
+       making it longer than two lines.
+       \default ""
      */
     property string description: ""
 
-    /**
-     * @brief This property holds the value of the current item in the combobox.
+    /*!
+       \qmlproperty var currentValue
+       \brief This property holds the \l {ComboBox::currentValue} {currentValue} of the internal ComboBox.
      */
     property alias currentValue: combobox.currentValue
 
-    /**
-     * @brief This property holds the text of the current item in the combobox.
-     *
-     * @see displayText
+    /*!
+       \qmlproperty string currentText
+       \brief This property holds the \l {ComboBox::currentText} {currentText} of the internal ComboBox.
+       \sa displayText
      */
     property alias currentText: combobox.currentText
 
-    /**
-     * @brief This property holds the model providing data for the combobox.
-     *
-     * @see displayText
-     * @see QtQuick.Controls.ComboBox.model
-     * @see <a href="https://doc.qt.io/qt-6/qtquick-modelviewsdata-modelview.html">Models and Views in QtQuick</a>
+    /*!
+       \brief This property holds the \l {ComboBox::model} {model} providing data for the ComboBox.
+       \sa displayText
+       \sa {https://doc.qt.io/qt-6/qtquick-modelviewsdata-modelview.html} {Models and Views in QtQuick}
      */
     property var model
 
-    /**
-     * @brief This property holds the `count` of the internal combobox.
-     *
-     * @see QtQuick.Controls.ComboBox.count
-     * @since Kirigami Addons 1.4.0
+    /*!
+       \qmlproperty int count
+       \brief This property holds the \l {ComboBox::count} {count} of the internal ComboBox.
+       \since 1.4.0
      */
     property alias count: combobox.count
 
-    /**
-     * @brief This property holds the `textRole` of the internal combobox.
-     *
-     * @see QtQuick.Controls.ComboBox.textRole
+    /*!
+       \qmlproperty string textRole
+       \brief This property holds the \l {ComboBox::textRole} {textRole} of the internal ComboBox.
      */
     property alias textRole: combobox.textRole
 
-    /**
-     * @brief This property holds the `valueRole` of the internal combobox.
-     *
-     * @see QtQuick.Controls.ComboBox.valueRole
+    /*!
+       \qmlproperty string valueRole
+       \brief This property holds the \l {ComboBox::valueRole} {valueRole} of the internal ComboBox.
      */
     property alias valueRole: combobox.valueRole
 
-    /**
-     * @brief This property holds the `currentIndex` of the internal combobox.
-     *
-     * default: `-1` when the ::model has no data, `0` otherwise
-     *
-     * @see QtQuick.Controls.ComboBox.currentIndex
+    /*!
+       \qmlproperty int currentIndex
+       \brief This property holds the \l {ComboBox::currentIndex} {currentIndex} of the internal ComboBox.
+
+       Default: \c -1 when the model has no data, \c 0 otherwise
      */
     property alias currentIndex: combobox.currentIndex
 
-    /**
-     * @brief This property holds the `highlightedIndex` of the internal combobox.
-     *
-     * @see QtQuick.Controls.ComboBox.highlightedIndex
+    /*!
+       \qmlproperty int highlightedIndex
+       \brief This property holds the \l {ComboBox::highlightedIndex} {highlightedIndex} of the internal ComboBox.
      */
     property alias highlightedIndex: combobox.highlightedIndex
 
-    /**
-     * @brief This property holds the `displayText` of the internal combobox.
-     *
-     * This can be used to slightly modify the text to be displayed in the combobox, for instance, by adding a string with the ::currentText.
-     *
-     * @see QtQuick.Controls.ComboBox.displayText
+    /*!
+       \qmlproperty string displayText
+       \brief This property holds the \l {ComboBox::displayText} {displayText} of the internal ComboBox.
+
+       This can be used to slightly modify the text to be displayed in the combobox, for instance, by adding a string with the currentText.
      */
     property alias displayText: combobox.displayText
 
-    /**
-     * @brief This property holds the `editable` property of the internal combobox.
-     *
-     * This turns the combobox editable, allowing the user to specify
-     * existing values or add new ones.
-     *
-     * Use this only when ::displayMode is set to
-     * FormComboBoxDelegate.ComboBox.
-     *
-     * @see QtQuick.Controls.ComboBox.editable
+    /*!
+       \qmlproperty bool editable
+       \brief This property holds the \l {ComboBox::editable} {editable} property of the internal ComboBox.
+
+       This turns the combobox editable, allowing the user to specify
+       existing values or add new ones.
+
+       Use this only when displayMode is set to
+       FormComboBoxDelegate.ComboBox.
      */
     property alias editable: combobox.editable
 
-    /**
-     * @brief This property holds the `editText` property of the internal combobox.
-     *
-     * @see QtQuick.Controls.ComboBox.editText
+    /*!
+       \qmlproperty string editText
+       \brief This property holds the \l {ComboBox::editText} {editText} property of the internal ComboBox.
      */
     property alias editText: combobox.editText
 
-    /** @brief The enum used to determine the ::displayMode. **/
     enum DisplayMode {
-        /**
-         * A standard combobox component containing a vertical list of values.
-         */
         ComboBox,
-        /**
-         * A button with similar appearance to a combobox that, when clicked,
-         * shows a Kirigami.OverlaySheet at the middle of the window
-         * containing a vertical list of values.
-         */
         Dialog,
-        /**
-         * A button with similar appearance to a combobox that, when clicked,
-         * shows a Kirigami.ScrollablePage in a new window containing a
-         * vertical list of values.
-         */
         Page
     }
 
-    /**
-     * @brief This property holds what display mode the delegate should show as.
-     *
-     * Set this property to the desired ::DisplayMode.
-     *
-     * default: `FormComboBoxDelegate.ComboBox`
-     *
-     * @see DisplayMode
+    /*!
+       \brief This property holds what display mode the delegate should show as.
+
+       Set this property to the desired DisplayMode.
+
+       On mobile, displayMode defaults to \c FormComboBoxDelegate.Dialog.
+
+       \default FormComboBoxDelegate.ComboBox
+
+       \value FormComboBoxDelegate.ComboBox
+              A standard ComboBox component containing a vertical list of values.
+       \value FormComboBoxDelegate.Dialog
+              A button with similar appearance to a ComboBox that, when clicked,
+              shows a \l OverlaySheet {Kirigami.OverlaySheet} at the middle of the window
+              containing a vertical list of values.
+       \value FormComboBoxDelegate.Page
+              A button with similar appearance to a ComboBox that, when clicked,
+              shows a \l ScrollablePage {Kirigami.ScrollablePage} in a new window containing a
+              vertical list of values.
      */
     property int displayMode: Kirigami.Settings.isMobile ? FormComboBoxDelegate.Dialog : FormComboBoxDelegate.ComboBox
 
-    /**
-     * @brief The delegate component to use as entries in the combobox display mode.
+    /*!
+       \brief The delegate component to use as entries in the ComboBox display mode.
      */
     property Component comboBoxDelegate: Delegates.RoundedItemDelegate {
         implicitWidth: ListView.view ? ListView.view.width : Kirigami.Units.gridUnit * 16
@@ -194,8 +183,8 @@ AbstractFormDelegate {
         highlighted: controlRoot.highlightedIndex === index
     }
 
-    /**
-     * @brief The delegate component to use as entries for each value in the dialog and page display mode.
+    /*!
+       \brief The delegate component to use as entries for each value in the dialog and page display mode.
      */
     property Component dialogDelegate: Delegates.RoundedItemDelegate {
         implicitWidth: ListView.view ? ListView.view.width : Kirigami.Units.gridUnit * 16
@@ -210,43 +199,43 @@ AbstractFormDelegate {
         }
     }
 
-    /**
-     * @brief This property holds the current status message type of
-     * the text field.
-     *
-     * This consists of an inline message with a colorful background
-     * and an appropriate icon.
-     *
-     * The status property will affect the color of ::statusMessage used.
-     *
-     * Accepted values:
-     * - `Kirigami.MessageType.Information` (blue color)
-     * - `Kirigami.MessageType.Positive` (green color)
-     * - `Kirigami.MessageType.Warning` (orange color)
-     * - `Kirigami.MessageType.Error` (red color)
-     *
-     * default: `Kirigami.MessageType.Information` if ::statusMessage is set,
-     * nothing otherwise.
-     *
-     * @see Kirigami.MessageType
-     * @since 1.5.0
+    /*!
+       \brief This property holds the current status message type of
+       the text field.
+
+       This consists of an inline message with a colorful background
+       and an appropriate icon.
+
+       The status property will affect the color of statusMessage used.
+
+       Accepted values:
+       \value Kirigami.MessageType.Information (blue color)
+       \value Kirigami.MessageType.Positive (green color)
+       \value Kirigami.MessageType.Warning (orange color)
+       \value Kirigami.MessageType.Error (red color)
+
+       Default: Kirigami.MessageType.Information if statusMessage is set,
+       nothing otherwise.
+
+       \sa Kirigami.MessageType
+       \since 1.5.0
      */
     property var status: Kirigami.MessageType.Information
 
-    /**
-     * @brief This property holds the current status message of
-     * the text field.
-     *
-     * If this property is not set, no ::status will be shown.
-     *
-     * @since 1.5.0
+    /*!
+       \brief This property holds the current status message of
+       the text field.
+
+       If this property is not set, no status will be shown.
+
+       \since 1.5.0
      */
     property string statusMessage: ""
 
-    /**
-     * @brief Closes the dialog or layer.
-     *
-     * This function can be used when reimplementing the ::page or ::dialog.
+    /*!
+       \brief Closes the dialog or layer.
+
+       This function can be used when reimplementing the page or dialog.
      */
     function closeDialog() {
         if (_selectionPageItem) {
@@ -284,11 +273,11 @@ AbstractFormDelegate {
         }
     }
 
-    /**
-     * @brief The dialog component used for the combobox.
-     *
-     * This property allows to override the internal dialog
-     * with a custom component.
+    /*!
+       \brief The dialog component used for the ComboBox.
+
+       This property allows to override the internal dialog
+       with a custom component.
      */
     property Component dialog: QQC2.Dialog {
         id: dialog
@@ -366,11 +355,11 @@ AbstractFormDelegate {
         }
     }
 
-    /**
-     * @brief The page component used for the combobox, if applicable.
-     *
-     * This property allows to override the internal
-     * Kirigami.ScrollablePage with a custom component.
+    /*!
+       \brief The page component used for the ComboBox, if applicable.
+
+       This property allows to override the internal
+       \l ScrollablePage {Kirigami.ScrollablePage} with a custom component.
      */
     property Component page: Kirigami.ScrollablePage {
         title: controlRoot.text

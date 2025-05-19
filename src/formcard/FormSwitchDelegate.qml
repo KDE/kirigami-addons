@@ -12,61 +12,61 @@ import org.kde.kirigami as Kirigami
 
 import "private" as Private
 
-/**
- * @brief A Form delegate that corresponds to a switch.
- *
- * This component is used to create a purely on/off toggle for a single
- * setting.
- *
- * Use the inherited QtQuick.Controls.AbstractButton.text property to define
- * the main text of the button.
- *
- * If you need an on/off/tristate toggle, use a FormCheckDelegate instead.
- *
- * If you need multiple values for the same setting, use a
- * FormComboBoxDelegate instead.
- *
- * If you need multiple toggles for the same setting, use a FormRadioDelegate
- * instead.
- *
- * @since KirigamiAddons 0.11.0
- *
- * @see QtQuick.Controls.AbstractButton
- * @see FormCheckDelegate
- * @see FormComboBoxDelegate
- * @see FormRadioDelegate
- *
- * @inherit QtQuick.Controls.SwitchDelegate
+/*!
+   \qmltype FormSwitchDelegate
+   \inqmlmodule org.kde.kirigamiaddons.formcard
+   \brief A Form delegate that corresponds to a switch.
+
+   This component is used to create a purely on/off toggle for a single
+   setting.
+
+   Use the inherited \l {AbstractButton::text} {AbstractButton.text} property to define
+   the main text of the button.
+
+   If you need an on/off/tristate toggle, use a FormCheckDelegate instead.
+
+   If you need multiple values for the same setting, use a
+   FormComboBoxDelegate instead.
+
+   If you need multiple toggles for the same setting, use a FormRadioDelegate
+   instead.
+
+   \since 0.11.0
+
+   \sa AbstractButton
+   \sa FormCheckDelegate
+   \sa FormComboBoxDelegate
+   \sa FormRadioDelegate
  */
 T.SwitchDelegate {
     id: root
 
-    /**
-     * @brief A label containing secondary text that appears under the inherited text property.
-     *
-     * This provides additional information shown in a faint gray color.
+    /*!
+       \brief A label containing secondary text that appears under the inherited text property.
+
+       This provides additional information shown in a faint gray color.
      */
     property string description: ""
 
-    /**
-     * @brief This property holds an item that will be displayed
-     * to the left of the delegate's contents.
+    /*!
+       \brief This property holds an item that will be displayed
+       to the left of the delegate's contents.
      */
     property var leading: null
 
-    /**
-     * @brief This property holds the padding after the leading item.
+    /*!
+       \brief This property holds the padding after the leading item.
      */
     property real leadingPadding: Kirigami.Units.smallSpacing
 
-    /**
-     * @brief This property holds an item that will be displayed
-     * to the right of the delegate's contents.
+    /*!
+       \brief This property holds an item that will be displayed
+       to the right of the delegate's contents.
      */
     property var trailing: null
 
-    /**
-     * @brief This property holds the padding before the trailing item.
+    /*!
+       \brief This property holds the padding before the trailing item.
      */
     property real trailingPadding: Kirigami.Units.smallSpacing
 

@@ -8,109 +8,118 @@ import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 import 'private' as Private
 
-/**
- * @brief A Form delegate that corresponds to a spinbox.
- *
- * This component is used to select a number. By default, the spinbox will be
- * initialized with a minimum of 0 and a maximum of 99.
- *
- * Example code:
- * ```qml
- * FormCard.FormCardHeader {
- *     title: "Information"
- * }
- *
- * FormCard.FormCard {
- *     FormCard.FormSpinBoxDelegate {
- *         label: "Amount"
- *     }
- * }
- * ```
- *
- * @since KirigamiAddons 0.11.0
- *
- * @inherit AbstractFormDelegate
+/*!
+   \qmltype FormSpinBoxDelegate
+   \inqmlmodule org.kde.kirigamiaddons.formcard
+   \brief A Form delegate that corresponds to a spinbox.
+
+   This component is used to select a number. By default, the spinbox will be
+   initialized with a minimum of 0 and a maximum of 99.
+
+   Example code:
+   \qml
+   FormCard.FormCardHeader {
+       title: "Information"
+   }
+
+   FormCard.FormCard {
+       FormCard.FormSpinBoxDelegate {
+           label: "Amount"
+       }
+   }
+   \endqml
+
+   \since 0.11.0
  */
 AbstractFormDelegate {
     id: root
 
-    /**
-     * @brief A label that appears above the spinbox.
-     *
+    /*!
+       \brief A label that appears above the spinbox.
      */
     required property string label
 
-    /**
-     * @brief This property holds the `value` of the internal spinbox.
+    /*!
+       \qmlproperty int value
+       \brief This property holds the \l {SpinBox::value} {value} of the internal spinbox.
      */
     property alias value: spinbox.value
 
-    /**
-     * @brief This property holds the `from` of the internal spinbox.
+    /*!
+       \qmlproperty int from
+       \brief This property holds the \l {SpinBox::from} {from} of the internal spinbox.
      */
     property alias from: spinbox.from
 
-    /**
-     * @brief This property holds the `to` of the internal spinbox.
+    /*!
+       \qmlproperty int to
+       \brief This property holds the \l {SpinBox::to} {to} of the internal spinbox.
      */
     property alias to: spinbox.to
 
-    /**
-     * @brief This property holds the `stepSize` of the internal spinbox.
+    /*!
+       \qmlproperty int stepSize
+       \brief This property holds the \l {SpinBox::stepSize} {stepSize} of the internal spinbox.
      */
     property alias stepSize: spinbox.stepSize
 
-    /**
-     * @brief This property holds the `textFromValue` of the internal spinbox.
+    /*!
+       \qmlproperty function textFromValue
+       \brief This property holds the \l {SpinBox::textFromValue} {textFromValue} of the internal spinbox.
      */
     property alias textFromValue: spinbox.textFromValue
 
-    /**
-     * @brief This property holds the `valueFromText` of the internal spinbox.
+    /*!
+       \qmlproperty function valueFromText
+       \brief This property holds the \l {SpinBox::valueFromText} {valueFromText} of the internal spinbox.
      */
     property alias valueFromText: spinbox.valueFromText
 
-    /**
-     * @brief This property holds the `displayText` of the internal spinbox.
+    /*!
+       \qmlproperty string displayText
+       \brief This property holds the \l {SpinBox::displayText} {displayText} of the internal spinbox.
      */
     property alias displayText: spinbox.displayText
 
-    /**
-     * @brief This property holds the `validator` of the internal spinbox.
+    /*!
+       \qmlproperty Validator validator
+       \brief This property holds the \l {SpinBox::validator} {validator} of the internal spinbox.
      */
     property alias validator: spinbox.validator
 
-    /**
-     * @brief This property holds the current type of status displayed in
-     * the text field.
-     *
-     * Depending on the status of the text field, the statusMessage property
-     * will look different
-     *
-     * Accepted values:
-     * - Kirigami.MessageType.Information
-     * - Kirigami.MessageType.Positive
-     * - Kirigami.MessageType.Warning
-     * - Kirigami.MessageType.Error
-     *
-     * @see Kirigami.MessageType
+    /*!
+       \qmlproperty var status
+       \brief This property holds the current type of status displayed in
+       the text field.
+
+       Depending on the status of the text field, the statusMessage property
+       will look different.
+
+       Accepted values:
+       \value Kirigami.MessageType.Information
+       \value Kirigami.MessageType.Positive
+       \value Kirigami.MessageType.Warning
+       \value Kirigami.MessageType.Error
+
+       \sa Kirigami.MessageType
      */
     property var status: Kirigami.MessageType.Information
 
-    /**
-     * This property holds the current status message of the text field.
+    /*!
+       This property holds the current status message of the text field.
+       \default ""
      */
     property string statusMessage: ""
 
-    /**
-     * Increases the value by stepSize, or 1 if stepSize is not defined.
+    /*!
+       Increases the value by stepSize, or 1 if stepSize is not defined.
      */
     function increase() {
         spinbox.increase();
     }
 
-    /**
-     * Decreases the value by stepSize, or 1 if stepSize is not defined.
+    /*!
+       Decreases the value by stepSize, or 1 if stepSize is not defined.
      */
     function decrease() {
         spinbox.decrease();

@@ -9,122 +9,128 @@ import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 
-/**
- * @brief A Form delegate that corresponds to a text area.
- *
- * ```qml
- *
- * FormCard.FormHeader {
- *     title: "Information"
- * }
- *
- * FormCard.FormCard {
- *     FormCard.FormTextAreaDelegate {
- *         label: "Account name"
- *     }
- * }
- * ```
- *
- * @since KirigamiAddons 0.11.0
- *
- * @inherit AbstractFormDelegate
+/*!
+   \qmltype FormTextAreaDelegate
+   \inqmlmodule org.kde.kirigamiaddons.formcard
+   \brief A Form delegate that corresponds to a text area.
+
+   \qml
+   FormCard.FormHeader {
+       title: "Information"
+   }
+
+   FormCard.FormCard {
+       FormCard.FormTextAreaDelegate {
+           label: "Account name"
+       }
+   }
+   \endqml
+
+   \since 0.11.0
  */
 AbstractFormDelegate {
     id: root
 
-    /**
-     * @brief A label containing primary text that appears above and
-     * to the left the text field.
+    /*!
+       \brief A label containing primary text that appears above and
+       to the left the text field.
      */
     required property string label
 
-    /**
-     * @brief set the maximum length of the text inside the TextArea if maxLength > 0
+    /*!
+       \brief The maximum length of the text inside the TextArea if maxLength > 0.
+       \default -1
      */
     property int maximumLength: -1
 
-    /**
-     * @brief This hold the activeFocus state of the internal TextArea.
-    */
+    /*!
+       \qmlproperty bool fieldActiveFocus
+       \brief This hold the \l {Item::activeFocus} {activeFocus} state of the internal TextArea.
+     */
     property alias fieldActiveFocus: textArea.activeFocus
 
-    /**
-     * @brief This hold the `readOnly` state of the internal TextArea.
+    /*!
+       \qmlproperty bool readOnly
+       \brief This hold the \l {TextEdit::readOnly} {readOnly} state of the internal TextArea.
      */
     property alias readOnly: textArea.readOnly
 
-    /**
-     * @brief This property holds the `inputMethodHints` of the
-     * internal TextArea.
-     *
-     * This consists of hints on the expected content or behavior of
-     * the text field, be it sensitive data, in a date format, or whether
-     * the characters will be hidden, for example.
-     *
-     * @see <a href="https://doc.qt.io/qt-6/qml-qtquick-textinput.html#inputMethodHints-prop">TextInput.inputMethodHints</a>
+    /*!
+       \qmlproperty enumeration inputMethodHints
+       \brief This property holds the \l {TextEdit::inputMethodHints} {inputMethodHints} of the
+       internal TextArea.
+
+       This consists of hints on the expected content or behavior of
+       the text field, be it sensitive data, in a date format, or whether
+       the characters will be hidden, for example.
+
+       \sa {TextInput::inputMethodHints} {TextInput.inputMethodHints}
      */
     property alias inputMethodHints: textArea.inputMethodHints
 
-    /**
-     * @brief This property holds the `placeholderText` of the
-     * internal TextArea.
-     *
-     * This consists of secondary text shown by default on the text field
-     * if no text has been written in it.
+    /*!
+       \qmlproperty string placeholderText
+       \brief This property holds the \l {TextArea::placeholderText} {placeholderText} of the
+       internal TextArea.
+
+       This consists of secondary text shown by default on the text field
+       if no text has been written in it.
      */
     property alias placeholderText: textArea.placeholderText
 
-    /**
-     * @brief This property holds the current status message type of
-     * the text field.
-     *
-     * This consists of an inline message with a colorful background
-     * and an appropriate icon.
-     *
-     * The status property will affect the color of ::statusMessage used.
-     *
-     * Accepted values:
-     * - `Kirigami.MessageType.Information` (blue color)
-     * - `Kirigami.MessageType.Positive` (green color)
-     * - `Kirigami.MessageType.Warning` (orange color)
-     * - `Kirigami.MessageType.Error` (red color)
-     *
-     * default: `Kirigami.MessageType.Information` if ::statusMessage is set,
-     * nothing otherwise.
-     *
-     * @see Kirigami.MessageType
+    /*!
+       \qmlproperty var status
+       \brief This property holds the current status message type of
+       the text field.
+
+       This consists of an inline message with a colorful background
+       and an appropriate icon.
+
+       The status property will affect the color of statusMessage used.
+
+       Accepted values:
+       \value Kirigami.MessageType.Information (blue color)
+       \value Kirigami.MessageType.Positive (green color)
+       \value Kirigami.MessageType.Warning (orange color)
+       \value Kirigami.MessageType.Error (red color)
+
+       default: Kirigami.MessageType.Information if statusMessage is set,
+       nothing otherwise.
+
+       \sa Kirigami.MessageType
      */
     property var status: Kirigami.MessageType.Information
 
-    /**
-     * @brief This property holds the current status message of
-     * the text field.
-     *
-     * If this property is not set, no ::status will be shown.
+    /*!
+       \brief This property holds the current status message of
+       the text field.
+
+       If this property is not set, no status will be shown.
+       \default ""
      */
     property string statusMessage: ""
 
-    /**
-     * @brief This signal is emitted when the Return or Enter key is pressed
-     * or the text input loses focus.
-     *
-     * Note that if there is a validator or inputMask set on the text input
-     * and enter/return is pressed, this signal will only be emitted if
-     * the input follows the inputMask and the validator returns an
-     * acceptable state.
+    /*!
+       \brief This signal is emitted when the Return or Enter key is pressed
+       or the text input loses focus.
+
+       Note that if there is a validator or inputMask set on the text input
+       and enter/return is pressed, this signal will only be emitted if
+       the input follows the inputMask and the validator returns an
+       acceptable state.
      */
     signal editingFinished();
 
-    /**
-     * @brief Clears the contents of the text input and resets partial
-     * text input from an input method.
+    /*!
+       \brief Clears the contents of the text input and resets partial
+       text input from an input method.
      */
     function clear() {
         textArea.clear();
     }
 
-    /**
-     * Inserts text into the TextInput at position.
+    /*!
+       Inserts \a text into the TextInput at \a position.
      */
     function insert(position: int, text: string): void {
         textArea.insert(position, text);

@@ -7,11 +7,12 @@ import QtQuick.Window
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 
-/**
- * @brief A scrollable page used as a container for one or more FormCards.
- *
- * @since KirigamiAddons 0.11.0
- * @inherit org:kde::kirigami::ScrollablePage
+/*!
+   \qmltype FormCardPage
+   \inqmlmodule org.kde.kirigamiaddons.formcard
+   \brief A scrollable page used as a container for one or more FormCards.
+
+   \since 0.11.0
  */
 Kirigami.ScrollablePage {
     id: root

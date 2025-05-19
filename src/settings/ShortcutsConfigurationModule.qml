@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2024 Carl Schwan <carl@carlschwan.eu>
+// SPDX-FileCopyrightText: 2024 Carl Schwan <carl\carlschwan.eu>
 // SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 
 import QtQuick
@@ -6,16 +6,19 @@ import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.settings.private as Private
 import org.kde.kirigamiaddons.statefulapp as StatefulApp
 
-/**
- * Configuration module for keyboard shortcuts.
- *
- * @since KirigamiAddons 1.7.0
+/*!
+   \qmltype ShortcutsConfigurationModule
+   \inqmlmodule org.kde.kirigamiaddons.settings
+   \brief Configuration module for keyboard shortcuts.
+
+   \since 1.7.0
  */
 ConfigurationModule {
     id: root
 
-    /**
-     * This property holds the abstract KirigamiApplication from the statefulapp module.
+    /*!
+       This property holds the \l AbstractKirigamiApplication from the
+       \l {Kirigami Addons StatefulApplication QML Types} module.
      */
     required property StatefulApp.AbstractKirigamiApplication application
 

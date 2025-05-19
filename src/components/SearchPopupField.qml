@@ -1,6 +1,6 @@
 // SPDX-FileCopyrightText: 2021 Jonah Brüchert <jbb@kaidan.im>
 // SPDX-FileCopyrightText: 2023 Mathis Brüchert <mbb@kaidan.im>
-// SPDX-FileCopyrightText: 2023 Carl Schwan <carl@carlschwan.eu>
+// SPDX-FileCopyrightText: 2023 Carl Schwan <carl\carlschwan.eu>
 // SPDX-FileCopyrightText: 2023 ivan tkachenko <me@ratijas.tk>
 //
 // SPDX-License-Identifier: LGPL-2.0-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
@@ -12,137 +12,148 @@ import QtQuick.Layouts 1.15
 import Qt.labs.qmlmodels 1.0
 import org.kde.kirigami 2.20 as Kirigami
 
-/**
- * SearchField with a Popup to show autocompletion entries or search results
- *
- * @deprecated Use Kirigami.SearchDialog instead.
- *
- * Can be replaced by the following code:
- *
- * @code{qml}
- * Kirigami.SearchField {
- *     TapHandler {
- *         onTapped: {
- *             searchDialog.open();
- *         }
- *         acceptedButtons: Qt.RightButton | Qt.LeftButton
- *     }
- *     Keys.onPressed: (event) => {
- *         if (event.key !== Qt.Key_Tab || event.key !== Qt.Key_Backtab) {
- *             searchDialog.open();
- *             searchDialog.text = text;
- *         }
- *     }
- *     Keys.priority: Keys.AfterItem
- *
- *     Kirigami.SearchDialog {
- *         id: searchDialog
- *         ...
- *     }
- * }
- * @endcode
- * @since KirigamiAddons.labs.components 1.0
- * @see SearchDialog
+/*!
+   \qmltype SearchPopupField
+   \inqmlmodule org.kde.kirigamiaddons.labs.components
+   \brief SearchField with a Popup to show autocompletion entries or search results
+
+   \deprecated Use Kirigami.SearchDialog instead.
+
+   Can be replaced by the following code:
+
+   \qml
+   Kirigami.SearchField {
+       TapHandler {
+           onTapped: {
+               searchDialog.open();
+           }
+           acceptedButtons: Qt.RightButton | Qt.LeftButton
+       }
+       Keys.onPressed: (event) => {
+           if (event.key !== Qt.Key_Tab || event.key !== Qt.Key_Backtab) {
+               searchDialog.open();
+               searchDialog.text = text;
+           }
+       }
+       Keys.priority: Keys.AfterItem
+
+       Kirigami.SearchDialog {
+           id: searchDialog
+           ...
+       }
+   }
+   \endqml
+   \since 1.0
+   \sa SearchDialog
  */
 QQC2.Control {
     id: root
 
-    /**
-     * This property holds the content item of the popup.
-     *
-     * Overflow will be automatically be handled as popupContentItem is
-     * contained inside a ScrollView.
-     *
-     * This is the default element of SearchPopupField.
-     *
-     * ```qml
-     * SearchPopupField {
-     *     ListView {
-     *         model: SearchModel {}
-     *         delegate: QQC2.ItemDelegate {}
-     *
-     *         Kirigami.PlaceholderMessage {
-     *             id: loadingPlaceholder
-     *             anchors.centerIn: parent
-     *             width: parent.width - Kirigami.Units.gridUnit * 4
-     *             // ...
-     *         }
-     *     }
-     * }
-     * ```
-     *
-     * @since KirigamiAddons.labs.components 1.0
+    /*!
+       \qmlproperty Item popupContentItem
+       This property holds the content item of the \l popup.
+
+       Overflow will be automatically handled as popupContentItem is
+       contained inside a ScrollView.
+
+       This is the default element of SearchPopupField.
+
+       \qml
+       SearchPopupField {
+           ListView {
+               model: SearchModel {}
+               delegate: QQC2.ItemDelegate {}
+
+               Kirigami.PlaceholderMessage {
+                   id: loadingPlaceholder
+                   anchors.centerIn: parent
+                   width: parent.width - Kirigami.Units.gridUnit * 4
+                   // ...
+               }
+           }
+       }
+       \endqml
+
+       \since 1.0
      */
     default property alias popupContentItem: scrollView.contentItem
 
-    /**
-     * This property holds the text of the search field.
-     *
-     * @since KirigamiAddons.labs.components 1.0
+    /*!
+       \qmlproperty string text
+       This property holds the \l {TextInput::text} {text} of the search field.
+       \since 1.0
      */
     property alias text: root.searchField.text
 
-    /**
-     * @brief This property sets whether to delay automatic acceptance of the search input.
-     *
-     * Set this to true if your search is expensive (such as for online
-     * operations or in exceptionally slow data sets) and want to delay it
-     * for 2.5 seconds.
-     *
-     * @note If you must have immediate feedback (filter-style), use the
-     * text property directly instead of accepted()
-     *
-     * default: ``false``
-     *
-     * @since KirigamiAddons.labs.components 1.0
+    /*!
+       \qmlproperty bool delaySearch
+       \brief This property sets whether to delay automatic acceptance of the search input.
+
+       Set this to \c true if your search is expensive (such as for online
+       operations or in exceptionally slow data sets) and want to delay it
+       for 2.5 seconds.
+
+       \note If you must have immediate feedback (filter-style), use the
+       \l text property directly instead of accepted()
+
+       \default false
+
+       \since 1.0
      */
     property alias delaySearch: root.searchField.delaySearch
 
-    /**
-     * @brief This property sets whether the accepted signal is fired automatically
-     * when the text is changed.
-     *
-     * Setting this to false will require that the user presses return or enter
-     * (the same way a QtQuick.Controls.TextInput works).
-     *
-     * default: ``false``
-     *
-     * @since KirigamiAddons.labs.components 1.0
+    /*!
+       \qmlproperty bool autoAccept
+       \brief This property sets whether the accepted signal is fired automatically
+       when the text is changed.
+
+       Setting this to \c false will require that the user presses return or enter
+       (the same way a TextInput works).
+
+       \default false
+
+       \since 1.0
      */
     property alias autoAccept: root.searchField.autoAccept
 
-    /**
-     * This property holds whether there is space available on the left.
-     *
-     * This is used by the left shadow.
-     *
-     * @since KirigamiAddons.labs.components 1.0
-     * @deprecated Was not really used by anything.
+    /*!
+       This property holds whether there is space available on the left.
+
+       This is used by the left shadow.
+
+       \since 1.0
+       \deprecated Was not really used by anything.
      */
     property bool spaceAvailableLeft: true
 
-    /**
-     * This property holds whether there is space available on the left.
-     *
-     * This is used by the right shadow.
-     *
-     * @since KirigamiAddons.labs.components 1.0
-     * @deprecated Was not really used by anything.
+    /*!
+       This property holds whether there is space available on the left.
+
+       This is used by the right shadow.
+
+       \since 1.0
+       \deprecated Was not really used by anything.
      */
     property bool spaceAvailableRight: true
 
-    /**
-     * @brief This hold the focus state of the internal SearchField.
-    */
+    /*!
+       \qmlproperty bool fieldFocus
+       \brief This hold the \l {Item::focus} {focus} state of the internal SearchField.
+     */
     property alias fieldFocus: root.searchField.focus
 
-    /**
-     * This signal is triggered when the user trigger a search.
+    /*!
+       This signal is triggered when the user trigger a search.
      */
     signal accepted()
 
+    /*!
+       \qmlproperty Popup popup
+     */
     property alias popup: popup
 
+    /*!
+     */
     property Kirigami.SearchField searchField: Kirigami.SearchField {}
 
     contentItem: Item {

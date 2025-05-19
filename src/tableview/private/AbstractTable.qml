@@ -8,6 +8,10 @@ import QtQuick.Controls as QQC2
 
 import org.kde.kirigami as Kirigami
 
+/*!
+   \qmltype AbstractTable
+   \inqmlmodule org.kde.kirigamiaddons.tableview
+ */
 Flickable {
     id: root
 
@@ -15,108 +19,109 @@ Flickable {
     interactive: false
     focus: true
 
-    /**
-     * @brief This property holds the model that provides data for the table.
-     *
-     * The model provides the set of data that is used to create the items in the view.
+    /*!
+       \brief This property holds the model that provides data for the table.
+
+       The model provides the set of data that is used to create the items in the view.
      */
     property var model
 
-    /**
-     * @brief The default property that stores the components for forming the columns of this table.
-     *
-     * @property list<AbstractHeaderComponent> headerComponents
-     * @see org::kde::kirigamiaddons::AbstractHeaderComponent
+    /*!
+       \brief The default property that stores the components for forming the columns of this table.
+       \sa AbstractHeaderComponent
      */
     property list<AbstractHeaderComponent> headerComponents
     onHeaderComponentsChanged: updateModel()
 
-    /**
-     * @brief This property holds the number of rows in the view
+    /*!
+       \brief This property holds the number of rows in the view.
      */
     readonly property int rowCount: __rowCount
 
-    /**
-     * @brief This property holds the number of columns in the component include invisibles
+    /*!
+       \brief This property holds the number of columns in the component include invisibles.
      */
     readonly property int columnCount: __columnCount
 
-    /**
-     * @brief This property controls whether the background color of the rows should alternate.
-     *
-     * default: `true`
+    /*!
+       \brief This property controls whether the background color of the rows should alternate.
+       \default true
      */
     property bool alternatingRows: true
 
 
-    /**
-     * @brief If this property is enabled, the table will be displayed in a compact form.
-     *
-     * default: `true`
+    /*!
+       \brief If this property is enabled, the table will be displayed in a compact form.
+       \default true
      */
     property bool compact: true
 
-    /**
-     * @brief Is a link to a list of context menu items.
-     *
-     * @see QtQuick.Controls.Menu
+    /*!
+       \brief A link to a list of context menu items.
+       \sa Menu
      */
     property alias actions: menu.contentData
 
-    /**
-     * @brief The property is responsible for the direction in which sorting will be performed.
-     *
-     * @note You must implement sorting yourself for this property to be valid.
-     * @see sortRole
-     *
-     * @property Qt::SortOrder sortOrder
+    /*!
+       \qmlproperty Qt.SortOrder sortOrder
+       \brief The property is responsible for the direction in which sorting will be performed.
+       \note You must implement sorting yourself for this property to be valid.
+       \sa sortRole
+       \sa {Qt::SortOrder} {Qt.SortOrder}
      */
     property int sortOrder
 
-    /**
-     * @brief This property specifies based on which role the table will be sorted.
-     *
-     * @note You must implement sorting yourself for this property to be valid.
-     * @see sortOrder
+    /*!
+       \brief This property specifies based on which role the table will be sorted.
+       \note You must implement sorting yourself for this property to be valid.
+       \sa sortOrder
      */
     property int sortRole: -1
 
-    /**
-     * @brief This property can be set to control which delegate items should be shown as selected, and which item should be shown as current.
-     *
-     * Using the selectionType and selectionMode properties you can adjust the selection behavior
-     *
-     * @property ItemSelectionModel selectionModel
-     *
-     * @see selectionType
-     * @see selectionMode
+    /*!
+       \brief This property can be set to control which delegate items should be shown as selected, and which item should be shown as current.
+
+       Using the selectionType and selectionMode properties you can adjust the selection behavior.
+
+       \sa selectionType
+       \sa selectionMode
      */
     property ItemSelectionModel selectionModel: ItemSelectionModel { model: root.model }
 
-    /**
-     * @brief This property holds whether the user can select cells, rows or columns.
-     *
-     * default: `TableView.SelectRows`
-     *
-     * @see TableView.selectionBehavior
+    /*!
+       \brief This property holds whether the user can select cells, rows or columns.
+       \default TableView.SelectRows
+       \sa {TableView::selectionBehavior} {TableView.selectionBehavior}
      */
     property int selectionBehavior: TableView.SelectRows
 
-    /**
-     * @brief If `selectionType` is set to TableView.SelectCells, this property holds whether the user can select one cell at a time, or multiple cells.
-     * If `selectionType` is set to TableView.SelectRows, this property holds whether the user can select one row at a time, or multiple rows.
-     * If `selectionType` is set to TableView.SelectColumns, this property holds whether the user can select one column at a time, or multiple columns.
-     *
-     * default: `TableView.ExtendedSelection`
-     *
-     * @see TableView.selectionMode
+    /*!
+       \brief The selection mode.
+
+       \value TableView.SelectCells
+              Whether the user can select one cell at a time, or multiple cells.
+       \value TableView.SelectRows
+              Whether the user can select one row at a time, or multiple rows.
+       \value TableView.SelectColumns
+              Whether the user can select one column at a time, or multiple columns.
+
+       \default TableView.ExtendedSelection
+       \sa {TableView::selectionMode} {TableView.selectionMode}
      */
     property int selectionMode: TableView.ExtendedSelection
 
+    /*!
+     */
     signal columnClicked(int column, var headerComponent)
+    /*!
+     */
     signal columnDoubleClicked(int column, var headerComponent)
 
+    /*!
+     */
     signal rowClicked(int row)
+    /*!
+     */
     signal rowDoubleClicked(int row)
 
     readonly property var __columnModel: ListModel { id: columnModel }

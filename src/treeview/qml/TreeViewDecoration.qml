@@ -11,64 +11,69 @@ import QtQuick.Templates as T2
 import org.kde.kitemmodels
 import org.kde.kirigami as Kirigami
 
-/**
- * The tree expander decorator for item views.
- *
- * It will have a "> v" expander button graphics, and will have indentation on the left
- * depending on the level of the tree the item is in
- *
- * It is recommanded to directly use RoundedTreeDelegate instead of this component.
+/*!
+   \qmltype TreeViewDecoration
+   \inqmlmodule org.kde.kirigamiaddons.treeview
+   \brief The tree expander decorator for item views.
+
+   It will have a \c {> v} expander button graphics, and will have indentation on the left
+   depending on the level of the tree the item is in.
+
+   It is recommended to use RoundedTreeDelegate directly instead of this component.
  */
 RowLayout {
-    /**
-     * This property holds the delegate there this decoration will live in.
-     * It needs to be assigned explicitly by the developer.
+    /*!
+       \qmlproperty ItemDelegate parentDelegate
+       This property holds the delegate there this decoration will live in.
+
+       It needs to be assigned explicitly by the developer.
      */
     required property T2.ItemDelegate parentDelegate
 
-    /**
-     * This property holds the KDescendantsProxyModel the view is showing.
-     * It needs to be assigned explicitly by the developer.
+    /*!
+       This property holds the KDescendantsProxyModel the view is showing.
+
+       It needs to be assigned explicitly by the developer.
      */
     required property KDescendantsProxyModel model
 
-    /**
-     * This property holds the color of the decoration highlight.
+    /*!
+       This property holds the color of the decoration highlight.
      */
     property color decorationHighlightColor
 
-    /**
-     * This property holds the index of the item.
-     *
-     * Provided by the model/ListView
+    /*!
+       This property holds the index of the item.
+
+       Provided by the model/ListView.
      */
     required property int index
 
-    /**
-     * This property holds the descendant level of the item.
-     *
-     * Provided by the model/ListView
+    /*!
+       This property holds the descendant level of the item.
+
+       Provided by the model/ListView.
      */
     required property int kDescendantLevel
 
-    /**
-     * This property holds whether this item has siblings.
-     *
-     * Provided by the model/ListView
+    /*!
+       This property holds whether this item has siblings.
+
+       Provided by the model/ListView.
      */
     required property var kDescendantHasSiblings
 
-    /**
-     * This property holds whether the item is expandable.
-     *
-     * Provided by the model/ListView
+    /*!
+       This property holds whether the item is expandable.
+
+       Provided by the model/ListView.
      */
     required property bool kDescendantExpandable
 
-    /**
-     * This property holds whether the item is expanded.
-     *
-     * Provided by the model/ListView
+    /*!
+       This property holds whether the item is expanded.
+
+       Provided by the model/ListView.
      */
     required property bool kDescendantExpanded
 

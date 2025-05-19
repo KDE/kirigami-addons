@@ -7,21 +7,29 @@ import org.kde.kirigami as Kirigami
 import QtQuick.Controls as QQC2
 import QtQuick.Templates as T
 
-/**
- * @warning This component is expected to be used as a ListView.delegate.
- * If this is not the case, make sure to set index and listView
+/*!
+   \qmltype IndicatorItemDelegate
+   \inqmlmodule org.kde.kirigamiaddons.delegates
+   \warning This component is expected to be used as a \l ListView::delegate {ListView.delegate}.
+   If this is not the case, make sure to set \l index and listView.
  */
 T.ItemDelegate {
     id: root
 
+    /*!
+     */
     required property int index
+    /*!
+     */
     required property bool unread
 
-    /**
-     * The listview associated with this item delegate.
+    /*!
+       The listview associated with this item delegate.
      */
     property ListView listView: ListView.view
 
+    /*!
+     */
     readonly property bool showSeparator: root.index !== listView.count
 
     implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,

@@ -11,6 +11,8 @@ ecm_add_qml_module(delegatesplugin
         org.kde.kitemmodels
 )
 
+ecm_generate_qdoc(delegatesplugin delegates.qdocconf)
+
 ecm_target_qml_sources(delegatesplugin SOURCES
     RoundedItemDelegate.qml
     RoundedTreeDelegate.qml

@@ -10,3 +10,6 @@ add_subdirectory(formcard)
 add_subdirectory(delegates)
 add_subdirectory(settings)
 add_subdirectory(statefulapplication)
+
+add_library(addonsdummydocumentationtarget OBJECT)
+ecm_generate_qdoc(addonsdummydocumentationtarget kirigami-addons.qdocconf)

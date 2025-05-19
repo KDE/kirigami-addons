@@ -7,36 +7,41 @@ import QtQuick.Controls as QQC2
 import QtQuick.Templates as T
 import org.kde.kirigami as Kirigami
 
-/**
- * An item delegate providing a modern look and feel. Use a combination of
- * SubtitleContentItem, DefaultContentItem and RowLayout for the contentItem.
- *
- * @image html roundeditemdelegate.html
+/*!
+   \qmltype RoundedItemDelegate
+   \inqmlmodule org.kde.kirigamiaddons.delegates
+   \brief An ItemDelegate providing a modern look and feel.
+
+   Use a combination of SubtitleContentItem, DefaultContentItem and RowLayout for the contentItem.
+   \image roundeditemdelegate.png
  */
 T.ItemDelegate {
     id: root
 
-    /**
-     * This property holds a ListView
-     *
-     * It is automatically set if the RoundedItemDelegate is the direct delegate
-     * of a ListView and must be set otherwise.
+    /*!
+       \qmlproperty ListView listView
+       This property holds a ListView.
+
+       It is automatically set if the RoundedItemDelegate is the direct delegate
+       of a ListView and must be set otherwise.
      */
     property var listView: ListView
 
-    /**
-     * This property holds a GridView
-     *
-     * It is automatically set if the RoundedItemDelegate is the direct delegate
-     * of a GridView and must be set otherwise.
+    /*!
+       \qmlproperty GridView gridView
+       This property holds a GridView.
+
+       It is automatically set if the RoundedItemDelegate is the direct delegate
+       of a GridView and must be set otherwise.
      */
     property var gridView: GridView
 
-    /**
-     * This property holds whether the drop area is hovered.
-     *
-     * This allow to emulate an hover effect which can't be done with the
-     * normal hovered property as it is read only.
+    /*!
+       This property holds whether the drop area is hovered.
+
+       This allow to emulate an hover effect which can't be done with the
+       normal hovered property as it is read only.
+       \default false
      */
     property bool dropAreaHovered: false
 

@@ -7,15 +7,35 @@ import QtQuick.Controls as QQC2
 import QtQuick.Templates as T
 import org.kde.kirigami as Kirigami
 
+/*!
+   \qmltype SubtitleContentItem
+   \inqmlmodule org.kde.kirigamiaddons.delegates
+ */
 RowLayout {
     id: root
 
+    /*!
+       \qmlproperty ItemDelegate itemDelegate
+     */
     required property T.ItemDelegate itemDelegate
+    /*!
+     */
     required property string subtitle
+    /*!
+     */
     property bool bold: false
 
+    /*!
+       \qmlproperty Label labelItem
+     */
     readonly property alias labelItem: labelItem
+    /*!
+       \qmlproperty Label subtitleItem
+     */
     readonly property alias subtitleItem: subtitleItem
+    /*!
+       \qmlproperty Kirigami.Icon iconItem
+     */
     readonly property alias iconItem: iconItem
 
     spacing: itemDelegate instanceof T.ItemDelegate ? itemDelegate.spacing : Kirigami.Units.mediumSpacing

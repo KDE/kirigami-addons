@@ -7,58 +7,62 @@ import QtQuick.Controls as QQC2
 import org.kde.kirigami as Kirigami
 import QtQuick.Layouts
 
-/**
-* @brief A bottom drawer component with a drag indicator.
-*
-* Example:
-* @code{.qml}
-* import org.kde.kirigamiaddons.delegates 1.0 as Delegates
-* import org.kde.kirigamiaddons.components 1.0 as Components
-*
-* Components.BottomDrawer {
-*     id: drawer
-*
-*     headerContentItem: Kirigami.Heading {
-*         text: "Drawer"
-*     }
-*
-*     Delegates.RoundedItemDelegate {
-*         text: "Action 1"
-*         icon.name: "list-add"
-*         onClicked: {
-*             doSomething()
-*             drawer.close()
-*         }
-*     }
+/*!
+   \qmltype BottomDrawer
+   \inqmlmodule org.kde.kirigamiaddons.labs.components
+   \brief A bottom drawer component with a drag indicator.
 
-*     Delegates.RoundedItemDelegate {
-*         text: "Action 1"
-*         icon.name: "list-add"
-*         onClicked: {
-*             doSomething()
-*             drawer.close()
-*         }
-*     }
-* }
-* @endcode
-*
-* @image html bottomdrawer.png
-*
-* @since KirigamiAddons 0.12.0
+   Example:
+   \qml
+   import org.kde.kirigamiaddons.delegates 1.0 as Delegates
+   import org.kde.kirigamiaddons.components 1.0 as Components
+
+   Components.BottomDrawer {
+       id: drawer
+
+       headerContentItem: Kirigami.Heading {
+           text: "Drawer"
+       }
+
+       Delegates.RoundedItemDelegate {
+           text: "Action 1"
+           icon.name: "list-add"
+           onClicked: {
+               doSomething()
+               drawer.close()
+           }
+       }
+
+       Delegates.RoundedItemDelegate {
+           text: "Action 1"
+           icon.name: "list-add"
+           onClicked: {
+               doSomething()
+               drawer.close()
+           }
+       }
+   }
+   \endqml
+
+   \image bottomdrawer.png
+
+   \since 0.12.0
 */
 QQC2.Drawer {
     id: root
 
-    /**
-    * @brief This property holds the content item of the drawer
-    */
+    /*!
+       \qmlproperty Item drawerContentItem
+       \brief This property holds the content item of the drawer.
+     */
     default property alias drawerContentItem: drawerContent.contentItem
 
-    /**
-    * @brief This property holds the content item of the drawer header
-    *
-    * when no headerContentItem is set, the header will not be displayed
-    */
+    /*!
+       \qmlproperty Item headerContentItem
+       \brief This property holds the content item of the drawer header.
+
+       When no headerContentItem is set, the header will not be displayed.
+     */
     property alias headerContentItem: headerContent.contentItem
 
     component Handle: Rectangle {

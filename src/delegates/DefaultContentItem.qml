@@ -7,34 +7,37 @@ import QtQuick.Controls as QQC2
 import QtQuick.Templates as T
 import org.kde.kirigami as Kirigami
 
-/**
- * Content item which is used by default in the RoundedItemDelegate and IndicatorItemDelegate. Provides a label and an icon.
- *
- * This can be used directly as contentItem or inside a RowLayout if you need to put some content before or after this item.
- *
- * @since KirigamiAddons 0.10.0
+/*!
+   \qmltype DefaultContentItem
+   \inqmlmodule org.kde.kirigamiaddons.delegates
+   \brief Content item which is used by default in the RoundedItemDelegate and IndicatorItemDelegate.
+
+   Provides a label and an icon.
+
+   This can be used directly as contentItem or inside a RowLayout if you need to put some content before or after this item.
+   \since 0.10.0
  */
 RowLayout {
     id: root
 
-    /**
-     * This required property holds the item delegate corresponding to this content item.
-     *
-     * @since KirigamiAddons 0.10.0
+    /*!
+       \qmlproperty AbstractButton itemDelegate
+       This required property holds the item delegate corresponding to this content item.
+       \since 0.10.0
      */
     required property T.AbstractButton itemDelegate
 
-    /**
-     * This property holds the Label containing the text of the item delegate.
-     *
-     * @since KirigamiAddons 0.10.1
+    /*!
+       \qmlproperty Label labelItem
+       This property holds the Label containing the text of the item delegate.
+       \since 0.10.1
      */
     readonly property alias labelItem: labelItem
 
-    /**
-     * This property holds the Kirigami.Icon containing the icon of the item delegate.
-     *
-     * @since KirigamiAddons 0.10.1
+    /*!
+       \qmlproperty Kirigami.Icon iconItem
+       This property holds the \l {Icon} {Kirigami.Icon} containing the icon of the item delegate.
+       \since 0.10.1
      */
     readonly property alias iconItem: iconItem
 

@@ -10,136 +10,142 @@ import org.kde.kirigamiaddons.components as Components
 
 import "private" as Private
 
-/**
- * FormDateTimeDelegate is a delegate for FormCard that lets the user enters either
- * a date, a time or both.
- *
- * This component allow to define a minimumDate and maximumDate to restrict
- * the date that the user is allowed to enters.
- *
- * Ideally for this FormDelegate, it is better to not add a label but to
- * instead makes it clear from the above FormHeader to that the form delegate
- * refers too.
- *
- * @code{.qml}
- * import org.kde.kirigamiaddons.formcard as FormCard
- *
- * FormCard.FormCardPage {
- *     FormCard.FormHeader {
- *         title: "Departure"
- *     }
- *
- *     FormCard.FormCard {
- *         FormCard.FormDateTimeDelegate {}
- *
- *         FormCard.FormDelegateSeparator {}
- *
- *         FormCard.FormTextFieldDelegate {
- *             label: "Location"
- *         }
- *     }
- * }
- * @endcode
- *
- * @image html formdatetimedelegate.png The form card delegate
- *
- * @image html formdatetimedelegatedatepicker.png The date picker
- *
- * @image html formdatetimedelegatetimepicker.png The time picker
- *
- * @note This component can also be used in a read only mode to display a date.
- *
- * @warning This will use the native date and time picker from the platform if
- * available. E.g. this happens on Android.
- *
- * @since KirigamiAddons 0.12.0
+/*!
+   \qmltype FormDateTimeDelegate
+   \inqmlmodule org.kde.kirigamiaddons.formcard
+   \brief FormDateTimeDelegate is a delegate for FormCard that lets the user enter either
+   a date, a time or both.
+
+   This component allows to define a minimumDate and maximumDate to restrict
+   the date that the user is allowed to enter.
+
+   You should not add a label but instead use the above FormHeader
+   to specify what the form delegate refers to.
+
+   \qml
+   import org.kde.kirigamiaddons.formcard as FormCard
+
+   FormCard.FormCardPage {
+       FormCard.FormHeader {
+           title: "Departure"
+       }
+
+       FormCard.FormCard {
+           FormCard.FormDateTimeDelegate {}
+
+           FormCard.FormDelegateSeparator {}
+
+           FormCard.FormTextFieldDelegate {
+               label: "Location"
+           }
+       }
+   }
+   \endqml
+
+   \image formdatetimedelegate.png The form card delegate
+
+   \image formdatetimedelegatedatepicker.png The date picker
+
+   \image formdatetimedelegatetimepicker.png The time picker
+
+   \note This component can also be used in a read only mode to display a date.
+
+   \warning This will use the native date and time picker from the platform if
+   available. For example this happens on Android.
+
+   \since 0.12.0
  */
 AbstractFormDelegate {
     id: root
 
-    /**
-     * Enum containing the different part of the date time that can be displayed.
-     */
     enum DateTimeDisplay {
-        DateTime, ///< Show the date and time
-        Date, ///< Show only the date
-        Time ///< Show only the time
+        DateTime,
+        Date,
+        Time
     }
 
-    /**
-     * This property holds which part of the date and time selector are show to the
-     * user.
-     *
-     * By default both the time and the date are shown.
-     */
+    /*!
+       This property holds which part of the date and time selector are show to the
+       user.
+
+       By default both the time and the date are shown.
+
+       Accepted values:
+       \value FormDateTimeDelegate.DateTimeDisplay.DateTime Show the date and time.
+       \value FormDateTimeDelegate.DateTimeDisplay.Date Show only the date.
+       \value FormDateTimeDelegate.DateTimeDisplay.Time Show only the time.
+       */
     property int dateTimeDisplay: FormDateTimeDelegate.DateTimeDisplay.DateTime
 
-    /**
-     * This property holds the minimum date (inclusive) that the user can select.
-     *
-     * By default, no limit is applied to the date selection.
+    /*!
+       This property holds the minimum date (inclusive) that the user can select.
+
+       By default, no limit is applied to the date selection.
      */
     property date minimumDate
 
-    /**
-     * This property holds the maximum date (inclusive) that the user can select.
-     *
-     * By default, no limit is applied to the date selection.
+    /*!
+       This property holds the maximum date (inclusive) that the user can select.
+
+       By default, no limit is applied to the date selection.
      */
     property date maximumDate
 
-    /**
-     * This property holds the the date to use as initial default when editing an
-     * an unset date.
-     *
-     * By default, this is the current date/time.
+    /*!
+       This property holds the the date to use as initial default when editing an
+       an unset date.
+
+       By default, this is the current date/time.
      */
     property date initialValue: new Date()
 
-    /**
-     * This property holds whether this delegate is readOnly or whether the user
-     * can select a new time and date.
+    /*!
+       This property holds whether this delegate is readOnly or whether the user
+       can select a new time and date.
+       \default false
      */
     property bool readOnly: false
 
-    /**
-     * @brief The current date and time selected by the user.
+    /*!
+       \brief The current date and time selected by the user.
      */
     property date value: new Date()
 
-    /**
-     * @brief This property holds the current status message type of
-     * the text field.
-     *
-     * This consists of an inline message with a colorful background
-     * and an appropriate icon.
-     *
-     * The status property will affect the color of ::statusMessage used.
-     *
-     * Accepted values:
-     * - `Kirigami.MessageType.Information` (blue color)
-     * - `Kirigami.MessageType.Positive` (green color)
-     * - `Kirigami.MessageType.Warning` (orange color)
-     * - `Kirigami.MessageType.Error` (red color)
-     *
-     * default: `Kirigami.MessageType.Information` if ::statusMessage is set,
-     * nothing otherwise.
-     *
-     * @see Kirigami.MessageType
+    /*!
+       \qmlproperty var status
+       \brief This property holds the current status message type of
+       the text field.
+
+       This consists of an inline message with a colorful background
+       and an appropriate icon.
+
+       The status property will affect the color of statusMessage used.
+
+       Accepted values:
+       \value Kirigami.MessageType.Information (blue color)
+       \value Kirigami.MessageType.Positive (green color)
+       \value Kirigami.MessageType.Warning (orange color)
+       \value Kirigami.MessageType.Error (red color)
+
+       Default: Kirigami.MessageType.Information if statusMessage is set,
+       nothing otherwise.
+
+       \sa Kirigami.MessageType
      */
     property var status: Kirigami.MessageType.Information
 
-    /**
-     * @brief This property holds the current status message of
-     * the text field.
-     *
-     * If this property is not set, no ::status will be shown.
+    /*!
+       \brief This property holds the current status message of
+       the text field.
+
+       If this property is not set, no \l status will be shown.
      */
     property string statusMessage: ""
 
-    /**
-     * @brief This property holds the parent used for the popups
-     * of this control.
+    /*!
+       \brief This property holds the parent used for the popups
+       of this control.
+       \default ApplicationWindow.window
      */
     property var popupParent: QQC2.ApplicationWindow.window
 

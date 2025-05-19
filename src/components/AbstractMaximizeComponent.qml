@@ -8,63 +8,65 @@ import Qt.labs.qmlmodels
 
 import org.kde.kirigami as Kirigami
 
-/**
- * @brief A popup that covers the entire window to show a content item.
- *
- * This component is designed to show a content item at the maximum size the
- * application window will allow. The typical use is for showing a maximized image
- * or other piece of media in an application, but it could be any item if desired.
- *
- * The popup also has a header bar which has a writable title, an optional leading
- * item to the left, a list of custom actions specified by the actions property
- * and an optional footer item.
- *
- * @image html maximizedcomponent.png
+/*!
+   \qmltype AbstractMaximizeComponent
+   \inqmlmodule org.kde.kirigamiaddons.labs.components
+   \brief A popup that covers the entire window to show a content item.
+
+   This component is designed to show a content item at the maximum size the
+   application window will allow. The typical use is for showing a maximized image
+   or other piece of media in an application, but it could be any item if desired.
+
+   The popup also has a header bar which has a writable title, an optional leading
+   item to the left, a list of custom actions specified by the actions property
+   and an optional footer item.
  */
 QQC2.Popup {
     id: root
 
-    /**
-     * @brief The title of the overlay window.
+    /*!
+       \qmlproperty string title
+       \brief The title of the overlay window.
      */
     property alias title: titleLabel.text
 
-    /**
-     * @brief The subtitle of the overlay window.
-     *
-     * The label will be hidden and the title centered if this is not provided.
+    /*!
+       \qmlproperty string subtitle
+       \brief The subtitle of the overlay window.
+
+       The label will be hidden and the title centered if this is not provided.
      */
     property alias subtitle: subtitleLabel.text
 
-    /**
-     * @brief List of top row actions.
-     *
-     * Each action will be allocated a QQC2.ToolButton on the top row. All actions
-     * are right aligned and appear next to the close button which is always present
-     * so does not require specifying.
+    /*!
+       \brief List of top row actions.
+
+       Each action will be allocated a ToolButton on the top row. All actions
+       are right aligned and appear next to the close button which is always present
+       so does not require specifying.
      */
     property alias actions: actionToolBar.actions
 
-    /**
-     * @brief The main content item in the view.
-     *
-     * The item will be the sized to fit the available space. If the item is
-     * larger than the available space it will be shrunk to fit.
-     *
-     * @note If stretching the item isn't desirable the user needs to manage this,
-     *       e.g. with a holding item. See ImageMaximizeDelegate.qml for an example.
-     *
-     * @sa ImageMaximizeDelegate.qml
+    /*!
+       \brief The main content item in the view.
+
+       The item will be the sized to fit the available space. If the item is
+       larger than the available space it will be shrunk to fit.
+
+       \note If stretching the item isn't desirable the user needs to manage this,
+             e.g. with a holding item. See ImageMaximizeDelegate for an example.
+
+       \sa ImageMaximizeDelegate
      */
     property Item content
 
-    /**
-     * @brief Item to the left of the overlay title.
+    /*!
+       \brief Item to the left of the overlay title.
      */
     property Item leading
 
-    /**
-     * @brief Item at the bottom under the content.
+    /*!
+       \brief Item at the bottom under the content.
      */
     property Item footer
 

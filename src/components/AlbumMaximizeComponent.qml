@@ -9,132 +9,139 @@ import Qt.labs.qmlmodels
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.components as KirigamiComponents
 
-/**
- * @brief A popup that covers the entire window to show an album of 1 or more media items.
- *
- * The component supports a model with one or more media components (images or
- * videos) which can be scrolled through.
- *
- * Example:
- * @code
- * Components.AlbumMaximizeComponent {
- *  id: root
- *  property list<AlbumModelItem> model: [
- *      AlbumModelItem {
- *          type: AlbumModelItem.Image
- *          source: "path/to/source"
- *          tempSource: "path/to/tempSource"
- *          caption: "caption text"
- *      },
- *      AlbumModelItem {
- *          type: AlbumModelItem.Video
- *          source: "path/to/source"
- *          tempSource: "path/to/tempSource"
- *          caption: "caption text"
- *      }
- *  ]
- *  initialIndex: 0
- *  model: model
- * }
- * @endcode
- *
- * @note The model doesn't have to be create using AlbumModelItem, it just
- *       requires the same roles (i.e. type, source, tempSource (optional) and
- *       caption (optional)).
- *
- * @inherit AbstractMaximizeComponent
+/*!
+   \qmltype AlbumMaximizeComponent
+   \inqmlmodule org.kde.kirigamiaddons.labs.components
+   \brief A popup that covers the entire window to show an album of one or more media items.
+
+   The component supports a model with one or more media components (images or
+   videos) which can be scrolled through.
+
+   Example:
+   \qml
+   Components.AlbumMaximizeComponent {
+    id: root
+    property list<AlbumModelItem> model: [
+        AlbumModelItem {
+            type: AlbumModelItem.Image
+            source: "path/to/source"
+            tempSource: "path/to/tempSource"
+            caption: "caption text"
+        },
+        AlbumModelItem {
+            type: AlbumModelItem.Video
+            source: "path/to/source"
+            tempSource: "path/to/tempSource"
+            caption: "caption text"
+        }
+    ]
+    initialIndex: 0
+    model: model
+   }
+   \endqml
+
+   \note The model doesn't have to be create using AlbumModelItem, it just
+         requires the same roles (i.e. type, source, tempSource (optional) and
+         caption (optional)).
  */
 AbstractMaximizeComponent {
     id: root
 
-    /**
-     * @brief Model containing the media item to be shown.
-     *
-     * The model can be either a qml or a c++ model but each item needs to have the
-     * values defined in AlbumModelItem.qml (note a list of these is the easiest
-     * way to create a qml model).
+    /*!
+       \brief Model containing the media item to be shown.
+
+       The model can be either a qml or a c++ model but each item needs to have the
+       values defined in AlbumModelItem (note a list of these is the easiest
+       way to create a qml model).
      */
     property var model
 
-    /**
-     * @brief The index of the initial item that should be visible.
+    /*!
+       \brief The index of the initial item that should be visible.
+       \default -1
      */
     property int initialIndex: -1
 
-    /**
-     * @brief Whether the caption should be shown.
+    /*!
+       \brief Whether the caption should be shown.
+       \default true
      */
     property bool showCaption: true
 
-    /**
-     * @brief Whether the caption is hidden by the user.
+    /*!
+       \brief Whether the caption is hidden by the user.
+       \default false
      */
     property bool hideCaption: false
 
-    /**
-     * @brief Whether any video media should auto-load.
-     *
-     * @deprecated due to changes in the Video API this will be removed in KF6. It
-     *             currently does nothing but is kept to avoid breakage. The loss
-     *             of this API has been worked around in a way that doesn't break KF5.
+    /*!
+       \brief Whether any video media should auto-load.
+
+       \deprecated due to changes in the Video API this will be removed in KF6. It
+                   currently does nothing but is kept to avoid breakage. The loss
+                   of this API has been worked around in a way that doesn't break KF5.
+       \default true
      */
     property bool autoLoad: true
 
-    /**
-     * @brief Whether any video media should auto-play.
+    /*!
+       \brief Whether any video media should auto-play.
+       \default true
      */
     property bool autoPlay: true
 
-    /**
-     * @brief The default action triggered when the video download button is pressed.
-     *
-     * The download button is only available when the video source is empty (i.e. QUrl()
-     * or "")
-     *
-     * This exists as a property so that the default action can be overridden. The most
-     * common use case for this is where a custom URI scheme is used for example.
-     *
-     * @sa DownloadAction
+    /*!
+       \brief The default action triggered when the video download button is pressed.
+
+       The download button is only available when the video source is empty (i.e. QUrl()
+       or "")
+
+       This exists as a property so that the default action can be overridden. The most
+       common use case for this is where a custom URI scheme is used for example.
+
+       \sa DownloadAction
      */
     property DownloadAction downloadAction
 
-    /**
-     * @brief The default action triggered when the play button is pressed.
-     *
-     * This exists as a property so that the action can be overridden. For example
-     * if you want to be able to interface with a media manager.
+    /*!
+       \brief The default action triggered when the play button is pressed.
+
+       This exists as a property so that the action can be overridden. For example
+       if you want to be able to interface with a media manager.
      */
     property Kirigami.Action playAction
 
-    /**
-     * @brief The default action triggered when the pause button is pressed.
-     *
-     * This exists as a property so that the action can be overridden. For example
-     * if you want to be able to interface with a media manager.
+    /*!
+       \brief The default action triggered when the pause button is pressed.
+
+       This exists as a property so that the action can be overridden. For example
+       if you want to be able to interface with a media manager.
      */
     property Kirigami.Action pauseAction
 
-    /**
-     * @brief The current item in the view.
+    /*!
+       \qmlproperty Item currentItem
+       \brief The current Item in the view.
      */
     property alias currentItem: view.currentItem
 
-    /**
-     * @brief The current index in the view.
-     * @since 1.7.0
+    /*!
+       \qmlproperty int currentIndex
+       \brief The current index in the view.
+       \since 1.7.0
      */
     property alias currentIndex: view.currentIndex
 
-    /**
-     * @brief Emitted when the content image is right clicked.
+    /*!
+       \brief Emitted when the content image is right clicked.
      */
     signal itemRightClicked()
 
-    /**
-     * @brief Emitted when the save item button is pressed.
-     *
-     * The application needs use this signal to trigger the process to save the
-     * file.
+    /*!
+       \brief Emitted when the save item button is pressed.
+
+       The application needs use this signal to trigger the process to save the
+       file.
      */
     signal saveItem()
 

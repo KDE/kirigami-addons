@@ -8,15 +8,33 @@
 
 #include <memory>
 
+/*!
+ * \qmltype SoundsModel
+ * \inqmlmodule org.kde.kirigamiaddons.sounds
+ */
 class SoundsPickerModel : public QAbstractListModel
 {
     Q_OBJECT
     QML_NAMED_ELEMENT(SoundsModel)
 
+    /*!
+     * \qmlproperty bool SoundsModel::notification
+     */
     Q_PROPERTY(bool notification READ notification WRITE setNotification NOTIFY notificationChanged)
+    /*!
+     * \qmlproperty list<string> SoundsModel::defaultAudio
+     */
     Q_PROPERTY(QStringList defaultAudio READ defaultAudio WRITE setDefaultAudio NOTIFY defaultAudioChanged)
+    /*!
+     * \qmlproperty string SoundsModel::theme
+     */
     Q_PROPERTY(QString theme READ theme WRITE setTheme NOTIFY themeChanged)
 public:
+    /*!
+     * \qmlproperty enumeration SoundsModel::Roles
+     * \value NameRole
+     * \value UrlRole
+     */
     enum Roles {
         NameRole = Qt::UserRole,
         UrlRole
@@ -38,8 +56,17 @@ public:
     void setTheme(const QString &theme);
 
 Q_SIGNALS:
+    /*!
+     * \qmlsignal SoundsModel::notificationChanged
+     */
     void notificationChanged();
+    /*!
+     * \qmlsignal SoundsModel::defaultAudioChanged
+     */
     void defaultAudioChanged();
+    /*!
+     * \qmlsignal SoundsModel::themeChanged
+     */
     void themeChanged();
     
 private:

@@ -14,6 +14,8 @@ ecm_add_qml_module(formcardplugin
         org.kde.kirigamiaddons.delegates
 )
 
+ecm_generate_qdoc(formcardplugin formcard.qdocconf)
+
 ecm_target_qml_sources(formcardplugin SOURCES
     AbstractFormDelegate.qml
     FormArrow.qml

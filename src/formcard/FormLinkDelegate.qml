@@ -7,20 +7,21 @@ import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.components as Components
 import org.kde.kirigamiaddons.formcard as FormCard
 
-/**
- * @brief A form delegate that contains a URL.
- *
- * It will open the url by default, allow to copy it if triggered with the
- * secondary mouse button.
- *
- * @since 1.8.0
- * @inherit FormButtonDelegate
+/*!
+   \qmltype FormLinkDelegate
+   \inqmlmodule org.kde.kirigamiaddons.formcard
+   \brief A form delegate that contains a URL.
+
+   It will open the url by default, allow to copy it if triggered with the
+   secondary mouse button.
+
+   \since 1.8.0
  */
 FormCard.FormButtonDelegate {
     id: root
 
-    /**
-     * This property holds the url used by the form link delegate.
+    /*!
+       This property holds the url used by the form link delegate.
      */
     property string url
 
