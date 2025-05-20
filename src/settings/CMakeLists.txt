@@ -10,7 +10,9 @@ ecm_add_qml_module(settingsplugin
     DEPENDENCIES "org.kde.kirigamiaddons.settings.private"
 )
 
-ecm_generate_qdoc(settingsplugin settings.qdocconf)
+if (TARGET Qt6::qdoc AND TARGET Qt6::qhelpgenerator)
+    ecm_generate_qdoc(settingsplugin settings.qdocconf)
+endif()
 
 ecm_target_qml_sources(settingsplugin SOURCES
     SettingAction.qml # deprecated

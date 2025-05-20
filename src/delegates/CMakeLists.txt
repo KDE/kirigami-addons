@@ -11,7 +11,9 @@ ecm_add_qml_module(delegatesplugin
         org.kde.kitemmodels
 )
 
-ecm_generate_qdoc(delegatesplugin delegates.qdocconf)
+if (TARGET Qt6::qdoc AND TARGET Qt6::qhelpgenerator)
+    ecm_generate_qdoc(delegatesplugin delegates.qdocconf)
+endif()
 
 ecm_target_qml_sources(delegatesplugin SOURCES
     RoundedItemDelegate.qml
