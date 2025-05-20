@@ -55,9 +55,6 @@ endif()
 
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF6KirigamiAddons")
 
-option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)" OFF)
-add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)")
-
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KFKirigamiAddonsConfig.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/KF6KirigamiAddonsConfig.cmake"
