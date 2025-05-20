@@ -35,8 +35,8 @@ include(KDEClangFormat)
 include(ECMGenerateQDoc)
 
 find_package(Qt6 ${QT_REQUIRED_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick QuickControls2)
-find_package(Qt6Tools CONFIG REQUIRED)
-find_package(Qt6 COMPONENTS ToolsTools CONFIG REQUIRED)
+find_package(Qt6Tools CONFIG)
+find_package(Qt6 COMPONENTS ToolsTools CONFIG)
 
 find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS Kirigami I18n Config CoreAddons GuiAddons)
 if (BUILD_TESTING)
