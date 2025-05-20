@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-13 00:40+0000\n"
+"POT-Creation-Date: 2025-05-20 00:41+0000\n"
 "PO-Revision-Date: 2024-12-13 10:02+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -27,106 +27,106 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "gudmundure@gmail.com"
 
-#: components/AbstractMaximizeComponent.qml:130
+#: components/AbstractMaximizeComponent.qml:132
 #, kde-format
 msgid "Close"
 msgstr "Loka"
 
-#: components/AlbumMaximizeComponent.qml:143
+#: components/AlbumMaximizeComponent.qml:150
 #, kde-format
 msgid "Zoom in"
 msgstr "Auka aðdrátt"
 
-#: components/AlbumMaximizeComponent.qml:148
+#: components/AlbumMaximizeComponent.qml:155
 #, kde-format
 msgid "Zoom out"
 msgstr "Minnka aðdrátt"
 
-#: components/AlbumMaximizeComponent.qml:154
+#: components/AlbumMaximizeComponent.qml:161
 #, kde-format
 msgid "Rotate left"
 msgstr "Snúa til vinstri"
 
-#: components/AlbumMaximizeComponent.qml:160
+#: components/AlbumMaximizeComponent.qml:167
 #, kde-format
 msgid "Rotate right"
 msgstr "Snúa til hægri"
 
-#: components/AlbumMaximizeComponent.qml:165
+#: components/AlbumMaximizeComponent.qml:172
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
 msgstr "Sýna skýringartexta"
 
-#: components/AlbumMaximizeComponent.qml:165
+#: components/AlbumMaximizeComponent.qml:172
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
 msgstr "Fela skýringartexta"
 
-#: components/AlbumMaximizeComponent.qml:171
+#: components/AlbumMaximizeComponent.qml:178
 #, kde-format
 msgid "Save as"
 msgstr "Vista sem"
 
-#: components/AlbumMaximizeComponent.qml:249
+#: components/AlbumMaximizeComponent.qml:256
 #, kde-format
 msgid "Previous image"
 msgstr "Fyrri mynd"
 
-#: components/AlbumMaximizeComponent.qml:269
+#: components/AlbumMaximizeComponent.qml:276
 #, kde-format
 msgid "Next image"
 msgstr "Næsta mynd"
 
-#: components/Banner.qml:187 formcard/AboutPage.qml:500
+#: components/Banner.qml:185 formcard/AboutPage.qml:502
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
 msgstr "Loka"
 
-#: components/ConvergentContextMenu.qml:249
+#: components/ConvergentContextMenu.qml:274
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr ""
 
-#: components/DownloadAction.qml:37
+#: components/DownloadAction.qml:40
 #, kde-format
 msgid "Download"
 msgstr "Sækja"
 
-#: components/MessageDialog.qml:87
+#: components/MessageDialog.qml:98
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
 msgstr "Tókst"
 
-#: components/MessageDialog.qml:89 components/MessageDialog.qml:95
+#: components/MessageDialog.qml:100 components/MessageDialog.qml:106
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
 msgstr "Viðvörun"
 
-#: components/MessageDialog.qml:91
+#: components/MessageDialog.qml:102
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
 msgstr "Villa"
 
-#: components/MessageDialog.qml:93
+#: components/MessageDialog.qml:104
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
 msgstr "Upplýsingar"
 
-#: components/MessageDialog.qml:231
+#: components/MessageDialog.qml:242
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
 msgstr "Ekki sýna aftur"
 
-#: components/VideoMaximizeDelegate.qml:267
+#: components/VideoMaximizeDelegate.qml:281
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
@@ -271,7 +271,7 @@ msgstr ""
 "markmiði að búa til besta frjálsa hugbúnaðinn í heiminum. Öll geta <a href="
 "\"\">tekið þátt og lagt sitt af mörkum í KDE, líka þú."
 
-#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:223
+#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:225
 #, kde-format
 msgid "Homepage"
 msgstr "Heimasíða"
@@ -329,7 +329,7 @@ msgstr ""
 "tungumál, hannað grafík, þemu, hljóð og hjálpað til við að bæta "
 "handbækurnar. Það sem þú vilt!"
 
-#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:251
+#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:253
 #, kde-format
 msgid "Get Involved"
 msgstr "Taktu þátt"
@@ -383,88 +383,88 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "KDE e.V"
 
-#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:237
+#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:239
 #, kde-format
 msgid "Donate"
 msgstr "Styrkja"
 
-#: formcard/AboutPage.qml:89
+#: formcard/AboutPage.qml:91
 #: statefulapplication/abstractkirigamiapplication.cpp:167
 #, kde-format
 msgid "About %1"
 msgstr "Um %1"
 
-#: formcard/AboutPage.qml:134
+#: formcard/AboutPage.qml:136
 #, kde-format
 msgid "Copyright"
 msgstr "Höfundarréttur"
 
-#: formcard/AboutPage.qml:142
+#: formcard/AboutPage.qml:144
 #, kde-format
 msgid "Description"
 msgstr "Lýsing"
 
-#: formcard/AboutPage.qml:155
+#: formcard/AboutPage.qml:157
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "Notkunarleyfi"
 msgstr[1] "Notkunarleyfi"
 
-#: formcard/AboutPage.qml:277
+#: formcard/AboutPage.qml:279
 #, kde-format
 msgid "Report a Bug"
 msgstr "Senda villutilkynningu"
 
-#: formcard/AboutPage.qml:283
+#: formcard/AboutPage.qml:285
 #, kde-format
 msgid "Libraries in use"
 msgstr "Hugbúnaðarsöfn í notkun"
 
-#: formcard/AboutPage.qml:286
+#: formcard/AboutPage.qml:288
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "Afrita á klippispjald"
 
-#: formcard/AboutPage.qml:290
+#: formcard/AboutPage.qml:292
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "Kerfisupplýsingar afritaðar á klippispjald."
 
-#: formcard/AboutPage.qml:303
+#: formcard/AboutPage.qml:305
 #, kde-format
 msgid "Authors"
 msgstr "Höfundar"
 
-#: formcard/AboutPage.qml:318
+#: formcard/AboutPage.qml:320
 #, kde-format
 msgid "Credits"
 msgstr "Þátttakendur"
 
-#: formcard/AboutPage.qml:333
+#: formcard/AboutPage.qml:335
 #, kde-format
 msgid "Translators"
 msgstr "Þýðendur"
 
-#: formcard/AboutPage.qml:402
+#: formcard/AboutPage.qml:404
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Heimsækja síðu %1 á KDE Store"
 
-#: formcard/AboutPage.qml:411
+#: formcard/AboutPage.qml:413
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Senda tölvupóst á %1"
 
-#: formcard/android/FormColorDelegate.qml:42 formcard/FormColorDelegate.qml:42
+#: formcard/android/FormColorDelegate.qml:42 formcard/FormColorDelegate.qml:52
 #, kde-format
 msgctxt "@action:button"
 msgid "Color"
 msgstr "Litur"
 
-#: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:43
+#: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:53
 #, kde-format
 msgctxt "Accessible description"
 msgid "Current color \"%1\""
@@ -476,25 +476,25 @@ msgctxt "@action:button"
 msgid "Icon"
 msgstr ""
 
-#: formcard/FormDateTimeDelegate.qml:196
+#: formcard/FormDateTimeDelegate.qml:202
 #, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
 msgid "Today"
 msgstr "Í dag"
 
-#: formcard/FormDateTimeDelegate.qml:223 formcard/FormDateTimeDelegate.qml:360
+#: formcard/FormDateTimeDelegate.qml:229 formcard/FormDateTimeDelegate.qml:366
 #, kde-format
 msgctxt "Date is not set"
 msgid "Not set"
 msgstr "Ekki stillt"
 
-#: formcard/FormLinkDelegate.qml:51
+#: formcard/FormLinkDelegate.qml:52
 #, kde-format
 msgctxt "@action:inmnenu"
 msgid "Open Link"
 msgstr ""
 
-#: formcard/FormLinkDelegate.qml:57
+#: formcard/FormLinkDelegate.qml:58
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Copy to Clipboard"
@@ -502,7 +502,7 @@ msgctxt "@action:inmnenu"
 msgid "Copy Link to Clipboard"
 msgstr "Afrita á klippispjald"
 
-#: formcard/FormLinkDelegate.qml:63
+#: formcard/FormLinkDelegate.qml:64
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "System information copied to clipboard."
@@ -510,26 +510,26 @@ msgctxt "@info:status"
 msgid "Url copied to clipboard."
 msgstr "Kerfisupplýsingar afritaðar á klippispjald."
 
-#: formcard/FormPasswordFieldDelegate.qml:238
-#: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:260
+#: formcard/FormPasswordFieldDelegate.qml:249
+#: formcard/FormTextAreaDelegate.qml:174 formcard/FormTextFieldDelegate.qml:271
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
 msgstr "%1/%2"
 
-#: settings/CategorizedSettings.qml:45 settings/ConfigurationView.qml:81
+#: settings/CategorizedSettings.qml:46 settings/ConfigurationView.qml:83
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "Stillingar"
 
-#: settings/CategorizedSettings.qml:45
+#: settings/CategorizedSettings.qml:46
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings — %1"
 msgstr "Stillingar — %1"
 
-#: settings/CategorizedSettings.qml:99
+#: settings/CategorizedSettings.qml:100
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Go back"
@@ -639,7 +639,7 @@ msgctxt "@action:button"
 msgid "Delete word"
 msgstr "Eyða orði"
 
-#: settings/ShortcutsConfigurationModule.qml:23
+#: settings/ShortcutsConfigurationModule.qml:26
 #, fuzzy, kde-format
 #| msgctxt "@title:dialog"
 #| msgid "Reserved Shortcut"
@@ -647,7 +647,7 @@ msgctxt "@action:button"
 msgid "Keyboard Shortcuts"
 msgstr "Frátekinn flýtilykill"
 
-#: settings/SpellcheckingConfigurationModule.qml:14
+#: settings/SpellcheckingConfigurationModule.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Spell Checking"
@@ -762,7 +762,7 @@ msgid "No results found"
 msgstr "Engar niðurstöður fundust"
 
 #: statefulapplication/private/ShortcutsEditor.qml:19
-#: statefulapplication/StatefulWindow.qml:90
+#: statefulapplication/StatefulWindow.qml:99
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcuts"
@@ -805,13 +805,13 @@ msgctxt "List separator"
 msgid ", "
 msgstr ", "
 
-#: statefulapplication/StatefulWindow.qml:100
+#: statefulapplication/StatefulWindow.qml:109
 #, kde-format
 msgctxt "@title:window"
 msgid "About %1"
 msgstr "Um %1"
 
-#: statefulapplication/StatefulWindow.qml:113
+#: statefulapplication/StatefulWindow.qml:122
 #, kde-format
 msgctxt "@title:window"
 msgid "About KDE"

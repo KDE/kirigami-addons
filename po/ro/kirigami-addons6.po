@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-13 00:40+0000\n"
+"POT-Creation-Date: 2025-05-20 00:41+0000\n"
 "PO-Revision-Date: 2024-06-09 13:44+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -28,106 +28,106 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 
-#: components/AbstractMaximizeComponent.qml:130
+#: components/AbstractMaximizeComponent.qml:132
 #, kde-format
 msgid "Close"
 msgstr "Închide"
 
-#: components/AlbumMaximizeComponent.qml:143
+#: components/AlbumMaximizeComponent.qml:150
 #, kde-format
 msgid "Zoom in"
 msgstr "Apropie"
 
-#: components/AlbumMaximizeComponent.qml:148
+#: components/AlbumMaximizeComponent.qml:155
 #, kde-format
 msgid "Zoom out"
 msgstr "Îndepărtează"
 
-#: components/AlbumMaximizeComponent.qml:154
+#: components/AlbumMaximizeComponent.qml:161
 #, kde-format
 msgid "Rotate left"
 msgstr "Rotește spre stânga"
 
-#: components/AlbumMaximizeComponent.qml:160
+#: components/AlbumMaximizeComponent.qml:167
 #, kde-format
 msgid "Rotate right"
 msgstr "Rotește spre dreapta"
 
-#: components/AlbumMaximizeComponent.qml:165
+#: components/AlbumMaximizeComponent.qml:172
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
 msgstr "Arată titlul"
 
-#: components/AlbumMaximizeComponent.qml:165
+#: components/AlbumMaximizeComponent.qml:172
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
 msgstr "Ascunde titlul"
 
-#: components/AlbumMaximizeComponent.qml:171
+#: components/AlbumMaximizeComponent.qml:178
 #, kde-format
 msgid "Save as"
 msgstr "Salvează ca"
 
-#: components/AlbumMaximizeComponent.qml:249
+#: components/AlbumMaximizeComponent.qml:256
 #, kde-format
 msgid "Previous image"
 msgstr "Imaginea precedentă"
 
-#: components/AlbumMaximizeComponent.qml:269
+#: components/AlbumMaximizeComponent.qml:276
 #, kde-format
 msgid "Next image"
 msgstr "Imaginea următoare"
 
-#: components/Banner.qml:187 formcard/AboutPage.qml:500
+#: components/Banner.qml:185 formcard/AboutPage.qml:502
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
 msgstr "Închide"
 
-#: components/ConvergentContextMenu.qml:249
+#: components/ConvergentContextMenu.qml:274
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr ""
 
-#: components/DownloadAction.qml:37
+#: components/DownloadAction.qml:40
 #, kde-format
 msgid "Download"
 msgstr "Descarcă"
 
-#: components/MessageDialog.qml:87
+#: components/MessageDialog.qml:98
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
 msgstr "Succes"
 
-#: components/MessageDialog.qml:89 components/MessageDialog.qml:95
+#: components/MessageDialog.qml:100 components/MessageDialog.qml:106
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
 msgstr "Avertisment"
 
-#: components/MessageDialog.qml:91
+#: components/MessageDialog.qml:102
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
 msgstr "Eroare"
 
-#: components/MessageDialog.qml:93
+#: components/MessageDialog.qml:104
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
 msgstr "Informație"
 
-#: components/MessageDialog.qml:231
+#: components/MessageDialog.qml:242
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
 msgstr "Nu mai arăta"
 
-#: components/VideoMaximizeDelegate.qml:267
+#: components/VideoMaximizeDelegate.qml:281
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
@@ -272,7 +272,7 @@ msgstr ""
 "scopul comun de a construi cele mai bune programe libere din lume. Toți sunt "
 "bineveniți să se alăture și să contribuie la KDE, inclusiv dumneavoastră."
 
-#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:223
+#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:225
 #, kde-format
 msgid "Homepage"
 msgstr "Pagină web"
@@ -330,7 +330,7 @@ msgstr ""
 "programelor. Puteți să creați imagini, tematici, sunete și să îmbunătățiți "
 "documentația. Dumneavoastră decideți!"
 
-#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:251
+#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:253
 #, kde-format
 msgid "Get Involved"
 msgstr "Implică-te"
@@ -387,30 +387,30 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "KDE e.V"
 
-#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:237
+#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:239
 #, kde-format
 msgid "Donate"
 msgstr "Donează"
 
-#: formcard/AboutPage.qml:89
+#: formcard/AboutPage.qml:91
 #: statefulapplication/abstractkirigamiapplication.cpp:167
 #, kde-format
 msgid "About %1"
 msgstr "Despre %1"
 
-#: formcard/AboutPage.qml:134
+#: formcard/AboutPage.qml:136
 #, kde-format
 msgid "Copyright"
 msgstr "Drept de autor"
 
-#: formcard/AboutPage.qml:142
+#: formcard/AboutPage.qml:144
 #, fuzzy, kde-format
 #| msgctxt "@action:intoolbar"
 #| msgid "Hide caption"
 msgid "Description"
 msgstr "Ascunde titlul"
 
-#: formcard/AboutPage.qml:155
+#: formcard/AboutPage.qml:157
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
@@ -418,60 +418,60 @@ msgstr[0] "Licență"
 msgstr[1] "Licențe"
 msgstr[2] "Licențe"
 
-#: formcard/AboutPage.qml:277
+#: formcard/AboutPage.qml:279
 #, kde-format
 msgid "Report a Bug"
 msgstr "Raportează defect"
 
-#: formcard/AboutPage.qml:283
+#: formcard/AboutPage.qml:285
 #, kde-format
 msgid "Libraries in use"
 msgstr "Biblioteci folosite"
 
-#: formcard/AboutPage.qml:286
+#: formcard/AboutPage.qml:288
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: formcard/AboutPage.qml:290
+#: formcard/AboutPage.qml:292
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr ""
 
-#: formcard/AboutPage.qml:303
+#: formcard/AboutPage.qml:305
 #, kde-format
 msgid "Authors"
 msgstr "Autori"
 
-#: formcard/AboutPage.qml:318
+#: formcard/AboutPage.qml:320
 #, kde-format
 msgid "Credits"
 msgstr "Mulțumiri"
 
-#: formcard/AboutPage.qml:333
+#: formcard/AboutPage.qml:335
 #, kde-format
 msgid "Translators"
 msgstr "Traducători"
 
-#: formcard/AboutPage.qml:402
+#: formcard/AboutPage.qml:404
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Vizitează pagina %1 din Magazinul KDE"
 
-#: formcard/AboutPage.qml:411
+#: formcard/AboutPage.qml:413
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Trimite scrisoare către %1"
 
-#: formcard/android/FormColorDelegate.qml:42 formcard/FormColorDelegate.qml:42
+#: formcard/android/FormColorDelegate.qml:42 formcard/FormColorDelegate.qml:52
 #, kde-format
 msgctxt "@action:button"
 msgid "Color"
 msgstr "Culoare"
 
-#: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:43
+#: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:53
 #, kde-format
 msgctxt "Accessible description"
 msgid "Current color \"%1\""
@@ -483,56 +483,56 @@ msgctxt "@action:button"
 msgid "Icon"
 msgstr ""
 
-#: formcard/FormDateTimeDelegate.qml:196
+#: formcard/FormDateTimeDelegate.qml:202
 #, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
 msgid "Today"
 msgstr "Azi"
 
-#: formcard/FormDateTimeDelegate.qml:223 formcard/FormDateTimeDelegate.qml:360
+#: formcard/FormDateTimeDelegate.qml:229 formcard/FormDateTimeDelegate.qml:366
 #, kde-format
 msgctxt "Date is not set"
 msgid "Not set"
 msgstr "Nu e stabilită"
 
-#: formcard/FormLinkDelegate.qml:51
+#: formcard/FormLinkDelegate.qml:52
 #, kde-format
 msgctxt "@action:inmnenu"
 msgid "Open Link"
 msgstr ""
 
-#: formcard/FormLinkDelegate.qml:57
+#: formcard/FormLinkDelegate.qml:58
 #, kde-format
 msgctxt "@action:inmnenu"
 msgid "Copy Link to Clipboard"
 msgstr ""
 
-#: formcard/FormLinkDelegate.qml:63
+#: formcard/FormLinkDelegate.qml:64
 #, kde-format
 msgctxt "@info:status"
 msgid "Url copied to clipboard."
 msgstr ""
 
-#: formcard/FormPasswordFieldDelegate.qml:238
-#: formcard/FormTextAreaDelegate.qml:168 formcard/FormTextFieldDelegate.qml:260
+#: formcard/FormPasswordFieldDelegate.qml:249
+#: formcard/FormTextAreaDelegate.qml:174 formcard/FormTextFieldDelegate.qml:271
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
 msgstr "%1/%2"
 
-#: settings/CategorizedSettings.qml:45 settings/ConfigurationView.qml:81
+#: settings/CategorizedSettings.qml:46 settings/ConfigurationView.qml:83
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "Configurări"
 
-#: settings/CategorizedSettings.qml:45
+#: settings/CategorizedSettings.qml:46
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings — %1"
 msgstr "Configurări — %1"
 
-#: settings/CategorizedSettings.qml:99
+#: settings/CategorizedSettings.qml:100
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Go back"
@@ -644,13 +644,13 @@ msgctxt "@action:button"
 msgid "Delete word"
 msgstr ""
 
-#: settings/ShortcutsConfigurationModule.qml:23
+#: settings/ShortcutsConfigurationModule.qml:26
 #, kde-format
 msgctxt "@action:button"
 msgid "Keyboard Shortcuts"
 msgstr ""
 
-#: settings/SpellcheckingConfigurationModule.qml:14
+#: settings/SpellcheckingConfigurationModule.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Spell Checking"
@@ -756,7 +756,7 @@ msgid "No results found"
 msgstr ""
 
 #: statefulapplication/private/ShortcutsEditor.qml:19
-#: statefulapplication/StatefulWindow.qml:90
+#: statefulapplication/StatefulWindow.qml:99
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcuts"
@@ -799,14 +799,14 @@ msgctxt "List separator"
 msgid ", "
 msgstr ""
 
-#: statefulapplication/StatefulWindow.qml:100
+#: statefulapplication/StatefulWindow.qml:109
 #, fuzzy, kde-format
 #| msgid "About %1"
 msgctxt "@title:window"
 msgid "About %1"
 msgstr "Despre %1"
 
-#: statefulapplication/StatefulWindow.qml:113
+#: statefulapplication/StatefulWindow.qml:122
 #, fuzzy, kde-format
 #| msgid "About KDE"
 msgctxt "@title:window"
