@@ -12,3 +12,73 @@ imagedirs = . ../docs/pics
 outputformats = HTML
 
 depends += kde kirigami qtcore qtquick qtquickcontrols qtgui
+
+qhp.projects            = KirigamiAddons
+
+qhp.KirigamiAddons.file          = kirigamiaddons.qhp
+qhp.KirigamiAddons.namespace     = org.kde.kirigamiaddons.$QT_VERSION_TAG
+qhp.KirigamiAddons.virtualFolder = kirigamiaddons
+qhp.KirigamiAddons.indexTitle    = Kirigami Addons
+qhp.KirigamiAddons.indexRoot     =
+
+qhp.KirigamiAddons.subprojects = components componentslabs dateandtime delegates formcard settings sounds statefuleapplication statefuleapplicationlabs tableview treeview
+
+qhp.KirigamiAddons.subprojects.components.title = Kirigami Addons Components QML Types
+qhp.KirigamiAddons.subprojects.components.indexTitle = Kirigami Addons Components QML Types
+qhp.KirigamiAddons.subprojects.components.selectors = qmlmodule:org.kde.kirigamiaddons.components
+qhp.KirigamiAddons.subprojects.components.sortPages = true
+
+qhp.KirigamiAddons.subprojects.componentslabs.title = Kirigami Addons Components (Labs) QML Types
+qhp.KirigamiAddons.subprojects.componentslabs.indexTitle = Kirigami Addons Components (Labs) QML Types
+qhp.KirigamiAddons.subprojects.componentslabs.selectors = qmlmodule:org.kde.kirigamiaddons.labs.components
+qhp.KirigamiAddons.subprojects.componentslabs.sortPages = true
+
+qhp.KirigamiAddons.subprojects.dateandtime.title = Kirigami Addons Date And Time QML Types
+qhp.KirigamiAddons.subprojects.dateandtime.indexTitle = Kirigami Addons Date And Time QML Types
+qhp.KirigamiAddons.subprojects.dateandtime.selectors = qmlmodule:org.kde.kirigamiaddons.dateandtime
+qhp.KirigamiAddons.subprojects.dateandtime.sortPages = true
+
+qhp.KirigamiAddons.subprojects.delegates.title = Kirigami Addons Delegates QML Types
+qhp.KirigamiAddons.subprojects.delegates.indexTitle = Kirigami Addons Delegates QML Types
+qhp.KirigamiAddons.subprojects.delegates.selectors = qmlmodule:org.kde.kirigamiaddons.delegates
+qhp.KirigamiAddons.subprojects.delegates.sortPages = true
+
+qhp.KirigamiAddons.subprojects.formcard.title = Kirigami Addons FormCard QML Types
+qhp.KirigamiAddons.subprojects.formcard.indexTitle = Kirigami Addons FormCard QML Types
+qhp.KirigamiAddons.subprojects.formcard.selectors = qmlmodule:org.kde.kirigamiaddons.formcard
+qhp.KirigamiAddons.subprojects.formcard.sortPages = true
+
+qhp.KirigamiAddons.subprojects.settings.title = Kirigami Addons Settings QML Types
+qhp.KirigamiAddons.subprojects.settings.indexTitle = Kirigami Addons Settings QML Types
+qhp.KirigamiAddons.subprojects.settings.selectors = qmlmodule:org.kde.kirigamiaddons.settings
+qhp.KirigamiAddons.subprojects.settings.sortPages = true
+
+qhp.KirigamiAddons.subprojects.sounds.title = Kirigami Addons Sounds QML Types
+qhp.KirigamiAddons.subprojects.sounds.indexTitle = Kirigami Addons Sounds QML Types
+qhp.KirigamiAddons.subprojects.sounds.selectors = qmlmodule:org.kde.kirigamiaddons.sounds
+qhp.KirigamiAddons.subprojects.sounds.sortPages = true
+
+qhp.KirigamiAddons.subprojects.statefuleapp.title = Kirigami Addons Stateful Application QML Types
+qhp.KirigamiAddons.subprojects.statefuleapp.indexTitle = Kirigami Addons Stateful Application QML Types
+qhp.KirigamiAddons.subprojects.statefuleapp.selectors = qmlmodule:org.kde.kirigamiaddons.statefuleapp
+qhp.KirigamiAddons.subprojects.statefuleapp.sortPages = true
+
+qhp.KirigamiAddons.subprojects.statefuleapplabs.title = Kirigami Addons Stateful Application (Labs) QML Types
+qhp.KirigamiAddons.subprojects.statefuleapplabs.indexTitle = Kirigami Addons Stateful Application (Labs) QML Types
+qhp.KirigamiAddons.subprojects.statefuleapplabs.selectors = qmlmodule:org.kde.kirigamiaddons.statefuleapp.labs
+qhp.KirigamiAddons.subprojects.statefuleapplabs.sortPages = true
+
+qhp.KirigamiAddons.subprojects.statefuleapplabs.title = Kirigami Addons Stateful Application (Labs) QML Types
+qhp.KirigamiAddons.subprojects.statefuleapplabs.indexTitle = Kirigami Addons Stateful Application (Labs) QML Types
+qhp.KirigamiAddons.subprojects.statefuleapplabs.selectors = qmlmodule:org.kde.kirigamiaddons.statefuleapp.labs
+qhp.KirigamiAddons.subprojects.statefuleapplabs.sortPages = true
+
+qhp.KirigamiAddons.subprojects.treeview.title = Kirigami Addons TreeView QML Types
+qhp.KirigamiAddons.subprojects.treeview.indexTitle = Kirigami Addons TreeView QML Types
+qhp.KirigamiAddons.subprojects.treeview.selectors = qmlmodule:org.kde.kirigamiaddons.treeview
+qhp.KirigamiAddons.subprojects.treeview.sortPages = true
+
+qhp.KirigamiAddons.subprojects.tableview.title = Kirigami Addons TableView QML Types
+qhp.KirigamiAddons.subprojects.tableview.indexTitle = Kirigami Addons TableView QML Types
+qhp.KirigamiAddons.subprojects.tableview.selectors = qmlmodule:org.kde.kirigamiaddons.tableview
+qhp.KirigamiAddons.subprojects.tableview.sortPages = true
