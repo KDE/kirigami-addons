@@ -12,3 +12,5 @@ imagedirs  += ../../docs/pics
 outputformats = HTML
 
 depends += kde kirigami kirigamiaddonscomponents kcoreaddons kirigamiplatform qtcore qtquick qtquickcontrols qtgui
+
+tagfile = kirigamiaddonsformcard.tags

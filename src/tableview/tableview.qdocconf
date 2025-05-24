@@ -11,3 +11,5 @@ sourcedirs += .
 outputformats = HTML
 
 depends += kde kirigami qtcore qtquick qtquickcontrols qtgui
+
+tagfile = kirigamiaddonstableview.tags

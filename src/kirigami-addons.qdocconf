@@ -82,3 +82,5 @@ qhp.KirigamiAddons.subprojects.tableview.title = Kirigami Addons TableView QML T
 qhp.KirigamiAddons.subprojects.tableview.indexTitle = Kirigami Addons TableView QML Types
 qhp.KirigamiAddons.subprojects.tableview.selectors = qmlmodule:org.kde.kirigamiaddons.tableview
 qhp.KirigamiAddons.subprojects.tableview.sortPages = true
+
+tagfile = kirigamiaddons.tags

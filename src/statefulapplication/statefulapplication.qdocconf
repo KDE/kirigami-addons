@@ -11,3 +11,5 @@ sourcedirs += .
 outputformats = HTML
 
 depends += kde kirigami kconfigqml kconfiggui qtcore qtquick qtquickcontrols qtgui
+
+tagfile = kirigamiaddonsstatefulapplication.tags

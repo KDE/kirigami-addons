@@ -11,3 +11,5 @@ sourcedirs += .
 outputformats = HTML
 
 depends += kde kirigami kitemmodels qtcore qtquick qtquickcontrols qtgui
+
+tagfile = kirigamiaddonstreeview.tags
