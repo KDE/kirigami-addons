@@ -677,7 +677,7 @@ msgid ""
 msgstr ""
 "La tecla «F12» està reservada a Windows, no es pot utilitzar com a drecera "
 "global.\n"
-"Escolliu-ne una altra."
+"Trieu-ne una altra."
 
 #: statefulapplication/private/keysequencehelper.cpp:143
 #, kde-format
@@ -744,7 +744,7 @@ msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
-"Cliqueu en el botó, llavors introduïu la drecera com ho faríeu en el "
+"Cliqueu damunt del botó, llavors introduïu la drecera com ho faríeu en el "
 "programa.\n"
 "Exemple per a «Ctrl+A»: manteniu premuda la tecla «Ctrl» mentre premeu la "
 "«A»."
