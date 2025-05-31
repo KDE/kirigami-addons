@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-20 00:41+0000\n"
-"PO-Revision-Date: 2024-11-06 17:19+0200\n"
+"PO-Revision-Date: 2025-05-29 14:59+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -89,7 +89,7 @@ msgstr "Sulje"
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "Siirry takaisin"
 
 #: components/DownloadAction.qml:40
 #, kde-format
@@ -197,7 +197,7 @@ msgstr "minuuttia"
 #, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: formcard/aboutcomponent.cpp:29
 #, kde-format
@@ -208,7 +208,7 @@ msgstr "KDE Frameworks"
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
-msgstr ""
+msgstr "Kokoelma KDE-yhteisön Qt:n laventamiseksi kehittämiä kirjastoja."
 
 #: formcard/aboutcomponent.cpp:35
 #, kde-format
@@ -219,7 +219,7 @@ msgstr "Qt"
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr ""
+msgstr "Monialustainen sovelluskehityskehys."
 
 #: formcard/aboutcomponent.cpp:37
 #, kde-format
@@ -230,7 +230,7 @@ msgstr "Käytössä %1, koostettu kirjastolla %2"
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr ""
+msgstr "Alla oleva alusta."
 
 #: formcard/AboutKDEPage.qml:24
 #: statefulapplication/abstractkirigamiapplication.cpp:174
@@ -425,13 +425,13 @@ msgstr "Käytetyt kirjastot"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Kopioi leikepöydälle"
 
 #: formcard/AboutPage.qml:292
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
-msgstr ""
+msgstr "Järjestelmätiedot kopioitiin leikepöydälle."
 
 #: formcard/AboutPage.qml:305
 #, kde-format
@@ -474,7 +474,7 @@ msgstr "Nykyinen väri ”%1”"
 #, kde-format
 msgctxt "@action:button"
 msgid "Icon"
-msgstr ""
+msgstr "Kuvake"
 
 #: formcard/FormDateTimeDelegate.qml:202
 #, kde-format
@@ -492,19 +492,19 @@ msgstr "Ei asetettu"
 #, kde-format
 msgctxt "@action:inmnenu"
 msgid "Open Link"
-msgstr ""
+msgstr "Avaa linkki"
 
 #: formcard/FormLinkDelegate.qml:58
 #, kde-format
 msgctxt "@action:inmnenu"
 msgid "Copy Link to Clipboard"
-msgstr ""
+msgstr "Kopioi linkki leikepöydälle"
 
 #: formcard/FormLinkDelegate.qml:64
 #, kde-format
 msgctxt "@info:status"
 msgid "Url copied to clipboard."
-msgstr ""
+msgstr "Verkko-osoite kopioitiin leikepöydälle."
 
 #: formcard/FormPasswordFieldDelegate.qml:249
 #: formcard/FormTextAreaDelegate.qml:174 formcard/FormTextFieldDelegate.qml:271
