@@ -25,6 +25,8 @@ FormCard.FormButtonDelegate {
      */
     property string url
 
+    Accessible.role: Accessible.Link
+
     trailingLogo.source: 'open-link-symbolic'
     visible: url.length > 0
 
