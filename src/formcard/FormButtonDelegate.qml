@@ -132,4 +132,5 @@ AbstractFormDelegate {
     }
 
     Accessible.onPressAction: action ? action.trigger() : root.clicked()
+    Accessible.role: Accessible.Button
 }
