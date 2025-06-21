@@ -144,6 +144,8 @@ T.Dialog {
                     root.open();
                 }
             }
+        } else {
+            root.open();
         }
     }
 
