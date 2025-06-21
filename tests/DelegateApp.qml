@@ -201,6 +201,61 @@ Kirigami.ApplicationWindow {
     }
 
     Component {
+        id: checkDelegateComponent
+
+        Kirigami.ScrollablePage {
+            title: "CheckDelegate"
+
+            ListView {
+                id: listView
+
+                model: 50
+                delegate: Delegates.CheckDelegate {
+                    id: delegate
+
+                    required property int index
+                    required property int modelData
+
+                    text: "Item " + modelData
+                    onClicked: {
+                        listView.currentIndex = index;
+                    }
+                }
+            }
+        }
+    }
+
+    Component {
+        id: checkDelegateSubtitleComponent
+
+        Kirigami.ScrollablePage {
+            title: "CheckDelegate with subtitle"
+
+            ListView {
+                id: listView
+
+                model: 50
+                delegate: Delegates.CheckDelegate {
+                    id: delegate
+
+                    required property int index
+                    required property int modelData
+
+                    text: "Item " + modelData
+                    onToggled: {
+                        console.log("Item was toggled", modelData, checked)
+                    }
+
+                    contentItem: Delegates.SubtitleContentItem {
+                        itemDelegate: delegate
+                        subtitle: "Subtitle " + delegate.modelData
+                    }
+                }
+            }
+        }
+    }
+
+    Component {
         id: welcomePageComponent
 
         Kirigami.ScrollablePage {
@@ -244,6 +299,18 @@ Kirigami.ApplicationWindow {
                             title: "ReadIndicatorItemDelegate with subtitle"
                             action: Kirigami.Action {
                                 onTriggered: applicationWindow().pageStack.push(subtitleIndicatorItemDelegatePageComponent);
+                            }
+                        },
+                        MobileForm.FormGridContainer.InfoCard {
+                            title: "CheckDelegate"
+                            action: Kirigami.Action {
+                                onTriggered: applicationWindow().pageStack.push(checkDelegateComponent);
+                            }
+                        },
+                        MobileForm.FormGridContainer.InfoCard {
+                            title: "CheckDelegate with subtitle"
+                            action: Kirigami.Action {
+                                onTriggered: applicationWindow().pageStack.push(checkDelegateSubtitleComponent);
                             }
                         }
                     ]
