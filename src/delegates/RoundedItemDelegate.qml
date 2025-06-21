@@ -118,9 +118,7 @@ T.ItemDelegate {
         radius: Kirigami.Units.cornerRadius
 
         color: if (root.highlighted || root.checked || (root.down && !root.checked) || root.visualFocus) {
-            const highlight = (root.highlighted && root.checked) ?
-                  Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.highlightColor, 0.5) :
-                  Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.highlightColor, 0.3);
+            const highlight = Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.highlightColor, 0.3);
             if (root.hovered || root.dropAreaHovered) {
                 return Kirigami.ColorUtils.tintWithAlpha(highlight, Kirigami.Theme.textColor, 0.10);
             } else if (highlight.valid) {
