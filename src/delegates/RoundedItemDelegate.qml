@@ -118,7 +118,9 @@ T.ItemDelegate {
         radius: Kirigami.Units.cornerRadius
 
         color: if (root.highlighted || root.checked || (root.down && !root.checked) || root.visualFocus) {
-            const highlight = Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.highlightColor, 0.3);
+            const highlight = (root.highlighted && root.checked) ?
+                  Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.highlightColor, 0.5) :
+                  Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.highlightColor, 0.3);
             if (root.hovered || root.dropAreaHovered) {
                 return Kirigami.ColorUtils.tintWithAlpha(highlight, Kirigami.Theme.textColor, 0.10);
             } else if (highlight.valid) {
@@ -134,7 +136,12 @@ T.ItemDelegate {
 
         border {
             color: Kirigami.Theme.highlightColor
-            width: root.visualFocus || root.activeFocus ? 1 : 0
+            width: {
+                let width = 0;
+                if (root.visualFocus) width++;
+                if (root.checked) width += (root.highlighted ? 2 : 1);
+                return width;
+            }
         }
     }
 
