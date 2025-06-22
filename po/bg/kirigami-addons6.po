@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-20 00:41+0000\n"
+"POT-Creation-Date: 2025-06-22 00:42+0000\n"
 "PO-Revision-Date: 2025-03-26 17:37+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -120,7 +120,7 @@ msgctxt "@title:dialog"
 msgid "Information"
 msgstr "Информация"
 
-#: components/MessageDialog.qml:242
+#: components/MessageDialog.qml:244
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
@@ -814,6 +814,3 @@ msgstr "Относно %1"
 msgctxt "@title:window"
 msgid "About KDE"
 msgstr "Относно KDE"
-
-#~ msgid "Windowing system"
-#~ msgstr "Система за прозорци"
