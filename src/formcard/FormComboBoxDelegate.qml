@@ -178,8 +178,11 @@ AbstractFormDelegate {
        \brief The delegate component to use as entries in the ComboBox display mode.
      */
     property Component comboBoxDelegate: Delegates.RoundedItemDelegate {
+        required property var model
+        required property int index
+
         implicitWidth: ListView.view ? ListView.view.width : Kirigami.Units.gridUnit * 16
-        text: controlRoot.textRole ? (Array.isArray(controlRoot.model) ? modelData[controlRoot.textRole] : model[controlRoot.textRole]) : modelData
+        text: model[controlRoot.textRole]
         highlighted: controlRoot.highlightedIndex === index
     }
 
@@ -187,8 +190,11 @@ AbstractFormDelegate {
        \brief The delegate component to use as entries for each value in the dialog and page display mode.
      */
     property Component dialogDelegate: Delegates.RoundedItemDelegate {
+        required property var model
+        required property int index
+
         implicitWidth: ListView.view ? ListView.view.width : Kirigami.Units.gridUnit * 16
-        text: controlRoot.textRole ? (Array.isArray(controlRoot.model) ? modelData[controlRoot.textRole] : model[controlRoot.textRole]) : modelData
+        text: model[controlRoot.textRole]
 
         Layout.topMargin: index == 0 ? Math.round(Kirigami.Units.smallSpacing / 2) : 0
 
