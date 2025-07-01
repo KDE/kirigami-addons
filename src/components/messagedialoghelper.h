@@ -23,13 +23,13 @@ public:
     KConfig *config() const;
     void setConfig(KConfig *config);
 
-    Q_INVOKABLE QJsonObject shouldBeShownTwoActions(const QString &dontShowAgainName);
+    Q_INVOKABLE QJsonObject shouldBeShownTwoActions(const QString &dontShowAgainName, const QString &configGroupName);
 
-    Q_INVOKABLE bool shouldBeShownContinue(const QString &dontShowAgainName);
+    Q_INVOKABLE bool shouldBeShownContinue(const QString &dontShowAgainName, const QString &configGroupName);
 
-    Q_INVOKABLE void saveDontShowAgainTwoActions(const QString &dontShowAgainName, bool result);
+    Q_INVOKABLE void saveDontShowAgainTwoActions(const QString &dontShowAgainName, const QString &configGroupName, bool result);
 
-    Q_INVOKABLE void saveDontShowAgainContinue(const QString &dontShowAgainName);
+    Q_INVOKABLE void saveDontShowAgainContinue(const QString &dontShowAgainName, const QString &configGroupName);
 
 Q_SIGNALS:
     void configChanged();

@@ -11,9 +11,9 @@ MessageDialogHelper::MessageDialogHelper(QObject *parent)
 {
 }
 
-QJsonObject MessageDialogHelper::shouldBeShownTwoActions(const QString &dontShowAgainName)
+QJsonObject MessageDialogHelper::shouldBeShownTwoActions(const QString &dontShowAgainName, const QString &configGroupName)
 {
-    KConfigGroup cg(m_config ? m_config : KSharedConfig::openConfig().data(), QStringLiteral("Notification Messages"));
+    KConfigGroup cg(m_config ? m_config : KSharedConfig::openConfig().data(), configGroupName);
     const QString dontAsk = cg.readEntry(dontShowAgainName, QString()).toLower();
     if (dontAsk == QLatin1StringView("yes") || dontAsk == QLatin1StringView("true")) {
         return {
@@ -33,30 +33,30 @@ QJsonObject MessageDialogHelper::shouldBeShownTwoActions(const QString &dontShow
     };
 }
 
-bool MessageDialogHelper::shouldBeShownContinue(const QString &dontShowAgainName)
+bool MessageDialogHelper::shouldBeShownContinue(const QString &dontShowAgainName, const QString &configGroupName)
 {
-    KConfigGroup cg(m_config ? m_config : KSharedConfig::openConfig().data(), QStringLiteral("Notification Messages"));
+    KConfigGroup cg(m_config ? m_config : KSharedConfig::openConfig().data(), configGroupName);
     return cg.readEntry(dontShowAgainName, true);
 }
 
-void MessageDialogHelper::saveDontShowAgainTwoActions(const QString &dontShowAgainName, bool result)
+void MessageDialogHelper::saveDontShowAgainTwoActions(const QString &dontShowAgainName, const QString &configGroupName, bool result)
 {
     KConfigGroup::WriteConfigFlags flags = KConfig::Persistent;
     if (dontShowAgainName[0] == QLatin1Char(':')) {
         flags |= KConfigGroup::Global;
     }
-    KConfigGroup cg(m_config ? m_config : KSharedConfig::openConfig().data(), QStringLiteral("Notification Messages"));
+    KConfigGroup cg(m_config ? m_config : KSharedConfig::openConfig().data(), configGroupName);
     cg.writeEntry(dontShowAgainName, result, flags);
     cg.sync();
 }
 
-void MessageDialogHelper::saveDontShowAgainContinue(const QString &dontShowAgainName)
+void MessageDialogHelper::saveDontShowAgainContinue(const QString &dontShowAgainName, const QString &configGroupName)
 {
     KConfigGroup::WriteConfigFlags flags = KConfigGroup::Persistent;
     if (dontShowAgainName[0] == QLatin1Char(':')) {
         flags |= KConfigGroup::Global;
     }
-    KConfigGroup cg(m_config ? m_config : KSharedConfig::openConfig().data(), QStringLiteral("Notification Messages"));
+    KConfigGroup cg(m_config ? m_config : KSharedConfig::openConfig().data(), configGroupName);
     cg.writeEntry(dontShowAgainName, false, flags);
     cg.sync();
 }

@@ -57,6 +57,7 @@ T.Dialog {
        \default ""
      */
     property string dontShowAgainName: ''
+    property string configGroupName: "Notification Messages"
 
     function standardButton(button) {
         return dialogButtonBox.standardButton(button);
@@ -118,7 +119,7 @@ T.Dialog {
     function openDialog(): void {
         if (root.dontShowAgainName.length > 0) {
             if (root.standardButtons === QQC2.Dialog.Ok) {
-                const show = MessageDialogHelper.shouldBeShownContinue(root.dontShowAgainName);
+                const show = MessageDialogHelper.shouldBeShownContinue(root.dontShowAgainName, root.configGroupName);
                 if (!show) {
                     root._automaticallyClosed = true;
                     root.applied();
@@ -129,7 +130,7 @@ T.Dialog {
                     root.open();
                 }
             } else {
-                const result = MessageDialogHelper.shouldBeShownTwoActions(root.dontShowAgainName);
+                const result = MessageDialogHelper.shouldBeShownTwoActions(root.dontShowAgainName, root.configGroupName);
                 if (!result.show) {
                     root._automaticallyClosed = true;
                     if (result.result) {
@@ -152,9 +153,9 @@ T.Dialog {
     onApplied: {
         if (root.dontShowAgainName && checkbox.checked && !root._automaticallyClosed) {
             if (root.standardButtons === QQC2.Dialog.Ok) {
-                MessageDialogHelper.saveDontShowAgainContinue(root.dontShowAgainName);
+                MessageDialogHelper.saveDontShowAgainContinue(root.dontShowAgainName, root.configGroupName);
             } else {
-                MessageDialogHelper.saveDontShowAgainTwoActions(root.dontShowAgainName, true);
+                MessageDialogHelper.saveDontShowAgainTwoActions(root.dontShowAgainName, root.configGroupName, true);
             }
         }
     }
@@ -162,9 +163,9 @@ T.Dialog {
     onAccepted: {
         if (root.dontShowAgainName && checkbox.checked && !root._automaticallyClosed) {
             if (root.standardButtons === QQC2.Dialog.Ok) {
-                MessageDialogHelper.saveDontShowAgainContinue(root.dontShowAgainName);
+                MessageDialogHelper.saveDontShowAgainContinue(root.dontShowAgainName, root.configGroupName);
             } else {
-                MessageDialogHelper.saveDontShowAgainTwoActions(root.dontShowAgainName, true);
+                MessageDialogHelper.saveDontShowAgainTwoActions(root.dontShowAgainName, root.configGroupName, true);
             }
         }
     }
@@ -172,9 +173,9 @@ T.Dialog {
     onDiscarded: {
         if (root.dontShowAgainName && checkbox.checked && !root._automaticallyClosed) {
             if (root.standardButtons === QQC2.Dialog.Ok) {
-                MessageDialogHelper.saveDontShowAgainContinue(root.dontShowAgainName);
+                MessageDialogHelper.saveDontShowAgainContinue(root.dontShowAgainName, root.configGroupName);
             } else {
-                MessageDialogHelper.saveDontShowAgainTwoActions(root.dontShowAgainName, false);
+                MessageDialogHelper.saveDontShowAgainTwoActions(root.dontShowAgainName, root.configGroupName, false);
             }
         }
     }
