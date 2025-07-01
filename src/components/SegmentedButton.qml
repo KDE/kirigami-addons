@@ -10,7 +10,7 @@ import org.kde.kirigamiaddons.delegates 1.0 as Delegates
 
 /*!
    \qmltype SegmentedButton
-   \inqmlmodule org.kde.kirigamiaddons.labs.components
+   \inqmlmodule org.kde.kirigamiaddons.components
    \brief Segmented button component.
 
    This holds multiple buttons.

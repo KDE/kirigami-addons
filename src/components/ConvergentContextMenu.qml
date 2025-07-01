@@ -17,7 +17,7 @@ import './private' as P
 
 /*!
    \qmltype ConvergentContextMenu
-   \inqmlmodule org.kde.kirigamiaddons.labs.components
+   \inqmlmodule org.kde.kirigamiaddons.components
    \brief Menu popup that appears as a tradional menu on desktop and as a bottom
    drawer mobile.
 

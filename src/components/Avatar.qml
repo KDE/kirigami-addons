@@ -12,7 +12,7 @@ import org.kde.kirigamiaddons.components 1.0 as Components
 
 /*!
    \qmltype Avatar
-   \inqmlmodule org.kde.kirigamiaddons.labs.components
+   \inqmlmodule org.kde.kirigamiaddons.components
    \brief An element that represents a user, either with initials, an icon, or a profile image.
  */
 Item {

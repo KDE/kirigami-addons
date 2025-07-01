@@ -11,7 +11,7 @@ import org.kde.kirigami 2.20 as Kirigami
 
 /*!
    \qmltype DoubleFloatingButton
-   \inqmlmodule org.kde.kirigamiaddons.labs.components
+   \inqmlmodule org.kde.kirigamiaddons.components
    \brief This component allows to display two buttons at the bottom of a page.
 
    \qml

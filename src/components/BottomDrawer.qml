@@ -9,7 +9,7 @@ import QtQuick.Layouts
 
 /*!
    \qmltype BottomDrawer
-   \inqmlmodule org.kde.kirigamiaddons.labs.components
+   \inqmlmodule org.kde.kirigamiaddons.components
    \brief A bottom drawer component with a drag indicator.
 
    Example:

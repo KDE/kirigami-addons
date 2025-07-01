@@ -8,7 +8,7 @@ import QtQuick.Controls
 
 /*!
    \qmltype FloatingToolBar
-   \inqmlmodule org.kde.kirigamiaddons.labs.components
+   \inqmlmodule org.kde.kirigamiaddons.components
    \brief A floating toolbar to use for example in a canvas.
 
    The toolbar should be positioned with \l {Units::largeSpacing}

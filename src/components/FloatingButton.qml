@@ -12,7 +12,7 @@ import org.kde.kirigami 2.20 as Kirigami
 
 /*!
    \qmltype FloatingButton
-   \inqmlmodule org.kde.kirigamiaddons.labs.components
+   \inqmlmodule org.kde.kirigamiaddons.components
    \brief This component is a button that can be displayed at the bottom of a page.
 
    \qml

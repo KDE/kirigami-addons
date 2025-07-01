@@ -7,7 +7,7 @@ import org.kde.kirigami 2.15 as Kirigami
 
 /*!
    \qmltype AvatarButton
-   \inqmlmodule org.kde.kirigamiaddons.labs.components
+   \inqmlmodule org.kde.kirigamiaddons.components
    \brief An button that represents a user, either with initials, an icon, or a profile image.
  */
 QQC2.AbstractButton {

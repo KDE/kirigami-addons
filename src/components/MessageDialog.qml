@@ -13,7 +13,7 @@ import org.kde.kirigamiaddons.delegates as Delegates
 
 /*!
    \qmltype MessageDialog
-   \inqmlmodule org.kde.kirigamiaddons.labs.components
+   \inqmlmodule org.kde.kirigamiaddons.components
    \brief A dialog to show a message. This dialog exists has 4 modes: success, warning, error, information.
 
    \image messagedialog.png

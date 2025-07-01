@@ -6,7 +6,7 @@ import org.kde.kirigami 2.20 as Kirigami
 
 /*!
    \qmltype DialogRoundedBackground
-   \inqmlmodule org.kde.kirigamiaddons.labs.components
+   \inqmlmodule org.kde.kirigamiaddons.components
    \brief Stylish background for dialogs.
 
    This item can be used as background for any dialog in your application
