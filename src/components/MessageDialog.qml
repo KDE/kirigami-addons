@@ -179,6 +179,16 @@ T.Dialog {
         }
     }
 
+    onRejected: {
+        if (root.dontShowAgainName && checkbox.checked && !root._automaticallyClosed) {
+            if (root.standardButtons === QQC2.Dialog.Ok) {
+                MessageDialogHelper.saveDontShowAgainContinue(root.dontShowAgainName);
+            } else {
+                MessageDialogHelper.saveDontShowAgainTwoActions(root.dontShowAgainName, false);
+            }
+        }
+    }
+
     contentItem: GridLayout {
         id: gridLayout
 
