@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-22 00:42+0000\n"
+"POT-Creation-Date: 2025-07-02 10:12+0000\n"
 "PO-Revision-Date: 2025-03-24 20:00+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -123,7 +123,7 @@ msgctxt "@title:dialog"
 msgid "Information"
 msgstr "資訊"
 
-#: components/MessageDialog.qml:244
+#: components/MessageDialog.qml:254
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
