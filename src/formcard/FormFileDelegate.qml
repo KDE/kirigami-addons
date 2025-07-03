@@ -223,7 +223,8 @@ AbstractFormDelegate {
                     Keys.onDownPressed: {
                         if (textField.popup?.visible) {
                             textField.popup.forceActiveFocus();
-                            textField.popup.hintListView.itemAtIndex(0)?.forceActiveFocus();
+                            textField.popup.hintListView.incrementCurrentIndex();
+                            textField.popup.hintListView.currentItem?.forceActiveFocus();
                         }
                     }
                     Keys.onTabPressed: (event) => {
@@ -289,6 +290,7 @@ AbstractFormDelegate {
             textField.text = selectedFile.toString().replace("file://", "");
             textField.checkFile();
         }
+        nameFilters: ["*"]
     }
 
     FolderListModel {
@@ -322,12 +324,13 @@ AbstractFormDelegate {
                     folderModel.hintArray.push(i)
             }
             folderModel.hintCount = folderModel.hintArray.length
-            if (folderModel.hintCount && textField.activeFocus) {
+            if (folderModel.hintCount && (textField.activeFocus || textField.popup?.activeFocus)) {
                 if (!textField.popup)
                     textField.popup = popupComp.createObject(textField)
                 textField.popup.open()
-            } else
+            } else {
                 textField.popup?.close()
+            }
         }
     }
 
@@ -362,7 +365,7 @@ AbstractFormDelegate {
                     onClicked: {
                         if (folderModel.isFolder(folderModel.hintArray[index])) {
                             textField.text = folderModel.folder.toString().replace("file://", "") + folderModel.separator + text + folderModel.separator;
-                            folderModel.updateSuggestions();
+                            textField.checkFile();
                         } else {
                             textField.text = folderModel.folder.toString().replace("file://", "") + folderModel.separator + text;
                             textField.popup.close();

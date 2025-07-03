@@ -177,7 +177,8 @@ AbstractFormDelegate {
                     Keys.onDownPressed: {
                         if (textField.popup?.visible) {
                             textField.popup.forceActiveFocus();
-                            textField.popup.hintListView.itemAtIndex(0)?.forceActiveFocus();
+                            textField.popup.hintListView.incrementCurrentIndex();
+                            textField.popup.hintListView.currentItem?.forceActiveFocus();
                         }
                     }
                     Keys.onTabPressed: (event) => {
@@ -276,7 +277,7 @@ AbstractFormDelegate {
                     folderModel.hintArray.push(i)
             }
             folderModel.hintCount = folderModel.hintArray.length
-            if (folderModel.hintCount && textField.activeFocus) {
+            if (folderModel.hintCount && (textField.activeFocus || textField.popup?.activeFocus)) {
                 if (!textField.popup)
                     textField.popup = popupComp.createObject(textField)
                 textField.popup.open();
