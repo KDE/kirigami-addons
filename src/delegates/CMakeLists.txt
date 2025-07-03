@@ -19,6 +19,7 @@ ecm_target_qml_sources(delegatesplugin SOURCES
     RoundedItemDelegate.qml
     RoundedTreeDelegate.qml
     CheckDelegate.qml
+    RadioDelegate.qml
     IndicatorItemDelegate.qml
     DefaultContentItem.qml
     SubtitleContentItem.qml

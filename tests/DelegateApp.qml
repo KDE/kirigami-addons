@@ -209,6 +209,7 @@ Kirigami.ApplicationWindow {
             ListView {
                 id: listView
 
+                currentIndex: -1
                 model: 50
                 delegate: Delegates.CheckDelegate {
                     id: delegate
@@ -234,8 +235,66 @@ Kirigami.ApplicationWindow {
             ListView {
                 id: listView
 
+                currentIndex: -1
                 model: 50
                 delegate: Delegates.CheckDelegate {
+                    id: delegate
+
+                    required property int index
+                    required property int modelData
+
+                    text: "Item " + modelData
+                    onToggled: {
+                        console.log("Item was toggled", modelData, checked)
+                    }
+
+                    contentItem: Delegates.SubtitleContentItem {
+                        itemDelegate: delegate
+                        subtitle: "Subtitle " + delegate.modelData
+                    }
+                }
+            }
+        }
+    }
+
+    Component {
+        id: radioDelegateComponent
+
+        Kirigami.ScrollablePage {
+            title: "RadioDelegate"
+
+            ListView {
+                id: listView
+
+                currentIndex: -1
+                model: 50
+                delegate: Delegates.RadioDelegate {
+                    id: delegate
+
+                    required property int index
+                    required property int modelData
+
+                    text: "Item " + modelData
+                    onClicked: {
+                        listView.currentIndex = index;
+                    }
+                }
+            }
+        }
+    }
+
+    Component {
+        id: radioDelegateSubtitleComponent
+
+        Kirigami.ScrollablePage {
+            title: "RadioDelegate with subtitle"
+
+            ListView {
+                id: listView
+
+                currentIndex: -1
+                model: 50
+                delegate: Delegates.RadioDelegate {
                     id: delegate
 
                     required property int index
@@ -311,6 +370,18 @@ Kirigami.ApplicationWindow {
                             title: "CheckDelegate with subtitle"
                             action: Kirigami.Action {
                                 onTriggered: applicationWindow().pageStack.push(checkDelegateSubtitleComponent);
+                            }
+                        },
+                        MobileForm.FormGridContainer.InfoCard {
+                            title: "RadioDelegate"
+                            action: Kirigami.Action {
+                                onTriggered: applicationWindow().pageStack.push(radioDelegateComponent);
+                            }
+                        },
+                        MobileForm.FormGridContainer.InfoCard {
+                            title: "RadiokDelegate with subtitle"
+                            action: Kirigami.Action {
+                                onTriggered: applicationWindow().pageStack.push(radioDelegateSubtitleComponent);
                             }
                         }
                     ]
