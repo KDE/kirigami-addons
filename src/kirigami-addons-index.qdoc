@@ -15,15 +15,26 @@
 
     \section2 Building with CMake
 
-    To import only the Kirigami Addons QML modules:
+    To import each Kirigami Addons QML module individually:
 
     \code
-    ecm_find_qml_module(org.kde.kirigamiaddons REQUIRED)
+    ecm_find_qmlmodule(org.kde.kirigamiaddons.formcard REQUIRED)
+    ecm_find_qmlmodule(org.kde.kirigamiaddons.delegates REQUIRED)
+    ecm_find_qmlmodule(org.kde.kirigamiaddons.settings REQUIRED)
+    ecm_find_qmlmodule(org.kde.kirigamiaddons.treeview REQUIRED)
+    ecm_find_qmlmodule(org.kde.kirigamiaddons.tableview REQUIRED)
+    ecm_find_qmlmodule(org.kde.kirigamiaddons.components REQUIRED)
+    ecm_find_qmlmodule(org.kde.kirigamiaddons.labs.components REQUIRED)
+    ecm_find_qmlmodule(org.kde.kirigamiaddons.sounds REQUIRED)
+    ecm_find_qmlmodule(org.kde.kirigamiaddons.statefulapp REQUIRED)
+    ecm_find_qmlmodule(org.kde.kirigamiaddons.statefulapp.labs REQUIRED)
     \endcode
 
     To import Kirigami Addons into your project using CMake:
 
-    \include {module-use.qdocinc} {building with cmake} {KF6} {KirigamiAddons} {KF6::KirigamiAddons}
+    \code
+    find_package(KF6 REQUIRED COMPONENTS KirigamiAddons)
+    \endcode
 
     \section1 API Reference
 
