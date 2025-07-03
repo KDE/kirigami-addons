@@ -67,6 +67,7 @@ Kirigami.ApplicationWindow {
                 delegate: Delegates.RoundedItemDelegate {
                     id: delegate
 
+                    required property int index
                     required property int modelData
 
                     icon.name: "kde"
@@ -113,6 +114,7 @@ Kirigami.ApplicationWindow {
                 delegate: Delegates.RoundedItemDelegate {
                     id: delegate
 
+                    required property int index
                     required property int modelData
 
                     icon.name: "kde"
@@ -154,6 +156,7 @@ Kirigami.ApplicationWindow {
                 delegate: Delegates.IndicatorItemDelegate {
                     id: delegate
 
+                    required property int index
                     required property int modelData
 
                     unread: Math.random() > 0.3
@@ -181,6 +184,7 @@ Kirigami.ApplicationWindow {
                 delegate: Delegates.IndicatorItemDelegate {
                     id: delegate
 
+                    required property int index
                     required property int modelData
 
                     unread: Math.random() > 0.3
