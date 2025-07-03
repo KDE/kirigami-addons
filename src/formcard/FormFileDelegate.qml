@@ -301,7 +301,8 @@ AbstractFormDelegate {
         property int lastSlash: textField.text.lastIndexOf(separator) + 1
 
         showFiles: true
-        nameFilters: ["*"]
+        showDirsFirst: true
+        nameFilters: fileDialog.nameFilters
         folder: FormCard.FileHelper.folderForFileName(textField.text)
         onStatusChanged: {
             if (textField.text.length > 0 && status == FolderListModel.Ready)
