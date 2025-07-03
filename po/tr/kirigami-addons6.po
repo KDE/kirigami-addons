@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-02 10:12+0000\n"
+"POT-Creation-Date: 2025-07-03 06:55+0000\n"
 "PO-Revision-Date: 2025-03-23 17:36+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -97,31 +97,31 @@ msgstr "Geri Git"
 msgid "Download"
 msgstr "İndir"
 
-#: components/MessageDialog.qml:98
+#: components/MessageDialog.qml:99
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
 msgstr "Başarılı"
 
-#: components/MessageDialog.qml:100 components/MessageDialog.qml:106
+#: components/MessageDialog.qml:101 components/MessageDialog.qml:107
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
 msgstr "Uyarı"
 
-#: components/MessageDialog.qml:102
+#: components/MessageDialog.qml:103
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
 msgstr "Hata"
 
-#: components/MessageDialog.qml:104
+#: components/MessageDialog.qml:105
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
 msgstr "Bilgi"
 
-#: components/MessageDialog.qml:254
+#: components/MessageDialog.qml:255
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"

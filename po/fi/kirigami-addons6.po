@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-02 10:12+0000\n"
+"POT-Creation-Date: 2025-07-03 06:55+0000\n"
 "PO-Revision-Date: 2025-05-29 14:59+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -96,31 +96,31 @@ msgstr "Siirry takaisin"
 msgid "Download"
 msgstr "Lataa"
 
-#: components/MessageDialog.qml:98
+#: components/MessageDialog.qml:99
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
 msgstr "Onnistui"
 
-#: components/MessageDialog.qml:100 components/MessageDialog.qml:106
+#: components/MessageDialog.qml:101 components/MessageDialog.qml:107
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
 msgstr "Varoitus"
 
-#: components/MessageDialog.qml:102
+#: components/MessageDialog.qml:103
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
 msgstr "Virhe"
 
-#: components/MessageDialog.qml:104
+#: components/MessageDialog.qml:105
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
 msgstr "Tietoa"
 
-#: components/MessageDialog.qml:254
+#: components/MessageDialog.qml:255
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
