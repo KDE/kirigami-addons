@@ -1,0 +1,34 @@
+version = 1
+SPDX-PackageName = "Kirigami Addons"
+SPDX-PackageSupplier = "Carl Schwan <carl@carlschwan.eu>"
+SPDX-PackageDownloadLocation = "https://invent.kde.org/libraries/kirigami-addons"
+
+[[annotations]]
+path = "autotests/data/**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "none"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = "docs/pics/**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "none"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = "examples/FormCardTutorial/**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2023 by Thiago Masato Costa Sueto <thiago.sueto@kde.org>"
+SPDX-License-Identifier = "LGPL-2.1-or-later"
+
+[[annotations]]
+path = ["templates/kirigamiaddons6/kirigami-app.png", "templates/kirigamiaddons6/kirigami.kdevtemplate", "templates/kirigamiaddons6/android/res/drawable/**", "templates/librarymanager6/kirigami-app.png", "templates/librarymanager6/librarymanager6.kdevtemplate", "templates/librarymanager6/android/res/drawable/**"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "none"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = ["**.qdoc", "**.qdocconf"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2025 by Thiago Masato Costa Sueto <thiago.sueto@kde.org>"
+SPDX-License-Identifier = "CC0-1.0"
