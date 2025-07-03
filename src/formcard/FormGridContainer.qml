@@ -165,7 +165,7 @@ Item {
                 bottomMargin: root.bottomPadding
             }
 
-            columns: root.cardWidthRestricted && grid.visibleChildrenCount % 3 === 0 ? 3 : 2
+            columns: 2
             columnSpacing: Kirigami.Units.smallSpacing
             rowSpacing: Kirigami.Units.smallSpacing
 
