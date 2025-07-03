@@ -54,6 +54,6 @@ Kirigami.Separator {
         }
     }
 
-    opacity: (!above || above.background === null || !above.background.visible || !(above.enabled && ((above.visualFocus || above.hovered && !Kirigami.Settings.tabletMode) || above.pressed))) &&
-        (!below || below.background === null || !below.background.visible || !(below.enabled && ((below.visualFocus || below.hovered && !Kirigami.Settings.tabletMode) || below.pressed))) ? 0.5 : 0
+    opacity: (!above || above.background === null || (!above.background?.visible ?? false) || !(above.enabled && ((above.visualFocus || above.hovered && !Kirigami.Settings.tabletMode) || above.pressed))) &&
+        (!below || below.background === null || (!below.background?.visible ?? false) || !(below.enabled && ((below.visualFocus || below.hovered && !Kirigami.Settings.tabletMode) || below.pressed))) ? 0.5 : 0
 }

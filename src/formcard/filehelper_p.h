@@ -18,4 +18,5 @@ public:
     Q_INVOKABLE bool fileExists(const QString &fileName);
     Q_INVOKABLE bool folderExists(const QString &fileName);
     Q_INVOKABLE bool parentDirectoryExists(const QString &fileName);
+    Q_INVOKABLE QUrl folderForFileName(const QString &fileName);
 };

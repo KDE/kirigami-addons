@@ -29,3 +29,9 @@ bool FileHelper::parentDirectoryExists(const QString &fileName)
     const auto dir = info.absoluteDir();
     return dir.exists();
 }
+
+QUrl FileHelper::folderForFileName(const QString &fileName)
+{
+    QFileInfo info(fileName);
+    return QUrl::fromLocalFile(info.absoluteDir().path());
+}
