@@ -1,4 +1,4 @@
-// SPDX-CopyrightText: 2025 Carl Schwan <carl@carlschwan.eu>
+// SPDX-FileCopyrightText: 2025 Carl Schwan <carl@carlschwan.eu>
 // SPDX-License-Identifier: LGPL-2.1-or-later
 
 import QtQuick
