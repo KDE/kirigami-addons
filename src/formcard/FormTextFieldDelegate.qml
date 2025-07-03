@@ -50,8 +50,7 @@ AbstractFormDelegate {
     id: root
 
     /*!
-       \brief A label containing primary text that appears above and
-       to the left the text field.
+       \brief A label containing primary text that appears above the text field.
      */
     required property string label
 

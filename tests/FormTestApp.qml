@@ -3,14 +3,16 @@
  * SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
-import QtQuick 2.15
-import QtQuick.Controls 2.15 as Controls
-import QtQuick.Layouts 1.2
-import QtQuick.Layouts 1.15
+import QtCore
+import QtQuick
+import QtQuick.Controls as Controls
+import QtQuick.Layouts
+import QtQuick.Layouts
+import QtQuick.Dialogs
 
-import org.kde.kirigami 2.20 as Kirigami
-import org.kde.kirigamiaddons.formcard 1.0 as FormCard
-import org.kde.kirigamiaddons.components 1.0 as Components
+import org.kde.kirigami as Kirigami
+import org.kde.kirigamiaddons.formcard as FormCard
+import org.kde.kirigamiaddons.components as Components
 
 Kirigami.ApplicationWindow {
     id: appwindow
@@ -490,6 +492,39 @@ Kirigami.ApplicationWindow {
                     value: 84
                     statusMessage: "This is too high"
                     status: Kirigami.MessageType.Error
+                }
+            }
+
+            // file fields
+            FormCard.FormHeader {
+                title: "File boxes"
+            }
+            FormCard.FormCard {
+                FormCard.FormFileDelegate {
+                    id: openFile
+
+                    label: "Choose file"
+                    currentFolder: StandardPaths.standardLocations(StandardPaths.DocumentsLocation)[0]
+                    fileMode: FileDialog.OpenFile
+                }
+
+                FormCard.FormDelegateSeparator { above: saveFile; below: openFile }
+
+                FormCard.FormFileDelegate {
+                    id: saveFile
+
+                    label: "Save file"
+                    currentFolder: StandardPaths.writableLocation(StandardPaths.DocumentsLocation)
+                    fileMode: FileDialog.SaveFile
+                }
+
+                FormCard.FormDelegateSeparator { above: openFolder; below: saveFile }
+
+                FormCard.FormFolderDelegate {
+                    id: openFolder
+
+                    label: "Choose folder"
+                    currentFolder: StandardPaths.writableLocation(StandardPaths.DocumentsLocation)
                 }
             }
         }

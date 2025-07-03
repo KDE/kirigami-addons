@@ -19,33 +19,35 @@ if (TARGET Qt6::qdoc AND TARGET Qt6::qhelpgenerator)
 endif()
 
 ecm_target_qml_sources(formcardplugin SOURCES
+    AboutKDE.qml
+    AboutKDEPage.qml
+    AboutPage.qml
     AbstractFormDelegate.qml
     FormArrow.qml
     FormButtonDelegate.qml
     FormCard.qml
+    FormCardDialog.qml
     FormCardPage.qml
-    FormHeader.qml
-    AboutPage.qml
-    AboutKDE.qml
-    AboutKDEPage.qml
     FormCheckDelegate.qml
     FormComboBoxDelegate.qml
+    FormDateTimeDelegate.qml
     FormDelegateBackground.qml
     FormDelegateSeparator.qml
-    FormPlaceholderMessageDelegate.qml
+    FormFileDelegate.qml
+    FormFolderDelegate.qml
+    FormGridContainer.qml
+    FormHeader.qml
     FormLinkDelegate.qml
+    FormPasswordFieldDelegate.qml
+    FormPlaceholderMessageDelegate.qml
     FormRadioDelegate.qml
     FormRadioSelectorDelegate.qml
     FormSectionText.qml
     FormSpinBoxDelegate.qml
     FormSwitchDelegate.qml
+    FormTextAreaDelegate.qml
     FormTextDelegate.qml
     FormTextFieldDelegate.qml
-    FormTextAreaDelegate.qml
-    FormPasswordFieldDelegate.qml
-    FormDateTimeDelegate.qml
-    FormGridContainer.qml
-    FormCardDialog.qml
 )
 
 if(ANDROID)
@@ -61,12 +63,14 @@ else()
 endif()
 
 target_sources(formcardplugin PRIVATE
-    aboutcomponent_p.h
     aboutcomponent.cpp
-    passwordhealth.h
+    aboutcomponent_p.h
+    filehelper.cpp
+    filehelper_p.h
     passwordhealth.cpp
-    zxcvbn/zxcvbn.h
+    passwordhealth.h
     zxcvbn/zxcvbn.c
+    zxcvbn/zxcvbn.h
 )
 target_compile_definitions(formcardplugin PRIVATE -DTRANSLATION_DOMAIN=\"kirigami-addons6\")
 
