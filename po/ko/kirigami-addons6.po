@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-03 06:55+0000\n"
+"POT-Creation-Date: 2025-07-04 00:41+0000\n"
 "PO-Revision-Date: 2025-04-06 23:15+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -482,26 +482,72 @@ msgctxt "Date is not set"
 msgid "Not set"
 msgstr "설정하지 않음"
 
-#: formcard/FormLinkDelegate.qml:52
+#: formcard/FormFileDelegate.qml:179
+#, kde-format
+msgctxt "@info:status"
+msgid "The path doesn't exist."
+msgstr ""
+
+#: formcard/FormFileDelegate.qml:188
+#, kde-format
+msgctxt "@info:status"
+msgid "The file doesn't exist."
+msgstr ""
+
+#: formcard/FormFileDelegate.qml:255
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Select"
+msgctxt "@action:button"
+msgid "Select file"
+msgstr "선택"
+
+#: formcard/FormFileDelegate.qml:262
+#, kde-format
+msgctxt "@info:placeholderwrapMode"
+msgid "No file selected"
+msgstr ""
+
+#: formcard/FormFolderDelegate.qml:147
+#, kde-format
+msgctxt "@info:status"
+msgid "The folder doesn't exist."
+msgstr ""
+
+#: formcard/FormFolderDelegate.qml:204
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Select"
+msgctxt "@action:button"
+msgid "Select folder"
+msgstr "선택"
+
+#: formcard/FormFolderDelegate.qml:211
+#, kde-format
+msgctxt "@info:placeholderwrapMode"
+msgid "No folder selected"
+msgstr ""
+
+#: formcard/FormLinkDelegate.qml:54
 #, kde-format
 msgctxt "@action:inmnenu"
 msgid "Open Link"
 msgstr "링크 열기"
 
-#: formcard/FormLinkDelegate.qml:58
+#: formcard/FormLinkDelegate.qml:60
 #, kde-format
 msgctxt "@action:inmnenu"
 msgid "Copy Link to Clipboard"
 msgstr "클립보드에 링크 복사"
 
-#: formcard/FormLinkDelegate.qml:64
+#: formcard/FormLinkDelegate.qml:66
 #, kde-format
 msgctxt "@info:status"
 msgid "Url copied to clipboard."
 msgstr "클립보드에 URL을 복사했습니다."
 
 #: formcard/FormPasswordFieldDelegate.qml:249
-#: formcard/FormTextAreaDelegate.qml:174 formcard/FormTextFieldDelegate.qml:271
+#: formcard/FormTextAreaDelegate.qml:174 formcard/FormTextFieldDelegate.qml:270
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
