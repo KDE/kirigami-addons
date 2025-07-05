@@ -495,12 +495,10 @@ msgid "The file doesn't exist."
 msgstr ""
 
 #: formcard/FormFileDelegate.qml:255
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select file"
-msgstr "选择"
+msgstr ""
 
 #: formcard/FormFileDelegate.qml:262
 #, kde-format
@@ -515,12 +513,10 @@ msgid "The folder doesn't exist."
 msgstr ""
 
 #: formcard/FormFolderDelegate.qml:204
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select folder"
-msgstr "选择"
+msgstr ""
 
 #: formcard/FormFolderDelegate.qml:211
 #, kde-format
