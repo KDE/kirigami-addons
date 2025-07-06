@@ -19,7 +19,9 @@ QQC2.ScrollView {
 
     required property list<T.Action> actions
     required property T.StackView stackView
-    required property KirigamiComponents.BottomDrawer drawer
+    // this is a popup but changing to T.Popup create the following error message:
+    // Cannot assign QObject* to Popup_QMLTYPE_402*
+    required property QtObject popup 
     property string title
 
     Layout.fillWidth: true
@@ -88,11 +90,11 @@ QQC2.ScrollView {
                     stackView: root.stackView,
                     actions: modelData.children,
                     title: modelData.text,
-                    drawer: root.drawer,
+                    popup: root.popup,
                 });
                 return;
             }
-            drawer.close();
+            root.popup.close();
         }
     }
     property Component separatorDelegate: FormCard.FormDelegateSeparator {
