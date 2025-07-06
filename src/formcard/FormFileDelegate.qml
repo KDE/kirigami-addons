@@ -13,6 +13,7 @@ import Qt.labs.folderlistmodel
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.delegates as Delegates
 import org.kde.kirigamiaddons.formcard as FormCard
+import org.kde.kirigamiaddons.components as Components
 
 import './private' as Private
 
@@ -341,10 +342,12 @@ AbstractFormDelegate {
             property alias hintListView: hintListView
 
             y: textField.height
-            x: Kirigami.Units.gridUnit
+            x: 0
 
-            width: textField.width - Kirigami.Units.gridUnit * 2
+            width: textField.width
             height: Math.min(Kirigami.Units.gridUnit * 8 + Kirigami.Units.smallSpacing * 7, hintListView.contentHeight)
+
+            background: Components.DialogRoundedBackground {}
 
             padding: 0
 
