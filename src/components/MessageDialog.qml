@@ -248,7 +248,7 @@ T.Dialog {
         rowSpacing: Kirigami.Units.mediumSpacing
         columnSpacing: Kirigami.Units.mediumSpacing
 
-        FormCard.FormCheckDelegate {
+        QQC2.CheckBox {
             id: checkbox
 
             visible: dontShowAgainName.length > 0
@@ -256,6 +256,9 @@ T.Dialog {
             background: null
 
             Layout.fillWidth: true
+            Layout.leftMargin: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+            Layout.bottomMargin: root._mobileLayout ? 0 : Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+            Layout.rightMargin: root._mobileLayout ? Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing : Kirigami.Units.smallSpacing
         }
 
         Item {
@@ -292,14 +295,14 @@ T.Dialog {
                 Layout.leftMargin: if (root._mobileLayout) {
                     return Kirigami.Units.largeSpacing * 2;
                 } else {
-                    return index === 0 ? Kirigami.Units.largeSpacing : 0;
+                    return index === 0 ? Kirigami.Units.smallSpacing : 0;
                 }
                 Layout.rightMargin: if (root._mobileLayout) {
                     return Kirigami.Units.largeSpacing * 2;
                 } else {
-                    return index === repeater.count - 1 ? Kirigami.Units.largeSpacing : 0;
+                    return index === repeater.count - 1 ? Kirigami.Units.smallSpacing : 0;
                 }
-                Layout.bottomMargin: root._mobileLayout && index !== repeater.count - 1 ? 0 : Kirigami.Units.largeSpacing * 2
+                Layout.bottomMargin: root._mobileLayout && index !== repeater.count - 1 ? 0 : Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
             }
         }
     }
