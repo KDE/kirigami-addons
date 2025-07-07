@@ -115,7 +115,6 @@ QQC2.ScrollView {
             readonly property T.Action action: modelData
 
             property QtObject item: null
-            property bool isSubMenu: false
 
             Component.onCompleted: {
                 const isKirigamiAction = delegate.action instanceof Kirigami.Action;
