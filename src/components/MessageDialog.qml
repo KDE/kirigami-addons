@@ -57,7 +57,18 @@ T.Dialog {
        \default ""
      */
     property string dontShowAgainName: ''
+
+    /*!
+       \brief This property holds the name of the config group where the setting to store the "Don't show again" preference are stored.
+
+       \default "Notification Messages"
+     */
     property string configGroupName: "Notification Messages"
+
+    /*!
+      The text to use in the dialog's contents.
+     */
+    property string subtitle: ''
 
     function standardButton(button) {
         return dialogButtonBox.standardButton(button);
@@ -220,6 +231,12 @@ T.Dialog {
                 wrapMode: Text.WordWrap
                 horizontalAlignment: gridLayout.columns === 2 ? Qt.AlignLeft : Qt.AlignHCenter
 
+                Layout.fillWidth: true
+            }
+
+            QQC2.Label {
+                text: root.subtitle
+                wrapMode: Text.WordWrap
                 Layout.fillWidth: true
             }
         }
