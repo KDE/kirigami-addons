@@ -253,7 +253,7 @@ Item {
                 root._dialogMenuItem = dialogMenu.createObject(root);
                 root._dialogMenuItem.open();
             }
-        } else if (displayMode === ConvergentContextMenu.Dialog) {
+        } else if (displayMode === ConvergentContextMenu.ContextMenu) {
             if (position && parent) {
                 root._desktopMenuItem = desktopMenu.createObject(parent);
                 root._desktopMenuItem.popup(position);
@@ -300,7 +300,7 @@ Item {
             }
 
             headerContentItem: ColumnLayout {
-                children: if (stackViewMenu.depth > 1 || root.headerContentItem === null) {
+                children: if (stackViewMenu.depth > 1 && root.headerContentItem === null) {
                     return nestedHeader;
                 } else {
                     return root.headerContentItem;
@@ -355,10 +355,10 @@ Item {
 
             background: DialogRoundedBackground {}
 
-            anchors.centerIn: parent
+            anchors.centerIn: root.parent
 
-            width: Math.min(parent.width - Kirigami.Units.gridUnit * 4, Kirigami.Units.gridUnit * 30)
-            height: Math.min(parent.height - Kirigami.Units.gridUnit * 4, implicitHeight)
+            width: Math.min(root.parent.width - Kirigami.Units.gridUnit * 4, Kirigami.Units.gridUnit * 30)
+            height: Math.min(root.parent.height - Kirigami.Units.gridUnit * 4, implicitHeight)
 
             rightPadding: 0
             leftPadding: 0
@@ -385,7 +385,7 @@ Item {
                     Layout.bottomMargin: Kirigami.Units.largeSpacing
                     Layout.fillWidth: true
 
-                    children: if (stackViewMenu.depth > 1 || root.headerContentItem === null) {
+                    children: if (stackViewMenu.depth > 1 && root.headerContentItem === null) {
                         return nestedHeader;
                     } else {
                         root.headerContentItem.Layout.fillWidth = true;

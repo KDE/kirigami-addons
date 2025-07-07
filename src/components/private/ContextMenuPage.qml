@@ -24,7 +24,7 @@ QQC2.ScrollView {
     required property QtObject popup 
     property string title
 
-    Layout.fillWidth: true
+    QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AlwaysOff
 
     property Component itemDelegate: FormCard.FormButtonDelegate {
         id: button
@@ -106,9 +106,7 @@ QQC2.ScrollView {
         Layout.fillWidth: item?.Layout.fillWidth ?? true
     }
 
-    Instantiator {
-        id: actionsInstantiator
-
+    property Instantiator actionsInstantiator: Instantiator {
         model: root.actions
         delegate: QtObject {
             id: delegate
@@ -124,7 +122,7 @@ QQC2.ScrollView {
                     item = root.separatorDelegate.createObject(null, { action: delegate.action });
                 } else if (delegate.action.displayComponent) {
                     item = root.loaderDelegate.createObject(null, {
-                        actions: delegate.action,
+                        action: delegate.action,
                         sourceComponent: action.displayComponent,
                     });
                 } else {
@@ -138,7 +136,7 @@ QQC2.ScrollView {
     ColumnLayout {
         id: columnLayout
 
-        width: root.availableWidth
         spacing: 0
+        width: root.availableWidth
     }
 }

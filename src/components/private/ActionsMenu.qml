@@ -47,7 +47,7 @@ QQC2.Menu {
                         item = root.separatorDelegate.createObject(null, { action: delegate.action });
                     } else if (action.displayComponent) {
                         item = root.loaderDelegate.createObject(null, {
-                            actions: delegate.action,
+                            action: delegate.action,
                             sourceComponent: action.displayComponent,
                         });
                     } else {
