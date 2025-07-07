@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-04 00:41+0000\n"
+"POT-Creation-Date: 2025-07-07 00:41+0000\n"
 "PO-Revision-Date: 2025-04-06 23:15+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -482,19 +482,19 @@ msgctxt "Date is not set"
 msgid "Not set"
 msgstr "설정하지 않음"
 
-#: formcard/FormFileDelegate.qml:179
+#: formcard/FormFileDelegate.qml:180
 #, kde-format
 msgctxt "@info:status"
 msgid "The path doesn't exist."
 msgstr ""
 
-#: formcard/FormFileDelegate.qml:188
+#: formcard/FormFileDelegate.qml:189
 #, kde-format
 msgctxt "@info:status"
 msgid "The file doesn't exist."
 msgstr ""
 
-#: formcard/FormFileDelegate.qml:255
+#: formcard/FormFileDelegate.qml:256
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Select"
@@ -502,7 +502,7 @@ msgctxt "@action:button"
 msgid "Select file"
 msgstr "선택"
 
-#: formcard/FormFileDelegate.qml:262
+#: formcard/FormFileDelegate.qml:263
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No file selected"
