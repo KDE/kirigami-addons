@@ -300,14 +300,14 @@ Item {
             }
 
             headerContentItem: ColumnLayout {
-                    children: if (stackViewMenu.depth > 1) {
-                        return nestedHeader;
-                    } else if (root.headerContentItem === null) {
-                        return null;
-                    } else {
-                        root.headerContentItem.Layout.fillWidth = true;
-                        return root.headerContentItem;
-                    }
+                children: if (stackViewMenu.depth > 1) {
+                    return nestedHeader;
+                } else if (root.headerContentItem === null) {
+                    return null;
+                } else {
+                    root.headerContentItem.Layout.fillWidth = true;
+                    return root.headerContentItem;
+                }
             }
 
             property Item nestedHeader: RowLayout {
