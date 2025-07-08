@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-07 00:41+0000\n"
+"POT-Creation-Date: 2025-07-08 00:40+0000\n"
 "PO-Revision-Date: 2024-04-23 19:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -85,42 +85,50 @@ msgctxt "@action:button"
 msgid "Close"
 msgstr "关闭"
 
-#: components/ConvergentContextMenu.qml:274
+#: components/ConvergentContextMenu.qml:321
+#: components/ConvergentContextMenu.qml:431
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "返回"
+
+#: components/ConvergentContextMenu.qml:405
+#, fuzzy, kde-format
+#| msgid "Close"
+msgctxt "@action:button close dialog"
+msgid "Close"
+msgstr "关闭"
 
 #: components/DownloadAction.qml:40
 #, kde-format
 msgid "Download"
 msgstr "下载"
 
-#: components/MessageDialog.qml:99
+#: components/MessageDialog.qml:110
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
 msgstr "成功"
 
-#: components/MessageDialog.qml:101 components/MessageDialog.qml:107
+#: components/MessageDialog.qml:112 components/MessageDialog.qml:118
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
 msgstr "警告"
 
-#: components/MessageDialog.qml:103
+#: components/MessageDialog.qml:114
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
 msgstr "错误"
 
-#: components/MessageDialog.qml:105
+#: components/MessageDialog.qml:116
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
 msgstr "信息"
 
-#: components/MessageDialog.qml:255
+#: components/MessageDialog.qml:272
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"

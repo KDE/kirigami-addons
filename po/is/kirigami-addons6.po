@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-07 00:41+0000\n"
+"POT-Creation-Date: 2025-07-08 00:40+0000\n"
 "PO-Revision-Date: 2024-12-13 10:02+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -85,42 +85,50 @@ msgctxt "@action:button"
 msgid "Close"
 msgstr "Loka"
 
-#: components/ConvergentContextMenu.qml:274
+#: components/ConvergentContextMenu.qml:321
+#: components/ConvergentContextMenu.qml:431
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr ""
+
+#: components/ConvergentContextMenu.qml:405
+#, fuzzy, kde-format
+#| msgid "Close"
+msgctxt "@action:button close dialog"
+msgid "Close"
+msgstr "Loka"
 
 #: components/DownloadAction.qml:40
 #, kde-format
 msgid "Download"
 msgstr "Sækja"
 
-#: components/MessageDialog.qml:99
+#: components/MessageDialog.qml:110
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
 msgstr "Tókst"
 
-#: components/MessageDialog.qml:101 components/MessageDialog.qml:107
+#: components/MessageDialog.qml:112 components/MessageDialog.qml:118
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
 msgstr "Viðvörun"
 
-#: components/MessageDialog.qml:103
+#: components/MessageDialog.qml:114
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
 msgstr "Villa"
 
-#: components/MessageDialog.qml:105
+#: components/MessageDialog.qml:116
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
 msgstr "Upplýsingar"
 
-#: components/MessageDialog.qml:255
+#: components/MessageDialog.qml:272
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"

@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-07 00:41+0000\n"
-"PO-Revision-Date: 2025-02-22 03:02+0100\n"
+"POT-Creation-Date: 2025-07-08 00:40+0000\n"
+"PO-Revision-Date: 2025-06-27 15:41+0200\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -92,42 +92,50 @@ msgctxt "@action:button"
 msgid "Close"
 msgstr "Schließen"
 
-#: components/ConvergentContextMenu.qml:274
+#: components/ConvergentContextMenu.qml:321
+#: components/ConvergentContextMenu.qml:431
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "Zurück"
+
+#: components/ConvergentContextMenu.qml:405
+#, fuzzy, kde-format
+#| msgid "Close"
+msgctxt "@action:button close dialog"
+msgid "Close"
+msgstr "Schließen"
 
 #: components/DownloadAction.qml:40
 #, kde-format
 msgid "Download"
 msgstr "Herunterladen"
 
-#: components/MessageDialog.qml:99
+#: components/MessageDialog.qml:110
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
 msgstr "Erfolg"
 
-#: components/MessageDialog.qml:101 components/MessageDialog.qml:107
+#: components/MessageDialog.qml:112 components/MessageDialog.qml:118
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
 msgstr "Warnung"
 
-#: components/MessageDialog.qml:103
+#: components/MessageDialog.qml:114
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
 msgstr "Fehler"
 
-#: components/MessageDialog.qml:105
+#: components/MessageDialog.qml:116
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
 msgstr "Information"
 
-#: components/MessageDialog.qml:255
+#: components/MessageDialog.qml:272
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
@@ -393,10 +401,9 @@ msgstr ""
 "Für diese Unterstützung möchten wir uns im Voraus bedanken."
 
 #: formcard/AboutKDEPage.qml:163
-#, fuzzy, kde-format
-#| msgid "KDE e.V"
+#, kde-format
 msgid "KDE e.V."
-msgstr "KDE e. V."
+msgstr "KDE e.V."
 
 #: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:239
 #, kde-format
@@ -489,7 +496,7 @@ msgstr "Aktuelle Farbe „%1“"
 #, kde-format
 msgctxt "@action:button"
 msgid "Icon"
-msgstr ""
+msgstr "Symbol"
 
 #: formcard/FormDateTimeDelegate.qml:202
 #, kde-format
@@ -553,23 +560,19 @@ msgstr ""
 #, kde-format
 msgctxt "@action:inmnenu"
 msgid "Open Link"
-msgstr ""
+msgstr "Link öffnen"
 
 #: formcard/FormLinkDelegate.qml:60
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Copy to Clipboard"
+#, kde-format
 msgctxt "@action:inmnenu"
 msgid "Copy Link to Clipboard"
-msgstr "In die Zwischenablage kopieren"
+msgstr "Link in die Zwischenablage kopieren"
 
 #: formcard/FormLinkDelegate.qml:66
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "System information copied to clipboard."
+#, kde-format
 msgctxt "@info:status"
 msgid "Url copied to clipboard."
-msgstr "Die Systeminformationen sind in die Zwischenablage kopiert."
+msgstr "Link in die Zwischenablage kopiert."
 
 #: formcard/FormPasswordFieldDelegate.qml:249
 #: formcard/FormTextAreaDelegate.qml:174 formcard/FormTextFieldDelegate.qml:270
