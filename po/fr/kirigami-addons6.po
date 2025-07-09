@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-08 00:40+0000\n"
-"PO-Revision-Date: 2025-03-24 09:44+0100\n"
+"PO-Revision-Date: 2025-07-05 11:46+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.3\n"
 "X-Text-Markup: kde4\n"
 
 #, kde-format
@@ -508,47 +508,43 @@ msgstr "Non défini"
 #, kde-format
 msgctxt "@info:status"
 msgid "The path doesn't exist."
-msgstr ""
+msgstr "L'emplacement n'existe pas.."
 
 #: formcard/FormFileDelegate.qml:189
 #, kde-format
 msgctxt "@info:status"
 msgid "The file doesn't exist."
-msgstr ""
+msgstr "Le fichier n'existe pas."
 
 #: formcard/FormFileDelegate.qml:256
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select file"
-msgstr "Sélectionner"
+msgstr "Sélectionnez un fichier"
 
 #: formcard/FormFileDelegate.qml:263
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No file selected"
-msgstr ""
+msgstr "Aucun fichier sélectionné"
 
 #: formcard/FormFolderDelegate.qml:147
 #, kde-format
 msgctxt "@info:status"
 msgid "The folder doesn't exist."
-msgstr ""
+msgstr "Le fichier n'existe pas."
 
 #: formcard/FormFolderDelegate.qml:204
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select folder"
-msgstr "Sélectionner"
+msgstr "Sélectionner un dossier"
 
 #: formcard/FormFolderDelegate.qml:211
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No folder selected"
-msgstr ""
+msgstr "Aucun dossier sélectionné"
 
 #: formcard/FormLinkDelegate.qml:54
 #, kde-format

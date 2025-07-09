@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-08 00:40+0000\n"
-"PO-Revision-Date: 2025-07-05 01:35+0100\n"
+"PO-Revision-Date: 2025-07-08 03:32+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -95,8 +95,7 @@ msgid "Go Back"
 msgstr "Volver"
 
 #: components/ConvergentContextMenu.qml:405
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
 msgstr "Cerrar"
