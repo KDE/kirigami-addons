@@ -1,0 +1,30 @@
+include($KDE_DOCS/global/qt-module-defaults.qdocconf)
+
+project = KirigamiAddonsSounds
+description = Todo
+
+documentationinheaders = true
+
+headerdirs += .
+sourcedirs += .
+
+outputformats = HTML
+
+depends += kde kirigami qtcore qtquick qtquickcontrols qtgui qtmultimedia kirigamiaddonsdelegates
+
+qhp.projects = KirigamiAddonsSounds
+
+qhp.KirigamiAddonsSounds.file          = kirigamiaddonssounds.qhp
+qhp.KirigamiAddonsSounds.namespace     = org.kde.kirigamiaddonssounds.$QT_VERSION_TAG
+qhp.KirigamiAddonsSounds.virtualFolder = kirigamiaddonssounds
+qhp.KirigamiAddonsSounds.indexTitle    = Kirigami Addons Sounds
+qhp.KirigamiAddonsSounds.indexRoot     =
+
+qhp.KirigamiAddonsSounds.subprojects = sounds
+
+qhp.KirigamiAddonsSounds.subprojects.sounds.title = Kirigami Addons Sounds QML Types
+qhp.KirigamiAddonsSounds.subprojects.sounds.indexTitle = Kirigami Addons Sounds QML Types
+qhp.KirigamiAddonsSounds.subprojects.sounds.selectors = qmlmodule:org.kde.kirigamiaddons.sounds
+qhp.KirigamiAddonsSounds.subprojects.sounds.sortPages = true
+
+tagfile = kirigamiaddonssounds.tags
