@@ -15,7 +15,7 @@ ecm_add_qml_module(formcardplugin
 )
 
 if (TARGET Qt6::qdoc AND TARGET Qt6::qhelpgenerator)
-    ecm_generate_qdoc(formcardplugin formcard.qdocconf)
+    ecm_generate_qdoc(formcardplugin kirigamiaddonsformcard.qdocconf)
 endif()
 
 ecm_target_qml_sources(formcardplugin SOURCES
