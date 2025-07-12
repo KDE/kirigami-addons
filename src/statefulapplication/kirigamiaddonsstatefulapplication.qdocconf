@@ -22,9 +22,9 @@ qhp.KirigamiAddonsStatefulApplication.indexRoot     =
 
 qhp.KirigamiAddonsStatefulApplication.subprojects = statefulapplication
 
-qhp.KirigamiAddonsStatefulApplication.subprojects.statefulapp.title = Kirigami Addons StatefulApplication QML Types
-qhp.KirigamiAddonsStatefulApplication.subprojects.statefulapp.indexTitle = Kirigami Addons StatefulApplication QML Types
-qhp.KirigamiAddonsStatefulApplication.subprojects.statefulapp.selectors = qmlmodule:org.kde.kirigamiaddons.statefulapp
-qhp.KirigamiAddonsStatefulApplication.subprojects.statefulapp.sortPages = true
+qhp.KirigamiAddonsStatefulApplication.subprojects.statefulapplication.title = Kirigami Addons StatefulApplication QML Types
+qhp.KirigamiAddonsStatefulApplication.subprojects.statefulapplication.indexTitle = Kirigami Addons StatefulApplication QML Types
+qhp.KirigamiAddonsStatefulApplication.subprojects.statefulapplication.selectors = qmlmodule:org.kde.kirigamiaddons.statefulapp
+qhp.KirigamiAddonsStatefulApplication.subprojects.statefulapplication.sortPages = true
 
 tagfile = kirigamiaddonsstatefulapplication.tags
