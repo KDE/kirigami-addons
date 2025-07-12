@@ -17,7 +17,7 @@ add_library(KirigamiAddonsStatefulApp
 )
 
 if (TARGET Qt6::qdoc AND TARGET Qt6::qhelpgenerator)
-    ecm_generate_qdoc(KirigamiAddonsStatefulApp statefulapplication.qdocconf)
+    ecm_generate_qdoc(KirigamiAddonsStatefulApp kirigamiaddonsstatefulapplication.qdocconf)
 endif()
 
 set_target_properties(KirigamiAddonsStatefulApp PROPERTIES

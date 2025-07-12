@@ -1,0 +1,30 @@
+include($KDE_DOCS/global/qt-module-defaults.qdocconf)
+
+project = KirigamiAddonsStatefulApplicationLabs
+description = Todo
+
+documentationinheaders = true
+
+headerdirs += .
+sourcedirs += .
+
+outputformats = HTML
+
+depends += kde kirigami qtcore qtquick qtquickcontrols qtgui kirigamiaddonsstatefulapplication
+
+qhp.projects = KirigamiAddonsStatefulApplicationLabs
+
+qhp.KirigamiAddonsStatefulApplicationLabs.file          = kirigamiaddonsstatefulapplicationlabs.qhp
+qhp.KirigamiAddonsStatefulApplicationLabs.namespace     = org.kde.kirigamiaddonsstatefulapplicationlabs.$QT_VERSION_TAG
+qhp.KirigamiAddonsStatefulApplicationLabs.virtualFolder = kirigamiaddonsstatefulapplicationlabs
+qhp.KirigamiAddonsStatefulApplicationLabs.indexTitle    = Kirigami Addons StatefulApplication (Labs)
+qhp.KirigamiAddonsStatefulApplicationLabs.indexRoot     =
+
+qhp.KirigamiAddonsStatefulApplicationLabs.subprojects = statefulapplicationlabs
+
+qhp.KirigamiAddonsStatefulApplicationLabs.subprojects.statefulapplicationlabs.title = Kirigami Addons StatefulApplication (Labs) QML Types
+qhp.KirigamiAddonsStatefulApplicationLabs.subprojects.statefulapplicationlabs.indexTitle = Kirigami Addons StatefulApplication (Labs) QML Types
+qhp.KirigamiAddonsStatefulApplicationLabs.subprojects.statefulapplicationlabs.selectors = qmlmodule:org.kde.kirigamiaddons.statefulapp.labs
+qhp.KirigamiAddonsStatefulApplicationLabs.subprojects.statefulapplicationlabs.sortPages = true
+
+tagfile = kirigamiaddonsstatefulapplicationlabs.tags
