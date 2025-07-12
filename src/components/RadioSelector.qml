@@ -57,8 +57,8 @@ Item {
      */
     property int selectedIndex: actions.length > 0 ? 0 : -1
 
-    Layout.minimumWidth: consistentWidth ? 0 : switchLayout.implicitWidth
     Layout.fillWidth: consistentWidth
+    Layout.minimumWidth: switchLayout.implicitWidth
 
     implicitHeight: switchLayout.implicitHeight
 
@@ -74,6 +74,7 @@ Item {
 
     RowLayout {
         id: switchLayout
+        uniformCellSizes: root.consistentWidth
 
         anchors {
             top: root.top
@@ -92,7 +93,7 @@ Item {
                 required property int index
 
                 Layout.fillWidth: true
-                Layout.preferredWidth: root.consistentWidth ? (root.width/repeater.count)-(switchLayout.spacing/repeater.count-1) : button.implicitWidth
+                Layout.minimumWidth: button.implicitWidth
                 Layout.minimumHeight: Kirigami.Units.gridUnit * 2
 
                 checkable: true
