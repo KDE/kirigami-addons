@@ -508,12 +508,10 @@ msgid "The file doesn't exist."
 msgstr ""
 
 #: formcard/FormFileDelegate.qml:256
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select file"
-msgstr "Vybrat"
+msgstr "Vyberte soubor"
 
 #: formcard/FormFileDelegate.qml:263
 #, kde-format
