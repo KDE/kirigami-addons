@@ -1,0 +1,30 @@
+include($KDE_DOCS/global/qt-module-defaults.qdocconf)
+
+project = KirigamiAddonsDelegates
+description = Todo
+
+documentationinheaders = true
+
+headerdirs += .
+sourcedirs += .
+imagedirs  += ../../docs/pics
+outputformats = HTML
+
+depends += kde kirigami qtcore qtquick qtquickcontrols qtgui kirigamiaddonstreeview
+
+qhp.projects = KirigamiAddonsDelegates
+
+qhp.KirigamiAddonsDelegates.file          = kirigamiaddonsdelegates.qhp
+qhp.KirigamiAddonsDelegates.namespace     = org.kde.kirigamiaddonsdelegates.$QT_VERSION_TAG
+qhp.KirigamiAddonsDelegates.virtualFolder = kirigamiaddonsdelegates
+qhp.KirigamiAddonsDelegates.indexTitle    = Kirigami Addons Delegates
+qhp.KirigamiAddonsDelegates.indexRoot     =
+
+qhp.KirigamiAddonsDelegates.subprojects = delegates
+
+qhp.KirigamiAddonsDelegates.subprojects.delegates.title = Kirigami Addons Delegates QML Types
+qhp.KirigamiAddonsDelegates.subprojects.delegates.indexTitle = Kirigami Addons Delegates QML Types
+qhp.KirigamiAddonsDelegates.subprojects.delegates.selectors = qmlmodule:org.kde.kirigamiaddons.delegates
+qhp.KirigamiAddonsDelegates.subprojects.delegates.sortPages = true
+
+tagfile = kirigamiaddonsdelegates.tags
