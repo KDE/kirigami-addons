@@ -6,7 +6,7 @@
 ecm_add_qml_module(componentslabsplugin URI "org.kde.kirigamiaddons.labs.components" VERSION 1.0 CLASS_NAME ComponentsLabsPlugin)
 
 if (TARGET Qt6::qdoc AND TARGET Qt6::qhelpgenerator)
-    ecm_generate_qdoc(componentslabsplugin components.qdocconf)
+    ecm_generate_qdoc(componentslabsplugin kirigamiaddonscomponents.qdocconf)
 endif()
 
 target_sources(componentslabsplugin PRIVATE
