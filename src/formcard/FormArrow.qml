@@ -4,8 +4,6 @@
  */
 
 import QtQuick
-import QtQuick.Controls
-import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 
@@ -39,9 +37,9 @@ Kirigami.Icon {
             case Qt.DownArrow:
                 return "arrow-down-symbolic";
             case Qt.LeftArrow:
-                return "arrow-left-symbolic";
+                return Qt.application.layoutDirection === Qt.RightToLeft ? "arrow-right-symbolic" : "arrow-left-symbolic";
             case Qt.RightArrow:
-                return "arrow-right-symbolic";
+                return Qt.application.layoutDirection === Qt.RightToLeft ? "arrow-left-symbolic" : "arrow-right-symbolic";
         }
     }
     implicitWidth: 12
