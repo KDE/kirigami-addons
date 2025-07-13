@@ -33,8 +33,9 @@ Kirigami.ShadowedRectangle {
     required property T.Control control
 
     readonly property bool _roundCorners: control?.parent?._roundCorners === true
-    readonly property bool _isFirst: _roundCorners && control.parent.children[0] === control
-    readonly property bool _isLast: _roundCorners && control.parent.children[control.parent.children.length - 1] === control
+    readonly property list<Item> _visibleItems: control.parent.visibleChildren.filter(child => child.height !== 0)
+    readonly property bool _isFirst: _roundCorners && _visibleItems[0] === control
+    readonly property bool _isLast: _roundCorners && _visibleItems[_visibleItems.length - 1] === control
 
     color: {
         let colorOpacity = 0;
