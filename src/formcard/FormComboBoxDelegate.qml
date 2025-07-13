@@ -387,7 +387,7 @@ AbstractFormDelegate {
         return combobox.indexOfValue(value);
     }
 
-    focusPolicy: Qt.StrongFocus
+    focusPolicy: displayMode === FormComboBoxDelegate.ComboBox ? Qt.NoFocus : Qt.StrongFocus
     Accessible.description: description
     Accessible.onPressAction: controlRoot.clicked()
 
@@ -429,7 +429,7 @@ AbstractFormDelegate {
 
         QQC2.ComboBox {
             id: combobox
-            focusPolicy: Qt.NoFocus // provided by parent
+            focusPolicy: controlRoot.displayMode === FormComboBoxDelegate.ComboBox ? Qt.StrongFocus : Qt.NoFocus
             model: controlRoot.model
             visible: controlRoot.displayMode == FormComboBoxDelegate.ComboBox
             delegate: controlRoot.comboBoxDelegate
