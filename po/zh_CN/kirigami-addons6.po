@@ -93,8 +93,7 @@ msgid "Go Back"
 msgstr "返回"
 
 #: components/ConvergentContextMenu.qml:405
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
 msgstr "关闭"
@@ -494,43 +493,43 @@ msgstr "未设置"
 #, kde-format
 msgctxt "@info:status"
 msgid "The path doesn't exist."
-msgstr ""
+msgstr "此路径不存在。"
 
 #: formcard/FormFileDelegate.qml:189
 #, kde-format
 msgctxt "@info:status"
 msgid "The file doesn't exist."
-msgstr ""
+msgstr "此文件不存在。"
 
 #: formcard/FormFileDelegate.qml:256
 #, kde-format
 msgctxt "@action:button"
 msgid "Select file"
-msgstr ""
+msgstr "选择文件"
 
 #: formcard/FormFileDelegate.qml:263
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No file selected"
-msgstr ""
+msgstr "没有选择文件"
 
 #: formcard/FormFolderDelegate.qml:147
 #, kde-format
 msgctxt "@info:status"
 msgid "The folder doesn't exist."
-msgstr ""
+msgstr "此文件夹不存在。"
 
 #: formcard/FormFolderDelegate.qml:204
 #, kde-format
 msgctxt "@action:button"
 msgid "Select folder"
-msgstr ""
+msgstr "选择文件夹"
 
 #: formcard/FormFolderDelegate.qml:211
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No folder selected"
-msgstr ""
+msgstr "没有选择文件夹"
 
 #: formcard/FormLinkDelegate.qml:54
 #, kde-format
