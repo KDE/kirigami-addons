@@ -11,7 +11,7 @@ ecm_add_qml_module(componentslabsplugin
 )
 
 if (TARGET Qt6::qdoc AND TARGET Qt6::qhelpgenerator)
-    ecm_generate_qdoc(componentslabsplugin components.qdocconf)
+    ecm_generate_qdoc(componentslabsplugin kirigamiaddonscomponents.qdocconf)
 endif()
 
 target_sources(componentslabsplugin PRIVATE

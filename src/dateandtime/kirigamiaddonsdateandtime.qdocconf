@@ -1,0 +1,30 @@
+include($KDE_DOCS/global/qt-module-defaults.qdocconf)
+
+project = KirigamiAddonsDateAndTime
+description = Todo
+
+documentationinheaders = true
+
+headerdirs += .
+sourcedirs += .
+
+outputformats = HTML
+
+depends += kde kirigami qtcore qtquick qtquickcontrols qtgui kirigamiaddonscomponents
+
+qhp.projects = KirigamiAddonsDateAndTime
+
+qhp.KirigamiAddonsDateAndTime.file          = kirigamiaddonsdateandtime.qhp
+qhp.KirigamiAddonsDateAndTime.namespace     = org.kde.kirigamiaddonsdateandtime.$QT_VERSION_TAG
+qhp.KirigamiAddonsDateAndTime.virtualFolder = kirigamiaddonsdateandtime
+qhp.KirigamiAddonsDateAndTime.indexTitle    = Kirigami Addons Date And Time
+qhp.KirigamiAddonsDateAndTime.indexRoot     =
+
+qhp.KirigamiAddonsDateAndTime.subprojects = dateandtime
+
+qhp.KirigamiAddonsDateAndTime.subprojects.dateandtime.title = Kirigami Addons Date And Time QML Types
+qhp.KirigamiAddonsDateAndTime.subprojects.dateandtime.indexTitle = Kirigami Addons Date And Time QML Types
+qhp.KirigamiAddonsDateAndTime.subprojects.dateandtime.selectors = qmlmodule:org.kde.kirigamiaddons.dateandtime
+qhp.KirigamiAddonsDateAndTime.subprojects.dateandtime.sortPages = true
+
+tagfile = kirigamiaddonsdateandtime.tags

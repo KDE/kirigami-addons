@@ -1,0 +1,36 @@
+include($KDE_DOCS/global/qt-module-defaults.qdocconf)
+
+project = KirigamiAddonsComponents
+description = Todo
+
+documentationinheaders = true
+
+headerdirs += .
+sourcedirs += .
+imagedirs  += ../../docs/pics
+
+outputformats = HTML
+
+depends += kde kirigami kirigamiplatform qtcore qtquick qtquickcontrols qtgui qtmultimedia kirigamiaddonsdateandtime kirigamiaddonsdelegates kirigamiaddonsformcard kirigamiaddonssettings kirigamiaddonssounds kirigamiaddonsstatefulapplication kirigamiaddonsstatefulapplicationlabs kirigamiaddonstableview kirigamiaddonstreeview
+
+qhp.projects = KirigamiAddonsComponents
+
+qhp.KirigamiAddonsComponents.file          = kirigamiaddonscomponents.qhp
+qhp.KirigamiAddonsComponents.namespace     = org.kde.kirigamiaddonscomponents.$QT_VERSION_TAG
+qhp.KirigamiAddonsComponents.virtualFolder = kirigamiaddonscomponents
+qhp.KirigamiAddonsComponents.indexTitle    = Kirigami Addons Components
+qhp.KirigamiAddonsComponents.indexRoot     =
+
+qhp.KirigamiAddonsComponents.subprojects = components componentslabs
+
+qhp.KirigamiAddonsComponents.subprojects.components.title = Kirigami Addons Components QML Types
+qhp.KirigamiAddonsComponents.subprojects.components.indexTitle = Kirigami Addons Components QML Types
+qhp.KirigamiAddonsComponents.subprojects.components.selectors = qmlmodule:org.kde.kirigamiaddons.components
+qhp.KirigamiAddonsComponents.subprojects.components.sortPages = true
+
+qhp.KirigamiAddonsComponents.subprojects.componentslabs.title = Kirigami Addons Components (Labs) QML Types
+qhp.KirigamiAddonsComponents.subprojects.componentslabs.indexTitle = Kirigami Addons Components (Labs) QML Types
+qhp.KirigamiAddonsComponents.subprojects.componentslabs.selectors = qmlmodule:org.kde.kirigamiaddons.labs.components
+qhp.KirigamiAddonsComponents.subprojects.componentslabs.sortPages = true
+
+tagfile = kirigamiaddonscomponents.tags

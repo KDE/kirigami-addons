@@ -10,7 +10,7 @@ ecm_add_qml_module(statefulapplabsplugin
 )
 
 if (TARGET Qt6::qdoc AND TARGET Qt6::qhelpgenerator)
-    ecm_generate_qdoc(statefulapplabsplugin statefulapplabs.qdocconf)
+    ecm_generate_qdoc(statefulapplabsplugin kirigamiaddonsstatefulapplicationlabs.qdocconf)
 endif()
 
 ecm_target_qml_sources(statefulapplabsplugin SOURCES

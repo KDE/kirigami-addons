@@ -1,0 +1,30 @@
+include($KDE_DOCS/global/qt-module-defaults.qdocconf)
+
+project = KirigamiAddonsTreeview
+description = Todo
+
+documentationinheaders = true
+
+headerdirs += .
+sourcedirs += .
+
+outputformats = HTML
+
+depends += kde kirigami kitemmodels qtcore qtquick qtquickcontrols qtgui
+
+qhp.projects = KirigamiAddonsTreeView
+
+qhp.KirigamiAddonsTreeView.file          = kirigamiaddonstreeview.qhp
+qhp.KirigamiAddonsTreeView.namespace     = org.kde.kirigamiaddonstreeview.$QT_VERSION_TAG
+qhp.KirigamiAddonsTreeView.virtualFolder = kirigamiaddonstreeview
+qhp.KirigamiAddonsTreeView.indexTitle    = Kirigami Addons TreeView
+qhp.KirigamiAddonsTreeView.indexRoot     =
+
+qhp.KirigamiAddonsTreeView.subprojects = treeview
+
+qhp.KirigamiAddonsTreeView.subprojects.treeview.title = Kirigami Addons TreeView QML Types
+qhp.KirigamiAddonsTreeView.subprojects.treeview.indexTitle = Kirigami Addons TreeView QML Types
+qhp.KirigamiAddonsTreeView.subprojects.treeview.selectors = qmlmodule:org.kde.kirigamiaddons.treeview
+qhp.KirigamiAddonsTreeView.subprojects.treeview.sortPages = true
+
+tagfile = kirigamiaddonstreeview.tags

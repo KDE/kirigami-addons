@@ -10,7 +10,7 @@ ecm_add_qml_module(tableviewplugin
 )
 
 if (TARGET Qt6::qdoc AND TARGET Qt6::qhelpgenerator)
-    ecm_generate_qdoc(tableviewplugin tableview.qdocconf)
+    ecm_generate_qdoc(tableviewplugin kirigamiaddonstableview.qdocconf)
 endif()
 
 ecm_target_qml_sources(tableviewplugin SOURCES

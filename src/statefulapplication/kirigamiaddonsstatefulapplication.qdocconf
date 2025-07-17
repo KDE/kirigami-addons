@@ -1,0 +1,30 @@
+include($KDE_DOCS/global/qt-module-defaults.qdocconf)
+
+project = KirigamiAddonsStatefulApplication
+description = Todo
+
+documentationinheaders = true
+
+headerdirs += .
+sourcedirs += .
+
+outputformats = HTML
+
+depends += kde kirigami kconfigqml kconfiggui qtcore qtquick qtquickcontrols qtgui
+
+qhp.projects = KirigamiAddonsStatefulApplication
+
+qhp.KirigamiAddonsStatefulApplication.file          = kirigamiaddonsstatefulapplication.qhp
+qhp.KirigamiAddonsStatefulApplication.namespace     = org.kde.kirigamiaddonsstatefulapplication.$QT_VERSION_TAG
+qhp.KirigamiAddonsStatefulApplication.virtualFolder = kirigamiaddonsstatefulapplication
+qhp.KirigamiAddonsStatefulApplication.indexTitle    = Kirigami Addons StatefulApplication
+qhp.KirigamiAddonsStatefulApplication.indexRoot     =
+
+qhp.KirigamiAddonsStatefulApplication.subprojects = statefulapplication
+
+qhp.KirigamiAddonsStatefulApplication.subprojects.statefulapplication.title = Kirigami Addons StatefulApplication QML Types
+qhp.KirigamiAddonsStatefulApplication.subprojects.statefulapplication.indexTitle = Kirigami Addons StatefulApplication QML Types
+qhp.KirigamiAddonsStatefulApplication.subprojects.statefulapplication.selectors = qmlmodule:org.kde.kirigamiaddons.statefulapp
+qhp.KirigamiAddonsStatefulApplication.subprojects.statefulapplication.sortPages = true
+
+tagfile = kirigamiaddonsstatefulapplication.tags

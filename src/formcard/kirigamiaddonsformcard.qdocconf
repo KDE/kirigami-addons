@@ -1,0 +1,31 @@
+include($KDE_DOCS/global/qt-module-defaults.qdocconf)
+
+project = KirigamiAddonsFormCard
+description = Todo
+
+documentationinheaders = true
+
+headerdirs += .
+sourcedirs += .
+imagedirs  += ../../docs/pics
+
+outputformats = HTML
+
+depends += kde kirigami kirigamiaddonscomponents kcoreaddons kirigamiplatform qtcore qtquick qtquickcontrols qtgui kirigamiaddonscomponents kirigamiaddonsdateandtime kirigamiaddonsdelegates
+
+qhp.projects = KirigamiAddonsFormCard
+
+qhp.KirigamiAddonsFormCard.file          = kirigamiaddonsformcard.qhp
+qhp.KirigamiAddonsFormCard.namespace     = org.kde.kirigamiaddonsformcard.$QT_VERSION_TAG
+qhp.KirigamiAddonsFormCard.virtualFolder = kirigamiaddonsformcard
+qhp.KirigamiAddonsFormCard.indexTitle    = Kirigami Addons FormCard
+qhp.KirigamiAddonsFormCard.indexRoot     =
+
+qhp.KirigamiAddonsFormCard.subprojects = formcard
+
+qhp.KirigamiAddonsFormCard.subprojects.formcard.title = Kirigami Addons FormCard QML Types
+qhp.KirigamiAddonsFormCard.subprojects.formcard.indexTitle = Kirigami Addons FormCard QML Types
+qhp.KirigamiAddonsFormCard.subprojects.formcard.selectors = qmlmodule:org.kde.kirigamiaddons.formcard
+qhp.KirigamiAddonsFormCard.subprojects.formcard.sortPages = true
+
+tagfile = kirigamiaddonsformcard.tags

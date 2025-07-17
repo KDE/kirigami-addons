@@ -11,7 +11,7 @@ ecm_add_qml_module(settingsplugin
 )
 
 if (TARGET Qt6::qdoc AND TARGET Qt6::qhelpgenerator)
-    ecm_generate_qdoc(settingsplugin settings.qdocconf)
+    ecm_generate_qdoc(settingsplugin kirigamiaddonssettings.qdocconf)
 endif()
 
 ecm_target_qml_sources(settingsplugin SOURCES

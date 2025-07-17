@@ -1,0 +1,31 @@
+include($KDE_DOCS/global/qt-module-defaults.qdocconf)
+
+project = KirigamiAddonsSettings
+description = Todo
+
+documentationinheaders = true
+
+headerdirs += .
+sourcedirs += .
+imagedirs  += ../../docs/pics
+
+outputformats = HTML
+
+depends += kde kirigami kirigamiaddonsstatefulapplication qtcore qtquick qtquickcontrols qtgui
+
+qhp.projects = KirigamiAddonsSettings
+
+qhp.KirigamiAddonsSettings.file          = kirigamiaddonssettings.qhp
+qhp.KirigamiAddonsSettings.namespace     = org.kde.kirigamiaddonssettings.$QT_VERSION_TAG
+qhp.KirigamiAddonsSettings.virtualFolder = kirigamiaddonssettings
+qhp.KirigamiAddonsSettings.indexTitle    = Kirigami Addons Settings
+qhp.KirigamiAddonsSettings.indexRoot     =
+
+qhp.KirigamiAddonsSettings.subprojects = settings
+
+qhp.KirigamiAddonsSettings.subprojects.settings.title = Kirigami Addons Settings QML Types
+qhp.KirigamiAddonsSettings.subprojects.settings.indexTitle = Kirigami Addons Settings QML Types
+qhp.KirigamiAddonsSettings.subprojects.settings.selectors = qmlmodule:org.kde.kirigamiaddons.settings
+qhp.KirigamiAddonsSettings.subprojects.settings.sortPages = true
+
+tagfile = kirigamiaddonssettings.tags
