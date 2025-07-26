@@ -5,6 +5,7 @@
 
 #include <KCoreAddons>
 #include <KLocalizedString>
+#include <KSandbox>
 #include <QGuiApplication>
 #include <QClipboard>
 
@@ -37,6 +38,20 @@ QList<KAboutComponent> AboutComponent::components() const
                                           i18n("Using %1 and built against %2", QString::fromLocal8Bit(qVersion()), QStringLiteral(QT_VERSION_STR)),
                                           QStringLiteral("https://www.qt.io/"),
                                           KAboutLicense::LGPL_V3));
+
+#ifdef Q_OS_LINUX
+    QString packageText = i18nc("Linux packaging format", "Unknown/Default");
+    if (KSandbox::isFlatpak()) {
+        packageText = i18nc("Linux packaging format", "Flatpak");
+    }
+    if (KSandbox::isSnap()) {
+        packageText = i18nc("Linux packaging format", "Snap");
+    }
+    if (qEnvironmentVariableIsSet("APPIMAGE")) {
+        packageText = i18nc("Linux packaging format", "AppImage");
+    }
+    allComponents.append(KAboutComponent(packageText, i18nc("@info", "Distribution method.")));
+#endif
 
     allComponents.prepend(KAboutComponent(platform, i18nc("@info", "Underlying platform.")));
 
