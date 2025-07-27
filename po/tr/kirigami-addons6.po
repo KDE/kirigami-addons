@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-08 00:40+0000\n"
+"POT-Creation-Date: 2025-07-27 00:40+0000\n"
 "PO-Revision-Date: 2025-07-08 13:25+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -201,18 +201,18 @@ msgstr ":"
 msgid "Minutes"
 msgstr "Dakika"
 
-#: formcard/aboutcomponent.cpp:25
+#: formcard/aboutcomponent.cpp:26
 #, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: formcard/aboutcomponent.cpp:29
+#: formcard/aboutcomponent.cpp:30
 #, kde-format
 msgid "KDE Frameworks"
 msgstr "KDE Frameworks"
 
-#: formcard/aboutcomponent.cpp:30
+#: formcard/aboutcomponent.cpp:31
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
@@ -220,23 +220,53 @@ msgstr ""
 "Qt’yi genişletmek üzere KDE Topluluğu tarafından oluşturulan kitaplıklar "
 "koleksiyonu"
 
-#: formcard/aboutcomponent.cpp:35
+#: formcard/aboutcomponent.cpp:36
 #, kde-format
 msgid "Qt"
 msgstr "Qt"
 
-#: formcard/aboutcomponent.cpp:36
+#: formcard/aboutcomponent.cpp:37
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
 msgstr "Çapraz platform uygulama geliştirme çatısı"
 
-#: formcard/aboutcomponent.cpp:37
+#: formcard/aboutcomponent.cpp:38
 #, kde-format
 msgid "Using %1 and built against %2"
 msgstr "%1 kullanarak %2 üzerine yapılı"
 
-#: formcard/aboutcomponent.cpp:41
+#: formcard/aboutcomponent.cpp:43
+#, kde-format
+msgctxt "Linux packaging format"
+msgid "Unknown/Default"
+msgstr ""
+
+#: formcard/aboutcomponent.cpp:45
+#, kde-format
+msgctxt "Linux packaging format"
+msgid "Flatpak"
+msgstr ""
+
+#: formcard/aboutcomponent.cpp:48
+#, kde-format
+msgctxt "Linux packaging format"
+msgid "Snap"
+msgstr ""
+
+#: formcard/aboutcomponent.cpp:51
+#, kde-format
+msgctxt "Linux packaging format"
+msgid "AppImage"
+msgstr ""
+
+#: formcard/aboutcomponent.cpp:53
+#, kde-format
+msgctxt "@info"
+msgid "Distribution method."
+msgstr ""
+
+#: formcard/aboutcomponent.cpp:56
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
