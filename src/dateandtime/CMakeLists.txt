@@ -24,9 +24,7 @@ ecm_add_qml_module(dateandtimeplugin
         org.kde.kirigamiaddons.delegates
 )
 
-if (TARGET Qt6::qdoc AND TARGET Qt6::qhelpgenerator)
-    ecm_generate_qdoc(dateandtimeplugin kirigamiaddonsdateandtime.qdocconf)
-endif()
+ecm_generate_qdoc(dateandtimeplugin kirigamiaddonsdateandtime.qdocconf)
 
 target_compile_definitions(dateandtimeplugin PRIVATE -DTRANSLATION_DOMAIN=\"kirigami-addons6\")
 

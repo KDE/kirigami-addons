@@ -9,9 +9,7 @@ ecm_add_qml_module(tableviewplugin
         org.kde.kirigami
 )
 
-if (TARGET Qt6::qdoc AND TARGET Qt6::qhelpgenerator)
-    ecm_generate_qdoc(tableviewplugin kirigamiaddonstableview.qdocconf)
-endif()
+ecm_generate_qdoc(tableviewplugin kirigamiaddonstableview.qdocconf)
 
 ecm_target_qml_sources(tableviewplugin SOURCES
     qml/ListTableView.qml

@@ -9,8 +9,8 @@ include(FeatureSummary)
 
 set(AUTOMOC_MOC_OPTIONS -Muri=org.kde.kirigami)
 
-set(QT_REQUIRED_VERSION "6.6")
-set(KF_MIN_VERSION "6.15.0")
+set(QT_REQUIRED_VERSION "6.7.0")
+set(KF_MIN_VERSION "6.16.0")
 
 find_package(ECM ${KF_MIN_VERSION} NO_MODULE)
 set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://projects.kde.org/projects/kdesupport/extra-cmake-modules")
@@ -34,8 +34,6 @@ include(KDEClangFormat)
 include(ECMGenerateQDoc)
 
 find_package(Qt6 ${QT_REQUIRED_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick QuickControls2)
-find_package(Qt6Tools CONFIG)
-find_package(Qt6 COMPONENTS ToolsTools CONFIG)
 
 find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS Kirigami I18n Config CoreAddons GuiAddons ColorScheme)
 if (BUILD_TESTING)

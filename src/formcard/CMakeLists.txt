@@ -14,9 +14,7 @@ ecm_add_qml_module(formcardplugin
         org.kde.kirigamiaddons.delegates
 )
 
-if (TARGET Qt6::qdoc AND TARGET Qt6::qhelpgenerator)
-    ecm_generate_qdoc(formcardplugin kirigamiaddonsformcard.qdocconf)
-endif()
+ecm_generate_qdoc(formcardplugin kirigamiaddonsformcard.qdocconf)
 
 ecm_target_qml_sources(formcardplugin SOURCES
     AboutKDE.qml

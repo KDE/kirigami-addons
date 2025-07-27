@@ -9,9 +9,7 @@ ecm_add_qml_module(statefulapplabsplugin
         "org.kde.kirigamiaddons.statefulapp.private"
 )
 
-if (TARGET Qt6::qdoc AND TARGET Qt6::qhelpgenerator)
-    ecm_generate_qdoc(statefulapplabsplugin kirigamiaddonsstatefulapplicationlabs.qdocconf)
-endif()
+ecm_generate_qdoc(statefulapplabsplugin kirigamiaddonsstatefulapplicationlabs.qdocconf)
 
 ecm_target_qml_sources(statefulapplabsplugin SOURCES
     NativeMenuItem.qml

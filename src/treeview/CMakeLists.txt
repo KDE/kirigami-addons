@@ -3,9 +3,7 @@
 
 ecm_add_qml_module(treeviewplugin URI "org.kde.kirigamiaddons.treeview" VERSION 1.0 CLASS_NAME TreeViewPlugin)
 
-if (TARGET Qt6::qdoc AND TARGET Qt6::qhelpgenerator)
-    ecm_generate_qdoc(treeviewplugin kirigamiaddonstreeview.qdocconf)
-endif()
+ecm_generate_qdoc(treeviewplugin kirigamiaddonstreeview.qdocconf)
 
 target_sources(treeviewplugin PRIVATE
     treeviewplugin.cpp
