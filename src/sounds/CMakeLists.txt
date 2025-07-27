@@ -10,9 +10,7 @@ ecm_add_qml_module(soundsplugin
         org.kde.kirigamiaddons.delegates
 )
 
-if (TARGET Qt6::qdoc AND TARGET Qt6::qhelpgenerator)
-    ecm_generate_qdoc(soundsplugin kirigamiaddonssounds.qdocconf)
-endif()
+ecm_generate_qdoc(soundsplugin kirigamiaddonssounds.qdocconf)
 
 target_compile_definitions(soundsplugin PRIVATE -DTRANSLATION_DOMAIN=\"kirigami_sounds6\")
 
