@@ -10,9 +10,7 @@ ecm_add_qml_module(componentslabsplugin
     DEPENDENCIES org.kde.kirigamiaddons.components QtMultimedia
 )
 
-if (TARGET Qt6::qdoc AND TARGET Qt6::qhelpgenerator)
-    ecm_generate_qdoc(componentslabsplugin kirigamiaddonscomponents.qdocconf)
-endif()
+ecm_generate_qdoc(componentslabsplugin kirigamiaddonscomponents.qdocconf)
 
 target_sources(componentslabsplugin PRIVATE
     nameutils.h

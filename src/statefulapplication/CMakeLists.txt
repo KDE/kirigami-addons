@@ -16,9 +16,7 @@ add_library(KirigamiAddonsStatefulApp
     shortcutsmodel_p.h
 )
 
-if (TARGET Qt6::qdoc AND TARGET Qt6::qhelpgenerator)
-    ecm_generate_qdoc(KirigamiAddonsStatefulApp kirigamiaddonsstatefulapplication.qdocconf)
-endif()
+ecm_generate_qdoc(KirigamiAddonsStatefulApp kirigamiaddonsstatefulapplication.qdocconf)
 
 set_target_properties(KirigamiAddonsStatefulApp PROPERTIES
     VERSION     ${PROJECT_VERSION}
