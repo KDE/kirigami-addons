@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-27 00:40+0000\n"
-"PO-Revision-Date: 2025-07-08 12:14+0300\n"
+"PO-Revision-Date: 2025-07-27 16:42+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -240,31 +240,31 @@ msgstr "Використано %1 і зібрано з використання�
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Unknown/Default"
-msgstr ""
+msgstr "Невідомий/Типовий"
 
 #: formcard/aboutcomponent.cpp:45
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: formcard/aboutcomponent.cpp:48
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Snap"
-msgstr ""
+msgstr "Snap"
 
 #: formcard/aboutcomponent.cpp:51
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "AppImage"
-msgstr ""
+msgstr "AppImage"
 
 #: formcard/aboutcomponent.cpp:53
 #, kde-format
 msgctxt "@info"
 msgid "Distribution method."
-msgstr ""
+msgstr "Спосіб пакування."
 
 #: formcard/aboutcomponent.cpp:56
 #, kde-format
