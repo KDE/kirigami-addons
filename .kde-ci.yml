@@ -23,4 +23,4 @@ Dependencies:
 
 Options:
   enable-lsan: True
-#  require-passing-tests-on: [ 'Linux/Qt6' ]
+  require-passing-tests-on: [ '@all' ]
