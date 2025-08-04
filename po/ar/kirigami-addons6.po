@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-27 00:40+0000\n"
-"PO-Revision-Date: 2025-07-14 20:30+0400\n"
+"PO-Revision-Date: 2025-08-03 11:08+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -238,31 +238,31 @@ msgstr "يستخدم %1 وبنيت على %2"
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Unknown/Default"
-msgstr ""
+msgstr "مجهول/ مبدئي"
 
 #: formcard/aboutcomponent.cpp:45
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Flatpak"
-msgstr ""
+msgstr "فلات باك"
 
 #: formcard/aboutcomponent.cpp:48
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Snap"
-msgstr ""
+msgstr "سناب"
 
 #: formcard/aboutcomponent.cpp:51
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "AppImage"
-msgstr ""
+msgstr "آب إيماج"
 
 #: formcard/aboutcomponent.cpp:53
 #, kde-format
 msgctxt "@info"
 msgid "Distribution method."
-msgstr ""
+msgstr "طريقة التوزيع."
 
 #: formcard/aboutcomponent.cpp:56
 #, kde-format
@@ -397,7 +397,7 @@ msgid ""
 "\n"
 "Thank you very much in advance for your support."
 msgstr ""
-"إن كِيدِي متوفرة بدون مقابل، ولكن صنعها ليس كذلك. \n"
+"إن كِيدِي متوفرة دون مقابل، ولكن صنعها ليس كذلك. \n"
 "\n"
 "لذا قام فريق كِيدِي بتكوين KDE e.V ، وهي منظمة غير ربحية موجودة بشكل قانوني في "
 "في ألمانيا. تمثّل KDE e.V مشروع كِيدِي في الأمور القانونية و المالية. \n"
@@ -817,7 +817,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
-msgstr "امسح تسلسل المفاتيح"
+msgstr "امحُ تسلسل المفاتيح"
 
 #: statefulapplication/private/KeySequenceItem.qml:198
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-27 00:40+0000\n"
-"PO-Revision-Date: 2025-07-19 15:05+0530\n"
+"PO-Revision-Date: 2025-08-03 21:08+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -237,19 +237,19 @@ msgstr "%1 பயன்படுத்தி %2 கொண்டு தொகு�
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Unknown/Default"
-msgstr ""
+msgstr "தெரியாதது/இயல்பானது"
 
 #: formcard/aboutcomponent.cpp:45
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Flatpak"
-msgstr ""
+msgstr "ஃபலாட்பாக்"
 
 #: formcard/aboutcomponent.cpp:48
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Snap"
-msgstr ""
+msgstr "ஸ்னாப்"
 
 #: formcard/aboutcomponent.cpp:51
 #, kde-format
@@ -261,7 +261,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Distribution method."
-msgstr ""
+msgstr "வழங்கப்படும் முறை."
 
 #: formcard/aboutcomponent.cpp:56
 #, kde-format
