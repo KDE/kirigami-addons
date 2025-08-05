@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-27 00:40+0000\n"
-"PO-Revision-Date: 2025-08-03 11:08+0400\n"
+"PO-Revision-Date: 2025-08-03 23:24+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -625,7 +625,7 @@ msgstr "إعدادات"
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Enable automatic spell checking"
-msgstr "فعّل تدقيق الهجاء الآليّ"
+msgstr "مكّن تدقيق الهجاء الآليّ"
 
 #: settings/private/SonnetConfigPage.qml:55
 #, kde-format
@@ -643,7 +643,7 @@ msgstr "تجاهل الكلمات الموصولة"
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Detect language automatically"
-msgstr "تعرف على اللغة آليا"
+msgstr "تعرف على اللغة آليّا"
 
 #: settings/private/SonnetConfigPage.qml:96
 #, kde-format
@@ -670,7 +670,7 @@ msgid ""
 "when autodetection is enabled."
 msgstr ""
 "‏%1 سيوفر التدقيق الإملائي والاقتراحات للغات المدرجة هنا عند تمكين الاكتشاف "
-"التلقائي."
+"الآليّ."
 
 #: settings/private/SonnetConfigPage.qml:131
 #, kde-format
