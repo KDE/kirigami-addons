@@ -4,11 +4,7 @@
 */
 
 #include <QtGlobal>
-#ifdef Q_OS_ANDROID
-#include <QGuiApplication>
-#else
-#include <QApplication>
-#endif
+#include <KirigamiApp.h>
 
 #include <QIcon>
 #include <QQmlApplicationEngine>
@@ -24,10 +20,6 @@
 
 #include "%{APPNAMELC}config.h"
 
-#ifdef Q_OS_WINDOWS
-#include <Windows.h>
-#endif
-
 using namespace Qt::Literals::StringLiterals;
 
 #ifdef Q_OS_ANDROID
@@ -35,31 +27,8 @@ Q_DECL_EXPORT
 #endif
 int main(int argc, char *argv[])
 {
-#ifdef Q_OS_ANDROID
-    QGuiApplication app(argc, argv);
-    QQuickStyle::setStyle(QStringLiteral("org.kde.breeze"));
-#else
-    KIconTheme::initTheme();
-    QIcon::setFallbackThemeName("breeze"_L1);
-    QApplication app(argc, argv);
-
-    // Default to org.kde.desktop style unless the user forces another style
-    if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE")) {
-        QQuickStyle::setStyle(u"org.kde.desktop"_s);
-    }
-#endif
-
-#ifdef Q_OS_WINDOWS
-    if (AttachConsole(ATTACH_PARENT_PROCESS)) {
-        freopen("CONOUT$", "w", stdout);
-        freopen("CONOUT$", "w", stderr);
-    }
-
-    QApplication::setStyle(QStringLiteral("breeze"));
-    auto font = app.font();
-    font.setPointSize(10);
-    app.setFont(font);
-#endif
+    KirigamiApp::App app(argc, argv);
+    KirigamiApp kapp;
 
     KLocalizedString::setApplicationDomain("%{APPNAMELC}");
     QCoreApplication::setOrganizationName(u"KDE"_s);
@@ -93,6 +62,13 @@ int main(int argc, char *argv[])
 
     KLocalization::setupLocalizedContext(&engine);
     engine.loadFromModule("org.kde.%{APPNAMELC}", u"Main"_s);
+
+    {
+        QCommandLineParser parser;
+        aboutData.setupCommandLine(&parser);
+        parser.process(app);
+        aboutData.processCommandLine(&parser);
+    }
 
     if (engine.rootObjects().isEmpty()) {
         return -1;
