@@ -38,12 +38,14 @@ find_package(Qt6 ${QT_REQUIRED_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick
 find_package(Qt6Tools CONFIG)
 find_package(Qt6 COMPONENTS ToolsTools CONFIG)
 
-find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS Kirigami I18n Config CoreAddons GuiAddons)
+find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS Kirigami I18n Config CoreAddons GuiAddons IconThemes ColorScheme)
 if (BUILD_TESTING)
     find_package(Qt6QuickTest ${QT_REQUIRED_VERSION} CONFIG QUIET)
 endif()
 if (ANDROID)
     find_package(Gradle REQUIRED)
+else()
+    find_package(KF6Crash ${KF_DEP_VERSION} REQUIRED)
 endif()
 
 if(NOT WIN32 AND NOT APPLE AND NOT ANDROID AND NOT HAIKU)
