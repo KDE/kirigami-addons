@@ -38,7 +38,7 @@ find_package(Qt6 ${QT_REQUIRED_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick
 find_package(Qt6Tools CONFIG)
 find_package(Qt6 COMPONENTS ToolsTools CONFIG)
 
-find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS Kirigami I18n Config CoreAddons GuiAddons)
+find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS Kirigami I18n Config CoreAddons Crash GuiAddons IconThemes ColorScheme)
 if (BUILD_TESTING)
     find_package(Qt6QuickTest ${QT_REQUIRED_VERSION} CONFIG QUIET)
 endif()

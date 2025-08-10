@@ -1,0 +1,77 @@
+/*
+ *   SPDX-FileCopyrightText: 2025 Aleix Pol Gonzalez <aleixpol@kde.org>
+ *
+ *   SPDX-License-Identifier: LGPL-2.0-or-later
+ */
+
+#include "kirigamiapp.h"
+#include <KAboutData>
+#include <KCrash>
+#include <KIconTheme>
+#include <KLocalizedContext>
+#include <KColorSchemeManager>
+#include <QQuickStyle>
+#include <QQmlApplicationEngine>
+#include <QQmlContext>
+
+#ifdef Q_OS_WINDOWS
+#include <Windows.h>
+#endif
+
+class KirigamiAppPrivate
+{
+public:
+    KirigamiAppPrivate() = default;
+};
+
+KirigamiApp::KirigamiApp()
+    : QObject()
+    , d(std::make_unique<KirigamiAppPrivate>())
+{
+    using namespace Qt::Literals::StringLiterals;
+
+    auto format = QSurfaceFormat::defaultFormat();
+    format.setOption(QSurfaceFormat::ResetNotification);
+    QSurfaceFormat::setDefaultFormat(format);
+
+    // Needed when not running with the Plasma QPlatformTheme to ensure colours get initialised
+    KColorSchemeManager::instance();
+
+#ifdef Q_OS_ANDROID
+    QQuickStyle::setStyle(u"org.kde.breeze"_s);
+#else
+    // Default to org.kde.desktop style unless the user forces another style
+    QIcon::setFallbackThemeName("breeze"_L1);
+    if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE")) {
+        QQuickStyle::setStyle(u"org.kde.desktop"_s);
+    }
+    KIconTheme::initTheme();
+#endif
+
+#ifdef Q_OS_WINDOWS
+    if (AttachConsole(ATTACH_PARENT_PROCESS)) {
+        freopen("CONOUT$", "w", stdout);
+        freopen("CONOUT$", "w", stderr);
+    }
+
+    auto font = d->m_app.font();
+    font.setPointSize(10);
+    d->m_app.setFont(font);
+#endif
+
+    QObject::connect(KAboutDataListener::instance(), &KAboutDataListener::applicationDataChanged, this, [] {
+        KCrash::initialize();
+    });
+}
+
+KirigamiApp::~KirigamiApp() = default;
+
+bool KirigamiApp::start(QAnyStringView uri, QAnyStringView typeName, QQmlApplicationEngine *engine)
+{
+    Q_ASSERT(engine);
+    if (!qobject_cast<KLocalizedContext*>(engine->rootContext()->contextObject())) {
+        engine->rootContext()->setContextObject(new KLocalizedContext(engine));
+    }
+    engine->loadFromModule(uri, typeName);
+    return !engine->rootObjects().isEmpty();
+}
