@@ -45,7 +45,7 @@ void SoundsPickerModel::loadFiles()
                 if (fileName.endsWith(QLatin1String(".license"))) {
                     continue;
                 }
-                d->soundsVec.push_back(fileName);
+                d->soundsVec.push_back(u"file://" + fileName);
             }
         }
     }
