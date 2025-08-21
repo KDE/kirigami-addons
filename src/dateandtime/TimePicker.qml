@@ -88,6 +88,13 @@ RowLayout {
                     color: Kirigami.Theme.highlightColor
                 }
             }
+
+            TapHandler {
+                onTapped: {
+                    const tumbler = delegate.Tumbler.tumbler;
+                    tumbler.currentIndex = index;
+                }
+            }
         }
     }
 
