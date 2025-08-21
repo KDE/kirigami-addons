@@ -74,7 +74,17 @@ RowLayout {
                 color: 'transparent'
                 radius: Kirigami.Units.mediumSpacing
                 border {
-                    width: delegate === Tumbler.tumbler.currentItem ? 1 : 0
+                    width: {
+                        const tumbler = delegate.Tumbler.tumbler;
+                        if (delegate === tumbler.currentItem) {
+                            if (tumbler.visualFocus) {
+                                return 2;
+                            }
+                            return 1;
+                        } else {
+                            return 0;
+                        }
+                    }
                     color: Kirigami.Theme.highlightColor
                 }
             }
@@ -98,6 +108,7 @@ RowLayout {
         Accessible.role: Accessible.Dial
         Accessible.onDecreaseAction: hoursTumbler.currentIndex = (hoursTumbler.currentIndex + hoursTumbler.model - 1) % hoursTumbler.model
         Accessible.onIncreaseAction: hoursTumbler.currentIndex = (hoursTumbler.currentIndex + 1) % hoursTumbler.model
+        KeyNavigation.right: minutesTumbler
         // a11y value interface
         property int minimumValue: root._isAmPm ? 1 : 0
         property int maximumValue: root._isAmPm ? 12 : 23
@@ -135,6 +146,7 @@ RowLayout {
         Accessible.role: Accessible.Dial
         Accessible.onDecreaseAction: minutesTumbler.currentIndex = (minutesTumbler.currentIndex + 59) % 60
         Accessible.onIncreaseAction: minutesTumbler.currentIndex = (minutesTumbler.currentIndex + 1) % 60
+        KeyNavigation.right: amPmTumbler
         // a11y value interface
         property int minimumValue: 0
         property int maximumValue: 59
