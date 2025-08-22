@@ -18,4 +18,5 @@ set(KIRIGAMI_ADDONS_ICONS
     clock-symbolic
     dialog-cancel-symbolic
     dialog-ok-apply-symbolic
+    draw-arrow-back-symbolic
 )
