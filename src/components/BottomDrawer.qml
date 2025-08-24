@@ -5,6 +5,7 @@
 import QtQuick
 import QtQuick.Controls as QQC2
 import org.kde.kirigami as Kirigami
+import org.kde.kirigami.private.polyfill // until we depends on Qt 6.9
 import QtQuick.Layouts
 
 /*!
@@ -167,7 +168,7 @@ QQC2.Drawer {
             leftPadding: 0
             rightPadding: 0
             topPadding: 0
-            bottomPadding: 0
+            bottomPadding: parent.SafeArea.margins.bottom
 
             background: Rectangle {
                 Kirigami.Theme.colorSet: Kirigami.Theme.View
