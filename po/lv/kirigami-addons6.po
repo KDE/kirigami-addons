@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-22 00:41+0000\n"
-"PO-Revision-Date: 2025-01-27 17:54+0200\n"
+"PO-Revision-Date: 2025-08-21 10:33+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -94,8 +94,7 @@ msgid "Go Back"
 msgstr "Atgriezties"
 
 #: components/ConvergentContextMenu.qml:405
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
 msgstr "Aizvērt"
@@ -239,31 +238,31 @@ msgstr "Izmanto „%1“ un ir būvēts pret „%2“"
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Unknown/Default"
-msgstr ""
+msgstr "Nezināms/noklusējums"
 
 #: formcard/aboutcomponent.cpp:45
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: formcard/aboutcomponent.cpp:48
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Snap"
-msgstr ""
+msgstr "Snap"
 
 #: formcard/aboutcomponent.cpp:51
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "AppImage"
-msgstr ""
+msgstr "AppImage"
 
 #: formcard/aboutcomponent.cpp:53
 #, kde-format
 msgctxt "@info"
 msgid "Distribution method."
-msgstr ""
+msgstr "Izplatīšanas metode."
 
 #: formcard/aboutcomponent.cpp:56
 #, kde-format
@@ -421,10 +420,9 @@ msgstr ""
 "Jau iepriekš sirsnīgi pateicamies par atbalstu!"
 
 #: formcard/AboutKDEPage.qml:163
-#, fuzzy, kde-format
-#| msgid "KDE e.V"
+#, kde-format
 msgid "KDE e.V."
-msgstr "KDE e.V"
+msgstr "KDE e.V."
 
 #: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:239
 #, kde-format
@@ -518,7 +516,7 @@ msgstr "Pašreizēja krāsa „%1“"
 #, kde-format
 msgctxt "@action:button"
 msgid "Icon"
-msgstr ""
+msgstr "Ikona"
 
 #: formcard/FormDateTimeDelegate.qml:202
 #, kde-format
@@ -536,47 +534,43 @@ msgstr "Nav iestatīts"
 #, kde-format
 msgctxt "@info:status"
 msgid "The path doesn't exist."
-msgstr ""
+msgstr "Ceļš nepastāv."
 
 #: formcard/FormFileDelegate.qml:189
 #, kde-format
 msgctxt "@info:status"
 msgid "The file doesn't exist."
-msgstr ""
+msgstr "Datne nepastāv."
 
 #: formcard/FormFileDelegate.qml:256
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select file"
-msgstr "Atlasīt"
+msgstr "Atlasīt datni"
 
 #: formcard/FormFileDelegate.qml:263
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No file selected"
-msgstr ""
+msgstr "Nav atlasīta datne"
 
 #: formcard/FormFolderDelegate.qml:147
 #, kde-format
 msgctxt "@info:status"
 msgid "The folder doesn't exist."
-msgstr ""
+msgstr "Mape nepastāv."
 
 #: formcard/FormFolderDelegate.qml:204
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select folder"
-msgstr "Atlasīt"
+msgstr "Atlasiet mapi"
 
 #: formcard/FormFolderDelegate.qml:211
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No folder selected"
-msgstr ""
+msgstr "Nav atlasīta mape"
 
 #: formcard/FormLinkDelegate.qml:54
 #, kde-format
