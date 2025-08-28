@@ -93,11 +93,10 @@ msgid "Go Back"
 msgstr "Jít zpět"
 
 #: components/ConvergentContextMenu.qml:405
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
-msgstr "Zavřít"
+msgstr ""
 
 #: components/DownloadAction.qml:40
 #, kde-format
@@ -556,12 +555,10 @@ msgid "The folder doesn't exist."
 msgstr ""
 
 #: formcard/FormFolderDelegate.qml:204
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select folder"
-msgstr "Vybrat"
+msgstr ""
 
 #: formcard/FormFolderDelegate.qml:211
 #, kde-format
