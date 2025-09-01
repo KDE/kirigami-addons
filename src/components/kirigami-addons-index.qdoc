@@ -39,6 +39,7 @@
     \section1 API Reference
 
     \list
+        \li \l{Kirigami Addons App C++ Classes}
         \li \l{Kirigami Addons FormCard QML Types}
         \li \l{Kirigami Addons Delegates QML Types}
         \li \l{Kirigami Addons Settings QML Types}

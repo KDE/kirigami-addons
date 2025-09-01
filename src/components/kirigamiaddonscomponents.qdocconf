@@ -11,7 +11,7 @@ imagedirs  += ../../docs/pics
 
 outputformats = HTML
 
-depends += kde kirigami kirigamiplatform qtcore qtquick qtquickcontrols qtgui qtmultimedia kirigamiaddonsdateandtime kirigamiaddonsdelegates kirigamiaddonsformcard kirigamiaddonssettings kirigamiaddonssounds kirigamiaddonsstatefulapplication kirigamiaddonsstatefulapplicationlabs kirigamiaddonstableview kirigamiaddonstreeview
+depends += kde kirigami kirigamiplatform qtcore qtquick qtquickcontrols qtgui qtmultimedia kirigamiaddonsdateandtime kirigamiaddonsdelegates kirigamiaddonsformcard kirigamiaddonssettings kirigamiaddonssounds kirigamiaddonsstatefulapplication kirigamiaddonsstatefulapplicationlabs kirigamiaddonstableview kirigamiaddonstreeview kirigamiapp
 
 qhp.projects = KirigamiAddonsComponents
 
