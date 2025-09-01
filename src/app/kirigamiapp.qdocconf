@@ -15,16 +15,16 @@ depends += kde kirigami qtcore qtquick qtquickcontrols qtgui
 qhp.projects = KirigamiApp
 
 qhp.KirigamiApp.file          = kirigamiaddonsapp.qhp
-qhp.KirigamiApp.namespace     = org.kde.kirigamiaddonsapp.$QT_VERSION_TAG
+qhp.KirigamiApp.namespace     = org.kde.kirigamiaddons.app.$QT_VERSION_TAG
 qhp.KirigamiApp.virtualFolder = kirigamiaddonsapp
 qhp.KirigamiApp.indexTitle    = Kirigami Addons App
 qhp.KirigamiApp.indexRoot     =
 
 qhp.KirigamiApp.subprojects = app
 
-qhp.KirigamiApp.subprojects.app.title = Kirigami Addons App QML Types
-qhp.KirigamiApp.subprojects.app.indexTitle = Kirigami Addons App QML Types
-qhp.KirigamiApp.subprojects.app.selectors = qmlmodule:org.kde.kirigamiaddons.app
+qhp.KirigamiApp.subprojects.app.title = Kirigami Addons App C++ Classes
+qhp.KirigamiApp.subprojects.app.indexTitle = Kirigami Addons App C++ Classes
+qhp.KirigamiApp.subprojects.app.selectors = class fake:headerfile
 qhp.KirigamiApp.subprojects.app.sortPages = true
 
 tagfile = kirigamiaddonsapp.tags

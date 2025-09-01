@@ -15,7 +15,7 @@ class KirigamiAppPrivate;
 
 /*!
  * \class KirigamiApp
- * \inmodule KirigamiAddons
+ * \inmodule KirigamiApp
  * \inheaderfile KirigamiApp
  *
  * \brief Helper to set up the process to properly run a Kirigami app
