@@ -152,7 +152,7 @@ msgstr "Cancel·la"
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
-msgstr "Selecciona"
+msgstr "Tria"
 
 #: dateandtime/private/DatePicker.qml:275
 #, kde-format
@@ -236,7 +236,7 @@ msgstr "Entorn de desenvolupament d'aplicacions multiplataforma."
 #: formcard/aboutcomponent.cpp:38
 #, kde-format
 msgid "Using %1 and built against %2"
-msgstr "S'utilitza %1 i s'ha construït amb %2"
+msgstr "utilitza la %1 i s'ha construït amb la %2"
 
 #: formcard/aboutcomponent.cpp:43
 #, kde-format
@@ -550,7 +550,7 @@ msgstr "El fitxer no existix."
 #, kde-format
 msgctxt "@action:button"
 msgid "Select file"
-msgstr "Selecciona el fitxer"
+msgstr "Tria el fitxer"
 
 #: formcard/FormFileDelegate.qml:263
 #, kde-format
@@ -568,7 +568,7 @@ msgstr "La carpeta no existix."
 #, kde-format
 msgctxt "@action:button"
 msgid "Select folder"
-msgstr "Selecciona la carpeta"
+msgstr "Tria la carpeta"
 
 #: formcard/FormFolderDelegate.qml:211
 #, kde-format
