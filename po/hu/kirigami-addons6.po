@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
 #
-# SPDX-FileCopyrightText: 2021, 2024 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2021, 2024, 2025 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-22 00:41+0000\n"
-"PO-Revision-Date: 2024-11-16 20:22+0100\n"
+"PO-Revision-Date: 2025-09-03 20:53+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -90,11 +90,10 @@ msgstr "Bezárás"
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "Vissza"
 
 #: components/ConvergentContextMenu.qml:405
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
 msgstr "Bezárás"
@@ -210,13 +209,15 @@ msgstr "%1 (%2)"
 #: formcard/aboutcomponent.cpp:30
 #, kde-format
 msgid "KDE Frameworks"
-msgstr ""
+msgstr "KDE Frameworks"
 
 #: formcard/aboutcomponent.cpp:31
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr ""
+"A KDE közösség által készített függvénykönyvtárak gyűjteménye a Qt "
+"kiterjesztésére."
 
 #: formcard/aboutcomponent.cpp:36
 #, kde-format
@@ -227,48 +228,48 @@ msgstr "Qt"
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr ""
+msgstr "Keresztplatformos alkalmazásfejlesztési keretrendszer."
 
 #: formcard/aboutcomponent.cpp:38
 #, kde-format
 msgid "Using %1 and built against %2"
-msgstr ""
+msgstr "%1 használatával, fordítva ezzel: %2"
 
 #: formcard/aboutcomponent.cpp:43
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Unknown/Default"
-msgstr ""
+msgstr "Ismeretlen/Alapértelmezett"
 
 #: formcard/aboutcomponent.cpp:45
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: formcard/aboutcomponent.cpp:48
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Snap"
-msgstr ""
+msgstr "Snap"
 
 #: formcard/aboutcomponent.cpp:51
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "AppImage"
-msgstr ""
+msgstr "AppImage"
 
 #: formcard/aboutcomponent.cpp:53
 #, kde-format
 msgctxt "@info"
 msgid "Distribution method."
-msgstr ""
+msgstr "Terjesztési módszer."
 
 #: formcard/aboutcomponent.cpp:56
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr ""
+msgstr "Alapul szolgáló platform."
 
 #: formcard/AboutKDEPage.qml:24
 #: statefulapplication/abstractkirigamiapplication.cpp:174
@@ -421,10 +422,9 @@ msgstr ""
 "Előre is köszönjük a támogatását!"
 
 #: formcard/AboutKDEPage.qml:163
-#, fuzzy, kde-format
-#| msgid "KDE e.V"
+#, kde-format
 msgid "KDE e.V."
-msgstr "KDE e.V"
+msgstr "KDE e.V."
 
 #: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:239
 #, kde-format
@@ -468,13 +468,13 @@ msgstr "Felhasznált függvénykönyvtárak"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Másolás a vágólapra"
 
 #: formcard/AboutPage.qml:292
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
-msgstr ""
+msgstr "Rendszerjellemzők a vágólapra másolva."
 
 #: formcard/AboutPage.qml:305
 #, kde-format
@@ -517,7 +517,7 @@ msgstr "Jelenlegi szín „%1”"
 #, kde-format
 msgctxt "@action:button"
 msgid "Icon"
-msgstr ""
+msgstr "Ikon"
 
 #: formcard/FormDateTimeDelegate.qml:202
 #, kde-format
@@ -535,65 +535,61 @@ msgstr "Nincs beállítva"
 #, kde-format
 msgctxt "@info:status"
 msgid "The path doesn't exist."
-msgstr ""
+msgstr "Az elérési út nem létezik."
 
 #: formcard/FormFileDelegate.qml:189
 #, kde-format
 msgctxt "@info:status"
 msgid "The file doesn't exist."
-msgstr ""
+msgstr "A fájl nem létezik."
 
 #: formcard/FormFileDelegate.qml:256
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select file"
-msgstr "Kiválasztás"
+msgstr "Fájl kiválasztása"
 
 #: formcard/FormFileDelegate.qml:263
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No file selected"
-msgstr ""
+msgstr "Nincs kijelölve fájl"
 
 #: formcard/FormFolderDelegate.qml:147
 #, kde-format
 msgctxt "@info:status"
 msgid "The folder doesn't exist."
-msgstr ""
+msgstr "A mappa nem létezik."
 
 #: formcard/FormFolderDelegate.qml:204
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select folder"
-msgstr "Kiválasztás"
+msgstr "Mappa kiválasztása"
 
 #: formcard/FormFolderDelegate.qml:211
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No folder selected"
-msgstr ""
+msgstr "Nincs kiválasztva mappa"
 
 #: formcard/FormLinkDelegate.qml:54
 #, kde-format
 msgctxt "@action:inmnenu"
 msgid "Open Link"
-msgstr ""
+msgstr "Hivatkozás megnyitása"
 
 #: formcard/FormLinkDelegate.qml:60
 #, kde-format
 msgctxt "@action:inmnenu"
 msgid "Copy Link to Clipboard"
-msgstr ""
+msgstr "Hivatkozás másolása a vágólapra."
 
 #: formcard/FormLinkDelegate.qml:66
 #, kde-format
 msgctxt "@info:status"
 msgid "Url copied to clipboard."
-msgstr ""
+msgstr "URL a vágólapra másolva."
 
 #: formcard/FormPasswordFieldDelegate.qml:249
 #: formcard/FormTextAreaDelegate.qml:174 formcard/FormTextFieldDelegate.qml:270
@@ -725,12 +721,10 @@ msgid "Delete word"
 msgstr "Szó törlése"
 
 #: settings/ShortcutsConfigurationModule.qml:26
-#, fuzzy, kde-format
-#| msgctxt "@title:dialog"
-#| msgid "Reserved Shortcut"
+#, kde-format
 msgctxt "@action:button"
 msgid "Keyboard Shortcuts"
-msgstr "Foglalt gyorsbillentyű"
+msgstr "Gyorsbillentyűk"
 
 #: settings/SpellcheckingConfigurationModule.qml:15
 #, kde-format
