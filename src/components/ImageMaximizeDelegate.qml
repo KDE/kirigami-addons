@@ -135,6 +135,7 @@ Item {
         height: root.rotationAngle % 180 === 0 ? rotationInsensitiveHeight : rotationInsensitiveWidth
         fillMode: Image.PreserveAspectFit
         clip: true
+        autoTransform: true
 
         Behavior on width {
             NumberAnimation {duration: Kirigami.Units.longDuration; easing.type: Easing.InOutCubic}
