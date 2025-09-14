@@ -134,12 +134,7 @@ T.ItemDelegate {
 
         border {
             color: Kirigami.Theme.highlightColor
-            width: {
-                let width = 0;
-                if (root.visualFocus) width++;
-                if (root.checked) width += (root.highlighted ? 2 : 1);
-                return width;
-            }
+            width: root.visualFocus || root.activeFocus ? 1 : 0
         }
     }
 
