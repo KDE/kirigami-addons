@@ -12,6 +12,7 @@
 #include <QQuickStyle>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
+#include <kcoreaddons_version.h>
 
 #ifndef Q_OS_ANDROID
 #include <KCrash>
@@ -66,11 +67,13 @@ KirigamiApp::KirigamiApp()
 #endif
 
 #ifndef Q_OS_ANDROID
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 19, 0)
     // Embrace KCrash. If an application misbehaves, we should know as much as possible about it.
     // Needs initialising KAboutData::setApplicationData
     QObject::connect(KAboutDataListener::instance(), &KAboutDataListener::applicationDataChanged, this, [] {
         KCrash::initialize();
     });
+#endif
 #endif
 }
 
