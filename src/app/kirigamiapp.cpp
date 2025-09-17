@@ -6,7 +6,6 @@
 
 #include "kirigamiapp.h"
 #include <KAboutData>
-#include <KIconTheme>
 #include <KLocalizedContext>
 #include <KColorSchemeManager>
 #include <QQuickStyle>
@@ -16,7 +15,9 @@
 
 #ifndef Q_OS_ANDROID
 #include <KCrash>
+#include <KIconTheme>
 #endif
+
 #ifdef Q_OS_WINDOWS
 #include <QFont>
 #include <Windows.h>
