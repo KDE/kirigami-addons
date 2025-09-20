@@ -10,7 +10,6 @@ Dependencies:
     'frameworks/kguiaddons': '@latest-kf6'
     'frameworks/kcoreaddons': '@latest-kf6'
     'frameworks/kconfig': '@latest-kf6'
-    'frameworks/kiconthemes': '@latest-kf6'
     'frameworks/kcolorscheme': '@latest-kf6'
 
 - 'on': ['Linux', 'FreeBSD']
@@ -20,6 +19,7 @@ Dependencies:
 - 'on': ['Linux', 'FreeBSD','Windows']
   'require':
     'frameworks/kcrash': '@latest-kf6'
+    'frameworks/kiconthemes': '@latest-kf6'
 
 #Options:
 #  require-passing-tests-on: [ 'Linux/Qt6' ]
