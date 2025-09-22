@@ -7,6 +7,7 @@ import QtQuick.Layouts
 import Qt.labs.qmlmodels
 
 import org.kde.kirigami as Kirigami
+import org.kde.kirigami.private.polyfill // remove once we depend on Qt 6.9
 import org.kde.kirigamiaddons.components as KirigamiComponents
 
 /*!
@@ -290,6 +291,9 @@ AbstractMaximizeComponent {
 
     footer: QQC2.Control {
         visible: root.showCaption && view.currentItem.caption && !root.hideCaption
+        leftPadding: root.parent.SafeArea.margins.left
+        rightPadding: root.parent.SafeArea.margins.right
+        bottomPadding: root.parent.SafeArea.margins.bottom
         contentItem: QQC2.ScrollView {
             anchors.fill: parent
             QQC2.ScrollBar.vertical.policy: QQC2.ScrollBar.AlwaysOn

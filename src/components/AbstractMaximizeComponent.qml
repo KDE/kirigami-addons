@@ -7,6 +7,7 @@ import QtQuick.Layouts
 import Qt.labs.qmlmodels
 
 import org.kde.kirigami as Kirigami
+import org.kde.kirigami.private.polyfill // remove once we depend on Qt 6.9
 
 /*!
    \qmltype AbstractMaximizeComponent
@@ -87,6 +88,9 @@ QQC2.Popup {
 
         QQC2.Control {
             Layout.fillWidth: true
+            topPadding: root.parent.SafeArea.margins.top
+            leftPadding: root.parent.SafeArea.margins.left
+            rightPadding: root.parent.SafeArea.margins.right
             contentItem: RowLayout {
                 spacing: Kirigami.Units.largeSpacing
 
