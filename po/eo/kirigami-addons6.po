@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-22 00:41+0000\n"
+"POT-Creation-Date: 2025-09-23 00:41+0000\n"
 "PO-Revision-Date: 2025-03-23 07:29+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -28,54 +28,54 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "olivermkellogg@gmail.com"
 
-#: components/AbstractMaximizeComponent.qml:132
+#: components/AbstractMaximizeComponent.qml:136
 #, kde-format
 msgid "Close"
 msgstr "Fermi"
 
-#: components/AlbumMaximizeComponent.qml:150
+#: components/AlbumMaximizeComponent.qml:151
 #, kde-format
 msgid "Zoom in"
 msgstr "Zomi"
 
-#: components/AlbumMaximizeComponent.qml:155
+#: components/AlbumMaximizeComponent.qml:156
 #, kde-format
 msgid "Zoom out"
 msgstr "Malzomi"
 
-#: components/AlbumMaximizeComponent.qml:161
+#: components/AlbumMaximizeComponent.qml:162
 #, kde-format
 msgid "Rotate left"
 msgstr "Rotacii maldekstren"
 
-#: components/AlbumMaximizeComponent.qml:167
+#: components/AlbumMaximizeComponent.qml:168
 #, kde-format
 msgid "Rotate right"
 msgstr "Rotacii dekstren"
 
-#: components/AlbumMaximizeComponent.qml:172
+#: components/AlbumMaximizeComponent.qml:173
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
 msgstr "Montri bildotekston"
 
-#: components/AlbumMaximizeComponent.qml:172
+#: components/AlbumMaximizeComponent.qml:173
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
 msgstr "Kaŝi bildotekston"
 
-#: components/AlbumMaximizeComponent.qml:178
+#: components/AlbumMaximizeComponent.qml:179
 #, kde-format
 msgid "Save as"
 msgstr "Konservi kiel"
 
-#: components/AlbumMaximizeComponent.qml:256
+#: components/AlbumMaximizeComponent.qml:257
 #, kde-format
 msgid "Previous image"
 msgstr "Antaŭa bildo"
 
-#: components/AlbumMaximizeComponent.qml:276
+#: components/AlbumMaximizeComponent.qml:277
 #, kde-format
 msgid "Next image"
 msgstr "Sekva bildo"

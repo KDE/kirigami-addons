@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-22 00:41+0000\n"
+"POT-Creation-Date: 2025-09-23 00:41+0000\n"
 "PO-Revision-Date: 2024-04-23 19:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -27,54 +27,54 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "i@guoyunhe.me, tds00@qq.com"
 
-#: components/AbstractMaximizeComponent.qml:132
+#: components/AbstractMaximizeComponent.qml:136
 #, kde-format
 msgid "Close"
 msgstr "关闭"
 
-#: components/AlbumMaximizeComponent.qml:150
+#: components/AlbumMaximizeComponent.qml:151
 #, kde-format
 msgid "Zoom in"
 msgstr "放大"
 
-#: components/AlbumMaximizeComponent.qml:155
+#: components/AlbumMaximizeComponent.qml:156
 #, kde-format
 msgid "Zoom out"
 msgstr "缩小"
 
-#: components/AlbumMaximizeComponent.qml:161
+#: components/AlbumMaximizeComponent.qml:162
 #, kde-format
 msgid "Rotate left"
 msgstr "旋转 (向左)"
 
-#: components/AlbumMaximizeComponent.qml:167
+#: components/AlbumMaximizeComponent.qml:168
 #, kde-format
 msgid "Rotate right"
 msgstr "旋转 (向右)"
 
-#: components/AlbumMaximizeComponent.qml:172
+#: components/AlbumMaximizeComponent.qml:173
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
 msgstr "显示标题"
 
-#: components/AlbumMaximizeComponent.qml:172
+#: components/AlbumMaximizeComponent.qml:173
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
 msgstr "隐藏标题"
 
-#: components/AlbumMaximizeComponent.qml:178
+#: components/AlbumMaximizeComponent.qml:179
 #, kde-format
 msgid "Save as"
 msgstr "另存为"
 
-#: components/AlbumMaximizeComponent.qml:256
+#: components/AlbumMaximizeComponent.qml:257
 #, kde-format
 msgid "Previous image"
 msgstr "上一张图像"
 
-#: components/AlbumMaximizeComponent.qml:276
+#: components/AlbumMaximizeComponent.qml:277
 #, kde-format
 msgid "Next image"
 msgstr "下一张图像"

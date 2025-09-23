@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-22 00:41+0000\n"
+"POT-Creation-Date: 2025-09-23 00:41+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -29,54 +29,54 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "skkalwar999@gmail.com"
 
-#: components/AbstractMaximizeComponent.qml:132
+#: components/AbstractMaximizeComponent.qml:136
 #, kde-format
 msgid "Close"
 msgstr "पिधानं करोतु"
 
-#: components/AlbumMaximizeComponent.qml:150
+#: components/AlbumMaximizeComponent.qml:151
 #, kde-format
 msgid "Zoom in"
 msgstr "जूम इन करें"
 
-#: components/AlbumMaximizeComponent.qml:155
+#: components/AlbumMaximizeComponent.qml:156
 #, kde-format
 msgid "Zoom out"
 msgstr "जूम आउट् कुर्वन्तु"
 
-#: components/AlbumMaximizeComponent.qml:161
+#: components/AlbumMaximizeComponent.qml:162
 #, kde-format
 msgid "Rotate left"
 msgstr "वामभागे परिभ्रमन्तु"
 
-#: components/AlbumMaximizeComponent.qml:167
+#: components/AlbumMaximizeComponent.qml:168
 #, kde-format
 msgid "Rotate right"
 msgstr "दक्षिणतः परिभ्रमन्तु"
 
-#: components/AlbumMaximizeComponent.qml:172
+#: components/AlbumMaximizeComponent.qml:173
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
 msgstr "शीर्षकं दर्शयतु"
 
-#: components/AlbumMaximizeComponent.qml:172
+#: components/AlbumMaximizeComponent.qml:173
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
 msgstr "शीर्षकं गोपयन्तु"
 
-#: components/AlbumMaximizeComponent.qml:178
+#: components/AlbumMaximizeComponent.qml:179
 #, kde-format
 msgid "Save as"
 msgstr "यथा रक्षतु"
 
-#: components/AlbumMaximizeComponent.qml:256
+#: components/AlbumMaximizeComponent.qml:257
 #, kde-format
 msgid "Previous image"
 msgstr "पूर्वप्रतिबिम्बम्"
 
-#: components/AlbumMaximizeComponent.qml:276
+#: components/AlbumMaximizeComponent.qml:277
 #, kde-format
 msgid "Next image"
 msgstr "अग्रिमः चित्रः"

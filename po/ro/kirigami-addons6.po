@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-22 00:41+0000\n"
+"POT-Creation-Date: 2025-09-23 00:41+0000\n"
 "PO-Revision-Date: 2024-06-09 13:44+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -28,54 +28,54 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 
-#: components/AbstractMaximizeComponent.qml:132
+#: components/AbstractMaximizeComponent.qml:136
 #, kde-format
 msgid "Close"
 msgstr "Închide"
 
-#: components/AlbumMaximizeComponent.qml:150
+#: components/AlbumMaximizeComponent.qml:151
 #, kde-format
 msgid "Zoom in"
 msgstr "Apropie"
 
-#: components/AlbumMaximizeComponent.qml:155
+#: components/AlbumMaximizeComponent.qml:156
 #, kde-format
 msgid "Zoom out"
 msgstr "Îndepărtează"
 
-#: components/AlbumMaximizeComponent.qml:161
+#: components/AlbumMaximizeComponent.qml:162
 #, kde-format
 msgid "Rotate left"
 msgstr "Rotește spre stânga"
 
-#: components/AlbumMaximizeComponent.qml:167
+#: components/AlbumMaximizeComponent.qml:168
 #, kde-format
 msgid "Rotate right"
 msgstr "Rotește spre dreapta"
 
-#: components/AlbumMaximizeComponent.qml:172
+#: components/AlbumMaximizeComponent.qml:173
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
 msgstr "Arată titlul"
 
-#: components/AlbumMaximizeComponent.qml:172
+#: components/AlbumMaximizeComponent.qml:173
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
 msgstr "Ascunde titlul"
 
-#: components/AlbumMaximizeComponent.qml:178
+#: components/AlbumMaximizeComponent.qml:179
 #, kde-format
 msgid "Save as"
 msgstr "Salvează ca"
 
-#: components/AlbumMaximizeComponent.qml:256
+#: components/AlbumMaximizeComponent.qml:257
 #, kde-format
 msgid "Previous image"
 msgstr "Imaginea precedentă"
 
-#: components/AlbumMaximizeComponent.qml:276
+#: components/AlbumMaximizeComponent.qml:277
 #, kde-format
 msgid "Next image"
 msgstr "Imaginea următoare"

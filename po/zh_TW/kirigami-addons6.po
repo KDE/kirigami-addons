@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-22 00:41+0000\n"
+"POT-Creation-Date: 2025-09-23 00:41+0000\n"
 "PO-Revision-Date: 2025-08-16 14:44+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -30,54 +30,54 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mail@kisaragi-hiu.com"
 
-#: components/AbstractMaximizeComponent.qml:132
+#: components/AbstractMaximizeComponent.qml:136
 #, kde-format
 msgid "Close"
 msgstr "關閉"
 
-#: components/AlbumMaximizeComponent.qml:150
+#: components/AlbumMaximizeComponent.qml:151
 #, kde-format
 msgid "Zoom in"
 msgstr "放大"
 
-#: components/AlbumMaximizeComponent.qml:155
+#: components/AlbumMaximizeComponent.qml:156
 #, kde-format
 msgid "Zoom out"
 msgstr "縮小"
 
-#: components/AlbumMaximizeComponent.qml:161
+#: components/AlbumMaximizeComponent.qml:162
 #, kde-format
 msgid "Rotate left"
 msgstr "向左旋轉"
 
-#: components/AlbumMaximizeComponent.qml:167
+#: components/AlbumMaximizeComponent.qml:168
 #, kde-format
 msgid "Rotate right"
 msgstr "向右旋轉"
 
-#: components/AlbumMaximizeComponent.qml:172
+#: components/AlbumMaximizeComponent.qml:173
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
 msgstr "顯示簡短說明"
 
-#: components/AlbumMaximizeComponent.qml:172
+#: components/AlbumMaximizeComponent.qml:173
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
 msgstr "隱藏簡短說明"
 
-#: components/AlbumMaximizeComponent.qml:178
+#: components/AlbumMaximizeComponent.qml:179
 #, kde-format
 msgid "Save as"
 msgstr "另存新檔"
 
-#: components/AlbumMaximizeComponent.qml:256
+#: components/AlbumMaximizeComponent.qml:257
 #, kde-format
 msgid "Previous image"
 msgstr "前一個影像"
 
-#: components/AlbumMaximizeComponent.qml:276
+#: components/AlbumMaximizeComponent.qml:277
 #, kde-format
 msgid "Next image"
 msgstr "下一個影像"
