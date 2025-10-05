@@ -14,14 +14,9 @@
 #include <QCommandLineParser>
 #include <QIcon>
 #include <QQmlApplicationEngine>
-#include <QQmlContext>
-#include <QQuickStyle>
-#include <QUrl>
 
 #include "version-%{APPNAMELC}.h"
 #include <KAboutData>
-#include <KIconTheme>
-#include <KLocalizedQmlContext>
 #include <KLocalizedString>
 
 #include "%{APPNAMELC}config.h"
