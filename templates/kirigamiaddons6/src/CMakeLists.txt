@@ -53,6 +53,7 @@ kconfig_add_kcfg_files(%{APPNAMELC}_static GENERATE_MOC %{APPNAMELC}config.kcfgc
 
 add_executable(%{APPNAMELC} main.cpp)
 target_link_libraries(%{APPNAMELC} PUBLIC
+    KirigamiApp
     %{APPNAMELC}_static
     %{APPNAMELC}_staticplugin
     %{APPNAMELC}_settings

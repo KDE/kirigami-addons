@@ -4,8 +4,14 @@
 */
 
 #include <QtGlobal>
-#include <KirigamiApp.h>
+#include <KirigamiApp>
 
+#ifdef Q_OS_ANDROID
+#include <QGuiApplication>
+#else
+#include <QApplication>
+#endif
+#include <QCommandLineParser>
 #include <QIcon>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
@@ -60,9 +66,6 @@ int main(int argc, char *argv[])
 
     qmlRegisterSingletonInstance("org.kde.%{APPNAMELC}.private", 1, 0, "Config", config);
 
-    KLocalization::setupLocalizedContext(&engine);
-    engine.loadFromModule("org.kde.%{APPNAMELC}", u"Main"_s);
-
     {
         QCommandLineParser parser;
         aboutData.setupCommandLine(&parser);
@@ -70,7 +73,7 @@ int main(int argc, char *argv[])
         aboutData.processCommandLine(&parser);
     }
 
-    if (engine.rootObjects().isEmpty()) {
+    if (!kapp.start("org.kde.%{APPNAMELC}", u"Main"_s, &engine)) {
         return -1;
     }
 
