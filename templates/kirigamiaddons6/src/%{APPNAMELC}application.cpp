@@ -22,8 +22,7 @@ void %{APPNAME}Application::setupActions()
         auto action = mainCollection()->addAction(actionName, this, &%{APPNAME}Application::incrementCounter);
         action->setText(i18nc("@action:inmenu", "Increment"));
         action->setIcon(QIcon::fromTheme(u"list-add-symbolic"_s));
-        mainCollection()->addAction(action->objectName(), action);
-        mainCollection()->setDefaultShortcut(action, Qt::CTRL | Qt::Key_I);
+        KirigamiActionCollection::setDefaultShortcut(action, Qt::CTRL | Qt::Key_I);
     }
 
     readSettings();
