@@ -3,8 +3,8 @@
 
 add_subdirectory(settings)
 
-qt_add_library(%{APPNAMELC}_static STATIC)
-ecm_add_qml_module(%{APPNAMELC}_static
+add_executable(%{APPNAMELC})
+ecm_add_qml_module(%{APPNAMELC}
     URI org.kde.%{APPNAMELC}
     GENERATE_PLUGIN_SOURCE
     QML_FILES
@@ -16,19 +16,22 @@ ecm_add_qml_module(%{APPNAMELC}_static
         org.kde.%{APPNAMELC}.settings
 )
 
-target_sources(%{APPNAMELC}_static PRIVATE
+target_sources(%{APPNAMELC} PRIVATE
+    main.cpp
     %{APPNAMELC}application.cpp
     %{APPNAMELC}application.h
 )
 
-target_link_libraries(%{APPNAMELC}_static PUBLIC
+target_link_libraries(%{APPNAMELC} PUBLIC
     Qt6::Quick
     KF6::I18n
     KF6::CoreAddons
     KF6::ConfigGui
+    %{APPNAMELC}_settings
+    %{APPNAMELC}_settingsplugin
     KirigamiAddonsStatefulApp
+    KirigamiApp
 )
-target_include_directories(%{APPNAMELC}_static PUBLIC ${CMAKE_BINARY_DIR})
 
 if (ANDROID)
     kirigami_package_breeze_icons(ICONS
@@ -38,18 +41,10 @@ if (ANDROID)
         applications-graphics
     )
 else()
-    target_link_libraries(%{APPNAMELC}_static PUBLIC Qt::Widgets)
+    target_link_libraries(%{APPNAMELC} PUBLIC Qt::Widgets)
 endif()
 
-kconfig_add_kcfg_files(%{APPNAMELC}_static GENERATE_MOC %{APPNAMELC}config.kcfgc)
+kconfig_add_kcfg_files(%{APPNAMELC} GENERATE_MOC %{APPNAMELC}config.kcfgc)
 
-add_executable(%{APPNAMELC} main.cpp)
-target_link_libraries(%{APPNAMELC} PUBLIC
-    KirigamiApp
-    %{APPNAMELC}_static
-    %{APPNAMELC}_staticplugin
-    %{APPNAMELC}_settings
-    %{APPNAMELC}_settingsplugin
-)
 install(TARGETS %{APPNAMELC} ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 ecm_add_android_apk(%{APPNAMELC} ANDROID_DIR ${CMAKE_SOURCE_DIR}/android)
