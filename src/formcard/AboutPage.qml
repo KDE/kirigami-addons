@@ -519,6 +519,7 @@ FormCardPage {
                                     id: bodyLabel
                                     text: delegate.modelData.licenses.text
                                     textMargin: Kirigami.Units.gridUnit
+                                    onLinkActivated: (link) => { Qt.openUrlExternally(link); }
                                 }
                             }
 
