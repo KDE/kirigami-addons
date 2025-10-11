@@ -16,6 +16,8 @@
 #ifndef Q_OS_ANDROID
 #include <KCrash>
 #include <KIconTheme>
+#include <QApplication>
+#include <QStyleFactory>
 #endif
 
 #ifdef Q_OS_WINDOWS
@@ -52,6 +54,11 @@ KirigamiApp::KirigamiApp()
     // Default to org.kde.desktop style unless the user forces another style
     if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE")) {
         QQuickStyle::setStyle(u"org.kde.desktop"_s);
+#ifndef Q_OS_ANDROID
+        // TODO remove once we no longer use the org.kde.desktop style
+        qApp->setStyle(QStyleFactory::create(QStringLiteral("Breeze")));
+#endif
+
     }
     KIconTheme::initTheme();
 #endif

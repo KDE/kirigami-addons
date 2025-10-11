@@ -19,7 +19,7 @@ target_link_libraries(KirigamiApp PRIVATE
     KF6::ColorScheme
 )
 if(NOT ANDROID)
-    target_link_libraries(KirigamiApp PRIVATE KF6::Crash KF6::IconThemes)
+    target_link_libraries(KirigamiApp PRIVATE Qt6::Widgets KF6::Crash KF6::IconThemes)
 endif()
 
 target_include_directories(KirigamiApp
