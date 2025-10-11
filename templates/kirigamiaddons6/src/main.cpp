@@ -28,8 +28,12 @@ Q_DECL_EXPORT
 #endif
 int main(int argc, char *argv[])
 {
-    KirigamiApp::App app(argc, argv);
-    KirigamiApp kapp;
+#ifdef Q_OS_ANDROID
+    QGuiApplication app(argc, argv);
+#else
+    QApplication app(argc, argv);
+#endif
+    KirigamiAppDefaults::apply(&app);
 
     KLocalizedString::setApplicationDomain("%{APPNAMELC}");
     QCoreApplication::setOrganizationName(u"KDE"_s);
@@ -57,6 +61,8 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
 
+    KLocalization::setupLocalizedContext(&engine);
+
     auto config = %{APPNAME}Config::self();
 
     qmlRegisterSingletonInstance("org.kde.%{APPNAMELC}.private", 1, 0, "Config", config);
@@ -68,7 +74,7 @@ int main(int argc, char *argv[])
         aboutData.processCommandLine(&parser);
     }
 
-    if (!kapp.start("org.kde.%{APPNAMELC}", u"Main"_s, &engine)) {
+    if (!engine.loadFromModule("org.kde.%{APPNAMELC}", u"Main"_s)) {
         return -1;
     }
 

@@ -6,7 +6,13 @@
 
 #pragma once
 
-#include <QQuickWindow>
+#include <QGuiApplication>
+
+#ifndef Q_OS_ANDROID
+#include <QApplication>
+#endif
+
+#include <memory>
 
 #include "kirigamiapp_export.h"
 
@@ -44,8 +50,9 @@ class KirigamiAppPrivate;
  * \endcode
  *
  * \since 1.10
+ * \deprecated [1.11] Use KirigamiAppDefaults::apply() instead.
  */
-class KIRIGAMIAPP_EXPORT KirigamiApp : public QObject
+class KIRIGAMIAPP_EXPORT KIRIGAMIAPP_DECL_DEPRECATED_TEXT("Use KirigamiAppDefaults::apply instead") KirigamiApp : public QObject
 {
 public:
     /*!
