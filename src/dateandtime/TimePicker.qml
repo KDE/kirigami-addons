@@ -30,7 +30,7 @@ RowLayout {
 
     property bool _init: false
 
-    readonly property bool _isAmPm: Qt.locale().timeFormat().includes("AP")
+    readonly property bool _isAmPm: Qt.locale().timeFormat().toLowerCase().includes("ap")
 
     implicitHeight: Kirigami.Units.gridUnit * 5
     implicitWidth: Kirigami.Units.gridUnit * 10
