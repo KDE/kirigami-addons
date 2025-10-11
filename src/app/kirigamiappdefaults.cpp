@@ -4,13 +4,13 @@
  *   SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
-#include "kirigamiapp.h"
+#include "kirigamiappdefaults.h"
 #include <KAboutData>
-#include <KLocalizedContext>
 #include <KColorSchemeManager>
-#include <QQuickStyle>
+#include <KLocalizedContext>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
+#include <QQuickStyle>
 #include <kcoreaddons_version.h>
 
 #ifndef Q_OS_ANDROID
@@ -25,16 +25,13 @@
 #include <Windows.h>
 #endif
 
-class KirigamiAppPrivate
+namespace KirigamiAppDefaults
 {
-public:
-    KirigamiAppPrivate() = default;
-};
 
-KirigamiApp::KirigamiApp()
-    : QObject()
-    , d(std::make_unique<KirigamiAppPrivate>())
+void apply(QGuiApplication *app)
 {
+    Q_ASSERT(app);
+
     using namespace Qt::Literals::StringLiterals;
 
     auto format = QSurfaceFormat::defaultFormat();
@@ -58,7 +55,6 @@ KirigamiApp::KirigamiApp()
         // TODO remove once we no longer use the org.kde.desktop style
         qApp->setStyle(QStyleFactory::create(QStringLiteral("Breeze")));
 #endif
-
     }
     KIconTheme::initTheme();
 #endif
@@ -78,22 +74,11 @@ KirigamiApp::KirigamiApp()
 #if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 19, 0)
     // Embrace KCrash. If an application misbehaves, we should know as much as possible about it.
     // Needs initialising KAboutData::setApplicationData
-    QObject::connect(KAboutDataListener::instance(), &KAboutDataListener::applicationDataChanged, this, [] {
+    QObject::connect(KAboutDataListener::instance(), &KAboutDataListener::applicationDataChanged, app, [] {
         KCrash::initialize();
     });
 #endif
 #endif
 }
 
-KirigamiApp::~KirigamiApp() = default;
-
-bool KirigamiApp::start(QAnyStringView uri, QAnyStringView typeName, QQmlApplicationEngine *engine)
-{
-    Q_ASSERT(engine);
-    if (!qobject_cast<KLocalizedContext*>(engine->rootContext()->contextObject())) {
-        // Ensure the i18n() infrastructure is available
-        engine->rootContext()->setContextObject(new KLocalizedContext(engine));
-    }
-    engine->loadFromModule(uri, typeName);
-    return !engine->rootObjects().isEmpty();
 }
