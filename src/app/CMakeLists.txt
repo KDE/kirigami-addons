@@ -9,7 +9,7 @@ endif()
 
 target_compile_definitions(KirigamiApp PRIVATE -DTRANSLATION_DOMAIN=\"kirigami_app6\")
 
-target_sources(KirigamiApp PRIVATE kirigamiappdefaults.cpp)
+target_sources(KirigamiApp PRIVATE kirigamiapp.cpp kirigamiappdefaults.cpp)
 
 target_link_libraries(KirigamiApp PRIVATE
     Qt6::QuickControls2
@@ -46,6 +46,7 @@ ecm_setup_version(PROJECT
 
 ecm_generate_headers(KirigamiApp_CamelCase_HEADERS
     HEADER_NAMES
+        KirigamiApp
         KirigamiAppDefaults
     REQUIRED_HEADERS KirigamiApp_HEADERS
 )

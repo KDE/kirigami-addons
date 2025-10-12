@@ -8,9 +8,11 @@
 #include <KAboutData>
 #include <KColorSchemeManager>
 #include <KLocalizedContext>
+#include <QIcon>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include <QQuickStyle>
+#include <QSurfaceFormat>
 #include <kcoreaddons_version.h>
 
 #ifndef Q_OS_ANDROID

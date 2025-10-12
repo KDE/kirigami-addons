@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <QQuickWindow>
+class QGuiApplication;
 
 #include "kirigamiapp_export.h"
 
