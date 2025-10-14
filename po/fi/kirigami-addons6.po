@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-23 00:41+0000\n"
-"PO-Revision-Date: 2025-05-29 14:59+0300\n"
+"PO-Revision-Date: 2025-07-28 10:08+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -93,8 +93,7 @@ msgid "Go Back"
 msgstr "Siirry takaisin"
 
 #: components/ConvergentContextMenu.qml:405
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
 msgstr "Sulje"
@@ -416,8 +415,7 @@ msgstr ""
 "Kiitokset etukäteen tuestasi."
 
 #: formcard/AboutKDEPage.qml:163
-#, fuzzy, kde-format
-#| msgid "KDE e.V"
+#, kde-format
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
@@ -530,47 +528,43 @@ msgstr "Ei asetettu"
 #, kde-format
 msgctxt "@info:status"
 msgid "The path doesn't exist."
-msgstr ""
+msgstr "Sijaintia ei ole olemassa."
 
 #: formcard/FormFileDelegate.qml:189
 #, kde-format
 msgctxt "@info:status"
 msgid "The file doesn't exist."
-msgstr ""
+msgstr "Tiedostoa ei ole olemassa."
 
 #: formcard/FormFileDelegate.qml:256
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select file"
-msgstr "Valitse"
+msgstr "Valitse tiedosto"
 
 #: formcard/FormFileDelegate.qml:263
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No file selected"
-msgstr ""
+msgstr "Tiedostoa ei ole valittu"
 
 #: formcard/FormFolderDelegate.qml:147
 #, kde-format
 msgctxt "@info:status"
 msgid "The folder doesn't exist."
-msgstr ""
+msgstr "Kansiota ei ole olemassa."
 
 #: formcard/FormFolderDelegate.qml:204
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select folder"
-msgstr "Valitse"
+msgstr "Valitse kansio"
 
 #: formcard/FormFolderDelegate.qml:211
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No folder selected"
-msgstr ""
+msgstr "Kansiota ei ole valittu"
 
 #: formcard/FormLinkDelegate.qml:54
 #, kde-format
@@ -720,12 +714,10 @@ msgid "Delete word"
 msgstr "Poista sana"
 
 #: settings/ShortcutsConfigurationModule.qml:26
-#, fuzzy, kde-format
-#| msgctxt "@title:dialog"
-#| msgid "Reserved Shortcut"
+#, kde-format
 msgctxt "@action:button"
 msgid "Keyboard Shortcuts"
-msgstr "Varattu pikanäppäin"
+msgstr "Pikanäppäimet"
 
 #: settings/SpellcheckingConfigurationModule.qml:15
 #, kde-format
