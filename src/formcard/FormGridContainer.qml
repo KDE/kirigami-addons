@@ -213,6 +213,9 @@ Item {
                     QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
 
                     background: Kirigami.ShadowedRectangle {
+                        Kirigami.Theme.colorSet: Kirigami.Theme.View
+                        Kirigami.Theme.inherit: false
+
                         radius: root.cardWidthRestricted ? Kirigami.Units.cornerRadius : 0
                         color: Kirigami.Theme.backgroundColor
 
@@ -253,6 +256,8 @@ Item {
                     }
 
                     contentItem: RowLayout {
+                        spacing: Kirigami.Units.smallSpacing
+
                         Kirigami.Icon {
                             id: icon
 
