@@ -27,7 +27,7 @@ FormCard.FormButtonDelegate {
 
     Accessible.role: Accessible.Link
 
-    trailingLogo.source: 'open-link-symbolic'
+    trailingLogo.source: Application.layoutDirection === Qt.RightToLeft ? "open-link-symbolic-rtl" : "open-link-symbolic"
     visible: url.length > 0
 
     onClicked: Qt.openUrlExternally(url);
