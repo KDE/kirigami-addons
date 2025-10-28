@@ -12,6 +12,8 @@ outputformats = HTML
 
 depends += kde kirigami qtcore qtquick qtquickcontrols qtgui kirigamiaddonstreeview
 
+navigation.landingpage = "Kirigami Addons"
+
 qhp.projects = KirigamiAddonsDelegates
 
 qhp.KirigamiAddonsDelegates.file          = kirigamiaddonsdelegates.qhp

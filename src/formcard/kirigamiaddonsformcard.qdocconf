@@ -11,6 +11,8 @@ imagedirs  += ../../docs/pics
 
 outputformats = HTML
 
+navigation.landingpage = "Kirigami Addons"
+
 depends += kde kirigami kirigamiaddonscomponents kcoreaddons kirigamiplatform qtcore qtquick qtquickcontrols qtgui kirigamiaddonscomponents kirigamiaddonsdateandtime kirigamiaddonsdelegates
 
 qhp.projects = KirigamiAddonsFormCard

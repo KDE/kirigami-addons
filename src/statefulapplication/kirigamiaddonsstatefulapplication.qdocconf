@@ -10,6 +10,8 @@ sourcedirs += .
 
 outputformats = HTML
 
+navigation.landingpage = "Kirigami Addons"
+
 depends += kde kirigami kconfigqml kconfiggui qtcore qtquick qtquickcontrols qtgui
 
 qhp.projects = KirigamiAddonsStatefulApplication
