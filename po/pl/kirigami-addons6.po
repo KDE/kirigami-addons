@@ -7,16 +7,16 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-23 00:41+0000\n"
-"PO-Revision-Date: 2025-06-08 07:42+0200\n"
+"PO-Revision-Date: 2025-11-01 09:38+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
-"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language-Team: pl\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -94,8 +94,7 @@ msgid "Go Back"
 msgstr "Idź wstecz"
 
 #: components/ConvergentContextMenu.qml:405
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
 msgstr "Zamknij"
@@ -228,42 +227,42 @@ msgstr "Qt"
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr "Między-platformowy szkielet do rozwoju aplikacji"
+msgstr "Międzyplatformowy szkielet do rozwoju aplikacji"
 
 #: formcard/aboutcomponent.cpp:38
 #, kde-format
 msgid "Using %1 and built against %2"
-msgstr "Używany jest %1, który został zbudowany na %2"
+msgstr "używany na wersji %1, zbudowany na wersji %2"
 
 #: formcard/aboutcomponent.cpp:43
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Unknown/Default"
-msgstr ""
+msgstr "Nieznany/domyślny"
 
 #: formcard/aboutcomponent.cpp:45
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: formcard/aboutcomponent.cpp:48
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Snap"
-msgstr ""
+msgstr "Snap"
 
 #: formcard/aboutcomponent.cpp:51
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "AppImage"
-msgstr ""
+msgstr "AppImage"
 
 #: formcard/aboutcomponent.cpp:53
 #, kde-format
 msgctxt "@info"
 msgid "Distribution method."
-msgstr ""
+msgstr "Sposób rozpowszechniania."
 
 #: formcard/aboutcomponent.cpp:56
 #, kde-format
@@ -427,7 +426,7 @@ msgstr "KDE e.V."
 #: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:239
 #, kde-format
 msgid "Donate"
-msgstr "Darowizna"
+msgstr "Wpłać darowiznę"
 
 #: formcard/AboutPage.qml:91
 #: statefulapplication/abstractkirigamiapplication.cpp:167
@@ -461,7 +460,7 @@ msgstr "Zgłoś błąd"
 #: formcard/AboutPage.qml:285
 #, kde-format
 msgid "Libraries in use"
-msgstr "Biblioteki w użyciu"
+msgstr "Używane biblioteki"
 
 #: formcard/AboutPage.qml:288
 #, kde-format
@@ -534,47 +533,43 @@ msgstr "Nieustawione"
 #, kde-format
 msgctxt "@info:status"
 msgid "The path doesn't exist."
-msgstr ""
+msgstr "Ścieżka nie istnieje."
 
 #: formcard/FormFileDelegate.qml:189
 #, kde-format
 msgctxt "@info:status"
 msgid "The file doesn't exist."
-msgstr ""
+msgstr "Plik nie istnieje."
 
 #: formcard/FormFileDelegate.qml:256
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select file"
-msgstr "Zaznacz"
+msgstr "Wybierz plik"
 
 #: formcard/FormFileDelegate.qml:263
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No file selected"
-msgstr ""
+msgstr "Nie wybrano żadnego pliku"
 
 #: formcard/FormFolderDelegate.qml:147
 #, kde-format
 msgctxt "@info:status"
 msgid "The folder doesn't exist."
-msgstr ""
+msgstr "Katalog nie istnieje."
 
 #: formcard/FormFolderDelegate.qml:204
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select folder"
-msgstr "Zaznacz"
+msgstr "Wybierz katalog"
 
 #: formcard/FormFolderDelegate.qml:211
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No folder selected"
-msgstr ""
+msgstr "Nie wybrano żadnego katalogu"
 
 #: formcard/FormLinkDelegate.qml:54
 #, kde-format
