@@ -30,6 +30,8 @@
 namespace KirigamiAppDefaults
 {
 
+static const auto INITIAL_STYLE = QQuickStyle::name();
+
 void apply(QGuiApplication *app)
 {
     Q_ASSERT(app);
@@ -51,7 +53,8 @@ void apply(QGuiApplication *app)
     // Ensure breeze is the fallback, to make sure all icons are found and no awkward empty spaces.
     QIcon::setFallbackThemeName("breeze"_L1);
     // Default to org.kde.desktop style unless the user forces another style
-    if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE")) {
+    bool handledByQPT = INITIAL_STYLE != QQuickStyle::name();
+    if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE") && !handledByQPT) {
         QQuickStyle::setStyle(u"org.kde.desktop"_s);
 #ifndef Q_OS_ANDROID
         // TODO remove once we no longer use the org.kde.desktop style
