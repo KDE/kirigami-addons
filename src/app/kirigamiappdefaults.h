@@ -10,11 +10,16 @@ class QGuiApplication;
 
 #include "kirigamiapp_export.h"
 
+/*!
+ * \namespace KirigamiAppDefaults
+ * \inmodule KirigamiApp
+ * \brief Contains a function to apply useful default Qt options for Kirigami apps.
+ */
 namespace KIRIGAMIAPP_EXPORT KirigamiAppDefaults
 {
 /*!
  * \inmodule KirigamiApp
- * \inheaderfile KirigamiApp
+ * \inheaderfile KirigamiAppDefaults
  *
  * \brief Helper to apply suitable defaults for an app using Kirigami
  *

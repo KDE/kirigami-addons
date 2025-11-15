@@ -67,9 +67,9 @@ void apply(QGuiApplication *app)
         freopen("CONOUT$", "w", stderr);
     }
 
-    auto font = qGuiApp->font();
+    auto font = app->font();
     font.setPointSize(10);
-    qGuiApp->setFont(font);
+    app->setFont(font);
 #endif
 
 #ifndef Q_OS_ANDROID
