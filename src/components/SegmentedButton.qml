@@ -24,7 +24,7 @@ RowLayout {
      */
     property list<T.Action> actions
 
-    spacing: Math.round(Kirigami.Units.smallSpacing / 2)
+    spacing: -1//Math.round(Kirigami.Units.smallSpacing / 2)
 
     Repeater {
         id: buttonRepeater
@@ -39,6 +39,7 @@ RowLayout {
 
             property bool highlightBackground: down || checked
             property bool highlightBorder: enabled && down || checked || visualFocus || hovered
+            z: highlightBorder ? 1 : 0
 
             padding: Kirigami.Units.mediumSpacing
 
@@ -48,7 +49,7 @@ RowLayout {
 
             display: modelData.displayHint & Kirigami.DisplayHint.IconOnly ? QQC2.AbstractButton.IconOnly : QQC2.AbstractButton.TextBesideIcon
 
-            Layout.fillHeight: true
+         //   Layout.fillHeight: true
             Layout.minimumWidth: height
 
             icon {

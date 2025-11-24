@@ -169,6 +169,7 @@ QQC2.Control {
                 target: root.searchField
                 anchors.left: root.searchField && root.searchField.parent ? root.searchField.parent.left : undefined
                 anchors.right: root.searchField && root.searchField.parent ? root.searchField.parent.right : undefined
+                anchors.verticalCenter:  root.searchField && root.searchField.parent ? root.searchField.parent.verticalCenter : undefined
             }
             PropertyChanges {
                 target: root.searchField ? root.searchField.KeyNavigation : null
@@ -269,6 +270,9 @@ QQC2.Control {
             }
         }
 
+        readonly property real searchFieldY: root.searchField
+                                             ? root.height/2 - root.searchField.height / 2
+                                             : 0
         readonly property real collapsedHeight: (root.searchField ? root.searchField.implicitHeight : 0)
             + topMargin + bottomMargin + topPadding + bottomPadding
 
@@ -292,7 +296,7 @@ QQC2.Control {
             if (!overlay) {
                 return 0;
             }
-            return Math.max(-root.Kirigami.ScenePosition.y, Math.min(0, overlay.height - root.Kirigami.ScenePosition.y - realisticHeight));
+            return Math.max(-root.Kirigami.ScenePosition.y, Math.min(0, overlay.height - root.Kirigami.ScenePosition.y - realisticHeight)) + searchFieldY;
         }
 
         clip: false
@@ -305,7 +309,7 @@ QQC2.Control {
         rightPadding: dialogRoundedBackground.border.width
         bottomPadding: dialogRoundedBackground.border.width
         x: -leftPadding
-        y: 0 // initial value, will be managed by enter/exit transitions
+        y: searchFieldY // initial value, will be managed by enter/exit transitions
 
         implicitWidth: root.width + leftPadding + rightPadding
         height: popup.collapsedHeight // initial binding, will be managed by enter/exit transitions
@@ -378,7 +382,7 @@ QQC2.Control {
                         property: "y"
                         easing.type: Easing.OutCubic
                         duration: Kirigami.Units.longDuration
-                        to: 0
+                        to: popup.searchFieldY
                     }
                     NumberAnimation {
                         property: "height"
@@ -412,7 +416,7 @@ QQC2.Control {
             root.searchField.background.opacity = 1;
             dialogRoundedBackground.opacity = 0;
             // Make sure height stays sensible if search field is resized while popup is closed.
-            popup.y = 0;
+            popup.y = searchFieldY;
             popup.height = Qt.binding(() => popup.collapsedHeight);
         }
 
