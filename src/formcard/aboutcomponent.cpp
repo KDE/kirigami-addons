@@ -39,7 +39,7 @@ QList<KAboutComponent> AboutComponent::components() const
                                           QStringLiteral("https://www.qt.io/"),
                                           KAboutLicense::LGPL_V3));
 
-#ifdef Q_OS_LINUX
+#if defined(Q_OS_LINUX) && !defined(Q_OS_ANDROID)
     QString packageText = i18nc("Linux packaging format", "Unknown/Default");
     if (KSandbox::isFlatpak()) {
         packageText = i18nc("Linux packaging format", "Flatpak");
