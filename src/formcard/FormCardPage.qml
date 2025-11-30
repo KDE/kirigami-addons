@@ -23,6 +23,25 @@ Kirigami.ScrollablePage {
     leftPadding: 0
     rightPadding: 0
 
+    function findAncestor(item: Item, predicate: /*function Item => bool*/ var): Item {
+        let target = item.parent
+        while (target && !predicate(target)) {
+            target = target.parent
+        }
+        return target
+    }
+
+    Connections {
+        target: root.Window
+        function onActiveFocusItemChanged(): void {
+            const item = root.Window.activeFocusItem
+            if (item && root.findAncestor(item, (item) => item === root)) {
+                const itemPosition = root.flickable.contentItem.mapFromItem(item, 0, 0)
+                root.ensureVisible(item, itemPosition.x - item.x, itemPosition.y - item.y)
+            }
+        }
+    }
+
     background: Rectangle {
         Kirigami.Theme.colorSet: Kirigami.Theme.Window
         Kirigami.Theme.inherit: false
