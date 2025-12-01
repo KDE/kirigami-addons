@@ -1,5 +1,5 @@
-import org.kde.kirigamiaddons.formcard 1.0 as FormCard
-import org.kde.about 1.0
+import org.kde.kirigamiaddons.formcard as FormCard
+import org.kde.about
 
 FormCard.AboutPage {
     title: i18nc("@action:button", "About")

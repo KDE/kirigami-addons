@@ -15,8 +15,8 @@ import QtQuick.Layouts
 
    Example:
    \qml
-   import org.kde.kirigamiaddons.delegates 1.0 as Delegates
-   import org.kde.kirigamiaddons.components 1.0 as Components
+   import org.kde.kirigamiaddons.delegates as Delegates
+   import org.kde.kirigamiaddons.components as Components
 
    Components.BottomDrawer {
        id: drawer

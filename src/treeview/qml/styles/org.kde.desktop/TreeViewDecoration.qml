@@ -1,11 +1,11 @@
 //  SPDX-FileCopyrightText: 2020 Marco Martin <mart@kde.org>
 //  SPDX-License-Identifier: LGPL-2.0-or-later
 
-import QtQuick 2.6
-import QtQuick.Layouts 1.4
-import QtQuick.Controls 2.2 as QQC2
-import QtQuick.Templates 2.2 as T2
-import org.kde.kitemmodels 1.0
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as QQC2
+import QtQuick.Templates as T2
+import org.kde.kitemmodels
 import org.kde.qqc2desktopstyle.private as StylePrivate
 
 RowLayout {
