@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the kirigami-addons package.
 #
 # SPDX-FileCopyrightText: 2024, 2025 Guðmundur Erlingsson <gudmundure@gmail.com>
+# SPDX-FileCopyrightText: 2025 Sveinn í Felli <sv1@fellsnet.is>
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:51+0000\n"
-"PO-Revision-Date: 2025-11-16 12:50+0000\n"
-"Last-Translator: Gummi <gudmundure@gmail.com>\n"
-"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2025-12-02 16:17+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -625,7 +626,7 @@ msgstr "Stillingar"
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Enable automatic spell checking"
-msgstr "Virkja sjálfvirka stafsetningarkönnun"
+msgstr "Virkja sjálfvirka stafsetningaryfirferð"
 
 #: settings/private/SonnetConfigPage.qml:55
 #, kde-format
@@ -661,7 +662,7 @@ msgstr "Ekkert"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Additional Spell Checking Languages"
-msgstr "Viðbótartungumál fyrir stafsetningarkönnun"
+msgstr "Viðbótartungumál fyrir stafsetningaryfirferð"
 
 #: settings/private/SonnetConfigPage.qml:118
 #, kde-format
@@ -682,7 +683,7 @@ msgstr "Opna einkaorðasafn"
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking languages"
-msgstr "Tungumál fyrir stafsetningarkönnun"
+msgstr "Tungumál fyrir stafsetningaryfirferð"
 
 #: settings/private/SonnetConfigPage.qml:155
 #, kde-format
@@ -723,7 +724,7 @@ msgstr "Flýtilyklar"
 #, kde-format
 msgctxt "@action:button"
 msgid "Spell Checking"
-msgstr "Stafsetningarkönnun"
+msgstr "Stafsetningaryfirferð"
 
 #: statefulapplication/abstractkirigamiapplication.cpp:145
 #, kde-format
