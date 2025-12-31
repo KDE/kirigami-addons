@@ -103,6 +103,7 @@ QQC2.ScrollView {
     }
     property Component loaderDelegate: Loader {
         property T.Action action
+        active: action.visible === undefined || action.visible
         Layout.fillWidth: item?.Layout.fillWidth ?? true
     }
 
