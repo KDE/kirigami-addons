@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:51+0000\n"
-"PO-Revision-Date: 2024-09-05 00:33+0300\n"
+"PO-Revision-Date: 2025-12-31 15:53+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.8\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -92,11 +92,10 @@ msgstr "Užverti"
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "Grįžti"
 
 #: components/ConvergentContextMenu.qml:405
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
 msgstr "Užverti"
@@ -188,11 +187,9 @@ msgid "Go Next"
 msgstr "Į kitą"
 
 #: dateandtime/TimePicker.qml:114
-#, fuzzy, kde-format
-#| msgctxt "time in hour in 24h format"
-#| msgid "%1 hours"
+#, kde-format
 msgid "Hours"
-msgstr "%1 val."
+msgstr "Valandos"
 
 #: dateandtime/TimePicker.qml:137
 #, kde-format
@@ -201,80 +198,78 @@ msgid ":"
 msgstr ":"
 
 #: dateandtime/TimePicker.qml:152
-#, fuzzy, kde-format
-#| msgctxt "number of minutes"
-#| msgid "%1 minutes"
+#, kde-format
 msgid "Minutes"
-msgstr "%1 min."
+msgstr "Minutės"
 
 #: formcard/aboutcomponent.cpp:26
 #, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: formcard/aboutcomponent.cpp:30
 #, kde-format
 msgid "KDE Frameworks"
-msgstr ""
+msgstr "KDE Frameworks"
 
 #: formcard/aboutcomponent.cpp:31
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
-msgstr ""
+msgstr "KDE bendruomenės sukurtų bibliotekų rinkinys, skirtas išplėsti Qt."
 
 #: formcard/aboutcomponent.cpp:36
 #, kde-format
 msgid "Qt"
-msgstr ""
+msgstr "Qt"
 
 #: formcard/aboutcomponent.cpp:37
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr ""
+msgstr "Daugiaplatformis programų plėtojimo karkasas."
 
 #: formcard/aboutcomponent.cpp:38
 #, kde-format
 msgid "Using %1 and built against %2"
-msgstr ""
+msgstr "Naudoja %1 ir sudaryta remiantis %2"
 
 #: formcard/aboutcomponent.cpp:43
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Unknown/Default"
-msgstr ""
+msgstr "Nežinomas/Numatytasis"
 
 #: formcard/aboutcomponent.cpp:45
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: formcard/aboutcomponent.cpp:48
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Snap"
-msgstr ""
+msgstr "Snap"
 
 #: formcard/aboutcomponent.cpp:51
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "AppImage"
-msgstr ""
+msgstr "AppImage"
 
 #: formcard/aboutcomponent.cpp:53
 #, kde-format
 msgctxt "@info"
 msgid "Distribution method."
-msgstr ""
+msgstr "Platinimo metodas."
 
 #: formcard/aboutcomponent.cpp:56
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr ""
+msgstr "Pagrindinė platforma."
 
 #: formcard/AboutKDEPage.qml:24
 #: statefulapplication/abstractkirigamiapplication.cpp:174
@@ -423,10 +418,9 @@ msgstr ""
 "palaikymui ir konferencijų bei susitikimų organizavimui."
 
 #: formcard/AboutKDEPage.qml:163
-#, fuzzy, kde-format
-#| msgid "KDE e.V"
+#, kde-format
 msgid "KDE e.V."
-msgstr "KDE e.V"
+msgstr "KDE e.V."
 
 #: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:239
 #, kde-format
@@ -445,11 +439,9 @@ msgid "Copyright"
 msgstr "Autorių teisės"
 
 #: formcard/AboutPage.qml:144
-#, fuzzy, kde-format
-#| msgctxt "@action:intoolbar"
-#| msgid "Hide caption"
+#, kde-format
 msgid "Description"
-msgstr "Slėpti užrašą"
+msgstr "Aprašas"
 
 #: formcard/AboutPage.qml:157
 #, kde-format
@@ -461,8 +453,7 @@ msgstr[2] "Licencijos"
 msgstr[3] "Licencijos"
 
 #: formcard/AboutPage.qml:279
-#, fuzzy, kde-format
-#| msgid "Report a bug"
+#, kde-format
 msgid "Report a Bug"
 msgstr "Pranešti apie klaidą"
 
@@ -475,13 +466,13 @@ msgstr "Naudojamos bibliotekos"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Kopijuoti į iškarpinę"
 
 #: formcard/AboutPage.qml:292
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
-msgstr ""
+msgstr "Informacija apie sistemą nukopijuota į iškarpinę."
 
 #: formcard/AboutPage.qml:305
 #, kde-format
@@ -524,7 +515,7 @@ msgstr "Dabartinė spalva „%1“"
 #, kde-format
 msgctxt "@action:button"
 msgid "Icon"
-msgstr ""
+msgstr "Piktograma"
 
 #: formcard/FormDateTimeDelegate.qml:202
 #, kde-format
@@ -542,65 +533,61 @@ msgstr "Nenustatyta"
 #, kde-format
 msgctxt "@info:status"
 msgid "The path doesn't exist."
-msgstr ""
+msgstr "Kelio nėra."
 
 #: formcard/FormFileDelegate.qml:189
 #, kde-format
 msgctxt "@info:status"
 msgid "The file doesn't exist."
-msgstr ""
+msgstr "Failo nėra."
 
 #: formcard/FormFileDelegate.qml:256
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select file"
-msgstr "Pasirinkti"
+msgstr "Pasirinkti failą"
 
 #: formcard/FormFileDelegate.qml:263
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No file selected"
-msgstr ""
+msgstr "Nepasirinktas joks failas"
 
 #: formcard/FormFolderDelegate.qml:147
 #, kde-format
 msgctxt "@info:status"
 msgid "The folder doesn't exist."
-msgstr ""
+msgstr "Aplanko nėra."
 
 #: formcard/FormFolderDelegate.qml:204
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select folder"
-msgstr "Pasirinkti"
+msgstr "Pasirinkti aplanką"
 
 #: formcard/FormFolderDelegate.qml:211
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No folder selected"
-msgstr ""
+msgstr "Nepasirinktas joks aplankas"
 
 #: formcard/FormLinkDelegate.qml:54
 #, kde-format
 msgctxt "@action:inmnenu"
 msgid "Open Link"
-msgstr ""
+msgstr "Atverti nuorodą"
 
 #: formcard/FormLinkDelegate.qml:60
 #, kde-format
 msgctxt "@action:inmnenu"
 msgid "Copy Link to Clipboard"
-msgstr ""
+msgstr "Kopijuoti nuorodą į iškarpinę"
 
 #: formcard/FormLinkDelegate.qml:66
 #, kde-format
 msgctxt "@info:status"
 msgid "Url copied to clipboard."
-msgstr ""
+msgstr "URL adresas nukopijuotas į iškarpinę."
 
 #: formcard/FormPasswordFieldDelegate.qml:249
 #: formcard/FormTextAreaDelegate.qml:174 formcard/FormTextFieldDelegate.qml:270
@@ -628,17 +615,13 @@ msgid "Go back"
 msgstr "Grįžti"
 
 #: settings/private/ConfigMobilePage.qml:26
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title"
 msgid "Settings"
 msgstr "Nuostatos"
 
 #: settings/private/ConfigMobilePage.qml:99
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title:group"
 msgid "Settings"
 msgstr "Nuostatos"
@@ -647,43 +630,43 @@ msgstr "Nuostatos"
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Enable automatic spell checking"
-msgstr ""
+msgstr "Įjungti automatinį rašybos tikrinimą"
 
 #: settings/private/SonnetConfigPage.qml:55
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore uppercase words"
-msgstr ""
+msgstr "Nepaisyti žodžių didžiosiomis raidėmis"
 
 #: settings/private/SonnetConfigPage.qml:69
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore hyphenated words"
-msgstr ""
+msgstr "Nepaisyti keliamų žodžių"
 
 #: settings/private/SonnetConfigPage.qml:83
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Detect language automatically"
-msgstr ""
+msgstr "Automatiškai aptikti kalbą"
 
 #: settings/private/SonnetConfigPage.qml:96
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Selected default language:"
-msgstr ""
+msgstr "Pasirinkta numatytoji kalba:"
 
 #: settings/private/SonnetConfigPage.qml:97
 #, kde-format
 msgctxt "No selected language"
 msgid "None"
-msgstr ""
+msgstr "Nėra"
 
 #: settings/private/SonnetConfigPage.qml:117
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Additional Spell Checking Languages"
-msgstr ""
+msgstr "Papildomos rašybos tikrinimo kalbos"
 
 #: settings/private/SonnetConfigPage.qml:118
 #, kde-format
@@ -691,70 +674,72 @@ msgid ""
 "%1 will provide spell checking and suggestions for the languages listed here "
 "when autodetection is enabled."
 msgstr ""
+"Kai įjungtas automatinis aptikimas, %1 pateiks rašybos tikrinimą ir "
+"pasiūlymus, skirtus čia išvardytoms kalboms."
 
 #: settings/private/SonnetConfigPage.qml:131
 #, kde-format
 msgctxt "@action:button"
 msgid "Open Personal Dictionary"
-msgstr ""
+msgstr "Atverti asmeninį žodyną"
 
 #: settings/private/SonnetConfigPage.qml:143
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking languages"
-msgstr ""
+msgstr "Rašybos tikrinimo kalbos"
 
 #: settings/private/SonnetConfigPage.qml:155
 #, kde-format
 msgid "Default Language"
-msgstr ""
+msgstr "Numatytoji kalba"
 
 #: settings/private/SonnetConfigPage.qml:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking dictionary"
-msgstr ""
+msgstr "Rašybos tikrinimo žodynas"
 
 #: settings/private/SonnetConfigPage.qml:174
 #, kde-format
 msgctxt "Placeholder message"
 msgid "Add a new word to your personal dictionary…"
-msgstr ""
+msgstr "Pridėti naują žodį į asmeninį žodyną…"
 
 #: settings/private/SonnetConfigPage.qml:177
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Word"
-msgstr ""
+msgstr "Pridėti žodį"
 
 #: settings/private/SonnetConfigPage.qml:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete word"
-msgstr ""
+msgstr "Ištrinti žodį"
 
 #: settings/ShortcutsConfigurationModule.qml:26
 #, kde-format
 msgctxt "@action:button"
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Spartieji klavišai"
 
 #: settings/SpellcheckingConfigurationModule.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Spell Checking"
-msgstr ""
+msgstr "Rašybos tikrinimas"
 
 #: statefulapplication/abstractkirigamiapplication.cpp:145
 #, kde-format
 msgid "Open Command Bar"
-msgstr ""
+msgstr "Atverti komandų juostą"
 
 #: statefulapplication/private/keysequencehelper.cpp:117
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Reserved Shortcut"
-msgstr ""
+msgstr "Rezervuotas spartusis klavišas"
 
 #: statefulapplication/private/keysequencehelper.cpp:119
 #, kde-format
@@ -764,6 +749,9 @@ msgid ""
 "shortcut.\n"
 "Please choose another one."
 msgstr ""
+"F12 klavišas yra rezervuotas „Windows“ sistemoje, todėl negali būti "
+"naudojamas visuotiniems spartiesiems klavišams.\n"
+"Pasirinkite kitą."
 
 #: statefulapplication/private/keysequencehelper.cpp:143
 #, kde-format
@@ -771,32 +759,32 @@ msgctxt ""
 "@title:dialog This happen when a global shortcut is already defined with the "
 "same shortcut"
 msgid "Global Shortcut Shadowing"
-msgstr ""
+msgstr "Visuotinio sparčiojo klavišo uždengimas"
 
 #: statefulapplication/private/keysequencehelper.cpp:146
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination is shadowed by following global actions:\n"
-msgstr ""
+msgstr "Klavišų kombinaciją „%1“ uždengia šie visuotiniai veiksmai:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:148
 #: statefulapplication/private/keysequencehelper.cpp:154
 #, kde-format
 msgctxt "@info"
 msgid "Action '%1' in context '%2'\n"
-msgstr ""
+msgstr "Veiksmas „%1“, esantis „%2“ kontekste\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:152
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination shadows following global actions:\n"
-msgstr ""
+msgstr "Klavišų kombinacija „%1“ uždengia šiuos visuotinius veiksmus:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:193
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Conflict with Standard Application Shortcut"
-msgstr ""
+msgstr "Konfliktas su programos standartiniu sparčiuoju klavišu"
 
 #: statefulapplication/private/keysequencehelper.cpp:195
 #, kde-format
@@ -806,18 +794,21 @@ msgid ""
 "some applications use.\n"
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
+"Klavišų kombinacija „%1“ taip pat yra naudojama standartiniam veiksmui „%2“, "
+"kurį naudoja kai kurios programos.\n"
+"Ar tikrai norite ją taip pat naudoti kaip visuotinį spartųjį klavišą?"
 
 #: statefulapplication/private/KeySequenceItem.qml:129
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
-msgstr ""
+msgstr "Įvestis"
 
 #: statefulapplication/private/KeySequenceItem.qml:130
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
-msgstr ""
+msgstr "Nėra"
 
 #: statefulapplication/private/KeySequenceItem.qml:141
 #, kde-format
@@ -825,62 +816,66 @@ msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
+"Spustelėkite ant mygtuko, tada paspauskite spartųjį klavišą taip, kaip "
+"spaustumėte jį programoje.\n"
+"Pavyzdžiui, kombinacijai Vald+A: laikykite nuspaustą Vald klavišą ir "
+"paspauskite A."
 
 #: statefulapplication/private/KeySequenceItem.qml:182
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
-msgstr ""
+msgstr "Išvalyti klavišų seką"
 
 #: statefulapplication/private/KeySequenceItem.qml:198
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel Key Sequence Recording"
-msgstr ""
+msgstr "Atsisakyti klavišų sekos įrašymо"
 
 #: statefulapplication/private/KQuickCommandBarPage.qml:55
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No results found"
-msgstr ""
+msgstr "Nerasta jokių rezultatų"
 
 #: statefulapplication/private/ShortcutsEditor.qml:19
 #: statefulapplication/StatefulWindow.qml:99
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcuts"
-msgstr ""
+msgstr "Spartieji klavišai"
 
 #: statefulapplication/private/ShortcutsEditor.qml:23
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Filter…"
-msgstr ""
+msgstr "Filtruoti…"
 
 #: statefulapplication/private/ShortcutsEditor.qml:69
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut: %1"
-msgstr ""
+msgstr "Spartusis klavišas: %1"
 
 #: statefulapplication/private/ShortcutsEditor.qml:89
 #, kde-format
 msgctxt "@label"
 msgid "Shortcut:"
-msgstr ""
+msgstr "Spartusis klavišas:"
 
 #: statefulapplication/private/ShortcutsEditor.qml:144
 #: statefulapplication/private/ShortcutsEditor.qml:172
 #, kde-format
 msgctxt "@label"
 msgid "Alternative:"
-msgstr ""
+msgstr "Alternatyvus:"
 
 #: statefulapplication/private/ShortcutsEditor.qml:210
 #, kde-format
 msgctxt "Placeholder message"
 msgid "No shortcuts found"
-msgstr ""
+msgstr "Nerasti jokie spartieji klavišai"
 
 #: statefulapplication/shortcutsmodel.cpp:41
 #, kde-format
@@ -889,15 +884,13 @@ msgid ", "
 msgstr ", "
 
 #: statefulapplication/StatefulWindow.qml:109
-#, fuzzy, kde-format
-#| msgid "About %1"
+#, kde-format
 msgctxt "@title:window"
 msgid "About %1"
 msgstr "Apie %1"
 
 #: statefulapplication/StatefulWindow.qml:122
-#, fuzzy, kde-format
-#| msgid "About KDE"
+#, kde-format
 msgctxt "@title:window"
 msgid "About KDE"
 msgstr "Apie KDE"
