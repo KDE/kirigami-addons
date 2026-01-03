@@ -12,6 +12,8 @@ outputformats = HTML
 
 depends += kde kirigami qtcore qtquick qtquickcontrols qtgui kirigamiaddonsstatefulapplication
 
+navigation.landingpage = "Kirigami Addons"
+
 qhp.projects = KirigamiAddonsStatefulApplicationLabs
 
 qhp.KirigamiAddonsStatefulApplicationLabs.file          = kirigamiaddonsstatefulapplicationlabs.qhp

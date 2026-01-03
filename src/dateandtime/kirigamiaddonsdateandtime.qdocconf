@@ -12,6 +12,8 @@ outputformats = HTML
 
 depends += kde kirigami qtcore qtquick qtquickcontrols qtgui kirigamiaddonscomponents
 
+navigation.landingpage = "Kirigami Addons"
+
 qhp.projects = KirigamiAddonsDateAndTime
 
 qhp.KirigamiAddonsDateAndTime.file          = kirigamiaddonsdateandtime.qhp

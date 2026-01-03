@@ -3,9 +3,7 @@
 
 add_library(KirigamiApp SHARED)
 
-if (TARGET Qt6::qdoc AND TARGET Qt6::qhelpgenerator)
-    ecm_generate_qdoc(KirigamiApp kirigamiapp.qdocconf)
-endif()
+ecm_generate_qdoc(KirigamiApp kirigamiapp.qdocconf)
 
 target_compile_definitions(KirigamiApp PRIVATE -DTRANSLATION_DOMAIN=\"kirigami_app6\")
 

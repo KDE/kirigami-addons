@@ -64,9 +64,9 @@ public:
     ~KirigamiApp() override;
 
     /*!
-     * \class KirigamiApp::App
+     * \typealias KirigamiApp::App
      *
-     * \brief Chooses either \class QGuiApplication or \class QApplication for you.
+     * \brief Chooses either \c QGuiApplication or \c QApplication for you.
      *
      * Allows the system to choose the one you'll want without really having to
      * decide. Kirigami apps should generally not need QApplication (only for
