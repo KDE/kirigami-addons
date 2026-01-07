@@ -146,6 +146,15 @@ AbstractFormDelegate {
      */
     property alias editText: combobox.editText
 
+    /*!
+     *       \brief This property holds an item that will be displayed after the
+     *       delegate's contents.
+     *
+     *       \default null
+     *       \since 1.11.0
+     */
+    property var trailing: null
+
     enum DisplayMode {
         ComboBox,
         Dialog,
@@ -425,19 +434,37 @@ AbstractFormDelegate {
                 direction: Qt.DownArrow
                 visible: controlRoot.displayMode === FormComboBoxDelegate.Dialog || controlRoot.displayMode === FormComboBoxDelegate.Page
             }
+
+            LayoutItemProxy {
+                target: controlRoot.trailing
+                visible: Kirigami.Settings.isMobile
+            }
         }
 
-        QQC2.ComboBox {
-            id: combobox
-            focusPolicy: controlRoot.displayMode === FormComboBoxDelegate.ComboBox ? Qt.StrongFocus : Qt.NoFocus
-            model: controlRoot.model
-            visible: controlRoot.displayMode == FormComboBoxDelegate.ComboBox
-            delegate: controlRoot.comboBoxDelegate
-            currentIndex: controlRoot.currentIndex
-            onActivated: index => controlRoot.activated(index)
-            onAccepted: controlRoot.accepted()
-            popup.contentItem.clip: true
+        RowLayout {
+            id: innerRow
+
+            spacing: Kirigami.Units.smallSpacing
+
             Layout.fillWidth: true
+
+            QQC2.ComboBox {
+                id: combobox
+                focusPolicy: controlRoot.displayMode === FormComboBoxDelegate.ComboBox ? Qt.StrongFocus : Qt.NoFocus
+                model: controlRoot.model
+                visible: controlRoot.displayMode == FormComboBoxDelegate.ComboBox
+                delegate: controlRoot.comboBoxDelegate
+                currentIndex: controlRoot.currentIndex
+                onActivated: index => controlRoot.activated(index)
+                onAccepted: controlRoot.accepted()
+                popup.contentItem.clip: true
+                Layout.fillWidth: true
+            }
+
+            LayoutItemProxy {
+                target: controlRoot.trailing
+                visible: !Kirigami.Settings.isMobile
+            }
         }
 
         QQC2.Label {
