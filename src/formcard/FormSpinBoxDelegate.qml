@@ -112,6 +112,15 @@ AbstractFormDelegate {
     property string statusMessage: ""
 
     /*!
+       \brief This property holds an item that will be displayed after the
+       delegate's contents.
+
+       \default null
+       \since 1.12.0
+     */
+    property var trailing: null
+
+    /*!
        Increases the value by stepSize, or 1 if stepSize is not defined.
      */
     function increase() {
@@ -199,13 +208,31 @@ AbstractFormDelegate {
                 isStart: false
                 isEnd: true
             }
+
+            LayoutItemProxy {
+                target: root.trailing
+                visible: Kirigami.Settings.isMobile
+            }
         }
 
-        QQC2.SpinBox {
-            id: spinbox
+        RowLayout {
+            id: innerRow
+
+            spacing: Kirigami.Units.smallSpacing
+
             Layout.fillWidth: true
-            visible: !Kirigami.Settings.isMobile
-            locale: root.locale
+
+            QQC2.SpinBox {
+                id: spinbox
+                Layout.fillWidth: true
+                visible: !Kirigami.Settings.isMobile
+                locale: root.locale
+            }
+
+            LayoutItemProxy {
+                target: root.trailing
+                visible: !Kirigami.Settings.isMobile
+            }
         }
 
         Kirigami.InlineMessage {
