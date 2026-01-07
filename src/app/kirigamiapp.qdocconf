@@ -16,7 +16,7 @@ navigation.landingpage = "Kirigami Addons"
 
 qhp.projects = KirigamiApp
 
-qhp.KirigamiApp.file          = kirigamiaddonsapp.qhp
+qhp.KirigamiApp.file          = kirigamiapp.qhp
 qhp.KirigamiApp.namespace     = org.kde.kirigamiaddons.app.$QT_VERSION_TAG
 qhp.KirigamiApp.virtualFolder = kirigamiaddonsapp
 qhp.KirigamiApp.indexTitle    = Kirigami Addons App
