@@ -32,6 +32,8 @@ import QtQuick.Controls
    \image floatingtoolbar.png
  */
 ToolBar {
+    Kirigami.Theme.inherit: false
+    Kirigami.Theme.colorSet: Kirigami.Theme.Window
     background: Kirigami.ShadowedRectangle {
         color: Kirigami.Theme.backgroundColor
         radius: Kirigami.Units.cornerRadius
@@ -46,8 +48,5 @@ ToolBar {
             color: Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, Kirigami.Theme.frameContrast)
             width: 1
         }
-
-        Kirigami.Theme.inherit: false
-        Kirigami.Theme.colorSet: Kirigami.Theme.Window
     }
 }
