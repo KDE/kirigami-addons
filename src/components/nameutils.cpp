@@ -3,11 +3,13 @@
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
 #include "nameutils.h"
+
 #include <QDebug>
 #include <QMap>
 #include <QQuickStyle>
 #include <QTextBoundaryFinder>
 #include <QVector>
+#include <QColor>
 
 #include <array>
 
@@ -169,5 +171,3 @@ auto NameUtils::isStringUnsuitableForInitials(const QString &string) -> bool
 
     return !isAllowedScript;
 }
-
-#include "moc_nameutils.cpp"

@@ -4,19 +4,14 @@
 
 #pragma once
 
-#include <QColor>
-#include <QObject>
 #include <QVariant>
-#include <qqmlregistration.h>
 
-class NameUtils : public QObject
+#include "kirigamiaddonscomponents_export.h"
+
+class KIRIGAMIADDONSCOMPONENTS_EXPORT NameUtils
 {
-    Q_OBJECT
-    QML_ELEMENT
-    QML_SINGLETON
-
 public:
-    Q_INVOKABLE QString initialsFromString(const QString &name);
-    Q_INVOKABLE QColor colorsFromString(const QString &name);
-    Q_INVOKABLE bool isStringUnsuitableForInitials(const QString &name);
+    static QString initialsFromString(const QString &name);
+    static QColor colorsFromString(const QString &name);
+    static bool isStringUnsuitableForInitials(const QString &name);
 };

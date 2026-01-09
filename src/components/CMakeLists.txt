@@ -1,6 +1,61 @@
 # SPDX-FileCopyrightText: 2023 Carl Schwan <carl@carlschwan.eu>
 # SPDX-License-Identifier: BSD-2-Clause
 
+# C++ Library
+
+add_library(KirigamiAddonsComponents SHARED)
+
+target_sources(KirigamiAddonsComponents PRIVATE nameutils.cpp nameutils.h)
+
+target_link_libraries(KirigamiAddonsComponents PRIVATE
+        Qt6::QuickControls2
+        Qt6::Qml
+)
+
+target_include_directories(KirigamiAddonsComponents
+        PUBLIC
+        "$<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}>"
+        "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}>"
+        "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KirigamiAddons/Components>"
+)
+
+ecm_generate_export_header(KirigamiAddonsComponents
+        VERSION ${PROJECT_VERSION}
+        BASE_NAME KirigamiAddonsComponents
+        USE_VERSION_HEADER
+        DEPRECATION_VERSIONS
+)
+
+ecm_setup_version(PROJECT
+        VARIABLE_PREFIX KIRIGAMIADDONSCOMPONENTS
+        VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kirigamiaddonscomponents_version.h"
+        PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF6KirigamiAddonsComponentsConfigVersion.cmake"
+        SOVERSION 6
+)
+
+ecm_generate_headers(KirigamiAddonsComponents_CamelCase_HEADERS
+        HEADER_NAMES
+        NameUtils
+        REQUIRED_HEADERS KirigamiAddonsComponents_HEADERS
+)
+
+set_target_properties(KirigamiAddonsComponents PROPERTIES
+        VERSION     ${PROJECT_VERSION}
+        SOVERSION   6
+        EXPORT_NAME "KirigamiAddonsComponents"
+)
+
+install(TARGETS KirigamiAddonsComponents EXPORT KirigamiAddonsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
+
+install(FILES
+        ${KirigamiAddonsComponents_HEADERS}
+        ${KirigamiAddonsComponents_CamelCase_HEADERS}
+        ${CMAKE_CURRENT_BINARY_DIR}/kirigamiaddonscomponents_export.h
+        ${CMAKE_CURRENT_BINARY_DIR}/kirigamiaddonscomponents_version.h
+        DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KirigamiAddons/Components
+        COMPONENT Devel
+)
+
 # Labs module
 
 ecm_add_qml_module(componentslabsplugin
@@ -11,11 +66,6 @@ ecm_add_qml_module(componentslabsplugin
 )
 
 ecm_generate_qdoc(componentslabsplugin kirigamiaddonscomponents.qdocconf)
-
-target_sources(componentslabsplugin PRIVATE
-    nameutils.h
-    nameutils.cpp
-)
 
 ecm_target_qml_sources(componentslabsplugin SOURCES
     Avatar.qml
@@ -34,6 +84,7 @@ target_link_libraries(componentslabsplugin PRIVATE
     Qt6::Quick
     Qt6::Qml
     Qt6::QuickControls2
+    KirigamiAddonsComponents
 )
 
 ecm_finalize_qml_module(componentslabsplugin DESTINATION ${KDE_INSTALL_QMLDIR} EXPORT KirigamiAddonsTargets)
@@ -49,8 +100,8 @@ ecm_add_qml_module(componentsplugin
 )
 
 target_sources(componentsplugin PRIVATE
-    nameutils.h
-    nameutils.cpp
+    nameutilselement.h
+    nameutilselement.cpp
     messagedialoghelper.h
     messagedialoghelper.cpp
 )
@@ -83,6 +134,7 @@ target_link_libraries(componentsplugin PRIVATE
     Qt6::Qml
     KF6::ConfigCore
     Qt6::QuickControls2
+    KirigamiAddonsComponents
 )
 
 ecm_finalize_qml_module(componentsplugin DESTINATION ${KDE_INSTALL_QMLDIR} EXPORT KirigamiAddonsTargets)
