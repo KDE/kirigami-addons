@@ -19,7 +19,7 @@ import "private" as Private
    Use the inherited \l {AbstractButton::text} {AbstractButton.text} property to define
    the main text of the button.
 
-   The trailing property (right-most side of the button) includes an arrow
+   The trailingLogo property (right-most side of the button) includes an arrow
    pointing to the right by default and cannot be overridden.
 
    \since 0.11.0
@@ -34,14 +34,14 @@ AbstractFormDelegate {
 
        This provides additional information shown in a faint gray color.
 
-       This is supposed to be a short text and the API user should avoid
+       This is supposed to be short text and the API user should avoid
        making it longer than two lines.
      */
     property string description: ""
 
     /*!
        \qmlproperty Label descriptionItem
-       \brief This property allows to override the internal description
+       \brief This property allows overriding the internal description
        item with a custom component.
      */
     property alias descriptionItem: internalDescriptionItem
@@ -85,7 +85,7 @@ AbstractFormDelegate {
     /*!
        \brief This property holds an alias to the internal FormArrow.
 
-       This allow to hide it completely or change the direction (e.g. to
+       This allows hiding it completely or changing the direction (e.g. to
        implement a collapsible section).
 
        \since 1.7.0
