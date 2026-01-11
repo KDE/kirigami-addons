@@ -64,6 +64,25 @@ AbstractFormDelegate {
     property real leadingPadding: Kirigami.Units.largeSpacing
 
     /*!
+       \brief This property holds an item that will be displayed to the
+       right of the delegate's contents.
+
+       \default null
+       \since 1.12.0
+     */
+    property var trailing: null
+
+    /*!
+       \brief This property holds the padding before the trailing item.
+
+       It is recommended to use \l {Units} {Kirigami.Units} here instead of direct values.
+
+       \sa {Units} {Kirigami.Units}
+       \since 1.12.0
+     */
+    property real trailingPadding: Kirigami.Units.largeSpacing
+
+    /*!
        \brief This property holds an alias to the internal FormArrow.
 
        This allow to hide it completely or change the direction (e.g. to
@@ -119,6 +138,14 @@ AbstractFormDelegate {
                 wrapMode: Text.Wrap
                 Accessible.ignored: !visible
             }
+        }
+
+        Private.ContentItemLoader {
+            readonly property bool _visible: root.trailing && root.trailing.visible
+            Layout.leftMargin: _visible ? root.trailingPadding : 0
+            implicitHeight: _visible ? root.trailing.implicitHeight : 0
+            implicitWidth: _visible ? root.trailing.implicitWidth : 0
+            contentItem: root.trailing
         }
 
         FormArrow {
