@@ -7,7 +7,7 @@ project(%{APPNAMELC} VERSION 1.0.0)
 
 include(FeatureSummary)
 
-set(QT6_MIN_VERSION 6.7.0)
+set(QT6_MIN_VERSION 6.8.0)
 set(KF6_MIN_VERSION 6.12.0)
 set(KIRIGAMI_ADDONS_MIN_VERSION 1.10.0)
 

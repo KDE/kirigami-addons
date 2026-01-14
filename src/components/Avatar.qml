@@ -236,6 +236,7 @@ Item {
 
             fillMode: Image.PreserveAspectCrop
             asynchronous: true
+            retainWhileLoading: true
             mipmap: true
             sourceSize {
                 width: root.__diameter * root.Screen.devicePixelRatio
