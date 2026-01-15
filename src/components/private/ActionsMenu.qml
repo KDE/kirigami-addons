@@ -25,7 +25,7 @@ QQC2.Menu {
     property T.Action parentAction
     property T.MenuItem parentItem
 
-    visible: !(parentAction instanceof Kirigami.Action) || parentAction.visible
+    visible: parentAction ? (!(parentAction instanceof Kirigami.Action) || parentAction.visible) : false
 
     Instantiator {
         id: actionsInstantiator
