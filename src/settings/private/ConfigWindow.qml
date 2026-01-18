@@ -58,16 +58,15 @@ Kirigami.ApplicationWindow {
                 Layout.fillWidth: true
                 Layout.preferredHeight: pageStack.globalToolBar.preferredHeight
 
-                leftPadding: 3
-                rightPadding: 3
-                topPadding: 3
-                bottomPadding: 3
-
                 visible: !Kirigami.Settings.isMobile
 
-                contentItem: Kirigami.SearchField {
-                    Layout.fillWidth: true
+                Kirigami.SearchField {
                     onTextChanged: listview.filterText = text.toLowerCase();
+                    anchors {
+                        verticalCenter: parent.verticalCenter
+                        left: parent.left
+                        right: parent.right
+                    }
                 }
             }
 
