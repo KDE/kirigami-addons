@@ -137,7 +137,7 @@ QtObject {
                 console.error(component.errorString());
                 return;
             }
-            root.configViewItem = component.createObject(null, {
+            root.configViewItem = component.createObject(root.window, {
                 defaultModule: defaultModule,
                 modules: root.modules,
                 width: Kirigami.Units.gridUnit * 50,

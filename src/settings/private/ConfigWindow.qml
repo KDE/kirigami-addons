@@ -21,6 +21,8 @@ Kirigami.ApplicationWindow {
     // Do not use Map, it crashes very frequently
     property var pageCache: Object.create(null)
 
+    modality: Qt.WindowModal
+
     pageStack {
         columnView.columnWidth: Kirigami.Units.gridUnit * 13
 
