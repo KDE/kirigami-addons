@@ -73,7 +73,7 @@ AbstractFormDelegate {
        \qmlproperty url selectedFile
        \brief The \l {FolderDialog::selectedFolder} {selectedFolder} of the folder dialog.
      */
-    property alias selectedFolder: folderDialog.selectedFolder
+    property url selectedFolder: textField.text
 
     /*!
        \brief This signal is emitted when a valid folder is selected
