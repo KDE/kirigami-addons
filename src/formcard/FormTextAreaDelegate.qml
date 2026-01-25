@@ -38,6 +38,14 @@ AbstractFormDelegate {
     required property string label
 
     /*!
+       \brief A label containing secondary text that appears under the
+       inherited text property.
+
+       This provides additional information shown in a faint gray color.
+     */
+    property string description: ""
+
+    /*!
        \brief The maximum length of the text inside the TextArea if maxLength > 0.
        \default -1
      */
@@ -210,6 +218,16 @@ AbstractFormDelegate {
 
             Layout.topMargin: visible ? Kirigami.Units.smallSpacing : 0
             Layout.fillWidth: true
+        }
+
+        Label {
+            id: internalDescriptionItem
+
+            Layout.fillWidth: true
+            text: root.description
+            color: Kirigami.Theme.disabledTextColor
+            visible: root.description !== ""
+            wrapMode: Text.Wrap
         }
     }
 }
