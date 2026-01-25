@@ -143,6 +143,17 @@ AbstractFormDelegate {
     property string statusMessage: ""
 
     /*!
+       \brief A label containing secondary text that appears under the
+       inherited text property.
+
+       This provides additional information shown in a faint gray color.
+
+       \default ""
+       \since 1.12.0
+     */
+    property string description: ""
+
+    /*!
        \brief This property holds the parent used for the popups
        of this control.
        \default ApplicationWindow.window
@@ -468,6 +479,20 @@ AbstractFormDelegate {
             Layout.fillWidth: true
             text: root.statusMessage
             type: root.status
+        }
+
+        QQC2.Label {
+            id: internalDescriptionItem
+
+            Layout.fillWidth: true
+            Layout.topMargin: visible ? Kirigami.Units.smallSpacing : 0
+            Layout.bottomMargin: visible ? Kirigami.Units.smallSpacing : 0
+            Layout.leftMargin: Kirigami.Units.gridUnit
+            Layout.rightMargin: Kirigami.Units.gridUnit
+            text: root.description
+            color: Kirigami.Theme.disabledTextColor
+            visible: root.description !== ""
+            wrapMode: Text.Wrap
         }
     }
 }

@@ -40,6 +40,17 @@ AbstractFormDelegate {
     required property string label
 
     /*!
+       \brief A label containing secondary text that appears under the
+       inherited text property.
+
+       This provides additional information shown in a faint gray color.
+
+       \default ""
+       \since 1.12.0
+     */
+    property string description: ""
+
+    /*!
        \qmlproperty int value
        \brief This property holds the \l {SpinBox::value} {value} of the internal spinbox.
      */
@@ -135,6 +146,7 @@ AbstractFormDelegate {
     }
 
     focusPolicy: Kirigami.Settings.isMobile ? Qt.StrongFocus : Qt.NoFocus
+    Accessible.description: description
 
     onClicked: spinbox.forceActiveFocus()
     background: null
@@ -242,6 +254,16 @@ AbstractFormDelegate {
             Layout.fillWidth: true
             text: root.statusMessage
             type: root.status
+        }
+
+        QQC2.Label {
+            id: internalDescriptionItem
+
+            Layout.fillWidth: true
+            text: root.description
+            color: Kirigami.Theme.disabledTextColor
+            visible: root.description !== ""
+            wrapMode: Text.Wrap
         }
     }
 }
