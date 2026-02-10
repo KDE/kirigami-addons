@@ -151,7 +151,7 @@ AbstractFormDelegate {
      *       delegate's contents.
      *
      *       \default null
-     *       \since 1.11.0
+     *       \since 1.12.0
      */
     property var trailing: null
 
