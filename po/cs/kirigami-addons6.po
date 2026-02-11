@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-18 00:41+0000\n"
+"POT-Creation-Date: 2026-02-11 00:43+0000\n"
 "PO-Revision-Date: 2024-08-28 09:36+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -512,55 +512,55 @@ msgctxt "@action:button"
 msgid "Icon"
 msgstr "Ikona"
 
-#: formcard/FormDateTimeDelegate.qml:202
+#: formcard/FormDateTimeDelegate.qml:213
 #, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
 msgid "Today"
 msgstr "Dnes"
 
-#: formcard/FormDateTimeDelegate.qml:229 formcard/FormDateTimeDelegate.qml:366
+#: formcard/FormDateTimeDelegate.qml:240 formcard/FormDateTimeDelegate.qml:377
 #, kde-format
 msgctxt "Date is not set"
 msgid "Not set"
 msgstr "Nenastaveno"
 
-#: formcard/FormFileDelegate.qml:180
+#: formcard/FormFileDelegate.qml:191
 #, kde-format
 msgctxt "@info:status"
 msgid "The path doesn't exist."
 msgstr ""
 
-#: formcard/FormFileDelegate.qml:189
+#: formcard/FormFileDelegate.qml:200
 #, kde-format
 msgctxt "@info:status"
 msgid "The file doesn't exist."
 msgstr ""
 
-#: formcard/FormFileDelegate.qml:256
+#: formcard/FormFileDelegate.qml:267
 #, kde-format
 msgctxt "@action:button"
 msgid "Select file"
 msgstr "Vyberte soubor"
 
-#: formcard/FormFileDelegate.qml:263
+#: formcard/FormFileDelegate.qml:274
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No file selected"
 msgstr ""
 
-#: formcard/FormFolderDelegate.qml:147
+#: formcard/FormFolderDelegate.qml:158
 #, kde-format
 msgctxt "@info:status"
 msgid "The folder doesn't exist."
 msgstr ""
 
-#: formcard/FormFolderDelegate.qml:204
+#: formcard/FormFolderDelegate.qml:215
 #, kde-format
 msgctxt "@action:button"
 msgid "Select folder"
 msgstr ""
 
-#: formcard/FormFolderDelegate.qml:211
+#: formcard/FormFolderDelegate.qml:222
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No folder selected"
@@ -585,7 +585,7 @@ msgid "Url copied to clipboard."
 msgstr ""
 
 #: formcard/FormPasswordFieldDelegate.qml:249
-#: formcard/FormTextAreaDelegate.qml:174 formcard/FormTextFieldDelegate.qml:270
+#: formcard/FormTextAreaDelegate.qml:185 formcard/FormTextFieldDelegate.qml:281
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
