@@ -303,7 +303,7 @@ AbstractMaximizeComponent {
                 width: root.width
                 height: parent.height
                 contentWidth: captionLabel.width
-                contentHeight: captionLabel.height - captionLabel.padding * 2 + Kirigami.Units.largeSpacing
+                contentHeight: captionLabel.height
 
                 Kirigami.SelectableLabel {
                     id: captionLabel
