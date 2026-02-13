@@ -140,6 +140,7 @@ FormCardPage {
 
         FormTextDelegate {
             id: copyrightDelegate
+            visible: aboutData.copyrightStatement.length > 0
             text: i18nd("kirigami-addons6", "Copyright")
             descriptionItem.textFormat: Text.PlainText
             description: aboutData.copyrightStatement
