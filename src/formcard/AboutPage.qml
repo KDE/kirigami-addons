@@ -88,6 +88,13 @@ FormCardPage {
      */
     property url donateUrl: aboutData.desktopFileName.startsWith("org.kde.") ? "https://www.kde.org/donate" : ""
 
+    /*!
+       \brief This property defines whether to show "Libraries in use".
+
+       Default: true
+     */
+    property bool showLibraries: true
+
     title: i18nd("kirigami-addons6", "About %1", page.aboutData.displayName)
 
     FormCard {
@@ -289,6 +296,7 @@ FormCardPage {
 
     FormHeader {
         title: i18nd("kirigami-addons6", "Libraries in use")
+        visible: page.showLibraries
 
         actions: QQC2.Action {
             text: i18ndc("kirigami-addons6", "@action:button", "Copy to Clipboard")
@@ -301,8 +309,9 @@ FormCardPage {
     }
 
     FormCard {
+        visible: page.showLibraries
         Repeater {
-            model: FormCardModule.AboutComponent.components
+            model: page.showLibraries ? FormCardModule.AboutComponent.components : null
             delegate: libraryDelegate
         }
     }
