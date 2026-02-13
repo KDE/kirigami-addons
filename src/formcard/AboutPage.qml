@@ -219,6 +219,12 @@ FormCardPage {
     FormCard {
         Layout.topMargin: Kirigami.Units.gridUnit
 
+        // hide FormCard if all contents are not visible
+        visible: getInvolvedDelegate.visible
+              || donateDelegate.visible
+              || homepageDelegate.visible
+              || bugDelegate.visible
+
         FormLinkDelegate {
             id: getInvolvedDelegate
             icon.name: "globe-symbolic"
