@@ -249,10 +249,8 @@ AbstractMaximizeComponent {
                 leftMargin: Kirigami.Units.largeSpacing
                 verticalCenter: parent.verticalCenter
             }
-            width: Kirigami.Units.gridUnit * 2
-            height: width
             icon.name: "arrow-left"
-            visible: !Kirigami.Settings.isMobile && view.currentIndex > 0
+            visible: !Kirigami.Settings.hasTransientTouchInput && view.currentIndex > 0
             Keys.forwardTo: view
             Accessible.name: i18nd("kirigami-addons6", "Previous image")
             onClicked: {
@@ -269,10 +267,8 @@ AbstractMaximizeComponent {
                 rightMargin: Kirigami.Units.largeSpacing
                 verticalCenter: parent.verticalCenter
             }
-            width: Kirigami.Units.gridUnit * 2
-            height: width
             icon.name: "arrow-right"
-            visible: !Kirigami.Settings.isMobile && view.currentIndex < view.count - 1
+            visible: !Kirigami.Settings.hasTransientTouchInput && view.currentIndex < view.count - 1
             Keys.forwardTo: view
             Accessible.name: i18nd("kirigami-addons6", "Next image")
             onClicked: {
