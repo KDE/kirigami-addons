@@ -377,8 +377,18 @@ Item {
         }
 
         TapHandler {
+            acceptedDevices: PointerDevice.Mouse | PointerDevice.TouchPad | PointerDevice.Stylus
             acceptedButtons: Qt.RightButton
+            gesturePolicy: TapHandler.ReleaseWithinBounds
+
             onTapped: root.itemRightClicked()
+        }
+
+        TapHandler {
+            acceptedDevices: PointerDevice.TouchScreen
+            gesturePolicy: TapHandler.ReleaseWithinBounds
+
+            onLongPressed: root.itemRightClicked()
         }
         HoverHandler {
             id: videoArea
@@ -390,10 +400,13 @@ Item {
         }
     }
     TapHandler {
+        // We don't want this to apply to touch screens, to prevent it from closing too easily.
+        acceptedDevices: PointerDevice.Mouse | PointerDevice.TouchPad | PointerDevice.Stylus
         acceptedButtons: Qt.LeftButton
+        gesturePolicy: TapHandler.ReleaseWithinBounds
+
         onTapped: root.backgroundClicked()
     }
-
     function formatTimer(time){
         return (time < 10 ? "0" : "") + time
     }

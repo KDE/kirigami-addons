@@ -178,10 +178,19 @@ Item {
             }
         ]
 
-        MouseArea {
-            anchors.fill: parent
+        TapHandler {
+            acceptedDevices: PointerDevice.Mouse | PointerDevice.TouchPad | PointerDevice.Stylus
             acceptedButtons: Qt.RightButton
-            onClicked: root.itemRightClicked()
+            gesturePolicy: TapHandler.ReleaseWithinBounds
+
+            onTapped: root.itemRightClicked()
+        }
+
+        TapHandler {
+            acceptedDevices: PointerDevice.TouchScreen
+            gesturePolicy: TapHandler.ReleaseWithinBounds
+
+            onLongPressed: root.itemRightClicked()
         }
     }
     QQC2.BusyIndicator {
@@ -189,9 +198,12 @@ Item {
         visible: image.status !== Image.Ready && tempImage.status !== Image.Ready
         running: visible
     }
-    MouseArea {
-        anchors.fill: parent
+    TapHandler {
+        // We don't want this to apply to touch screens, to prevent it from closing too easily.
+        acceptedDevices: PointerDevice.Mouse | PointerDevice.TouchPad | PointerDevice.Stylus
         acceptedButtons: Qt.LeftButton
-        onClicked: root.backgroundClicked()
+        gesturePolicy: TapHandler.ReleaseWithinBounds
+
+        onTapped: root.backgroundClicked()
     }
 }
