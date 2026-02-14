@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the kirigami-addons package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-11 00:43+0000\n"
+"POT-Creation-Date: 2026-02-14 00:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Irish Gaelic <kde-i18n-doc@kde.org>\n"
-"Language: ga\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -80,7 +81,7 @@ msgstr ""
 msgid "Next image"
 msgstr ""
 
-#: components/Banner.qml:185 formcard/AboutPage.qml:502
+#: components/Banner.qml:185 formcard/AboutPage.qml:508
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -300,7 +301,7 @@ msgid ""
 "to KDE, including you."
 msgstr ""
 
-#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:225
+#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:231
 #, kde-format
 msgid "Homepage"
 msgstr ""
@@ -343,7 +344,7 @@ msgid ""
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
 
-#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:253
+#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:259
 #, kde-format
 msgid "Get Involved"
 msgstr ""
@@ -384,7 +385,7 @@ msgstr ""
 msgid "KDE e.V."
 msgstr ""
 
-#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:239
+#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:245
 #, kde-format
 msgid "Donate"
 msgstr ""
@@ -412,49 +413,49 @@ msgid_plural "Licenses"
 msgstr[0] ""
 msgstr[1] ""
 
-#: formcard/AboutPage.qml:279
+#: formcard/AboutPage.qml:285
 #, kde-format
 msgid "Report a Bug"
 msgstr ""
 
-#: formcard/AboutPage.qml:285
+#: formcard/AboutPage.qml:291
 #, kde-format
 msgid "Libraries in use"
 msgstr ""
 
-#: formcard/AboutPage.qml:288
+#: formcard/AboutPage.qml:294
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: formcard/AboutPage.qml:292
+#: formcard/AboutPage.qml:298
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr ""
 
-#: formcard/AboutPage.qml:305
+#: formcard/AboutPage.qml:311
 #, kde-format
 msgid "Authors"
 msgstr ""
 
-#: formcard/AboutPage.qml:320
+#: formcard/AboutPage.qml:326
 #, kde-format
 msgid "Credits"
 msgstr ""
 
-#: formcard/AboutPage.qml:335
+#: formcard/AboutPage.qml:341
 #, kde-format
 msgid "Translators"
 msgstr ""
 
-#: formcard/AboutPage.qml:404
+#: formcard/AboutPage.qml:410
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr ""
 
-#: formcard/AboutPage.qml:413
+#: formcard/AboutPage.qml:419
 #, kde-format
 msgid "Send an email to %1"
 msgstr ""

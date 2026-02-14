@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-11 00:43+0000\n"
+"POT-Creation-Date: 2026-02-14 00:42+0000\n"
 "PO-Revision-Date: 2025-03-13 15:25+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -80,7 +80,7 @@ msgstr "Forrige bilde"
 msgid "Next image"
 msgstr "Neste bilde"
 
-#: components/Banner.qml:185 formcard/AboutPage.qml:502
+#: components/Banner.qml:185 formcard/AboutPage.qml:508
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -310,7 +310,7 @@ msgstr ""
 "gå i. Derimot arbeider vi sammen for å oppnå vårt felles mål om å lage fri "
 "programvare i verdensklasse. Alle er velkomne til å bidra til KDE, du også."
 
-#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:225
+#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:231
 #, kde-format
 msgid "Homepage"
 msgstr "Hjemmeside"
@@ -367,7 +367,7 @@ msgstr ""
 "kan bidra med oversettelser, lage grafikk, tema, lyder eller bedre "
 "hjelpetekster. Her er det noe for alle!"
 
-#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:253
+#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:259
 #, kde-format
 msgid "Get Involved"
 msgstr "Bli med"
@@ -421,7 +421,7 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:239
+#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:245
 #, kde-format
 msgid "Donate"
 msgstr "Gi pengegave"
@@ -449,49 +449,49 @@ msgid_plural "Licenses"
 msgstr[0] "Lisens"
 msgstr[1] "Lisenser"
 
-#: formcard/AboutPage.qml:279
+#: formcard/AboutPage.qml:285
 #, kde-format
 msgid "Report a Bug"
 msgstr "Meld fra om feil"
 
-#: formcard/AboutPage.qml:285
+#: formcard/AboutPage.qml:291
 #, kde-format
 msgid "Libraries in use"
 msgstr "Brukte bibliotek"
 
-#: formcard/AboutPage.qml:288
+#: formcard/AboutPage.qml:294
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "Kopier til utklippstavla"
 
-#: formcard/AboutPage.qml:292
+#: formcard/AboutPage.qml:298
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "Systeminformasjon kopiert til utklippstavla"
 
-#: formcard/AboutPage.qml:305
+#: formcard/AboutPage.qml:311
 #, kde-format
 msgid "Authors"
 msgstr "Utviklere"
 
-#: formcard/AboutPage.qml:320
+#: formcard/AboutPage.qml:326
 #, kde-format
 msgid "Credits"
 msgstr "Bidragsytere"
 
-#: formcard/AboutPage.qml:335
+#: formcard/AboutPage.qml:341
 #, kde-format
 msgid "Translators"
 msgstr "Oversettere"
 
-#: formcard/AboutPage.qml:404
+#: formcard/AboutPage.qml:410
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Besøk %1-siden i KDE-butikken"
 
-#: formcard/AboutPage.qml:413
+#: formcard/AboutPage.qml:419
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Send e-post til %1"
