@@ -186,7 +186,8 @@ AbstractMaximizeComponent {
         id: view
         Layout.fillWidth: true
         Layout.fillHeight: true
-        interactive: !hoverHandler.hovered && count > 1
+        // Only allow swiping if we have touch input, and there's something to swipe.
+        interactive: Kirigami.Settings.hasTransientTouchInput && count > 1
         snapMode: ListView.SnapOneItem
         highlightRangeMode: ListView.StrictlyEnforceRange
         highlightMoveDuration: 0
@@ -278,10 +279,6 @@ AbstractMaximizeComponent {
                     view.currentItem.playAction.trigger()
                 }
             }
-        }
-        HoverHandler {
-            id: hoverHandler
-            acceptedDevices: PointerDevice.Mouse
         }
     }
 
