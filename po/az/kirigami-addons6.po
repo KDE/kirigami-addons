@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-14 00:42+0000\n"
+"POT-Creation-Date: 2026-02-16 00:43+0000\n"
 "PO-Revision-Date: 2022-03-27 18:27+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -69,13 +69,13 @@ msgstr ""
 msgid "Save as"
 msgstr ""
 
-#: components/AlbumMaximizeComponent.qml:257
+#: components/AlbumMaximizeComponent.qml:256
 #, fuzzy, kde-format
 #| msgid "Previous"
 msgid "Previous image"
 msgstr "Əvvəlki"
 
-#: components/AlbumMaximizeComponent.qml:277
+#: components/AlbumMaximizeComponent.qml:274
 #, kde-format
 msgid "Next image"
 msgstr ""

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-14 00:42+0000\n"
+"POT-Creation-Date: 2026-02-16 00:43+0000\n"
 "PO-Revision-Date: 2025-02-23 13:30+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -68,12 +68,12 @@ msgstr "キャプションを隠す"
 msgid "Save as"
 msgstr "名前を付けて保存"
 
-#: components/AlbumMaximizeComponent.qml:257
+#: components/AlbumMaximizeComponent.qml:256
 #, kde-format
 msgid "Previous image"
 msgstr "前の画像"
 
-#: components/AlbumMaximizeComponent.qml:277
+#: components/AlbumMaximizeComponent.qml:274
 #, kde-format
 msgid "Next image"
 msgstr "次の画像"

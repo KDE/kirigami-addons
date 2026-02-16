@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-14 00:42+0000\n"
+"POT-Creation-Date: 2026-02-16 00:43+0000\n"
 "PO-Revision-Date: 2025-07-28 18:21+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -69,12 +69,12 @@ msgstr "Dölj rubrik"
 msgid "Save as"
 msgstr "Spara som"
 
-#: components/AlbumMaximizeComponent.qml:257
+#: components/AlbumMaximizeComponent.qml:256
 #, kde-format
 msgid "Previous image"
 msgstr "Föregående bild"
 
-#: components/AlbumMaximizeComponent.qml:277
+#: components/AlbumMaximizeComponent.qml:274
 #, kde-format
 msgid "Next image"
 msgstr "Nästa bild"

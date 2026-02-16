@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-14 00:42+0000\n"
+"POT-Creation-Date: 2026-02-16 00:43+0000\n"
 "PO-Revision-Date: 2025-12-10 05:16-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -73,12 +73,12 @@ msgstr "Ocultar legenda"
 msgid "Save as"
 msgstr "Salvar como"
 
-#: components/AlbumMaximizeComponent.qml:257
+#: components/AlbumMaximizeComponent.qml:256
 #, kde-format
 msgid "Previous image"
 msgstr "Imagem anterior"
 
-#: components/AlbumMaximizeComponent.qml:277
+#: components/AlbumMaximizeComponent.qml:274
 #, kde-format
 msgid "Next image"
 msgstr "Próxima imagem"
