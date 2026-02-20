@@ -12,8 +12,10 @@ set(KIRIGAMI_ADDONS_ICONS
     mail-sent-symbolic
     license-symbolic
     go-previous-view-symbolic
+    go-previous-rtl-symbolic
     go-jump-today-symbolic
     go-next-view-symbolic
+    go-next-rtl-symbolic
     view-calendar-symbolic
     clock-symbolic
     dialog-cancel-symbolic

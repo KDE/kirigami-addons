@@ -362,7 +362,7 @@ QQC2.Control {
                 actions: [
                     Kirigami.Action {
                         id: goPreviousAction
-                        icon.name: 'go-previous-view-symbolic'
+                        icon.name: Application.layoutDirection === Qt.RightToLeft ? 'go-previous-rtl-symbolic' : 'go-previous-view-symbolic'
                         text: i18ndc("kirigami-addons6", "@action:button", "Go Previous")
                         displayHint: Kirigami.DisplayHint.IconOnly
                         onTriggered: {
@@ -384,7 +384,7 @@ QQC2.Control {
                     Kirigami.Action {
                         id: goNextAction
                         text: i18ndc("kirigami-addons6", "@action:button", "Go Next")
-                        icon.name: 'go-next-view-symbolic'
+                        icon.name: Application.layoutDirection === Qt.RightToLeft ? 'go-next-rtl-symbolic' : 'go-next-view-symbolic'
                         displayHint: Kirigami.DisplayHint.IconOnly
                         onTriggered: {
                             if (pickerView.currentIndex === 1) { // monthGrid index
