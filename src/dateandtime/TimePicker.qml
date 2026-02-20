@@ -49,8 +49,12 @@ RowLayout {
     }
 
     function formatText(count, modelData) {
-        var data = count === 12 && modelData === 0 ? 12 : modelData;
-        return data.toString().length < 2 ? "0" + data : data;
+        if (typeof modelData === "string")
+            return modelData; // AM/PM labels
+        const s = Qt.locale().toString(count === 12 && modelData === 0 ? 12 : modelData);
+        if (s.length < 2 && Qt.locale().zeroDigit === "0")
+            return "0" + s;
+        return s;
     }
 
     FontMetrics {
