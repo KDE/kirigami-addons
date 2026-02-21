@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-16 00:43+0000\n"
+"POT-Creation-Date: 2026-02-21 00:42+0000\n"
 "PO-Revision-Date: 2023-12-05 17:33+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -187,20 +187,20 @@ msgctxt "@action:button"
 msgid "Go Next"
 msgstr "Prejsť na nasledujúci"
 
-#: dateandtime/TimePicker.qml:114
+#: dateandtime/TimePicker.qml:118
 #, fuzzy, kde-format
 #| msgctxt "time in hour in 24h format"
 #| msgid "%1 hours"
 msgid "Hours"
 msgstr "%1 hodín"
 
-#: dateandtime/TimePicker.qml:137
+#: dateandtime/TimePicker.qml:141
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: dateandtime/TimePicker.qml:152
+#: dateandtime/TimePicker.qml:156
 #, fuzzy, kde-format
 #| msgctxt "number of minutes"
 #| msgid "%1 minutes"

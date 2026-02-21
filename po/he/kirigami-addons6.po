@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-16 00:43+0000\n"
+"POT-Creation-Date: 2026-02-21 00:42+0000\n"
 "PO-Revision-Date: 2025-08-02 21:31+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -185,18 +185,18 @@ msgctxt "@action:button"
 msgid "Go Next"
 msgstr "מעבר לבא"
 
-#: dateandtime/TimePicker.qml:114
+#: dateandtime/TimePicker.qml:118
 #, kde-format
 msgid "Hours"
 msgstr "שעות"
 
-#: dateandtime/TimePicker.qml:137
+#: dateandtime/TimePicker.qml:141
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: dateandtime/TimePicker.qml:152
+#: dateandtime/TimePicker.qml:156
 #, kde-format
 msgid "Minutes"
 msgstr "דקות"
