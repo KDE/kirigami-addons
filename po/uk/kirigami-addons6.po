@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-21 00:42+0000\n"
+"POT-Creation-Date: 2026-02-22 00:43+0000\n"
 "PO-Revision-Date: 2025-07-27 16:42+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -80,7 +80,7 @@ msgstr "Попереднє зображення"
 msgid "Next image"
 msgstr "Наступне зображення"
 
-#: components/Banner.qml:185 formcard/AboutPage.qml:508
+#: components/Banner.qml:185 formcard/AboutPage.qml:517
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -313,7 +313,7 @@ msgstr ""
 "вільного програмного забезпечення. Кожен може долучитися і зробити свій "
 "внесок до KDE, зокрема це можете зробити ви."
 
-#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:231
+#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:238
 #, kde-format
 msgid "Homepage"
 msgstr "Домашня сторінка"
@@ -371,7 +371,7 @@ msgstr ""
 "забезпечувати користувачів графікою, темами, звуками та вдосконаленою "
 "документацію. Вам вирішувати!"
 
-#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:259
+#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:266
 #, kde-format
 msgid "Get Involved"
 msgstr "Приєднатися до команди"
@@ -427,28 +427,28 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:245
+#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:252
 #, kde-format
 msgid "Donate"
 msgstr "Підтримати фінансово"
 
-#: formcard/AboutPage.qml:91
+#: formcard/AboutPage.qml:98
 #: statefulapplication/abstractkirigamiapplication.cpp:167
 #, kde-format
 msgid "About %1"
 msgstr "Про %1"
 
-#: formcard/AboutPage.qml:136
+#: formcard/AboutPage.qml:143
 #, kde-format
 msgid "Copyright"
 msgstr "Авторські права"
 
-#: formcard/AboutPage.qml:144
+#: formcard/AboutPage.qml:151
 #, kde-format
 msgid "Description"
 msgstr "Опис"
 
-#: formcard/AboutPage.qml:157
+#: formcard/AboutPage.qml:164
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
@@ -457,49 +457,49 @@ msgstr[1] "Ліцензування"
 msgstr[2] "Ліцензування"
 msgstr[3] "Ліцензування"
 
-#: formcard/AboutPage.qml:285
+#: formcard/AboutPage.qml:292
 #, kde-format
 msgid "Report a Bug"
 msgstr "Повідомити про помилку"
 
-#: formcard/AboutPage.qml:291
+#: formcard/AboutPage.qml:298
 #, kde-format
 msgid "Libraries in use"
 msgstr "Використані бібліотеки"
 
-#: formcard/AboutPage.qml:294
+#: formcard/AboutPage.qml:302
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "Скопіювати до буфера"
 
-#: formcard/AboutPage.qml:298
+#: formcard/AboutPage.qml:306
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "Відомості щодо системи скопійовано до буфера обміну даними."
 
-#: formcard/AboutPage.qml:311
+#: formcard/AboutPage.qml:320
 #, kde-format
 msgid "Authors"
 msgstr "Автори"
 
-#: formcard/AboutPage.qml:326
+#: formcard/AboutPage.qml:335
 #, kde-format
 msgid "Credits"
 msgstr "Подяки"
 
-#: formcard/AboutPage.qml:341
+#: formcard/AboutPage.qml:350
 #, kde-format
 msgid "Translators"
 msgstr "Перекладачі"
 
-#: formcard/AboutPage.qml:410
+#: formcard/AboutPage.qml:419
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Відвідайте сторінку %1 у KDE Store"
 
-#: formcard/AboutPage.qml:419
+#: formcard/AboutPage.qml:428
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Надіслати повідомлення ел. пошти до %1"

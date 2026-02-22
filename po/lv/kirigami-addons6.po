@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-21 00:42+0000\n"
+"POT-Creation-Date: 2026-02-22 00:43+0000\n"
 "PO-Revision-Date: 2025-08-21 10:33+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -80,7 +80,7 @@ msgstr "Iepriekšējais attēls"
 msgid "Next image"
 msgstr "Nākamais attēls"
 
-#: components/Banner.qml:185 formcard/AboutPage.qml:508
+#: components/Banner.qml:185 formcard/AboutPage.qml:517
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -309,7 +309,7 @@ msgstr ""
 "izveidot pasaulē labāko brīvo programmatūru. Aicinām ikkatru mums "
 "pievienoties no piedalīties KDE veidošanā — arī Tevi!"
 
-#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:231
+#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:238
 #, kde-format
 msgid "Homepage"
 msgstr "Mājaslapa"
@@ -367,7 +367,7 @@ msgstr ""
 "arī vari zīmēt attēlus, veidot tēmas, skaņas vai pilnveidot dokumentāciju. "
 "Lēmums ir Tavās rokās!"
 
-#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:259
+#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:266
 #, kde-format
 msgid "Get Involved"
 msgstr "Iesaisties"
@@ -424,28 +424,28 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:245
+#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:252
 #, kde-format
 msgid "Donate"
 msgstr "Ziedot"
 
-#: formcard/AboutPage.qml:91
+#: formcard/AboutPage.qml:98
 #: statefulapplication/abstractkirigamiapplication.cpp:167
 #, kde-format
 msgid "About %1"
 msgstr "Par „%1“"
 
-#: formcard/AboutPage.qml:136
+#: formcard/AboutPage.qml:143
 #, kde-format
 msgid "Copyright"
 msgstr "Autortiesības"
 
-#: formcard/AboutPage.qml:144
+#: formcard/AboutPage.qml:151
 #, kde-format
 msgid "Description"
 msgstr "Apraksts"
 
-#: formcard/AboutPage.qml:157
+#: formcard/AboutPage.qml:164
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
@@ -453,49 +453,49 @@ msgstr[0] "Licence"
 msgstr[1] "Licences"
 msgstr[2] "Licences"
 
-#: formcard/AboutPage.qml:285
+#: formcard/AboutPage.qml:292
 #, kde-format
 msgid "Report a Bug"
 msgstr "Ziņot par kļūdu"
 
-#: formcard/AboutPage.qml:291
+#: formcard/AboutPage.qml:298
 #, kde-format
 msgid "Libraries in use"
 msgstr "Izmantotās bibliotēkas"
 
-#: formcard/AboutPage.qml:294
+#: formcard/AboutPage.qml:302
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "Kopēt starpliktuvē"
 
-#: formcard/AboutPage.qml:298
+#: formcard/AboutPage.qml:306
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "Sistēmas informācija ir nokopēta starpliktuvē."
 
-#: formcard/AboutPage.qml:311
+#: formcard/AboutPage.qml:320
 #, kde-format
 msgid "Authors"
 msgstr "Autori"
 
-#: formcard/AboutPage.qml:326
+#: formcard/AboutPage.qml:335
 #, kde-format
 msgid "Credits"
 msgstr "Veidotāji"
 
-#: formcard/AboutPage.qml:341
+#: formcard/AboutPage.qml:350
 #, kde-format
 msgid "Translators"
 msgstr "Tulkotāji"
 
-#: formcard/AboutPage.qml:410
+#: formcard/AboutPage.qml:419
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Apmeklēt „%1“ KDE veikala lapu"
 
-#: formcard/AboutPage.qml:419
+#: formcard/AboutPage.qml:428
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Sūtīt e-pasta vēstuli „%1“"

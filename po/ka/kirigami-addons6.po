@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-21 00:42+0000\n"
+"POT-Creation-Date: 2026-02-22 00:43+0000\n"
 "PO-Revision-Date: 2025-07-27 20:04+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -80,7 +80,7 @@ msgstr "წინა გამოსახულება"
 msgid "Next image"
 msgstr "შემდეგი გამოსახულება"
 
-#: components/Banner.qml:185 formcard/AboutPage.qml:508
+#: components/Banner.qml:185 formcard/AboutPage.qml:517
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -312,7 +312,7 @@ msgstr ""
 "თავისუფალი პროგრამები შევქმნათ. KDE-ის საზოგადოებაში ყველას მივესალმებით, "
 "თქვენი ჩათვლით."
 
-#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:231
+#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:238
 #, kde-format
 msgid "Homepage"
 msgstr "Homepage"
@@ -369,7 +369,7 @@ msgstr ""
 "ნახატები, თემები, ხმოვანი ფაილები და გააუმჯობესოთ დოკუმენტაცია. გადაწყვიტეთ "
 "რას ისურვებთ!"
 
-#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:259
+#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:266
 #, kde-format
 msgid "Get Involved"
 msgstr "შემოგვიერთდით"
@@ -423,77 +423,77 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:245
+#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:252
 #, kde-format
 msgid "Donate"
 msgstr "შემოწირულობა"
 
-#: formcard/AboutPage.qml:91
+#: formcard/AboutPage.qml:98
 #: statefulapplication/abstractkirigamiapplication.cpp:167
 #, kde-format
 msgid "About %1"
 msgstr "%1-ის შესახებ"
 
-#: formcard/AboutPage.qml:136
+#: formcard/AboutPage.qml:143
 #, kde-format
 msgid "Copyright"
 msgstr "საავტორო უფლებები"
 
-#: formcard/AboutPage.qml:144
+#: formcard/AboutPage.qml:151
 #, kde-format
 msgid "Description"
 msgstr "აღწერა"
 
-#: formcard/AboutPage.qml:157
+#: formcard/AboutPage.qml:164
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "ლიცენზია"
 msgstr[1] "ლიცენზიები"
 
-#: formcard/AboutPage.qml:285
+#: formcard/AboutPage.qml:292
 #, kde-format
 msgid "Report a Bug"
 msgstr "შეცდომის პატაკი"
 
-#: formcard/AboutPage.qml:291
+#: formcard/AboutPage.qml:298
 #, kde-format
 msgid "Libraries in use"
 msgstr "გამოყენებული ბიბლიოთეკები"
 
-#: formcard/AboutPage.qml:294
+#: formcard/AboutPage.qml:302
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "ბუფერში კოპირება"
 
-#: formcard/AboutPage.qml:298
+#: formcard/AboutPage.qml:306
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "ინფორმაცია სისტემის შესახებ დაკოპირდა ბუფერში."
 
-#: formcard/AboutPage.qml:311
+#: formcard/AboutPage.qml:320
 #, kde-format
 msgid "Authors"
 msgstr "ავტორები"
 
-#: formcard/AboutPage.qml:326
+#: formcard/AboutPage.qml:335
 #, kde-format
 msgid "Credits"
 msgstr "კრედიტები"
 
-#: formcard/AboutPage.qml:341
+#: formcard/AboutPage.qml:350
 #, kde-format
 msgid "Translators"
 msgstr "მთარგმნელები"
 
-#: formcard/AboutPage.qml:410
+#: formcard/AboutPage.qml:419
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "ეწვიეთ %1-ის KDE მაღაზიის გვერდს"
 
-#: formcard/AboutPage.qml:419
+#: formcard/AboutPage.qml:428
 #, kde-format
 msgid "Send an email to %1"
 msgstr "%1-სთვის ელფოსტის გაგზავნა"
