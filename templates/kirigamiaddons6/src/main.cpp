@@ -17,6 +17,8 @@
 
 #include "version-%{APPNAMELC}.h"
 #include <KAboutData>
+#include <KirigamiAppDefaults>
+#include <KLocalizedQmlContext>
 #include <KLocalizedString>
 
 #include "%{APPNAMELC}config.h"
@@ -74,8 +76,9 @@ int main(int argc, char *argv[])
         aboutData.processCommandLine(&parser);
     }
 
-    if (!engine.loadFromModule("org.kde.%{APPNAMELC}", u"Main"_s)) {
-        return -1;
+    engine.loadFromModule("org.kde.%{APPNAMELC}", u"Main"_s);
+    if (engine.rootObjects().isEmpty()) {
+        return EXIT_FAILURE;
     }
 
     return app.exec();

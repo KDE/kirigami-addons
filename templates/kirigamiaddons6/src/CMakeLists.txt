@@ -38,7 +38,10 @@ if (ANDROID)
         applications-graphics
     )
 else()
-    target_link_libraries(%{APPNAMELC}_static PUBLIC Qt::Widgets)
+    target_link_libraries(%{APPNAMELC}_static PUBLIC
+        Qt::Widgets
+        KF6::I18nQml
+    )
 endif()
 
 kconfig_add_kcfg_files(%{APPNAMELC}_static GENERATE_MOC %{APPNAMELC}config.kcfgc)
