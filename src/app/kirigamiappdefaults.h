@@ -43,8 +43,8 @@ namespace KirigamiAppDefaults
  *     KLocalization::setupLocalizedContext(&engine);
  *     engine.loadFromModule("org.kde.myapp", u"Main");
  *
- *     if (!engine.rootObjects().isEmpty()) {
- *         return -1;
+ *     if (engine.rootObjects().isEmpty()) {
+ *         return EXIT_FAILURE;
  *     }
  *     return app.exec();
  * }
