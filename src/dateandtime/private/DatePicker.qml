@@ -241,7 +241,7 @@ QQC2.Control {
                 actions: [
                     Kirigami.Action {
                         id: dayAction
-                        text: root.selectedDate.getDate()
+                        text: root.selectedDate.toLocaleDateString(Qt.locale(), "d")
                         onTriggered: pickerView.currentIndex = 0 // dayGrid is first item in pickerView
                         checked: pickerView.currentIndex === 0
                     },
@@ -253,7 +253,7 @@ QQC2.Control {
                     },
                     Kirigami.Action {
                         id: yearsViewCheck
-                        text: root.selectedDate.getFullYear()
+                        text: root.selectedDate.toLocaleDateString(Qt.locale(), "yyyy")
                         onTriggered: pickerView.currentIndex = 2
                         checked: pickerView.currentIndex === 2
                     }
@@ -501,7 +501,7 @@ QQC2.Control {
                                     date.getMonth() === selectedDate.getMonth() &&
                                     date.getFullYear() === selectedDate.getFullYear()
                                 opacity: sameMonth && inScope ? 1 : 0.6
-                                text: dayNumber
+                                text: date.toLocaleDateString(Qt.locale(), "d")
                                 onClicked: {
                                     selectedDate = date;
                                     datePicked(date);
@@ -677,7 +677,7 @@ QQC2.Control {
                                 checkable: true
                                 checked: date.getFullYear() === selectedDate.getFullYear()
                                 opacity: sameDecade ? 1 : 0.7
-                                text: date.getFullYear()
+                                text: date.toLocaleDateString(Qt.locale(), "yyyy")
                                 onClicked: {
                                     selectedDate = new Date(date);
                                     root.datePicked(date);
