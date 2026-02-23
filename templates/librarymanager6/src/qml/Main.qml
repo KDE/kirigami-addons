@@ -9,23 +9,23 @@ import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.statefulapp as StatefulApp
 import org.kde.kirigamiaddons.formcard as FormCard
 
-import org.kde.librarytemplate
-import org.kde.librarytemplate.settings as Settings
+import org.kde.%{APPNAMELC}
+import org.kde.%{APPNAMELC}.settings as Settings
 
 StatefulApp.StatefulWindow {
     id: root
 
     property int counter: 0
 
-    title: i18nc("@title:window", "LibraryTemplate")
+    title: i18nc("@title:window", "%{APPNAME}")
 
-    windowName: "LibraryTemplate"
+    windowName: "%{APPNAME}"
 
     minimumWidth: Kirigami.Units.gridUnit * 20
     minimumHeight: Kirigami.Units.gridUnit * 20
 
-    application: LibraryTemplateApplication {
-        configurationView: Settings.LibraryTemplateConfigurationView {}
+    application: %{APPNAME}Application {
+        configurationView: Settings.%{APPNAME}ConfigurationView {}
     }
 
     ListModel {
