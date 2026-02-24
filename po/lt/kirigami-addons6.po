@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-22 00:43+0000\n"
+"POT-Creation-Date: 2026-02-24 00:42+0000\n"
 "PO-Revision-Date: 2025-12-31 15:53+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -81,7 +81,7 @@ msgstr "Ankstesnis paveikslas"
 msgid "Next image"
 msgstr "Kitas paveikslas"
 
-#: components/Banner.qml:185 formcard/AboutPage.qml:517
+#: components/Banner.qml:185 formcard/AboutPage.qml:518
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -310,7 +310,7 @@ msgstr ""
 "sukurtume geriausią pasaulyje laisvąją programinę įrangą. Visi, įskaitant ir "
 "jus, yra kviečiami prisijungti ir talkinti KDE."
 
-#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:238
+#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:239
 #, kde-format
 msgid "Homepage"
 msgstr "Internetinė svetainė"
@@ -370,7 +370,7 @@ msgstr ""
 "programų sąsajas. Galite teikti grafinius paveikslus, apipavidalinimus, "
 "garsus bei patobulintą dokumentaciją. Spręskite patys!"
 
-#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:266
+#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:267
 #, kde-format
 msgid "Get Involved"
 msgstr "Įsitraukti"
@@ -422,7 +422,7 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:252
+#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:253
 #, kde-format
 msgid "Donate"
 msgstr "Paaukoti"
@@ -433,17 +433,17 @@ msgstr "Paaukoti"
 msgid "About %1"
 msgstr "Apie %1"
 
-#: formcard/AboutPage.qml:143
+#: formcard/AboutPage.qml:144
 #, kde-format
 msgid "Copyright"
 msgstr "Autorių teisės"
 
-#: formcard/AboutPage.qml:151
+#: formcard/AboutPage.qml:152
 #, kde-format
 msgid "Description"
 msgstr "Aprašas"
 
-#: formcard/AboutPage.qml:164
+#: formcard/AboutPage.qml:165
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
@@ -452,49 +452,49 @@ msgstr[1] "Licencijos"
 msgstr[2] "Licencijos"
 msgstr[3] "Licencijos"
 
-#: formcard/AboutPage.qml:292
+#: formcard/AboutPage.qml:293
 #, kde-format
 msgid "Report a Bug"
 msgstr "Pranešti apie klaidą"
 
-#: formcard/AboutPage.qml:298
+#: formcard/AboutPage.qml:299
 #, kde-format
 msgid "Libraries in use"
 msgstr "Naudojamos bibliotekos"
 
-#: formcard/AboutPage.qml:302
+#: formcard/AboutPage.qml:303
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "Kopijuoti į iškarpinę"
 
-#: formcard/AboutPage.qml:306
+#: formcard/AboutPage.qml:307
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "Informacija apie sistemą nukopijuota į iškarpinę."
 
-#: formcard/AboutPage.qml:320
+#: formcard/AboutPage.qml:321
 #, kde-format
 msgid "Authors"
 msgstr "Autoriai"
 
-#: formcard/AboutPage.qml:335
+#: formcard/AboutPage.qml:336
 #, kde-format
 msgid "Credits"
 msgstr "Padėkos"
 
-#: formcard/AboutPage.qml:350
+#: formcard/AboutPage.qml:351
 #, kde-format
 msgid "Translators"
 msgstr "Vertėjai"
 
-#: formcard/AboutPage.qml:419
+#: formcard/AboutPage.qml:420
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Apsilankyti KDE parduotuvės %1 puslapyje"
 
-#: formcard/AboutPage.qml:428
+#: formcard/AboutPage.qml:429
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Siųsti el. laišką, adresu %1"

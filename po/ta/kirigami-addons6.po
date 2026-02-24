@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-22 00:43+0000\n"
+"POT-Creation-Date: 2026-02-24 00:42+0000\n"
 "PO-Revision-Date: 2025-08-03 21:08+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -79,7 +79,7 @@ msgstr "முந்தைய படம்"
 msgid "Next image"
 msgstr "அடுத்த படம்"
 
-#: components/Banner.qml:185 formcard/AboutPage.qml:517
+#: components/Banner.qml:185 formcard/AboutPage.qml:518
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -307,7 +307,7 @@ msgstr ""
 "படைப்புக்களையோ கட்டுப்படுத்துவதில்லை. கே.டீ.யீ.-யில் நீங்கள் உட்பட எவரேனும் இணைந்து "
 "பங்களிக்கலாம்."
 
-#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:238
+#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:239
 #, kde-format
 msgid "Homepage"
 msgstr "முகப்புப்பக்கம்"
@@ -361,7 +361,7 @@ msgstr ""
 "மொழிபெயர்க்கும் குழுக்களில் செரலாம். ஓவியங்களையும் தோற்றத்திட்டங்களையும் உருவாக்கலாம். "
 "கையேடுகளை எழுதலாம். முடிவு உங்களதே!"
 
-#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:266
+#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:267
 #, kde-format
 msgid "Get Involved"
 msgstr "பங்களிப்பது"
@@ -415,7 +415,7 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "கே.டீ.யீ. e.V."
 
-#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:252
+#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:253
 #, kde-format
 msgid "Donate"
 msgstr "நன்கொடை அளிப்பது"
@@ -426,66 +426,66 @@ msgstr "நன்கொடை அளிப்பது"
 msgid "About %1"
 msgstr "%1 பற்றி "
 
-#: formcard/AboutPage.qml:143
+#: formcard/AboutPage.qml:144
 #, kde-format
 msgid "Copyright"
 msgstr "பதிப்புரிமை"
 
-#: formcard/AboutPage.qml:151
+#: formcard/AboutPage.qml:152
 #, kde-format
 msgid "Description"
 msgstr "விவரணம்"
 
-#: formcard/AboutPage.qml:164
+#: formcard/AboutPage.qml:165
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "உரிமம்"
 msgstr[1] "உரிமங்கள்"
 
-#: formcard/AboutPage.qml:292
+#: formcard/AboutPage.qml:293
 #, kde-format
 msgid "Report a Bug"
 msgstr "பிழையை தெரிவி"
 
-#: formcard/AboutPage.qml:298
+#: formcard/AboutPage.qml:299
 #, kde-format
 msgid "Libraries in use"
 msgstr "பயனிலுள்ள நிரலகங்கள்"
 
-#: formcard/AboutPage.qml:302
+#: formcard/AboutPage.qml:303
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "பிடிப்புப்பலகைக்கு நகலெடு"
 
-#: formcard/AboutPage.qml:306
+#: formcard/AboutPage.qml:307
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "கணினி விவரங்கள் பிடிப்புப்பலகைக்கு நகலெடுக்கப்பட்டன."
 
-#: formcard/AboutPage.qml:320
+#: formcard/AboutPage.qml:321
 #, kde-format
 msgid "Authors"
 msgstr "இயற்றியவர்கள்"
 
-#: formcard/AboutPage.qml:335
+#: formcard/AboutPage.qml:336
 #, kde-format
 msgid "Credits"
 msgstr "நன்றி"
 
-#: formcard/AboutPage.qml:350
+#: formcard/AboutPage.qml:351
 #, kde-format
 msgid "Translators"
 msgstr "மொழிபெயர்ப்பாளர்கள்"
 
-#: formcard/AboutPage.qml:419
+#: formcard/AboutPage.qml:420
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "%1-இன் கே.டீ.யீ. களஞ்சியப் பக்கத்தை பாருங்கள்"
 
-#: formcard/AboutPage.qml:428
+#: formcard/AboutPage.qml:429
 #, kde-format
 msgid "Send an email to %1"
 msgstr "%1 என்பவருக்கு மின்னஞ்சல் அனுப்பு"
