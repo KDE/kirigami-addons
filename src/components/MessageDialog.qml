@@ -326,6 +326,36 @@ T.Dialog {
                 }
                 Layout.bottomMargin: root._mobileLayout && index !== repeater.count - 1 ? 0 : Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
             }
+
+            onStandardButtonsChanged: {
+                // standardButton() returns a pointer to an existing standard button.
+                // If no such button exists, it returns null.
+                // Icon names are copied from KStyle::standardIcon()
+                function setStandardIcon(buttonType, iconName) {
+                    const button = standardButton(buttonType)
+                    if (button && button.icon.name === "" && button.icon.source.toString() === "") {
+                        button.icon.name = iconName
+                    }
+                }
+                setStandardIcon(T.Dialog.Ok, "dialog-ok")
+                setStandardIcon(T.Dialog.Save, "document-save")
+                setStandardIcon(T.Dialog.SaveAll, "document-save-all")
+                setStandardIcon(T.Dialog.Open, "document-open")
+                setStandardIcon(T.Dialog.Yes, "dialog-ok-apply")
+                setStandardIcon(T.Dialog.YesToAll, "dialog-ok")
+                setStandardIcon(T.Dialog.No, "dialog-cancel")
+                setStandardIcon(T.Dialog.NoToAll, "dialog-cancel")
+                setStandardIcon(T.Dialog.Abort, "dialog-cancel")
+                setStandardIcon(T.Dialog.Retry, "view-refresh")
+                setStandardIcon(T.Dialog.Ignore, "dialog-cancel")
+                setStandardIcon(T.Dialog.Close, "dialog-close")
+                setStandardIcon(T.Dialog.Cancel, "dialog-cancel")
+                setStandardIcon(T.Dialog.Discard, "edit-delete")
+                setStandardIcon(T.Dialog.Help, "help-contents")
+                setStandardIcon(T.Dialog.Apply, "dialog-ok-apply")
+                setStandardIcon(T.Dialog.Reset, "edit-undo")
+                setStandardIcon(T.Dialog.RestoreDefaults, "document-revert")
+            }
         }
     }
 
