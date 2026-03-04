@@ -124,7 +124,6 @@ T.Dialog {
     }
 
     padding: Kirigami.Units.largeSpacing * 2
-    bottomPadding: Kirigami.Units.largeSpacing
 
     property bool _automaticallyClosed: false
 
