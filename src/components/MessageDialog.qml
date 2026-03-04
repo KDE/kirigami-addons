@@ -99,7 +99,12 @@ T.Dialog {
 
     parent: applicationWindow().QQC2.Overlay.overlay
 
-    implicitWidth: Math.min(parent.width - Kirigami.Units.gridUnit * 2, Kirigami.Units.gridUnit * 25)
+    implicitWidth: if (parent.width > 576) {
+        return Math.min(parent.width - Kirigami.Units.gridUnit * 2, Kirigami.Units.gridUnit * 25)
+    } else {
+        return parent.width - Kirigami.Units.gridUnit * 2;
+    }
+
     implicitHeight: Math.min(Math.max(implicitBackgroundHeight + topInset + bottomInset,
                              contentHeight + topPadding + bottomPadding
                              + (implicitHeaderHeight > 0 ? implicitHeaderHeight + spacing : 0)
