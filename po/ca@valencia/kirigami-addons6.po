@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-24 00:42+0000\n"
+"POT-Creation-Date: 2026-03-05 00:42+0000\n"
 "PO-Revision-Date: 2025-12-02 09:52+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -95,7 +95,7 @@ msgctxt "@action:button"
 msgid "Go Back"
 msgstr "Retrocedix"
 
-#: components/ConvergentContextMenu.qml:405
+#: components/ConvergentContextMenu.qml:405 formcard/FormCardDialog.qml:102
 #, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
@@ -106,31 +106,31 @@ msgstr "Tanca"
 msgid "Download"
 msgstr "Baixada"
 
-#: components/MessageDialog.qml:110
+#: components/MessageDialog.qml:115
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
 msgstr "Correcte"
 
-#: components/MessageDialog.qml:112 components/MessageDialog.qml:118
+#: components/MessageDialog.qml:117 components/MessageDialog.qml:123
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
 msgstr "Avís"
 
-#: components/MessageDialog.qml:114
+#: components/MessageDialog.qml:119
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
 msgstr "S'ha produït un error"
 
-#: components/MessageDialog.qml:116
+#: components/MessageDialog.qml:121
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
 msgstr "Informació"
 
-#: components/MessageDialog.qml:272
+#: components/MessageDialog.qml:276
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"

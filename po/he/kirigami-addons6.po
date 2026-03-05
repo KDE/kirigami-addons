@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-24 00:42+0000\n"
+"POT-Creation-Date: 2026-03-05 00:42+0000\n"
 "PO-Revision-Date: 2025-08-02 21:31+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -93,7 +93,7 @@ msgctxt "@action:button"
 msgid "Go Back"
 msgstr "חזרה"
 
-#: components/ConvergentContextMenu.qml:405
+#: components/ConvergentContextMenu.qml:405 formcard/FormCardDialog.qml:102
 #, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
@@ -104,31 +104,31 @@ msgstr "סגירה"
 msgid "Download"
 msgstr "הורדה"
 
-#: components/MessageDialog.qml:110
+#: components/MessageDialog.qml:115
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
 msgstr "הצלחה"
 
-#: components/MessageDialog.qml:112 components/MessageDialog.qml:118
+#: components/MessageDialog.qml:117 components/MessageDialog.qml:123
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
 msgstr "אזהרה"
 
-#: components/MessageDialog.qml:114
+#: components/MessageDialog.qml:119
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
 msgstr "שגיאה"
 
-#: components/MessageDialog.qml:116
+#: components/MessageDialog.qml:121
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
 msgstr "פרטים"
 
-#: components/MessageDialog.qml:272
+#: components/MessageDialog.qml:276
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"

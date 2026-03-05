@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-24 00:42+0000\n"
+"POT-Creation-Date: 2026-03-05 00:42+0000\n"
 "PO-Revision-Date: 2025-02-23 13:30+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -91,7 +91,7 @@ msgctxt "@action:button"
 msgid "Go Back"
 msgstr "戻る"
 
-#: components/ConvergentContextMenu.qml:405
+#: components/ConvergentContextMenu.qml:405 formcard/FormCardDialog.qml:102
 #, fuzzy, kde-format
 #| msgid "Close"
 msgctxt "@action:button close dialog"
@@ -103,31 +103,31 @@ msgstr "閉じる"
 msgid "Download"
 msgstr "ダウンロード"
 
-#: components/MessageDialog.qml:110
+#: components/MessageDialog.qml:115
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
 msgstr "成功"
 
-#: components/MessageDialog.qml:112 components/MessageDialog.qml:118
+#: components/MessageDialog.qml:117 components/MessageDialog.qml:123
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
 msgstr "警告"
 
-#: components/MessageDialog.qml:114
+#: components/MessageDialog.qml:119
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
 msgstr "エラー"
 
-#: components/MessageDialog.qml:116
+#: components/MessageDialog.qml:121
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
 msgstr "情報"
 
-#: components/MessageDialog.qml:272
+#: components/MessageDialog.qml:276
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"

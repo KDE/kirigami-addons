@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-24 00:42+0000\n"
+"POT-Creation-Date: 2026-03-05 00:42+0000\n"
 "PO-Revision-Date: 2025-07-27 08:13+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -93,7 +93,7 @@ msgctxt "@action:button"
 msgid "Go Back"
 msgstr "Pojdi nazaj"
 
-#: components/ConvergentContextMenu.qml:405
+#: components/ConvergentContextMenu.qml:405 formcard/FormCardDialog.qml:102
 #, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
@@ -104,31 +104,31 @@ msgstr "Zapri"
 msgid "Download"
 msgstr "Prenesi"
 
-#: components/MessageDialog.qml:110
+#: components/MessageDialog.qml:115
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
 msgstr "Uspeh"
 
-#: components/MessageDialog.qml:112 components/MessageDialog.qml:118
+#: components/MessageDialog.qml:117 components/MessageDialog.qml:123
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
 msgstr "Opozorilo"
 
-#: components/MessageDialog.qml:114
+#: components/MessageDialog.qml:119
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
 msgstr "Napaka"
 
-#: components/MessageDialog.qml:116
+#: components/MessageDialog.qml:121
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
 msgstr "Informacije"
 
-#: components/MessageDialog.qml:272
+#: components/MessageDialog.qml:276
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
