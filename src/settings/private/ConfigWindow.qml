@@ -125,6 +125,10 @@ Kirigami.ApplicationWindow {
                             if (ListView.view.currentIndex === settingDelegate.index) {
                                 return;
                             }
+
+                            while (root.pageStack.length > 1) {
+                                root.pageStack.pop(null);
+                            }
                             root.pageStack.replace(page);
 
                             ListView.view.currentIndex = settingDelegate.index;
