@@ -22,4 +22,12 @@ set(KIRIGAMI_ADDONS_ICONS
     dialog-ok-apply-symbolic
     draw-arrow-back-symbolic
     system-user-list
+    arrow-left
+    arrow-right
+    zoom-in
+    zoom-out
+    object-rotate-left
+    object-rotate-right
+    add-subtitle
+    document-save
 )
