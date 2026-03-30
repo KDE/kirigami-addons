@@ -244,6 +244,10 @@ Item {
             }
             layer {
                 enabled: GraphicsInfo.api !== GraphicsInfo.Software
+                textureSize: Qt.size(
+                    root.__diameter * root.Screen.devicePixelRatio,
+                    root.__diameter * root.Screen.devicePixelRatio
+                )
                 effect: Kirigami.ShadowedTexture {
                     radius: root.__diameter
                 }
