@@ -21,4 +21,5 @@ set(KIRIGAMI_ADDONS_ICONS
     dialog-cancel-symbolic
     dialog-ok-apply-symbolic
     draw-arrow-back-symbolic
+    system-user-list
 )
