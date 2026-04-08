@@ -73,7 +73,7 @@ cmake --install build/
 source build/prefix.sh
 ```
 
-For development purposes, the best way to build Kirigami Addons is to [build it with kdesrc-build](https://community.kde.org/Get_Involved/development/Build_software_with_kdesrc-build).
+For development purposes, the best way to build Kirigami Addons is to [build it with kde-builder](https://develop.kde.org/docs/getting-started/building).
 
 ## Contributing
 
