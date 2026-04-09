@@ -12,19 +12,19 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 23.08.3\n"
+"X-Qt-Contexts: true\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Your names"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "Your emails"
 
 #: components/AbstractMaximizeComponent.qml:138
 #, kde-format
@@ -55,13 +55,13 @@ msgstr "Otočiť doprava"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
-msgstr ""
+msgstr "Zobraziť popisok"
 
 #: components/AlbumMaximizeComponent.qml:173
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
-msgstr ""
+msgstr "Skryť popisok"
 
 #: components/AlbumMaximizeComponent.qml:179
 #, kde-format
@@ -89,11 +89,10 @@ msgstr "Zavrieť"
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "Späť"
 
 #: components/ConvergentContextMenu.qml:405 formcard/FormCardDialog.qml:102
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
 msgstr "Zatvoriť"
@@ -107,31 +106,31 @@ msgstr "Stiahnuť"
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
-msgstr ""
+msgstr "Úspech"
 
 #: components/MessageDialog.qml:117 components/MessageDialog.qml:123
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
-msgstr ""
+msgstr "Upozornenie"
 
 #: components/MessageDialog.qml:119
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
-msgstr ""
+msgstr "Chyba"
 
 #: components/MessageDialog.qml:121
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
-msgstr ""
+msgstr "Informácia"
 
 #: components/MessageDialog.qml:276
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
-msgstr ""
+msgstr "Znovu nezobrazovať"
 
 #: components/VideoMaximizeDelegate.qml:281
 #, kde-format
@@ -152,22 +151,19 @@ msgid "Select"
 msgstr "Vybrať"
 
 #: dateandtime/private/DatePicker.qml:275
-#, fuzzy, kde-format
-#| msgid "Days"
+#, kde-format
 msgid "Day"
-msgstr "Dni"
+msgstr "Deň"
 
 #: dateandtime/private/DatePicker.qml:278
-#, fuzzy, kde-format
-#| msgid "Months"
+#, kde-format
 msgid "Month"
-msgstr "Mesiace"
+msgstr "Mesiac"
 
 #: dateandtime/private/DatePicker.qml:281
-#, fuzzy, kde-format
-#| msgid "Years"
+#, kde-format
 msgid "Year"
-msgstr "Roky"
+msgstr "Rok"
 
 #: dateandtime/private/DatePicker.qml:366
 #, kde-format
@@ -188,11 +184,9 @@ msgid "Go Next"
 msgstr "Prejsť na nasledujúci"
 
 #: dateandtime/TimePicker.qml:118
-#, fuzzy, kde-format
-#| msgctxt "time in hour in 24h format"
-#| msgid "%1 hours"
+#, kde-format
 msgid "Hours"
-msgstr "%1 hodín"
+msgstr "Hodiny"
 
 #: dateandtime/TimePicker.qml:141
 #, kde-format
@@ -201,22 +195,20 @@ msgid ":"
 msgstr ":"
 
 #: dateandtime/TimePicker.qml:156
-#, fuzzy, kde-format
-#| msgctxt "number of minutes"
-#| msgid "%1 minutes"
+#, kde-format
 msgid "Minutes"
-msgstr "%1 minút"
+msgstr "Minúty"
 
 #: formcard/aboutcomponent.cpp:26
 #, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: formcard/aboutcomponent.cpp:30
 #, kde-format
 msgid "KDE Frameworks"
-msgstr ""
+msgstr "KDE Frameworks"
 
 #: formcard/aboutcomponent.cpp:31
 #, kde-format
@@ -227,7 +219,7 @@ msgstr ""
 #: formcard/aboutcomponent.cpp:36
 #, kde-format
 msgid "Qt"
-msgstr ""
+msgstr "Qt"
 
 #: formcard/aboutcomponent.cpp:37
 #, kde-format
@@ -238,7 +230,7 @@ msgstr ""
 #: formcard/aboutcomponent.cpp:38
 #, kde-format
 msgid "Using %1 and built against %2"
-msgstr ""
+msgstr "%1 (zostavené pomocou %2)"
 
 #: formcard/aboutcomponent.cpp:43
 #, kde-format
@@ -250,19 +242,19 @@ msgstr ""
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: formcard/aboutcomponent.cpp:48
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Snap"
-msgstr ""
+msgstr "Prichytiť"
 
 #: formcard/aboutcomponent.cpp:51
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "AppImage"
-msgstr ""
+msgstr "AppImage"
 
 #: formcard/aboutcomponent.cpp:53
 #, kde-format
@@ -357,7 +349,7 @@ msgstr "Zapojiť sa"
 #: formcard/AboutKDEPage.qml:139
 #, kde-format
 msgid "Developer Documentation"
-msgstr ""
+msgstr "Developer Documentation"
 
 #: formcard/AboutKDEPage.qml:145
 #, kde-format
@@ -386,8 +378,7 @@ msgid ""
 msgstr ""
 
 #: formcard/AboutKDEPage.qml:163
-#, fuzzy, kde-format
-#| msgid "KDE e.V"
+#, kde-format
 msgid "KDE e.V."
 msgstr "KDE e.V"
 
@@ -410,7 +401,7 @@ msgstr "Copyright"
 #: formcard/AboutPage.qml:152
 #, kde-format
 msgid "Description"
-msgstr ""
+msgstr "Popis"
 
 #: formcard/AboutPage.qml:165
 #, kde-format
@@ -421,21 +412,20 @@ msgstr[1] "Licencie"
 msgstr[2] "Licencie"
 
 #: formcard/AboutPage.qml:293
-#, fuzzy, kde-format
-#| msgid "Report a bug"
+#, kde-format
 msgid "Report a Bug"
 msgstr "Nahlásiť chybu"
 
 #: formcard/AboutPage.qml:299
 #, kde-format
 msgid "Libraries in use"
-msgstr ""
+msgstr "Použité knižnice"
 
 #: formcard/AboutPage.qml:303
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Kopírovať do schránky"
 
 #: formcard/AboutPage.qml:307
 #, kde-format
@@ -461,7 +451,7 @@ msgstr "Prekladatelia"
 #: formcard/AboutPage.qml:420
 #, kde-format
 msgid "Visit %1's KDE Store page"
-msgstr ""
+msgstr "Navštívte stránku obchodu KDE %1"
 
 #: formcard/AboutPage.qml:429
 #, kde-format
@@ -472,7 +462,7 @@ msgstr "Odoslať email pre %1"
 #, kde-format
 msgctxt "@action:button"
 msgid "Color"
-msgstr ""
+msgstr "Farba"
 
 #: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:53
 #, kde-format
@@ -484,7 +474,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Icon"
-msgstr ""
+msgstr "Ikona"
 
 #: formcard/FormDateTimeDelegate.qml:213
 #, kde-format
@@ -508,12 +498,10 @@ msgstr ""
 #, kde-format
 msgctxt "@info:status"
 msgid "The file doesn't exist."
-msgstr ""
+msgstr "Súbor neexistuje."
 
 #: formcard/FormFileDelegate.qml:267
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select file"
 msgstr "Vybrať"
@@ -522,7 +510,7 @@ msgstr "Vybrať"
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No file selected"
-msgstr ""
+msgstr "Žiadne súbor vybrané"
 
 #: formcard/FormFolderDelegate.qml:158
 #, kde-format
@@ -531,9 +519,7 @@ msgid "The folder doesn't exist."
 msgstr ""
 
 #: formcard/FormFolderDelegate.qml:215
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select folder"
 msgstr "Vybrať"
@@ -542,19 +528,19 @@ msgstr "Vybrať"
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No folder selected"
-msgstr ""
+msgstr "Žiadne priečinok vybrané"
 
 #: formcard/FormLinkDelegate.qml:54
 #, kde-format
 msgctxt "@action:inmnenu"
 msgid "Open Link"
-msgstr ""
+msgstr "Otvoriť odkaz"
 
 #: formcard/FormLinkDelegate.qml:60
 #, kde-format
 msgctxt "@action:inmnenu"
 msgid "Copy Link to Clipboard"
-msgstr ""
+msgstr "Kopírovať do schránky"
 
 #: formcard/FormLinkDelegate.qml:66
 #, kde-format
@@ -588,17 +574,13 @@ msgid "Go back"
 msgstr ""
 
 #: settings/private/ConfigMobilePage.qml:26
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title"
 msgid "Settings"
 msgstr "Nastavenia"
 
 #: settings/private/ConfigMobilePage.qml:99
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title:group"
 msgid "Settings"
 msgstr "Nastavenia"
@@ -631,13 +613,13 @@ msgstr ""
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Selected default language:"
-msgstr ""
+msgstr "Vybrané predvolené jazyk:"
 
 #: settings/private/SonnetConfigPage.qml:97
 #, kde-format
 msgctxt "No selected language"
 msgid "None"
-msgstr ""
+msgstr "Žiadne"
 
 #: settings/private/SonnetConfigPage.qml:117
 #, kde-format
@@ -656,7 +638,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Open Personal Dictionary"
-msgstr ""
+msgstr "Open Personal Dictionary"
 
 #: settings/private/SonnetConfigPage.qml:143
 #, kde-format
@@ -667,54 +649,54 @@ msgstr ""
 #: settings/private/SonnetConfigPage.qml:155
 #, kde-format
 msgid "Default Language"
-msgstr ""
+msgstr "Štandardný jazyk"
 
 #: settings/private/SonnetConfigPage.qml:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking dictionary"
-msgstr ""
+msgstr "Slovník kontroly pravopisu"
 
 #: settings/private/SonnetConfigPage.qml:174
 #, kde-format
 msgctxt "Placeholder message"
 msgid "Add a new word to your personal dictionary…"
-msgstr ""
+msgstr "Pridať nové slovo do osobného slovníka…"
 
 #: settings/private/SonnetConfigPage.qml:177
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Word"
-msgstr ""
+msgstr "Add Word"
 
 #: settings/private/SonnetConfigPage.qml:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete word"
-msgstr ""
+msgstr "Odstrániť slovo"
 
 #: settings/ShortcutsConfigurationModule.qml:26
 #, kde-format
 msgctxt "@action:button"
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Keyboard Shortcuts"
 
 #: settings/SpellcheckingConfigurationModule.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Spell Checking"
-msgstr ""
+msgstr "Spell Checking"
 
 #: statefulapplication/abstractkirigamiapplication.cpp:145
 #, kde-format
 msgid "Open Command Bar"
-msgstr ""
+msgstr "Open Command Bar"
 
 #: statefulapplication/private/keysequencehelper.cpp:117
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Reserved Shortcut"
-msgstr ""
+msgstr "Rezervovaná skratka"
 
 #: statefulapplication/private/keysequencehelper.cpp:119
 #, kde-format
@@ -724,6 +706,9 @@ msgid ""
 "shortcut.\n"
 "Please choose another one."
 msgstr ""
+"Klávesa F12 je vo Windows rezervovaná, takže nemôže byť použitá pre globálnu "
+"skratku.\n"
+"Prosím vyberte inú."
 
 #: statefulapplication/private/keysequencehelper.cpp:143
 #, kde-format
@@ -731,32 +716,33 @@ msgctxt ""
 "@title:dialog This happen when a global shortcut is already defined with the "
 "same shortcut"
 msgid "Global Shortcut Shadowing"
-msgstr ""
+msgstr "Globálne tieňovanie skratiek"
 
 #: statefulapplication/private/keysequencehelper.cpp:146
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination is shadowed by following global actions:\n"
 msgstr ""
+"Kombinácia klávesov '%1' je zatienená nasledujúcimi globálnymi akciami:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:148
 #: statefulapplication/private/keysequencehelper.cpp:154
 #, kde-format
 msgctxt "@info"
 msgid "Action '%1' in context '%2'\n"
-msgstr ""
+msgstr "Akcia '%1' v kontexte '%2'\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:152
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination shadows following global actions:\n"
-msgstr ""
+msgstr "Klávesová kombinácia '%1' zatieni nasledujúce globálne akcie:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:193
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Conflict with Standard Application Shortcut"
-msgstr ""
+msgstr "Konflikt so štandardnou skratkou aplikácie"
 
 #: statefulapplication/private/keysequencehelper.cpp:195
 #, kde-format
@@ -766,18 +752,21 @@ msgid ""
 "some applications use.\n"
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
+"Klávesová kombinácia '%1' je už používaná pre štandardnú akciu \"%2\", ktorú "
+"používa viacero aplikácií.\n"
+"Naozaj ju chcete použiť ako globálnu klávesovú skratku?"
 
 #: statefulapplication/private/KeySequenceItem.qml:129
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
-msgstr ""
+msgstr "Vstup"
 
 #: statefulapplication/private/KeySequenceItem.qml:130
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
-msgstr ""
+msgstr "Žiadne"
 
 #: statefulapplication/private/KeySequenceItem.qml:141
 #, kde-format
@@ -785,82 +774,83 @@ msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
+"Kliknite na tlačidlo a potom zadajte skratku, ktorú chcete použiť v "
+"programe.\n"
+"Príklad pre Ctrl+A: držte klávesu Ctrl a stlačte A."
 
 #: statefulapplication/private/KeySequenceItem.qml:182
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
-msgstr ""
+msgstr "Clear Key Sequence"
 
 #: statefulapplication/private/KeySequenceItem.qml:198
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel Key Sequence Recording"
-msgstr ""
+msgstr "Zrušiť nahrávanie klávesovej skratky"
 
 #: statefulapplication/private/KQuickCommandBarPage.qml:55
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No results found"
-msgstr ""
+msgstr "Neboli nájdené žiadne výsledky"
 
 #: statefulapplication/private/ShortcutsEditor.qml:19
 #: statefulapplication/StatefulWindow.qml:99
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcuts"
-msgstr ""
+msgstr "Skratky"
 
 #: statefulapplication/private/ShortcutsEditor.qml:23
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Filter…"
-msgstr ""
+msgstr "Filter…"
 
 #: statefulapplication/private/ShortcutsEditor.qml:69
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut: %1"
-msgstr ""
+msgstr "Klávesová skratka: %1"
 
 #: statefulapplication/private/ShortcutsEditor.qml:89
 #, kde-format
 msgctxt "@label"
 msgid "Shortcut:"
-msgstr ""
+msgstr "Skratka:"
 
 #: statefulapplication/private/ShortcutsEditor.qml:144
 #: statefulapplication/private/ShortcutsEditor.qml:172
 #, kde-format
 msgctxt "@label"
 msgid "Alternative:"
-msgstr ""
+msgstr "Alternatívne:"
 
 #: statefulapplication/private/ShortcutsEditor.qml:210
 #, kde-format
 msgctxt "Placeholder message"
 msgid "No shortcuts found"
-msgstr ""
+msgstr "Nenašli sa žiadne shortcuts."
 
 #: statefulapplication/shortcutsmodel.cpp:41
 #, kde-format
 msgctxt "List separator"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: statefulapplication/StatefulWindow.qml:109
-#, fuzzy, kde-format
-#| msgid "About %1"
+#, kde-format
 msgctxt "@title:window"
 msgid "About %1"
-msgstr "Informácie o %1"
+msgstr "O aplikácii %1"
 
 #: statefulapplication/StatefulWindow.qml:122
-#, fuzzy, kde-format
-#| msgid "About KDE"
+#, kde-format
 msgctxt "@title:window"
 msgid "About KDE"
-msgstr "Informácie o KDE"
+msgstr "O prostredí KDE"
 
 #~ msgctxt "time in hour (PM)"
 #~ msgid "%1 PM"
