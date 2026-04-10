@@ -214,7 +214,7 @@ msgstr "KDE Frameworks"
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
-msgstr ""
+msgstr "Collection of libraries created by the KDE Community to extend Qt."
 
 #: formcard/aboutcomponent.cpp:36
 #, kde-format
@@ -225,7 +225,7 @@ msgstr "Qt"
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr ""
+msgstr "Cross-platform application development framework."
 
 #: formcard/aboutcomponent.cpp:38
 #, kde-format
@@ -236,7 +236,7 @@ msgstr "%1 (zostavené pomocou %2)"
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Unknown/Default"
-msgstr ""
+msgstr "Neznámy/Predvolený"
 
 #: formcard/aboutcomponent.cpp:45
 #, kde-format
@@ -260,13 +260,13 @@ msgstr "AppImage"
 #, kde-format
 msgctxt "@info"
 msgid "Distribution method."
-msgstr ""
+msgstr "Distribution method."
 
 #: formcard/aboutcomponent.cpp:56
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr ""
+msgstr "Underlying platform."
 
 #: formcard/AboutKDEPage.qml:24
 #: statefulapplication/abstractkirigamiapplication.cpp:174
@@ -297,6 +297,15 @@ msgid ""
 "the world's finest Free Software. Everyone is welcome to join and contribute "
 "to KDE, including you."
 msgstr ""
+"KDE is a world-wide community of software engineers, artists, writers, "
+"translators and creators who are committed to Free Software development. KDE "
+"produces the Plasma desktop environment, hundreds of applications, and the "
+"many software libraries that support them.\n"
+"\n"
+"KDE is a cooperative enterprise: no single entity controls its direction or "
+"products. Instead, we work together to achieve the common goal of building "
+"the world's finest Free Software. Everyone is welcome to join and contribute "
+"to KDE, including you."
 
 #: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:239
 #, kde-format
@@ -306,7 +315,7 @@ msgstr "Domovská stránka"
 #: formcard/AboutKDEPage.qml:83
 #, kde-format
 msgid "Report bugs"
-msgstr ""
+msgstr "Nahlásiť chyby"
 
 #: formcard/AboutKDEPage.qml:88
 #, kde-format
@@ -322,6 +331,16 @@ msgid ""
 "tracking system to register your wish. Make sure you use the severity called "
 "\"Wishlist\"."
 msgstr ""
+"Software can always be improved, and the KDE team is ready to do so. "
+"However, you - the user - must tell us when something does not work as "
+"expected or could be done better.\n"
+"\n"
+"KDE has a bug tracking system. Use the button below to file a bug, or use "
+"the program's About page to report a bug specific to this application.\n"
+"\n"
+"If you have a suggestion for improvement then you are welcome to use the bug "
+"tracking system to register your wish. Make sure you use the severity called "
+"\"Wishlist\"."
 
 #: formcard/AboutKDEPage.qml:110
 #, kde-format
@@ -340,6 +359,9 @@ msgid ""
 "You can join the language teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
+"You do not have to be a software developer to be a member of the KDE team. "
+"You can join the language teams that translate program interfaces. You can "
+"provide graphics, themes, sounds, and improved documentation. You decide!"
 
 #: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:267
 #, kde-format
@@ -354,7 +376,7 @@ msgstr "Developer Documentation"
 #: formcard/AboutKDEPage.qml:145
 #, kde-format
 msgid "Support us"
-msgstr ""
+msgstr "Podporte nás"
 
 #: formcard/AboutKDEPage.qml:150
 #, kde-format
@@ -376,6 +398,22 @@ msgid ""
 "\n"
 "Thank you very much in advance for your support."
 msgstr ""
+"KDE software is and will always be available free of charge, however "
+"creating it is not free.\n"
+"\n"
+"To support development the KDE community has formed the KDE e.V., a non-"
+"profit organization legally founded in Germany. KDE e.V. represents the KDE "
+"community in legal and financial matters.\n"
+"\n"
+"KDE benefits from many kinds of contributions, including financial. We use "
+"the funds to reimburse members and others for expenses they incur when "
+"contributing. Further funds are used for legal support and organizing "
+"conferences and meetings.\n"
+"\n"
+"We would like to encourage you to support our efforts with a financial "
+"donation.\n"
+"\n"
+"Thank you very much in advance for your support."
 
 #: formcard/AboutKDEPage.qml:163
 #, kde-format
@@ -431,7 +469,7 @@ msgstr "Kopírovať do schránky"
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
-msgstr ""
+msgstr "System information copied to clipboard."
 
 #: formcard/AboutPage.qml:321
 #, kde-format
@@ -468,7 +506,7 @@ msgstr "Farba"
 #, kde-format
 msgctxt "Accessible description"
 msgid "Current color \"%1\""
-msgstr ""
+msgstr "Current color \"%1\""
 
 #: formcard/android/FormIconDelegate.qml:43
 #, kde-format
@@ -492,7 +530,7 @@ msgstr "Nenastavené"
 #, kde-format
 msgctxt "@info:status"
 msgid "The path doesn't exist."
-msgstr ""
+msgstr "The path doesn't exist."
 
 #: formcard/FormFileDelegate.qml:200
 #, kde-format
@@ -516,7 +554,7 @@ msgstr "Žiadne súbor vybrané"
 #, kde-format
 msgctxt "@info:status"
 msgid "The folder doesn't exist."
-msgstr ""
+msgstr "The folder doesn't exist."
 
 #: formcard/FormFolderDelegate.qml:215
 #, kde-format
@@ -546,7 +584,7 @@ msgstr "Kopírovať do schránky"
 #, kde-format
 msgctxt "@info:status"
 msgid "Url copied to clipboard."
-msgstr ""
+msgstr "Url copied to clipboard."
 
 #: formcard/FormPasswordFieldDelegate.qml:249
 #: formcard/FormTextAreaDelegate.qml:185 formcard/FormTextFieldDelegate.qml:281
@@ -571,7 +609,7 @@ msgstr "Nastavenia — %1"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Go back"
-msgstr ""
+msgstr "Prejsť späť"
 
 #: settings/private/ConfigMobilePage.qml:26
 #, kde-format
@@ -589,25 +627,25 @@ msgstr "Nastavenia"
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Enable automatic spell checking"
-msgstr ""
+msgstr "Povoliť automatickú kontrolu pravopisu"
 
 #: settings/private/SonnetConfigPage.qml:55
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore uppercase words"
-msgstr ""
+msgstr "Ignorovať slová písané veľkými písmenami"
 
 #: settings/private/SonnetConfigPage.qml:69
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore hyphenated words"
-msgstr ""
+msgstr "Ignorovať slová so spojovníkom"
 
 #: settings/private/SonnetConfigPage.qml:83
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Detect language automatically"
-msgstr ""
+msgstr "Automaticky detegovať jazyk"
 
 #: settings/private/SonnetConfigPage.qml:96
 #, kde-format
@@ -625,7 +663,7 @@ msgstr "Žiadne"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Additional Spell Checking Languages"
-msgstr ""
+msgstr "Ďalšie jazyky kontroly pravopisu"
 
 #: settings/private/SonnetConfigPage.qml:118
 #, kde-format
@@ -633,6 +671,8 @@ msgid ""
 "%1 will provide spell checking and suggestions for the languages listed here "
 "when autodetection is enabled."
 msgstr ""
+"%1 will provide spell checking and suggestions for the languages listed here "
+"when autodetection is enabled."
 
 #: settings/private/SonnetConfigPage.qml:131
 #, kde-format
@@ -644,7 +684,7 @@ msgstr "Open Personal Dictionary"
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking languages"
-msgstr ""
+msgstr "Jazyky kontroly pravopisu"
 
 #: settings/private/SonnetConfigPage.qml:155
 #, kde-format
