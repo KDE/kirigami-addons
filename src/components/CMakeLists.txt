@@ -3,7 +3,7 @@
 
 # C++ Library
 
-add_library(KirigamiAddonsComponents SHARED)
+add_library(KirigamiAddonsComponents)
 
 target_sources(KirigamiAddonsComponents PRIVATE nameutils.cpp nameutils.h)
 

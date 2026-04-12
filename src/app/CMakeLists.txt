@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2025 Aleix Pol Gonzalez <aleixpol@kde.org>
 # SPDX-License-Identifier: BSD-2-Clause
 
-add_library(KirigamiApp SHARED)
+add_library(KirigamiApp)
 
 ecm_generate_qdoc(KirigamiApp kirigamiapp.qdocconf)
 
