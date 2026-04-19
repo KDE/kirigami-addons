@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-05 00:42+0000\n"
-"PO-Revision-Date: 2025-05-03 11:43+0200\n"
+"PO-Revision-Date: 2026-04-18 15:44+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.07.70\n"
+"X-Generator: Lokalize 25.12.3\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -95,8 +95,7 @@ msgid "Go Back"
 msgstr "Gå tilbake"
 
 #: components/ConvergentContextMenu.qml:405 formcard/FormCardDialog.qml:102
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
 msgstr "Lukk"
@@ -240,31 +239,31 @@ msgstr "Brukar %1 og bygd mot %2"
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Unknown/Default"
-msgstr ""
+msgstr "Ukjend/standard"
 
 #: formcard/aboutcomponent.cpp:45
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: formcard/aboutcomponent.cpp:48
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Snap"
-msgstr ""
+msgstr "Snap"
 
 #: formcard/aboutcomponent.cpp:51
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "AppImage"
-msgstr ""
+msgstr "AppImage"
 
 #: formcard/aboutcomponent.cpp:53
 #, kde-format
 msgctxt "@info"
 msgid "Distribution method."
-msgstr ""
+msgstr "Distribusjonsmetode."
 
 #: formcard/aboutcomponent.cpp:56
 #, kde-format
@@ -530,47 +529,43 @@ msgstr "Ikkje vald"
 #, kde-format
 msgctxt "@info:status"
 msgid "The path doesn't exist."
-msgstr ""
+msgstr "Adressa finst ikkje."
 
 #: formcard/FormFileDelegate.qml:200
 #, kde-format
 msgctxt "@info:status"
 msgid "The file doesn't exist."
-msgstr ""
+msgstr "Fila finst ikkje."
 
 #: formcard/FormFileDelegate.qml:267
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select file"
-msgstr "Vel"
+msgstr "Vel fil"
 
 #: formcard/FormFileDelegate.qml:274
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No file selected"
-msgstr ""
+msgstr "Inga fil er vald."
 
 #: formcard/FormFolderDelegate.qml:158
 #, kde-format
 msgctxt "@info:status"
 msgid "The folder doesn't exist."
-msgstr ""
+msgstr "Mappa finst ikkje."
 
 #: formcard/FormFolderDelegate.qml:215
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select folder"
-msgstr "Vel"
+msgstr "Vel mappe"
 
 #: formcard/FormFolderDelegate.qml:222
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No folder selected"
-msgstr ""
+msgstr "Inga mappe er vald"
 
 #: formcard/FormLinkDelegate.qml:54
 #, kde-format
