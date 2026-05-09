@@ -273,7 +273,7 @@ Item {
 
         P.ActionsMenu {
             actions: root.actions
-            submenuComponent: P.ActionsMenu { }
+            submenuComponent: P.ActionsMenu { visible: false }
             modal: true
             onClosed: {
                 root.opened = false;
