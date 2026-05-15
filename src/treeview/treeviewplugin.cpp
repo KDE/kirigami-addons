@@ -57,6 +57,4 @@ void TreeViewPlugin::registerTypes(const char *uri)
     qmlProtectModule(uri, 2);
 }
 
-#include "treeviewplugin.moc"
-
 #include "moc_treeviewplugin.cpp"
