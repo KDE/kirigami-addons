@@ -58,7 +58,6 @@ configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KFKirigamiAddonsConfig.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/KF6KirigamiAddonsConfig.cmake"
     INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
-    PATH_VARS CMAKE_INSTALL_PREFIX
 )
 ecm_setup_version(${PROJECT_VERSION}
     VARIABLE_PREFIX KIRIGAMIADDONS
