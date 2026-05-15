@@ -547,7 +547,7 @@ FormCardPage {
 
                     QQC2.ToolButton {
                         visible: typeof(modelData.webAddress) !== "undefined" && modelData.webAddress.length > 0
-                        icon.name: "globe"
+                        icon.name: "globe-symbolic"
                         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                         QQC2.ToolTip.visible: hovered
                         QQC2.ToolTip.text: (typeof(modelData.webAddress) === "undefined" && modelData.webAddress.length > 0) ? "" : modelData.webAddress
