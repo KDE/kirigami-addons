@@ -331,7 +331,10 @@ AbstractFormDelegate {
             onTextChanged: root.text = text
             onAccepted: root.accepted()
             onEditingFinished: root.editingFinished()
-            onTextEdited: root.textEdited()
+            onTextEdited: {
+                   root.text = text;
+                   root.textEdited();
+            }
             activeFocusOnTab: false
         }
 
