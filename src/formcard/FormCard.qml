@@ -89,6 +89,7 @@ Item {
     Layout.fillWidth: true
 
     implicitHeight: topPadding + bottomPadding + internalColumn.implicitHeight + rectangle.borderWidth * 2
+    implicitWidth: leftPadding + rightPadding + internalColumn.implicitWidth + rectangle.borderWidth * 2
 
     Kirigami.ShadowedRectangle {
         id: rectangle
