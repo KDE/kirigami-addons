@@ -117,6 +117,65 @@ AbstractFormDelegate {
     property alias acceptableInput: textField.acceptableInput
 
     /*!
+       \qmlproperty int cursorPosition
+       \brief This property holds the \l {TextInput::cursorPosition} {cursorPosition} of the internal TextField.
+
+       This property holds the position of the cursor in the
+       text field. A value of 0 indicates that the cursor is at the beginning
+       of the text field.
+
+       This property allows you to programmatically control and access the
+       cursor position within the text field, which can be useful for
+       integrating the FormTextFieldDelegate component into your project.
+
+       \sa {TextInput::cursorPosition} {TextInput.cursorPosition}
+     */
+    property alias cursorPosition: textField.cursorPosition
+
+    /*!
+       \qmlproperty bool selectByMouse
+       \brief This property holds the \l {TextInput::selectByMouse} {selectByMouse} of the internal TextField.
+
+       Defaults to true.
+       If true, the user can use the mouse to select text in the usual way.
+
+       \sa {TextInput::selectByMouse} {TextInput.selectByMouse}
+     */
+    property alias selectByMouse: textField.selectByMouse
+
+    /*!
+       \qmlproperty string selectedText
+       \brief This property holds the \l {TextInput::selectedText} {selectedText} of the internal TextField.
+
+       This property holds the selected text in the text field.
+
+       \sa {TextInput::selectedText} {TextInput.selectedText}
+     */
+    property alias selectedText: textField.selectedText
+
+    /*!
+       \qmlproperty int selectionEnd
+       \brief This property holds the \l {TextInput::selectionEnd} {selectionEnd} of the internal TextField.
+
+       This property holds the cursor position after the last character in the current selection.
+       This property is read-only.
+
+       \sa {TextInput::selectionEnd} {TextInput.selectionEnd}
+     */
+    property alias selectionEnd: textField.selectionEnd
+
+    /*!
+       \qmlproperty int selectionStart
+       \brief This property holds the \l {TextInput::selectionStart} {selectionStart} of the internal TextField.
+
+       This property holds the cursor position before the first character in the current selection.
+       This property is read-only.
+
+       \sa {TextInput::selectionStart} {TextInput.selectionStart}
+     */
+    property alias selectionStart: textField.selectionStart
+
+    /*!
        \qmlproperty var status
        \brief This property holds the current status message type of
        the text field.
