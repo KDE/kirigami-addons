@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-05 00:42+0000\n"
+"POT-Creation-Date: 2026-05-25 00:42+0000\n"
 "PO-Revision-Date: 2025-07-28 00:14+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -591,8 +591,8 @@ msgctxt "@info:status"
 msgid "Url copied to clipboard."
 msgstr "URL copiada al portapapeles."
 
-#: formcard/FormPasswordFieldDelegate.qml:249
-#: formcard/FormTextAreaDelegate.qml:185 formcard/FormTextFieldDelegate.qml:281
+#: formcard/FormPasswordFieldDelegate.qml:308
+#: formcard/FormTextAreaDelegate.qml:185 formcard/FormTextFieldDelegate.qml:324
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
