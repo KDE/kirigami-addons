@@ -5,7 +5,6 @@
 import QtQuick
 import QtQuick.Controls as QQC2
 import org.kde.kirigami as Kirigami
-import org.kde.kirigami.private.polyfill // until we depends on Qt 6.9
 import QtQuick.Layouts
 
 /*!

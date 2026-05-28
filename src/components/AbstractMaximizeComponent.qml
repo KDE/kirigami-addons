@@ -7,7 +7,6 @@ import QtQuick.Layouts
 import Qt.labs.qmlmodels
 
 import org.kde.kirigami as Kirigami
-import org.kde.kirigami.private.polyfill // remove once we depend on Qt 6.9
 
 /*!
    \qmltype AbstractMaximizeComponent
