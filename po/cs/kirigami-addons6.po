@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-25 00:42+0000\n"
+"POT-Creation-Date: 2026-06-03 00:54+0000\n"
 "PO-Revision-Date: 2024-08-28 09:36+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -27,54 +27,54 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "vit@pelcak.org"
 
-#: components/AbstractMaximizeComponent.qml:138
+#: components/AbstractMaximizeComponent.qml:137
 #, kde-format
 msgid "Close"
 msgstr "Zavřít"
 
-#: components/AlbumMaximizeComponent.qml:151
+#: components/AlbumMaximizeComponent.qml:150
 #, kde-format
 msgid "Zoom in"
 msgstr "Přiblížit"
 
-#: components/AlbumMaximizeComponent.qml:156
+#: components/AlbumMaximizeComponent.qml:155
 #, kde-format
 msgid "Zoom out"
 msgstr "Oddálit"
 
-#: components/AlbumMaximizeComponent.qml:162
+#: components/AlbumMaximizeComponent.qml:161
 #, kde-format
 msgid "Rotate left"
 msgstr "Otočit doleva"
 
-#: components/AlbumMaximizeComponent.qml:168
+#: components/AlbumMaximizeComponent.qml:167
 #, kde-format
 msgid "Rotate right"
 msgstr "Otočit doprava"
 
-#: components/AlbumMaximizeComponent.qml:173
+#: components/AlbumMaximizeComponent.qml:172
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
 msgstr "Zobrazit titulek"
 
-#: components/AlbumMaximizeComponent.qml:173
+#: components/AlbumMaximizeComponent.qml:172
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
 msgstr "Skrýt titulek"
 
-#: components/AlbumMaximizeComponent.qml:179
+#: components/AlbumMaximizeComponent.qml:178
 #, kde-format
 msgid "Save as"
 msgstr "Uložit jako"
 
-#: components/AlbumMaximizeComponent.qml:256
+#: components/AlbumMaximizeComponent.qml:255
 #, kde-format
 msgid "Previous image"
 msgstr "Předchozí obrázek"
 
-#: components/AlbumMaximizeComponent.qml:274
+#: components/AlbumMaximizeComponent.qml:273
 #, kde-format
 msgid "Next image"
 msgstr "Následující obrázek"
