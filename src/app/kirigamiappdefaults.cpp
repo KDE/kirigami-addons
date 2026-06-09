@@ -56,14 +56,10 @@ void apply(QGuiApplication *app)
     bool handledByQPT = INITIAL_STYLE != QQuickStyle::name();
     if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE") && !handledByQPT) {
         QQuickStyle::setStyle(u"org.kde.desktop"_s);
-#ifndef Q_OS_ANDROID
         // TODO remove once we no longer use the org.kde.desktop style
         qApp->setStyle(QStyleFactory::create(QStringLiteral("Breeze")));
-#endif
     }
     KIconTheme::initTheme();
-#endif
-
 #ifdef Q_OS_WINDOWS
     if (AttachConsole(ATTACH_PARENT_PROCESS)) {
         freopen("CONOUT$", "w", stdout);
@@ -74,8 +70,6 @@ void apply(QGuiApplication *app)
     font.setPointSize(10);
     app->setFont(font);
 #endif
-
-#ifndef Q_OS_ANDROID
 #if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 19, 0)
     // Embrace KCrash. If an application misbehaves, we should know as much as possible about it.
     // Needs initialising KAboutData::setApplicationData
