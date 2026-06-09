@@ -1,0 +1,39 @@
+include($KDE_DOCS/global/qt-module-defaults.qdocconf)
+
+project = KirigamiAddonsOnboarding
+description = Onboarding components for Kirigami applications
+
+documentationinheaders = true
+
+headerdirs += .
+sourcedirs += . ../../examples/OnboardingTutorial
+exampledirs += ../../examples
+imagedirs  += ../../docs/pics
+
+outputformats = HTML
+
+navigation.landingpage = "Kirigami Addons"
+
+depends += kde kirigami qtcore qtquick qtquickcontrols qtgui
+
+qhp.projects = KirigamiAddonsOnboarding
+
+qhp.KirigamiAddonsOnboarding.file          = kirigamiaddonsonboarding.qhp
+qhp.KirigamiAddonsOnboarding.namespace     = org.kde.kirigamiaddonsonboarding.$QT_VERSION_TAG
+qhp.KirigamiAddonsOnboarding.virtualFolder = kirigamiaddonsonboarding
+qhp.KirigamiAddonsOnboarding.indexTitle    = Kirigami Addons Onboarding
+qhp.KirigamiAddonsOnboarding.indexRoot     =
+
+qhp.KirigamiAddonsOnboarding.subprojects = onboarding examples
+
+qhp.KirigamiAddonsOnboarding.subprojects.onboarding.title = Kirigami Addons Onboarding QML Types
+qhp.KirigamiAddonsOnboarding.subprojects.onboarding.indexTitle = Kirigami Addons Onboarding QML Types
+qhp.KirigamiAddonsOnboarding.subprojects.onboarding.selectors = qmlmodule:org.kde.kirigamiaddons.onboarding
+qhp.KirigamiAddonsOnboarding.subprojects.onboarding.sortPages = true
+
+qhp.KirigamiAddonsOnboarding.subprojects.examples.title = Examples
+qhp.KirigamiAddonsOnboarding.subprojects.examples.indexTitle = Kirigami Addons Onboarding Examples
+qhp.KirigamiAddonsOnboarding.subprojects.examples.selectors = doc:example
+qhp.KirigamiAddonsOnboarding.subprojects.examples.sortPages = true
+
+tagfile = kirigamiaddonsonboarding.tags

@@ -1,0 +1,225 @@
+/*!
+   \qmlmodule org.kde.kirigamiaddons.onboarding
+   \title Kirigami Addons Onboarding QML Types
+   \brief Provides guided onboarding overlays for Kirigami applications.
+
+   To import the QML types into your application, use the following import
+   statement in your QML file:
+
+   \qml
+   import org.kde.kirigamiaddons.onboarding
+   \endqml
+ */
+
+/*!
+    \qmltype Onboarding
+    \inqmlmodule org.kde.kirigamiaddons.onboarding
+    \since 1.13
+    \brief Attached type and controller for onboarding walkthroughs.
+
+    Onboarding is used as an attached type on a source item and on items that
+    should appear in an onboarding walkthrough. Calling \c start() starts the
+    shared walkthrough controller for the default group.
+
+    \qml
+    Item {
+        Onboarding.isSource: true
+
+        Button {
+            text: i18nc("@action:button", "Start")
+            Onboarding.texts: [i18nc("@info", "This button starts the process.")]
+            onClicked: Onboarding.start()
+        }
+    }
+    \endqml
+*/
+
+/*!
+    \qmlmethod void Onboarding::start()
+
+    Starts the default onboarding group.
+*/
+
+/*!
+    \qmlmethod void Onboarding::start(string group)
+
+    Starts the onboarding walkthrough for \a group. The group must be declared
+    by exactly one source item.
+*/
+
+/*!
+    \qmlmethod void Onboarding::stop()
+
+    Stops the onboarding walkthrough.
+*/
+
+/*!
+    \qmlmethod void Onboarding::next()
+
+    Advances to the next enabled onboarding item.
+*/
+
+/*!
+    \qmlmethod void Onboarding::previous()
+
+    Returns to the previous enabled onboarding item.
+*/
+
+/*!
+    \qmlproperty bool Onboarding::active
+
+    Whether an onboarding walkthrough is currently active.
+*/
+
+/*!
+    \qmlproperty Item Onboarding::source
+
+    The source item of the currently active onboarding walkthrough.
+*/
+
+/*!
+    \qmlproperty int Onboarding::currentIndex
+
+    The index of the current item in declaration order.
+*/
+
+/*!
+    \qmlproperty Onboarding Onboarding::currentItem
+
+    The current item's onboarding attached object.
+*/
+
+/*!
+    \qmlproperty string Onboarding::currentText
+
+    The resolved tooltip text for the current onboarding item and active group.
+*/
+
+/*!
+    \qmlproperty Component Onboarding::additionalDataComponent
+
+    Optional component inserted into the default onboarding tooltip.
+*/
+
+/*!
+    \qmlsignal Onboarding::aboutToStart()
+
+    Emitted before an onboarding walkthrough starts.
+*/
+
+/*!
+    \qmlsignal Onboarding::finished()
+
+    Emitted after an onboarding walkthrough stops.
+*/
+
+/*!
+    \qmlattachedproperty bool Onboarding::isSource
+
+    Whether this item is a source area for onboarding. Source items own the
+    blur effect, overlay, and source layer while onboarding is active.
+*/
+
+/*!
+    \qmlattachedproperty list<string> Onboarding::sourceGroups
+
+    Onboarding groups owned by this source item. The default source group is
+    the empty string.
+*/
+
+/*!
+    \qmlattachedproperty list<string> Onboarding::groups
+
+    Onboarding groups this step belongs to. The default step group is the empty
+    string.
+*/
+
+/*!
+    \qmlattachedproperty list<string> Onboarding::texts
+
+    Texts shown in the onboarding tooltip for this item. Each text corresponds
+    to the group at the same index in \c groups.
+*/
+
+/*!
+    \qmlattachedproperty var Onboarding::additionalData
+
+    Optional metadata map associated with this item. Applications can read it
+    from \c Onboarding.currentItem.additionalData inside
+    \l Onboarding::additionalDataComponent.
+*/
+
+/*!
+    \qmlattachedproperty bool Onboarding::enabled
+
+    Whether this item participates in the onboarding walkthrough.
+*/
+
+/*!
+    \qmlattachedsignal Onboarding::aboutToShow()
+
+    Emitted before this item becomes the current onboarding target.
+*/
+
+/*!
+    \qmlattachedsignal Onboarding::hide()
+
+    Emitted when this item stops being the current onboarding target.
+*/
+
+/*!
+    \example OnboardingTutorial
+    \title Onboarding Tutorial
+    \examplecategory {Kirigami Addons}
+    \examplecategory {User Interface Components}
+    \meta tags {kirigami,qml,quick,quickcontrols,onboarding}
+
+    \brief Demonstrates how onboarding overlays can highlight controls on demand.
+
+    The example opens a Kirigami window and marks target controls with
+    \l Onboarding attached properties. The overlay draws a highlight around the
+    current focus area, and the tooltip text is driven by the current target's
+    attached \c texts property.
+
+    \section1 Workflow
+
+    \list
+        \li Mark a source item with \c Onboarding.isSource.
+        \li Add grouped \l Onboarding attached properties directly to controls inside Page1.qml, Page2.qml, and Page3.qml.
+        \li Use \l Onboarding::start to begin walking the target items in a group.
+        \li Use \c Onboarding.onAboutToShow handlers to keep the swipe view synchronized with the tutorial progression.
+        \li Supply \l Onboarding::additionalDataComponent so that the tooltip can show context-sensitive media from each step's \c Onboarding.additionalData.
+    \endlist
+
+    \section1 Key Snippets
+
+    Start the onboarding flow from a keyboard shortcut:
+
+    \snippet OnboardingTutorial/Main.qml 0
+
+    Add attached properties with media content displayed in the tooltip:
+
+    \snippet OnboardingTutorial/Main.qml 1
+
+    Run a per-step callback before focusing an item:
+
+    \snippet OnboardingTutorial/Main.qml 2
+
+    Bind \l Onboarding::additionalDataComponent to dynamic media from the current item:
+
+    \snippet OnboardingTutorial/Main.qml 3
+
+    Keep the tutorial pages instantiated so targets remain available during onboarding:
+
+    \snippet OnboardingTutorial/Main.qml 5
+
+    \section1 Summary
+
+    This example shows how to:
+
+    \list
+        \li Combine attached onboarding metadata with standard Qt Quick controls to drive an onboarding flow.
+        \li Highlight candidate controls while blurring the surrounding source area.
+        \li Extend the visible tooltip content with \l Onboarding::additionalDataComponent.
+    \endlist
+*/

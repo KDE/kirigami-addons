@@ -48,6 +48,7 @@ endmacro()
 
 kirigami_add_tests(
     tst_avatar.qml
+    tst_onboarding.qml
     tst_sounds.qml
     tst_album_qmllistmodel.qml
     tst_album_abstractlistmodel.qml

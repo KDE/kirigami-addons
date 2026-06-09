@@ -3,3 +3,4 @@
 
 add_subdirectory(FormCardTutorial)
 add_subdirectory(TableViewTutorial)
+add_subdirectory(OnboardingTutorial)

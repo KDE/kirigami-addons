@@ -28,6 +28,7 @@
     ecm_find_qmlmodule(org.kde.kirigamiaddons.sounds REQUIRED)
     ecm_find_qmlmodule(org.kde.kirigamiaddons.statefulapp REQUIRED)
     ecm_find_qmlmodule(org.kde.kirigamiaddons.statefulapp.labs REQUIRED)
+    ecm_find_qmlmodule(org.kde.kirigamiaddons.onboarding REQUIRED)
     \endcode
 
     To import Kirigami Addons into your project using CMake:

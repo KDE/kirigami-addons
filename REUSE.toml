@@ -22,6 +22,12 @@ SPDX-FileCopyrightText = "2023 by Thiago Masato Costa Sueto <thiago.sueto@kde.or
 SPDX-License-Identifier = "LGPL-2.1-or-later"
 
 [[annotations]]
+path = "examples/OnboardingTutorial/onboarding-video.webp"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Sandro Andrade <sandroandrade@kde.org>"
+SPDX-License-Identifier = "LGPL-2.0-or-later"
+
+[[annotations]]
 path = ["templates/kirigamiaddons6/kirigami-app.png", "templates/kirigamiaddons6/kirigami.kdevtemplate", "templates/kirigamiaddons6/android/res/drawable/**", "templates/librarymanager6/kirigami-app.png", "templates/librarymanager6/librarymanager6.kdevtemplate", "templates/librarymanager6/android/res/drawable/**"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "none"
