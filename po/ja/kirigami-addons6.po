@@ -1,12 +1,13 @@
 # SPDX-FileCopyrightText: 2024, 2025 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
+# SPDX-FileCopyrightText: 2026 Mint <5602mint@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-03 00:54+0000\n"
-"PO-Revision-Date: 2025-02-23 13:30+0900\n"
-"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
-"Language-Team: Japanese <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2026-06-07 12:10+0900\n"
+"Last-Translator: Mint <5602mint@gmail.com>\n"
+"Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14,7 +15,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -215,7 +216,7 @@ msgstr "KDE Frameworks"
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
-msgstr "KDE Community によって作成された Qt を拡張するライブラリ集です。"
+msgstr "KDE コミュニティによって作成された Qt を拡張するライブラリ集です。"
 
 #: formcard/aboutcomponent.cpp:36
 #, kde-format
@@ -237,31 +238,31 @@ msgstr "%1 を使用中 (%2 でビルド)"
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Unknown/Default"
-msgstr ""
+msgstr "不明/デフォルト"
 
 #: formcard/aboutcomponent.cpp:45
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: formcard/aboutcomponent.cpp:48
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Snap"
-msgstr ""
+msgstr "Snap"
 
 #: formcard/aboutcomponent.cpp:51
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "AppImage"
-msgstr ""
+msgstr "AppImage"
 
 #: formcard/aboutcomponent.cpp:53
 #, kde-format
 msgctxt "@info"
 msgid "Distribution method."
-msgstr ""
+msgstr "アプリケーションの配布方法です。"
 
 #: formcard/aboutcomponent.cpp:56
 #, kde-format
@@ -285,7 +286,7 @@ msgstr "KDE"
 msgid "Be Free!"
 msgstr "Be Free!"
 
-# /trunk/l10n-support/ja/summit/messages/kxmlgui/kxmlgui6.po の Revision 1676811 から一部転載
+# kxmlgui/kxmlgui6.po から抜粋
 #: formcard/AboutKDEPage.qml:68
 #, kde-format
 msgid ""
@@ -301,13 +302,13 @@ msgid ""
 msgstr ""
 "KDE はソフトウェアエンジニア、アーティスト、作家、翻訳者などのフリーソフト"
 "ウェアの開発に協力する人々による世界的なコミュニティです。KDE は Plasma デス"
-"クトップ環境や、数百ものアプリケーション、それらをサポートするたくさんのライ"
-"ブラリを作り出しています。\n"
+"クトップ環境や多くのアプリケーション、そしてそれを支えるたくさんのライブラリ"
+"を作り出しています。\n"
 "\n"
-"KDE は協力事業です: 一つの企業が方向性や製品をコントロールすることはありませ"
-"ん。代わりに、私達は世界最高級のフリーソフトウェアを作成するという共通のゴー"
-"ルを達成するために共に働いています。あなたを含む誰もが KDE に参加して貢献する"
-"ことが歓迎されています。"
+"KDE はみなさんによる共同プロジェクトです。単一の企業が方向性や製品をコント"
+"ロールすることはありません。代わりに、KDE のコミュニティは世界最高級のフリー"
+"ソフトウェアを作成するという共通のゴールを達成するために共に働いています。あ"
+"なたを含め誰でも、自由に KDE に参加･貢献することができます。"
 
 #: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:239
 #, kde-format
@@ -319,7 +320,7 @@ msgstr "ホームページ"
 msgid "Report bugs"
 msgstr "バグを報告"
 
-# /trunk/l10n-support/ja/summit/messages/kxmlgui/kxmlgui6.po の Revision 1676811 から一部転載
+# kxmlgui/kxmlgui6.po から抜粋
 #: formcard/AboutKDEPage.qml:88
 #, kde-format
 msgid ""
@@ -334,17 +335,16 @@ msgid ""
 "tracking system to register your wish. Make sure you use the severity called "
 "\"Wishlist\"."
 msgstr ""
-"ソフトウェアは常に進化しています。KDE チームも日々改良に努めていますが、それ"
-"にはユーザであるあなたの協力が必要です。何かがうまく動作しなかったり、改善で"
-"きる個所に気が付かれたりしたときには、ぜひ私たちに教えてください。\n"
+"ソフトウェアの改善に終わりはありません。KDE チームも日々改良に努めています"
+"が、それにはユーザーであるあなたの協力が必要です。不具合や改善点を見つけた場"
+"合は、ぜひ教えてください。\n"
 "\n"
-"KDE にはバグ追跡システムがあります。下のボタンを押してバグを報告できます。も"
-"しくは、「〜について」ページからこのアプリケーションに特有のバグを報告できま"
-"す。\n"
+"KDE にはバグ追跡システムがあります。下のボタンを押してバグを報告できます。ま"
+"たは、アプリの「〇〇について」の画面からこのアプリのバグを報告できます。\n"
 "\n"
-"改良のためのいいアイデアをお持ちの場合も、バグ追跡システムを使ってあなたの要"
-"望をどしどしお寄せください。この場合、重要度には \"Wishlist\" (要望) を指定し"
-"てください。"
+"改良のためのいいアイデアをお持ちの場合も、バグ追跡システムを使ってご要望をど"
+"しどしお寄せください。このとき、重要度には \"Wishlist\" (要望) を指定してくだ"
+"さい。"
 
 #: formcard/AboutKDEPage.qml:110
 #, kde-format
@@ -356,7 +356,7 @@ msgstr "バグを報告"
 msgid "Join us"
 msgstr "KDE に参加"
 
-# /trunk/l10n-support/ja/summit/messages/kxmlgui/kxmlgui6.po の Revision 1676811 から一部転載
+# kxmlgui/kxmlgui6.po から抜粋
 #: formcard/AboutKDEPage.qml:121
 #, kde-format
 msgid ""
@@ -364,10 +364,10 @@ msgid ""
 "You can join the language teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 msgstr ""
-"KDE チームに加わるには、必ずしもソフトウェア開発者である必要はありません。プ"
-"ログラムのインターフェースを翻訳する各言語の翻訳チームに参加したり、グラ"
-"フィック、テーマ、サウンドあるいはドキュメントの改善で貢献していただくことも"
-"できます。さあ、あとはあなた次第です!"
+"KDE チームに加わる際に、ソフトウェア開発者である必要はありません。プログラム"
+"の UI を翻訳する各言語の翻訳チームに参加したり、グラフィック、テーマ、サウン"
+"ドやドキュメントの改善で貢献していただくこともできます。さあ、あとはあなた次"
+"第です！"
 
 #: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:267
 #, kde-format
@@ -377,14 +377,14 @@ msgstr "参加する"
 #: formcard/AboutKDEPage.qml:139
 #, kde-format
 msgid "Developer Documentation"
-msgstr "開発者向けの文書"
+msgstr "開発者向けドキュメント"
 
 #: formcard/AboutKDEPage.qml:145
 #, kde-format
 msgid "Support us"
 msgstr "KDE を支援"
 
-# /trunk/l10n-support/ja/summit/messages/kxmlgui/kxmlgui6.po の Revision 1676811 から一部転載
+# kxmlgui/kxmlgui6.po から抜粋
 #: formcard/AboutKDEPage.qml:150
 #, kde-format
 msgid ""
@@ -405,24 +405,24 @@ msgid ""
 "\n"
 "Thank you very much in advance for your support."
 msgstr ""
-"KDE は無償で配布されていますが、開発には費用がかかります。\n"
+"KDE のソフトウェアは無償で配布されていますが、開発には費用がかかります。\n"
 "\n"
-"KDE コミュニティはドイツの Tuebingen で法的に創設された KDE e.V. という非営利"
-"組織を形成しています。KDE e.V. は KDE プロジェクトの法的、経済的なことを扱っ"
-"ています。\n"
+"KDE コミュニティはドイツの Tuebingen で KDE e.V. という非営利組織を法的に設立"
+"しています。KDE e.V. は法的･財務的な仕事を、KDE プロジェクトを代表して担って"
+"います。\n"
 "\n"
-"KDE チームは経済的な援助も必要としています。お金のほとんどは、メンバーその他"
-"の人々が KDE に貢献するために支払った費用の払い戻しに充てられます。\n"
+"KDE チームは経済的な援助も必要としています。いただいた資金は、メンバーやその"
+"他の人々が KDE に貢献する際にかかった費用の払い戻しをはじめ、法的支援、カン"
+"ファレンス、ミーティングの開催にも充てられます。\n"
 "\n"
-"寄付のご検討をどうぞよろしくお願いします。\n"
+"KDE の活動を維持･発展させるため、ぜひ寄付による支援をご検討ください。\n"
 "\n"
-"将来のあなたのサポートに感謝します。"
+"皆さまのご協力を、よろしくお願いいたします。"
 
 #: formcard/AboutKDEPage.qml:163
-#, fuzzy, kde-format
-#| msgid "KDE e.V"
+#, kde-format
 msgid "KDE e.V."
-msgstr "KDE e.V"
+msgstr "KDE e.V."
 
 #: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:253
 #, kde-format
