@@ -20,6 +20,7 @@
 #include <KIconTheme>
 #include <QApplication>
 #include <QStyleFactory>
+#include <QStyle>
 #endif
 
 #ifdef Q_OS_WINDOWS
@@ -57,8 +58,10 @@ void apply(QGuiApplication *app)
     if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE") && !handledByQPT) {
         QQuickStyle::setStyle(u"org.kde.desktop"_s);
 #ifndef Q_OS_ANDROID
-        // TODO remove once we no longer use the org.kde.desktop style
-        qApp->setStyle(QStyleFactory::create(QStringLiteral("Breeze")));
+        // If we are using Union, keep it
+        if (qApp->style() && qApp->style()->name().contains(u"union"_s, Qt::CaseInsensitive)) {
+            qApp->setStyle(QStyleFactory::create(QStringLiteral("Breeze")));
+        }
 #endif
     }
     KIconTheme::initTheme();
