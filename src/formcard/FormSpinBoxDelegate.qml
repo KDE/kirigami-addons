@@ -93,6 +93,30 @@ AbstractFormDelegate {
     property alias displayText: spinbox.displayText
 
     /*!
+       \qmlproperty bool inputMethodComposing
+       \brief This property holds the \l {SpinBox::inputMethodComposing} {inputMethodComposing} of the internal spinbox.
+     */
+    property alias inputMethodComposing: spinbox.inputMethodComposing
+
+    /*!
+       \qmlproperty enumeration inputMethodHints
+       \brief This property holds the \l {SpinBox::inputMethodHints} {inputMethodHints} of the internal spinbox.
+     */
+    property alias inputMethodHints: spinbox.inputMethodHints
+
+    /*!
+       \qmlproperty bool wrap
+       \brief This property holds the \l {SpinBox::wrap} {wrap} of the internal spinbox.
+     */
+    property alias wrap: spinbox.wrap
+
+    /*!
+       \qmlproperty bool fieldActiveFocus
+       \brief The \l {Item::activeFocus} {activeFocus} state of the internal spinbox.
+    */
+    property alias fieldActiveFocus: spinbox.activeFocus
+
+    /*!
        \qmlproperty Validator validator
        \brief This property holds the \l {SpinBox::validator} {validator} of the internal spinbox.
      */
@@ -132,6 +156,15 @@ AbstractFormDelegate {
     property var trailing: null
 
     /*!
+       \brief This signal is emitted when the spin box value has been interactively modified by the user.
+
+       By either touch, mouse, wheel, or keys. In the case of interaction via keyboard, the signal is only emitted
+       when the text has been accepted; meaning when the enter or return keys are pressed, or the input field loses
+       focus.
+     */
+    signal valueModified()
+
+    /*!
        Increases the value by stepSize, or 1 if stepSize is not defined.
      */
     function increase() {
@@ -147,6 +180,12 @@ AbstractFormDelegate {
 
     focusPolicy: Kirigami.Settings.isMobile ? Qt.StrongFocus : Qt.NoFocus
     Accessible.description: description
+
+    onActiveFocusChanged: { // propagate focus to the spinbox
+        if (activeFocus) {
+            spinbox.forceActiveFocus();
+        }
+    }
 
     onClicked: spinbox.forceActiveFocus()
     background: null
@@ -239,6 +278,7 @@ AbstractFormDelegate {
                 Layout.fillWidth: true
                 visible: !Kirigami.Settings.isMobile
                 locale: root.locale
+                onValueModified: root.valueModified()
             }
 
             LayoutItemProxy {
