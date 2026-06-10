@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-03 00:54+0000\n"
+"POT-Creation-Date: 2026-06-10 00:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Irish Gaelic <kde-i18n-doc@kde.org>\n"
@@ -141,6 +141,7 @@ msgid "Volume"
 msgstr ""
 
 #: dateandtime/DatePopup.qml:87 dateandtime/TimePopup.qml:46
+#: onboarding/private/OnboardingOverlay.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
@@ -554,6 +555,36 @@ msgstr ""
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
+msgstr ""
+
+#: onboarding/private/OnboardingOverlay.qml:172
+#, kde-format
+msgctxt "@action:button"
+msgid "Previous"
+msgstr ""
+
+#: onboarding/private/OnboardingOverlay.qml:173
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Previous"
+msgstr ""
+
+#: onboarding/private/OnboardingOverlay.qml:190
+#, kde-format
+msgctxt "@action:button"
+msgid "Next"
+msgstr ""
+
+#: onboarding/private/OnboardingOverlay.qml:191
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Next"
+msgstr ""
+
+#: onboarding/private/OnboardingOverlay.qml:204
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cancel"
 msgstr ""
 
 #: settings/CategorizedSettings.qml:46 settings/ConfigurationView.qml:83

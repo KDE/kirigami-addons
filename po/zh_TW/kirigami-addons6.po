@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-03 00:54+0000\n"
+"POT-Creation-Date: 2026-06-10 00:44+0000\n"
 "PO-Revision-Date: 2025-08-16 14:44+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -143,6 +143,7 @@ msgid "Volume"
 msgstr "音量"
 
 #: dateandtime/DatePopup.qml:87 dateandtime/TimePopup.qml:46
+#: onboarding/private/OnboardingOverlay.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
@@ -583,6 +584,46 @@ msgstr "URL 已複製到剪貼簿。"
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
 msgstr "%1/%2"
+
+#: onboarding/private/OnboardingOverlay.qml:172
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Go Previous"
+msgctxt "@action:button"
+msgid "Previous"
+msgstr "前一個"
+
+#: onboarding/private/OnboardingOverlay.qml:173
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Go Previous"
+msgctxt "@info:tooltip"
+msgid "Previous"
+msgstr "前一個"
+
+#: onboarding/private/OnboardingOverlay.qml:190
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Go Next"
+msgctxt "@action:button"
+msgid "Next"
+msgstr "下一個"
+
+#: onboarding/private/OnboardingOverlay.qml:191
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Go Next"
+msgctxt "@info:tooltip"
+msgid "Next"
+msgstr "下一個"
+
+#: onboarding/private/OnboardingOverlay.qml:204
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Cancel"
+msgctxt "@info:tooltip"
+msgid "Cancel"
+msgstr "取消"
 
 #: settings/CategorizedSettings.qml:46 settings/ConfigurationView.qml:83
 #, kde-format

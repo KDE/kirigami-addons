@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-03 00:54+0000\n"
+"POT-Creation-Date: 2026-06-10 00:44+0000\n"
 "PO-Revision-Date: 2024-11-16 12:53+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -141,6 +141,7 @@ msgid "Volume"
 msgstr "Volume"
 
 #: dateandtime/DatePopup.qml:87 dateandtime/TimePopup.qml:46
+#: onboarding/private/OnboardingOverlay.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
@@ -602,6 +603,46 @@ msgstr "System information copied to clipboard."
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
 msgstr "%1/%2"
+
+#: onboarding/private/OnboardingOverlay.qml:172
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Go Previous"
+msgctxt "@action:button"
+msgid "Previous"
+msgstr "Go Previous"
+
+#: onboarding/private/OnboardingOverlay.qml:173
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Go Previous"
+msgctxt "@info:tooltip"
+msgid "Previous"
+msgstr "Go Previous"
+
+#: onboarding/private/OnboardingOverlay.qml:190
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Go Next"
+msgctxt "@action:button"
+msgid "Next"
+msgstr "Go Next"
+
+#: onboarding/private/OnboardingOverlay.qml:191
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Go Next"
+msgctxt "@info:tooltip"
+msgid "Next"
+msgstr "Go Next"
+
+#: onboarding/private/OnboardingOverlay.qml:204
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Cancel"
+msgctxt "@info:tooltip"
+msgid "Cancel"
+msgstr "Cancel"
 
 #: settings/CategorizedSettings.qml:46 settings/ConfigurationView.qml:83
 #, kde-format

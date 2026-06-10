@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-03 00:54+0000\n"
+"POT-Creation-Date: 2026-06-10 00:44+0000\n"
 "PO-Revision-Date: 2025-07-27 16:42+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -141,6 +141,7 @@ msgid "Volume"
 msgstr "Гучність"
 
 #: dateandtime/DatePopup.qml:87 dateandtime/TimePopup.qml:46
+#: onboarding/private/OnboardingOverlay.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
@@ -600,6 +601,46 @@ msgstr "Адресу скопійовано до буфера даних."
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
 msgstr "%1/%2"
+
+#: onboarding/private/OnboardingOverlay.qml:172
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Go Previous"
+msgctxt "@action:button"
+msgid "Previous"
+msgstr "Перейти до попереднього"
+
+#: onboarding/private/OnboardingOverlay.qml:173
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Go Previous"
+msgctxt "@info:tooltip"
+msgid "Previous"
+msgstr "Перейти до попереднього"
+
+#: onboarding/private/OnboardingOverlay.qml:190
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Go Next"
+msgctxt "@action:button"
+msgid "Next"
+msgstr "Перейти до наступного"
+
+#: onboarding/private/OnboardingOverlay.qml:191
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Go Next"
+msgctxt "@info:tooltip"
+msgid "Next"
+msgstr "Перейти до наступного"
+
+#: onboarding/private/OnboardingOverlay.qml:204
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Cancel"
+msgctxt "@info:tooltip"
+msgid "Cancel"
+msgstr "Скасувати"
 
 #: settings/CategorizedSettings.qml:46 settings/ConfigurationView.qml:83
 #, kde-format
