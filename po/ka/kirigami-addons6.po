@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-10 00:44+0000\n"
-"PO-Revision-Date: 2025-07-27 20:04+0200\n"
+"PO-Revision-Date: 2026-06-10 05:52+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.9\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -597,41 +597,31 @@ msgid "%1/%2"
 msgstr "%1/%2"
 
 #: onboarding/private/OnboardingOverlay.qml:172
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Go Previous"
+#, kde-format
 msgctxt "@action:button"
 msgid "Previous"
-msgstr "წინაზე გადასვლა"
+msgstr "წინა"
 
 #: onboarding/private/OnboardingOverlay.qml:173
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Go Previous"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Previous"
-msgstr "წინაზე გადასვლა"
+msgstr "წინა"
 
 #: onboarding/private/OnboardingOverlay.qml:190
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Go Next"
+#, kde-format
 msgctxt "@action:button"
 msgid "Next"
-msgstr "შემდეგზე გადასვლა"
+msgstr "შემდეგი"
 
 #: onboarding/private/OnboardingOverlay.qml:191
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Go Next"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Next"
-msgstr "შემდეგზე გადასვლა"
+msgstr "შემდეგი"
 
 #: onboarding/private/OnboardingOverlay.qml:204
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel"
 msgstr "გაუქმება"

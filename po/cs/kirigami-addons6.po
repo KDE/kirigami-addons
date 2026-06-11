@@ -593,12 +593,10 @@ msgid "%1/%2"
 msgstr "%1/%2"
 
 #: onboarding/private/OnboardingOverlay.qml:172
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Go Previous"
+#, kde-format
 msgctxt "@action:button"
 msgid "Previous"
-msgstr "Přejít na předchozí"
+msgstr "Předchozí"
 
 #: onboarding/private/OnboardingOverlay.qml:173
 #, fuzzy, kde-format
@@ -609,12 +607,10 @@ msgid "Previous"
 msgstr "Přejít na předchozí"
 
 #: onboarding/private/OnboardingOverlay.qml:190
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Go Next"
+#, kde-format
 msgctxt "@action:button"
 msgid "Next"
-msgstr "Přejít na následující"
+msgstr "Další"
 
 #: onboarding/private/OnboardingOverlay.qml:191
 #, fuzzy, kde-format
@@ -625,9 +621,7 @@ msgid "Next"
 msgstr "Přejít na následující"
 
 #: onboarding/private/OnboardingOverlay.qml:204
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel"
 msgstr "Zrušit"
