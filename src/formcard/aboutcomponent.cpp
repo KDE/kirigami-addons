@@ -5,7 +5,9 @@
 
 #include <KCoreAddons>
 #include <KLocalizedString>
+#if defined(Q_OS_LINUX) && !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
 #include <KSandbox>
+#endif
 #include <QGuiApplication>
 #include <QClipboard>
 
@@ -39,7 +41,7 @@ QList<KAboutComponent> AboutComponent::components() const
                                           QStringLiteral("https://www.qt.io/"),
                                           KAboutLicense::LGPL_V3));
 
-#if defined(Q_OS_LINUX) && !defined(Q_OS_ANDROID)
+#if defined(Q_OS_LINUX) && !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
     QString packageText = i18nc("Linux packaging format", "Unknown/Default");
     if (KSandbox::isFlatpak()) {
         packageText = i18nc("Linux packaging format", "Flatpak");

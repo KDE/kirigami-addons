@@ -15,7 +15,7 @@
 #include <QSurfaceFormat>
 #include <kcoreaddons_version.h>
 
-#ifndef Q_OS_ANDROID
+#if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
 #include <KCrash>
 #include <KIconTheme>
 #include <QApplication>
@@ -45,7 +45,7 @@ void apply(QGuiApplication *app)
     // Needed when not running with the Plasma QPlatformTheme to ensure colours get initialised
     KColorSchemeManager::instance();
 
-#ifdef Q_OS_ANDROID
+#if defined(Q_OS_ANDROID) || defined(Q_OS_IOS)
     // We don't want the QtWidgets dependency on Android, so we use qqc2-breeze-style there.
     // Icons ought to be included with the app on CMake
     QQuickStyle::setStyle(u"org.kde.breeze"_s);
@@ -70,12 +70,14 @@ void apply(QGuiApplication *app)
     font.setPointSize(10);
     app->setFont(font);
 #endif
+#if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
 #if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 19, 0)
     // Embrace KCrash. If an application misbehaves, we should know as much as possible about it.
     // Needs initialising KAboutData::setApplicationData
     QObject::connect(KAboutDataListener::instance(), &KAboutDataListener::applicationDataChanged, app, [] {
         KCrash::initialize();
     });
+#endif
 #endif
 #endif
 }

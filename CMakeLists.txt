@@ -38,9 +38,9 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS Kirigami I18n Config Core
 if (BUILD_TESTING)
     find_package(Qt6QuickTest ${QT_REQUIRED_VERSION} CONFIG QUIET)
 endif()
-if (ANDROID)
+if(ANDROID)
     find_package(Gradle REQUIRED)
-else()
+elseif(NOT IOS)
     find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS Crash IconThemes)
 endif()
 

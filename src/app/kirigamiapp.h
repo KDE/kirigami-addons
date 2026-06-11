@@ -8,7 +8,7 @@
 
 #include <QGuiApplication>
 
-#ifndef Q_OS_ANDROID
+#if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
 #include <QApplication>
 #endif
 
@@ -74,7 +74,7 @@ public:
      * qqc2-desktop-style which depends on QStyle. Except for on Android where
      * we normally run with qqc2-breeze-style by default, which is QWidgets-free.
      */
-#ifdef Q_OS_ANDROID
+#if defined(Q_OS_ANDROID) || defined(Q_OS_IOS)
     using App = QGuiApplication;
 #else
     using App = QApplication;
