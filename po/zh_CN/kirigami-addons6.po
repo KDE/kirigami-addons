@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-10 00:44+0000\n"
+"POT-Creation-Date: 2026-06-12 00:42+0000\n"
 "PO-Revision-Date: 2024-04-23 19:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -201,70 +201,70 @@ msgstr ":"
 msgid "Minutes"
 msgstr "分钟"
 
-#: formcard/aboutcomponent.cpp:26
+#: formcard/aboutcomponent.cpp:28
 #, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: formcard/aboutcomponent.cpp:30
+#: formcard/aboutcomponent.cpp:32
 #, kde-format
 msgid "KDE Frameworks"
 msgstr "KDE 程序框架"
 
-#: formcard/aboutcomponent.cpp:31
+#: formcard/aboutcomponent.cpp:33
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr "KDE 社区打造的 Qt 功能扩展程序库集合。"
 
-#: formcard/aboutcomponent.cpp:36
+#: formcard/aboutcomponent.cpp:38
 #, kde-format
 msgid "Qt"
 msgstr "Qt"
 
-#: formcard/aboutcomponent.cpp:37
+#: formcard/aboutcomponent.cpp:39
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
 msgstr "跨平台应用程序开发框架。"
 
-#: formcard/aboutcomponent.cpp:38
+#: formcard/aboutcomponent.cpp:40
 #, kde-format
 msgid "Using %1 and built against %2"
 msgstr "使用 %1，用 %2 构建。"
 
-#: formcard/aboutcomponent.cpp:43
+#: formcard/aboutcomponent.cpp:45
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Unknown/Default"
 msgstr "未知/默认"
 
-#: formcard/aboutcomponent.cpp:45
+#: formcard/aboutcomponent.cpp:47
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Flatpak"
 msgstr "Flatpak"
 
-#: formcard/aboutcomponent.cpp:48
+#: formcard/aboutcomponent.cpp:50
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Snap"
 msgstr "Snap"
 
-#: formcard/aboutcomponent.cpp:51
+#: formcard/aboutcomponent.cpp:53
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "AppImage"
 msgstr "AppImage"
 
-#: formcard/aboutcomponent.cpp:53
+#: formcard/aboutcomponent.cpp:55
 #, kde-format
 msgctxt "@info"
 msgid "Distribution method."
 msgstr "分发方式。"
 
-#: formcard/aboutcomponent.cpp:56
+#: formcard/aboutcomponent.cpp:58
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
@@ -591,31 +591,31 @@ msgstr "%1/%2"
 #, kde-format
 msgctxt "@action:button"
 msgid "Previous"
-msgstr ""
+msgstr "上一步"
 
 #: onboarding/private/OnboardingOverlay.qml:173
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Previous"
-msgstr ""
+msgstr "上一步"
 
 #: onboarding/private/OnboardingOverlay.qml:190
 #, kde-format
 msgctxt "@action:button"
 msgid "Next"
-msgstr ""
+msgstr "下一步"
 
 #: onboarding/private/OnboardingOverlay.qml:191
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Next"
-msgstr ""
+msgstr "下一步"
 
 #: onboarding/private/OnboardingOverlay.qml:204
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: settings/CategorizedSettings.qml:46 settings/ConfigurationView.qml:83
 #, kde-format
