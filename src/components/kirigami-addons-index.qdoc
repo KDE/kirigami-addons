@@ -51,6 +51,13 @@
         \li \l{Kirigami Addons Sounds QML Types}
         \li \l{Kirigami Addons StatefulApplication QML Types}
         \li \l{Kirigami Addons StatefulApplication (Labs) QML Types}
+        \li \l{Kirigami Addons Onboarding QML Types}
+    \endlist
+
+    \section1 Examples
+
+    \list
+        \li \l{Onboarding Tutorial}
     \endlist
 
     \section1 Licenses

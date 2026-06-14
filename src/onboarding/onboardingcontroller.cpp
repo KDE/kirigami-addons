@@ -97,6 +97,34 @@ void OnboardingController::setPadding(qreal padding)
     updateGeometry();
 }
 
+qreal OnboardingController::blur() const
+{
+    return m_blur;
+}
+
+void OnboardingController::setBlur(qreal blur)
+{
+    if (qFuzzyCompare(m_blur, blur)) {
+        return;
+    }
+    m_blur = blur;
+    Q_EMIT blurChanged();
+}
+
+int OnboardingController::blurMax() const
+{
+    return m_blurMax;
+}
+
+void OnboardingController::setBlurMax(int blurMax)
+{
+    if (m_blurMax == blurMax) {
+        return;
+    }
+    m_blurMax = blurMax;
+    Q_EMIT blurMaxChanged();
+}
+
 bool OnboardingController::hasNextItem() const
 {
     return nextEnabledItemIndex(1) != -1;
@@ -320,7 +348,7 @@ void OnboardingController::setCurrentItem(Onboarding *attached, bool emitHide)
         for (auto *item = attached->target(); item; item = item->parentItem()) {
             m_geometryConnections.append(connect(item, &QQuickItem::xChanged, this, &OnboardingController::updateGeometry));
             m_geometryConnections.append(connect(item, &QQuickItem::yChanged, this, &OnboardingController::updateGeometry));
-            if (item == attached->target()) {
+            if (item == attached->target() || item == m_source) {
                 m_geometryConnections.append(connect(item, &QQuickItem::widthChanged, this, &OnboardingController::updateGeometry));
                 m_geometryConnections.append(connect(item, &QQuickItem::heightChanged, this, &OnboardingController::updateGeometry));
             }
@@ -341,11 +369,19 @@ void OnboardingController::updateGeometry()
     qreal newHeight = 0;
 
     if (m_currentItem && m_currentItem->target() && m_source) {
-        const QPointF mappedPosition = m_currentItem->target()->mapToItem(m_source, QPointF(0, 0));
-        newX = mappedPosition.x() - m_padding;
-        newY = mappedPosition.y() - m_padding;
-        newWidth = m_currentItem->target()->width() + 2 * m_padding;
-        newHeight = m_currentItem->target()->height() + 2 * m_padding;
+        QQuickItem *target = m_currentItem->target();
+        const QPointF mappedPosition = target->mapToItem(m_source, QPointF(0, 0));
+        const qreal availableHorizontalPadding =
+            std::max<qreal>(0, std::min(mappedPosition.x(), m_source->width() - mappedPosition.x() - target->width()));
+        const qreal availableVerticalPadding =
+            std::max<qreal>(0, std::min(mappedPosition.y(), m_source->height() - mappedPosition.y() - target->height()));
+        const qreal horizontalPadding = std::clamp(m_padding, qreal(0), availableHorizontalPadding);
+        const qreal verticalPadding = std::clamp(m_padding, qreal(0), availableVerticalPadding);
+
+        newX = mappedPosition.x() - horizontalPadding;
+        newY = mappedPosition.y() - verticalPadding;
+        newWidth = target->width() + 2 * horizontalPadding;
+        newHeight = target->height() + 2 * verticalPadding;
     }
 
     const bool changed = !qFuzzyCompare(m_x, newX) || !qFuzzyCompare(m_y, newY) || !qFuzzyCompare(m_width, newWidth) || !qFuzzyCompare(m_height, newHeight);

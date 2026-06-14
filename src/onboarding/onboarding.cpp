@@ -25,6 +25,8 @@ Onboarding::Onboarding(QObject *target)
     connect(controller, &OnboardingController::additionalDataComponentChanged, this, &Onboarding::additionalDataComponentChanged);
     connect(controller, &OnboardingController::geometryChanged, this, &Onboarding::geometryChanged);
     connect(controller, &OnboardingController::paddingChanged, this, &Onboarding::paddingChanged);
+    connect(controller, &OnboardingController::blurChanged, this, &Onboarding::blurChanged);
+    connect(controller, &OnboardingController::blurMaxChanged, this, &Onboarding::blurMaxChanged);
     connect(controller, &OnboardingController::navigationChanged, this, &Onboarding::navigationChanged);
     connect(controller, &OnboardingController::aboutToStart, this, &Onboarding::aboutToStart);
     connect(controller, &OnboardingController::finished, this, &Onboarding::finished);
@@ -224,6 +226,26 @@ qreal Onboarding::padding() const
 void Onboarding::setPadding(qreal padding)
 {
     OnboardingController::self()->setPadding(padding);
+}
+
+qreal Onboarding::blur() const
+{
+    return OnboardingController::self()->blur();
+}
+
+void Onboarding::setBlur(qreal blur)
+{
+    OnboardingController::self()->setBlur(blur);
+}
+
+int Onboarding::blurMax() const
+{
+    return OnboardingController::self()->blurMax();
+}
+
+void Onboarding::setBlurMax(int blurMax)
+{
+    OnboardingController::self()->setBlurMax(blurMax);
 }
 
 bool Onboarding::hasNextItem() const

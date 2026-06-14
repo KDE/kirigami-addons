@@ -35,6 +35,12 @@ public:
     qreal padding() const;
     void setPadding(qreal padding);
 
+    qreal blur() const;
+    void setBlur(qreal blur);
+
+    int blurMax() const;
+    void setBlurMax(int blurMax);
+
     bool hasNextItem() const;
     bool hasPreviousItem() const;
 
@@ -57,6 +63,8 @@ Q_SIGNALS:
     void additionalDataComponentChanged();
     void geometryChanged();
     void paddingChanged();
+    void blurChanged();
+    void blurMaxChanged();
     void navigationChanged();
     void aboutToStart();
     void finished();
@@ -96,4 +104,6 @@ private:
     qreal m_width = 0;
     qreal m_height = 0;
     qreal m_padding = 0;
+    qreal m_blur = 0.55;
+    int m_blurMax = 64;
 };

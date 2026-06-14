@@ -38,6 +38,8 @@ class Onboarding : public QObject
     Q_PROPERTY(qreal width READ width NOTIFY geometryChanged)
     Q_PROPERTY(qreal height READ height NOTIFY geometryChanged)
     Q_PROPERTY(qreal padding READ padding WRITE setPadding NOTIFY paddingChanged)
+    Q_PROPERTY(qreal blur READ blur WRITE setBlur NOTIFY blurChanged)
+    Q_PROPERTY(int blurMax READ blurMax WRITE setBlurMax NOTIFY blurMaxChanged)
     Q_PROPERTY(bool hasNextItem READ hasNextItem NOTIFY navigationChanged)
     Q_PROPERTY(bool hasPreviousItem READ hasPreviousItem NOTIFY navigationChanged)
 
@@ -88,6 +90,12 @@ public:
     qreal padding() const;
     void setPadding(qreal padding);
 
+    qreal blur() const;
+    void setBlur(qreal blur);
+
+    int blurMax() const;
+    void setBlurMax(int blurMax);
+
     bool hasNextItem() const;
     bool hasPreviousItem() const;
 
@@ -115,6 +123,8 @@ Q_SIGNALS:
     void additionalDataComponentChanged();
     void geometryChanged();
     void paddingChanged();
+    void blurChanged();
+    void blurMaxChanged();
     void navigationChanged();
     void aboutToStart();
     void finished();

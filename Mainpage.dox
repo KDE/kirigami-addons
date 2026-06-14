@@ -40,6 +40,8 @@ The following components are either commonly used or serve as entrypoints for us
   - SettingAction
 - @ref sounds "Sounds Module"
   - SoundsPicker
+- @ref onboarding "Onboarding Module"
+  - Onboarding
 - @ref treeview "TreeView Module"
   - TreeViewDecoration
 
@@ -111,6 +113,11 @@ The following list can be used to check which component belongs to which module:
 @subsubsection sounds org.kde.kirigamiaddons.sounds
 
 - SoundsPicker
+
+@subsubsection onboarding org.kde.kirigamiaddons.onboarding
+
+- Onboarding
+- OnboardToolTip
 
 @subsubsection treeview org.kde.kirigamiaddons.treeview
 

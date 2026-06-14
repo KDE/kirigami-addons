@@ -381,6 +381,9 @@ Item {
 
         function init() {
             Onboarding.stop();
+            Onboarding.padding = 0;
+            Onboarding.blur = 0.55;
+            Onboarding.blurMax = 64;
             aboutToStartSpy.clear();
             finishedSpy.clear();
             root.aboutToShowCalled = false;
@@ -402,6 +405,22 @@ Item {
             compare(Onboarding.currentItem.additionalData.videoCaption, "first-target-caption");
             tryCompare(Onboarding, "width", firstTarget.width + 2 * Onboarding.padding);
             tryCompare(Onboarding, "height", firstTarget.height + 2 * Onboarding.padding);
+        }
+
+        function test_blur_settings_update_effect() {
+            Onboarding.start();
+            tryCompare(Onboarding, "active", true);
+
+            const blurEffect = findChild(root, "onboardingBlurEffect");
+            verify(blurEffect);
+            compare(blurEffect.blur, 0.55);
+            compare(blurEffect.blurMax, 64);
+
+            Onboarding.blur = 0.25;
+            Onboarding.blurMax = 32;
+
+            tryCompare(blurEffect, "blur", 0.25);
+            tryCompare(blurEffect, "blurMax", 32);
         }
 
         function test_stop_resets_state_and_source_layer() {
@@ -475,10 +494,12 @@ Item {
             verify(separator);
             verify(cancelButton);
 
+            tryCompare(toolTip, "contentWidth", toolTip.contentItem.implicitWidth);
+            tryCompare(toolTip, "contentHeight", toolTip.contentItem.implicitHeight);
             tryCompare(background, "width", toolTip.width);
             tryCompare(background, "height", toolTip.height);
-            verify(background.width >= toolTip.contentItem.width + toolTip.leftPadding + toolTip.rightPadding);
-            verify(background.height >= toolTip.contentItem.height + toolTip.topPadding + toolTip.bottomPadding);
+            verify(background.width >= toolTip.contentItem.implicitWidth + toolTip.leftPadding + toolTip.rightPadding);
+            verify(background.height >= toolTip.contentItem.implicitHeight + toolTip.topPadding + toolTip.bottomPadding);
             compare(background.color, viewTheme.backgroundColor);
             compare(background.border.color, Platform.ColorUtils.linearInterpolation(viewTheme.backgroundColor, viewTheme.textColor, viewTheme.frameContrast));
             compare(label.color, viewTheme.textColor);
@@ -510,6 +531,35 @@ Item {
             verify(toolTip.y + toolTip.parent.y >= toolTip.margins);
             verify(toolTip.y + toolTip.parent.y + toolTip.height <= boundsSource.height - toolTip.margins);
             verify(toolTip.y + toolTip.height <= 0);
+        }
+
+        function test_highlight_padding_is_symmetric_and_clamped_to_source() {
+            Onboarding.padding = 10;
+            Onboarding.start("bounds");
+            tryCompare(Onboarding, "currentItem", topEdgeTarget.Onboarding);
+
+            let mappedPosition = topEdgeTarget.mapToItem(boundsSource, 0, 0);
+            compare(mappedPosition.x - Onboarding.x, 2);
+            compare(Onboarding.x + Onboarding.width - mappedPosition.x - topEdgeTarget.width, 2);
+            compare(mappedPosition.y - Onboarding.y, 2);
+            compare(Onboarding.y + Onboarding.height - mappedPosition.y - topEdgeTarget.height, 2);
+            verify(Onboarding.x >= 0);
+            verify(Onboarding.y >= 0);
+            verify(Onboarding.x + Onboarding.width <= boundsSource.width);
+            verify(Onboarding.y + Onboarding.height <= boundsSource.height);
+
+            Onboarding.next();
+            tryCompare(Onboarding, "currentItem", bottomEdgeTarget.Onboarding);
+
+            mappedPosition = bottomEdgeTarget.mapToItem(boundsSource, 0, 0);
+            compare(mappedPosition.x - Onboarding.x, 2);
+            compare(Onboarding.x + Onboarding.width - mappedPosition.x - bottomEdgeTarget.width, 2);
+            compare(mappedPosition.y - Onboarding.y, 2);
+            compare(Onboarding.y + Onboarding.height - mappedPosition.y - bottomEdgeTarget.height, 2);
+            verify(Onboarding.x >= 0);
+            verify(Onboarding.y >= 0);
+            verify(Onboarding.x + Onboarding.width <= boundsSource.width);
+            verify(Onboarding.y + Onboarding.height <= boundsSource.height);
         }
 
         function test_on_about_to_show_callback_runs_before_target_lookup() {

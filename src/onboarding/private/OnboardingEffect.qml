@@ -58,11 +58,13 @@ Item {
     MultiEffect {
         id: blurEffect
 
+        objectName: "onboardingBlurEffect"
+
         anchors.fill: parent
         autoPaddingEnabled: false
-        blur: 0.55
+        blur: Onboarding.blur
         blurEnabled: true
-        blurMax: 64
+        blurMax: Onboarding.blurMax
         maskEnabled: true
         maskSource: mask
         source: sourceItem

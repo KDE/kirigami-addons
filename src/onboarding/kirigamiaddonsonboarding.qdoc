@@ -1,170 +1,447 @@
 /*!
-   \qmlmodule org.kde.kirigamiaddons.onboarding
-   \title Kirigami Addons Onboarding QML Types
-   \brief Provides guided onboarding overlays for Kirigami applications.
+    \qmlmodule org.kde.kirigamiaddons.onboarding
+    \title Kirigami Addons Onboarding QML Types
+    \brief Provides guided onboarding walkthroughs for Kirigami applications.
 
-   To import the QML types into your application, use the following import
-   statement in your QML file:
+    The onboarding module highlights controls in an application-provided source
+    area, dims and blurs the rest of that area, and displays guidance in a
+    tooltip. Applications describe walkthroughs with \l Onboarding attached
+    properties; the module creates and manages the overlay.
 
-   \qml
-   import org.kde.kirigamiaddons.onboarding
-   \endqml
- */
+    To use the module, import it in each QML file that declares a source,
+    defines a step, or controls a walkthrough:
 
-/*!
-    \qmltype Onboarding
-    \inqmlmodule org.kde.kirigamiaddons.onboarding
-    \since 1.13
-    \brief Attached type and controller for onboarding walkthroughs.
+    \qml
+    import org.kde.kirigamiaddons.onboarding
+    \endqml
 
-    Onboarding is used as an attached type on a source item and on items that
-    should appear in an onboarding walkthrough. Calling \c start() starts the
-    shared walkthrough controller for the default group.
+    \section1 Defining a Walkthrough
+
+    A walkthrough consists of one source item and one or more descendant step
+    items. Mark the common ancestor with \l Onboarding::isSource and provide
+    guidance on each step with \l Onboarding::texts or
+    \l Onboarding::additionalData.
 
     \qml
     Item {
         Onboarding.isSource: true
 
         Button {
-            text: i18nc("@action:button", "Start")
-            Onboarding.texts: [i18nc("@info", "This button starts the process.")]
+            text: i18nc("@action:button", "Create")
+            Onboarding.texts: [
+                i18nc("@info", "Create a new document with this button.")
+            ]
+        }
+
+        Button {
+            text: i18nc("@action:button", "Start Tutorial")
             onClicked: Onboarding.start()
         }
     }
     \endqml
+
+    Steps are visited in attached-object creation order. Disabled steps are
+    skipped. The source and all of its step items must remain instantiated for
+    the duration of the walkthrough.
+
+    \section1 Defining Groups
+
+    Groups allow an application to define multiple walkthroughs over the same
+    source area. The empty string identifies the default group used by
+    \l Onboarding::start(). A source lists the groups it owns in
+    \l Onboarding::sourceGroups. Each step lists its groups in
+    \l Onboarding::groups, with corresponding guidance at the same positions in
+    \l Onboarding::texts.
+
+    \qml
+    Item {
+        Onboarding.isSource: true
+        Onboarding.sourceGroups: ["", "advanced"]
+
+        Button {
+            Onboarding.groups: ["", "advanced"]
+            Onboarding.texts: [
+                i18nc("@info", "Basic guidance for this control."),
+                i18nc("@info", "Advanced guidance for this control.")
+            ]
+        }
+    }
+    \endqml
+
+    A group must be declared by exactly one source item. Calling
+    \l Onboarding::start(string) for a missing or ambiguous group does not start
+    a walkthrough and produces a warning.
+
+    \section1 Navigation and Lifecycle
+
+    The default overlay provides Previous, Next, and Cancel buttons. The Left
+    and Right arrow keys navigate between enabled steps, and Escape stops the
+    walkthrough. Applications can also call \l Onboarding::next(),
+    \l Onboarding::previous(), and \l Onboarding::stop().
+
+    Use \l Onboarding::aboutToShow on a step when its target must first be made
+    visible, for example by changing a page in a SwipeView. The target is
+    resolved on the next event-loop turn after the signal is emitted.
+    \l Onboarding::hide is emitted when the step ceases to be current.
+
+    \section1 Custom Content and Appearance
+
+    \l Onboarding::additionalData stores application-defined metadata on each
+    step. Set \l Onboarding::additionalDataComponent to a component that reads
+    the current step's metadata through
+    \c Onboarding.currentItem.additionalData. The component is inserted between
+    the guidance text and the navigation controls.
+
+    The highlight can be expanded with \l Onboarding::padding. The background
+    effect can be adjusted with \l Onboarding::blur and
+    \l Onboarding::blurMax. The module clamps highlight padding so the
+    highlighted rectangle remains inside the source area.
+ */
+
+/*!
+    \qmltype Onboarding
+    \inqmlmodule org.kde.kirigamiaddons.onboarding
+    \since 1.13
+    \brief Describes and controls guided onboarding walkthroughs.
+
+    Onboarding is an uncreatable attached type. Attach it to one item to define
+    the source area and to descendant items to define walkthrough steps. Its
+    controller properties and methods share one walkthrough state, so they can
+    be accessed as \c Onboarding.active, \c Onboarding.start(), and similar
+    expressions from any object in a QML file that imports the module.
+
+    A step participates after either \l Onboarding::texts or
+    \l Onboarding::additionalData has been assigned. It must belong to the
+    requested group, be a descendant of that group's source item, and provide
+    either non-empty text for the group or non-empty additional data.
+
+    \note Only one walkthrough is active at a time. Starting another group
+    replaces the current walkthrough without emitting \l Onboarding::finished.
 */
 
 /*!
     \qmlmethod void Onboarding::start()
 
-    Starts the default onboarding group.
+    Starts the default group, identified by the empty string.
+
+    Exactly one item must declare the default group in
+    \l Onboarding::sourceGroups, and that source must contain at least one
+    participating step. If the source cannot be resolved, the walkthrough is
+    not started.
 */
 
 /*!
     \qmlmethod void Onboarding::start(string group)
 
-    Starts the onboarding walkthrough for \a group. The group must be declared
-    by exactly one source item.
+    Starts the walkthrough for \a group.
+
+    Exactly one source item must include \a group in
+    \l Onboarding::sourceGroups. Steps are collected from descendant items
+    whose \l Onboarding::groups contain \a group and that provide content for
+    the group. If the source cannot be resolved or no participating steps
+    exist, the walkthrough is not started.
+
+    Calling this method while another walkthrough is active hides its current
+    step and replaces its source, group, and step list.
 */
 
 /*!
     \qmlmethod void Onboarding::stop()
 
-    Stops the onboarding walkthrough.
+    Stops the current walkthrough, hides its current step, removes the visual
+    effect, restores the source item's previous \c layer.enabled value, resets
+    \l Onboarding::currentIndex to \c -1, and emits
+    \l Onboarding::finished.
+
+    Calling this method when no walkthrough or current step exists has no
+    effect.
 */
 
 /*!
     \qmlmethod void Onboarding::next()
 
-    Advances to the next enabled onboarding item.
+    Advances to the next enabled step. Disabled or destroyed step items are
+    skipped. This method has no effect when the walkthrough is inactive or
+    there is no later enabled step.
 */
 
 /*!
     \qmlmethod void Onboarding::previous()
 
-    Returns to the previous enabled onboarding item.
+    Returns to the previous enabled step. Disabled or destroyed step items are
+    skipped. This method has no effect when the walkthrough is inactive or
+    there is no earlier enabled step.
 */
 
 /*!
     \qmlproperty bool Onboarding::active
 
-    Whether an onboarding walkthrough is currently active.
+    This read-only property is \c true while a walkthrough is active.
+
+    The default value is \c false.
 */
 
 /*!
     \qmlproperty Item Onboarding::source
 
-    The source item of the currently active onboarding walkthrough.
+    This read-only property holds the source item selected for the most recently
+    started walkthrough. Test \l Onboarding::active before treating it as an
+    active overlay source.
+
+    The value is \c null before a source is selected or after that source is
+    destroyed.
 */
 
 /*!
     \qmlproperty int Onboarding::currentIndex
 
-    The index of the current item in declaration order.
+    This read-only property holds the current step's index in the collected
+    step list. Disabled steps remain in that list and are skipped during
+    navigation, so successive values are not necessarily contiguous.
+
+    The value is \c -1 when no step is current.
 */
 
 /*!
     \qmlproperty Onboarding Onboarding::currentItem
 
-    The current item's onboarding attached object.
+    This read-only property holds the Onboarding attached object for the
+    current target item. It provides access to step-specific properties such as
+    \l Onboarding::target and \l Onboarding::additionalData.
+
+    The value is \c null while no step is current.
 */
 
 /*!
     \qmlproperty string Onboarding::currentText
 
-    The resolved tooltip text for the current onboarding item and active group.
+    This read-only property holds the current step's text for the active group.
+    The value is empty when no step is current or when the step contributes
+    only \l Onboarding::additionalData.
 */
 
 /*!
     \qmlproperty Component Onboarding::additionalDataComponent
 
-    Optional component inserted into the default onboarding tooltip.
+    This property holds an optional component inserted into the default
+    onboarding tooltip. The component can read metadata from
+    \c Onboarding.currentItem.additionalData and should set \c visible to
+    \c false when it has nothing to display.
+
+    The value is shared by all walkthroughs. The default value is \c null.
+*/
+
+/*!
+    \qmlproperty real Onboarding::x
+
+    This read-only property holds the highlighted rectangle's x coordinate in
+    the source item's coordinate system. It includes the effective
+    \l Onboarding::padding and updates when the target or its ancestors move.
+
+    The value is \c 0 when no step is current.
+*/
+
+/*!
+    \qmlproperty real Onboarding::y
+
+    This read-only property holds the highlighted rectangle's y coordinate in
+    the source item's coordinate system. It includes the effective
+    \l Onboarding::padding and updates when the target or its ancestors move.
+
+    The value is \c 0 when no step is current.
+*/
+
+/*!
+    \qmlproperty real Onboarding::width
+
+    This read-only property holds the highlighted rectangle's width, including
+    effective horizontal \l Onboarding::padding.
+
+    The value is \c 0 when no step is current.
+*/
+
+/*!
+    \qmlproperty real Onboarding::height
+
+    This read-only property holds the highlighted rectangle's height, including
+    effective vertical \l Onboarding::padding.
+
+    The value is \c 0 when no step is current.
+*/
+
+/*!
+    \qmlproperty real Onboarding::padding
+
+    This property holds the requested space between the current target and the
+    highlight border. Padding is applied symmetrically on each axis and clamped
+    independently so the highlight remains within the source item's bounds.
+    Negative values therefore have the same visual result as \c 0.
+
+    The value is shared by all walkthroughs. The default value is \c 0.
+*/
+
+/*!
+    \qmlproperty real Onboarding::blur
+
+    This property holds the blur amount applied outside the highlighted
+    rectangle. It is forwarded to the blur effect's \c blur property.
+
+    The value is shared by all walkthroughs. The default value is \c 0.55.
+*/
+
+/*!
+    \qmlproperty int Onboarding::blurMax
+
+    This property holds the maximum blur radius used by the background effect.
+    Higher values can improve blur quality at a greater rendering cost.
+
+    The value is shared by all walkthroughs. The default value is \c 64.
+*/
+
+/*!
+    \qmlproperty bool Onboarding::hasNextItem
+
+    This read-only property is \c true when an enabled step exists after the
+    current index in the collected step list. The default overlay uses it while
+    \l Onboarding::active to decide whether to show its Next button.
+
+    The collected list remains available after \l Onboarding::stop(), so use
+    \l Onboarding::active rather than this property to determine whether a
+    walkthrough is running.
+*/
+
+/*!
+    \qmlproperty bool Onboarding::hasPreviousItem
+
+    This read-only property is \c true when an enabled step exists before the
+    current index in the collected step list. The default overlay uses it while
+    \l Onboarding::active to decide whether to show its Previous button.
 */
 
 /*!
     \qmlsignal Onboarding::aboutToStart()
 
-    Emitted before an onboarding walkthrough starts.
+    Emitted after the source and step list have been selected but before the
+    source layer, visual effect, and first step are activated.
+
+    Use this signal for application-wide preparation that must happen before a
+    walkthrough becomes visible.
 */
 
 /*!
     \qmlsignal Onboarding::finished()
 
-    Emitted after an onboarding walkthrough stops.
+    Emitted after \l Onboarding::stop() has deactivated and reset the
+    walkthrough. It is also emitted if an active source item is destroyed.
+
+    The signal is not emitted when \l Onboarding::start(string) replaces one
+    active walkthrough with another.
 */
 
 /*!
     \qmlattachedproperty bool Onboarding::isSource
 
-    Whether this item is a source area for onboarding. Source items own the
-    blur effect, overlay, and source layer while onboarding is active.
+    Whether the attached item defines an onboarding source area.
+
+    While its walkthrough is active, the module enables the source item's layer
+    so it can apply the masked blur effect. The previous \c layer.enabled value
+    is restored when the walkthrough stops. The source should be a common
+    visual ancestor of all steps in the groups it owns.
+
+    The default value is \c false.
 */
 
 /*!
     \qmlattachedproperty list<string> Onboarding::sourceGroups
 
-    Onboarding groups owned by this source item. The default source group is
-    the empty string.
+    The groups owned by this source item. Each group must be owned by exactly
+    one source item among the currently instantiated objects. The empty string
+    identifies the default group.
+
+    The default value is a list containing the empty string.
 */
 
 /*!
     \qmlattachedproperty list<string> Onboarding::groups
 
-    Onboarding groups this step belongs to. The default step group is the empty
-    string.
+    The groups this step belongs to. Entries correspond by position to entries
+    in \l Onboarding::texts. A step can belong to multiple groups and provide
+    different text for each one.
+
+    The default value is a list containing the empty string.
 */
 
 /*!
     \qmlattachedproperty list<string> Onboarding::texts
 
-    Texts shown in the onboarding tooltip for this item. Each text corresponds
-    to the group at the same index in \c groups.
+    The guidance strings for this step. Each string applies to the group at the
+    same index in \l Onboarding::groups. A missing or out-of-range entry
+    produces an empty string for that group.
+
+    Assigning this property marks the item as a walkthrough step. A step with
+    empty text participates only when \l Onboarding::additionalData is
+    non-empty.
+
+    The default value is an empty list.
 */
 
 /*!
     \qmlattachedproperty var Onboarding::additionalData
 
-    Optional metadata map associated with this item. Applications can read it
-    from \c Onboarding.currentItem.additionalData inside
+    Application-defined metadata associated with this step. The value is a
+    JavaScript object exposed through
+    \c Onboarding.currentItem.additionalData while the step is current.
+
+    Assigning this property marks the item as a walkthrough step. Non-empty
+    metadata allows the step to participate even when its text for the active
+    group is empty. Display the metadata by setting
     \l Onboarding::additionalDataComponent.
+
+    The default value is an empty object.
 */
 
 /*!
     \qmlattachedproperty bool Onboarding::enabled
 
-    Whether this item participates in the onboarding walkthrough.
+    Whether this step can become current. Disabled steps remain in the
+    collected step list but are skipped by initial selection and navigation.
+    Changes take effect for subsequent navigation.
+
+    The default value is \c true.
+*/
+
+/*!
+    \qmlattachedproperty Item Onboarding::target
+
+    This read-only property holds the item to which this Onboarding object is
+    attached. For \l Onboarding::currentItem, it is the item enclosed by the
+    highlight.
+*/
+
+/*!
+    \qmlattachedproperty int Onboarding::sequence
+
+    This read-only property holds the attached object's ordering key. The
+    controller sorts participating steps by this value, which reflects
+    attached-object creation order.
 */
 
 /*!
     \qmlattachedsignal Onboarding::aboutToShow()
 
-    Emitted before this item becomes the current onboarding target.
+    Emitted after this step is selected but before it becomes
+    \l Onboarding::currentItem and before its geometry is resolved.
+
+    Use this handler to expose or instantiate the target, for example by
+    selecting the page that contains it. The controller updates the current
+    item on the next event-loop turn.
 */
 
 /*!
     \qmlattachedsignal Onboarding::hide()
 
-    Emitted when this item stops being the current onboarding target.
+    Emitted when this step stops being the current step because navigation,
+    stopping, or restarting replaces or clears it.
 */
 
 /*!
@@ -179,37 +456,44 @@
     The example opens a Kirigami window and marks target controls with
     \l Onboarding attached properties. The overlay draws a highlight around the
     current focus area, and the tooltip text is driven by the current target's
-    attached \c texts property.
+    attached \l Onboarding::texts property.
 
     \section1 Workflow
 
     \list
-        \li Mark a source item with \c Onboarding.isSource.
-        \li Add grouped \l Onboarding attached properties directly to controls inside Page1.qml, Page2.qml, and Page3.qml.
-        \li Use \l Onboarding::start to begin walking the target items in a group.
-        \li Use \c Onboarding.onAboutToShow handlers to keep the swipe view synchronized with the tutorial progression.
-        \li Supply \l Onboarding::additionalDataComponent so that the tooltip can show context-sensitive media from each step's \c Onboarding.additionalData.
+        \li Mark a source item with \l Onboarding::isSource.
+        \li Add grouped \l Onboarding attached properties directly to controls
+            inside Page1.qml, Page2.qml, and Page3.qml.
+        \li Use \l Onboarding::start() or \l Onboarding::start(string) to begin
+            walking the target items in a group.
+        \li Use \l Onboarding::aboutToShow handlers to keep the swipe view
+            synchronized with tutorial progression.
+        \li Supply \l Onboarding::additionalDataComponent so the tooltip can
+            show context-sensitive media from each step's
+            \l Onboarding::additionalData.
     \endlist
 
     \section1 Key Snippets
 
-    Start the onboarding flow from a keyboard shortcut:
+    Start the default onboarding flow from a keyboard shortcut:
 
     \snippet OnboardingTutorial/Main.qml 0
 
     Add attached properties with media content displayed in the tooltip:
 
-    \snippet OnboardingTutorial/Main.qml 1
+    \snippet OnboardingTutorial/Page1.qml 1
 
     Run a per-step callback before focusing an item:
 
-    \snippet OnboardingTutorial/Main.qml 2
+    \snippet OnboardingTutorial/Page2.qml 2
 
-    Bind \l Onboarding::additionalDataComponent to dynamic media from the current item:
+    Bind \l Onboarding::additionalDataComponent to dynamic media from the
+    current item:
 
     \snippet OnboardingTutorial/Main.qml 3
 
-    Keep the tutorial pages instantiated so targets remain available during onboarding:
+    Keep the tutorial pages instantiated so targets remain available during
+    onboarding:
 
     \snippet OnboardingTutorial/Main.qml 5
 
@@ -218,8 +502,12 @@
     This example shows how to:
 
     \list
-        \li Combine attached onboarding metadata with standard Qt Quick controls to drive an onboarding flow.
-        \li Highlight candidate controls while blurring the surrounding source area.
-        \li Extend the visible tooltip content with \l Onboarding::additionalDataComponent.
+        \li Combine attached onboarding metadata with standard Qt Quick
+            controls to drive an onboarding flow.
+        \li Define default and named walkthrough groups over the same source.
+        \li Highlight controls while blurring the surrounding source area.
+        \li Synchronize dynamically visible pages before target lookup.
+        \li Extend the visible tooltip content with
+            \l Onboarding::additionalDataComponent.
     \endlist
 */

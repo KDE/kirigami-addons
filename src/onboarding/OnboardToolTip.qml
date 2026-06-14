@@ -10,10 +10,16 @@ import org.kde.kirigami.platform as Platform
     \qmltype OnboardToolTip
     \inqmlmodule org.kde.kirigamiaddons.onboarding
     \since 1.13
-    \brief Tooltip style used by \l Onboarding walkthroughs.
+    \brief Persistent tooltip styled for onboarding walkthroughs.
 
-    OnboardToolTip customizes visuals and geometry behavior for onboarding
-    overlays.
+    OnboardToolTip is the tooltip used by the default \l Onboarding overlay. It
+    applies the platform tooltip color set, stays open until its owner hides
+    it, sizes itself to its content, and uses Kirigami spacing and corner
+    radius metrics.
+
+    The type inherits the standard ToolTip API and can be used when custom
+    onboarding visuals need the same appearance and persistent popup behavior
+    as the built-in overlay.
 */
 QQC2.ToolTip {
     id: root
@@ -22,6 +28,8 @@ QQC2.ToolTip {
     Platform.Theme.inherit: false
 
     closePolicy: QQC2.Popup.NoAutoClose
+    contentHeight: contentItem?.implicitHeight ?? 0
+    contentWidth: contentItem?.implicitWidth ?? 0
     delay: 0
     horizontalPadding: Kirigami.Units.largeSpacing
     implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset, implicitContentHeight + topPadding + bottomPadding)
