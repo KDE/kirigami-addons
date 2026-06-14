@@ -392,8 +392,32 @@ AbstractFormDelegate {
         }
     }
 
-    function indexOfValue(value) {
+    function decrementCurrentIndex() : void {
+        combobox.decrementCurrentIndex();
+    }
+
+    function find(text: string, flags: int) : int {
+        return combobox.find(text, flags);
+    }
+
+    function incrementCurrentIndex() : void {
+        combobox.incrementCurrentIndex();
+    }
+
+    function indexOfValue(value: var) : int {
         return combobox.indexOfValue(value);
+    }
+
+    function selectAll() : void {
+        combobox.selectAll();
+    }
+
+    function textAt(index: int) : string {
+        return combobox.textAt(index);
+    }
+
+    function valueAt(index: int) : var {
+        return combobox.valueAt(index);
     }
 
     focusPolicy: displayMode === FormComboBoxDelegate.ComboBox ? Qt.NoFocus : Qt.StrongFocus
