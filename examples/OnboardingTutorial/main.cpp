@@ -54,9 +54,9 @@ int main(int argc, char *argv[])
         importPaths.prepend(buildImportPath);
     }
     importPaths.removeDuplicates();
-    for (const QString &importPath : std::as_const(importPaths)) {
-        if (!importPath.isEmpty()) {
-            engine.addImportPath(importPath);
+    for (auto it = importPaths.crbegin(); it != importPaths.crend(); ++it) {
+        if (!it->isEmpty()) {
+            engine.addImportPath(*it);
         }
     }
 

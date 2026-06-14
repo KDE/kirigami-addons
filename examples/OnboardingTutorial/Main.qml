@@ -5,6 +5,7 @@ import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
+import org.kde.kirigami.platform as Platform
 import org.kde.kirigamiaddons.onboarding
 
 Kirigami.ApplicationWindow {
@@ -40,8 +41,11 @@ Kirigami.ApplicationWindow {
         ColumnLayout {
             readonly property var additionalData: Onboarding.currentItem?.additionalData ?? ({})
 
+            Platform.Theme.colorSet: Platform.Theme.Tooltip
+            Platform.Theme.inherit: false
+
             implicitWidth: Math.max(video.Layout.preferredWidth, videoCaption.implicitWidth)
-            spacing: Kirigami.Units.smallSpacing
+            spacing: 0
             visible: video.source.toString().length > 0
 
             AnimatedImage {
@@ -62,7 +66,7 @@ Kirigami.ApplicationWindow {
 
                 Layout.alignment: Qt.AlignHCenter
                 Layout.preferredWidth: Math.min(implicitWidth, video.Layout.preferredWidth)
-                color: Kirigami.Theme.highlightedTextColor
+                color: Platform.Theme.textColor
                 horizontalAlignment: Text.AlignHCenter
                 text: parent.additionalData.videoCaption ?? ""
                 visible: text.length > 0

@@ -7,6 +7,7 @@
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtTest
+import org.kde.kirigami.platform as Platform
 import org.kde.kirigamiaddons.onboarding
 
 Item {
@@ -18,6 +19,19 @@ Item {
     property bool aboutToShowCalled: false
     property bool hideCalled: false
     property bool additionalDataCreated: false
+
+    Item {
+        id: viewTheme
+
+        readonly property color backgroundColor: Platform.Theme.backgroundColor
+        readonly property color disabledTextColor: Platform.Theme.disabledTextColor
+        readonly property color highlightColor: Platform.Theme.highlightColor
+        readonly property color textColor: Platform.Theme.textColor
+        readonly property real frameContrast: Platform.Theme.frameContrast
+
+        Platform.Theme.colorSet: Platform.Theme.Tooltip
+        Platform.Theme.inherit: false
+    }
 
     Component {
         id: additionalDataComponent
@@ -313,6 +327,40 @@ Item {
         Onboarding.sourceGroups: ["duplicate"]
     }
 
+    Item {
+        id: boundsSource
+
+        width: root.width
+        height: root.height
+
+        Onboarding.isSource: true
+        Onboarding.sourceGroups: ["bounds"]
+
+        Rectangle {
+            id: topEdgeTarget
+
+            x: 2
+            y: 2
+            width: 40
+            height: 30
+
+            Onboarding.groups: ["bounds"]
+            Onboarding.texts: ["Top edge target"]
+        }
+
+        Rectangle {
+            id: bottomEdgeTarget
+
+            x: parent.width - width - 2
+            y: parent.height - height - 2
+            width: 40
+            height: 30
+
+            Onboarding.groups: ["bounds"]
+            Onboarding.texts: ["Bottom edge target"]
+        }
+    }
+
     SignalSpy {
         id: aboutToStartSpy
 
@@ -392,6 +440,76 @@ Item {
 
             keyClick(Qt.Key_Escape);
             tryCompare(Onboarding, "active", false);
+            compare(finishedSpy.count, 1);
+        }
+
+        function test_cancel_button_emits_finished_once() {
+            Onboarding.start("bounds");
+            tryCompare(Onboarding, "currentItem", topEdgeTarget.Onboarding);
+
+            const cancelButton = findChild(root, "onboardingCancelButton");
+            verify(cancelButton);
+            verify(cancelButton.visible);
+
+            mouseClick(cancelButton);
+
+            tryCompare(Onboarding, "active", false);
+            compare(finishedSpy.count, 1);
+
+            Onboarding.stop();
+            compare(finishedSpy.count, 1);
+        }
+
+        function test_tooltip_uses_view_colors_and_covers_content() {
+            Onboarding.start();
+            tryCompare(Onboarding, "currentItem", firstTarget.Onboarding);
+
+            const toolTip = findChild(root, "onboardingToolTip");
+            const background = findChild(root, "onboardingToolTipBackground");
+            const label = findChild(root, "onboardingToolTipLabel");
+            const separator = findChild(root, "onboardingNavigationSeparator");
+            const cancelButton = findChild(root, "onboardingCancelButton");
+            verify(toolTip);
+            verify(background);
+            verify(label);
+            verify(separator);
+            verify(cancelButton);
+
+            tryCompare(background, "width", toolTip.width);
+            tryCompare(background, "height", toolTip.height);
+            verify(background.width >= toolTip.contentItem.width + toolTip.leftPadding + toolTip.rightPadding);
+            verify(background.height >= toolTip.contentItem.height + toolTip.topPadding + toolTip.bottomPadding);
+            compare(background.color, viewTheme.backgroundColor);
+            compare(background.border.color, Platform.ColorUtils.linearInterpolation(viewTheme.backgroundColor, viewTheme.textColor, viewTheme.frameContrast));
+            compare(label.color, viewTheme.textColor);
+            compare(cancelButton.icon.color, viewTheme.textColor);
+            compare(separator.color, background.border.color);
+        }
+
+        function test_tooltip_stays_inside_source_at_vertical_and_horizontal_edges() {
+            Onboarding.start("bounds");
+            tryCompare(Onboarding, "currentItem", topEdgeTarget.Onboarding);
+
+            const toolTip = findChild(root, "onboardingToolTip");
+            verify(toolTip);
+            tryVerify(() => toolTip.width > 0 && toolTip.height > 0);
+            wait(500);
+
+            verify(toolTip.x + toolTip.parent.x >= toolTip.margins);
+            verify(toolTip.x + toolTip.parent.x + toolTip.width <= boundsSource.width - toolTip.margins);
+            verify(toolTip.y + toolTip.parent.y >= toolTip.margins);
+            verify(toolTip.y + toolTip.parent.y + toolTip.height <= boundsSource.height - toolTip.margins);
+            verify(toolTip.y >= toolTip.parent.height);
+
+            Onboarding.next();
+            tryCompare(Onboarding, "currentItem", bottomEdgeTarget.Onboarding);
+            wait(500);
+
+            verify(toolTip.x + toolTip.parent.x >= toolTip.margins);
+            verify(toolTip.x + toolTip.parent.x + toolTip.width <= boundsSource.width - toolTip.margins);
+            verify(toolTip.y + toolTip.parent.y >= toolTip.margins);
+            verify(toolTip.y + toolTip.parent.y + toolTip.height <= boundsSource.height - toolTip.margins);
+            verify(toolTip.y + toolTip.height <= 0);
         }
 
         function test_on_about_to_show_callback_runs_before_target_lookup() {

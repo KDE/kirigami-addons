@@ -4,6 +4,7 @@
 import QtQuick
 import QtQuick.Controls as QQC2
 import org.kde.kirigami as Kirigami
+import org.kde.kirigami.platform as Platform
 
 /*!
     \qmltype OnboardToolTip
@@ -17,43 +18,31 @@ import org.kde.kirigami as Kirigami
 QQC2.ToolTip {
     id: root
 
+    Platform.Theme.colorSet: Platform.Theme.Tooltip
+    Platform.Theme.inherit: false
+
     closePolicy: QQC2.Popup.NoAutoClose
     delay: 0
     horizontalPadding: Kirigami.Units.largeSpacing
-    implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset, contentHeight + topPadding + bottomPadding)
-    implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset, contentWidth + leftPadding + rightPadding)
+    implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset, implicitContentHeight + topPadding + bottomPadding)
+    implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset, implicitContentWidth + leftPadding + rightPadding)
     margins: Kirigami.Units.largeSpacing
     padding: Kirigami.Units.smallSpacing
     verticalPadding: Kirigami.Units.smallSpacing
     timeout: -1
-    x: parent ? (parent.width - implicitWidth) / 2 : 0
-    y: -implicitHeight - Kirigami.Units.largeSpacing
+    x: parent ? (parent.width - width) / 2 : 0
+    y: -height - Kirigami.Units.largeSpacing
 
     background: Rectangle {
-        Kirigami.Theme.colorSet: Kirigami.Theme.Selection
-        Kirigami.Theme.inherit: false
+        objectName: "onboardingToolTipBackground"
 
-        color: Kirigami.Theme.backgroundColor
+        color: root.Platform.Theme.backgroundColor
         implicitHeight: Kirigami.Units.gridUnit * 2
         radius: Kirigami.Units.cornerRadius
 
         border {
-            color: Kirigami.Theme.highlightedTextColor
+            color: Platform.ColorUtils.linearInterpolation(root.Platform.Theme.backgroundColor, root.Platform.Theme.textColor, root.Platform.Theme.frameContrast)
             width: 1
-        }
-    }
-
-    Behavior on height {
-        NumberAnimation {
-            duration: Kirigami.Units.longDuration
-            easing.type: Easing.InOutQuad
-        }
-    }
-
-    Behavior on width {
-        NumberAnimation {
-            duration: Kirigami.Units.longDuration
-            easing.type: Easing.InOutQuad
         }
     }
 }
