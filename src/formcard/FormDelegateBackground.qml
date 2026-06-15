@@ -54,10 +54,10 @@ Kirigami.ShadowedRectangle {
     }
 
     corners {
-        topLeftRadius: _isFirst ? Kirigami.Units.smallSpacing : 0
-        topRightRadius: _isFirst ? Kirigami.Units.smallSpacing : 0
-        bottomLeftRadius: _isLast ? Kirigami.Units.smallSpacing : 0
-        bottomRightRadius: _isLast ? Kirigami.Units.smallSpacing : 0
+        topLeftRadius: _isFirst ? Kirigami.Units.cornerRadius : 0
+        topRightRadius: _isFirst ? Kirigami.Units.cornerRadius : 0
+        bottomLeftRadius: _isLast ? Kirigami.Units.cornerRadius : 0
+        bottomRightRadius: _isLast ? Kirigami.Units.cornerRadius : 0
     }
 
     Behavior on color {
