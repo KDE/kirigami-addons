@@ -8,15 +8,6 @@
     tooltip. Applications describe walkthroughs with \l Onboarding attached
     properties; the module creates and manages the overlay.
 
-    Applications using this module must find and link Qt Quick Effects
-    explicitly. The onboarding module imports \c QtQuick.Effects from QML, so
-    this dependency is not propagated transitively to the application target.
-
-    \code
-    find_package(Qt6 REQUIRED COMPONENTS QuickEffects)
-    target_link_libraries(application_target PRIVATE Qt6::QuickEffects)
-    \endcode
-
     To use the module, import it in each QML file that declares a source,
     defines a step, or controls a walkthrough:
 

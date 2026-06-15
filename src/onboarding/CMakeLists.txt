@@ -32,7 +32,6 @@ target_link_libraries(onboardingplugin PRIVATE
     Qt6::Quick
     Qt6::Qml
     Qt6::QuickControls2
-    Qt6::QuickEffects
 )
 
 ecm_finalize_qml_module(onboardingplugin DESTINATION ${KDE_INSTALL_QMLDIR} EXPORT KirigamiAddonsTargets)

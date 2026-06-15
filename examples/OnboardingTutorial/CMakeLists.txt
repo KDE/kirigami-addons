@@ -52,7 +52,6 @@ target_link_libraries(onboardingtutorial PRIVATE
     Qt::Qml
     Qt::Quick
     Qt::QuickControls2
-    Qt6::QuickEffects
     KF6::I18n
     KF6::I18nQml
 )
