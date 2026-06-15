@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-12 00:42+0000\n"
+"POT-Creation-Date: 2026-06-15 00:42+0000\n"
 "PO-Revision-Date: 2024-08-28 09:36+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -140,7 +140,7 @@ msgid "Volume"
 msgstr "Hlasitost"
 
 #: dateandtime/DatePopup.qml:87 dateandtime/TimePopup.qml:46
-#: onboarding/private/OnboardingOverlay.qml:203
+#: onboarding/private/OnboardingOverlay.qml:236
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
@@ -592,13 +592,13 @@ msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
 msgstr "%1/%2"
 
-#: onboarding/private/OnboardingOverlay.qml:172
+#: onboarding/private/OnboardingOverlay.qml:201
 #, kde-format
 msgctxt "@action:button"
 msgid "Previous"
 msgstr "Předchozí"
 
-#: onboarding/private/OnboardingOverlay.qml:173
+#: onboarding/private/OnboardingOverlay.qml:202
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Go Previous"
@@ -606,13 +606,13 @@ msgctxt "@info:tooltip"
 msgid "Previous"
 msgstr "Přejít na předchozí"
 
-#: onboarding/private/OnboardingOverlay.qml:190
+#: onboarding/private/OnboardingOverlay.qml:221
 #, kde-format
 msgctxt "@action:button"
 msgid "Next"
 msgstr "Další"
 
-#: onboarding/private/OnboardingOverlay.qml:191
+#: onboarding/private/OnboardingOverlay.qml:222
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Go Next"
@@ -620,7 +620,7 @@ msgctxt "@info:tooltip"
 msgid "Next"
 msgstr "Přejít na následující"
 
-#: onboarding/private/OnboardingOverlay.qml:204
+#: onboarding/private/OnboardingOverlay.qml:237
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel"
