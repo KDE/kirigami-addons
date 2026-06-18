@@ -1,20 +1,20 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
 #
-# SPDX-FileCopyrightText: 2022, 2024, 2025 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022, 2024-2026 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-15 00:42+0000\n"
-"PO-Revision-Date: 2025-07-28 20:27+0200\n"
+"PO-Revision-Date: 2026-06-17 15:16+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.07.70\n"
+"X-Generator: Lokalize 26.04.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -599,41 +599,31 @@ msgid "%1/%2"
 msgstr "%1/%2"
 
 #: onboarding/private/OnboardingOverlay.qml:201
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Go Previous"
+#, kde-format
 msgctxt "@action:button"
 msgid "Previous"
 msgstr "Предишен"
 
 #: onboarding/private/OnboardingOverlay.qml:202
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Go Previous"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Previous"
 msgstr "Предишен"
 
 #: onboarding/private/OnboardingOverlay.qml:221
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Go Next"
+#, kde-format
 msgctxt "@action:button"
 msgid "Next"
 msgstr "Следващ"
 
 #: onboarding/private/OnboardingOverlay.qml:222
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Go Next"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Next"
 msgstr "Следващ"
 
 #: onboarding/private/OnboardingOverlay.qml:237
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel"
 msgstr "Отказ"

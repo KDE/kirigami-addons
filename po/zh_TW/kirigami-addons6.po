@@ -4,13 +4,13 @@
 # This file is distributed under the same license as the kirigami-addons package.
 #
 # Automatically generated, 2022.
-# SPDX-FileCopyrightText: 2023, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023-2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-15 00:42+0000\n"
-"PO-Revision-Date: 2025-08-16 14:44+0900\n"
+"PO-Revision-Date: 2026-06-17 13:01+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.07.70\n"
+"X-Generator: Lokalize 26.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -586,41 +586,31 @@ msgid "%1/%2"
 msgstr "%1/%2"
 
 #: onboarding/private/OnboardingOverlay.qml:201
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Go Previous"
+#, kde-format
 msgctxt "@action:button"
 msgid "Previous"
-msgstr "前一個"
+msgstr "上一步"
 
 #: onboarding/private/OnboardingOverlay.qml:202
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Go Previous"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Previous"
-msgstr "前一個"
+msgstr "上一步"
 
 #: onboarding/private/OnboardingOverlay.qml:221
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Go Next"
+#, kde-format
 msgctxt "@action:button"
 msgid "Next"
-msgstr "下一個"
+msgstr "下一步"
 
 #: onboarding/private/OnboardingOverlay.qml:222
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Go Next"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Next"
-msgstr "下一個"
+msgstr "下一步"
 
 #: onboarding/private/OnboardingOverlay.qml:237
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel"
 msgstr "取消"
