@@ -15,7 +15,7 @@ include:
 
 qml-check-i18n:
   stage: build
-  image: invent-registry.kde.org/sysadmin/ci-images/suse-qt515:latest
+  image: invent-registry.kde.org/sysadmin/ci-images/suse-qt611:latest
   needs: []
   rules:
     - changes:
