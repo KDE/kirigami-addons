@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-15 00:42+0000\n"
-"PO-Revision-Date: 2026-04-18 15:44+0200\n"
+"PO-Revision-Date: 2026-06-22 18:58+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.07.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -594,41 +594,31 @@ msgid "%1/%2"
 msgstr "%1/%2"
 
 #: onboarding/private/OnboardingOverlay.qml:201
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Go Previous"
+#, kde-format
 msgctxt "@action:button"
 msgid "Previous"
-msgstr "Gå til førre"
+msgstr "Førre"
 
 #: onboarding/private/OnboardingOverlay.qml:202
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Go Previous"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Previous"
-msgstr "Gå til førre"
+msgstr "Førre"
 
 #: onboarding/private/OnboardingOverlay.qml:221
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Go Next"
+#, kde-format
 msgctxt "@action:button"
 msgid "Next"
-msgstr "Gå til neste"
+msgstr "Neste"
 
 #: onboarding/private/OnboardingOverlay.qml:222
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Go Next"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Next"
-msgstr "Gå til neste"
+msgstr "Neste"
 
 #: onboarding/private/OnboardingOverlay.qml:237
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel"
 msgstr "Avbryt"
