@@ -15,8 +15,11 @@
 #include <QSurfaceFormat>
 #include <kcoreaddons_version.h>
 
-#if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
+#ifndef Q_OS_IOS
 #include <KCrash>
+#endif
+
+#if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
 #include <KIconTheme>
 #include <QApplication>
 #include <QStyleFactory>
@@ -70,7 +73,7 @@ void apply(QGuiApplication *app)
     font.setPointSize(10);
     app->setFont(font);
 #endif
-#if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
+#ifndef Q_OS_IOS
 #if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 19, 0)
     // Embrace KCrash. If an application misbehaves, we should know as much as possible about it.
     // Needs initialising KAboutData::setApplicationData

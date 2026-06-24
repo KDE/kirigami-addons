@@ -40,6 +40,7 @@ if (BUILD_TESTING)
 endif()
 if(ANDROID)
     find_package(Gradle REQUIRED)
+    find_package(KF6 6.27 REQUIRED COMPONENTS Crash) # Android support was added in KF 6.27 only
 elseif(NOT IOS)
     find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS Crash IconThemes)
 endif()
