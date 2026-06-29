@@ -37,7 +37,7 @@ RowLayout {
 
     Component.onCompleted: initializeTime()
 
-    function initializeTime() {
+    function initializeTime(): void {
         hoursTumbler.currentIndex = (_isAmPm && hours > 12 ? hours - 12 : hours);
         minutesTumbler.currentIndex = minutes;
         if (_isAmPm) {
