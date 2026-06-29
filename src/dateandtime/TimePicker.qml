@@ -35,7 +35,9 @@ RowLayout {
     implicitHeight: Kirigami.Units.gridUnit * 5
     implicitWidth: Kirigami.Units.gridUnit * 10
 
-    Component.onCompleted: {
+    Component.onCompleted: initializeTime()
+
+    function initializeTime() {
         hoursTumbler.currentIndex = (_isAmPm && hours > 12 ? hours - 12 : hours);
         minutesTumbler.currentIndex = minutes;
         if (_isAmPm) {
@@ -104,6 +106,24 @@ RowLayout {
 
     Item {
         Layout.fillWidth: true
+    }
+
+    Button {
+        implicitHeight: hoursTumbler.currentItem.height + 2
+        text: i18nc("@action:button", "Reset to current time")
+        icon.name: "accept_time_event-symbolic"
+        display: Button.IconOnly
+
+        ToolTip.visible: hovered
+        ToolTip.text: text
+        ToolTip.delay: Kirigami.Units.toolTipDelay
+
+        onPressed: {
+            let currentTime = new Date();
+            root.minutes = currentTime.getMinutes();
+            root.hours = currentTime.getHours();
+            root.initializeTime();
+        }
     }
 
     Tumbler {
