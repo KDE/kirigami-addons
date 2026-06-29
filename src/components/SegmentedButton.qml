@@ -49,7 +49,7 @@ RowLayout {
 
             display: modelData.displayHint & Kirigami.DisplayHint.IconOnly ? QQC2.AbstractButton.IconOnly : QQC2.AbstractButton.TextBesideIcon
 
-         //   Layout.fillHeight: true
+            Layout.fillHeight: true
             Layout.minimumWidth: height
 
             icon {
@@ -131,8 +131,6 @@ RowLayout {
                 }
 
                 Kirigami.ShadowedRectangle {
-                    id: root
-
                     height: buttonDelegate.height
                     z: -1
                     color: Qt.rgba(0, 0, 0, 0.1)
