@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-15 00:42+0000\n"
+"POT-Creation-Date: 2026-06-30 00:42+0000\n"
 "PO-Revision-Date: 2024-04-23 19:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -185,18 +185,24 @@ msgctxt "@action:button"
 msgid "Go Next"
 msgstr "前进"
 
-#: dateandtime/TimePicker.qml:118
+#: dateandtime/TimePicker.qml:113
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset to current time"
+msgstr ""
+
+#: dateandtime/TimePicker.qml:138
 #, kde-format
 msgid "Hours"
 msgstr "小时"
 
-#: dateandtime/TimePicker.qml:141
+#: dateandtime/TimePicker.qml:161
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: dateandtime/TimePicker.qml:156
+#: dateandtime/TimePicker.qml:176
 #, kde-format
 msgid "Minutes"
 msgstr "分钟"
