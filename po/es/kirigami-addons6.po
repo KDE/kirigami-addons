@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-30 00:42+0000\n"
-"PO-Revision-Date: 2026-06-10 17:57+0100\n"
+"PO-Revision-Date: 2026-06-30 16:34+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -191,7 +191,7 @@ msgstr "Ir al siguiente"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to current time"
-msgstr ""
+msgstr "Reiniciar a la hora actual"
 
 #: dateandtime/TimePicker.qml:138
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-30 00:42+0000\n"
-"PO-Revision-Date: 2026-06-10 06:54+0200\n"
+"PO-Revision-Date: 2026-06-30 06:25+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -190,7 +190,7 @@ msgstr "Pojdi na naslednji"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to current time"
-msgstr ""
+msgstr "Ponastavi na trenutni čas"
 
 #: dateandtime/TimePicker.qml:138
 #, kde-format

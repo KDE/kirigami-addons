@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-30 00:42+0000\n"
-"PO-Revision-Date: 2026-06-10 09:45+0300\n"
+"PO-Revision-Date: 2026-06-30 20:02+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -190,7 +190,7 @@ msgstr "Перейти до наступного"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to current time"
-msgstr ""
+msgstr "Скинути до поточного часу"
 
 #: dateandtime/TimePicker.qml:138
 #, kde-format
