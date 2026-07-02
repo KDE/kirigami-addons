@@ -13,7 +13,6 @@
 #include <QQmlContext>
 #include <QQuickStyle>
 #include <QSurfaceFormat>
-#include <kcoreaddons_version.h>
 
 #ifndef Q_OS_IOS
 #include <KCrash>
