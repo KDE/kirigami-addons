@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-30 00:42+0000\n"
-"PO-Revision-Date: 2026-06-10 11:26+0300\n"
+"PO-Revision-Date: 2026-07-01 19:39+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.04.0\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -190,7 +190,7 @@ msgstr "Sonrakine Git"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to current time"
-msgstr ""
+msgstr "Şu anki zamana sıfırla"
 
 #: dateandtime/TimePicker.qml:138
 #, kde-format
