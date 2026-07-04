@@ -112,7 +112,7 @@ FormCardPage {
                     Layout.preferredWidth: height
                     Layout.maximumWidth: page.width / 3;
                     Layout.rightMargin: Kirigami.Units.largeSpacing
-                    source: page.aboutData.programLogo || Platform.Settings.applicationWindowIcon || page.aboutData.componentName
+                    source: page.aboutData.programLogo || Kirigami.Settings.applicationWindowIcon || page.aboutData.componentName
                 }
 
                 ColumnLayout {
