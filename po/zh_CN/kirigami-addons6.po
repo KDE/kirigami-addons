@@ -189,7 +189,7 @@ msgstr "前进"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to current time"
-msgstr ""
+msgstr "重置为当前时间"
 
 #: dateandtime/TimePicker.qml:138
 #, kde-format
