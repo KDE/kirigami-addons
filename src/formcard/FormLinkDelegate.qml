@@ -63,7 +63,7 @@ FormCard.FormButtonDelegate {
                     FormCard.AboutComponent.copyTextToClipboard(root.url)
                     const application = root.Controls.ApplicationWindow.window as Kirigami.AbstractApplicationWindow;
                     if (application) {
-                        application.showPassiveNotification(i18ndc("kirigamiaddons6", "@info:status", "Url copied to clipboard."))
+                        application.showPassiveNotification(i18ndc("kirigamiaddons6", "@info:status", "Link copied to clipboard."))
                     }
                 }
             }
