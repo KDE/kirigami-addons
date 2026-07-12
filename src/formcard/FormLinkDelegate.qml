@@ -12,8 +12,8 @@ import org.kde.kirigamiaddons.formcard as FormCard
    \inqmlmodule org.kde.kirigamiaddons.formcard
    \brief A form delegate that contains a URL.
 
-   It will open the url by default, allow to copy it if triggered with the
-   secondary mouse button.
+   It will open the URL by default, or allow to copy it if triggered with the
+   secondary mouse button or a long press.
 
    \since 1.8.0
  */
@@ -21,7 +21,7 @@ FormCard.FormButtonDelegate {
     id: root
 
     /*!
-       This property holds the url used by the form link delegate.
+       This property holds the URL used by the form link delegate.
      */
     property string url
 
