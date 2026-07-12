@@ -63,9 +63,9 @@ Item {
     /*!
        \brief Whether the source video should auto-load.
 
-       \deprecated due to changes in the Video API this will be removed in KF6. It
+       \deprecated Due to changes in the Video API this will be removed in KF6. It
                    currently does nothing but is kept to avoid breakage. The loss
-                   of this API has been worked around in a way that doesn't break KF5.
+                   of this API has been worked around in a way that doesn’t break KF5.
      */
     property bool autoLoad
 

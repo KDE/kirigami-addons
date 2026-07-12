@@ -88,7 +88,7 @@
 
     \l Onboarding::additionalData stores application-defined metadata on each
     step. Set \l Onboarding::additionalDataComponent to a component that reads
-    the current step's metadata through
+    the current step’s metadata through
     \c Onboarding.currentItem.additionalData. The component is inserted between
     the guidance text and the navigation controls.
 
@@ -112,7 +112,7 @@
 
     A step participates after either \l Onboarding::texts or
     \l Onboarding::additionalData has been assigned. It must belong to the
-    requested group, be a descendant of that group's source item, and provide
+    requested group, be a descendant of that group’s source item, and provide
     either non-empty text for the group or non-empty additional data.
 
     \note Only one walkthrough is active at a time. Starting another group
@@ -149,7 +149,7 @@
     \qmlmethod void Onboarding::stop()
 
     Stops the current walkthrough, hides its current step, removes the visual
-    effect, restores the source item's previous \c layer.enabled value, resets
+    effect, restores the source item’s previous \c layer.enabled value, resets
     \l Onboarding::currentIndex to \c -1, and emits
     \l Onboarding::finished.
 
@@ -195,7 +195,7 @@
 /*!
     \qmlproperty int Onboarding::currentIndex
 
-    This read-only property holds the current step's index in the collected
+    This read-only property holds the current step’s index in the collected
     step list. Disabled steps remain in that list and are skipped during
     navigation, so successive values are not necessarily contiguous.
 
@@ -215,7 +215,7 @@
 /*!
     \qmlproperty string Onboarding::currentText
 
-    This read-only property holds the current step's text for the active group.
+    This read-only property holds the current step’s text for the active group.
     The value is empty when no step is current or when the step contributes
     only \l Onboarding::additionalData.
 */
@@ -234,8 +234,8 @@
 /*!
     \qmlproperty real Onboarding::x
 
-    This read-only property holds the highlighted rectangle's x coordinate in
-    the source item's coordinate system. It includes the effective
+    This read-only property holds the highlighted rectangle’s x coordinate in
+    the source item’s coordinate system. It includes the effective
     \l Onboarding::padding and updates when the target or its ancestors move.
 
     The value is \c 0 when no step is current.
@@ -244,8 +244,8 @@
 /*!
     \qmlproperty real Onboarding::y
 
-    This read-only property holds the highlighted rectangle's y coordinate in
-    the source item's coordinate system. It includes the effective
+    This read-only property holds the highlighted rectangle’s y coordinate in
+    the source item’s coordinate system. It includes the effective
     \l Onboarding::padding and updates when the target or its ancestors move.
 
     The value is \c 0 when no step is current.
@@ -254,7 +254,7 @@
 /*!
     \qmlproperty real Onboarding::width
 
-    This read-only property holds the highlighted rectangle's width, including
+    This read-only property holds the highlighted rectangle’s width, including
     effective horizontal \l Onboarding::padding.
 
     The value is \c 0 when no step is current.
@@ -263,7 +263,7 @@
 /*!
     \qmlproperty real Onboarding::height
 
-    This read-only property holds the highlighted rectangle's height, including
+    This read-only property holds the highlighted rectangle’s height, including
     effective vertical \l Onboarding::padding.
 
     The value is \c 0 when no step is current.
@@ -274,7 +274,7 @@
 
     This property holds the requested space between the current target and the
     highlight border. Padding is applied symmetrically on each axis and clamped
-    independently so the highlight remains within the source item's bounds.
+    independently so the highlight remains within the source item’s bounds.
     Negative values therefore have the same visual result as \c 0.
 
     The value is shared by all walkthroughs. The default value is \c 0.
@@ -284,7 +284,7 @@
     \qmlproperty real Onboarding::blur
 
     This property holds the blur amount applied outside the highlighted
-    rectangle. It is forwarded to the blur effect's \c blur property.
+    rectangle. It is forwarded to the blur effect’s \c blur property.
 
     The value is shared by all walkthroughs. The default value is \c 0.55.
 */
@@ -343,7 +343,7 @@
 
     Whether the attached item defines an onboarding source area.
 
-    While its walkthrough is active, the module enables the source item's layer
+    While its walkthrough is active, the module enables the source item’s layer
     so it can apply the masked blur effect. The previous \c layer.enabled value
     is restored when the walkthrough stops. The source should be a common
     visual ancestor of all steps in the groups it owns.
@@ -421,7 +421,7 @@
 /*!
     \qmlattachedproperty int Onboarding::sequence
 
-    This read-only property holds the attached object's ordering key. The
+    This read-only property holds the attached object’s ordering key. The
     controller sorts participating steps by this value, which reflects
     attached-object creation order.
 */
@@ -455,7 +455,7 @@
 
     The example opens a Kirigami window and marks target controls with
     \l Onboarding attached properties. The overlay draws a highlight around the
-    current focus area, and the tooltip text is driven by the current target's
+    current focus area, and the tooltip text is driven by the current target’s
     attached \l Onboarding::texts property.
 
     \section1 Workflow
@@ -469,7 +469,7 @@
         \li Use \l Onboarding::aboutToShow handlers to keep the swipe view
             synchronized with tutorial progression.
         \li Supply \l Onboarding::additionalDataComponent so the tooltip can
-            show context-sensitive media from each step's
+            show context-sensitive media from each step’s
             \l Onboarding::additionalData.
     \endlist
 

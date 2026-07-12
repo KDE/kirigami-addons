@@ -32,7 +32,7 @@ T.Dialog {
        This property holds the dialogType. It can be either:
 
        \value MessageDialog.Success
-              For a sucess message.
+              For a success message.
        \value MessageDialog.Warning
               For a warning message.
        \value MessageDialog.Error
@@ -45,28 +45,28 @@ T.Dialog {
     property int dialogType: Components.MessageDialog.Success
 
     /*!
-       \brief This property holds the name of setting to store the "Don't show again" preference.
+       \brief This property holds the name of the setting to store the "Don’t show again" preference.
 
        If provided, a checkbox is added with which further notifications can be turned off.
-       The string is used to lookup and store the setting in the applications config file.
+       The string is used to lookup and store the setting in the application’s config file.
        The setting is stored in the "Notification Messages" group.
 
        When set, use openDialog() instead of open() to open this dialog.
 
-       \warning Overwriting the dialog's footer will disable this feature.
+       \warning Overwriting the dialog’s footer will disable this feature.
        \default ""
      */
     property string dontShowAgainName: ''
 
     /*!
-       \brief This property holds the name of the config group where the setting to store the "Don't show again" preference are stored.
+       \brief This property holds the name of the config group where the setting to store the "Don’t show again" preference is stored.
 
        \default "Notification Messages"
      */
     property string configGroupName: "Notification Messages"
 
     /*!
-      The text to use in the dialog's contents.
+      The text to use in the dialog’s contents.
      */
     property string subtitle: ''
 
@@ -128,7 +128,7 @@ T.Dialog {
     property bool _automaticallyClosed: false
 
     /*!
-       Open the dialog only if the user didn't check the "Do not remind me" checkbox
+       Open the dialog only if the user didn’t check the "Don’t show again" checkbox
        previously.
      */
     function openDialog(): void {

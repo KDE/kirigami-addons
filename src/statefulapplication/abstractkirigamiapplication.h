@@ -145,7 +145,7 @@ Q_SIGNALS:
 protected:
     /*! Entry points to declare your actions.
      *
-     *  Don't forget to call the parent implementation to get the following actions
+     *  Don’t forget to call the parent implementation to get the following actions
      *  setup for you:
      *
      * \list

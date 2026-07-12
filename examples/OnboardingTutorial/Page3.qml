@@ -42,7 +42,7 @@ Item {
 
         QQC2.Label {
             Layout.fillWidth: true
-            text: qsTr("I'm a label")
+            text: qsTr("I’m a label")
         }
     }
 }

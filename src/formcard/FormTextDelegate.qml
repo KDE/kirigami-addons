@@ -54,7 +54,7 @@ AbstractFormDelegate {
 
     /*!
        \brief This property holds an item that will be displayed before
-       the delegate's contents.
+       the delegate’s contents.
        \default null
      */
     property var leading: null
@@ -67,7 +67,7 @@ AbstractFormDelegate {
 
     /*!
        \brief This property holds an item that will be displayed after
-       the delegate's contents.
+       the delegate’s contents.
        \default null
      */
     property var trailing: null

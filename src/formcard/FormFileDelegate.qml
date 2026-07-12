@@ -188,7 +188,7 @@ AbstractFormDelegate {
                                 root.selectedFile = 'file://' + textField.text;
                                 root.accepted();
                             } else if (!textField.popup?.visible ?? true) {
-                                formErrorHandler.text = i18ndc("kirigami-addons6", "@info:status", "The path doesn't exist.");
+                                formErrorHandler.text = i18ndc("kirigami-addons6", "@info:status", "The path doesn’t exist.");
                                 formErrorHandler.visible = true;
                             }
                         } else {
@@ -197,7 +197,7 @@ AbstractFormDelegate {
                                 formErrorHandler.visible = false;
                                 root.accepted();
                             } else if (!textField.popup?.visible ?? true) {
-                                formErrorHandler.text = i18ndc("kirigami-addons6", "@info:status", "The file doesn't exist.");
+                                formErrorHandler.text = i18ndc("kirigami-addons6", "@info:status", "The file doesn’t exist.");
                                 formErrorHandler.visible = true;
                             }
                         }

@@ -49,7 +49,7 @@ public:
     QString m_componentDisplayName;
 
     //! Remove a action from our internal bookkeeping. Returns a nullptr if the
-    //! action doesn't belong to us.
+    //! action doesn’t belong to us.
     QAction *unlistAction(QAction *);
 
     QMap<QString, QAction *> actionByName;

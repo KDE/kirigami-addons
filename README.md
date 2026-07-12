@@ -86,7 +86,7 @@ in [KDE Invent](https://invent.kde.org/libraries/kirgiami-addons), our GitLab in
   the [KDE Bugtracking System](https://bugs.kde.org/enter_bug.cgi?format=guided&product=kirigami-addons). Please do not
   use the Issues
   tab to report bugs.
-* Is there a part of Kirigami Add-ons that's not translated? See
+* Is there a part of Kirigami Add-ons that’s not translated? See
   the [Getting Involved in Translation wiki page](https://community.kde.org/Get_Involved/translation) to see how
   you can help translate!
 

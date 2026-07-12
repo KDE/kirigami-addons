@@ -52,7 +52,7 @@ int main(int argCount, char *argVector[])
                                                QStringLiteral("Cannot create instances of BookTableModel"));
 
     QList<Book *> bookList;
-    bookList.append(new Book(QStringLiteral("Harry Potter and the Philosopher's Stone"), QStringLiteral("J.K. Rowling"), 1997, 4.5));
+    bookList.append(new Book(QStringLiteral("Harry Potter and the Philosopher’s Stone"), QStringLiteral("J.K. Rowling"), 1997, 4.5));
     bookList.append(new Book(QStringLiteral("Fantastic Beasts and Where to Find Them"), QStringLiteral("J.K. Rowling"), 2001, 4.3));
     bookList.append(new Book(QStringLiteral("The Dark Tower"), QStringLiteral("Stephen King"), 1982, 4.0));
     bookList.append(new Book(QStringLiteral("American Gods"), QStringLiteral("Neil Gaiman"), 2001, 4.1));

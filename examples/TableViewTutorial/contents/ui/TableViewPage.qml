@@ -119,25 +119,25 @@ Kirigami.Page {
 
         rows: [
             {
-                title: "Harry Potter and the Philosopher's Stone",
+                title: "Harry Potter and the Philosopher’s Stone",
                 author: "J.K. Rowling",
                 year: 1997,
                 rating: 4.5
             },
             {
-                title: "Harry Potter and the Philosopher's Stone",
+                title: "Harry Potter and the Philosopher’s Stone",
                 author: "J.K. Rowling",
                 year: 1997,
                 rating: 4.5
             },
             {
-                title: "Harry Potter and the Philosopher's Stone",
+                title: "Harry Potter and the Philosopher’s Stone",
                 author: "J.K. Rowling",
                 year: 1997,
                 rating: 4.5
             },
             {
-                title: "Harry Potter and the Philosopher's Stone",
+                title: "Harry Potter and the Philosopher’s Stone",
                 author: "J.K. Rowling",
                 year: 1997,
                 rating: 4.5

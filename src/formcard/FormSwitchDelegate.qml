@@ -50,7 +50,7 @@ T.SwitchDelegate {
 
     /*!
        \brief This property holds an item that will be displayed
-       to the left of the delegate's contents.
+       to the left of the delegate’s contents.
      */
     property var leading: null
 
@@ -61,7 +61,7 @@ T.SwitchDelegate {
 
     /*!
        \brief This property holds an item that will be displayed
-       to the right of the delegate's contents.
+       to the right of the delegate’s contents.
      */
     property var trailing: null
 

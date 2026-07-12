@@ -22,7 +22,7 @@ QQC2.AbstractButton {
 
     /*!
        \qmlproperty url source
-       \brief This property holds avatar's icon source.
+       \brief This property holds the avatar’s icon source.
        \sa {Avatar::source} {Avatar.source}
      */
     property alias source: avatar.source
@@ -58,7 +58,7 @@ QQC2.AbstractButton {
 
     /*!
        \qmlproperty int sourceSize
-       \brief This property holds the source size of the user's profile picture.
+       \brief This property holds the source size of the user’s profile picture.
      */
     property alias sourceSize: avatar.sourceSize
 
@@ -70,13 +70,13 @@ QQC2.AbstractButton {
 
     /*!
        \qmlproperty color initialsColor
-       \brief This property holds the color of the avatar's initials.
+       \brief This property holds the color of the avatar’s initials.
      */
     property alias initialsColor: avatar.initialsColor
 
     /*!
        \qmlproperty color defaultInitialsColor
-       \brief This property holds the default color of the avatar's initials.
+       \brief This property holds the default color of the avatar’s initials.
      */
     readonly property alias defaultInitialsColor: avatar.defaultInitialsColor
 

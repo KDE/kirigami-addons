@@ -140,18 +140,18 @@ bool KeySequenceHelperPrivate::conflictWithGlobalShortcuts(const QKeySequence &k
     }
 
     if (!shadow.isEmpty() || !shadowed.isEmpty()) {
-        const QString title = i18nc("@title:dialog This happen when a global shortcut is already defined with the same shortcut", "Global Shortcut Shadowing");
+        const QString title = i18nc("@title:dialog This happens when a global shortcut is already defined with the same shortcut", "Global Shortcut Shadowing");
         QString message;
         if (!shadowed.isEmpty()) {
-            message += i18nc("@info", "The '%1' key combination is shadowed by following global actions:\n").arg(keySequence.toString());
+            message += i18nc("@info", "The ‘%1’ key combination is shadowed by following global actions:\n").arg(keySequence.toString());
             for (const KGlobalShortcutInfo &info : std::as_const(shadowed)) {
-                message += i18nc("@info", "Action '%1' in context '%2'\n").arg(info.friendlyName(), info.contextFriendlyName());
+                message += i18nc("@info", "Action ‘%1’ in context ‘%2’\n").arg(info.friendlyName(), info.contextFriendlyName());
             }
         }
         if (!shadow.isEmpty()) {
-            message += i18nc("@info", "The '%1' key combination shadows following global actions:\n").arg(keySequence.toString());
+            message += i18nc("@info", "The ‘%1’ key combination shadows following global actions:\n").arg(keySequence.toString());
             for (const KGlobalShortcutInfo &info : std::as_const(shadow)) {
-                message += i18nc("@info", "Action '%1' in context '%2'\n").arg(info.friendlyName(), info.contextFriendlyName());
+                message += i18nc("@info", "Action ‘%1’ in context ‘%2’\n").arg(info.friendlyName(), info.contextFriendlyName());
             }
         }
 
@@ -192,8 +192,8 @@ bool KeySequenceHelperPrivate::stealStandardShortcut(KStandardShortcut::Standard
 #ifndef Q_OS_ANDROID
     const QString title = i18nc("@title:dialog", "Conflict with Standard Application Shortcut");
     const QString message = i18nc("@info",
-        "The '%1' key combination is also used for the standard action "
-        "\"%2\" that some applications use.\n"
+        "The ‘%1’ key combination is also used for the standard action "
+        "‘%2’ that some applications use.\n"
         "Do you really want to use it as a global shortcut as well?",
         seq.toString(QKeySequence::NativeText),
         KStandardShortcut::label(std));

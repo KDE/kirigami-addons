@@ -53,7 +53,7 @@ QQC2.Popup {
        The item will be the sized to fit the available space. If the item is
        larger than the available space it will be shrunk to fit.
 
-       \note If stretching the item isn't desirable the user needs to manage this,
+       \note If stretching the item isn’t desirable the user needs to manage this,
              e.g. with a holding item. See ImageMaximizeDelegate for an example.
 
        \sa ImageMaximizeDelegate

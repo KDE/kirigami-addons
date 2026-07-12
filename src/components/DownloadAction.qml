@@ -16,7 +16,7 @@ import org.kde.kirigami as Kirigami
    perform the download action itself.
 
    The most common use case for this is where a custom URI scheme is used that a
-   QML media component can't handle on it's own.
+   QML media component can’t handle on its own.
  */
 Kirigami.Action {
     id: root

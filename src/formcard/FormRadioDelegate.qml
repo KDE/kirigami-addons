@@ -53,7 +53,7 @@ T.RadioDelegate {
     property string description: ""
 
     /*!
-       \brief This property holds an item that will be displayed to the left of the delegate's contents.
+       \brief This property holds an item that will be displayed to the left of the delegate’s contents.
        \default null
      */
     property var leading: null
@@ -66,7 +66,7 @@ T.RadioDelegate {
 
     /*!
        \brief This property holds an item that will be displayed after the
-       delegate's contents.
+       delegate’s contents.
        \default null
      */
     property var trailing: null

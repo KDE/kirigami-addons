@@ -51,7 +51,7 @@ Item {
        Padding property.
 
        The default value is based on \l {Units} {Kirigami.Units}.
-       To ensure consistency it's recommended that you do not change this property.
+       To ensure consistency it’s recommended that you do not change this property.
      */
     property real topPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
     property real bottomPadding: Kirigami.Units.smallSpacing
@@ -59,7 +59,7 @@ Item {
     property real rightPadding: cardWidthRestricted ? Kirigami.Units.smallSpacing : Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
 
     /*!
-       \brief Whether the card's width is being restricted.
+       \brief Whether the card’s width is being restricted.
      */
     readonly property bool cardWidthRestricted: root.width > root.maximumWidth
 

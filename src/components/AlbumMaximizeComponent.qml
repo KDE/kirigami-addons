@@ -40,7 +40,7 @@ import org.kde.kirigamiaddons.components as KirigamiComponents
    }
    \endqml
 
-   \note The model doesn't have to be create using AlbumModelItem, it just
+   \note The model doesn’t have to be create using AlbumModelItem, it just
          requires the same roles (i.e. type, source, tempSource (optional) and
          caption (optional)).
  */
@@ -77,9 +77,9 @@ AbstractMaximizeComponent {
     /*!
        \brief Whether any video media should auto-load.
 
-       \deprecated due to changes in the Video API this will be removed in KF6. It
+       \deprecated Due to changes in the Video API this will be removed in KF6. It
                    currently does nothing but is kept to avoid breakage. The loss
-                   of this API has been worked around in a way that doesn't break KF5.
+                   of this API has been worked around in a way that doesn’t break KF5.
        \default true
      */
     property bool autoLoad: true

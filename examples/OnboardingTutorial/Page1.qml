@@ -97,7 +97,7 @@ Item {
                 id: textfield1
 
                 Layout.fillWidth: true
-                placeholderText: qsTr("I'm a text field")
+                placeholderText: qsTr("I’m a text field")
 
                 Onboarding.texts: [qsTr("This text field accepts free-form text.")]
             }

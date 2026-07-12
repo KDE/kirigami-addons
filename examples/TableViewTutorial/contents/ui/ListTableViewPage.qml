@@ -111,28 +111,28 @@ Kirigami.Page {
         id: __exampleModel
 
         ListElement {
-            title: "Harry Potter and the Philosopher's Stone"
+            title: "Harry Potter and the Philosopher’s Stone"
             author: "J.K. Rowling"
             year: 1997
             rating: 4.5
         }
 
         ListElement {
-            title: "Harry Potter and the Philosopher's Stone"
+            title: "Harry Potter and the Philosopher’s Stone"
             author: "J.K. Rowling"
             year: 1997
             rating: 4.5
         }
 
         ListElement {
-            title: "Harry Potter and the Philosopher's Stone"
+            title: "Harry Potter and the Philosopher’s Stone"
             author: "J.K. Rowling"
             year: 1997
             rating: 4.5
         }
 
         ListElement {
-            title: "Harry Potter and the Philosopher's Stone"
+            title: "Harry Potter and the Philosopher’s Stone"
             author: "J.K. Rowling"
             year: 1997
             rating: 4.5

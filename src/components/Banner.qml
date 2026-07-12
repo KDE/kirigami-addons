@@ -101,7 +101,7 @@ T.ToolBar {
     property bool showCloseButton: false
 
     /*!
-       This property holds the list of Kirigami Actions to show in the banner's
+       This property holds the list of Kirigami Actions to show in the banner’s
        internal ActionToolBar.
 
        Actions are added from left to right. If more actions

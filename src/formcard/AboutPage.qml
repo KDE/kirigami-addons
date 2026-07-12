@@ -22,7 +22,7 @@ import "private" as Private
    metadata of your program.
 
    It allows to show the copyright notice of the application together with
-   the contributors and some information of which platform it's running on.
+   the contributors and some information of which platform it’s running on.
 
    \since 0.11.0
  */
@@ -63,7 +63,7 @@ FormCardPage {
                   "spdx" : "GPL-2.0"
               }
           ],
-          "copyrightStatement" : "© 2010-2018 Plasma Development Team",
+          "copyrightStatement" : "© 2010–2018 Plasma Development Team",
           "desktopFileName" : "org.kde.kirigamiapp"
        }
        \endcode
@@ -417,7 +417,7 @@ FormCardPage {
                         icon.name: "get-hot-new-stuff-symbolic"
                         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                         QQC2.ToolTip.visible: hovered
-                        QQC2.ToolTip.text: i18nd("kirigami-addons6", "Visit %1's KDE Store page", modelData.name)
+                        QQC2.ToolTip.text: i18nd("kirigami-addons6", "Visit %1’s KDE Store page", modelData.name)
                         onClicked: Qt.openUrlExternally("https://store.kde.org/u/%1".arg(modelData.ocsUsername))
                     }
 

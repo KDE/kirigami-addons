@@ -97,7 +97,7 @@ QtObject {
     /*!
        \brief The current config page/window depending on platform.
 
-       Null if one currently doesn't exist.
+       Null if one currently doesn’t exist.
      */
     property QtObject configViewItem: null
 

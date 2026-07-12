@@ -49,7 +49,7 @@ T.CheckDelegate {
 
     /*!
        \brief This property holds an item that will be displayed to the left
-       of the delegate's contents.
+       of the delegate’s contents.
      */
     property var leading: null
 
@@ -60,7 +60,7 @@ T.CheckDelegate {
 
     /*!
        \brief This property holds an item that will be displayed to the right
-       of the delegate's contents.
+       of the delegate’s contents.
      */
     property var trailing: null
 

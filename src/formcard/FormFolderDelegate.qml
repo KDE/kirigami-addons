@@ -155,7 +155,7 @@ AbstractFormDelegate {
                             root.selectedFolder = 'file://' + textField.text;
                             root.accepted();
                         } else if (!textField.popup?.visible ?? true) {
-                            formErrorHandler.text = i18ndc("kirigami-addons6", "@info:status", "The folder doesn't exist.");
+                            formErrorHandler.text = i18ndc("kirigami-addons6", "@info:status", "The folder doesn’t exist.");
                             formErrorHandler.visible = true;
                         }
                     }

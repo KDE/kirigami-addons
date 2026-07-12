@@ -42,7 +42,7 @@ Kirigami.ApplicationWindow {
                 QQC2.Button {
                     Layout.fillWidth: true
                     text: "Force long text in second field"
-                    onClicked: overloadField.text = "Some very long text that's way longer than 20"
+                    onClicked: overloadField.text = "Some very long text that’s way longer than 20"
                 }
             }
         }

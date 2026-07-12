@@ -10,7 +10,8 @@ import org.kde.kirigami as Kirigami
 /*!
    \qmltype RadioSelector
    \inqmlmodule org.kde.kirigamiaddons.components
-   \brief A Component that allows sitching between multiple options.
+   \brief A component that allows switching between multiple options.
+
    Example:
    \qml
    Components.RadioSelector {
@@ -53,7 +54,7 @@ Item {
     /*!
        \brief This property holds the currently selected option.
 
-       By default, it's the first actions or -1 if no actions is set.
+       By default, it’s the first action or -1 if no actions are set.
      */
     property int selectedIndex: actions.length > 0 ? 0 : -1
 

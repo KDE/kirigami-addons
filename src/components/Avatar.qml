@@ -33,23 +33,23 @@ Item {
     /*!
        \brief This property holds the given name of a user.
 
-       The user's name will be used for generating initials and to provide the
+       The user’s name will be used for generating initials and to provide the
        accessible name for assistive technology.
      */
     property string name
 
     /*!
        \qmlproperty url source
-       \brief This property holds the source of the user's profile picture; an image.
+       \brief This property holds the source of the user’s profile picture; an image.
        \sa {Image::source} {Image.source}
      */
     property alias source: avatarImage.source
 
     /*!
        \qmlproperty var iconSource
-       \brief This property holds avatar's icon source.
+       \brief This property holds the avatar’s icon source.
 
-       This icon  is displayed when using an icon with Avatar.InitialsMode.UseIcon and
+       This icon is displayed when using an icon with Avatar.InitialsMode.UseIcon and
        Avatar.ImageNode.AlwaysShowInitials enabled.
 
        \sa {Icon::source} {Kirigami.Icon.source}
@@ -61,7 +61,7 @@ Item {
 
        Possible values are:
        \value Avatar.InitialsMode.UseInitials
-              Show the user's initials.
+              Show the user’s initials.
        \value Avatar.InitialsMode.UseIcon
               Show a generic icon.
 
@@ -77,7 +77,7 @@ Item {
 
        Possible values are:
        \value Avatar.ImageMode.AlwaysShowImage
-              Always try to show the image even if it hasn't loaded yet or is undefined.
+              Always try to show the image even if it hasn’t loaded yet or is undefined.
        \value Avatar.ImageMode.AdaptiveImageOrInitals
               Show the image if it is valid or initials if it is not.
        \value Avatar.ImageMode.AlwaysShowInitials
@@ -104,7 +104,7 @@ Item {
 
     /*!
        \qmlproperty int sourceSize
-       \brief This property holds the source size of the user's profile picture.
+       \brief This property holds the source size of the user’s profile picture.
        \sa {Image::sourceSize} {Image.sourceSize}
      */
     property alias sourceSize: avatarImage.sourceSize
@@ -117,7 +117,7 @@ Item {
     property color color: Components.NameUtils.colorsFromString(name)
 
     /*!
-       \brief This property holds the color of the avatar's initials.
+       \brief This property holds the color of the avatar’s initials.
 
        If not explicitly set, this defaults to defaultInitialsColor.
 
@@ -127,9 +127,9 @@ Item {
 
     /*!
        \qmlproperty color defaultInitialsColor
-       \brief This property holds the default color of the avatar's initials.
+       \brief This property holds the default color of the avatar’s initials.
 
-       It depends on the avatar's color.
+       It depends on the avatar’s color.
      */
     readonly property alias defaultInitialsColor: root.__textColor
 

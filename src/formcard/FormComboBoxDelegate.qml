@@ -148,7 +148,7 @@ AbstractFormDelegate {
 
     /*!
      *       \brief This property holds an item that will be displayed after the
-     *       delegate's contents.
+     *       delegate’s contents.
      *
      *       \default null
      *       \since 1.12.0

@@ -40,7 +40,7 @@ T.ItemDelegate {
     /*!
        This property holds whether the drop area is hovered.
 
-       This allow to emulate an hover effect which can't be done with the
+       This allows to emulate an hover effect which can’t be done with the
        normal hovered property as it is read only.
        \default false
      */

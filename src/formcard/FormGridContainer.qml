@@ -74,7 +74,7 @@ Item {
     property real rightPadding: horizontalPadding
 
     /*!
-       This property holds whether the card's width is being restricted.
+       This property holds whether the card’s width is being restricted.
      */
     readonly property bool cardWidthRestricted: root.width > root.maximumWidth
 

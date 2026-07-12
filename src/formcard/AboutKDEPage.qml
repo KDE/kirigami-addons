@@ -65,8 +65,8 @@ FormCardPage {
         FormDelegateSeparator {}
 
         FormTextDelegate {
-            text: i18nd("kirigami-addons6", "KDE is a world-wide community of software engineers, artists, writers, translators and creators who are committed to Free Software development. KDE produces the Plasma desktop environment, hundreds of applications, and the many software libraries that support them.\n\n\
-KDE is a cooperative enterprise: no single entity controls its direction or products. Instead, we work together to achieve the common goal of building the world's finest Free Software. Everyone is welcome to join and contribute to KDE, including you.")
+            text: i18nd("kirigami-addons6", "KDE is a world-wide community of software engineers, artists, writers, translators, and creators who are committed to Free Software development. KDE produces the Plasma desktop environment, hundreds of applications, and the many software libraries that support them.\n\n\
+KDE is a cooperative enterprise: no single entity controls its direction or products. Instead, we work together to achieve the common goal of building the world’s finest Free Software. Everyone is welcome to join and contribute to KDE, including you.")
             textItem.wrapMode: Text.WordWrap
         }
 
@@ -85,9 +85,9 @@ KDE is a cooperative enterprise: no single entity controls its direction or prod
 
     FormCard {
         FormTextDelegate {
-            text: i18nd("kirigami-addons6", "Software can always be improved, and the KDE team is ready to do so. However, you - the user - must tell us when something does not work as expected or could be done better.\n\n\
-KDE has a bug tracking system. Use the button below to file a bug, or use the program's About page to report a bug specific to this application.\n\n\
-If you have a suggestion for improvement then you are welcome to use the bug tracking system to register your wish. Make sure you use the severity called \"Wishlist\".")
+            text: i18nd("kirigami-addons6", "Software can always be improved, and the KDE team is ready to do so. However, you — the user — must tell us when something does not work as expected or could be done better.\n\n\
+KDE has a bug tracking system. Use the button below to file a bug, or use the program’s About page to report a bug specific to this application.\n\n\
+If you have a suggestion for improvement then you are welcome to use the bug tracking system to register your wish. Make sure you use the severity called “Wishlist”.")
             textItem.wrapMode: Text.WordWrap
         }
 
@@ -118,7 +118,7 @@ If you have a suggestion for improvement then you are welcome to use the bug tra
 
     FormCard {
         FormTextDelegate {
-            text: i18nd("kirigami-addons6", "You do not have to be a software developer to be a member of the KDE team. You can join the language teams that translate program interfaces. You can provide graphics, themes, sounds, and improved documentation. You decide!")
+            text: i18nd("kirigami-addons6", "You don’t have to be a software developer to be a member of the KDE team. You can join the language teams that translate program interfaces. You can provide graphics, themes, sounds, and improved documentation. You decide!")
             textItem.wrapMode: Text.WordWrap
         }
 

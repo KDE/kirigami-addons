@@ -50,7 +50,7 @@ Kirigami.ApplicationWindow {
 
     /*!
        \qmlproperty string windowName
-       This property holds the window's name.
+       This property holds the window’s name.
 
        This needs to be an unique identifier for your application and will be used to store
        the state of the window in your application config.

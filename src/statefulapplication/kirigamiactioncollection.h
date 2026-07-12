@@ -82,7 +82,7 @@ public:
     QString configGroup() const;
 
     /*!
-     * Returns whether this action collection's configuration should be global to KDE ( \c true ),
+     * Returns whether this action collection’s configuration should be global to KDE ( \c true ),
      * or specific to the application ( \c false ).
      */
     bool configIsGlobal() const;
@@ -93,7 +93,7 @@ public:
     void setConfigGroup(const QString &group);
 
     /*!
-     * Set whether this action collection's configuration should be global to KDE ( \c true ),
+     * Set whether this action collection’s configuration should be global to KDE ( \c true ),
      * or specific to the application ( \c false ).
      */
     void setConfigGlobal(bool global);
@@ -102,7 +102,7 @@ public:
      * Read all key associations from \a config.
      *
      * If \a config is zero, read all key associations from the
-     * application's configuration file KSharedConfig::openConfig(),
+     * application’s configuration file KSharedConfig::openConfig(),
      * in the group set by setConfigGroup().
      */
     void readSettings(KConfigGroup *config = nullptr);
@@ -148,7 +148,7 @@ public:
     /*!
      * Get the action with the given \a name from the action collection.
      *
-     * This won't return the action for the menus defined using a "<Menu>" tag
+     * This won’t return the action for the menus defined using a "<Menu>" tag
      * in XMLGUI files (e.g. "<Menu name="menuId">" in "applicationNameui.rc").
      * To access menu actions defined like this, use e.g.
      * \code
@@ -184,7 +184,7 @@ public:
     /*!
      * Set the \a componentName associated with this action collection.
      *
-     * \warning Don't call this method on a KirigamiActionCollection that contains
+     * \warning Don’t call this method on a KirigamiActionCollection that contains
      * actions. This is not supported.
      *
      * \a componentData the name which is to be associated with this action collection,
@@ -300,7 +300,7 @@ public:
 #ifdef K_DOXYGEN
     /*!
      * Creates a new standard action, adds it to the collection and connects the
-     * action's triggered(bool) signal to the specified receiver/member. The
+     * action’s triggered(bool) signal to the specified receiver/member. The
      * newly created action is also returned.
      *
      * The action can be retrieved later from the collection by its standard name as per
@@ -334,7 +334,7 @@ public:
 #ifdef K_DOXYGEN
     /*!
      * Creates a new action under the given name, adds it to the collection and
-     * connects the action's triggered(bool) signal to the specified
+     * connects the action’s triggered(bool) signal to the specified
      * receiver/member.
      *
      * The type of the action is specified by the template parameter ActionType.
@@ -368,7 +368,7 @@ public:
 #ifdef K_DOXYGEN
     /*!
      * Creates a new action under the given name to the collection and connects
-     * the action's triggered(bool) signal to the specified receiver/member. The
+     * the action’s triggered(bool) signal to the specified receiver/member. The
      * newly created action is returned.
      *
      * \a name The internal name of the action (e.g. "file-open").
@@ -426,14 +426,14 @@ public:
     Q_INVOKABLE static void setDefaultShortcuts(QAction *action, const QList<QKeySequence> &shortcuts);
 
     /*!
-     * Returns true if the given action's shortcuts may be configured by the user.
+     * Returns true if the given action’s shortcuts may be configured by the user.
      *
      * \a action the action for the hint should be verified.
      */
     static bool isShortcutsConfigurable(QAction *action);
 
     /*!
-     * Indicate whether the user may configure the action's shortcuts.
+     * Indicate whether the user may configure the action’s shortcuts.
      *
      * \a action the action for the hint should be verified.
      *

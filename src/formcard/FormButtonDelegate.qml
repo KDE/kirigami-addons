@@ -48,7 +48,7 @@ AbstractFormDelegate {
 
     /*!
        \brief This property holds an item that will be displayed to the
-       left of the delegate's contents.
+       left of the delegate’s contents.
 
        \default null
      */
@@ -65,7 +65,7 @@ AbstractFormDelegate {
 
     /*!
        \brief This property holds an item that will be displayed to the
-       right of the delegate's contents.
+       right of the delegate’s contents.
 
        \default null
        \since 1.12.0
