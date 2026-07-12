@@ -382,7 +382,7 @@ Kirigami.ApplicationWindow {
                             }
                         },
                         MobileForm.FormGridContainer.InfoCard {
-                            title: "RadiokDelegate with subtitle"
+                            title: "RadioDelegate with subtitle"
                             action: Kirigami.Action {
                                 onTriggered: applicationWindow().pageStack.push(radioDelegateSubtitleComponent);
                             }
