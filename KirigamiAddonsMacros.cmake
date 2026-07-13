@@ -30,4 +30,7 @@ set(KIRIGAMI_ADDONS_ICONS
     object-rotate-right
     add-subtitle
     document-save
+    code-context-symbolic
+    im-mastodon
+    im-matrix
 )
