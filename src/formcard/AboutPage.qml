@@ -78,7 +78,11 @@ FormCardPage {
        Default: "https://community.kde.org/Get_Involved" when the
        application ID starts with "org.kde.", otherwise empty.
      */
-    property url getInvolvedUrl: aboutData.desktopFileName.startsWith("org.kde.") ? "https://community.kde.org/Get_Involved" : ""
+    property url getInvolvedUrl: {
+        if (aboutData.hasOwnProperty("url") && aboutData.url(Core.AboutUrlType?.Contribute) !== "")
+            return aboutData.url(Core.AboutUrlType?.Contribute);
+        return aboutData.desktopFileName.startsWith("org.kde.") ? "https://community.kde.org/Get_Involved" : "";
+    }
 
     /*!
        \brief This property holds a link to a "Donate" page.
@@ -86,7 +90,11 @@ FormCardPage {
        Default: "https://www.kde.org/donate" when the
        application ID starts with "org.kde.", otherwise empty.
      */
-    property url donateUrl: aboutData.desktopFileName.startsWith("org.kde.") ? "https://www.kde.org/donate" : ""
+    property url donateUrl: {
+        if (page.aboutData.hasOwnProperty("url") && aboutData.url(Core.AboutUrlType?.Donation) !== "")
+            return aboutData.url(Core.AboutUrlType?.Donation);
+        return aboutData.desktopFileName.startsWith("org.kde.") ? "https://www.kde.org/donate" : ""
+    }
 
     /*!
        \brief This property defines whether to show "Libraries in use".
@@ -232,6 +240,9 @@ FormCardPage {
               || donateDelegate.visible
               || homepageDelegate.visible
               || bugDelegate.visible
+              || matrixRoomDelegate.visible
+              || mastodonDelegate.visible
+              || sourceCodeDelegate.visible
 
         FormLinkDelegate {
             id: getInvolvedDelegate
@@ -291,6 +302,59 @@ FormCardPage {
 
             icon.name: "tools-report-bug-symbolic"
             text: i18nd("kirigami-addons6", "Report a Bug")
+            visible: url.length > 0
+        }
+
+        FormDelegateSeparator {
+            visible: matrixRoomDelegate.visible
+        }
+
+        FormLinkDelegate {
+            id: matrixRoomDelegate
+            url: {
+                if (!page.aboutData.hasOwnProperty("url")) // since KF 6.29
+                    return "";
+                const s = page.aboutData.url(Core.AboutUrlType?.XKDEMatrixRoom);
+                return s.startsWith("http") ? s : s != "" ? "https://matrix.to/#/" + s : "";
+            }
+            icon.name: "im-matrix"
+            text: i18nd("kirigami-addons6", "Matrix Channel")
+            visible: url.length > 0
+        }
+
+        FormDelegateSeparator {
+            visible: mastodonDelegate.visible
+        }
+
+        FormLinkDelegate {
+            id: mastodonDelegate
+            url: {
+                if (!page.aboutData.hasOwnProperty("url")) // since KF 6.29
+                    return "";
+                const s = page.aboutData.url(Core.AboutUrlType?.XKDEMastodon);
+                if (s == "" || s.startsWith("http"))
+                    return s;
+                const m = s.match(/^(@\S*)@(\S+)$/);
+                return m ? ("https://" + m[2] + "/" + m[1]) : ""
+            }
+            icon.name: "im-mastodon"
+            text: i18nd("kirigami-addons6", "Mastodon")
+            visible: url.length > 0
+        }
+
+        FormDelegateSeparator {
+            visible: sourceCodeDelegate.visible
+        }
+
+        FormLinkDelegate {
+            id: sourceCodeDelegate
+            url: {
+                if (!page.aboutData.hasOwnProperty("url")) // since KF 6.29
+                    return "";
+                page.aboutData.url(Core.AboutUrlType?.VCSBrowser)
+            }
+            icon.name: "code-context-symbolic"
+            text: i18nd("kirigami-addons6", "Source Code")
             visible: url.length > 0
         }
     }
