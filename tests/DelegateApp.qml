@@ -155,7 +155,6 @@ Kirigami.ApplicationWindow {
                 delegate: Delegates.IndicatorItemDelegate {
                     id: delegate
 
-                    required property int index
                     required property int modelData
 
                     unread: Math.random() > 0.3
@@ -183,7 +182,6 @@ Kirigami.ApplicationWindow {
                 delegate: Delegates.IndicatorItemDelegate {
                     id: delegate
 
-                    required property int index
                     required property int modelData
 
                     unread: Math.random() > 0.3
@@ -346,19 +344,19 @@ Kirigami.ApplicationWindow {
                             }
                         },
                         MobileForm.FormGridContainer.InfoCard {
-                            title: "ReadIndicatorItemDelegate"
-                            action: Kirigami.Action {
-                                onTriggered: applicationWindow().pageStack.push(indicatorItemDelegatePageComponent);
-                            }
-                        },
-                        MobileForm.FormGridContainer.InfoCard {
                             title: "RoundedItemDelegate with subtitle"
                             action: Kirigami.Action {
                                 onTriggered: applicationWindow().pageStack.push(subtitleRoundedItemDelegatePageComponent);
                             }
                         },
                         MobileForm.FormGridContainer.InfoCard {
-                            title: "ReadIndicatorItemDelegate with subtitle"
+                            title: "IndicatorItemDelegate"
+                            action: Kirigami.Action {
+                                onTriggered: applicationWindow().pageStack.push(indicatorItemDelegatePageComponent);
+                            }
+                        },
+                        MobileForm.FormGridContainer.InfoCard {
+                            title: "IndicatorItemDelegate with subtitle"
                             action: Kirigami.Action {
                                 onTriggered: applicationWindow().pageStack.push(subtitleIndicatorItemDelegatePageComponent);
                             }
