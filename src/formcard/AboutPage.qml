@@ -78,7 +78,11 @@ FormCardPage {
        Default: "https://community.kde.org/Get_Involved" when the
        application ID starts with "org.kde.", otherwise empty.
      */
-    property url getInvolvedUrl: aboutData.desktopFileName.startsWith("org.kde.") ? "https://community.kde.org/Get_Involved" : ""
+    property url getInvolvedUrl: {
+        if (aboutData.url(Core.AboutUrlType.Contribute) !== "")
+            return aboutData.url(Core.AboutUrlType.Contribute);
+        return aboutData.desktopFileName.startsWith("org.kde.") ? "https://community.kde.org/Get_Involved" : "";
+    }
 
     /*!
        \brief This property holds a link to a "Donate" page.
@@ -86,7 +90,11 @@ FormCardPage {
        Default: "https://www.kde.org/donate" when the
        application ID starts with "org.kde.", otherwise empty.
      */
-    property url donateUrl: aboutData.desktopFileName.startsWith("org.kde.") ? "https://www.kde.org/donate" : ""
+    property url donateUrl: {
+        if (aboutData.url(Core.AboutUrlType.Donation) !== "")
+            return aboutData.url(Core.AboutUrlType.Donation);
+        return aboutData.desktopFileName.startsWith("org.kde.") ? "https://www.kde.org/donate" : ""
+    }
 
     /*!
        \brief This property defines whether to show "Libraries in use".
@@ -292,6 +300,33 @@ FormCardPage {
             icon.name: "tools-report-bug-symbolic"
             text: i18nd("kirigami-addons6", "Report a Bug")
             visible: url.length > 0
+        }
+
+        FormDelegateSeparator {
+            visible: page.aboutData.url(Core.AboutUrlType.VCSBrowser) !== ""
+        }
+
+        FormLinkDelegate {
+            id: sourceCodeDelegate
+            url: page.aboutData.url(Core.AboutUrlType.VCSBrowser)
+            icon.name: "code-context-symbolic"
+            text: i18nd("kirigami-addons6", "Source Code")
+            visible: url.length > 0
+        }
+
+        FormDelegateSeparator {
+            visible: page.aboutData.url(Core.AboutUrlType.XKDEMatrixRoom) !== ""
+        }
+
+        FormLinkDelegate {
+            id: matrixRoomDelegate
+            url: {
+                const s = page.aboutData.url(Core.AboutUrlType.XKDEMatrixRoom);
+                return s.startsWith("http") ? s : "https://matrix.to/#/" + s;
+            }
+            icon.name: "org.kde.neochat.tray"
+            text: i18nd("kirigami-addons6", "Matrix Channel")
+            visible: page.aboutData.url(Core.AboutUrlType.XKDEMatrixRoom) !== ""
         }
     }
 
