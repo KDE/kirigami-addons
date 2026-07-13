@@ -4,8 +4,9 @@
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
+
 import org.kde.kirigami as Kirigami
-import org.kde.Component_Test
+import org.kde.kirigamiaddons.components as Components
 
 Kirigami.ApplicationWindow {
     id: root
@@ -16,6 +17,11 @@ Kirigami.ApplicationWindow {
     minimumHeight: Kirigami.Units.gridUnit * 20
 
     pageStack.initialPage: page
+
+    // Dummy implementation of ki18n
+    function i18n(text) {
+        return text;
+    }
 
     Kirigami.Page {
         id: page
@@ -38,7 +44,7 @@ Kirigami.ApplicationWindow {
                         Layout.fillWidth: true
                     }
 
-                    RadioSelector {
+                    Components.RadioSelector {
                         Layout.maximumHeight: Math.round(Kirigami.Units.gridUnit * 1.5)
 
                         id: selector
@@ -74,7 +80,7 @@ Kirigami.ApplicationWindow {
                 Layout.alignment: Qt.AlignCenter
                 text: "Search in:"
             }
-            RadioSelector {
+            Components.RadioSelector {
                 consistentWidth: false
                 actions: [
                     Kirigami.Action {
