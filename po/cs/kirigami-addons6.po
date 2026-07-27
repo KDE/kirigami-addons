@@ -1,31 +1,32 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
 # SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2026 Libor Filípek <libor.filipek@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-30 00:42+0000\n"
-"PO-Revision-Date: 2024-08-28 09:36+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-07-26 23:38+0200\n"
+"Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Poedit 3.9\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Vít Pelčák"
+msgstr "Vít Pelčák,Libor Filípek"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "vit@pelcak.org"
+msgstr "vit@pelcak.org,libor.filipek@gmail.com"
 
 #: components/AbstractMaximizeComponent.qml:137
 #, kde-format
@@ -96,7 +97,7 @@ msgstr "Jít zpět"
 #, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
-msgstr ""
+msgstr "Zavřít"
 
 #: components/DownloadAction.qml:40
 #, kde-format
@@ -189,7 +190,7 @@ msgstr "Přejít na následující"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to current time"
-msgstr ""
+msgstr "Obnovit na aktuální datum"
 
 #: dateandtime/TimePicker.qml:138
 #, kde-format
@@ -211,70 +212,71 @@ msgstr "Minuty"
 #, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: formcard/aboutcomponent.cpp:32
 #, kde-format
 msgid "KDE Frameworks"
-msgstr "KDE Frameworks "
+msgstr "KDE Frameworks"
 
 #: formcard/aboutcomponent.cpp:33
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
-msgstr ""
+msgstr "Soubor knihoven vytvořených komunitou KDE za účelem rozšíření Qt."
 
 #: formcard/aboutcomponent.cpp:38
 #, kde-format
 msgid "Qt"
 msgstr "Qt"
 
+# 55869 AttribValues/description
 #: formcard/aboutcomponent.cpp:39
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
-msgstr ""
+msgstr "Aplikační rámec pro vývoj aplikací napříč platformami."
 
 #: formcard/aboutcomponent.cpp:40
 #, kde-format
 msgid "Using %1 and built against %2"
-msgstr ""
+msgstr "S využitím %1 a sestaveno proti %2"
 
 #: formcard/aboutcomponent.cpp:45
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Unknown/Default"
-msgstr ""
+msgstr "Neznámé/Výchozí"
 
 #: formcard/aboutcomponent.cpp:47
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: formcard/aboutcomponent.cpp:50
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Snap"
-msgstr ""
+msgstr "Snap"
 
 #: formcard/aboutcomponent.cpp:53
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "AppImage"
-msgstr ""
+msgstr "AppImage"
 
 #: formcard/aboutcomponent.cpp:55
 #, kde-format
 msgctxt "@info"
 msgid "Distribution method."
-msgstr ""
+msgstr "Metoda distribuce."
 
 #: formcard/aboutcomponent.cpp:58
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
-msgstr ""
+msgstr "Podkladová platforma."
 
 #: formcard/AboutKDEPage.qml:24
 #: statefulapplication/abstractkirigamiapplication.cpp:174
@@ -474,7 +476,7 @@ msgstr "Zkopírovat do schránky"
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
-msgstr ""
+msgstr "Informace o systému byly zkopírovány do schránky."
 
 #: formcard/AboutPage.qml:321
 #, kde-format
@@ -535,13 +537,13 @@ msgstr "Nenastaveno"
 #, kde-format
 msgctxt "@info:status"
 msgid "The path doesn't exist."
-msgstr ""
+msgstr "Cesta neexistuje."
 
 #: formcard/FormFileDelegate.qml:200
 #, kde-format
 msgctxt "@info:status"
 msgid "The file doesn't exist."
-msgstr ""
+msgstr "Soubor neexistuje."
 
 #: formcard/FormFileDelegate.qml:267
 #, kde-format
@@ -553,43 +555,43 @@ msgstr "Vyberte soubor"
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No file selected"
-msgstr ""
+msgstr "Není vybrán žádný soubor"
 
 #: formcard/FormFolderDelegate.qml:158
 #, kde-format
 msgctxt "@info:status"
 msgid "The folder doesn't exist."
-msgstr ""
+msgstr "Složka neexistuje."
 
 #: formcard/FormFolderDelegate.qml:215
 #, kde-format
 msgctxt "@action:button"
 msgid "Select folder"
-msgstr ""
+msgstr "Vybrat složku"
 
 #: formcard/FormFolderDelegate.qml:222
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No folder selected"
-msgstr ""
+msgstr "Žádná složka není vybrána"
 
 #: formcard/FormLinkDelegate.qml:54
 #, kde-format
 msgctxt "@action:inmnenu"
 msgid "Open Link"
-msgstr ""
+msgstr "Otevřít odkaz"
 
 #: formcard/FormLinkDelegate.qml:60
 #, kde-format
 msgctxt "@action:inmnenu"
 msgid "Copy Link to Clipboard"
-msgstr ""
+msgstr "Kopírovat odkaz do schránky"
 
 #: formcard/FormLinkDelegate.qml:66
 #, kde-format
 msgctxt "@info:status"
 msgid "Url copied to clipboard."
-msgstr ""
+msgstr "URL zkopírováno do schránky."
 
 #: formcard/FormPasswordFieldDelegate.qml:308
 #: formcard/FormTextAreaDelegate.qml:185 formcard/FormTextFieldDelegate.qml:324
@@ -605,12 +607,10 @@ msgid "Previous"
 msgstr "Předchozí"
 
 #: onboarding/private/OnboardingOverlay.qml:202
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Go Previous"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Previous"
-msgstr "Přejít na předchozí"
+msgstr "Předchozí"
 
 #: onboarding/private/OnboardingOverlay.qml:221
 #, kde-format
@@ -619,12 +619,10 @@ msgid "Next"
 msgstr "Další"
 
 #: onboarding/private/OnboardingOverlay.qml:222
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Go Next"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Next"
-msgstr "Přejít na následující"
+msgstr "Další"
 
 #: onboarding/private/OnboardingOverlay.qml:237
 #, kde-format
@@ -759,7 +757,7 @@ msgstr "Odstranit slovo"
 #, kde-format
 msgctxt "@action:button"
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Klávesové zkratky"
 
 #: settings/SpellcheckingConfigurationModule.qml:15
 #, kde-format
@@ -795,13 +793,13 @@ msgctxt ""
 "@title:dialog This happen when a global shortcut is already defined with the "
 "same shortcut"
 msgid "Global Shortcut Shadowing"
-msgstr ""
+msgstr "Blokování globálních zkratek"
 
 #: statefulapplication/private/keysequencehelper.cpp:146
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination is shadowed by following global actions:\n"
-msgstr ""
+msgstr "Klávesová zkratka '%1' je blokována následujícími globálními akcemi:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:148
 #: statefulapplication/private/keysequencehelper.cpp:154
@@ -814,7 +812,7 @@ msgstr "Činnost '%1' v kontextu '%2'\n"
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination shadows following global actions:\n"
-msgstr ""
+msgstr "Klávesová zkratka '%1' blokuje následující globální akce:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:193
 #, kde-format
@@ -865,7 +863,7 @@ msgstr "Vymazat posloupnost kláves"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel Key Sequence Recording"
-msgstr ""
+msgstr "Zrušit záznam posloupnosti kláves"
 
 #: statefulapplication/private/KQuickCommandBarPage.qml:55
 #, kde-format
@@ -909,7 +907,7 @@ msgstr "Alternativa:"
 #, kde-format
 msgctxt "Placeholder message"
 msgid "No shortcuts found"
-msgstr ""
+msgstr "Nebyly nalezeny žádné zkratky"
 
 #: statefulapplication/shortcutsmodel.cpp:41
 #, kde-format
