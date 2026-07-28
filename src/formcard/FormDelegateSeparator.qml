@@ -48,12 +48,14 @@ Kirigami.Separator {
 
     // Automatically recalculates when _siblings or visible changes
     readonly property int _index: {
-        if (!visible)
+        if (!visible) {
             return -1;
+        }
 
         for (let i = 0; i < _siblings.length; ++i) {
-            if (_siblings[i] === root)
+            if (_siblings[i] === root) {
                 return i;
+            }
         }
         return -1;
     }
@@ -67,8 +69,8 @@ Kirigami.Separator {
             root.hMargins: 0
         }
 
-        function isActive(item) {
-            return Boolean(item?.background?.visible && item.enabled && (item.visualFocus || item.pressed || (item.hovered && !Kirigami.Settings.tabletMode)));
+        function isActive(item: Item): bool {
+            return item?.background?.visible && item.enabled && (item.visualFocus || item.pressed || (item.hovered && !Kirigami.Settings.tabletMode));
         }
     }
 
