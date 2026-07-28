@@ -29,31 +29,66 @@ Kirigami.Separator {
     /*!
        \brief The delegate immediately above the separator.
      */
-    property Item above
+    property Item above: _index > 0 ? _siblings[_index - 1] : null
+
     /*!
        \brief The delegate immediately below the separator.
      */
-    property Item below
+    property Item below: _index !== -1 && _index < _siblings.length - 1 ? _siblings[_index + 1] : null
 
-    Layout.leftMargin: parent._internal_formcard_margins ? parent._internal_formcard_margins : Kirigami.Units.largeSpacing
-    Layout.rightMargin: parent._internal_formcard_margins ? parent._internal_formcard_margins : Kirigami.Units.largeSpacing
+    opacity: 0.5
+
+    property real hMargins: parent._internal_formcard_margins ? parent._internal_formcard_margins : Kirigami.Units.largeSpacing
+    Layout.leftMargin: hMargins
+    Layout.rightMargin: hMargins
     Layout.fillWidth: true
 
-    // We need to initialize above and below later otherwise nextItemInFocusChain
-    // will return the element itself
-    Timer {
-        interval: 500
-        running: !root.above || !root.below
-        onTriggered: {
-            if (!root.above) {
-                root.above = root.nextItemInFocusChain(true);
+    // QML automatically tracks parent.visibleChildren for changes
+    readonly property var _siblings: parent ? parent.visibleChildren : []
+
+    // Automatically recalculates when _siblings or visible changes
+    readonly property int _index: {
+        if (!visible) {
+            return -1;
+        }
+
+        for (let i = 0; i < _siblings.length; ++i) {
+            if (_siblings[i] === root) {
+                return i;
             }
-            if (!root.below) {
-                root.below = root.nextItemInFocusChain(false);
-            }
+        }
+        return -1;
+    }
+
+    states: State {
+        name: "invisible"
+        when: isActive(root.above) || isActive(root.below)
+
+        PropertyChanges {
+            root.opacity: 0
+            root.hMargins: 0
+        }
+
+        function isActive(item: Item): bool {
+            return item?.background?.visible && item.enabled && (item.visualFocus || item.pressed || (item.hovered && !Kirigami.Settings.tabletMode));
         }
     }
 
-    opacity: (!above || above.background === null || (!above.background?.visible ?? false) || !(above.enabled && ((above.visualFocus || above.hovered && !Kirigami.Settings.tabletMode) || above.pressed))) &&
-        (!below || below.background === null || (!below.background?.visible ?? false) || !(below.enabled && ((below.visualFocus || below.hovered && !Kirigami.Settings.tabletMode) || below.pressed))) ? 0.5 : 0
+    transitions: Transition {
+        to: "invisible"
+        reversible: true
+
+        ParallelAnimation {
+            PropertyAnimation {
+                property: "hMargins"
+                duration: Kirigami.Units.longDuration
+                easing.type: Easing.InOutQuad
+            }
+            PropertyAnimation {
+                property: "opacity"
+                duration: Kirigami.Units.longDuration
+                easing.type: Easing.InOutQuad
+            }
+        }
+    }
 }
