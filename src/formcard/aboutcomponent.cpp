@@ -10,6 +10,13 @@
 #endif
 #include <QGuiApplication>
 #include <QClipboard>
+#include <QUrlQuery>
+
+#ifdef QT_DBUS_LIB
+#include <QDBusInterface>
+#include <QDBusPendingCallWatcher>
+#include <QDBusPendingReply>
+#endif
 
 using namespace Qt::StringLiterals;
 
@@ -58,6 +65,52 @@ QList<KAboutComponent> AboutComponent::components() const
     allComponents.prepend(KAboutComponent(platform, i18nc("@info", "Underlying platform.")));
 
     return allComponents;
+}
+
+QUrl AboutComponent::appEditUrl()
+{
+#if defined(Q_OS_LINUX) && KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 29, 0) && defined(QT_DBUS_LIB)
+    static bool schemaSupported = [this]() {
+        QDBusInterface iface("org.freedesktop.portal.Desktop"_L1, "/org/freedesktop/portal/desktop"_L1, "org.freedesktop.portal.OpenURI"_L1);
+        auto pendingReply = iface.asyncCall("SchemeSupported"_L1, "kde-appedit"_L1, QVariantMap());
+        auto watcher = new QDBusPendingCallWatcher(pendingReply, this);
+        QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
+            watcher->deleteLater();
+            if (watcher->isError()) {
+                qDebug() << watcher->error();
+                return;
+            }
+            QDBusPendingReply<bool> reply(*watcher);
+            schemaSupported = reply;
+            if (schemaSupported) {
+                Q_EMIT appEditUrlChanged();
+            }
+        });
+        return false;
+    }();
+
+    if (!schemaSupported) {
+        return {};
+    }
+
+    const auto gitRepo = KAboutData::applicationData().url(KAboutData::VCSBrowser);
+    const auto id = qGuiApp->desktopFileName();
+
+    if (gitRepo.isEmpty() || id.isEmpty() || id.size() <= QCoreApplication::organizationDomain().size() + 1) {
+        // desktop name when not set is initialized to the reverse org domain
+        return {};
+    }
+
+    QUrl url;
+    url.setScheme(u"kde-appedit"_s);
+    QUrlQuery query;
+    query.addQueryItem(u"git"_s, gitRepo);
+    query.addQueryItem(u"id"_s, id);
+    url.setQuery(query);
+    return url;
+#else
+    return {};
+#endif
 }
 
 void AboutComponent::copyToClipboard()

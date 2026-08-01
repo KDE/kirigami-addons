@@ -38,6 +38,9 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS Kirigami I18n Config Core
 if (BUILD_TESTING)
     find_package(Qt6QuickTest ${QT_REQUIRED_VERSION} CONFIG QUIET)
 endif()
+if(LINUX)
+    find_package(Qt6 ${QT_REQUIRED_VERSION} OPTIONAL_COMPONENTS DBus)
+endif()
 if(ANDROID)
     find_package(Gradle REQUIRED)
     find_package(KF6 6.27 REQUIRED COMPONENTS Crash) # Android support was added in KF 6.27 only

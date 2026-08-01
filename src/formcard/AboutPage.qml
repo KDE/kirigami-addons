@@ -357,6 +357,18 @@ FormCardPage {
             text: i18nd("kirigami-addons6", "Source Code")
             visible: url.length > 0
         }
+
+        FormDelegateSeparator {
+            visible: appEditDelegate.visible
+        }
+
+        FormLinkDelegate {
+            id: appEditDelegate
+            url: FormCardModule.AboutComponent.appEditUrl
+            icon.name: "document-edit-symbolic"
+            text: i18nd("kirigami-addons6", "Edit Application")
+            visible: !Kirigami.Settings.isMobile && url.length > 0
+        }
     }
 
     FormHeader {

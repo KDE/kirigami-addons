@@ -15,13 +15,18 @@ class AboutComponent : public QObject
     QML_SINGLETON
 
     Q_PROPERTY(QList<KAboutComponent> components READ components CONSTANT)
+    Q_PROPERTY(QUrl appEditUrl READ appEditUrl NOTIFY appEditUrlChanged)
 
 public:
     explicit AboutComponent(QObject *parent = nullptr);
     ~AboutComponent();
 
-    QList<KAboutComponent> components() const;
+    [[nodiscard]] QList<KAboutComponent> components() const;
+    [[nodiscard]] QUrl appEditUrl();
 
     Q_INVOKABLE void copyToClipboard();
     Q_INVOKABLE void copyTextToClipboard(const QString &url);
+
+Q_SIGNALS:
+    void appEditUrlChanged();
 };
