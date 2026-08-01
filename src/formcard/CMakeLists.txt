@@ -87,5 +87,8 @@ target_link_libraries(formcardplugin PRIVATE
     KF6::I18n
     KF6::CoreAddons
 )
+if(TARGET Qt6::DBus)
+    target_link_libraries(formcardplugin PRIVATE Qt6::DBus)
+endif()
 
 ecm_finalize_qml_module(formcardplugin DESTINATION ${KDE_INSTALL_QMLDIR} EXPORT KirigamiAddonsTargets)
