@@ -188,7 +188,7 @@ msgstr "Prejsť na nasledujúci"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to current time"
-msgstr ""
+msgstr "Nastaviť na aktuálny čas"
 
 #: dateandtime/TimePicker.qml:138
 #, kde-format
