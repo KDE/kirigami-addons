@@ -1,7 +1,7 @@
 # Translation for kirigami-addons.po to Euskara/Basque (eu).
 # Copyright (C) 2021-2025 This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
-# SPDX-FileCopyrightText: 2023, 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023-2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Iñigo Salvador Azurmendi <xalba@ni.eus>, 2021, 2022, 2023, 2024, 2025.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-30 00:42+0000\n"
-"PO-Revision-Date: 2025-07-28 14:02+0200\n"
+"PO-Revision-Date: 2026-08-18 00:26+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -798,9 +798,9 @@ msgid ""
 "shortcut.\n"
 "Please choose another one."
 msgstr ""
-"F12 tekla erreserbatuta dago Windows-en, beraz ezin da erabili lasterbide "
-"orokor gisa.\n"
-"Mesedez, hautatu beste bat."
+"Windowsen F12 tekla erreserbatuta dago; beraz, ezin da lasterbide global "
+"terako erabili.\n"
+"Hautatu beste bat."
 
 #: statefulapplication/private/keysequencehelper.cpp:143
 #, kde-format
@@ -808,13 +808,13 @@ msgctxt ""
 "@title:dialog This happen when a global shortcut is already defined with the "
 "same shortcut"
 msgid "Global Shortcut Shadowing"
-msgstr "Laster-tekla globalari itzal egitea"
+msgstr "Lasterbide globalak estaltzea"
 
 #: statefulapplication/private/keysequencehelper.cpp:146
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination is shadowed by following global actions:\n"
-msgstr "'%1' tekla konbinazioari itzal egiten diote ondoko ekintza globalek:\n"
+msgstr "'%1' tekla-konbinazioa ondoko ekintza globalek estaltzen dute:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:148
 #: statefulapplication/private/keysequencehelper.cpp:154
@@ -827,13 +827,13 @@ msgstr "'%1' ekintza '%2' testuinguruan\n"
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination shadows following global actions:\n"
-msgstr "'%1' tekla konbinazioak itzal egiten die ondoko ekintza globalei:\n"
+msgstr "'%1' tekla-konbinazioa ondoko ekintza globalak estaltzen ditu:\n"
 
 #: statefulapplication/private/keysequencehelper.cpp:193
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Conflict with Standard Application Shortcut"
-msgstr "Gatazka aplikazio-lasterbide estandarrekin"
+msgstr "Aplikazio-lasterbide estandar batekin gatazka"
 
 #: statefulapplication/private/keysequencehelper.cpp:195
 #, kde-format
@@ -844,7 +844,7 @@ msgid ""
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
 "'%1' tekla-konbinazioa aplikazio batzuek erabiltzen duten \"%2\" ekintza "
-"estandarrekin erer erabiltzen da.\n"
+"estandarrekin ere erabiltzen da.\n"
 "Benetan erabili nahi duzu ere laster-tekla orokor gisa?"
 
 #: statefulapplication/private/KeySequenceItem.qml:129
@@ -865,9 +865,9 @@ msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
-"Botoian klik egin, ondoren, sartu lasterbidea programan egingo zenukeen "
+"Botoian klik egin eta, ondoren, sartu lasterbidea programan egingo zenukeen "
 "moduan.\n"
-"Adibidez Ktrl+A: sakatuta mantendu Ktrl tekla eta sakatu A."
+"Ktrl+A adibiderako: Ktrl tekla sakatuta eduki eta A sakatu."
 
 #: statefulapplication/private/KeySequenceItem.qml:182
 #, kde-format
