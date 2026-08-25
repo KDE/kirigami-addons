@@ -418,10 +418,10 @@ msgstr ""
 "Die Software von KDE ist kostenlos und wird es auch bleiben; die Entwicklung "
 "ist dagegen nicht kostenlos.\n"
 "\n"
-"Zur Unterstützung der Entwicklung hat die Projektgemeinschaft den „KDE e. "
-"V.“ gegründet. Es handelt sich dabei um einen gemeinnützigen Verein, der in "
-"Tübingen eingetragen ist. Der KDE e. V. repräsentiert die Gemeinschaft in "
-"juristischen und finanziellen Angelegenheiten.\n"
+"Zur Unterstützung der Entwicklung hat die Projektgemeinschaft den "
+"„KDE e. V.“ gegründet. Es handelt sich dabei um einen gemeinnützigen Verein, "
+"der in Tübingen eingetragen ist. Der KDE e. V. repräsentiert die "
+"Gemeinschaft in juristischen und finanziellen Angelegenheiten.\n"
 "\n"
 "KDE profitiert von vielen Arten der Unterstützung (einschl. finanzieller). "
 "Die Mittel werden zur Erstattung von Kosten verwendet, die Mitgliedern und "
@@ -437,7 +437,7 @@ msgstr ""
 #: formcard/AboutKDEPage.qml:163
 #, kde-format
 msgid "KDE e.V."
-msgstr "KDE e.V."
+msgstr "KDE e. V."
 
 #: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:253
 #, kde-format
@@ -853,7 +853,7 @@ msgid ""
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
 "Die Tastenkombination „%1“ ist bereits der Standard-Aktion „%2“ zugeordnet, "
-"die von einigen Anwendungen benutzt wird.\n"
+"die von einigen Anwendungen verwendet wird.\n"
 "Möchten Sie sie wirklich auch als globales Tastenkürzel verwenden?"
 
 #: statefulapplication/private/KeySequenceItem.qml:129

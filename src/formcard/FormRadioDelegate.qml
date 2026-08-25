@@ -127,7 +127,12 @@ T.RadioDelegate {
                 enabled: root.enabled
                 checked: root.checked
 
-                contentItem: null // Remove right margin
+                // A zero-sized item rather than null: assigning null to a deferred
+                // property makes Qt leak an in-progress creation (QTBUG-148846).
+                contentItem: Item {
+                    implicitWidth: 0
+                    implicitHeight: 0
+                }
                 spacing: 0
 
                 topPadding: 0
