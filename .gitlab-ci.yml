@@ -5,7 +5,6 @@ include:
   - project: sysadmin/ci-utilities
     file:
       - /gitlab-templates/reuse-lint.yml
-      - /gitlab-templates/linux-qt6.yml
       - /gitlab-templates/linux-qt6-lts.yml
 
 qml-check-i18n:
