@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-30 00:42+0000\n"
+"POT-Creation-Date: 2026-09-06 00:43+0000\n"
 "PO-Revision-Date: 2026-07-01 19:39+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -80,7 +80,7 @@ msgstr "Önceki görsel"
 msgid "Next image"
 msgstr "Sonraki görsel"
 
-#: components/Banner.qml:185 formcard/AboutPage.qml:518
+#: components/Banner.qml:185 formcard/AboutPage.qml:582
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -319,7 +319,7 @@ msgstr ""
 "yazılımlarını oluşturma ortak ereğine ulaşmak için birlikte çalışıyoruz. Siz "
 "de dahil olmak üzere herkes KDE’ye katılıp katkıda bulunabilir."
 
-#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:239
+#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:250
 #, kde-format
 msgid "Homepage"
 msgstr "Ana Sayfa"
@@ -377,7 +377,7 @@ msgstr ""
 "katılabilirsiniz. İsterseniz grafikler, temalar, sesler yaratabilir ve "
 "yardım belgeleri yazıp var olanları geliştirebilirsiniz. Karar sizin!"
 
-#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:267
+#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:278
 #, kde-format
 msgid "Get Involved"
 msgstr "Katıl"
@@ -433,77 +433,92 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:253
+#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:264
 #, kde-format
 msgid "Donate"
 msgstr "Bağış Yap"
 
-#: formcard/AboutPage.qml:98
+#: formcard/AboutPage.qml:106
 #: statefulapplication/abstractkirigamiapplication.cpp:167
 #, kde-format
 msgid "About %1"
 msgstr "%1 Hakkında"
 
-#: formcard/AboutPage.qml:144
+#: formcard/AboutPage.qml:152
 #, kde-format
 msgid "Copyright"
 msgstr "Telif Hakkı"
 
-#: formcard/AboutPage.qml:152
+#: formcard/AboutPage.qml:160
 #, kde-format
 msgid "Description"
 msgstr "Açıklama"
 
-#: formcard/AboutPage.qml:165
+#: formcard/AboutPage.qml:173
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "Lisans"
 msgstr[1] "Lisanslar"
 
-#: formcard/AboutPage.qml:293
+#: formcard/AboutPage.qml:304
 #, kde-format
 msgid "Report a Bug"
 msgstr "Hata Bildir"
 
-#: formcard/AboutPage.qml:299
+#: formcard/AboutPage.qml:321
+#, kde-format
+msgid "Matrix Channel"
+msgstr ""
+
+#: formcard/AboutPage.qml:341
+#, kde-format
+msgid "Mastodon"
+msgstr ""
+
+#: formcard/AboutPage.qml:357
+#, kde-format
+msgid "Source Code"
+msgstr ""
+
+#: formcard/AboutPage.qml:363
 #, kde-format
 msgid "Libraries in use"
 msgstr "Kullanılan Kitaplıklar"
 
-#: formcard/AboutPage.qml:303
+#: formcard/AboutPage.qml:367
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "Panoya Kopyala"
 
-#: formcard/AboutPage.qml:307
+#: formcard/AboutPage.qml:371
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "Sistem bilgisi panoya kopyalandı."
 
-#: formcard/AboutPage.qml:321
+#: formcard/AboutPage.qml:385
 #, kde-format
 msgid "Authors"
 msgstr "Yazarlar"
 
-#: formcard/AboutPage.qml:336
+#: formcard/AboutPage.qml:400
 #, kde-format
 msgid "Credits"
 msgstr "Emeği Geçenler"
 
-#: formcard/AboutPage.qml:351
+#: formcard/AboutPage.qml:415
 #, kde-format
 msgid "Translators"
 msgstr "Çeviriler"
 
-#: formcard/AboutPage.qml:420
+#: formcard/AboutPage.qml:484
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "KDE Store sayfasına git: %1"
 
-#: formcard/AboutPage.qml:429
+#: formcard/AboutPage.qml:493
 #, kde-format
 msgid "Send an email to %1"
 msgstr "E-posta gönder: %1"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-30 00:42+0000\n"
+"POT-Creation-Date: 2026-09-06 00:43+0000\n"
 "PO-Revision-Date: 2025-05-03 06:58+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -79,7 +79,7 @@ msgstr "Imaxe anterior"
 msgid "Next image"
 msgstr "Seguinte imaxe"
 
-#: components/Banner.qml:185 formcard/AboutPage.qml:518
+#: components/Banner.qml:185 formcard/AboutPage.qml:582
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -317,7 +317,7 @@ msgstr ""
 "mellor soporte lóxico libre do mundo. Calquera pode unirse e colaborar con "
 "KDE, vostede tamén."
 
-#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:239
+#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:250
 #, kde-format
 msgid "Homepage"
 msgstr "Páxina web"
@@ -375,7 +375,7 @@ msgstr ""
 "interfaces dos programas. Pode fornecer gráficos, temas, sons, e mellorar a "
 "documentación. Vostede decide!"
 
-#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:267
+#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:278
 #, kde-format
 msgid "Get Involved"
 msgstr "Colabore"
@@ -431,77 +431,92 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:253
+#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:264
 #, kde-format
 msgid "Donate"
 msgstr "Doar"
 
-#: formcard/AboutPage.qml:98
+#: formcard/AboutPage.qml:106
 #: statefulapplication/abstractkirigamiapplication.cpp:167
 #, kde-format
 msgid "About %1"
 msgstr "Sobre %1"
 
-#: formcard/AboutPage.qml:144
+#: formcard/AboutPage.qml:152
 #, kde-format
 msgid "Copyright"
 msgstr "Dereitos de copia"
 
-#: formcard/AboutPage.qml:152
+#: formcard/AboutPage.qml:160
 #, kde-format
 msgid "Description"
 msgstr "Descrición"
 
-#: formcard/AboutPage.qml:165
+#: formcard/AboutPage.qml:173
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "Licenza"
 msgstr[1] "Licenzas"
 
-#: formcard/AboutPage.qml:293
+#: formcard/AboutPage.qml:304
 #, kde-format
 msgid "Report a Bug"
 msgstr "Informar dun fallo"
 
-#: formcard/AboutPage.qml:299
+#: formcard/AboutPage.qml:321
+#, kde-format
+msgid "Matrix Channel"
+msgstr ""
+
+#: formcard/AboutPage.qml:341
+#, kde-format
+msgid "Mastodon"
+msgstr ""
+
+#: formcard/AboutPage.qml:357
+#, kde-format
+msgid "Source Code"
+msgstr ""
+
+#: formcard/AboutPage.qml:363
 #, kde-format
 msgid "Libraries in use"
 msgstr "Bibliotecas usadas"
 
-#: formcard/AboutPage.qml:303
+#: formcard/AboutPage.qml:367
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "Copiar no portapapeis"
 
-#: formcard/AboutPage.qml:307
+#: formcard/AboutPage.qml:371
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "A información do sistema copiouse no portapapeis."
 
-#: formcard/AboutPage.qml:321
+#: formcard/AboutPage.qml:385
 #, kde-format
 msgid "Authors"
 msgstr "Autoría"
 
-#: formcard/AboutPage.qml:336
+#: formcard/AboutPage.qml:400
 #, kde-format
 msgid "Credits"
 msgstr "Recoñecementos"
 
-#: formcard/AboutPage.qml:351
+#: formcard/AboutPage.qml:415
 #, kde-format
 msgid "Translators"
 msgstr "Tradución"
 
-#: formcard/AboutPage.qml:420
+#: formcard/AboutPage.qml:484
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Visitar a páxina na tenda de KDE de %1"
 
-#: formcard/AboutPage.qml:429
+#: formcard/AboutPage.qml:493
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Enviar unha mensaxe de correo electrónico a %1"
