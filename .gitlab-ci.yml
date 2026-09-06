@@ -5,17 +5,12 @@ include:
   - project: sysadmin/ci-utilities
     file:
       - /gitlab-templates/reuse-lint.yml
-      #- /gitlab-templates/windows-static.yml
       - /gitlab-templates/linux-qt6.yml
-      - /gitlab-templates/linux-qt6-static.yml
-      - /gitlab-templates/freebsd-qt6.yml
-      - /gitlab-templates/android-qt6.yml
-      - /gitlab-templates/windows-qt6.yml
-      - /gitlab-templates/linux-qt6-next.yml
+      - /gitlab-templates/linux-qt6-lts.yml
 
 qml-check-i18n:
   stage: build
-  image: invent-registry.kde.org/sysadmin/ci-images/suse-qt515:latest
+  image: invent-registry.kde.org/sysadmin/ci-images/suse-qt611:latest
   needs: []
   rules:
     - changes:
