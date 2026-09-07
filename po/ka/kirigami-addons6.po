@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-06 00:43+0000\n"
-"PO-Revision-Date: 2026-07-01 05:20+0200\n"
+"PO-Revision-Date: 2026-09-06 05:57+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -466,17 +466,17 @@ msgstr "შეცდომის პატაკი"
 #: formcard/AboutPage.qml:321
 #, kde-format
 msgid "Matrix Channel"
-msgstr ""
+msgstr "Matrix-ის არხი"
 
 #: formcard/AboutPage.qml:341
 #, kde-format
 msgid "Mastodon"
-msgstr ""
+msgstr "Mastodon"
 
 #: formcard/AboutPage.qml:357
 #, kde-format
 msgid "Source Code"
-msgstr ""
+msgstr "საწყისი კოდი"
 
 #: formcard/AboutPage.qml:363
 #, kde-format

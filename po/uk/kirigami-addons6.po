@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2021, 2022, 2023, 2024, 2025, 2026.
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Yuri Chornoivan <yurchor@ukr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-06 00:43+0000\n"
-"PO-Revision-Date: 2026-06-30 20:02+0300\n"
+"PO-Revision-Date: 2026-09-06 18:06+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -472,17 +472,17 @@ msgstr "Повідомити про помилку"
 #: formcard/AboutPage.qml:321
 #, kde-format
 msgid "Matrix Channel"
-msgstr ""
+msgstr "Канал Matrix"
 
 #: formcard/AboutPage.qml:341
 #, kde-format
 msgid "Mastodon"
-msgstr ""
+msgstr "Mastodon"
 
 #: formcard/AboutPage.qml:357
 #, kde-format
 msgid "Source Code"
-msgstr ""
+msgstr "Початковий код"
 
 #: formcard/AboutPage.qml:363
 #, kde-format
