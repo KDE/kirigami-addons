@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-06 00:43+0000\n"
-"PO-Revision-Date: 2026-06-30 09:08+0300\n"
+"PO-Revision-Date: 2026-09-07 08:28+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -456,17 +456,17 @@ msgstr "דיווח על תקלה"
 #: formcard/AboutPage.qml:321
 #, kde-format
 msgid "Matrix Channel"
-msgstr ""
+msgstr "ערוץ Matrix"
 
 #: formcard/AboutPage.qml:341
 #, kde-format
 msgid "Mastodon"
-msgstr ""
+msgstr "מסטודון"
 
 #: formcard/AboutPage.qml:357
 #, kde-format
 msgid "Source Code"
-msgstr ""
+msgstr "קוד המקור"
 
 #: formcard/AboutPage.qml:363
 #, kde-format
