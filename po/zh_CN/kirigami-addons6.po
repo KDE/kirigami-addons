@@ -457,17 +457,17 @@ msgstr "报告程序缺陷"
 #: formcard/AboutPage.qml:321
 #, kde-format
 msgid "Matrix Channel"
-msgstr ""
+msgstr "Matrix 频道"
 
 #: formcard/AboutPage.qml:341
 #, kde-format
 msgid "Mastodon"
-msgstr ""
+msgstr "Mastodon"
 
 #: formcard/AboutPage.qml:357
 #, kde-format
 msgid "Source Code"
-msgstr ""
+msgstr "源代码"
 
 #: formcard/AboutPage.qml:363
 #, kde-format
