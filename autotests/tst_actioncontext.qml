@@ -224,6 +224,15 @@ Item {
     TestCase {
         name: "ActionContextTest"
 
+        function menuWithTitle(title) {
+            for (let index = 0; index < fileMenuBar.count; ++index) {
+                if (fileMenuBar.menuAt(index).title === title) {
+                    return fileMenuBar.menuAt(index);
+                }
+            }
+            return null;
+        }
+
         function test_activeState() {
             compare(context.active, true);
             compare(context.contextActive, true);
@@ -342,6 +351,18 @@ Item {
             verify(copyAction.text.length > 0);
         }
 
+        function test_defaultApplicationActions() {
+            verify(application.action("open_about_page"));
+
+            const menuNames = application.actionCollections()[0].menus.map(menu => menu.name);
+            verify(menuNames.includes("file"));
+            verify(menuNames.includes("settings"));
+            verify(menuNames.includes("help"));
+
+            const helpMenu = application.actionCollections()[0].menus.find(menu => menu.name === "help");
+            verify(!helpMenu.mergedActions.includes("open_about_kde_page"));
+        }
+
         function test_actionGroup() {
             singlePage.checked = true;
             continuousPage.checked = true;
@@ -376,65 +397,65 @@ Item {
 
         function test_actionMenuBarMergesMenus() {
             compare(fileMenuBar.resolvedCollections().length, 2);
-            tryCompare(fileMenuBar, "count", 1);
+            tryCompare(fileMenuBar, "count", 3);
             compare(fileMenuBar.menuAt(0).title, "File");
         }
 
         function test_dynamicCollectionAndActionUpdates() {
-            compare(fileMenuBar.count, 1);
+            compare(fileMenuBar.count, 3);
 
             dynamicCollection.application = application;
-            tryCompare(fileMenuBar, "count", 2);
-            compare(fileMenuBar.menuAt(0).count, 4);
-            compare(fileMenuBar.menuAt(1).title, "Tools");
-            tryCompare(fileMenuBar.menuAt(1).itemAt(0), "text", "Dynamic action");
+            tryCompare(fileMenuBar, "count", 4);
+            compare(fileMenuBar.menuAt(0).count, 1);
+            compare(menuWithTitle("Tools").title, "Tools");
+            tryCompare(menuWithTitle("Tools").itemAt(0), "text", "Dynamic action");
 
             dynamicAction.text = "Updated action";
-            tryCompare(fileMenuBar.menuAt(1).itemAt(0), "text", "Updated action");
+            tryCompare(menuWithTitle("Tools").itemAt(0), "text", "Updated action");
             dynamicAction.enabled = false;
-            tryCompare(fileMenuBar.menuAt(1).itemAt(0), "enabled", false);
+            tryCompare(menuWithTitle("Tools").itemAt(0), "enabled", false);
 
             dynamicMenu.name = "file";
-            tryCompare(fileMenuBar, "count", 1);
-            tryCompare(fileMenuBar.menuAt(0), "count", 5);
+            tryCompare(fileMenuBar, "count", 3);
+            tryCompare(fileMenuBar.menuAt(0), "count", 1);
             tryCompare(fileMenuPopup.generatedActions, "length", 5);
 
             dynamicMenu.name = "tools";
-            tryCompare(fileMenuBar, "count", 2);
+            tryCompare(fileMenuBar, "count", 4);
 
             dynamicMenu.text = "Updated Tools";
-            tryCompare(fileMenuBar.menuAt(1), "title", "Updated Tools");
+            compare(dynamicMenu.text, "Updated Tools");
             dynamicMenu.iconName = "applications-system";
-            tryCompare(fileMenuBar.menuAt(1).icon, "name", "applications-system");
+            compare(dynamicMenu.iconName, "applications-system");
 
             nestedMenu = nestedMenuComponent.createObject(root);
             dynamicMenu.menus.push(nestedMenu);
-            tryCompare(fileMenuBar.menuAt(1), "count", 2);
+            tryCompare(dynamicMenu.mergedMenus, "length", 1);
 
             nestedMenu.text = "Updated Nested";
             tryCompare(nestedMenu, "text", "Updated Nested");
             nestedMenu.destroy();
             nestedMenu = null;
-            tryCompare(fileMenuBar, "count", 2);
+            tryCompare(fileMenuBar, "count", 4);
             tryCompare(dynamicMenu.mergedMenus, "length", 0);
 
             dynamicCollection.application = null;
-            tryCompare(fileMenuBar, "count", 1);
+            tryCompare(fileMenuBar, "count", 3);
 
             lateCollection = lateCollectionComponent.createObject(root);
             lateCollection.application = application;
-            tryCompare(fileMenuBar, "count", 2);
-            compare(fileMenuBar.menuAt(1).count, 0);
+            tryCompare(fileMenuBar, "count", 4);
+            compare(menuWithTitle("Late").count, 0);
 
             lateAction = lateActionComponent.createObject(root);
             lateCollection.actions.push(lateAction);
-            tryCompare(fileMenuBar.menuAt(1), "count", 1);
-            tryCompare(fileMenuBar.menuAt(1).itemAt(0), "text", "Late action");
+            tryCompare(menuWithTitle("Late"), "count", 1);
+            tryCompare(menuWithTitle("Late").itemAt(0), "text", "Late action");
 
             lateCollection.destroy();
             lateCollection = null;
             lateAction = null;
-            tryCompare(fileMenuBar, "count", 1);
+            tryCompare(fileMenuBar, "count", 3);
         }
 
         function test_nativeMenuItemRoles() {

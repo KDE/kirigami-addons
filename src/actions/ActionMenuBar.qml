@@ -76,7 +76,7 @@ QQC2.MenuBar {
         });
     }
 
-    function appendMenu(menuData) {
+    function appendMenu(menuData): void {
         const menu = menuComponent.createObject(root, {
             title: menuData.text,
         });
@@ -84,7 +84,6 @@ QQC2.MenuBar {
         root.addMenu(menu);
         topMenus.push(menu);
         populateMenu(menuData, menu);
-        return menu;
     }
 
     function rebuild(): void {
@@ -94,13 +93,12 @@ QQC2.MenuBar {
             return;
         }
 
-        const menusByName = {};
+        const menuNames = [];
         collections.forEach(actionCollection => {
             actionCollection.menus.forEach(menuData => {
-                if (!menusByName[menuData.name]) {
-                    menusByName[menuData.name] = appendMenu(menuData);
-                } else {
-                    populateMenu(menuData, menusByName[menuData.name]);
+                if (!menuNames.includes(menuData.name)) {
+                    menuNames.push(menuData.name);
+                    appendMenu(menuData);
                 }
             });
         });
