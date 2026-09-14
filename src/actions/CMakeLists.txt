@@ -22,6 +22,8 @@ add_library(KirigamiAddonsStatefulApp
     commandbarfiltermodel_p.h
     shortcutsmodel.cpp
     shortcutsmodel_p.h
+    private/declarativeapplication.cpp
+    private/declarativeapplication.h
 )
 
 ecm_generate_qdoc(KirigamiAddonsStatefulApp kirigamiaddonsstatefulapplication.qdocconf)
@@ -73,6 +75,8 @@ target_link_libraries(KirigamiAddonsStatefulApp
 )
 
 target_include_directories(KirigamiAddonsStatefulApp
+    PRIVATE
+        "${CMAKE_CURRENT_SOURCE_DIR}/private"
     INTERFACE
         "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KirigamiAddonsStatefulApp>"
 )

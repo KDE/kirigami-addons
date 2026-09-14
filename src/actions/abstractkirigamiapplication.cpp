@@ -6,6 +6,7 @@
 #include "commandbarfiltermodel_p.h"
 #include "actionsmodel_p.h"
 #include "shortcutsmodel_p.h"
+#include "private/declarativeapplication.h"
 #include <KAboutData>
 #include <KAuthorized>
 #include <KConfigGroup>
@@ -218,7 +219,11 @@ void AbstractKirigamiApplication::setupActions()
     auto helpMenu = new ActionMenu(d->collection);
     helpMenu->setName(u"help"_s);
     helpMenu->setText(i18nc("@title:menu", "Help"));
-    helpMenu->setActions({u"open_about_page"_s, u"open_about_kde_page"_s});
+    QStringList helpActions{u"open_about_page"_s};
+    if (KAboutData::applicationData().desktopFileName().startsWith(u"org.kde."_s)) {
+        helpActions.append(u"open_about_kde_page"_s);
+    }
+    helpMenu->setActions(helpActions);
     d->collection->insertQmlMenu(helpMenu);
 }
 
