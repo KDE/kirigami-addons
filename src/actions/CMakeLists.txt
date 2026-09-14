@@ -4,6 +4,8 @@
 # StatefulApp module
 
 add_library(KirigamiAddonsStatefulApp
+    actioncontext.cpp
+    actioncontext.h
     abstractkirigamiapplication.cpp
     abstractkirigamiapplication.h
     actiondata.cpp
@@ -101,6 +103,10 @@ ecm_add_qml_module(KirigamiAddonsActionsQml
     DEPENDENCIES QtQuick
     IMPORTS
         "org.kde.kirigamiaddons.statefulapp"
+)
+
+ecm_target_qml_sources(KirigamiAddonsActionsQml SOURCES
+    StatefulWindow.qml
 )
 
 ecm_finalize_qml_module(KirigamiAddonsActionsQml DESTINATION ${KDE_INSTALL_QMLDIR} EXPORT KirigamiAddonsTargets)

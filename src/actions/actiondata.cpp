@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: LGPL-2.1-or-later
 
 #include "actiondata.h"
+#include "actioncontext.h"
 #include "kirigamiactioncollection.h"
 
 #include <QKeySequence>
@@ -169,12 +170,34 @@ ActionData::ActionData(QObject *parent)
     });
     connect(this, &QAction::checkableChanged, this, &ActionData::syncAction);
     connect(this, &QAction::toggled, this, &ActionData::syncAction);
+    connect(this, &QAction::enabledChanged, this, [this]() {
+        if (!m_contextStateUpdating) {
+            m_baseEnabled = isEnabled();
+        }
+    });
+    connect(this, &QAction::visibleChanged, this, [this]() {
+        if (!m_contextStateUpdating) {
+            m_baseVisible = isVisible();
+        }
+    });
     connect(this, &QAction::triggered, this, [this]() {
         if (m_forwardingTrigger || !m_primaryAction) {
             return;
         }
         m_forwardingTrigger = true;
+
+        QQmlProperty primaryFromQAction(m_primaryAction, QStringLiteral("fromQAction"));
+        const bool hasPrimaryBridge = primaryFromQAction.isValid() && primaryFromQAction.isWritable();
+        const QVariant primaryBridge = hasPrimaryBridge ? primaryFromQAction.read() : QVariant();
+        if (hasPrimaryBridge) {
+            primaryFromQAction.write(QVariant());
+        }
+
         QMetaObject::invokeMethod(m_primaryAction, "trigger");
+
+        if (hasPrimaryBridge) {
+            primaryFromQAction.write(primaryBridge);
+        }
         m_forwardingTrigger = false;
     });
 }
@@ -225,13 +248,122 @@ void ActionData::setAction(QObject *action)
         return;
     }
 
+    if (m_primaryAction) {
+        m_actionInstances.removeAll(m_primaryAction);
+        disconnect(m_primaryAction, nullptr, this, nullptr);
+    }
+
     m_primaryAction = action;
     if (action) {
         addActionInstance(action);
-        syncPrimaryAction();
     }
-    syncAction();
+    updateContextState();
     Q_EMIT actionChanged();
+}
+
+QQmlListProperty<ActionContext> ActionData::contexts()
+{
+    return QQmlListProperty<ActionContext>(this, nullptr, &ActionData::appendContext, &ActionData::contextCount, &ActionData::contextAt, &ActionData::clearContexts);
+}
+
+bool ActionData::contextActive() const
+{
+    return m_contexts.isEmpty() || activeContext();
+}
+
+ActionContext *ActionData::activeContext() const
+{
+    ActionContext *activeContext = nullptr;
+    for (const auto &context : m_contexts) {
+        if (!context || !context->contextActive()) {
+            continue;
+        }
+        if (!activeContext || context->priority() > activeContext->priority()) {
+            activeContext = context;
+        }
+    }
+    return activeContext;
+}
+
+bool ActionData::contextEnabled() const
+{
+    return m_contextEnabled;
+}
+
+void ActionData::setContextEnabled(bool enabled)
+{
+    if (m_contextEnabled == enabled) {
+        return;
+    }
+    m_contextEnabled = enabled;
+    Q_EMIT contextEnabledChanged();
+    updateContextState();
+}
+
+bool ActionData::contextVisible() const
+{
+    return m_contextVisible;
+}
+
+void ActionData::setContextVisible(bool visible)
+{
+    if (m_contextVisible == visible) {
+        return;
+    }
+    m_contextVisible = visible;
+    Q_EMIT contextVisibleChanged();
+    updateContextState();
+}
+
+void ActionData::appendContext(QQmlListProperty<ActionContext> *property, ActionContext *context)
+{
+    static_cast<ActionData *>(property->object)->addContext(context);
+}
+
+qsizetype ActionData::contextCount(QQmlListProperty<ActionContext> *property)
+{
+    return static_cast<ActionData *>(property->object)->m_contexts.size();
+}
+
+ActionContext *ActionData::contextAt(QQmlListProperty<ActionContext> *property, qsizetype index)
+{
+    const auto contexts = static_cast<ActionData *>(property->object)->m_contexts;
+    return index >= 0 && index < contexts.size() ? contexts.at(index).data() : nullptr;
+}
+
+void ActionData::clearContexts(QQmlListProperty<ActionContext> *property)
+{
+    auto action = static_cast<ActionData *>(property->object);
+    action->clearContextList();
+    action->updateContextState();
+}
+
+void ActionData::addContext(ActionContext *context)
+{
+    if (!context || m_contexts.contains(context)) {
+        return;
+    }
+    m_contexts.append(context);
+    m_contextConnections.append(connect(context, &ActionContext::contextActiveChanged, this, &ActionData::updateContextState));
+    m_contextConnections.append(connect(context, &ActionContext::priorityChanged, this, &ActionData::updateContextState));
+    m_contextConnections.append(connect(context, &QObject::destroyed, this, [this, context]() {
+        m_contexts.removeAll(context);
+        updateContextState();
+    }));
+    updateContextState();
+}
+
+void ActionData::clearContextList()
+{
+    if (m_contexts.isEmpty()) {
+        return;
+    }
+    for (const auto &connection : std::as_const(m_contextConnections)) {
+        QObject::disconnect(connection);
+    }
+    m_contextConnections.clear();
+    m_contexts.clear();
+    updateContextState();
 }
 
 void ActionData::addActionInstance(QObject *action)
@@ -247,13 +379,18 @@ void ActionData::addActionInstance(QObject *action)
         }
     }, Qt::SingleShotConnection);
 
-    QQmlProperty(action, QStringLiteral("visible")).connectNotifySignal(this, SLOT(syncPrimaryAction()));
-    QQmlProperty(action, QStringLiteral("enabled")).connectNotifySignal(this, SLOT(syncPrimaryAction()));
+    if (action != m_primaryAction) {
+        QQmlProperty(action, QStringLiteral("visible")).connectNotifySignal(this, SLOT(syncPrimaryAction()));
+        QQmlProperty(action, QStringLiteral("enabled")).connectNotifySignal(this, SLOT(syncPrimaryAction()));
+    }
     syncAction();
 }
 
 void ActionData::syncPrimaryAction()
 {
+    if (m_forwardingTrigger) {
+        return;
+    }
     auto action = sender();
     if (!action) {
         action = m_primaryAction;
@@ -261,8 +398,30 @@ void ActionData::syncPrimaryAction()
     if (action != m_primaryAction) {
         return;
     }
-    setVisible(action->property("visible").toBool());
-    setEnabled(action->property("enabled").toBool());
+    m_baseVisible = action->property("visible").toBool();
+    m_baseEnabled = action->property("enabled").toBool();
+    updateContextState();
+}
+
+void ActionData::updateContextState()
+{
+    const bool active = contextActive();
+    const auto selectedContext = activeContext();
+    const bool activeChanged = m_effectiveContextActive != active;
+    const bool selectedContextChanged = m_effectiveActiveContext != selectedContext;
+    m_effectiveContextActive = active;
+    m_effectiveActiveContext = selectedContext;
+    if (activeChanged) {
+        Q_EMIT contextActiveChanged();
+    }
+    if (selectedContextChanged) {
+        Q_EMIT activeContextChanged();
+    }
+    m_contextStateUpdating = true;
+    setVisible(m_baseVisible && (active || !m_contextVisible));
+    setEnabled(m_baseEnabled && (active || !m_contextEnabled));
+    m_contextStateUpdating = false;
+    syncAction();
 }
 
 void ActionData::forwardTriggered()
@@ -296,17 +455,10 @@ void ActionData::syncAction()
             }
         };
 
-        if (action == m_primaryAction) {
-            QQmlProperty fromQAction(action, QStringLiteral("fromQAction"));
-            if (fromQAction.isValid() && fromQAction.isWritable()) {
-                fromQAction.write(QVariant());
-            }
-        } else {
-            QQmlProperty fromQAction(action, QStringLiteral("fromQAction"));
-            if (fromQAction.isValid() && fromQAction.isWritable()) {
-                fromQAction.write(QVariant::fromValue(this));
-                continue;
-            }
+        QQmlProperty fromQAction(action, QStringLiteral("fromQAction"));
+        if (fromQAction.isValid() && fromQAction.isWritable()) {
+            fromQAction.write(QVariant::fromValue(this));
+            continue;
         }
 
         syncProperty("text", text());

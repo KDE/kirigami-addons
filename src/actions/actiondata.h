@@ -7,6 +7,7 @@
 #include <QActionGroup>
 #include <QColor>
 #include <QPointer>
+#include <QQmlListProperty>
 #include <QQmlParserStatus>
 #include <QtQml/qqml.h>
 #include <qqmlregistration.h>
@@ -15,6 +16,7 @@
 
 class KirigamiActionCollection;
 class ActionData;
+class ActionContext;
 class IconGroupPrivate;
 
 /*!
@@ -80,6 +82,22 @@ private:
  * This element needs to always be declared as a child of ActionCollection.
  * It is the declarative representation of a named action within the application
  * with a user-configurable shortcut.
+ *
+ * This element can be assigned to one or more ActionContext objects through
+ * the \c contexts property. An inactive context disables and hides the action
+ * by default. When multiple contexts are active, activeContext refers to the
+ * active context with the highest priority.
+ *
+ * \qml
+ * KirigamiActions.ActionContext {
+ *     id: documentContext
+ *     active: pageStack.currentItem === editorPage
+ * }
+ * KirigamiActions.ActionData {
+ *     name: "save"
+ *     contexts: documentContext
+ * }
+ * \endqml
  *
  * The regular QAction properties, such as text, toolTip, enabled, checkable and
  * checked, can be assigned directly in QML. Its name must be unique within
@@ -205,6 +223,23 @@ class ActionData : public QAction, public QQmlParserStatus
      * \endcode
      */
     Q_PROPERTY(QObject *action READ action WRITE setAction NOTIFY actionChanged FINAL)
+    Q_PROPERTY(QQmlListProperty<ActionContext> contexts READ contexts FINAL)
+    /*! \qmlproperty bool ActionData::contextActive
+     * Whether at least one of this action's contexts is active.
+     */
+    Q_PROPERTY(bool contextActive READ contextActive NOTIFY contextActiveChanged FINAL)
+    /*! \qmlproperty ActionContext ActionData::activeContext
+     * The highest-priority active context, or null when no context is active.
+     */
+    Q_PROPERTY(ActionContext *activeContext READ activeContext NOTIFY activeContextChanged FINAL)
+    /*! \qmlproperty bool ActionData::contextEnabled
+     * Whether an inactive context disables this action. Defaults to true.
+     */
+    Q_PROPERTY(bool contextEnabled READ contextEnabled WRITE setContextEnabled NOTIFY contextEnabledChanged FINAL)
+    /*! \qmlproperty bool ActionData::contextVisible
+     * Whether an inactive context hides this action. Defaults to true.
+     */
+    Q_PROPERTY(bool contextVisible READ contextVisible WRITE setContextVisible NOTIFY contextVisibleChanged FINAL)
     Q_PROPERTY(QVariant defaultAlternateShortcut READ defaultAlternateShortcut WRITE setDefaultAlternateShortcut NOTIFY defaultAlternateShortcutChanged FINAL)
     Q_PROPERTY(QVariant data READ data WRITE setData NOTIFY changed FINAL)
     /*! \qmlproperty keysequence ActionData::defaultShortcut
@@ -232,6 +267,13 @@ public:
     void setActionGroup(QActionGroup *group);
     QObject *action() const;
     void setAction(QObject *action);
+    QQmlListProperty<ActionContext> contexts();
+    bool contextActive() const;
+    ActionContext *activeContext() const;
+    bool contextEnabled() const;
+    void setContextEnabled(bool enabled);
+    bool contextVisible() const;
+    void setContextVisible(bool visible);
     void addActionInstance(QObject *action);
     void removeActionInstance(QObject *action);
     QVariant defaultShortcut() const;
@@ -247,12 +289,23 @@ Q_SIGNALS:
     void defaultAlternateShortcutChanged();
     void actionGroupChanged();
     void actionChanged();
+    void contextActiveChanged();
+    void activeContextChanged();
+    void contextEnabledChanged();
+    void contextVisibleChanged();
 
 private Q_SLOTS:
     void syncPrimaryAction();
     void forwardTriggered();
+    void updateContextState();
 
 private:
+    static void appendContext(QQmlListProperty<ActionContext> *property, ActionContext *context);
+    static qsizetype contextCount(QQmlListProperty<ActionContext> *property);
+    static ActionContext *contextAt(QQmlListProperty<ActionContext> *property, qsizetype index);
+    static void clearContexts(QQmlListProperty<ActionContext> *property);
+    void addContext(ActionContext *context);
+    void clearContextList();
     void syncAction();
     QString m_name;
     QVariant m_defaultShortcut;
@@ -260,8 +313,17 @@ private:
     QActionGroup *m_actionGroup = nullptr;
     QList<QPointer<QObject>> m_actionInstances;
     QPointer<QObject> m_primaryAction;
+    QList<QPointer<ActionContext>> m_contexts;
+    QList<QMetaObject::Connection> m_contextConnections;
     QVariant m_defaultAlternateShortcut;
     bool m_forwardingTrigger = false;
+    bool m_contextStateUpdating = false;
+    bool m_baseEnabled = true;
+    bool m_baseVisible = true;
+    bool m_contextEnabled = true;
+    bool m_contextVisible = true;
+    bool m_effectiveContextActive = true;
+    QPointer<ActionContext> m_effectiveActiveContext;
 
     friend class IconGroup;
 };

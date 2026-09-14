@@ -76,8 +76,7 @@
 class KIRIGAMIADDONSSTATEFULAPP_EXPORT AbstractKirigamiApplication : public QObject
 {
     Q_OBJECT
-    QML_ELEMENT
-    QML_UNCREATABLE("Abstract class")
+    QML_NAMED_ELEMENT(Application)
 
     /// \internal Used by StatefulApp.ManagedWindow
     Q_PROPERTY(QSortFilterProxyModel *actionsModel READ actionsModel CONSTANT)
