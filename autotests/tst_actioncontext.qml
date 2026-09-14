@@ -30,7 +30,26 @@ Item {
         id: primaryAction
     }
 
+    ActionGroup {
+        id: viewModes
+        exclusive: true
+    }
+
     ActionCollection {
+        ActionData {
+            id: singlePage
+            name: "single_page"
+            checkable: true
+            actionGroup: viewModes
+        }
+
+        ActionData {
+            id: continuousPage
+            name: "continuous_page"
+            checkable: true
+            actionGroup: viewModes
+        }
+
         ActionData {
             id: action
             name: "test_action"
@@ -132,6 +151,13 @@ Item {
             context.active = true;
             tryCompare(primaryAction, "enabled", true);
             tryCompare(primaryAction, "visible", true);
+        }
+
+        function test_actionGroup() {
+            singlePage.checked = true;
+            continuousPage.checked = true;
+            compare(singlePage.checked, false);
+            compare(continuousPage.checked, true);
         }
     }
 }

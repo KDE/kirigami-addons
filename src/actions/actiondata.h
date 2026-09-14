@@ -20,16 +20,17 @@ class ActionContext;
 class IconGroupPrivate;
 
 /*!
- * \qmltype ActionDataGroup
+ * \qmltype ActionGroup
  * \inqmlmodule org.kde.kirigamiaddons.actions
- * \brief A group of ActionData objects with automatic exclusivity.
+ * \brief A group of actions with automatic exclusivity.
  */
-class ActionDataGroup : public QActionGroup
+class ActionGroup : public QActionGroup
 {
     Q_OBJECT
     QML_ELEMENT
+    Q_PROPERTY(bool exclusive READ isExclusive WRITE setExclusive FINAL)
 public:
-    explicit ActionDataGroup(QObject *parent = nullptr);
+    explicit ActionGroup(QObject *parent = nullptr);
 };
 
 /*!
@@ -154,14 +155,14 @@ class ActionData : public QAction, public QQmlParserStatus
      * \qmlproperty bool ActionData::icon.cache
      */
     Q_PROPERTY(IconGroup *icon READ icon CONSTANT FINAL)
-    /*! \qmlproperty ActionDataGroup ActionData::actionGroup
+    /*! \qmlproperty ActionGroup ActionData::actionGroup
      * The optional group used to make related actions mutually exclusive.
      *
      * Set \c checkable to true on the grouped actions. The group can be
      * declared as a sibling of the actions in an ActionCollection.
      *
      * \qml
-     * StatefulApp.ActionDataGroup {
+     * KirigamiActions.ActionGroup {
      *     id: modes
      *     exclusive: true
      * }
