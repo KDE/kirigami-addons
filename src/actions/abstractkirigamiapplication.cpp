@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: LGPL-2.1-or-later
 
 #include "abstractkirigamiapplication.h"
+#include "actionmenu.h"
 #include "commandbarfiltermodel_p.h"
 #include "actionsmodel_p.h"
 #include "shortcutsmodel_p.h"
@@ -11,9 +12,18 @@
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <QGuiApplication>
+#include <qqml.h>
 
 using namespace std::chrono_literals;
 using namespace Qt::StringLiterals;
+
+namespace
+{
+[[maybe_unused]] const auto legacyApplicationType = qmlRegisterUncreatableType<AbstractKirigamiApplication>(
+    "org.kde.kirigamiaddons.statefulapp", 1, 0, "AbstractKirigamiApplication", QStringLiteral("Use Application or a subclass"));
+[[maybe_unused]] const auto actionsApplicationType = qmlRegisterUncreatableType<AbstractKirigamiApplication>(
+    "org.kde.kirigamiaddons.actions", 1, 0, "AbstractKirigamiApplication", QStringLiteral("Use Application or a subclass"));
+}
 
 class AbstractKirigamiApplication::Private
 {
@@ -24,6 +34,7 @@ public:
     ShortcutsModel *shortcutsModel = nullptr;
     QObject *configurationView = nullptr;
     QAction *openConfigurationViewAction = nullptr;
+    ActionMenu *settingsMenu = nullptr;
 };
 
 AbstractKirigamiApplication::AbstractKirigamiApplication(QObject *parent)
@@ -128,9 +139,13 @@ QAction *AbstractKirigamiApplication::action(const QString &name)
 
 QList<KirigamiActionCollection *> AbstractKirigamiApplication::actionCollections() const
 {
-    return QList{
-        d->collection,
-    };
+    QList<KirigamiActionCollection *> collections{d->collection};
+    for (auto *collection : KirigamiActionCollection::allCollections()) {
+        if (collection != d->collection && collection->application() == this) {
+            collections.append(collection);
+        }
+    }
+    return collections;
 }
 
 KirigamiActionCollection *AbstractKirigamiApplication::mainCollection() const
@@ -179,6 +194,32 @@ void AbstractKirigamiApplication::setupActions()
             action->setVisible(false);
         }
     }
+
+    auto fileMenu = new ActionMenu(d->collection);
+    fileMenu->setName(u"file"_s);
+    fileMenu->setText(i18nc("@title:menu", "File"));
+    fileMenu->setActions({u"file_quit"_s});
+    d->collection->insertQmlMenu(fileMenu);
+
+    auto settingsMenu = new ActionMenu(d->collection);
+    d->settingsMenu = settingsMenu;
+    settingsMenu->setName(u"settings"_s);
+    settingsMenu->setText(i18nc("@title:menu", "Settings"));
+    QStringList settingsActions;
+    if (d->collection->action(u"open_kcommand_bar"_s)) {
+        settingsActions.append(u"open_kcommand_bar"_s);
+    }
+    if (d->collection->action(u"options_configure_keybinding"_s)) {
+        settingsActions.append(u"options_configure_keybinding"_s);
+    }
+    settingsMenu->setActions(settingsActions);
+    d->collection->insertQmlMenu(settingsMenu);
+
+    auto helpMenu = new ActionMenu(d->collection);
+    helpMenu->setName(u"help"_s);
+    helpMenu->setText(i18nc("@title:menu", "Help"));
+    helpMenu->setActions({u"open_about_page"_s, u"open_about_kde_page"_s});
+    d->collection->insertQmlMenu(helpMenu);
 }
 
 void AbstractKirigamiApplication::quit()
@@ -214,7 +255,19 @@ void AbstractKirigamiApplication::setConfigurationView(QObject *configurationVie
         }
         d->openConfigurationViewAction->setVisible(true);
 
+        if (d->settingsMenu) {
+            auto settingsActions = d->settingsMenu->actions();
+            if (!settingsActions.contains(u"options_configure"_s)) {
+                settingsActions.append(u"options_configure"_s);
+                d->settingsMenu->setActions(settingsActions);
+            }
+        }
+
         mainCollection()->readSettings();
+    } else if (d->settingsMenu) {
+        auto settingsActions = d->settingsMenu->actions();
+        settingsActions.removeAll(u"options_configure"_s);
+        d->settingsMenu->setActions(settingsActions);
     }
 }
 

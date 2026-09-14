@@ -7,6 +7,9 @@ import QtQuick
 import QtTest
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.actions
+import org.kde.kirigamiaddons.actions as KirigamiActions
+import org.kde.kirigamiaddons.actions.labs as KirigamiActionsLabs
+import Qt.labs.platform as Labs
 
 Item {
     id: root
@@ -30,12 +33,64 @@ Item {
         id: primaryAction
     }
 
+    KirigamiActionsLabs.NativeMenuItem {
+        id: aboutMenuItem
+        actionName: "open_about_page"
+    }
+
+    KirigamiActionsLabs.NativeMenuItem {
+        id: preferencesMenuItem
+        actionName: "options_configure"
+    }
+
+    KirigamiActionsLabs.NativeMenuItem {
+        id: quitMenuItem
+        actionName: "file_quit"
+    }
+
     ActionGroup {
         id: viewModes
         exclusive: true
     }
 
+    KirigamiActions.Application {
+        id: application
+    }
+
     ActionCollection {
+        id: actionCollection
+        application: application
+        menus: [
+            ActionMenu {
+                id: fileMenu
+                name: "file"
+                text: "File"
+
+                ActionMenu.Action {
+                    name: "single_page"
+                }
+                ActionMenu.Separator {}
+
+                menus: [
+                    ActionMenu {
+                        name: "recent"
+                        actions: ["recent_one"]
+                    }
+                ]
+            },
+            ActionMenu {
+                name: "file"
+                actions: ["continuous_page"]
+
+                menus: [
+                    ActionMenu {
+                        name: "recent"
+                        actions: ["recent_two"]
+                    }
+                ]
+            }
+        ]
+
         ActionData {
             id: singlePage
             name: "single_page"
@@ -51,11 +106,55 @@ Item {
         }
 
         ActionData {
+            id: recentOne
+            name: "recent_one"
+        }
+
+        ActionData {
+            id: recentTwo
+            name: "recent_two"
+        }
+
+        ActionData {
             id: action
             name: "test_action"
             action: primaryAction
             contexts: [childContext, highPriorityContext]
         }
+    }
+
+    ActionCollection {
+        id: dynamicCollection
+        name: "dynamic"
+
+        menus: [
+            ActionMenu {
+                id: dynamicMenu
+                name: "tools"
+                text: "Tools"
+                actions: ["dynamic_action"]
+            },
+            ActionMenu {
+                name: "file"
+                actions: ["missing_action"]
+            }
+        ]
+
+        ActionData {
+            id: dynamicAction
+            name: "dynamic_action"
+            text: "Dynamic action"
+        }
+    }
+
+    ActionMenuPopup {
+        id: fileMenuPopup
+        menu: fileMenu
+    }
+
+    ActionMenuBar {
+        id: fileMenuBar
+        application: application
     }
 
     TestCase {
@@ -158,6 +257,60 @@ Item {
             continuousPage.checked = true;
             compare(singlePage.checked, false);
             compare(continuousPage.checked, true);
+        }
+
+        function test_actionMenuMergesContributions() {
+            compare(fileMenu.mergedActions, ["single_page", "continuous_page"]);
+            compare(fileMenu.mergedItems, [
+                { type: "action", name: "single_page" },
+                { type: "separator" },
+                { type: "action", name: "continuous_page" },
+            ]);
+            compare(fileMenu.mergedMenus.length, 1);
+            compare(fileMenu.mergedMenus[0].mergedActions, ["recent_one", "recent_two"]);
+        }
+
+        function test_actionMenuPopupResolvesActions() {
+            compare(fileMenuPopup.generatedActions.length, 4);
+            compare(fileMenuPopup.generatedActions[0].fromQAction, singlePage);
+            compare(fileMenuPopup.generatedActions[1].separator, true);
+            compare(fileMenuPopup.generatedActions[2].fromQAction, continuousPage);
+            compare(fileMenuPopup.generatedActions[3].children[0].fromQAction, recentOne);
+            compare(fileMenuPopup.generatedActions[3].children[1].fromQAction, recentTwo);
+        }
+
+        function test_actionMenuBarMergesMenus() {
+            compare(fileMenuBar.resolvedCollections().length, 2);
+            tryCompare(fileMenuBar, "count", 1);
+            compare(fileMenuBar.menuAt(0).title, "File");
+        }
+
+        function test_dynamicCollectionAndActionUpdates() {
+            compare(fileMenuBar.count, 1);
+
+            dynamicCollection.application = application;
+            tryCompare(fileMenuBar, "count", 2);
+            compare(fileMenuBar.menuAt(0).count, 4);
+            compare(fileMenuBar.menuAt(1).title, "Tools");
+            tryCompare(fileMenuBar.menuAt(1).itemAt(0), "text", "Dynamic action");
+
+            dynamicAction.text = "Updated action";
+            tryCompare(fileMenuBar.menuAt(1).itemAt(0), "text", "Updated action");
+            dynamicAction.enabled = false;
+            tryCompare(fileMenuBar.menuAt(1).itemAt(0), "enabled", false);
+
+            dynamicMenu.name = "file";
+            tryCompare(fileMenuBar, "count", 1);
+            tryCompare(fileMenuBar.menuAt(0), "count", 5);
+
+            dynamicMenu.name = "tools";
+            tryCompare(fileMenuBar, "count", 2);
+        }
+
+        function test_nativeMenuItemRoles() {
+            compare(aboutMenuItem.role, Labs.MenuItem.AboutRole);
+            compare(preferencesMenuItem.role, Labs.MenuItem.PreferencesRole);
+            compare(quitMenuItem.role, Labs.MenuItem.QuitRole);
         }
     }
 }

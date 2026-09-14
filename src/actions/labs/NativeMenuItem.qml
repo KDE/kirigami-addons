@@ -36,15 +36,21 @@ MenuItem {
     /*!
        This property holds the action name defined in your AbstractKirigamiApplication implementation.
      */
-    required property string actionName
+    property string actionName
 
     /*!
        \qmlproperty AbstractKirigamiApplication application
        This property holds the AbstractKirigamiApplication where the action is defined.
      */
-    required property StatefulApp.AbstractKirigamiApplication application
+    property StatefulApp.Application application: null
 
-    readonly property QtObject _action: application.action(actionName)
+    /*!
+       This property can be used by generated menus to provide the resolved action
+       directly when actions with the same name exist in multiple collections.
+     */
+    property QtObject actionObject: null
+
+    readonly property QtObject _action: actionObject ?? application?.action(actionName)
 
     text: _action?.text ?? ''
     shortcut: _action?.shortcut
@@ -56,6 +62,18 @@ MenuItem {
     checkable: _action?.checkable
     checked: _action?.checked
     enabled: _action && _action.enabled
+    role: {
+        switch (actionName) {
+        case "open_about_page":
+            return MenuItem.AboutRole;
+        case "options_configure":
+            return MenuItem.PreferencesRole;
+        case "file_quit":
+            return MenuItem.QuitRole;
+        default:
+            return MenuItem.NoRole;
+        }
+    }
 
     /*!
      */

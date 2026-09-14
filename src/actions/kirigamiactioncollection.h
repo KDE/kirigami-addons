@@ -29,6 +29,7 @@
 
 class AbstractKirigamiApplication;
 class ActionData;
+class ActionMenu;
 class ActionCollectionAttached;
 
 class KIRIGAMIADDONSSTATEFULAPP_EXPORT ActionCollectionAttached : public QObject
@@ -138,6 +139,10 @@ class KIRIGAMIADDONSSTATEFULAPP_EXPORT KirigamiActionCollection : public QObject
      * The ActionData and StandardActionData children in this collection.
      */
     Q_PROPERTY(QQmlListProperty<ActionData> actions READ qmlActions CONSTANT FINAL)
+    /*! \qmlproperty list<ActionMenu> ActionCollection::menus
+     * Declarative menus contributed by this collection.
+     */
+    Q_PROPERTY(QQmlListProperty<ActionMenu> menus READ qmlMenus NOTIFY menusChanged FINAL)
 
     Q_CLASSINFO("DefaultProperty", "actions")
 
@@ -310,7 +315,9 @@ public:
     QString text() const;
     void setText(const QString &text);
     QQmlListProperty<ActionData> qmlActions();
+    QQmlListProperty<ActionMenu> qmlMenus();
     void insertQmlAction(ActionData *action);
+    void insertQmlMenu(ActionMenu *menu);
     static ActionCollectionAttached *qmlAttachedProperties(QObject *object);
 
     void classBegin() override;
@@ -329,6 +336,9 @@ Q_SIGNALS:
      * Emitted when an action has been inserted into, or removed from, this action collection.
      */
     void changed();
+
+    /*! Emitted when the declarative menu tree changes. */
+    void menusChanged();
 
     /*!
      * Indicates that \a action was hovered.
@@ -559,7 +569,9 @@ private:
     friend class KirigamiActionCollectionPrivate;
     std::unique_ptr<class KirigamiActionCollectionPrivate> const d;
     AbstractKirigamiApplication *m_application = nullptr;
+    QMetaObject::Connection m_applicationMenusConnection;
     QList<ActionData *> m_qmlActions;
+    QList<ActionMenu *> m_qmlMenus;
     QString m_qmlText;
     bool m_qmlComplete = false;
 };

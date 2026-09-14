@@ -10,6 +10,8 @@ add_library(KirigamiAddonsStatefulApp
     abstractkirigamiapplication.h
     actiondata.cpp
     actiondata.h
+    actionmenu.cpp
+    actionmenu.h
     kirigamiactioncollection.cpp
     kirigamiactioncollection.h
     standardactiondata.cpp
@@ -54,6 +56,7 @@ ecm_generate_headers(KirigamiAddonsStatefulApp_HEADERS
     HEADER_NAMES
         KirigamiActionCollection
         AbstractKirigamiApplication
+        ActionMenu
     REQUIRED_HEADERS
         KirigamiAddonsStatefulApp_HEADERS
 )
@@ -82,7 +85,10 @@ ecm_add_qml_module(KirigamiAddonsStatefulApp
     URI "org.kde.kirigamiaddons.statefulapp"
     VERSION 1.0
     GENERATE_PLUGIN_SOURCE
-    DEPENDENCIES QtQuick
+    DEPENDENCIES
+        org.kde.kirigami
+        org.kde.kirigamiaddons.components
+        QtQuick
     IMPORTS
         "org.kde.kirigamiaddons.statefulapp.private"
         "org.kde.config"
@@ -90,6 +96,9 @@ ecm_add_qml_module(KirigamiAddonsStatefulApp
 
 ecm_target_qml_sources(KirigamiAddonsStatefulApp SOURCES
     StatefulWindow.qml
+    ActionMenu.qml
+    ActionMenuPopup.qml
+    ActionMenuBar.qml
 )
 
 ecm_finalize_qml_module(KirigamiAddonsStatefulApp DESTINATION ${KDE_INSTALL_QMLDIR} EXPORT KirigamiAddonsTargets)
@@ -100,13 +109,19 @@ ecm_add_qml_module(KirigamiAddonsActionsQml
     URI "org.kde.kirigamiaddons.actions"
     VERSION 1.0
     GENERATE_PLUGIN_SOURCE
-    DEPENDENCIES QtQuick
+    DEPENDENCIES
+        org.kde.kirigami
+        org.kde.kirigamiaddons.components
+        QtQuick
     IMPORTS
         "org.kde.kirigamiaddons.statefulapp"
 )
 
 ecm_target_qml_sources(KirigamiAddonsActionsQml SOURCES
     StatefulWindow.qml
+    ActionMenu.qml
+    ActionMenuPopup.qml
+    ActionMenuBar.qml
 )
 
 ecm_finalize_qml_module(KirigamiAddonsActionsQml DESTINATION ${KDE_INSTALL_QMLDIR} EXPORT KirigamiAddonsTargets)

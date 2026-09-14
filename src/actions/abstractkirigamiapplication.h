@@ -103,7 +103,7 @@ public:
     /*! Return the list of KirigamiActionCollection setup in your application.
      *  Overwrite this method if you are using custom collections.
      */
-    virtual QList<KirigamiActionCollection *> actionCollections() const;
+    Q_INVOKABLE virtual QList<KirigamiActionCollection *> actionCollections() const;
 
     /*! Return the main action collection. */
     KirigamiActionCollection *mainCollection() const;
@@ -140,6 +140,9 @@ Q_SIGNALS:
 
     /*! Changed signal for the configurationView property. */
     void configurationViewChanged();
+
+    /*! Emitted when an action collection is assigned to this application. */
+    void actionCollectionsChanged();
 
 protected:
     /*! Entry points to declare your actions.

@@ -16,6 +16,7 @@
 #include "kirigamiactioncollection.h"
 #include "abstractkirigamiapplication.h"
 #include "actiondata.h"
+#include "actionmenu.h"
 
 #include <KAuthorized>
 #include <KConfigGroup>
@@ -200,13 +201,26 @@ void KirigamiActionCollection::setApplication(AbstractKirigamiApplication *appli
     if (m_application == application) {
         return;
     }
+    auto *oldApplication = m_application;
+    QObject::disconnect(m_applicationMenusConnection);
     m_application = application;
+    if (m_application) {
+        m_applicationMenusConnection = connect(this, &KirigamiActionCollection::menusChanged, m_application, [application]() {
+            QMetaObject::invokeMethod(application, "actionCollectionsChanged", Qt::DirectConnection);
+        });
+    }
     if (m_qmlComplete) {
         for (auto action : std::as_const(m_qmlActions)) {
             insertQmlAction(action);
         }
     }
     Q_EMIT applicationChanged();
+    if (oldApplication) {
+        QMetaObject::invokeMethod(oldApplication, "actionCollectionsChanged", Qt::DirectConnection);
+    }
+    if (m_application) {
+        QMetaObject::invokeMethod(m_application, "actionCollectionsChanged", Qt::DirectConnection);
+    }
 }
 
 QString KirigamiActionCollection::text() const
@@ -229,6 +243,42 @@ QQmlListProperty<ActionData> KirigamiActionCollection::qmlActions()
     return {this, nullptr, [](QQmlListProperty<ActionData> *property, ActionData *action) {
         static_cast<KirigamiActionCollection *>(property->object)->insertQmlAction(action);
     }, nullptr, nullptr, nullptr};
+}
+
+QQmlListProperty<ActionMenu> KirigamiActionCollection::qmlMenus()
+{
+    return {this, nullptr, [](QQmlListProperty<ActionMenu> *property, ActionMenu *menu) {
+        static_cast<KirigamiActionCollection *>(property->object)->insertQmlMenu(menu);
+    }, [](QQmlListProperty<ActionMenu> *property) {
+        return static_cast<KirigamiActionCollection *>(property->object)->m_qmlMenus.size();
+    }, [](QQmlListProperty<ActionMenu> *property, qsizetype index) {
+        const auto menus = static_cast<KirigamiActionCollection *>(property->object)->m_qmlMenus;
+        return index >= 0 && index < menus.size() ? menus.at(index) : nullptr;
+    }, [](QQmlListProperty<ActionMenu> *property) {
+        auto collection = static_cast<KirigamiActionCollection *>(property->object);
+        for (auto *menu : std::as_const(collection->m_qmlMenus)) {
+            menu->setCollection(nullptr);
+            menu->setParent(nullptr);
+        }
+        collection->m_qmlMenus.clear();
+        Q_EMIT collection->menusChanged();
+    }};
+}
+
+void KirigamiActionCollection::insertQmlMenu(ActionMenu *menu)
+{
+    if (!menu || m_qmlMenus.contains(menu)) {
+        return;
+    }
+    m_qmlMenus.append(menu);
+    menu->setCollection(this);
+    menu->setParent(this);
+    connect(menu, &ActionMenu::mergedActionsChanged, this, &KirigamiActionCollection::menusChanged, Qt::UniqueConnection);
+    connect(menu, &ActionMenu::mergedItemsChanged, this, &KirigamiActionCollection::menusChanged, Qt::UniqueConnection);
+    connect(menu, &ActionMenu::mergedMenusChanged, this, &KirigamiActionCollection::menusChanged, Qt::UniqueConnection);
+    connect(menu, &ActionMenu::textChanged, this, &KirigamiActionCollection::menusChanged, Qt::UniqueConnection);
+    connect(menu, &ActionMenu::iconNameChanged, this, &KirigamiActionCollection::menusChanged, Qt::UniqueConnection);
+    Q_EMIT menusChanged();
 }
 
 ActionCollectionAttached *KirigamiActionCollection::qmlAttachedProperties(QObject *object)

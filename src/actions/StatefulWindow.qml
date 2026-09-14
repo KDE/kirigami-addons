@@ -76,7 +76,7 @@ Kirigami.ApplicationWindow {
 
        \sa AbstractKirigamiApplication
      */
-    property StatefulApp.AbstractKirigamiApplication application: Private.DefaultKirigamiApplication
+    property StatefulApp.Application application: Private.DefaultKirigamiApplication
 
     Config.WindowStateSaver {
         id: windowStateSaver
