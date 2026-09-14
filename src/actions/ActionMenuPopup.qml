@@ -94,6 +94,12 @@ Item {
         function onMergedActionsChanged(): void {
             root.rebuild();
         }
+        function onMergedItemsChanged(): void {
+            root.rebuild();
+        }
+        function onMergedMenusChanged(): void {
+            root.rebuild();
+        }
     }
 
     Connections {

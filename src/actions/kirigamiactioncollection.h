@@ -571,7 +571,7 @@ private:
     friend class KirigamiActionCollectionPrivate;
     const QList<ActionMenu *> &registeredMenus() const;
     std::unique_ptr<class KirigamiActionCollectionPrivate> const d;
-    AbstractKirigamiApplication *m_application = nullptr;
+    QPointer<AbstractKirigamiApplication> m_application;
     QMetaObject::Connection m_applicationMenusConnection;
     QList<ActionData *> m_qmlActions;
     QList<ActionMenu *> m_qmlMenus;

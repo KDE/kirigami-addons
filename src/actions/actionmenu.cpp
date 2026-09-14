@@ -47,9 +47,7 @@ void ActionMenu::setName(const QString &name)
     }
     d->name = name;
     Q_EMIT nameChanged();
-    Q_EMIT mergedActionsChanged();
-    Q_EMIT mergedItemsChanged();
-    Q_EMIT mergedMenusChanged();
+    notifyMergedChanges();
 }
 
 QString ActionMenu::text() const
@@ -64,6 +62,7 @@ void ActionMenu::setText(const QString &text)
     }
     d->text = text;
     Q_EMIT textChanged();
+    notifyMergedChanges();
 }
 
 QString ActionMenu::iconName() const
@@ -78,6 +77,7 @@ void ActionMenu::setIconName(const QString &iconName)
     }
     d->iconName = iconName;
     Q_EMIT iconNameChanged();
+    notifyMergedChanges();
 }
 
 QStringList ActionMenu::actions() const
@@ -97,8 +97,7 @@ void ActionMenu::setActions(const QStringList &actions)
     }
     d->actions = actions;
     Q_EMIT actionsChanged();
-    Q_EMIT mergedActionsChanged();
-    Q_EMIT mergedItemsChanged();
+    notifyMergedChanges();
 }
 
 KirigamiActionCollection *ActionMenu::collection() const
@@ -237,6 +236,32 @@ void ActionMenu::appendMenu(QQmlListProperty<ActionMenu> *property, ActionMenu *
         parent->d->menus.append(menu);
         menu->d->parentMenu = parent;
         menu->setCollection(parent->d->collection);
+        QObject::connect(menu, &ActionMenu::nameChanged, parent, [parent]() {
+            Q_EMIT parent->mergedMenusChanged();
+        });
+        QObject::connect(menu, &ActionMenu::textChanged, parent, [parent]() {
+            Q_EMIT parent->mergedMenusChanged();
+        });
+        QObject::connect(menu, &ActionMenu::iconNameChanged, parent, [parent]() {
+            Q_EMIT parent->mergedMenusChanged();
+        });
+        QObject::connect(menu, &ActionMenu::menusChanged, parent, [parent]() {
+            Q_EMIT parent->mergedMenusChanged();
+        });
+        QObject::connect(menu, &ActionMenu::mergedActionsChanged, parent, [parent]() {
+            Q_EMIT parent->mergedMenusChanged();
+        });
+        QObject::connect(menu, &ActionMenu::mergedItemsChanged, parent, [parent]() {
+            Q_EMIT parent->mergedMenusChanged();
+        });
+        QObject::connect(menu, &ActionMenu::mergedMenusChanged, parent, [parent]() {
+            Q_EMIT parent->mergedMenusChanged();
+        });
+        QObject::connect(menu, &QObject::destroyed, parent, [parent, menu]() {
+            parent->d->menus.removeAll(menu);
+            Q_EMIT parent->menusChanged();
+            Q_EMIT parent->mergedMenusChanged();
+        });
         Q_EMIT parent->menusChanged();
         Q_EMIT parent->mergedMenusChanged();
     }
@@ -251,6 +276,22 @@ void ActionMenu::setCollection(KirigamiActionCollection *collection)
     Q_EMIT collectionChanged();
     for (auto *menu : std::as_const(d->menus)) {
         menu->setCollection(collection);
+    }
+}
+
+void ActionMenu::notifyMergedChanges()
+{
+    const auto menus = contributingMenus();
+    if (menus.isEmpty()) {
+        Q_EMIT mergedActionsChanged();
+        Q_EMIT mergedItemsChanged();
+        Q_EMIT mergedMenusChanged();
+        return;
+    }
+    for (auto *menu : menus) {
+        Q_EMIT menu->mergedActionsChanged();
+        Q_EMIT menu->mergedItemsChanged();
+        Q_EMIT menu->mergedMenusChanged();
     }
 }
 

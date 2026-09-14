@@ -168,6 +168,43 @@ Item {
         }
     }
 
+    Component {
+        id: lateCollectionComponent
+
+        ActionCollection {
+            menus: [
+                ActionMenu {
+                    name: "late"
+                    text: "Late"
+                    actions: ["late_action"]
+                }
+            ]
+        }
+    }
+
+    Component {
+        id: lateActionComponent
+
+        ActionData {
+            name: "late_action"
+            text: "Late action"
+        }
+    }
+
+    Component {
+        id: nestedMenuComponent
+
+        ActionMenu {
+            name: "nested"
+            text: "Nested"
+            actions: ["dynamic_action"]
+        }
+    }
+
+    property QtObject lateCollection: null
+    property QtObject lateAction: null
+    property QtObject nestedMenu: null
+
     ActionMenuPopup {
         id: fileMenuPopup
         menu: fileMenu
@@ -328,9 +365,44 @@ Item {
             dynamicMenu.name = "file";
             tryCompare(fileMenuBar, "count", 1);
             tryCompare(fileMenuBar.menuAt(0), "count", 5);
+            tryCompare(fileMenuPopup.generatedActions, "length", 5);
 
             dynamicMenu.name = "tools";
             tryCompare(fileMenuBar, "count", 2);
+
+            dynamicMenu.text = "Updated Tools";
+            tryCompare(fileMenuBar.menuAt(1), "title", "Updated Tools");
+            dynamicMenu.iconName = "applications-system";
+            tryCompare(fileMenuBar.menuAt(1).icon, "name", "applications-system");
+
+            nestedMenu = nestedMenuComponent.createObject(root);
+            dynamicMenu.menus.push(nestedMenu);
+            tryCompare(fileMenuBar.menuAt(1), "count", 2);
+
+            nestedMenu.text = "Updated Nested";
+            tryCompare(nestedMenu, "text", "Updated Nested");
+            nestedMenu.destroy();
+            nestedMenu = null;
+            tryCompare(fileMenuBar, "count", 2);
+            tryCompare(dynamicMenu.mergedMenus, "length", 0);
+
+            dynamicCollection.application = null;
+            tryCompare(fileMenuBar, "count", 1);
+
+            lateCollection = lateCollectionComponent.createObject(root);
+            lateCollection.application = application;
+            tryCompare(fileMenuBar, "count", 2);
+            compare(fileMenuBar.menuAt(1).count, 0);
+
+            lateAction = lateActionComponent.createObject(root);
+            lateCollection.actions.push(lateAction);
+            tryCompare(fileMenuBar.menuAt(1), "count", 1);
+            tryCompare(fileMenuBar.menuAt(1).itemAt(0), "text", "Late action");
+
+            lateCollection.destroy();
+            lateCollection = null;
+            lateAction = null;
+            tryCompare(fileMenuBar, "count", 1);
         }
 
         function test_nativeMenuItemRoles() {

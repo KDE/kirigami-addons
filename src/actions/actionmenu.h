@@ -82,6 +82,7 @@ Q_SIGNALS:
 
 private:
     void setCollection(KirigamiActionCollection *collection);
+    void notifyMergedChanges();
     QStringList menuPath() const;
     QList<ActionMenu *> contributingMenus() const;
 
