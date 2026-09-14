@@ -93,15 +93,36 @@ QQC2.MenuBar {
             return;
         }
 
+        const menuEntries = [];
         const menuNames = [];
         collections.forEach(actionCollection => {
             actionCollection.menus.forEach(menuData => {
-                if (!menuNames.includes(menuData.name)) {
+                if (menuData.menuBarVisible && !menuNames.includes(menuData.name)) {
                     menuNames.push(menuData.name);
-                    appendMenu(menuData);
+                    menuEntries.push({
+                        name: menuData.name,
+                        data: menuData,
+                    });
                 }
             });
         });
+
+        const standardMenuOrder = ["file", "edit", "view"];
+        const lastMenuOrder = ["settings", "help"];
+        menuEntries.sort((first, second) => {
+            const firstIndex = standardMenuOrder.indexOf(first.name);
+            const secondIndex = standardMenuOrder.indexOf(second.name);
+            const firstLastIndex = lastMenuOrder.indexOf(first.name);
+            const secondLastIndex = lastMenuOrder.indexOf(second.name);
+            const firstOrder = firstIndex >= 0 ? firstIndex
+                : firstLastIndex >= 0 ? standardMenuOrder.length + 1 + firstLastIndex
+                : standardMenuOrder.length;
+            const secondOrder = secondIndex >= 0 ? secondIndex
+                : secondLastIndex >= 0 ? standardMenuOrder.length + 1 + secondLastIndex
+                : standardMenuOrder.length;
+            return firstOrder - secondOrder;
+        });
+        menuEntries.forEach(entry => appendMenu(entry.data));
     }
 
     Component {

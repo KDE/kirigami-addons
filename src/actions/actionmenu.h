@@ -32,6 +32,7 @@ class KIRIGAMIADDONSSTATEFULAPP_EXPORT ActionMenu : public QObject, public QQmlP
     Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged FINAL)
     Q_PROPERTY(QString text READ text WRITE setText NOTIFY textChanged FINAL)
     Q_PROPERTY(QString iconName READ iconName WRITE setIconName NOTIFY iconNameChanged FINAL)
+    Q_PROPERTY(bool menuBarVisible READ menuBarVisible WRITE setMenuBarVisible NOTIFY menuBarVisibleChanged FINAL)
     Q_PROPERTY(QStringList actions READ actions WRITE setActions NOTIFY actionsChanged FINAL)
     Q_PROPERTY(QQmlListProperty<QObject> items READ items NOTIFY itemsChanged FINAL)
     Q_PROPERTY(KirigamiActionCollection *collection READ collection NOTIFY collectionChanged FINAL)
@@ -54,6 +55,8 @@ public:
     void setText(const QString &text);
     QString iconName() const;
     void setIconName(const QString &iconName);
+    bool menuBarVisible() const;
+    void setMenuBarVisible(bool visible);
     QStringList actions() const;
     void setActions(const QStringList &actions);
     QQmlListProperty<QObject> items();
@@ -72,6 +75,7 @@ Q_SIGNALS:
     void nameChanged();
     void textChanged();
     void iconNameChanged();
+    void menuBarVisibleChanged();
     void actionsChanged();
     void itemsChanged();
     void collectionChanged();

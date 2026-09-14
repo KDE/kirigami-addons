@@ -18,6 +18,7 @@ public:
     QString name;
     QString text;
     QString iconName;
+    bool menuBarVisible = true;
     QStringList actions;
     QList<QObject *> items;
     QList<ActionMenu *> menus;
@@ -78,6 +79,20 @@ void ActionMenu::setIconName(const QString &iconName)
     d->iconName = iconName;
     Q_EMIT iconNameChanged();
     notifyMergedChanges();
+}
+
+bool ActionMenu::menuBarVisible() const
+{
+    return d->menuBarVisible;
+}
+
+void ActionMenu::setMenuBarVisible(bool visible)
+{
+    if (d->menuBarVisible == visible) {
+        return;
+    }
+    d->menuBarVisible = visible;
+    Q_EMIT menuBarVisibleChanged();
 }
 
 QStringList ActionMenu::actions() const

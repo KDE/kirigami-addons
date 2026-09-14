@@ -24,6 +24,8 @@ import QtQml
         ActionMenu.Separator {}
         ActionMenu.Action { name: "quit" }
     }
+
+    // Set \c menuBarVisible to false for menus presented only by ActionMenuPopup.
     \endqml
 
     \since 1.8.0
