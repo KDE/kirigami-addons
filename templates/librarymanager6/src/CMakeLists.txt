@@ -14,7 +14,7 @@ ecm_add_qml_module(%{APPNAMELC}_static
         qml/Sidebar.qml
     DEPENDENCIES
         org.kde.kirigamiaddons.formcard
-        org.kde.kirigamiaddons.statefulapp
+        org.kde.kirigamiaddons.actions
         org.kde.kirigami
         org.kde.%{APPNAMELC}.settings
 )

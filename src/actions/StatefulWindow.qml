@@ -16,7 +16,7 @@ import org.kde.coreaddons as Core
 
 /*!
    \qmltype StatefulWindow
-   \inqmlmodule org.kde.kirigamiaddons.statefulapp
+   \inqmlmodule org.kde.kirigamiaddons.actions
    \brief StatefulWindow takes care of providing standard functionalities
    for your application main window.
 
@@ -30,7 +30,7 @@ import org.kde.coreaddons as Core
    \endlist
 
    \qml
-   import org.kde.kirigamiaddons.statefulapp as StatefulApp
+   import org.kde.kirigamiaddons.actions as StatefulApp
    import org.kde.kirigamiaddons.settings as Settings
 
    StatefulApp.StatefulWindow {

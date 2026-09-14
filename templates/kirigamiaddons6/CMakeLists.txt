@@ -51,7 +51,7 @@ set_package_properties(KF6KirigamiAddons PROPERTIES
 )
 
 ecm_find_qmlmodule(org.kde.kirigamiaddons.formcard)
-ecm_find_qmlmodule(org.kde.kirigamiaddons.statefulapp)
+ecm_find_qmlmodule(org.kde.kirigamiaddons.actions)
 
 add_subdirectory(src)
 

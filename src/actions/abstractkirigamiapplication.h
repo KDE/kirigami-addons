@@ -57,14 +57,14 @@
  * The application object then need to be assigned to the application property in a StatefulWindow.
  *
  * \code{.qml}
- * import org.kde.kirigamiaddons.StatefulApplication as StatefulApplication
+ * import org.kde.kirigamiaddons.actions as KirigamiActions
  *
- * StatefulApplication.StatefulWindow {
+ * KirigamiActions.StatefulWindow {
  *     id: root
  *
  *     application: MyKoolApp {}
  *
- *     StatefulApplication.Action {
+ *     KirigamiActions.Action {
  *         actionName: 'add_notebook'
  *         application: root.application
  *     }

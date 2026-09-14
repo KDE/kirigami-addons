@@ -92,9 +92,28 @@ ecm_target_qml_sources(KirigamiAddonsStatefulApp SOURCES
 
 ecm_finalize_qml_module(KirigamiAddonsStatefulApp DESTINATION ${KDE_INSTALL_QMLDIR} EXPORT KirigamiAddonsTargets)
 
+# Preferred module name. The implementation remains in the original module so
+# existing imports of org.kde.kirigamiaddons.statefulapp stay compatible.
+ecm_add_qml_module(KirigamiAddonsActionsQml
+    URI "org.kde.kirigamiaddons.actions"
+    VERSION 1.0
+    GENERATE_PLUGIN_SOURCE
+    DEPENDENCIES QtQuick
+    IMPORTS
+        "org.kde.kirigamiaddons.statefulapp"
+)
+
+ecm_finalize_qml_module(KirigamiAddonsActionsQml DESTINATION ${KDE_INSTALL_QMLDIR} EXPORT KirigamiAddonsTargets)
+
+# Preferred CMake target name. Keep the old target available for source and
+# binary compatibility.
+add_library(KirigamiAddonsActions INTERFACE)
+target_link_libraries(KirigamiAddonsActions INTERFACE KirigamiAddonsStatefulApp)
+set_target_properties(KirigamiAddonsActions PROPERTIES EXPORT_NAME KirigamiAddonsActions)
+
 # Install files
 
-install(TARGETS KirigamiAddonsStatefulApp EXPORT KirigamiAddonsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KirigamiAddonsStatefulApp KirigamiAddonsActions EXPORT KirigamiAddonsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES
     "${CMAKE_CURRENT_BINARY_DIR}/kirigamiaddonsstatefulapp_export.h"

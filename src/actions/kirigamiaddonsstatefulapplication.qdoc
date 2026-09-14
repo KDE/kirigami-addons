@@ -1,7 +1,7 @@
 /*!
-   \qmlmodule org.kde.kirigamiaddons.statefulapp
-   \title Kirigami Addons StatefulApplication QML Types
-   \brief Stateful application components for Kirigami applications.
+   \qmlmodule org.kde.kirigamiaddons.actions
+   \title Kirigami Addons Actions QML Types
+   \brief Declarative action components for Kirigami applications.
 
    The module provides StatefulWindow, which stores window state and integrates
    standard application actions, as well as ActionCollection, ActionData and

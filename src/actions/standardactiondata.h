@@ -8,7 +8,7 @@
 
 /*!
  * \qmltype StandardActionData
- * \inqmlmodule org.kde.kirigamiaddons.statefulapp
+ * \inqmlmodule org.kde.kirigamiaddons.actions
  * \brief A declarative action based on a KDE standard action.
  *
  * StandardActionData provides the conventional name, label, icon and default
@@ -16,10 +16,10 @@
  * ActionCollection.
  *
  * \qml
- * StatefulApp.ActionCollection {
+ * KirigamiActions.ActionCollection {
  *     application: root.application
- *     StatefulApp.StandardActionData {
- *         standardAction: StatefulApp.StandardActionData.Copy
+ *     KirigamiActions.StandardActionData {
+ *         standardAction: KirigamiActions.StandardActionData.Copy
  *     }
  * }
  * \endqml

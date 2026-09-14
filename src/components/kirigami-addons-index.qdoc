@@ -26,7 +26,7 @@
     ecm_find_qmlmodule(org.kde.kirigamiaddons.components REQUIRED)
     ecm_find_qmlmodule(org.kde.kirigamiaddons.labs.components REQUIRED)
     ecm_find_qmlmodule(org.kde.kirigamiaddons.sounds REQUIRED)
-    ecm_find_qmlmodule(org.kde.kirigamiaddons.statefulapp REQUIRED)
+    ecm_find_qmlmodule(org.kde.kirigamiaddons.actions REQUIRED)
     ecm_find_qmlmodule(org.kde.kirigamiaddons.statefulapp.labs REQUIRED)
     ecm_find_qmlmodule(org.kde.kirigamiaddons.onboarding REQUIRED)
     \endcode
@@ -49,7 +49,7 @@
         \li \l{Kirigami Addons Components QML Types}
         \li \l{Kirigami Addons Components (Labs) QML Types}
         \li \l{Kirigami Addons Sounds QML Types}
-        \li \l{Kirigami Addons StatefulApplication QML Types}
+        \li \l{Kirigami Addons Actions QML Types}
         \li \l{Kirigami Addons StatefulApplication (Labs) QML Types}
         \li \l{Kirigami Addons Onboarding QML Types}
     \endlist

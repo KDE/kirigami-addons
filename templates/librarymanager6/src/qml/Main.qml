@@ -6,13 +6,13 @@ import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
-import org.kde.kirigamiaddons.statefulapp as StatefulApp
+import org.kde.kirigamiaddons.actions as KirigamiActions
 import org.kde.kirigamiaddons.formcard as FormCard
 
 import org.kde.%{APPNAMELC}
 import org.kde.%{APPNAMELC}.settings as Settings
 
-StatefulApp.StatefulWindow {
+KirigamiActions.StatefulWindow {
     id: root
 
     property int counter: 0

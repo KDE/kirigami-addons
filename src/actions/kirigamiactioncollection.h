@@ -65,7 +65,7 @@ class QString;
 
 /*!
  * \qmltype ActionCollection
- * \inqmlmodule org.kde.kirigamiaddons.statefulapp
+ * \inqmlmodule org.kde.kirigamiaddons.actions
  * \brief A container for a set of QAction objects.
  *
  * KirigamiActionCollection manages a set of QAction objects.  It
@@ -81,18 +81,18 @@ class QString;
  * configurable shortcut editor.
  *
  * \qml
- * import org.kde.kirigamiaddons.statefulapp as StatefulApp
+ * import org.kde.kirigamiaddons.actions as KirigamiActions
  *
- * StatefulApp.StatefulWindow {
+ * KirigamiActions.StatefulWindow {
  *     id: root
  *     application: MyApplication {}
  *
- *     StatefulApp.ActionCollection {
+ *     KirigamiActions.ActionCollection {
  *         application: root.application
  *         name: "main"
  *         text: i18n("Main Actions")
  *
- *         StatefulApp.ActionData {
+ *         KirigamiActions.ActionData {
  *             name: "open_search"
  *             text: i18n("Search")
  *             icon.name: "search"

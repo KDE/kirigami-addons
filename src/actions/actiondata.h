@@ -19,7 +19,7 @@ class IconGroupPrivate;
 
 /*!
  * \qmltype ActionDataGroup
- * \inqmlmodule org.kde.kirigamiaddons.statefulapp
+ * \inqmlmodule org.kde.kirigamiaddons.actions
  * \brief A group of ActionData objects with automatic exclusivity.
  */
 class ActionDataGroup : public QActionGroup
@@ -32,7 +32,7 @@ public:
 
 /*!
  * \qmltype IconGroup
- * \inqmlmodule org.kde.kirigamiaddons.statefulapp
+ * \inqmlmodule org.kde.kirigamiaddons.actions
  * \brief Grouped icon properties for ActionData.
  */
 class IconGroup : public QObject
@@ -73,7 +73,7 @@ private:
 
 /*! 
  * \qmltype ActionData
- * \inqmlmodule org.kde.kirigamiaddons.statefulapp
+ * \inqmlmodule org.kde.kirigamiaddons.actions
  * \nativetype QAction
  * \brief A declarative action with a configurable shortcut.
  *
@@ -90,7 +90,7 @@ private:
  * its shortcut can be configured by the user in the standard shortcut editor.
  *
  * \code
- * import org.kde.kirigamiaddons.statefulapp as StatefulApp
+ * import org.kde.kirigamiaddons.actions as KirigamiActions
  *
  * StatefulApp.StatefulWindow {
  *     id: root
