@@ -19,14 +19,53 @@
 
 #include <QAction>
 #include <QObject>
+#include <QPointer>
+#include <QVariant>
+#include <QQmlListProperty>
+#include <QQmlParserStatus>
+#include <QtQml/qqml.h>
+#include <qqmlregistration.h>
 #include <memory>
+
+class AbstractKirigamiApplication;
+class ActionData;
+class ActionCollectionAttached;
+
+class KIRIGAMIADDONSSTATEFULAPP_EXPORT ActionCollectionAttached : public QObject
+{
+    Q_OBJECT
+    Q_PROPERTY(QString collection READ collection WRITE setCollection NOTIFY collectionChanged FINAL)
+    Q_PROPERTY(QVariant action READ action WRITE setAction NOTIFY actionChanged FINAL)
+
+public:
+    explicit ActionCollectionAttached(QObject *parent = nullptr);
+    ~ActionCollectionAttached() override;
+    QString collection() const;
+    void setCollection(const QString &collection);
+    QVariant action() const;
+    void setAction(const QVariant &action);
+
+Q_SIGNALS:
+    void collectionChanged();
+    void actionChanged();
+
+private:
+    friend class KirigamiActionCollection;
+    void rebind();
+    QString m_collection;
+    QString m_actionName;
+    QPointer<ActionData> m_action;
+    QPointer<QAction> m_qAction;
+    QMetaObject::Connection m_collectionConnection;
+};
 
 class KConfigGroup;
 class QActionGroup;
 class QString;
 
 /*!
- * \class KirigamiActionCollection
+ * \qmltype ActionCollection
+ * \inqmlmodule org.kde.kirigamiaddons.statefulapp
  * \brief A container for a set of QAction objects.
  *
  * KirigamiActionCollection manages a set of QAction objects.  It
@@ -37,11 +76,70 @@ class QString;
  * Additionally, KirigamiActionCollection provides several convenience functions for locating
  * named actions, and actions grouped by QActionGroup.
  *
+ * In QML, declare ActionData and StandardActionData as children. They are registered with
+ * the supplied AbstractKirigamiApplication and become available to its command bar and
+ * configurable shortcut editor.
+ *
+ * \qml
+ * import org.kde.kirigamiaddons.statefulapp as StatefulApp
+ *
+ * StatefulApp.StatefulWindow {
+ *     id: root
+ *     application: MyApplication {}
+ *
+ *     StatefulApp.ActionCollection {
+ *         application: root.application
+ *         name: "main"
+ *         text: i18n("Main Actions")
+ *
+ *         StatefulApp.ActionData {
+ *             name: "open_search"
+ *             text: i18n("Search")
+ *             icon.name: "search"
+ *             defaultShortcut: "Ctrl+F"
+ *         }
+ *     }
+ * }
+ * \endqml
+ *
+ * A QML action can refer to an action in a collection with the attached
+ * properties \c ActionCollection.collection and \c ActionCollection.action:
+ *
+ * \code
+ * Kirigami.Action {
+ *     ActionCollection.collection: "main"
+ *     ActionCollection.action: "open_search"
+ *     onTriggered: search.open()
+ * }
+ * \endcode
+ *
  * \since 1.4.0
  */
-class KIRIGAMIADDONSSTATEFULAPP_EXPORT KirigamiActionCollection : public QObject
+class KIRIGAMIADDONSSTATEFULAPP_EXPORT KirigamiActionCollection : public QObject, public QQmlParserStatus
 {
     Q_OBJECT
+    Q_INTERFACES(QQmlParserStatus)
+    QML_NAMED_ELEMENT(ActionCollection)
+    QML_ATTACHED(ActionCollectionAttached)
+
+    /*! \qmlproperty string ActionCollection::name
+     * The unique name of the collection.
+     */
+    Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged FINAL)
+    /*! \qmlproperty string ActionCollection::text
+     * The user-visible name shown for the collection in shortcut configuration.
+     */
+    Q_PROPERTY(QString text READ text WRITE setText NOTIFY textChanged FINAL)
+    /*! \qmlproperty AbstractKirigamiApplication ActionCollection::application
+     * The application to which the declared actions are added.
+     */
+    Q_PROPERTY(AbstractKirigamiApplication *application READ application WRITE setApplication NOTIFY applicationChanged FINAL)
+    /*! \qmlproperty list<ActionData> ActionCollection::actions
+     * The ActionData and StandardActionData children in this collection.
+     */
+    Q_PROPERTY(QQmlListProperty<ActionData> actions READ qmlActions CONSTANT FINAL)
+
+    Q_CLASSINFO("DefaultProperty", "actions")
 
     /*!
      * \qmlproperty string KirigamiActionCollection::configGroup
@@ -59,7 +157,7 @@ public:
      * Allows specification of a component name other than the default
      * application name, where needed (remember to call setComponentDisplayName() too).
      */
-    explicit KirigamiActionCollection(QObject *parent, const QString &cName = QString());
+    explicit KirigamiActionCollection(QObject *parent = nullptr, const QString &cName = QString());
 
     /*!
      * Destructor.
@@ -205,6 +303,19 @@ public:
      */
     void setComponentDisplayName(const QString &displayName);
 
+    AbstractKirigamiApplication *application() const;
+    void setApplication(AbstractKirigamiApplication *application);
+    QString name() const;
+    void setName(const QString &name);
+    QString text() const;
+    void setText(const QString &text);
+    QQmlListProperty<ActionData> qmlActions();
+    void insertQmlAction(ActionData *action);
+    static ActionCollectionAttached *qmlAttachedProperties(QObject *object);
+
+    void classBegin() override;
+    void componentComplete() override;
+
     /*! The display name for the associated component. */
     QString componentDisplayName() const;
 
@@ -228,6 +339,9 @@ Q_SIGNALS:
      * Indicates that \a action was triggered
      */
     void actionTriggered(QAction *action);
+    void nameChanged();
+    void textChanged();
+    void applicationChanged();
 
 protected:
     /// Overridden to perform connections when someone wants to know whether an action was highlighted or triggered
@@ -444,4 +558,10 @@ public:
 private:
     friend class KirigamiActionCollectionPrivate;
     std::unique_ptr<class KirigamiActionCollectionPrivate> const d;
+    AbstractKirigamiApplication *m_application = nullptr;
+    QList<ActionData *> m_qmlActions;
+    QString m_qmlText;
+    bool m_qmlComplete = false;
 };
+
+QML_DECLARE_TYPEINFO(ActionCollectionAttached, QML_HAS_ATTACHED_PROPERTIES)

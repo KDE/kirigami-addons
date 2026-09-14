@@ -6,8 +6,12 @@
 add_library(KirigamiAddonsStatefulApp
     abstractkirigamiapplication.cpp
     abstractkirigamiapplication.h
+    actiondata.cpp
+    actiondata.h
     kirigamiactioncollection.cpp
     kirigamiactioncollection.h
+    standardactiondata.cpp
+    standardactiondata.h
     actionsmodel.cpp
     actionsmodel_p.h
     commandbarfiltermodel.cpp
@@ -106,4 +110,3 @@ install(FILES
 
 add_subdirectory(private)
 add_subdirectory(labs)
-

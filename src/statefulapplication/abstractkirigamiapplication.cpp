@@ -31,6 +31,7 @@ AbstractKirigamiApplication::AbstractKirigamiApplication(QObject *parent)
     , d(std::make_unique<Private>())
 {
     d->collection = new KirigamiActionCollection(parent);
+    d->collection->setComponentName(u"main"_s);
 }
 
 AbstractKirigamiApplication::~AbstractKirigamiApplication()

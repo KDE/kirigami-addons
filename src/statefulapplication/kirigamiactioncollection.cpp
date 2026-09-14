@@ -14,6 +14,8 @@
 */
 
 #include "kirigamiactioncollection.h"
+#include "abstractkirigamiapplication.h"
+#include "actiondata.h"
 
 #include <KAuthorized>
 #include <KConfigGroup>
@@ -24,9 +26,103 @@
 #include <QList>
 #include <QMap>
 #include <QMetaMethod>
+#include <QQmlProperty>
 #include <QSet>
 
-#include <cstdio>
+static QList<ActionCollectionAttached *> s_attachedProperties;
+
+ActionCollectionAttached::ActionCollectionAttached(QObject *parent)
+    : QObject(parent)
+{
+    s_attachedProperties.append(this);
+    rebind();
+}
+
+ActionCollectionAttached::~ActionCollectionAttached()
+{
+    s_attachedProperties.removeAll(this);
+}
+
+QString ActionCollectionAttached::collection() const
+{
+    return m_collection;
+}
+
+void ActionCollectionAttached::setCollection(const QString &collection)
+{
+    if (m_collection == collection) {
+        return;
+    }
+    m_collection = collection;
+    rebind();
+    Q_EMIT collectionChanged();
+}
+
+QVariant ActionCollectionAttached::action() const
+{
+    return m_actionName;
+}
+
+void ActionCollectionAttached::setAction(const QVariant &action)
+{
+    QString actionName;
+    if (action.metaType().id() == QMetaType::QString) {
+        actionName = action.toString();
+    } else if (action.canConvert<int>()) {
+        actionName = KStandardActions::name(static_cast<KStandardActions::StandardAction>(action.toInt()));
+    }
+
+    if (m_actionName == actionName) {
+        return;
+    }
+    m_actionName = actionName;
+    rebind();
+    Q_EMIT actionChanged();
+}
+
+void ActionCollectionAttached::rebind()
+{
+    QObject::disconnect(m_collectionConnection);
+
+    if (m_action) {
+        m_action->removeActionInstance(parent());
+        m_action.clear();
+    }
+    if (m_qAction) {
+        QQmlProperty property(parent(), QStringLiteral("fromQAction"));
+        if (property.isValid() && property.isWritable()) {
+            property.write(QVariant());
+        }
+        m_qAction.clear();
+    }
+
+    if (m_collection.isEmpty() || m_actionName.isEmpty()) {
+        return;
+    }
+
+    for (auto collection : KirigamiActionCollection::allCollections()) {
+        if (collection->componentName() != m_collection) {
+            continue;
+        }
+        m_collectionConnection = QObject::connect(collection, &KirigamiActionCollection::inserted, this, [this]() {
+            rebind();
+        });
+        auto action = collection->action(m_actionName);
+        m_action = qobject_cast<ActionData *>(action);
+        if (m_action) {
+            m_action->addActionInstance(parent());
+            return;
+        }
+        if (action) {
+            QQmlProperty property(parent(), QStringLiteral("fromQAction"));
+            if (property.isValid() && property.isWritable()) {
+                property.write(QVariant::fromValue(action));
+                m_qAction = action;
+            }
+            return;
+        }
+    }
+}
 
 class KirigamiActionCollectionPrivate
 {
@@ -72,6 +168,104 @@ KirigamiActionCollection::KirigamiActionCollection(QObject *parent, const QStrin
 {
     setObjectName(cName);
     KirigamiActionCollectionPrivate::s_allCollections.append(this);
+    for (auto attached : std::as_const(s_attachedProperties)) {
+        attached->rebind();
+    }
+}
+
+AbstractKirigamiApplication *KirigamiActionCollection::application() const
+{
+    return m_application;
+}
+
+QString KirigamiActionCollection::name() const
+{
+    return componentName();
+}
+
+void KirigamiActionCollection::setName(const QString &name)
+{
+    if (componentName() == name) {
+        return;
+    }
+    setComponentName(name);
+    for (auto attached : std::as_const(s_attachedProperties)) {
+        attached->rebind();
+    }
+    Q_EMIT nameChanged();
+}
+
+void KirigamiActionCollection::setApplication(AbstractKirigamiApplication *application)
+{
+    if (m_application == application) {
+        return;
+    }
+    m_application = application;
+    if (m_qmlComplete) {
+        for (auto action : std::as_const(m_qmlActions)) {
+            insertQmlAction(action);
+        }
+    }
+    Q_EMIT applicationChanged();
+}
+
+QString KirigamiActionCollection::text() const
+{
+    return m_qmlText.isEmpty() ? componentDisplayName() : m_qmlText;
+}
+
+void KirigamiActionCollection::setText(const QString &text)
+{
+    if (m_qmlText == text) {
+        return;
+    }
+    m_qmlText = text;
+    setComponentDisplayName(text);
+    Q_EMIT textChanged();
+}
+
+QQmlListProperty<ActionData> KirigamiActionCollection::qmlActions()
+{
+    return {this, nullptr, [](QQmlListProperty<ActionData> *property, ActionData *action) {
+        static_cast<KirigamiActionCollection *>(property->object)->insertQmlAction(action);
+    }, nullptr, nullptr, nullptr};
+}
+
+ActionCollectionAttached *KirigamiActionCollection::qmlAttachedProperties(QObject *object)
+{
+    return new ActionCollectionAttached(object);
+}
+
+void KirigamiActionCollection::insertQmlAction(ActionData *action)
+{
+    if (!action) {
+        return;
+    }
+
+    if (!m_qmlActions.contains(action)) {
+        m_qmlActions.append(action);
+        action->setParent(this);
+    }
+
+    if (m_qmlComplete && m_application && this->action(action->name()) != action) {
+        addAction(action->name(), action);
+        setComponentDisplayName(text());
+        readSettings();
+    }
+}
+
+void KirigamiActionCollection::classBegin()
+{
+}
+
+void KirigamiActionCollection::componentComplete()
+{
+    m_qmlComplete = true;
+    if (m_application) {
+        for (auto action : std::as_const(m_qmlActions)) {
+            insertQmlAction(action);
+        }
+    }
 }
 
 KirigamiActionCollection::~KirigamiActionCollection()
