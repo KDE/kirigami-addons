@@ -57,6 +57,10 @@ Item {
         id: application
     }
 
+    KirigamiActions.Application {
+        id: secondApplication
+    }
+
     ActionCollection {
         id: actionCollection
         application: application
@@ -144,6 +148,23 @@ Item {
             id: dynamicAction
             name: "dynamic_action"
             text: "Dynamic action"
+        }
+    }
+
+    ActionCollection {
+        id: secondCollection
+        application: secondApplication
+
+        menus: [
+            ActionMenu {
+                name: "file"
+                actions: ["other_application_action"]
+            }
+        ]
+
+        ActionData {
+            name: "other_application_action"
+            text: "Other application action"
         }
     }
 
@@ -262,12 +283,17 @@ Item {
         function test_actionMenuMergesContributions() {
             compare(fileMenu.mergedActions, ["single_page", "continuous_page"]);
             compare(fileMenu.mergedItems, [
-                { type: "action", name: "single_page" },
+                { type: "action", name: "single_page", action: singlePage },
                 { type: "separator" },
-                { type: "action", name: "continuous_page" },
+                { type: "action", name: "continuous_page", action: continuousPage },
             ]);
             compare(fileMenu.mergedMenus.length, 1);
             compare(fileMenu.mergedMenus[0].mergedActions, ["recent_one", "recent_two"]);
+        }
+
+        function test_actionMenusAreApplicationScoped() {
+            compare(fileMenu.mergedActions, ["single_page", "continuous_page"]);
+            compare(fileMenu.mergedItems.some(item => item.name === "other_application_action"), false);
         }
 
         function test_actionMenuPopupResolvesActions() {

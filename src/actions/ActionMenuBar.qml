@@ -53,7 +53,7 @@ QQC2.MenuBar {
                 target.addItem(separatorComponent.createObject(target));
                 return;
             }
-            const resolvedAction = menuData.resolveMergedAction(itemData.name);
+            const resolvedAction = itemData.action;
             if (!resolvedAction) {
                 return;
             }

@@ -2,10 +2,12 @@
 // SPDX-License-Identifier: LGPL-2.1-or-later
 
 #include "actionmenu.h"
+#include "abstractkirigamiapplication.h"
 #include "kirigamiactioncollection.h"
 
 #include <algorithm>
 #include <QDebug>
+#include <functional>
 #include <utility>
 
 using namespace Qt::StringLiterals;
@@ -23,18 +25,14 @@ public:
     KirigamiActionCollection *collection = nullptr;
 };
 
-static QList<ActionMenu *> s_allMenus;
-
 ActionMenu::ActionMenu(QObject *parent)
     : QObject(parent)
     , d(std::make_unique<Private>())
 {
-    s_allMenus.append(this);
 }
 
 ActionMenu::~ActionMenu()
 {
-    s_allMenus.removeAll(this);
 }
 
 QString ActionMenu::name() const
@@ -51,6 +49,7 @@ void ActionMenu::setName(const QString &name)
     Q_EMIT nameChanged();
     Q_EMIT mergedActionsChanged();
     Q_EMIT mergedItemsChanged();
+    Q_EMIT mergedMenusChanged();
 }
 
 QString ActionMenu::text() const
@@ -115,26 +114,6 @@ QObject *ActionMenu::resolveAction(const QString &name) const
     return nullptr;
 }
 
-QObject *ActionMenu::resolveMergedAction(const QString &name) const
-{
-    if (auto *action = resolveAction(name)) {
-        return action;
-    }
-
-    for (auto *menu : s_allMenus) {
-        if (!menu || menu == this || menu->menuPath() != menuPath() || !collection() || !menu->collection()
-            || (collection()->application() != menu->collection()->application()
-                || (!collection()->application() && collection() != menu->collection()))) {
-            continue;
-        }
-        if (auto *action = menu->resolveAction(name)) {
-            return action;
-        }
-    }
-    qWarning() << "ActionMenu" << this->name() << "references unavailable action" << name;
-    return nullptr;
-}
-
 QQmlListProperty<ActionMenu> ActionMenu::menus()
 {
     return {this, nullptr, &ActionMenu::appendMenu, &ActionMenu::menuCount, &ActionMenu::menuAt, &ActionMenu::clearMenus};
@@ -156,7 +135,7 @@ QVariantList ActionMenu::mergedMenus() const
 {
     QVariantList result;
     QStringList menuNames;
-    for (const auto menu : s_allMenus) {
+    for (const auto menu : contributingMenus()) {
         if (!menu || !menu->d->parentMenu || menu->d->parentMenu->menuPath() != menuPath() || !collection() || !menu->collection()
             || (collection()->application() != menu->collection()->application()
                 || (!collection()->application() && collection() != menu->collection()))
@@ -182,7 +161,7 @@ QVariantList ActionMenu::mergedItems() const
         }
     };
 
-    for (const auto menu : s_allMenus) {
+    for (const auto menu : contributingMenus()) {
         if (!menu || menu->menuPath() != menuPath() || !collection() || !menu->collection()
             || (collection()->application() != menu->collection()->application()
                 || (!collection()->application() && collection() != menu->collection()))) {
@@ -192,7 +171,13 @@ QVariantList ActionMenu::mergedItems() const
         if (menu->d->items.isEmpty()) {
             for (const auto &action : menu->actions()) {
                 if (!actionNames.contains(action)) {
-                    result.append(QVariantMap{{u"type"_s, u"action"_s}, {u"name"_s, action}});
+                    const auto resolvedAction = menu->resolveAction(action);
+                    if (!resolvedAction) {
+                        qWarning() << "ActionMenu" << menu->name() << "references unavailable action" << action;
+                    }
+                    result.append(QVariantMap{{u"type"_s, u"action"_s},
+                                              {u"name"_s, action},
+                                              {u"action"_s, QVariant::fromValue<QObject *>(resolvedAction)}});
                     actionNames.append(action);
                     lastWasSeparator = false;
                 }
@@ -211,7 +196,13 @@ QVariantList ActionMenu::mergedItems() const
 
             const auto action = item->property("name").toString();
             if (!action.isEmpty() && !actionNames.contains(action)) {
-                result.append(QVariantMap{{u"type"_s, u"action"_s}, {u"name"_s, action}});
+                const auto resolvedAction = menu->resolveAction(action);
+                if (!resolvedAction) {
+                    qWarning() << "ActionMenu" << menu->name() << "references unavailable action" << action;
+                }
+                result.append(QVariantMap{{u"type"_s, u"action"_s},
+                                          {u"name"_s, action},
+                                          {u"action"_s, QVariant::fromValue<QObject *>(resolvedAction)}});
                 actionNames.append(action);
                 lastWasSeparator = false;
             }
@@ -230,18 +221,13 @@ void ActionMenu::classBegin()
 
 void ActionMenu::componentComplete()
 {
-    for (const auto menu : s_allMenus) {
+    for (const auto menu : contributingMenus()) {
         if (menu && menu != this && menu->menuPath() == menuPath()) {
             Q_EMIT menu->mergedActionsChanged();
             Q_EMIT menu->mergedItemsChanged();
             Q_EMIT menu->mergedMenusChanged();
         }
     }
-}
-
-const QList<ActionMenu *> &ActionMenu::allMenus()
-{
-    return s_allMenus;
 }
 
 void ActionMenu::appendMenu(QQmlListProperty<ActionMenu> *property, ActionMenu *menu)
@@ -251,6 +237,7 @@ void ActionMenu::appendMenu(QQmlListProperty<ActionMenu> *property, ActionMenu *
         parent->d->menus.append(menu);
         menu->d->parentMenu = parent;
         menu->setCollection(parent->d->collection);
+        Q_EMIT parent->menusChanged();
         Q_EMIT parent->mergedMenusChanged();
     }
 }
@@ -261,6 +248,7 @@ void ActionMenu::setCollection(KirigamiActionCollection *collection)
         return;
     }
     d->collection = collection;
+    Q_EMIT collectionChanged();
     for (auto *menu : std::as_const(d->menus)) {
         menu->setCollection(collection);
     }
@@ -276,8 +264,10 @@ void ActionMenu::appendItem(QQmlListProperty<QObject> *property, QObject *item)
     QObject::connect(item, &QObject::destroyed, menu, [menu, item]() {
         menu->d->items.removeAll(item);
         Q_EMIT menu->mergedItemsChanged();
+        Q_EMIT menu->itemsChanged();
     });
     Q_EMIT menu->mergedItemsChanged();
+    Q_EMIT menu->itemsChanged();
 }
 
 qsizetype ActionMenu::itemCount(QQmlListProperty<QObject> *property)
@@ -296,6 +286,7 @@ void ActionMenu::clearItems(QQmlListProperty<QObject> *property)
     auto menu = static_cast<ActionMenu *>(property->object);
     menu->d->items.clear();
     Q_EMIT menu->mergedItemsChanged();
+    Q_EMIT menu->itemsChanged();
 }
 
 qsizetype ActionMenu::menuCount(QQmlListProperty<ActionMenu> *property)
@@ -316,6 +307,7 @@ void ActionMenu::clearMenus(QQmlListProperty<ActionMenu> *property)
         child->d->parentMenu = nullptr;
     }
     menu->d->menus.clear();
+    Q_EMIT menu->menusChanged();
     Q_EMIT menu->mergedMenusChanged();
 }
 
@@ -328,4 +320,36 @@ QStringList ActionMenu::menuPath() const
     auto path = d->parentMenu->menuPath();
     path.append(d->name);
     return path;
+}
+
+QList<ActionMenu *> ActionMenu::contributingMenus() const
+{
+    if (!d->collection) {
+        return {};
+    }
+
+    const auto application = d->collection->application();
+    QList<ActionMenu *> topLevelMenus;
+    if (!application) {
+        topLevelMenus = d->collection->registeredMenus();
+    } else {
+        for (const auto collection : application->actionCollections()) {
+            topLevelMenus.append(collection->registeredMenus());
+        }
+    }
+
+    QList<ActionMenu *> result;
+    std::function<void(ActionMenu *)> appendMenu = [&](ActionMenu *menu) {
+        if (!menu) {
+            return;
+        }
+        result.append(menu);
+        for (auto *child : std::as_const(menu->d->menus)) {
+            appendMenu(child);
+        }
+    };
+    for (auto *menu : std::as_const(topLevelMenus)) {
+        appendMenu(menu);
+    }
+    return result;
 }

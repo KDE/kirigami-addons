@@ -1,7 +1,7 @@
 include($KDE_DOCS/global/qt-module-defaults.qdocconf)
 
-project = KirigamiAddonsStatefulApplicationLabs
-description = Todo
+project = KirigamiAddonsActionsLabs
+description = Experimental native menu types for the Kirigami Addons actions module.
 
 documentationinheaders = true
 
@@ -14,19 +14,19 @@ depends += kde kirigami qtcore qtquick qtquickcontrols qtgui kirigamiaddonsstate
 
 navigation.landingpage = "Kirigami Addons"
 
-qhp.projects = KirigamiAddonsStatefulApplicationLabs
+qhp.projects = KirigamiAddonsActionsLabs
 
-qhp.KirigamiAddonsStatefulApplicationLabs.file          = kirigamiaddonsstatefulapplicationlabs.qhp
-qhp.KirigamiAddonsStatefulApplicationLabs.namespace     = org.kde.kirigamiaddonsstatefulapplicationlabs.$QT_VERSION_TAG
-qhp.KirigamiAddonsStatefulApplicationLabs.virtualFolder = kirigamiaddonsstatefulapplicationlabs
-qhp.KirigamiAddonsStatefulApplicationLabs.indexTitle    = Kirigami Addons StatefulApplication (Labs)
-qhp.KirigamiAddonsStatefulApplicationLabs.indexRoot     =
+qhp.KirigamiAddonsActionsLabs.file          = kirigamiaddonsactionslabs.qhp
+qhp.KirigamiAddonsActionsLabs.namespace     = org.kde.kirigamiaddonsactionslabs.$QT_VERSION_TAG
+qhp.KirigamiAddonsActionsLabs.virtualFolder = kirigamiaddonsactionslabs
+qhp.KirigamiAddonsActionsLabs.indexTitle    = Kirigami Addons Actions (Labs)
+qhp.KirigamiAddonsActionsLabs.indexRoot     =
 
-qhp.KirigamiAddonsStatefulApplicationLabs.subprojects = statefulapplicationlabs
+qhp.KirigamiAddonsActionsLabs.subprojects = actionslabs
 
-qhp.KirigamiAddonsStatefulApplicationLabs.subprojects.statefulapplicationlabs.title = Kirigami Addons StatefulApplication (Labs) QML Types
-qhp.KirigamiAddonsStatefulApplicationLabs.subprojects.statefulapplicationlabs.indexTitle = Kirigami Addons StatefulApplication (Labs) QML Types
-qhp.KirigamiAddonsStatefulApplicationLabs.subprojects.statefulapplicationlabs.selectors = qmlmodule:org.kde.kirigamiaddons.statefulapp.labs
-qhp.KirigamiAddonsStatefulApplicationLabs.subprojects.statefulapplicationlabs.sortPages = true
+qhp.KirigamiAddonsActionsLabs.subprojects.actionslabs.title = Kirigami Addons Actions (Labs) QML Types
+qhp.KirigamiAddonsActionsLabs.subprojects.actionslabs.indexTitle = Kirigami Addons Actions (Labs) QML Types
+qhp.KirigamiAddonsActionsLabs.subprojects.actionslabs.selectors = qmlmodule:org.kde.kirigamiaddons.actions.labs
+qhp.KirigamiAddonsActionsLabs.subprojects.actionslabs.sortPages = true
 
 tagfile = kirigamiaddonsstatefulapplicationlabs.tags

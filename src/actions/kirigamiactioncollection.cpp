@@ -167,6 +167,7 @@ KirigamiActionCollection::KirigamiActionCollection(QObject *parent, const QStrin
     : QObject(parent)
     , d(new KirigamiActionCollectionPrivate(this))
 {
+    connect(this, &KirigamiActionCollection::actionsChanged, this, &KirigamiActionCollection::menusChanged, Qt::UniqueConnection);
     setObjectName(cName);
     KirigamiActionCollectionPrivate::s_allCollections.append(this);
     for (auto attached : std::as_const(s_attachedProperties)) {
@@ -281,6 +282,11 @@ void KirigamiActionCollection::insertQmlMenu(ActionMenu *menu)
     Q_EMIT menusChanged();
 }
 
+const QList<ActionMenu *> &KirigamiActionCollection::registeredMenus() const
+{
+    return m_qmlMenus;
+}
+
 ActionCollectionAttached *KirigamiActionCollection::qmlAttachedProperties(QObject *object)
 {
     return new ActionCollectionAttached(object);
@@ -301,6 +307,7 @@ void KirigamiActionCollection::insertQmlAction(ActionData *action)
         addAction(action->name(), action);
         setComponentDisplayName(text());
         readSettings();
+        Q_EMIT actionsChanged();
     }
 }
 
@@ -328,6 +335,7 @@ void KirigamiActionCollection::clear()
     d->actionByName.clear();
     qDeleteAll(d->actions);
     d->actions.clear();
+    Q_EMIT actionsChanged();
 }
 
 QAction *KirigamiActionCollection::action(const QString &name) const

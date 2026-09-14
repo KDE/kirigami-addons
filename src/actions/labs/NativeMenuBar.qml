@@ -6,12 +6,14 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import Qt.labs.platform as Labs
 
-import org.kde.kirigamiaddons.statefulapp as StatefulApp
+import org.kde.kirigamiaddons.actions as KirigamiActions
 
 /*!
    \qmltype NativeMenuBar
-   \inqmlmodule org.kde.kirigamiaddons.statefulapp.labs
-   \brief A native menu bar generated from all action collections.
+   \inqmlmodule org.kde.kirigamiaddons.actions.labs
+   \brief An experimental native menu bar generated from all action collections.
+
+   This API is experimental and may change without notice.
 
    NativeMenuBar combines menus with the same name from all action collections
    belonging to the application. Actions retain their state, icons, shortcuts,
@@ -30,7 +32,7 @@ import org.kde.kirigamiaddons.statefulapp as StatefulApp
 Labs.MenuBar {
     id: root
 
-    property StatefulApp.Application application: null
+    property KirigamiActions.Application application: null
     property QtObject collection: null
     property var generatedMenus: []
     property var generatedItems: []
@@ -56,7 +58,7 @@ Labs.MenuBar {
                 return;
             }
 
-            const resolvedAction = menuData.resolveMergedAction(itemData.name);
+            const resolvedAction = itemData.action;
             if (!resolvedAction) {
                 return;
             }
@@ -68,7 +70,7 @@ Labs.MenuBar {
             generatedItems.push(item);
         });
 
-        menuData.menus.forEach(childMenuData => {
+        menuData.mergedMenus.forEach(childMenuData => {
             const submenu = menuComponent.createObject(target, {
                 title: childMenuData.text,
             });

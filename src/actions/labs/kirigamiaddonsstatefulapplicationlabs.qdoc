@@ -1,5 +1,5 @@
 /*!
-   \qmlmodule org.kde.kirigamiaddons.statefulapp.labs
-   \title Kirigami Addons StatefulApplication (Labs) QML Types
-   \brief Todo
+   \qmlmodule org.kde.kirigamiaddons.actions.labs
+   \title Kirigami Addons Actions (Labs) QML Types
+   \brief Experimental native menu types for the Kirigami Addons actions module.
  */

@@ -5,24 +5,26 @@
 import QtQuick
 import Qt.labs.platform
 import org.kde.kirigamiaddons.statefulapp.private as Private
-import org.kde.kirigamiaddons.statefulapp as StatefulApp
+import org.kde.kirigamiaddons.actions as KirigamiActions
 
 /*!
    \qmltype NativeMenuItem
-   \inqmlmodule org.kde.kirigamiaddons.statefulapp.labs
-   \brief A Qt.labs.platform.MenuItem defined by a QAction.
+   \inqmlmodule org.kde.kirigamiaddons.actions.labs
+   \brief An experimental Qt.labs.platform.MenuItem defined by a QAction.
+
+   This API is experimental and may change without notice.
 
    \qml
    import Qt.labs.platform as Labs
-   import org.kde.kirigamiaddons.statefulapp as StatefulApp
-   import org.kde.kirigamiaddons.statefulapp.labs as StatefulAppLabs
+   import org.kde.kirigamiaddons.actions as KirigamiActions
+   import org.kde.kirigamiaddons.actions.labs as KirigamiActionsLabs
 
-   StatefulApp.StatefulWindow {
+   KirigamiActions.StatefulWindow {
        application: MyKoolApp
 
        Labs.MenuBar {
            Labs.Menu {
-               StatefulAppLabs.MenuItem {
+               KirigamiActionsLabs.NativeMenuItem {
                    actionName: 'add_notebook'
                    application: MyKoolApp
                }
@@ -42,7 +44,7 @@ MenuItem {
        \qmlproperty AbstractKirigamiApplication application
        This property holds the AbstractKirigamiApplication where the action is defined.
      */
-    property StatefulApp.Application application: null
+    property KirigamiActions.Application application: null
 
     /*!
        This property can be used by generated menus to provide the resolved action

@@ -138,7 +138,7 @@ class KIRIGAMIADDONSSTATEFULAPP_EXPORT KirigamiActionCollection : public QObject
     /*! \qmlproperty list<ActionData> ActionCollection::actions
      * The ActionData and StandardActionData children in this collection.
      */
-    Q_PROPERTY(QQmlListProperty<ActionData> actions READ qmlActions CONSTANT FINAL)
+    Q_PROPERTY(QQmlListProperty<ActionData> actions READ qmlActions NOTIFY actionsChanged FINAL)
     /*! \qmlproperty list<ActionMenu> ActionCollection::menus
      * Declarative menus contributed by this collection.
      */
@@ -352,6 +352,7 @@ Q_SIGNALS:
     void nameChanged();
     void textChanged();
     void applicationChanged();
+    void actionsChanged();
 
 protected:
     /// Overridden to perform connections when someone wants to know whether an action was highlighted or triggered
@@ -566,7 +567,9 @@ public:
     static void setShortcutsConfigurable(QAction *action, bool configurable);
 
 private:
+    friend class ActionMenu;
     friend class KirigamiActionCollectionPrivate;
+    const QList<ActionMenu *> &registeredMenus() const;
     std::unique_ptr<class KirigamiActionCollectionPrivate> const d;
     AbstractKirigamiApplication *m_application = nullptr;
     QMetaObject::Connection m_applicationMenusConnection;

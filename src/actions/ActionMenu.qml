@@ -3,7 +3,7 @@
 
 import QtQml
 
-/*! 
+/*!
     \qmltype ActionMenu
     \inqmlmodule org.kde.kirigamiaddons.actions
     \brief A declarative menu containing named actions and separators.
@@ -11,6 +11,9 @@ import QtQml
     The compact \c actions property can be used for menus containing only
     actions. Use the ordered default property when separators or explicit
     ordering are needed.
+
+    Each entry in \c mergedItems contains \c type and \c name. Action entries
+    also contain the resolved \c action object used by menu presenters.
 
     \qml
     KirigamiActions.ActionMenu {

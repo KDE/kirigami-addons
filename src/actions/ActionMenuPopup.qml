@@ -13,8 +13,7 @@ import org.kde.kirigamiaddons.components as KirigamiComponents
     \inqmlmodule org.kde.kirigamiaddons.actions
     \brief Presents an ActionMenu as a convergent menu popup.
 
-    The menu resolves named actions from its ActionMenu and keeps the resulting
-    menu items backed by the original QAction instances. Consequently action
+    The menu keeps its items backed by the original QAction instances. Consequently action
     state, shortcuts and trigger handlers remain owned by ActionData.
 
     Menus with the same name contribute to the same logical menu through
@@ -48,7 +47,7 @@ Item {
         if (itemData.type === "separator") {
             return actionComponent.createObject(root, { separator: true });
         }
-        const resolvedAction = actionMenu.resolveMergedAction(itemData.name);
+        const resolvedAction = itemData.action;
         return resolvedAction ? actionComponent.createObject(root, {
             fromQAction: resolvedAction,
         }) : null;
@@ -100,6 +99,9 @@ Item {
     Connections {
         target: root.menu?.collection
         function onInserted(): void {
+            root.rebuild();
+        }
+        function onActionsChanged(): void {
             root.rebuild();
         }
     }

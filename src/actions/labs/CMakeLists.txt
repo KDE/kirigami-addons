@@ -9,8 +9,6 @@ ecm_add_qml_module(statefulapplabsplugin
         "org.kde.kirigamiaddons.statefulapp.private"
 )
 
-ecm_generate_qdoc(statefulapplabsplugin kirigamiaddonsstatefulapplicationlabs.qdocconf)
-
 ecm_target_qml_sources(statefulapplabsplugin SOURCES
     NativeMenuItem.qml
     NativeMenuBar.qml
@@ -30,6 +28,8 @@ ecm_add_qml_module(actionslabsplugin
         "org.kde.kirigamiaddons.actions"
         "org.kde.kirigamiaddons.statefulapp.private"
 )
+
+ecm_generate_qdoc(actionslabsplugin kirigamiaddonsstatefulapplicationlabs.qdocconf)
 
 ecm_target_qml_sources(actionslabsplugin SOURCES
     NativeMenuItem.qml
