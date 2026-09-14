@@ -554,7 +554,7 @@ FormCardPage {
                             title: delegate.modelData.name
 
                             parent: licenseButton.QQC2.Overlay.overlay
-                            implicitWidth: Math.min(parent.width - Kirigami.Units.gridUnit * 2, implicitContentWidth)
+                            implicitWidth: parent ? Math.min(parent.width - Kirigami.Units.gridUnit * 2, implicitContentWidth) : implicitContentWidth
 
                             leftPadding: 0
                             rightPadding: 0

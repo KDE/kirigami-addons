@@ -93,22 +93,24 @@ T.Dialog {
         return "data-warning";
     }
 
-    x: Math.round((parent.width - width) / 2)
-    y: Math.round((parent.height - height) / 2)
+    x: parent ? Math.round((parent.width - width) / 2) : 0
+    y: parent ? Math.round((parent.height - height) / 2) : 0
     z: Kirigami.OverlayZStacking.z
 
-    parent: applicationWindow().QQC2.Overlay.overlay
+    parent: applicationWindow() ? applicationWindow().QQC2.Overlay.overlay : null
 
-    implicitWidth: if (parent.width > 576) {
+    implicitWidth: if (!parent) {
+        return implicitContentWidth
+    } else if (parent.width > 576) {
         return Math.min(parent.width - Kirigami.Units.gridUnit * 2, Kirigami.Units.gridUnit * 25)
     } else {
         return parent.width - Kirigami.Units.gridUnit * 2;
     }
 
-    implicitHeight: Math.min(Math.max(implicitBackgroundHeight + topInset + bottomInset,
+    implicitHeight: parent ? Math.min(Math.max(implicitBackgroundHeight + topInset + bottomInset,
                              contentHeight + topPadding + bottomPadding
                              + (implicitHeaderHeight > 0 ? implicitHeaderHeight + spacing : 0)
-                             + (implicitFooterHeight > 0 ? implicitFooterHeight + spacing : 0)), parent.height - Kirigami.Units.gridUnit * 2, Kirigami.Units.gridUnit * 30)
+                             + (implicitFooterHeight > 0 ? implicitFooterHeight + spacing : 0)), parent.height - Kirigami.Units.gridUnit * 2, Kirigami.Units.gridUnit * 30) : implicitContentHeight
 
     title: switch (root.dialogType) {
     case MessageDialog.Success:
