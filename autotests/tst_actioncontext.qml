@@ -64,6 +64,7 @@ Item {
     ActionCollection {
         id: actionCollection
         application: application
+        name: "actions"
         menus: [
             ActionMenu {
                 id: fileMenu
@@ -124,6 +125,11 @@ Item {
             name: "test_action"
             action: primaryAction
             contexts: [childContext, highPriorityContext]
+        }
+
+        StandardActionData {
+            id: copyAction
+            standardAction: StandardActionData.Copy
         }
     }
 
@@ -308,6 +314,32 @@ Item {
             context.active = true;
             tryCompare(primaryAction, "enabled", true);
             tryCompare(primaryAction, "visible", true);
+        }
+
+        function test_iconPropertiesAreMirroredToPrimaryAction() {
+            action.icon.source = "qrc:/test-icon.svg";
+            action.icon.width = 24;
+            action.icon.height = 18;
+            action.icon.color = "red";
+            action.icon.cache = false;
+
+            compare(primaryAction.icon.source, "qrc:/test-icon.svg");
+            compare(primaryAction.icon.width, 24);
+            compare(primaryAction.icon.height, 18);
+            compare(primaryAction.icon.color, Qt.rgba(1, 0, 0, 1));
+            compare(primaryAction.icon.cache, false);
+
+            action.icon.source = "";
+            action.icon.width = -1;
+            action.icon.height = -1;
+            action.icon.color = "transparent";
+            action.icon.cache = true;
+        }
+
+        function test_standardActionData() {
+            compare(copyAction.standardAction, StandardActionData.Copy);
+            compare(copyAction.name, "edit_copy");
+            verify(copyAction.text.length > 0);
         }
 
         function test_actionGroup() {
