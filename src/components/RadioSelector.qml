@@ -62,7 +62,7 @@ Item {
 
     implicitHeight: switchLayout.implicitHeight
 
-    onSelectedIndexChanged: if (selectedIndex >= 0 && repeater.count < selectedIndex && !repeater.childAt(selectedIndex).checked) {
+    onSelectedIndexChanged: if (selectedIndex >= 0 && selectedIndex < repeater.count && repeater.childAt(selectedIndex) && !repeater.childAt(selectedIndex).checked) {
         repeater.childAt(selectedIndex).clicked();
     }
 
@@ -181,12 +181,12 @@ Item {
     Kirigami.ShadowedRectangle {
         id: marker
 
-        x: buttonGroup.checkedButton.x
+        x: buttonGroup.checkedButton?.x ?? 0
         y: switchLayout.y
         z: switchLayout.z - 1
 
         height: switchLayout.implicitHeight
-        width: buttonGroup.checkedButton.width
+        width: buttonGroup.checkedButton?.width ?? 0
         radius: Kirigami.Units.cornerRadius
 
         color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.8)
