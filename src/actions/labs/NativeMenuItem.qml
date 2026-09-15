@@ -44,7 +44,7 @@ MenuItem {
        \qmlproperty AbstractKirigamiApplication application
        This property holds the AbstractKirigamiApplication where the action is defined.
      */
-    property KirigamiActions.Application application: null
+    property KirigamiActions.AbstractKirigamiApplication application: null
 
     /*!
        This property can be used by generated menus to provide the resolved action
@@ -60,10 +60,10 @@ MenuItem {
     onTriggered: if (_action) {
         _action.trigger();
     }
-    visible: _action && _action.text.length > 0
-    checkable: _action?.checkable
-    checked: _action?.checked
-    enabled: _action && _action.enabled
+    visible: !!_action && _action.text.length > 0
+    checkable: !!_action && _action.checkable
+    checked: !!_action && _action.checked
+    enabled: !!_action && _action.enabled
     role: {
         switch (actionName) {
         case "open_about_page":

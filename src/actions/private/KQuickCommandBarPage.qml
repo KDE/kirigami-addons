@@ -13,7 +13,7 @@ import QtQuick.Templates as T
 Kirigami.SearchDialog {
     id: root
 
-    required property StatefulApp.Application application
+    required property StatefulApp.AbstractKirigamiApplication application
 
     background: Components.DialogRoundedBackground {}
 

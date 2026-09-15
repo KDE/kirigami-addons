@@ -32,7 +32,7 @@ import org.kde.kirigamiaddons.actions as KirigamiActions
 Labs.MenuBar {
     id: root
 
-    property KirigamiActions.Application application: null
+    property KirigamiActions.AbstractKirigamiApplication application: null
     property QtObject collection: null
     property var generatedMenus: []
     property var generatedItems: []
