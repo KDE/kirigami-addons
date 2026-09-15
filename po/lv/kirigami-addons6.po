@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-06 00:43+0000\n"
+"POT-Creation-Date: 2026-09-15 00:42+0000\n"
 "PO-Revision-Date: 2025-08-21 10:33+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -27,6 +27,200 @@ msgstr "Toms Trasūns"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "toms.trasuns@posteo.net"
+
+#: actions/abstractkirigamiapplication.cpp:162
+#, kde-format
+msgid "Open Command Bar"
+msgstr "Atvērt komandu joslu"
+
+#: actions/abstractkirigamiapplication.cpp:184 formcard/AboutPage.qml:106
+#, kde-format
+msgid "About %1"
+msgstr "Par „%1“"
+
+#: actions/abstractkirigamiapplication.cpp:191 formcard/AboutKDEPage.qml:24
+#, kde-format
+msgid "About KDE"
+msgstr "Par KDE"
+
+#: actions/abstractkirigamiapplication.cpp:201
+#, kde-format
+msgctxt "@title:menu"
+msgid "File"
+msgstr ""
+
+#: actions/abstractkirigamiapplication.cpp:208
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Settings"
+msgctxt "@title:menu"
+msgid "Settings"
+msgstr "Iestatījumi"
+
+#: actions/abstractkirigamiapplication.cpp:221
+#, kde-format
+msgctxt "@title:menu"
+msgid "Help"
+msgstr ""
+
+#: actions/private/keysequencehelper.cpp:117
+#, kde-format
+msgctxt "@title:dialog"
+msgid "Reserved Shortcut"
+msgstr "Rezervēta saīsne"
+
+#: actions/private/keysequencehelper.cpp:119
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The F12 key is reserved on Windows, so cannot be used for a global "
+"shortcut.\n"
+"Please choose another one."
+msgstr ""
+"„F12“ taustiņš „Windows“ operētājsistēmā ir rezervēts, tāpēc to nevar "
+"izmantot kā globālo saīsni.\n"
+"Izvēlieties kādu citu."
+
+#: actions/private/keysequencehelper.cpp:143
+#, kde-format
+msgctxt ""
+"@title:dialog This happen when a global shortcut is already defined with the "
+"same shortcut"
+msgid "Global Shortcut Shadowing"
+msgstr "Globālo saīšņu ēnošana"
+
+#: actions/private/keysequencehelper.cpp:146
+#, kde-format
+msgctxt "@info"
+msgid "The '%1' key combination is shadowed by following global actions:\n"
+msgstr "„%1“ taustiņu kombināciju ēno šādas globālās darbības:\n"
+
+#: actions/private/keysequencehelper.cpp:148
+#: actions/private/keysequencehelper.cpp:154
+#, kde-format
+msgctxt "@info"
+msgid "Action '%1' in context '%2'\n"
+msgstr "Darbība „%1“, kas notiek „%2“ kontekstā\n"
+
+#: actions/private/keysequencehelper.cpp:152
+#, kde-format
+msgctxt "@info"
+msgid "The '%1' key combination shadows following global actions:\n"
+msgstr "„%1“ taustiņu kombinācija ēno šādas globālās darbības:\n"
+
+#: actions/private/keysequencehelper.cpp:193
+#, kde-format
+msgctxt "@title:dialog"
+msgid "Conflict with Standard Application Shortcut"
+msgstr "Konflikts ar programmu standarta saīsni"
+
+#: actions/private/keysequencehelper.cpp:195
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The '%1' key combination is also used for the standard action \"%2\" that "
+"some applications use.\n"
+"Do you really want to use it as a global shortcut as well?"
+msgstr ""
+"Taustiņu kombināciju „%1“ citas programmas bieži izmanto kā standarta "
+"kombināciju darbībai „%2“.\n"
+"Vai tiešām vēlaties to izmantot arī kā globālu saīsni?"
+
+#: actions/private/KeySequenceItem.qml:129
+#, kde-format
+msgctxt "What the user inputs now will be taken as the new shortcut"
+msgid "Input"
+msgstr "Ievade"
+
+#: actions/private/KeySequenceItem.qml:130
+#, kde-format
+msgctxt "No shortcut defined"
+msgid "None"
+msgstr "Nav"
+
+#: actions/private/KeySequenceItem.qml:141
+#, kde-format
+msgid ""
+"Click on the button, then enter the shortcut like you would in the program.\n"
+"Example for Ctrl+A: hold the Ctrl key and press A."
+msgstr ""
+"Klikšķiniet uz pogas, pēc tam ierakstiet saīsni tā, kā to spiestu "
+"programmā.\n"
+"Piemēram, lai ievadītu saīsni „Ctrl+A“, nospiežot un pieturot nospiestu "
+"„Ctrl“ taustiņu, nospiediet „A“."
+
+#: actions/private/KeySequenceItem.qml:182
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Clear Key Sequence"
+msgstr "Notīrīt taustiņu virkni"
+
+#: actions/private/KeySequenceItem.qml:198
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cancel Key Sequence Recording"
+msgstr "Atcelt taustiņu virknes ierakstīšanu"
+
+#: actions/private/KQuickCommandBarPage.qml:55
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "No results found"
+msgstr "Nekas nav atrasts"
+
+#: actions/private/ShortcutsEditor.qml:19 actions/StatefulWindow.qml:99
+#, kde-format
+msgctxt "@title:window"
+msgid "Shortcuts"
+msgstr "Saīsnes"
+
+#: actions/private/ShortcutsEditor.qml:23
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Filter…"
+msgstr "Filtrēt…"
+
+#: actions/private/ShortcutsEditor.qml:69
+#, kde-format
+msgctxt "@title:window"
+msgid "Shortcut: %1"
+msgstr "Saīsne: „%1“"
+
+#: actions/private/ShortcutsEditor.qml:89
+#, kde-format
+msgctxt "@label"
+msgid "Shortcut:"
+msgstr "Saīsne:"
+
+#: actions/private/ShortcutsEditor.qml:144
+#: actions/private/ShortcutsEditor.qml:172
+#, kde-format
+msgctxt "@label"
+msgid "Alternative:"
+msgstr "Alternatīva:"
+
+#: actions/private/ShortcutsEditor.qml:210
+#, kde-format
+msgctxt "Placeholder message"
+msgid "No shortcuts found"
+msgstr "Saīsnes nav atrastas"
+
+#: actions/shortcutsmodel.cpp:41
+#, kde-format
+msgctxt "List separator"
+msgid ", "
+msgstr ", "
+
+#: actions/StatefulWindow.qml:109
+#, kde-format
+msgctxt "@title:window"
+msgid "About %1"
+msgstr "Par „%1“"
+
+#: actions/StatefulWindow.qml:122
+#, kde-format
+msgctxt "@title:window"
+msgid "About KDE"
+msgstr "Par KDE"
 
 #: components/AbstractMaximizeComponent.qml:137
 #, kde-format
@@ -104,31 +298,31 @@ msgstr "Aizvērt"
 msgid "Download"
 msgstr "Lejupielādēt"
 
-#: components/MessageDialog.qml:115
+#: components/MessageDialog.qml:117
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
 msgstr "Izdevās"
 
-#: components/MessageDialog.qml:117 components/MessageDialog.qml:123
+#: components/MessageDialog.qml:119 components/MessageDialog.qml:125
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
 msgstr "Brīdinājums"
 
-#: components/MessageDialog.qml:119
+#: components/MessageDialog.qml:121
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
 msgstr "Kļūda"
 
-#: components/MessageDialog.qml:121
+#: components/MessageDialog.qml:123
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
 msgstr "Informācija"
 
-#: components/MessageDialog.qml:276
+#: components/MessageDialog.qml:278
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
@@ -276,12 +470,6 @@ msgstr "Izplatīšanas metode."
 msgctxt "@info"
 msgid "Underlying platform."
 msgstr "Pamata platforma."
-
-#: formcard/AboutKDEPage.qml:24
-#: statefulapplication/abstractkirigamiapplication.cpp:174
-#, kde-format
-msgid "About KDE"
-msgstr "Par KDE"
 
 #: formcard/AboutKDEPage.qml:50
 #, kde-format
@@ -435,12 +623,6 @@ msgstr "KDE e.V."
 #, kde-format
 msgid "Donate"
 msgstr "Ziedot"
-
-#: formcard/AboutPage.qml:106
-#: statefulapplication/abstractkirigamiapplication.cpp:167
-#, kde-format
-msgid "About %1"
-msgstr "Par „%1“"
 
 #: formcard/AboutPage.qml:152
 #, kde-format
@@ -792,171 +974,6 @@ msgstr "Tastatūras saīsnes"
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "Pareizrakstības pārbaude"
-
-#: statefulapplication/abstractkirigamiapplication.cpp:145
-#, kde-format
-msgid "Open Command Bar"
-msgstr "Atvērt komandu joslu"
-
-#: statefulapplication/private/keysequencehelper.cpp:117
-#, kde-format
-msgctxt "@title:dialog"
-msgid "Reserved Shortcut"
-msgstr "Rezervēta saīsne"
-
-#: statefulapplication/private/keysequencehelper.cpp:119
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The F12 key is reserved on Windows, so cannot be used for a global "
-"shortcut.\n"
-"Please choose another one."
-msgstr ""
-"„F12“ taustiņš „Windows“ operētājsistēmā ir rezervēts, tāpēc to nevar "
-"izmantot kā globālo saīsni.\n"
-"Izvēlieties kādu citu."
-
-#: statefulapplication/private/keysequencehelper.cpp:143
-#, kde-format
-msgctxt ""
-"@title:dialog This happen when a global shortcut is already defined with the "
-"same shortcut"
-msgid "Global Shortcut Shadowing"
-msgstr "Globālo saīšņu ēnošana"
-
-#: statefulapplication/private/keysequencehelper.cpp:146
-#, kde-format
-msgctxt "@info"
-msgid "The '%1' key combination is shadowed by following global actions:\n"
-msgstr "„%1“ taustiņu kombināciju ēno šādas globālās darbības:\n"
-
-#: statefulapplication/private/keysequencehelper.cpp:148
-#: statefulapplication/private/keysequencehelper.cpp:154
-#, kde-format
-msgctxt "@info"
-msgid "Action '%1' in context '%2'\n"
-msgstr "Darbība „%1“, kas notiek „%2“ kontekstā\n"
-
-#: statefulapplication/private/keysequencehelper.cpp:152
-#, kde-format
-msgctxt "@info"
-msgid "The '%1' key combination shadows following global actions:\n"
-msgstr "„%1“ taustiņu kombinācija ēno šādas globālās darbības:\n"
-
-#: statefulapplication/private/keysequencehelper.cpp:193
-#, kde-format
-msgctxt "@title:dialog"
-msgid "Conflict with Standard Application Shortcut"
-msgstr "Konflikts ar programmu standarta saīsni"
-
-#: statefulapplication/private/keysequencehelper.cpp:195
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The '%1' key combination is also used for the standard action \"%2\" that "
-"some applications use.\n"
-"Do you really want to use it as a global shortcut as well?"
-msgstr ""
-"Taustiņu kombināciju „%1“ citas programmas bieži izmanto kā standarta "
-"kombināciju darbībai „%2“.\n"
-"Vai tiešām vēlaties to izmantot arī kā globālu saīsni?"
-
-#: statefulapplication/private/KeySequenceItem.qml:129
-#, kde-format
-msgctxt "What the user inputs now will be taken as the new shortcut"
-msgid "Input"
-msgstr "Ievade"
-
-#: statefulapplication/private/KeySequenceItem.qml:130
-#, kde-format
-msgctxt "No shortcut defined"
-msgid "None"
-msgstr "Nav"
-
-#: statefulapplication/private/KeySequenceItem.qml:141
-#, kde-format
-msgid ""
-"Click on the button, then enter the shortcut like you would in the program.\n"
-"Example for Ctrl+A: hold the Ctrl key and press A."
-msgstr ""
-"Klikšķiniet uz pogas, pēc tam ierakstiet saīsni tā, kā to spiestu "
-"programmā.\n"
-"Piemēram, lai ievadītu saīsni „Ctrl+A“, nospiežot un pieturot nospiestu "
-"„Ctrl“ taustiņu, nospiediet „A“."
-
-#: statefulapplication/private/KeySequenceItem.qml:182
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Clear Key Sequence"
-msgstr "Notīrīt taustiņu virkni"
-
-#: statefulapplication/private/KeySequenceItem.qml:198
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Cancel Key Sequence Recording"
-msgstr "Atcelt taustiņu virknes ierakstīšanu"
-
-#: statefulapplication/private/KQuickCommandBarPage.qml:55
-#, kde-format
-msgctxt "@info:placeholder"
-msgid "No results found"
-msgstr "Nekas nav atrasts"
-
-#: statefulapplication/private/ShortcutsEditor.qml:19
-#: statefulapplication/StatefulWindow.qml:99
-#, kde-format
-msgctxt "@title:window"
-msgid "Shortcuts"
-msgstr "Saīsnes"
-
-#: statefulapplication/private/ShortcutsEditor.qml:23
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Filter…"
-msgstr "Filtrēt…"
-
-#: statefulapplication/private/ShortcutsEditor.qml:69
-#, kde-format
-msgctxt "@title:window"
-msgid "Shortcut: %1"
-msgstr "Saīsne: „%1“"
-
-#: statefulapplication/private/ShortcutsEditor.qml:89
-#, kde-format
-msgctxt "@label"
-msgid "Shortcut:"
-msgstr "Saīsne:"
-
-#: statefulapplication/private/ShortcutsEditor.qml:144
-#: statefulapplication/private/ShortcutsEditor.qml:172
-#, kde-format
-msgctxt "@label"
-msgid "Alternative:"
-msgstr "Alternatīva:"
-
-#: statefulapplication/private/ShortcutsEditor.qml:210
-#, kde-format
-msgctxt "Placeholder message"
-msgid "No shortcuts found"
-msgstr "Saīsnes nav atrastas"
-
-#: statefulapplication/shortcutsmodel.cpp:41
-#, kde-format
-msgctxt "List separator"
-msgid ", "
-msgstr ", "
-
-#: statefulapplication/StatefulWindow.qml:109
-#, kde-format
-msgctxt "@title:window"
-msgid "About %1"
-msgstr "Par „%1“"
-
-#: statefulapplication/StatefulWindow.qml:122
-#, kde-format
-msgctxt "@title:window"
-msgid "About KDE"
-msgstr "Par KDE"
 
 #~ msgid "Windowing system"
 #~ msgstr "Logu sistēma"

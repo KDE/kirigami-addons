@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-06 00:43+0000\n"
+"POT-Creation-Date: 2026-09-15 00:42+0000\n"
 "PO-Revision-Date: 2026-09-09 18:20+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -27,6 +27,197 @@ msgstr "زايد السعيدي"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zayed.alsaidi@gmail.com"
+
+#: actions/abstractkirigamiapplication.cpp:162
+#, kde-format
+msgid "Open Command Bar"
+msgstr "افتح شريط الأوامر"
+
+#: actions/abstractkirigamiapplication.cpp:184 formcard/AboutPage.qml:106
+#, kde-format
+msgid "About %1"
+msgstr "حول %1"
+
+#: actions/abstractkirigamiapplication.cpp:191 formcard/AboutKDEPage.qml:24
+#, kde-format
+msgid "About KDE"
+msgstr "حول كِيدِي"
+
+#: actions/abstractkirigamiapplication.cpp:201
+#, kde-format
+msgctxt "@title:menu"
+msgid "File"
+msgstr ""
+
+#: actions/abstractkirigamiapplication.cpp:208
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Settings"
+msgctxt "@title:menu"
+msgid "Settings"
+msgstr "إعدادات"
+
+#: actions/abstractkirigamiapplication.cpp:221
+#, kde-format
+msgctxt "@title:menu"
+msgid "Help"
+msgstr ""
+
+#: actions/private/keysequencehelper.cpp:117
+#, kde-format
+msgctxt "@title:dialog"
+msgid "Reserved Shortcut"
+msgstr "اختصار محجوز"
+
+#: actions/private/keysequencehelper.cpp:119
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The F12 key is reserved on Windows, so cannot be used for a global "
+"shortcut.\n"
+"Please choose another one."
+msgstr ""
+"مفتاح  F12 محفوظ في الويندوز؛ لذا لا يمكن استعماله كاختصار عالمي.\n"
+"المرجو أن تختار اختصار أخر."
+
+#: actions/private/keysequencehelper.cpp:143
+#, kde-format
+msgctxt ""
+"@title:dialog This happen when a global shortcut is already defined with the "
+"same shortcut"
+msgid "Global Shortcut Shadowing"
+msgstr "حجب الاختصارات العامة"
+
+#: actions/private/keysequencehelper.cpp:146
+#, kde-format
+msgctxt "@info"
+msgid "The '%1' key combination is shadowed by following global actions:\n"
+msgstr "مجموعة المفاتيح '%1' محجوبة بواسطة الإجراءات العامة التالية:\n"
+
+#: actions/private/keysequencehelper.cpp:148
+#: actions/private/keysequencehelper.cpp:154
+#, kde-format
+msgctxt "@info"
+msgid "Action '%1' in context '%2'\n"
+msgstr "الإجراء '%1' في سياق '%2'\n"
+
+#: actions/private/keysequencehelper.cpp:152
+#, kde-format
+msgctxt "@info"
+msgid "The '%1' key combination shadows following global actions:\n"
+msgstr "مجموعة المفاتيح '%1' تحجب الإجراءات العامة التالية:\n"
+
+#: actions/private/keysequencehelper.cpp:193
+#, kde-format
+msgctxt "@title:dialog"
+msgid "Conflict with Standard Application Shortcut"
+msgstr "تضارب مع اختصار تطبيق معياري"
+
+#: actions/private/keysequencehelper.cpp:195
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The '%1' key combination is also used for the standard action \"%2\" that "
+"some applications use.\n"
+"Do you really want to use it as a global shortcut as well?"
+msgstr ""
+"خصصت تركيبة الأزرار '%1'  مسبقا للفعل المعياري \"%2\" الذي تستعمله بعض "
+"البرامج.\n"
+"هل تريد استعمالها أيضا كاختصار عام ."
+
+#: actions/private/KeySequenceItem.qml:129
+#, kde-format
+msgctxt "What the user inputs now will be taken as the new shortcut"
+msgid "Input"
+msgstr "الدخل"
+
+#: actions/private/KeySequenceItem.qml:130
+#, kde-format
+msgctxt "No shortcut defined"
+msgid "None"
+msgstr "لا شيء"
+
+#: actions/private/KeySequenceItem.qml:141
+#, kde-format
+msgid ""
+"Click on the button, then enter the shortcut like you would in the program.\n"
+"Example for Ctrl+A: hold the Ctrl key and press A."
+msgstr ""
+"انقر الزّرّ ثمّ أدخل الاختصار الذي تريد في البرنامج.\n"
+"فمثلًا ل‍ Ctrl+A: أبقِ مفتاح Ctrl مضغوطًا واضغط A."
+
+#: actions/private/KeySequenceItem.qml:182
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Clear Key Sequence"
+msgstr "امحُ تسلسل المفاتيح"
+
+#: actions/private/KeySequenceItem.qml:198
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cancel Key Sequence Recording"
+msgstr "ألغِ تسجيل تسلسل المفاتيح"
+
+#: actions/private/KQuickCommandBarPage.qml:55
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "No results found"
+msgstr "لا توجد نتائج"
+
+#: actions/private/ShortcutsEditor.qml:19 actions/StatefulWindow.qml:99
+#, kde-format
+msgctxt "@title:window"
+msgid "Shortcuts"
+msgstr "الاختصارات"
+
+#: actions/private/ShortcutsEditor.qml:23
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Filter…"
+msgstr "المرشّح…"
+
+#: actions/private/ShortcutsEditor.qml:69
+#, kde-format
+msgctxt "@title:window"
+msgid "Shortcut: %1"
+msgstr "الاختصار: %1"
+
+#: actions/private/ShortcutsEditor.qml:89
+#, kde-format
+msgctxt "@label"
+msgid "Shortcut:"
+msgstr "الاختصار:"
+
+#: actions/private/ShortcutsEditor.qml:144
+#: actions/private/ShortcutsEditor.qml:172
+#, kde-format
+msgctxt "@label"
+msgid "Alternative:"
+msgstr "البديل:"
+
+#: actions/private/ShortcutsEditor.qml:210
+#, kde-format
+msgctxt "Placeholder message"
+msgid "No shortcuts found"
+msgstr "لا يوجد اختصارات"
+
+#: actions/shortcutsmodel.cpp:41
+#, kde-format
+msgctxt "List separator"
+msgid ", "
+msgstr "،"
+
+#: actions/StatefulWindow.qml:109
+#, kde-format
+msgctxt "@title:window"
+msgid "About %1"
+msgstr "حول %1"
+
+#: actions/StatefulWindow.qml:122
+#, kde-format
+msgctxt "@title:window"
+msgid "About KDE"
+msgstr "عن كِيدِي"
 
 #: components/AbstractMaximizeComponent.qml:137
 #, kde-format
@@ -104,31 +295,31 @@ msgstr "أغلق"
 msgid "Download"
 msgstr "نزّل"
 
-#: components/MessageDialog.qml:115
+#: components/MessageDialog.qml:117
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
 msgstr "نجاح"
 
-#: components/MessageDialog.qml:117 components/MessageDialog.qml:123
+#: components/MessageDialog.qml:119 components/MessageDialog.qml:125
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
 msgstr "تحذير"
 
-#: components/MessageDialog.qml:119
+#: components/MessageDialog.qml:121
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
 msgstr "خطأ"
 
-#: components/MessageDialog.qml:121
+#: components/MessageDialog.qml:123
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
 msgstr "معلومات"
 
-#: components/MessageDialog.qml:276
+#: components/MessageDialog.qml:278
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
@@ -277,12 +468,6 @@ msgctxt "@info"
 msgid "Underlying platform."
 msgstr "المنصة الأساسية."
 
-#: formcard/AboutKDEPage.qml:24
-#: statefulapplication/abstractkirigamiapplication.cpp:174
-#, kde-format
-msgid "About KDE"
-msgstr "حول كِيدِي"
-
 #: formcard/AboutKDEPage.qml:50
 #, kde-format
 msgid "KDE"
@@ -426,12 +611,6 @@ msgstr "كِيدِي إي. في."
 #, kde-format
 msgid "Donate"
 msgstr "تبرّع"
-
-#: formcard/AboutPage.qml:106
-#: statefulapplication/abstractkirigamiapplication.cpp:167
-#, kde-format
-msgid "About %1"
-msgstr "حول %1"
 
 #: formcard/AboutPage.qml:152
 #, kde-format
@@ -776,168 +955,6 @@ msgstr "اختصارات لوحة المفاتيح"
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "التدقيق الإملائي"
-
-#: statefulapplication/abstractkirigamiapplication.cpp:145
-#, kde-format
-msgid "Open Command Bar"
-msgstr "افتح شريط الأوامر"
-
-#: statefulapplication/private/keysequencehelper.cpp:117
-#, kde-format
-msgctxt "@title:dialog"
-msgid "Reserved Shortcut"
-msgstr "اختصار محجوز"
-
-#: statefulapplication/private/keysequencehelper.cpp:119
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The F12 key is reserved on Windows, so cannot be used for a global "
-"shortcut.\n"
-"Please choose another one."
-msgstr ""
-"مفتاح  F12 محفوظ في الويندوز؛ لذا لا يمكن استعماله كاختصار عالمي.\n"
-"المرجو أن تختار اختصار أخر."
-
-#: statefulapplication/private/keysequencehelper.cpp:143
-#, kde-format
-msgctxt ""
-"@title:dialog This happen when a global shortcut is already defined with the "
-"same shortcut"
-msgid "Global Shortcut Shadowing"
-msgstr "حجب الاختصارات العامة"
-
-#: statefulapplication/private/keysequencehelper.cpp:146
-#, kde-format
-msgctxt "@info"
-msgid "The '%1' key combination is shadowed by following global actions:\n"
-msgstr "مجموعة المفاتيح '%1' محجوبة بواسطة الإجراءات العامة التالية:\n"
-
-#: statefulapplication/private/keysequencehelper.cpp:148
-#: statefulapplication/private/keysequencehelper.cpp:154
-#, kde-format
-msgctxt "@info"
-msgid "Action '%1' in context '%2'\n"
-msgstr "الإجراء '%1' في سياق '%2'\n"
-
-#: statefulapplication/private/keysequencehelper.cpp:152
-#, kde-format
-msgctxt "@info"
-msgid "The '%1' key combination shadows following global actions:\n"
-msgstr "مجموعة المفاتيح '%1' تحجب الإجراءات العامة التالية:\n"
-
-#: statefulapplication/private/keysequencehelper.cpp:193
-#, kde-format
-msgctxt "@title:dialog"
-msgid "Conflict with Standard Application Shortcut"
-msgstr "تضارب مع اختصار تطبيق معياري"
-
-#: statefulapplication/private/keysequencehelper.cpp:195
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The '%1' key combination is also used for the standard action \"%2\" that "
-"some applications use.\n"
-"Do you really want to use it as a global shortcut as well?"
-msgstr ""
-"خصصت تركيبة الأزرار '%1'  مسبقا للفعل المعياري \"%2\" الذي تستعمله بعض "
-"البرامج.\n"
-"هل تريد استعمالها أيضا كاختصار عام ."
-
-#: statefulapplication/private/KeySequenceItem.qml:129
-#, kde-format
-msgctxt "What the user inputs now will be taken as the new shortcut"
-msgid "Input"
-msgstr "الدخل"
-
-#: statefulapplication/private/KeySequenceItem.qml:130
-#, kde-format
-msgctxt "No shortcut defined"
-msgid "None"
-msgstr "لا شيء"
-
-#: statefulapplication/private/KeySequenceItem.qml:141
-#, kde-format
-msgid ""
-"Click on the button, then enter the shortcut like you would in the program.\n"
-"Example for Ctrl+A: hold the Ctrl key and press A."
-msgstr ""
-"انقر الزّرّ ثمّ أدخل الاختصار الذي تريد في البرنامج.\n"
-"فمثلًا ل‍ Ctrl+A: أبقِ مفتاح Ctrl مضغوطًا واضغط A."
-
-#: statefulapplication/private/KeySequenceItem.qml:182
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Clear Key Sequence"
-msgstr "امحُ تسلسل المفاتيح"
-
-#: statefulapplication/private/KeySequenceItem.qml:198
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Cancel Key Sequence Recording"
-msgstr "ألغِ تسجيل تسلسل المفاتيح"
-
-#: statefulapplication/private/KQuickCommandBarPage.qml:55
-#, kde-format
-msgctxt "@info:placeholder"
-msgid "No results found"
-msgstr "لا توجد نتائج"
-
-#: statefulapplication/private/ShortcutsEditor.qml:19
-#: statefulapplication/StatefulWindow.qml:99
-#, kde-format
-msgctxt "@title:window"
-msgid "Shortcuts"
-msgstr "الاختصارات"
-
-#: statefulapplication/private/ShortcutsEditor.qml:23
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Filter…"
-msgstr "المرشّح…"
-
-#: statefulapplication/private/ShortcutsEditor.qml:69
-#, kde-format
-msgctxt "@title:window"
-msgid "Shortcut: %1"
-msgstr "الاختصار: %1"
-
-#: statefulapplication/private/ShortcutsEditor.qml:89
-#, kde-format
-msgctxt "@label"
-msgid "Shortcut:"
-msgstr "الاختصار:"
-
-#: statefulapplication/private/ShortcutsEditor.qml:144
-#: statefulapplication/private/ShortcutsEditor.qml:172
-#, kde-format
-msgctxt "@label"
-msgid "Alternative:"
-msgstr "البديل:"
-
-#: statefulapplication/private/ShortcutsEditor.qml:210
-#, kde-format
-msgctxt "Placeholder message"
-msgid "No shortcuts found"
-msgstr "لا يوجد اختصارات"
-
-#: statefulapplication/shortcutsmodel.cpp:41
-#, kde-format
-msgctxt "List separator"
-msgid ", "
-msgstr "،"
-
-#: statefulapplication/StatefulWindow.qml:109
-#, kde-format
-msgctxt "@title:window"
-msgid "About %1"
-msgstr "حول %1"
-
-#: statefulapplication/StatefulWindow.qml:122
-#, kde-format
-msgctxt "@title:window"
-msgid "About KDE"
-msgstr "عن كِيدِي"
 
 #~ msgctxt "time in hour (PM)"
 #~ msgid "%1 PM"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-06 00:43+0000\n"
+"POT-Creation-Date: 2026-09-15 00:42+0000\n"
 "PO-Revision-Date: 2026-09-09 21:35+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -26,6 +26,198 @@ msgstr "Минчо Кондарев"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mkondarev@yahoo.de"
+
+#: actions/abstractkirigamiapplication.cpp:162
+#, kde-format
+msgid "Open Command Bar"
+msgstr "Отваряне на командната лента"
+
+#: actions/abstractkirigamiapplication.cpp:184 formcard/AboutPage.qml:106
+#, kde-format
+msgid "About %1"
+msgstr "Относно %1"
+
+#: actions/abstractkirigamiapplication.cpp:191 formcard/AboutKDEPage.qml:24
+#, kde-format
+msgid "About KDE"
+msgstr "Относно KDE"
+
+#: actions/abstractkirigamiapplication.cpp:201
+#, kde-format
+msgctxt "@title:menu"
+msgid "File"
+msgstr ""
+
+#: actions/abstractkirigamiapplication.cpp:208
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Settings"
+msgctxt "@title:menu"
+msgid "Settings"
+msgstr "Настройки"
+
+#: actions/abstractkirigamiapplication.cpp:221
+#, kde-format
+msgctxt "@title:menu"
+msgid "Help"
+msgstr ""
+
+#: actions/private/keysequencehelper.cpp:117
+#, kde-format
+msgctxt "@title:dialog"
+msgid "Reserved Shortcut"
+msgstr "Запазен бърз клавиш"
+
+#: actions/private/keysequencehelper.cpp:119
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The F12 key is reserved on Windows, so cannot be used for a global "
+"shortcut.\n"
+"Please choose another one."
+msgstr ""
+"Клавишът F12 е запазен за Прозорци, така че не може да се използва за "
+"глобална клавишна комбинация.\n"
+"Моля, изберете друг."
+
+#: actions/private/keysequencehelper.cpp:143
+#, kde-format
+msgctxt ""
+"@title:dialog This happen when a global shortcut is already defined with the "
+"same shortcut"
+msgid "Global Shortcut Shadowing"
+msgstr "Засенчване на глобални клавишни комбинации"
+
+#: actions/private/keysequencehelper.cpp:146
+#, kde-format
+msgctxt "@info"
+msgid "The '%1' key combination is shadowed by following global actions:\n"
+msgstr "„%1“ клавишна комбинация е засенчена от следните глобални действия:\n"
+
+#: actions/private/keysequencehelper.cpp:148
+#: actions/private/keysequencehelper.cpp:154
+#, kde-format
+msgctxt "@info"
+msgid "Action '%1' in context '%2'\n"
+msgstr "Действие „%1“ в контекст „%2“\n"
+
+#: actions/private/keysequencehelper.cpp:152
+#, kde-format
+msgctxt "@info"
+msgid "The '%1' key combination shadows following global actions:\n"
+msgstr "„%1“ клавишна комбинация засенчва следните глобални действия:\n"
+
+#: actions/private/keysequencehelper.cpp:193
+#, kde-format
+msgctxt "@title:dialog"
+msgid "Conflict with Standard Application Shortcut"
+msgstr "Конфликт със стандартна клавишна комбинация на приложението"
+
+#: actions/private/keysequencehelper.cpp:195
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The '%1' key combination is also used for the standard action \"%2\" that "
+"some applications use.\n"
+"Do you really want to use it as a global shortcut as well?"
+msgstr ""
+"Клавишната комбинация „%1“ вече е зададена за действието „%2“.\n"
+"Искате ли да я използвате и като глобален бърз клавиш."
+
+#: actions/private/KeySequenceItem.qml:129
+#, kde-format
+msgctxt "What the user inputs now will be taken as the new shortcut"
+msgid "Input"
+msgstr "Въведени данни"
+
+#: actions/private/KeySequenceItem.qml:130
+#, kde-format
+msgctxt "No shortcut defined"
+msgid "None"
+msgstr "Без"
+
+#: actions/private/KeySequenceItem.qml:141
+#, kde-format
+msgid ""
+"Click on the button, then enter the shortcut like you would in the program.\n"
+"Example for Ctrl+A: hold the Ctrl key and press A."
+msgstr ""
+"Кликнете върху бутона, след което въведете клавишна комбинация, както бихте "
+"направили в програмата.\n"
+"Пример за Ctrl+A: задръжте клавиша Ctrl и натиснете A."
+
+#: actions/private/KeySequenceItem.qml:182
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Clear Key Sequence"
+msgstr "Изчистване на последователност от клавиши"
+
+#: actions/private/KeySequenceItem.qml:198
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cancel Key Sequence Recording"
+msgstr "Отмяна на записване на последователност от клавиши"
+
+#: actions/private/KQuickCommandBarPage.qml:55
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "No results found"
+msgstr "Не са открити резултати"
+
+#: actions/private/ShortcutsEditor.qml:19 actions/StatefulWindow.qml:99
+#, kde-format
+msgctxt "@title:window"
+msgid "Shortcuts"
+msgstr "Клавишни комбинации"
+
+#: actions/private/ShortcutsEditor.qml:23
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Filter…"
+msgstr "Филтър…"
+
+#: actions/private/ShortcutsEditor.qml:69
+#, kde-format
+msgctxt "@title:window"
+msgid "Shortcut: %1"
+msgstr "Клавишна комбинация: %1"
+
+#: actions/private/ShortcutsEditor.qml:89
+#, kde-format
+msgctxt "@label"
+msgid "Shortcut:"
+msgstr "Клавишна комбинация:"
+
+#: actions/private/ShortcutsEditor.qml:144
+#: actions/private/ShortcutsEditor.qml:172
+#, kde-format
+msgctxt "@label"
+msgid "Alternative:"
+msgstr "Алтернатива:"
+
+#: actions/private/ShortcutsEditor.qml:210
+#, kde-format
+msgctxt "Placeholder message"
+msgid "No shortcuts found"
+msgstr "Не са намерени клавишни комбинации"
+
+#: actions/shortcutsmodel.cpp:41
+#, kde-format
+msgctxt "List separator"
+msgid ", "
+msgstr ", "
+
+#: actions/StatefulWindow.qml:109
+#, kde-format
+msgctxt "@title:window"
+msgid "About %1"
+msgstr "Относно %1"
+
+#: actions/StatefulWindow.qml:122
+#, kde-format
+msgctxt "@title:window"
+msgid "About KDE"
+msgstr "Относно KDE"
 
 #: components/AbstractMaximizeComponent.qml:137
 #, kde-format
@@ -103,31 +295,31 @@ msgstr "Затваряне"
 msgid "Download"
 msgstr "Изтегляне"
 
-#: components/MessageDialog.qml:115
+#: components/MessageDialog.qml:117
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
 msgstr "Успех"
 
-#: components/MessageDialog.qml:117 components/MessageDialog.qml:123
+#: components/MessageDialog.qml:119 components/MessageDialog.qml:125
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
 msgstr "Предупреждение"
 
-#: components/MessageDialog.qml:119
+#: components/MessageDialog.qml:121
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
 msgstr "Грешка"
 
-#: components/MessageDialog.qml:121
+#: components/MessageDialog.qml:123
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
 msgstr "Информация"
 
-#: components/MessageDialog.qml:276
+#: components/MessageDialog.qml:278
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
@@ -276,12 +468,6 @@ msgstr "Метод на дистрибуцията."
 msgctxt "@info"
 msgid "Underlying platform."
 msgstr "Основна платформа."
-
-#: formcard/AboutKDEPage.qml:24
-#: statefulapplication/abstractkirigamiapplication.cpp:174
-#, kde-format
-msgid "About KDE"
-msgstr "Относно KDE"
 
 #: formcard/AboutKDEPage.qml:50
 #, kde-format
@@ -436,12 +622,6 @@ msgstr "KDE e.V."
 #, kde-format
 msgid "Donate"
 msgstr "Дарение"
-
-#: formcard/AboutPage.qml:106
-#: statefulapplication/abstractkirigamiapplication.cpp:167
-#, kde-format
-msgid "About %1"
-msgstr "Относно %1"
 
 #: formcard/AboutPage.qml:152
 #, kde-format
@@ -782,166 +962,3 @@ msgstr "Комбинация от клавиши"
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "Проверка на правописа"
-
-#: statefulapplication/abstractkirigamiapplication.cpp:145
-#, kde-format
-msgid "Open Command Bar"
-msgstr "Отваряне на командната лента"
-
-#: statefulapplication/private/keysequencehelper.cpp:117
-#, kde-format
-msgctxt "@title:dialog"
-msgid "Reserved Shortcut"
-msgstr "Запазен бърз клавиш"
-
-#: statefulapplication/private/keysequencehelper.cpp:119
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The F12 key is reserved on Windows, so cannot be used for a global "
-"shortcut.\n"
-"Please choose another one."
-msgstr ""
-"Клавишът F12 е запазен за Прозорци, така че не може да се използва за "
-"глобална клавишна комбинация.\n"
-"Моля, изберете друг."
-
-#: statefulapplication/private/keysequencehelper.cpp:143
-#, kde-format
-msgctxt ""
-"@title:dialog This happen when a global shortcut is already defined with the "
-"same shortcut"
-msgid "Global Shortcut Shadowing"
-msgstr "Засенчване на глобални клавишни комбинации"
-
-#: statefulapplication/private/keysequencehelper.cpp:146
-#, kde-format
-msgctxt "@info"
-msgid "The '%1' key combination is shadowed by following global actions:\n"
-msgstr "„%1“ клавишна комбинация е засенчена от следните глобални действия:\n"
-
-#: statefulapplication/private/keysequencehelper.cpp:148
-#: statefulapplication/private/keysequencehelper.cpp:154
-#, kde-format
-msgctxt "@info"
-msgid "Action '%1' in context '%2'\n"
-msgstr "Действие „%1“ в контекст „%2“\n"
-
-#: statefulapplication/private/keysequencehelper.cpp:152
-#, kde-format
-msgctxt "@info"
-msgid "The '%1' key combination shadows following global actions:\n"
-msgstr "„%1“ клавишна комбинация засенчва следните глобални действия:\n"
-
-#: statefulapplication/private/keysequencehelper.cpp:193
-#, kde-format
-msgctxt "@title:dialog"
-msgid "Conflict with Standard Application Shortcut"
-msgstr "Конфликт със стандартна клавишна комбинация на приложението"
-
-#: statefulapplication/private/keysequencehelper.cpp:195
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The '%1' key combination is also used for the standard action \"%2\" that "
-"some applications use.\n"
-"Do you really want to use it as a global shortcut as well?"
-msgstr ""
-"Клавишната комбинация „%1“ вече е зададена за действието „%2“.\n"
-"Искате ли да я използвате и като глобален бърз клавиш."
-
-#: statefulapplication/private/KeySequenceItem.qml:129
-#, kde-format
-msgctxt "What the user inputs now will be taken as the new shortcut"
-msgid "Input"
-msgstr "Въведени данни"
-
-#: statefulapplication/private/KeySequenceItem.qml:130
-#, kde-format
-msgctxt "No shortcut defined"
-msgid "None"
-msgstr "Без"
-
-#: statefulapplication/private/KeySequenceItem.qml:141
-#, kde-format
-msgid ""
-"Click on the button, then enter the shortcut like you would in the program.\n"
-"Example for Ctrl+A: hold the Ctrl key and press A."
-msgstr ""
-"Кликнете върху бутона, след което въведете клавишна комбинация, както бихте "
-"направили в програмата.\n"
-"Пример за Ctrl+A: задръжте клавиша Ctrl и натиснете A."
-
-#: statefulapplication/private/KeySequenceItem.qml:182
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Clear Key Sequence"
-msgstr "Изчистване на последователност от клавиши"
-
-#: statefulapplication/private/KeySequenceItem.qml:198
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Cancel Key Sequence Recording"
-msgstr "Отмяна на записване на последователност от клавиши"
-
-#: statefulapplication/private/KQuickCommandBarPage.qml:55
-#, kde-format
-msgctxt "@info:placeholder"
-msgid "No results found"
-msgstr "Не са открити резултати"
-
-#: statefulapplication/private/ShortcutsEditor.qml:19
-#: statefulapplication/StatefulWindow.qml:99
-#, kde-format
-msgctxt "@title:window"
-msgid "Shortcuts"
-msgstr "Клавишни комбинации"
-
-#: statefulapplication/private/ShortcutsEditor.qml:23
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Filter…"
-msgstr "Филтър…"
-
-#: statefulapplication/private/ShortcutsEditor.qml:69
-#, kde-format
-msgctxt "@title:window"
-msgid "Shortcut: %1"
-msgstr "Клавишна комбинация: %1"
-
-#: statefulapplication/private/ShortcutsEditor.qml:89
-#, kde-format
-msgctxt "@label"
-msgid "Shortcut:"
-msgstr "Клавишна комбинация:"
-
-#: statefulapplication/private/ShortcutsEditor.qml:144
-#: statefulapplication/private/ShortcutsEditor.qml:172
-#, kde-format
-msgctxt "@label"
-msgid "Alternative:"
-msgstr "Алтернатива:"
-
-#: statefulapplication/private/ShortcutsEditor.qml:210
-#, kde-format
-msgctxt "Placeholder message"
-msgid "No shortcuts found"
-msgstr "Не са намерени клавишни комбинации"
-
-#: statefulapplication/shortcutsmodel.cpp:41
-#, kde-format
-msgctxt "List separator"
-msgid ", "
-msgstr ", "
-
-#: statefulapplication/StatefulWindow.qml:109
-#, kde-format
-msgctxt "@title:window"
-msgid "About %1"
-msgstr "Относно %1"
-
-#: statefulapplication/StatefulWindow.qml:122
-#, kde-format
-msgctxt "@title:window"
-msgid "About KDE"
-msgstr "Относно KDE"
