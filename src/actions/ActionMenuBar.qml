@@ -32,6 +32,8 @@ QQC2.MenuBar {
     property QtObject collection: null
     property var topMenus: []
     property var generatedActions: []
+    property bool componentCompleted: false
+    property bool rebuildPending: false
 
     function resolvedCollections() {
         return application ? application.actionCollections() : (collection ? [collection] : []);
@@ -50,24 +52,27 @@ QQC2.MenuBar {
     function populateMenu(menuData, target): void {
         menuData.mergedItems.forEach(itemData => {
             if (itemData.type === "separator") {
-                target.addItem(separatorComponent.createObject(target));
+                target.addItem(separatorComponent.createObject(null));
                 return;
             }
             const resolvedAction = itemData.action;
             if (!resolvedAction) {
                 return;
             }
-            const item = itemComponent.createObject(target, {
-                action: actionComponent.createObject(root, {
-                    fromQAction: resolvedAction,
-                }),
+            const menuAction = actionComponent.createObject(root, {
+                fromQAction: resolvedAction,
+            });
+            menuAction.visible = true;
+            const item = itemComponent.createObject(null, {
+                action: menuAction,
+                visible: true,
             });
             target.addItem(item);
             generatedActions.push(item.action);
         });
 
         menuData.mergedMenus.forEach(childMenuData => {
-            const submenu = menuComponent.createObject(target, {
+            const submenu = menuComponent.createObject(null, {
                 title: childMenuData.text,
             });
             submenu.icon.name = childMenuData.iconName;
@@ -77,13 +82,25 @@ QQC2.MenuBar {
     }
 
     function appendMenu(menuData): void {
-        const menu = menuComponent.createObject(root, {
+        const menu = menuComponent.createObject(null, {
             title: menuData.text,
         });
         menu.icon.name = menuData.iconName;
         root.addMenu(menu);
         topMenus.push(menu);
         populateMenu(menuData, menu);
+    }
+
+    function scheduleRebuild(): void {
+        if (!componentCompleted || rebuildPending) {
+            return;
+        }
+
+        rebuildPending = true;
+        Qt.callLater(() => {
+            rebuildPending = false;
+            rebuild();
+        });
     }
 
     function rebuild(): void {
@@ -152,22 +169,25 @@ QQC2.MenuBar {
     Connections {
         target: root.collection
         function onMenusChanged(): void {
-            root.rebuild();
+            root.scheduleRebuild();
         }
         function onChanged(): void {
-            root.rebuild();
+            root.scheduleRebuild();
         }
     }
 
     Connections {
         target: root.application
         function onActionCollectionsChanged(): void {
-            root.rebuild();
+            root.scheduleRebuild();
         }
         function onObjectNameChanged(): void {
-            root.rebuild();
+            root.scheduleRebuild();
         }
     }
 
-    Component.onCompleted: Qt.callLater(() => Qt.callLater(root.rebuild))
+    Component.onCompleted: {
+        root.componentCompleted = true;
+        root.scheduleRebuild();
+    }
 }
