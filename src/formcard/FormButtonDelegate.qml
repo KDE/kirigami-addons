@@ -109,12 +109,12 @@ AbstractFormDelegate {
             implicitHeight: (root.icon.name !== "") ? root.icon.height : 0
         }
 
-        ColumnLayout {
+        Column {
             Layout.fillWidth: true
             spacing: 0
 
             Label {
-                Layout.fillWidth: true
+                width: parent.width
                 text: root.text
                 elide: Text.ElideRight
                 wrapMode: Text.Wrap
@@ -125,7 +125,7 @@ AbstractFormDelegate {
 
             Label {
                 id: internalDescriptionItem
-                Layout.fillWidth: true
+                width: parent.width
                 text: root.description
                 color: Kirigami.Theme.disabledTextColor
                 elide: Text.ElideRight
