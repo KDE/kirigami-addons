@@ -63,6 +63,14 @@ FormCardPage {
                   "spdx" : "GPL-2.0"
               }
           ],
+          "releases" : [
+              {
+                  "version" : "1.0.0",
+                  "date" : "2025-01-01",
+                  "description" : "Initial release.",
+                  "url" : "https://example.org/releases/1.0.0"
+              }
+          ],
           "copyrightStatement" : "© 2010-2018 Plasma Development Team",
           "desktopFileName" : "org.kde.kirigamiapp"
        }
@@ -111,7 +119,10 @@ FormCardPage {
         AbstractFormDelegate {
             id: generalDelegate
             Layout.fillWidth: true
-            background: null
+            background: FormDelegateBackground {
+                control: generalDelegate
+                visible: page.aboutData.releases && page.aboutData.releases.length > 0
+            }
             contentItem: RowLayout {
                 spacing: Kirigami.Units.smallSpacing * 2
 
@@ -142,6 +153,12 @@ FormCardPage {
                     }
                 }
             }
+
+            onClicked: {
+                if (page.aboutData.releases && page.aboutData.releases.length > 0) {
+                    releasesSheet.open();
+                }
+            }
         }
 
         FormDelegateSeparator {}
@@ -152,6 +169,68 @@ FormCardPage {
             text: i18nd("kirigami-addons6", "Copyright")
             descriptionItem.textFormat: Text.PlainText
             description: aboutData.copyrightStatement
+        }
+
+        data: KirigamiComponents.MessageDialog {
+            id: releasesSheet
+
+            title: i18nd("kirigami-addons6", "Release history")
+            parent: QQC2.Overlay.overlay
+            implicitWidth: parent ? Math.min(parent.width - Kirigami.Units.gridUnit * 2, implicitContentWidth) : implicitContentWidth
+
+            leftPadding: 0
+            rightPadding: 0
+            bottomPadding: 0
+            topPadding: 0
+
+            header: QQC2.Control {
+                padding: releasesSheet.padding
+                topPadding: Kirigami.Units.largeSpacing
+                bottomPadding: Kirigami.Units.largeSpacing
+
+                contentItem: RowLayout {
+                    spacing: Kirigami.Units.largeSpacing
+
+                    Kirigami.Heading {
+                        text: releasesSheet.title
+                        elide: QQC2.Label.ElideRight
+                        padding: 0
+                        leftPadding: Kirigami.Units.largeSpacing
+                        Layout.fillWidth: true
+                    }
+
+                    QQC2.ToolButton {
+                        icon.name: hovered ? "window-close" : "window-close-symbolic"
+                        text: i18ndc("kirigami-addons6", "@action:button", "Close")
+                        display: QQC2.ToolButton.IconOnly
+                        onClicked: releasesSheet.close()
+                    }
+                }
+
+                Kirigami.Separator {
+                    anchors {
+                        left: parent.left
+                        right: parent.right
+                        bottom: parent.bottom
+                    }
+                }
+            }
+
+            contentItem: QQC2.ScrollView {
+                ColumnLayout {
+                    x: Kirigami.Units.gridUnit
+                    y: Kirigami.Units.gridUnit
+                    width: parent ? parent.width - Kirigami.Units.gridUnit * 2 : 0
+                    spacing: Kirigami.Units.largeSpacing * 2
+
+                    Repeater {
+                        model: page.aboutData.releases
+                        delegate: releaseDelegate
+                    }
+                }
+            }
+
+            footer: null
         }
     }
 
@@ -427,6 +506,45 @@ FormCardPage {
     }
 
     data: [
+        Component {
+            id: releaseDelegate
+
+            ColumnLayout {
+                required property var modelData
+
+                Layout.fillWidth: true
+                spacing: Kirigami.Units.smallSpacing
+
+                QQC2.Label {
+                    Layout.fillWidth: true
+                    text: modelData.version
+                    font.bold: true
+                }
+
+                QQC2.Label {
+                    Layout.fillWidth: true
+                    text: modelData.date.toLocaleDateString()
+                    color: Kirigami.Theme.disabledTextColor
+                    visible: modelData.date && modelData.date.getTime() !== 0
+                }
+
+                QQC2.Label {
+                    Layout.fillWidth: true
+                    text: modelData.description
+                    textFormat: Text.RichText
+                    wrapMode: Text.WordWrap
+                    onLinkActivated: (link) => Qt.openUrlExternally(link)
+                    visible: text.length > 0
+                }
+
+                FormLinkDelegate {
+                    Layout.fillWidth: true
+                    text: i18nd("kirigami-addons6", "More information")
+                    url: modelData.url
+                    visible: url.toString().length > 0
+                }
+            }
+        },
         Component {
             id: personDelegate
 
