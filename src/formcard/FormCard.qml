@@ -104,16 +104,6 @@ Item {
             rightMargin: root.cardWidthRestricted ? Math.round((root.width - root.maximumWidth) / 2) : -1
         }
 
-        border {
-            color: isDarkColor ? Qt.darker(Kirigami.Theme.backgroundColor, 1.2) : Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.15)
-            width: borderWidth
-        }
-
-        shadow {
-            size: isDarkColor ? Kirigami.Units.smallSpacing : Kirigami.Units.largeSpacing
-            color: Qt.alpha(Kirigami.Theme.textColor, 0.10)
-        }
-
         ColumnLayout {
             id: internalColumn
 

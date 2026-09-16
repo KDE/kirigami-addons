@@ -152,6 +152,20 @@ Kirigami.ApplicationWindow {
             }
 
             FormCard.FormHeader {
+                title: "Form rows"
+            }
+            FormCard.FormGridContainer {
+                FormCard.FormButtonDelegate {
+                    text: "Open"
+                    description: "Open a document"
+                }
+
+                FormCard.FormSwitchDelegate {
+                    text: "Enable sync"
+                }
+            }
+
+            FormCard.FormHeader {
                 title: "Date and time"
             }
 
@@ -530,4 +544,3 @@ Kirigami.ApplicationWindow {
         }
     }
 }
-
