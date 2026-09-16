@@ -26,7 +26,7 @@ ColumnLayout {
 
     spacing: FormCardUnits.verticalSpacing
 
-    Private.FormDelegateLayout {
+    FormDelegateLayout {
         id: delegateLayout
 
         leading: root.leading
