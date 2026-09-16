@@ -33,25 +33,16 @@ Kirigami.ShadowedRectangle {
     required property T.Control control
 
     readonly property bool _roundCorners: control?.parent?._roundCorners === true
-    readonly property list<Item> _visibleItems: control.parent.visibleChildren.filter(child => child.height !== 0)
-    readonly property bool _isFirst: _roundCorners && _visibleItems[0] === control
-    readonly property bool _isLast: _roundCorners && _visibleItems[_visibleItems.length - 1] === control
+    readonly property bool _isFirst: _roundCorners && control.parent._firstVisibleItem === control
+    readonly property bool _isLast: _roundCorners && control.parent._lastVisibleItem === control
 
-    color: {
-        let colorOpacity = 0;
+    readonly property real _colorOpacity: !control.enabled ? 0
+        : control.pressed ? 0.2
+        : control.visualFocus ? 0.1
+        : !Kirigami.Settings.tabletMode && control.hovered ? 0.07
+        : 0
 
-        if (!control.enabled) {
-            colorOpacity = 0;
-        } else if (control.pressed) {
-            colorOpacity = 0.2;
-        } else if (control.visualFocus) {
-            colorOpacity = 0.1;
-        } else if (!Kirigami.Settings.tabletMode && control.hovered) {
-            colorOpacity = 0.07;
-        }
-
-        return Qt.rgba(Kirigami.Theme.textColor.r, Kirigami.Theme.textColor.g, Kirigami.Theme.textColor.b, colorOpacity)
-    }
+    color: Qt.rgba(Kirigami.Theme.textColor.r, Kirigami.Theme.textColor.g, Kirigami.Theme.textColor.b, _colorOpacity)
 
     corners {
         topLeftRadius: _isFirst ? Kirigami.Units.cornerRadius : 0

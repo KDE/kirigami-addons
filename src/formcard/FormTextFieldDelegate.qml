@@ -314,7 +314,7 @@ AbstractFormDelegate {
                 maximumLineCount: 2
                 Accessible.ignored: true
             }
-            Label {
+            Text {
                 TextMetrics {
                     id: metrics
                     text: label(root.maximumLength, root.maximumLength)
@@ -383,4 +383,3 @@ AbstractFormDelegate {
         }
     }
 }
-

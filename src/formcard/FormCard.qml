@@ -109,6 +109,9 @@ Item {
 
             // used in FormDelegateBackground to determine whether to round corners of the background
             readonly property bool _roundCorners: root.cardWidthRestricted
+            readonly property list<Item> _visibleItems: visibleChildren.filter(child => child.height !== 0)
+            readonly property Item _firstVisibleItem: _visibleItems[0] ?? null
+            readonly property Item _lastVisibleItem: _visibleItems[_visibleItems.length - 1] ?? null
 
             spacing: 0
 
