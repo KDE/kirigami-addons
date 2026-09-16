@@ -1,9 +1,164 @@
 /*!
    \qmlmodule org.kde.kirigamiaddons.actions
    \title Kirigami Addons Actions QML Types
-   \brief Declarative action components for Kirigami applications.
+   \brief Declarative actions, menus, and application-window support for Kirigami applications.
 
-   The module provides StatefulWindow, which stores window state and integrates
+   The actions module connects Qt and KDE actions to a Kirigami user interface.
+   It provides StatefulWindow, which restores window state and integrates
    standard application actions, as well as ActionCollection, ActionData and
-   StandardActionData for declaring configurable actions in QML.
+   StandardActionData for declaring named, configurable actions in QML.
+
+   The module is intended for applications that want one action definition to
+   be reusable in several places, such as a command bar, a menu bar, a mobile
+   menu popup, and keyboard shortcuts.
+
+   To use the module, import it in the QML files that declare or present
+   actions:
+
+   \qml
+   import org.kde.kirigamiaddons.actions as KirigamiActions
+   \endqml
+
+   \section1 Application setup
+
+   Use StatefulWindow as the application's main window and assign an
+   AbstractKirigamiApplication (or a subclass) to its \c application property.
+   The default application supplies common actions such as Quit, About, the
+   command bar, and the shortcut editor. Applications can subclass
+   AbstractKirigamiApplication and reimplement
+   AbstractKirigamiApplication::setupActions() to add their own C++ actions.
+
+   The following example declares a QML action collection. Each action has a
+   unique name within its collection. Its name, label, icon, shortcut, and
+   trigger handler can then be shared by different presenters:
+
+   \qml
+   import org.kde.kirigami as Kirigami
+   import org.kde.kirigamiaddons.actions as KirigamiActions
+
+   KirigamiActions.StatefulWindow {
+       id: root
+       windowName: "MainWindow"
+
+       KirigamiActions.ActionCollection {
+           application: root.application
+           name: "document"
+           text: i18nc("@title:menu", "Document")
+
+           KirigamiActions.ActionData {
+               name: "document_save"
+               text: i18nc("@action", "Save")
+               toolTip: i18nc("@info:tooltip", "Save the current document")
+               icon.name: "document-save"
+               defaultShortcut: "Ctrl+S"
+               onTriggered: document.save()
+           }
+       }
+   }
+   \endqml
+
+   \section1 Presenting actions
+
+   A QML action can be connected to a named ActionData object with the
+   ActionCollection attached properties. This keeps the action's state and
+   trigger handler in one place:
+
+   \qml
+   Kirigami.Action {
+       ActionCollection.collection: "document"
+       ActionCollection.action: "document_save"
+   }
+   \endqml
+
+   ActionMenu describes a menu using action names. Use ActionMenuBar to
+   present all menus from an application on desktop, or ActionMenuPopup to
+   present one menu with Kirigami's convergent desktop/mobile behavior. Menu
+   contributions with the same name are merged, which lets separate pages or
+   collections contribute items to a shared menu.
+
+   For example, a collection can declare a menu containing the actions from
+   the previous example, including a separator:
+
+   \qml
+   KirigamiActions.ActionMenu {
+       id: fileMenu
+       name: "file"
+       text: i18nc("@title:menu", "File")
+
+       ActionMenu.Action { name: "document_save" }
+       ActionMenu.Separator {}
+       ActionMenu.Action { name: "quit" }
+   }
+   \endqml
+
+   Put an ActionMenuBar in the window to present the menus from all of the
+   application's collections:
+
+   \qml
+   KirigamiActions.ActionMenuBar {
+       application: root.application
+   }
+   \endqml
+
+   For a menu opened from a button or another control, use ActionMenuPopup
+   instead. Its popup adapts to the platform, using a traditional menu on
+   desktop and a bottom drawer on mobile:
+
+   \qml
+   KirigamiActions.ActionMenuPopup {
+       id: fileMenuPopup
+       menu: fileMenu
+   }
+
+   Kirigami.Icon {
+       source: "document-open"
+       MouseArea {
+           anchors.fill: parent
+           onClicked: fileMenuPopup.popup()
+       }
+   }
+   \endqml
+
+   \section1 Context-sensitive actions
+
+   ActionContext limits an action to a page, document, or tool. Set its \c active
+   property according to the current UI state and assign it to an
+   ActionData object's \c contexts property. When several contexts are active,
+   the context with the highest priority is used.
+
+   \qml
+   KirigamiActions.ActionContext {
+       id: editorContext
+       active: root.pageStack.currentItem === editorPage
+   }
+
+   KirigamiActions.ActionData {
+       name: "document_save"
+       contexts: editorContext
+   }
+   \endqml
+
+   \section1 Standard actions and shortcuts
+
+   StandardActionData creates a KDE standard action with its conventional
+   name, label, icon, and default shortcut. Put it alongside ActionData as a
+   child of ActionCollection. Once a collection is registered with the
+   application, its configurable shortcuts are available through the standard
+   shortcut editor and its actions are available to the command bar.
+
+   \qml
+   KirigamiActions.StandardActionData {
+       standardAction: KirigamiActions.StandardActionData.Copy
+   }
+   \endqml
+
+   \sa StatefulWindow
+   \sa AbstractKirigamiApplication
+   \sa ActionCollection
+   \sa ActionData
+   \sa ActionContext
+   \sa ActionMenu
+   \sa ActionMenuBar
+   \sa ActionMenuPopup
+   \sa StandardActionData
 */

@@ -1,7 +1,7 @@
 include($KDE_DOCS/global/qt-module-defaults.qdocconf)
 
 project = KirigamiAddonsStatefulApplication
-description = Todo
+description = Declarative actions, menus, and application-window support for Kirigami applications.
 
 documentationinheaders = true
 

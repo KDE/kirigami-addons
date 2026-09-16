@@ -30,7 +30,32 @@ RowLayout {
 
     property bool _init: false
 
-    readonly property bool _isAmPm: Qt.locale().timeFormat().toLowerCase().includes("ap")
+    readonly property var _locale: Qt.locale()
+    readonly property color _highlightColor: Kirigami.Theme.highlightColor
+    readonly property real _delegateFontSize: fontMetrics.font.pixelSize * 1.25
+    readonly property real _delegateRadius: Kirigami.Units.mediumSpacing
+    readonly property bool _isAmPm: _locale.timeFormat().toLowerCase().includes("ap")
+    readonly property var _hoursModel: {
+        const model = [];
+        for (let i = 0; i < 24; ++i) {
+            model.push(formatNumber(i));
+        }
+        return model;
+    }
+    readonly property var _hoursAmPmModel: {
+        const model = [];
+        for (let i = 0; i < 12; ++i) {
+            model.push(formatNumber(i === 0 ? 12 : i));
+        }
+        return model;
+    }
+    readonly property var _minutesModel: {
+        const model = [];
+        for (let i = 0; i < 60; ++i) {
+            model.push(formatNumber(i));
+        }
+        return model;
+    }
 
     implicitHeight: Kirigami.Units.gridUnit * 5
     implicitWidth: Kirigami.Units.gridUnit * 10
@@ -50,11 +75,9 @@ RowLayout {
         _init = true;
     }
 
-    function formatText(count, modelData) {
-        if (typeof modelData === "string")
-            return modelData; // AM/PM labels
-        const s = Qt.locale().toString(count === 12 && modelData === 0 ? 12 : modelData);
-        if (s.length < 2 && Qt.locale().zeroDigit === "0")
+    function formatNumber(value): string {
+        const s = _locale.toString(value);
+        if (s.length < 2 && _locale.zeroDigit === "0")
             return "0" + s;
         return s;
     }
@@ -68,30 +91,26 @@ RowLayout {
         Label {
             id: delegate
 
-            text: formatText(Tumbler.tumbler.count, modelData)
-            opacity: 1.0 - Math.abs(Tumbler.displacement) / (Tumbler.tumbler.visibleItemCount / 2)
+            readonly property real opacityScale: 2 / Tumbler.tumbler.visibleItemCount
+
+            text: modelData
+            opacity: 1.0 - Math.abs(Tumbler.displacement) * opacityScale
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
-            font.pixelSize: fontMetrics.font.pixelSize * 1.25
+            font.pixelSize: root._delegateFontSize
             Accessible.ignored: true
 
             Rectangle {
                 anchors.fill: parent
                 color: 'transparent'
-                radius: Kirigami.Units.mediumSpacing
+                radius: root._delegateRadius
                 border {
                     width: {
-                        const tumbler = delegate.Tumbler.tumbler;
-                        if (delegate === tumbler.currentItem) {
-                            if (tumbler.visualFocus) {
-                                return 2;
-                            }
-                            return 1;
-                        } else {
-                            return 0;
-                        }
+                        return delegate === Tumbler.tumbler.currentItem
+                            ? Tumbler.tumbler.visualFocus ? 2 : 1
+                            : 0;
                     }
-                    color: Kirigami.Theme.highlightColor
+                    color: root._highlightColor
                 }
             }
 
@@ -129,7 +148,7 @@ RowLayout {
     Tumbler {
         id: hoursTumbler
         Layout.preferredHeight: Kirigami.Units.gridUnit * 10
-        model: _isAmPm ? 12 : 24
+        model: _isAmPm ? root._hoursAmPmModel : root._hoursModel
         delegate: delegateComponent
         visibleItemCount: 5
         onCurrentIndexChanged: if (_init) {
@@ -137,8 +156,8 @@ RowLayout {
         }
         Accessible.name: i18nd("kirigami-addons6", "Hours")
         Accessible.role: Accessible.Dial
-        Accessible.onDecreaseAction: hoursTumbler.currentIndex = (hoursTumbler.currentIndex + hoursTumbler.model - 1) % hoursTumbler.model
-        Accessible.onIncreaseAction: hoursTumbler.currentIndex = (hoursTumbler.currentIndex + 1) % hoursTumbler.model
+        Accessible.onDecreaseAction: hoursTumbler.currentIndex = (hoursTumbler.currentIndex + hoursTumbler.count - 1) % hoursTumbler.count
+        Accessible.onIncreaseAction: hoursTumbler.currentIndex = (hoursTumbler.currentIndex + 1) % hoursTumbler.count
         KeyNavigation.right: minutesTumbler
         // a11y value interface
         property int minimumValue: root._isAmPm ? 1 : 0
@@ -166,7 +185,7 @@ RowLayout {
     Tumbler {
         id: minutesTumbler
         Layout.preferredHeight: Kirigami.Units.gridUnit * 10
-        model: 60
+        model: root._minutesModel
         delegate: delegateComponent
         visibleItemCount: 5
         onCurrentIndexChanged: if (_init) {
@@ -189,7 +208,7 @@ RowLayout {
         id: amPmTumbler
         visible: _isAmPm
         Layout.preferredHeight: Kirigami.Units.gridUnit * 10
-        model: [Qt.locale().amText, Qt.locale().pmText]
+        model: [root._locale.amText, root._locale.pmText]
         Accessible.name: currentItem.text
         Accessible.role: Accessible.CheckBox
         Accessible.ignored: !_isAmPm
