@@ -229,6 +229,11 @@ QString KirigamiActionCollection::text() const
     return m_qmlText.isEmpty() ? componentDisplayName() : m_qmlText;
 }
 
+bool KirigamiActionCollection::isQmlComplete() const
+{
+    return m_qmlComplete;
+}
+
 void KirigamiActionCollection::setText(const QString &text)
 {
     if (m_qmlText == text) {

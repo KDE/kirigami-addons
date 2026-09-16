@@ -314,6 +314,7 @@ public:
     void setName(const QString &name);
     QString text() const;
     void setText(const QString &text);
+    bool isQmlComplete() const;
     QQmlListProperty<ActionData> qmlActions();
     QQmlListProperty<ActionMenu> qmlMenus();
     void insertQmlAction(ActionData *action);
