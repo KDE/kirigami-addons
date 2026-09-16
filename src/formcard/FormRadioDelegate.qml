@@ -82,7 +82,7 @@ T.RadioDelegate {
        \brief This property allows to override the internal description
        item with a custom component.
      */
-    property alias descriptionItem: internalDescriptionItem
+    property alias descriptionItem: choiceLayout.descriptionItem
 
     horizontalPadding: Private.FormCardUnits.horizontalPadding
     verticalPadding: Private.FormCardUnits.verticalPadding
@@ -101,18 +101,16 @@ T.RadioDelegate {
 
     Layout.fillWidth: true
 
-    contentItem: ColumnLayout {
-        spacing: Private.FormCardUnits.verticalSpacing
+    contentItem: Private.FormChoiceDelegateLayout {
+        id: choiceLayout
 
-        Private.FormDelegateLayout {
-            id: innerRowLayout
+        leading: root.leading
+        trailing: root.trailing
+        leadingPadding: root.leadingPadding
+        trailingPadding: root.trailingPadding
+        description: root.description
 
-            leading: root.leading
-            trailing: root.trailing
-            leadingPadding: root.leadingPadding
-            trailingPadding: root.trailingPadding
-
-            Controls.RadioButton {
+        Controls.RadioButton {
                 id: radioButtonItem
                 focusPolicy: Qt.NoFocus // provided by delegate
                 Layout.rightMargin: Private.FormCardUnits.horizontalSpacing
@@ -142,36 +140,24 @@ T.RadioDelegate {
                     root.checked = checked;
                     checked = Qt.binding(() => root.checked);
                 }
-            }
+        }
 
-            Kirigami.Icon {
+        Kirigami.Icon {
                 visible: root.icon.name.length > 0 || root.icon.source.toString().length > 0
                 source: root.icon.name.length > 0 ? root.icon.name : root.icon.source
                 color: root.icon.color
                 Layout.rightMargin: visible ? Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing  : 0
                 implicitWidth: visible ? root.icon.width : 0
                 implicitHeight: visible ? root.icon.height : 0
-            }
+        }
 
-            Controls.Label {
+        Controls.Label {
                 Layout.fillWidth: true
                 text: root.text
                 color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
                 elide: Text.ElideRight
                 wrapMode: Text.Wrap
                 maximumLineCount: 2
-            }
-
         }
-
-        Controls.Label {
-            id: internalDescriptionItem
-
-            visible: root.description !== ""
-            Layout.fillWidth: true
-            text: root.description
-            color: Kirigami.Theme.disabledTextColor
-            wrapMode: Text.Wrap
-        }
-    }
+}
 }

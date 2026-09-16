@@ -74,7 +74,7 @@ T.CheckDelegate {
        \brief This property allows to override the internal description
        item with a custom component.
      */
-    property alias descriptionItem: internalDescriptionItem
+    property alias descriptionItem: choiceLayout.descriptionItem
 
     icon {
         width: Kirigami.Units.iconSizes.smallMedium
@@ -93,21 +93,19 @@ T.CheckDelegate {
 
     Layout.fillWidth: true
 
-    contentItem: ColumnLayout {
-        spacing: Private.FormCardUnits.verticalSpacing
+    contentItem: Private.FormChoiceDelegateLayout {
+        id: choiceLayout
 
-        Private.FormDelegateLayout {
-            id: innerRowLayout
+        leading: root.leading
+        trailing: root.trailing
+        leadingPadding: root.leadingPadding
+        trailingPadding: root.trailingPadding
+        description: root.description
 
-            leading: root.leading
-            trailing: root.trailing
-            leadingPadding: root.leadingPadding
-            trailingPadding: root.trailingPadding
-
-            Controls.CheckBox {
-                id: checkBoxItem
-                Layout.rightMargin: Private.FormCardUnits.horizontalSpacing
-                focusPolicy: Qt.NoFocus // provided by delegate
+        Controls.CheckBox {
+            id: checkBoxItem
+            Layout.rightMargin: Private.FormCardUnits.horizontalSpacing
+            focusPolicy: Qt.NoFocus // provided by delegate
 
                 checkState: root.checkState
                 nextCheckState: root.nextCheckState
@@ -132,19 +130,19 @@ T.CheckDelegate {
                 enabled: root.enabled
                 checked: root.checked
 
-                Accessible.ignored: true
-            }
+            Accessible.ignored: true
+        }
 
-            Kirigami.Icon {
+        Kirigami.Icon {
                 visible: root.icon.name.length > 0 || root.icon.source.toString().length > 0
                 source: root.icon.name.length > 0 ? root.icon.name : root.icon.source
                 color: root.icon.color
                 Layout.rightMargin: visible ? Private.FormCardUnits.horizontalSpacing : 0
                 implicitWidth: visible ? root.icon.width : 0
                 implicitHeight: visible ? root.icon.height : 0
-            }
+        }
 
-            Controls.Label {
+        Controls.Label {
                 text: root.text
                 color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
                 elide: Text.ElideRight
@@ -152,18 +150,6 @@ T.CheckDelegate {
                 maximumLineCount: 2
                 Layout.fillWidth: true
                 Accessible.ignored: true
-            }
-
         }
-
-        Controls.Label {
-            id: internalDescriptionItem
-
-            Layout.fillWidth: true
-            text: root.description
-            color: Kirigami.Theme.disabledTextColor
-            visible: root.description !== ""
-            wrapMode: Text.Wrap
-        }
-    }
+}
 }

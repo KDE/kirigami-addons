@@ -76,6 +76,7 @@ set_source_files_properties(private/FormCardUnits.qml PROPERTIES QT_QML_SINGLETO
 
 ecm_target_qml_sources(formcardplugin PATH private SOURCES
     private/FormCardBackground.qml
+    private/FormChoiceDelegateLayout.qml
     private/FormDelegateLayout.qml
     private/FormInfoGrid.qml
     private/SpinButton.qml
