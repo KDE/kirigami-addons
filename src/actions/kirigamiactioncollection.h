@@ -314,7 +314,6 @@ public:
     void setName(const QString &name);
     QString text() const;
     void setText(const QString &text);
-    bool isQmlComplete() const;
     QQmlListProperty<ActionData> qmlActions();
     QQmlListProperty<ActionMenu> qmlMenus();
     void insertQmlAction(ActionData *action);
@@ -570,6 +569,7 @@ public:
 private:
     friend class ActionMenu;
     friend class KirigamiActionCollectionPrivate;
+    bool isQmlComplete() const;
     const QList<ActionMenu *> &registeredMenus() const;
     std::unique_ptr<class KirigamiActionCollectionPrivate> const d;
     QPointer<AbstractKirigamiApplication> m_application;
