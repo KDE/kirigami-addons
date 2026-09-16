@@ -92,16 +92,11 @@ T.SwitchDelegate {
     Accessible.onPressAction: switchItem.toggle()
     Accessible.onToggleAction: switchItem.toggle()
 
-    contentItem: RowLayout {
-        spacing: 0
-
-        Private.ContentItemLoader {
-            Layout.rightMargin: visible ? root.leadingPadding : 0
-            visible: root.leading
-            implicitHeight: visible ? root.leading.implicitHeight : 0
-            implicitWidth: visible ? root.leading.implicitWidth : 0
-            contentItem: root.leading
-        }
+    contentItem: Private.FormDelegateLayout {
+        leading: root.leading
+        trailing: root.trailing
+        leadingPadding: root.leadingPadding
+        trailingPadding: root.trailingPadding
 
         Kirigami.Icon {
             visible: root.icon.name.length > 0 || root.icon.source.toString().length > 0
@@ -165,12 +160,5 @@ T.SwitchDelegate {
             Accessible.ignored: true
         }
 
-        Private.ContentItemLoader {
-            Layout.leftMargin: visible ? root.trailingPadding : 0
-            visible: root.trailing
-            implicitHeight: visible ? root.trailing.implicitHeight : 0
-            implicitWidth: visible ? root.trailing.implicitWidth : 0
-            contentItem: root.trailing
-        }
     }
 }

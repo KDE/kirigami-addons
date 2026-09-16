@@ -184,12 +184,11 @@ Item {
                     rounded: true
                 }
 
-                Private.ContentItemLoader {
+                LayoutItemProxy {
                     id: delegateLoader
 
                     anchors.fill: parent
-                    anchors.margins: 1
-                    contentItem: root.delegates[index]
+                    target: root.delegates[index]
                 }
             }
         }

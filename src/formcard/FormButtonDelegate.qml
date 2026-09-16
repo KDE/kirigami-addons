@@ -94,16 +94,11 @@ AbstractFormDelegate {
 
     focusPolicy: Qt.StrongFocus
 
-    contentItem: RowLayout {
-        spacing: 0
-
-        Private.ContentItemLoader {
-            readonly property bool _visible: root.leading && root.leading.visible
-            Layout.rightMargin: _visible ? root.leadingPadding : 0
-            implicitHeight: _visible ? root.leading.implicitHeight : 0
-            implicitWidth: _visible ? root.leading.implicitWidth : 0
-            contentItem: root.leading
-        }
+    contentItem: Private.FormDelegateLayout {
+        leading: root.leading
+        trailing: root.trailing
+        leadingPadding: root.leadingPadding
+        trailingPadding: root.trailingPadding
 
         Kirigami.Icon {
             visible: root.icon.name !== ""
@@ -138,14 +133,6 @@ AbstractFormDelegate {
                 wrapMode: Text.Wrap
                 Accessible.ignored: !visible
             }
-        }
-
-        Private.ContentItemLoader {
-            readonly property bool _visible: root.trailing && root.trailing.visible
-            Layout.leftMargin: _visible ? root.trailingPadding : 0
-            implicitHeight: _visible ? root.trailing.implicitHeight : 0
-            implicitWidth: _visible ? root.trailing.implicitWidth : 0
-            contentItem: root.trailing
         }
 
         FormArrow {

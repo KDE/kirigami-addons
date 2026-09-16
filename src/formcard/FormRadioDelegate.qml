@@ -104,20 +104,13 @@ T.RadioDelegate {
     contentItem: ColumnLayout {
         spacing: Private.FormCardUnits.verticalSpacing
 
-        RowLayout {
+        Private.FormDelegateLayout {
             id: innerRowLayout
 
-            spacing: 0
-
-            Layout.fillWidth: true
-
-            Private.ContentItemLoader {
-                Layout.rightMargin: visible ? root.leadingPadding : 0
-                visible: root.leading
-                implicitHeight: visible ? root.leading.implicitHeight : 0
-                implicitWidth: visible ? root.leading.implicitWidth : 0
-                contentItem: root.leading
-            }
+            leading: root.leading
+            trailing: root.trailing
+            leadingPadding: root.leadingPadding
+            trailingPadding: root.trailingPadding
 
             Controls.RadioButton {
                 id: radioButtonItem
@@ -169,13 +162,6 @@ T.RadioDelegate {
                 maximumLineCount: 2
             }
 
-            Private.ContentItemLoader {
-                Layout.leftMargin: visible ? root.trailingPadding : 0
-                visible: root.trailing
-                implicitHeight: visible ? root.trailing.implicitHeight : 0
-                implicitWidth: visible ? root.trailing.implicitWidth : 0
-                contentItem: root.trailing
-            }
         }
 
         Controls.Label {
@@ -189,4 +175,3 @@ T.RadioDelegate {
         }
     }
 }
-
