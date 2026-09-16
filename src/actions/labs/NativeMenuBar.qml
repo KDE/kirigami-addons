@@ -27,7 +27,7 @@ import org.kde.kirigamiaddons.actions as KirigamiActions
        application: root.application
    }
    \endqml
-   \since 1.8.0
+   \since 1.14.0
  */
 Labs.MenuBar {
     id: root

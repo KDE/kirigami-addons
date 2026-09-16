@@ -33,7 +33,7 @@ import org.kde.kirigamiaddons.components as KirigamiComponents
     }
     \endqml
 
-    \since 1.8.0
+    \since 1.14.0
  */
 Item {
     id: root

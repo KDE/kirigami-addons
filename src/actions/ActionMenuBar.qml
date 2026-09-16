@@ -23,7 +23,7 @@ import org.kde.kirigami as Kirigami
     }
     \endqml
 
-    \since 1.8.0
+    \since 1.14.0
  */
 QQC2.MenuBar {
     id: root

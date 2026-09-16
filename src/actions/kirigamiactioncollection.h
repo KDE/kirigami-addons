@@ -151,6 +151,8 @@ class KIRIGAMIADDONSSTATEFULAPP_EXPORT KirigamiActionCollection : public QObject
     Q_PROPERTY(QQmlListProperty<ActionData> actions READ qmlActions NOTIFY actionsChanged FINAL)
     /*! \qmlproperty list<ActionMenu> ActionCollection::menus
      * Declarative menus contributed by this collection.
+     *
+     * \since 1.14.0
      */
     Q_PROPERTY(QQmlListProperty<ActionMenu> menus READ qmlMenus NOTIFY menusChanged FINAL)
 

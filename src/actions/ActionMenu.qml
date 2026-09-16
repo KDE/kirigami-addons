@@ -28,7 +28,7 @@ import QtQml
     // Set \c menuBarVisible to false for menus presented only by ActionMenuPopup.
     \endqml
 
-    \since 1.8.0
+    \since 1.14.0
  */
 ActionMenuData {
     id: root

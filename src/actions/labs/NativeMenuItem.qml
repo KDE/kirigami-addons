@@ -49,6 +49,8 @@ MenuItem {
     /*!
        This property can be used by generated menus to provide the resolved action
        directly when actions with the same name exist in multiple collections.
+
+       \since 1.14.0
      */
     property QtObject actionObject: null
 
