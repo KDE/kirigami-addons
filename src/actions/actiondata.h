@@ -23,6 +23,8 @@ class IconGroupPrivate;
  * \qmltype ActionGroup
  * \inqmlmodule org.kde.kirigamiaddons.actions
  * \brief A group of actions with automatic exclusivity.
+ *
+ * \since 1.14.0
  */
 class ActionGroup : public QActionGroup
 {
@@ -37,6 +39,8 @@ public:
  * \qmltype IconGroup
  * \inqmlmodule org.kde.kirigamiaddons.actions
  * \brief Grouped icon properties for ActionData.
+ *
+ * \since 1.14.0
  */
 class IconGroup : public QObject
 {
@@ -134,6 +138,8 @@ private:
  *
  * \sa ActionCollection
  * \sa StandardActionData
+ *
+ * \since 1.14.0
  */
 class ActionData : public QAction, public QQmlParserStatus
 {
@@ -143,6 +149,8 @@ class ActionData : public QAction, public QQmlParserStatus
     /*! \qmlproperty string ActionData::name
      * The unique name of the action within its collection.
      * It should be set only once.
+     *
+     * \since 1.14.0
      */
     Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged FINAL)
     /*! Description for the icon to use, which can be specified by name or path.
@@ -153,6 +161,8 @@ class ActionData : public QAction, public QQmlParserStatus
      * \qmlproperty real ActionData::icon.height
      * \qmlproperty color ActionData::icon.color
      * \qmlproperty bool ActionData::icon.cache
+     *
+     * \since 1.14.0
      */
     Q_PROPERTY(IconGroup *icon READ icon CONSTANT FINAL)
     /*! \qmlproperty ActionGroup ActionData::actionGroup
@@ -172,6 +182,8 @@ class ActionData : public QAction, public QQmlParserStatus
      *     actionGroup: modes
      * }
      * \endqml
+     *
+     * \since 1.14.0
      */
     Q_PROPERTY(QActionGroup *actionGroup READ actionGroup WRITE setActionGroup NOTIFY actionGroupChanged FINAL)
     /*! \qmlproperty QtQuick.Controls::Action ActionData::action
@@ -222,26 +234,51 @@ class ActionData : public QAction, public QQmlParserStatus
      *     onTriggered: document.copy()
      * }
      * \endcode
+     *
+     * \since 1.14.0
      */
     Q_PROPERTY(QObject *action READ action WRITE setAction NOTIFY actionChanged FINAL)
+    /*! \qmlproperty list<ActionContext> ActionData::contexts
+     * The contexts that control this action.
+     *
+     * \since 1.14.0
+     */
     Q_PROPERTY(QQmlListProperty<ActionContext> contexts READ contexts FINAL)
     /*! \qmlproperty bool ActionData::contextActive
      * Whether at least one of this action's contexts is active.
+     *
+     * \since 1.14.0
      */
     Q_PROPERTY(bool contextActive READ contextActive NOTIFY contextActiveChanged FINAL)
     /*! \qmlproperty ActionContext ActionData::activeContext
      * The highest-priority active context, or null when no context is active.
+     *
+     * \since 1.14.0
      */
     Q_PROPERTY(ActionContext *activeContext READ activeContext NOTIFY activeContextChanged FINAL)
     /*! \qmlproperty bool ActionData::contextEnabled
      * Whether an inactive context disables this action. Defaults to true.
+     *
+     * \since 1.14.0
      */
     Q_PROPERTY(bool contextEnabled READ contextEnabled WRITE setContextEnabled NOTIFY contextEnabledChanged FINAL)
     /*! \qmlproperty bool ActionData::contextVisible
      * Whether an inactive context hides this action. Defaults to true.
+     *
+     * \since 1.14.0
      */
     Q_PROPERTY(bool contextVisible READ contextVisible WRITE setContextVisible NOTIFY contextVisibleChanged FINAL)
+    /*! \qmlproperty keysequence ActionData::defaultAlternateShortcut
+     * The alternate shortcut assigned when no user-configured shortcut exists.
+     *
+     * \since 1.14.0
+     */
     Q_PROPERTY(QVariant defaultAlternateShortcut READ defaultAlternateShortcut WRITE setDefaultAlternateShortcut NOTIFY defaultAlternateShortcutChanged FINAL)
+    /*! \qmlproperty var ActionData::data
+     * Additional data associated with the action.
+     *
+     * \since 1.14.0
+     */
     Q_PROPERTY(QVariant data READ data WRITE setData NOTIFY changed FINAL)
     /*! \qmlproperty keysequence ActionData::defaultShortcut
      * The shortcut assigned when no user-configured shortcut exists.
@@ -256,6 +293,8 @@ class ActionData : public QAction, public QQmlParserStatus
      *     defaultShortcut: "Ctrl+W"
      * }
      * \endqml
+     *
+     * \since 1.14.0
      */
     Q_PROPERTY(QVariant defaultShortcut READ defaultShortcut WRITE setDefaultShortcut NOTIFY defaultShortcutChanged FINAL)
 

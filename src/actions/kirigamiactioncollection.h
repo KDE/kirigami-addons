@@ -35,7 +35,17 @@ class ActionCollectionAttached;
 class KIRIGAMIADDONSSTATEFULAPP_EXPORT ActionCollectionAttached : public QObject
 {
     Q_OBJECT
+    /*! \qmlproperty string ActionCollection::collection
+     * The name of the action collection.
+     *
+     * \since 1.14.0
+     */
     Q_PROPERTY(QString collection READ collection WRITE setCollection NOTIFY collectionChanged FINAL)
+    /*! \qmlproperty string ActionCollection::action
+     * The name of the action in the collection.
+     *
+     * \since 1.14.0
+     */
     Q_PROPERTY(QVariant action READ action WRITE setAction NOTIFY actionChanged FINAL)
 
 public:

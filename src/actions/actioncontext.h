@@ -13,14 +13,36 @@
  *
  * Action contexts allow actions declared in a global ActionCollection to be
  * active only while a page, document, or tool is active.
+ *
+ * \since 1.14.0
  */
 class ActionContext : public QObject
 {
     Q_OBJECT
     QML_ELEMENT
+    /*! \qmlproperty bool ActionContext::active
+     * Whether this context is active.
+     *
+     * \since 1.14.0
+     */
     Q_PROPERTY(bool active READ active WRITE setActive NOTIFY activeChanged FINAL)
+    /*! \qmlproperty bool ActionContext::contextActive
+     * Whether this context and all of its parent contexts are active.
+     *
+     * \since 1.14.0
+     */
     Q_PROPERTY(bool contextActive READ contextActive NOTIFY contextActiveChanged FINAL)
+    /*! \qmlproperty int ActionContext::priority
+     * The priority used to select the active context for an action.
+     *
+     * \since 1.14.0
+     */
     Q_PROPERTY(int priority READ priority WRITE setPriority NOTIFY priorityChanged FINAL)
+    /*! \qmlproperty ActionContext ActionContext::parentContext
+     * The parent context whose state also controls this context.
+     *
+     * \since 1.14.0
+     */
     Q_PROPERTY(ActionContext *parentContext READ parentContext WRITE setParentContext NOTIFY parentContextChanged FINAL)
 
 public:

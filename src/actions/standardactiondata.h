@@ -26,6 +26,8 @@
  *
  * \sa ActionCollection
  * \sa ActionData
+ *
+ * \since 1.14.0
  */
 class StandardActionData : public ActionData
 {
@@ -33,6 +35,8 @@ class StandardActionData : public ActionData
     QML_ELEMENT
     /*! \qmlproperty StandardAction StandardActionData::standardAction
      * The KDE standard action represented by this object.
+     *
+     * \since 1.14.0
      */
     Q_PROPERTY(StandardAction standardAction READ standardAction WRITE setStandardAction NOTIFY standardActionChanged FINAL REQUIRED)
 public:
