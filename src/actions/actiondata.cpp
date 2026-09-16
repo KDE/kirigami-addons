@@ -516,7 +516,7 @@ void ActionData::classBegin()
 void ActionData::componentComplete()
 {
     if (auto collection = qobject_cast<KirigamiActionCollection *>(parent())) {
-        collection->insertQmlAction(this);
+        collection->insertAction(this);
     }
 }
 

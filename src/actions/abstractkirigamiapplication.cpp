@@ -201,7 +201,7 @@ void AbstractKirigamiApplication::setupActions()
     fileMenu->setName(u"file"_s);
     fileMenu->setText(i18nc("@title:menu", "File"));
     fileMenu->setActions({u"file_quit"_s});
-    d->collection->insertQmlMenu(fileMenu);
+    d->collection->insertMenu(fileMenu);
 
     auto settingsMenu = new ActionMenu(d->collection);
     d->settingsMenu = settingsMenu;
@@ -215,7 +215,7 @@ void AbstractKirigamiApplication::setupActions()
         settingsActions.append(u"options_configure_keybinding"_s);
     }
     settingsMenu->setActions(settingsActions);
-    d->collection->insertQmlMenu(settingsMenu);
+    d->collection->insertMenu(settingsMenu);
 
     auto helpMenu = new ActionMenu(d->collection);
     helpMenu->setName(u"help"_s);
@@ -225,7 +225,7 @@ void AbstractKirigamiApplication::setupActions()
         helpActions.append(u"open_about_kde_page"_s);
     }
     helpMenu->setActions(helpActions);
-    d->collection->insertQmlMenu(helpMenu);
+    d->collection->insertMenu(helpMenu);
 }
 
 void AbstractKirigamiApplication::quit()

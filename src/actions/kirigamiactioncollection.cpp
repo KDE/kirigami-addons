@@ -212,7 +212,7 @@ void KirigamiActionCollection::setApplication(AbstractKirigamiApplication *appli
     }
     if (m_qmlComplete) {
         for (auto action : std::as_const(m_qmlActions)) {
-            insertQmlAction(action);
+            insertAction(action);
         }
     }
     Q_EMIT applicationChanged();
@@ -247,7 +247,7 @@ void KirigamiActionCollection::setText(const QString &text)
 QQmlListProperty<ActionData> KirigamiActionCollection::qmlActions()
 {
     return {this, nullptr, [](QQmlListProperty<ActionData> *property, ActionData *action) {
-                static_cast<KirigamiActionCollection *>(property->object)->insertQmlAction(action);
+                static_cast<KirigamiActionCollection *>(property->object)->insertAction(action);
             },
             [](QQmlListProperty<ActionData> *property) {
                 return static_cast<KirigamiActionCollection *>(property->object)->m_qmlActions.size();
@@ -259,10 +259,10 @@ QQmlListProperty<ActionData> KirigamiActionCollection::qmlActions()
             nullptr};
 }
 
-QQmlListProperty<ActionMenu> KirigamiActionCollection::qmlMenus()
+QQmlListProperty<ActionMenu> KirigamiActionCollection::menus()
 {
     return {this, nullptr, [](QQmlListProperty<ActionMenu> *property, ActionMenu *menu) {
-        static_cast<KirigamiActionCollection *>(property->object)->insertQmlMenu(menu);
+        static_cast<KirigamiActionCollection *>(property->object)->insertMenu(menu);
     }, [](QQmlListProperty<ActionMenu> *property) {
         return static_cast<KirigamiActionCollection *>(property->object)->m_qmlMenus.size();
     }, [](QQmlListProperty<ActionMenu> *property, qsizetype index) {
@@ -279,7 +279,7 @@ QQmlListProperty<ActionMenu> KirigamiActionCollection::qmlMenus()
     }};
 }
 
-void KirigamiActionCollection::insertQmlMenu(ActionMenu *menu)
+void KirigamiActionCollection::insertMenu(ActionMenu *menu)
 {
     if (!menu || m_qmlMenus.contains(menu)) {
         return;
@@ -306,7 +306,7 @@ ActionCollectionAttached *KirigamiActionCollection::qmlAttachedProperties(QObjec
     return new ActionCollectionAttached(object);
 }
 
-void KirigamiActionCollection::insertQmlAction(ActionData *action)
+void KirigamiActionCollection::insertAction(ActionData *action)
 {
     if (!action) {
         return;
@@ -333,7 +333,7 @@ void KirigamiActionCollection::componentComplete()
     m_qmlComplete = true;
     if (m_application) {
         for (auto action : std::as_const(m_qmlActions)) {
-            insertQmlAction(action);
+            insertAction(action);
         }
     }
 }

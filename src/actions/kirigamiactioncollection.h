@@ -154,7 +154,7 @@ class KIRIGAMIADDONSSTATEFULAPP_EXPORT KirigamiActionCollection : public QObject
      *
      * \since 1.14.0
      */
-    Q_PROPERTY(QQmlListProperty<ActionMenu> menus READ qmlMenus NOTIFY menusChanged FINAL)
+    Q_PROPERTY(QQmlListProperty<ActionMenu> menus READ menus NOTIFY menusChanged FINAL)
 
     Q_CLASSINFO("DefaultProperty", "actions")
 
@@ -327,9 +327,9 @@ public:
     QString text() const;
     void setText(const QString &text);
     QQmlListProperty<ActionData> qmlActions();
-    QQmlListProperty<ActionMenu> qmlMenus();
-    void insertQmlAction(ActionData *action);
-    void insertQmlMenu(ActionMenu *menu);
+    QQmlListProperty<ActionMenu> menus();
+    void insertAction(ActionData *action);
+    void insertMenu(ActionMenu *menu);
     static ActionCollectionAttached *qmlAttachedProperties(QObject *object);
 
     void classBegin() override;
