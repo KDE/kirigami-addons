@@ -193,77 +193,13 @@ AbstractFormDelegate {
     contentItem: ColumnLayout {
         spacing: Private.FormCardUnits.verticalSpacing
 
-        RowLayout {
+        QQC2.Label {
             Layout.fillWidth: true
-            spacing: 0
-
-            QQC2.Label {
-                Layout.fillWidth: true
-                text: label
-                elide: Text.ElideRight
-                color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
-                wrapMode: Text.Wrap
-                maximumLineCount: 2
-            }
-
-            Private.SpinButton {
-                onClicked: root.decrease()
-                icon.name: 'arrow-down'
-                visible: Kirigami.Settings.isMobile
-
-                isStart: true
-                isEnd: false
-            }
-
-            QQC2.Pane {
-                focusPolicy: Qt.NoFocus
-                topPadding: 0
-                bottomPadding: 0
-                leftPadding: Kirigami.Units.largeSpacing * 2
-                rightPadding: Kirigami.Units.largeSpacing * 2
-                visible: Kirigami.Settings.isMobile
-                contentItem: QQC2.Label {
-                    verticalAlignment: Text.AlignVCenter
-                    height: Kirigami.Units.gridUnit * 2
-                    text: root.textFromValue(root.value, root.locale)
-                }
-                background: Item {
-                    implicitHeight: Kirigami.Units.gridUnit * 2
-                    Rectangle {
-                        color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, Kirigami.Theme.frameContrast)
-                        height: 1
-                        anchors {
-                            left: parent.left
-                            right: parent.right
-                            top: parent.top
-                        }
-                    }
-
-                    Rectangle {
-                        color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, Kirigami.Theme.frameContrast)
-                        height: 1
-                        anchors {
-                            left: parent.left
-                            right: parent.right
-                            bottom: parent.bottom
-                        }
-                    }
-                }
-            }
-
-            Private.SpinButton {
-                onClicked: root.increase()
-                visible: Kirigami.Settings.isMobile
-                icon.name: 'arrow-up'
-
-                isStart: false
-                isEnd: true
-            }
-
-            LayoutItemProxy {
-                target: root.trailing
-                visible: Kirigami.Settings.isMobile
-            }
+            text: label
+            elide: Text.ElideRight
+            color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
+            wrapMode: Text.Wrap
+            maximumLineCount: 2
         }
 
         RowLayout {
@@ -276,14 +212,12 @@ AbstractFormDelegate {
             QQC2.SpinBox {
                 id: spinbox
                 Layout.fillWidth: true
-                visible: !Kirigami.Settings.isMobile
                 locale: root.locale
                 onValueModified: root.valueModified()
             }
 
             LayoutItemProxy {
                 target: root.trailing
-                visible: !Kirigami.Settings.isMobile
             }
         }
 
