@@ -83,34 +83,16 @@ Item {
      */
     readonly property bool cardWidthRestricted: root.width > root.maximumWidth
 
-    Kirigami.Theme.colorSet: Kirigami.Theme.View
-    Kirigami.Theme.inherit: false
-
     Layout.fillWidth: true
 
     implicitHeight: topPadding + bottomPadding + internalColumn.implicitHeight + rectangle.borderWidth * 2
     implicitWidth: visible ? leftPadding + rightPadding + internalColumn.implicitWidth + rectangle.borderWidth * 2 : 0.0
 
-    Kirigami.ShadowedRectangle {
+    Private.FormCardBackground {
         id: rectangle
 
-        readonly property real borderWidth: 1
-        readonly property bool isDarkColor: {
-            const temp = Qt.darker(Kirigami.Theme.backgroundColor, 1);
-            return temp.a > 0 && getDarkness(Kirigami.Theme.backgroundColor) >= 0.4;
-        }
-
-        // only have card radius if it isn't filling the entire width
-        radius: root.cardWidthRestricted ? Kirigami.Units.cornerRadius : 0
-        color: Kirigami.Theme.backgroundColor
-
-        function getDarkness(background: color): real {
-            // Thanks to Gojir4 from the Qt forum
-            // https://forum.qt.io/topic/106362/best-way-to-set-text-color-for-maximum-contrast-on-background-color/
-            var temp = Qt.darker(background, 1);
-            var a = 1 - ( 0.299 * temp.r + 0.587 * temp.g + 0.114 * temp.b);
-            return a;
-        }
+        // Only have card radius if it isn't filling the entire width.
+        rounded: root.cardWidthRestricted
 
         anchors {
             top: parent.top

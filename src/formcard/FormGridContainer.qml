@@ -128,19 +128,6 @@ Item {
     Item {
         id: _private
 
-        function getDarkness(background: color): real {
-            // Thanks to Gojir4 from the Qt forum
-            // https://forum.qt.io/topic/106362/best-way-to-set-text-color-for-maximum-contrast-on-background-color/
-            var temp = Qt.darker(background, 1);
-            var a = 1 - ( 0.299 * temp.r + 0.587 * temp.g + 0.114 * temp.b);
-            return a;
-        }
-
-        readonly property bool isDarkColor: {
-            const temp = Qt.darker(Kirigami.Theme.backgroundColor, 1);
-            return temp.a > 0 && getDarkness(Kirigami.Theme.backgroundColor) >= 0.4;
-        }
-
         anchors {
             top: parent.top
             bottom: parent.bottom
@@ -212,22 +199,8 @@ Item {
                     QQC2.ToolTip.visible: tooltipText && hovered
                     QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
 
-                    background: Kirigami.ShadowedRectangle {
-                        Kirigami.Theme.colorSet: Kirigami.Theme.View
-                        Kirigami.Theme.inherit: false
-
-                        radius: root.cardWidthRestricted ? Kirigami.Units.cornerRadius : 0
-                        color: Kirigami.Theme.backgroundColor
-
-                        border {
-                            color: _private.isDarkColor ? Qt.darker(Kirigami.Theme.backgroundColor, 1.2) : Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.15)
-                            width: 1
-                        }
-
-                        shadow {
-                            size: _private.isDarkColor ? Kirigami.Units.smallSpacing : Kirigami.Units.largeSpacing
-                            color: Qt.alpha(Kirigami.Theme.textColor, 0.10)
-                        }
+                    background: Private.FormCardBackground {
+                        rounded: root.cardWidthRestricted
 
                         Rectangle {
                             anchors.fill: parent
