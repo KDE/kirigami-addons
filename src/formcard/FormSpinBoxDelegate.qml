@@ -147,6 +147,14 @@ AbstractFormDelegate {
     property string statusMessage: ""
 
     /*!
+       \brief This property holds an item that will be displayed before the
+       spinbox.
+
+       \default null
+    */
+    property Item leading: null
+
+    /*!
        \brief This property holds an item that will be displayed after the
        delegate's contents.
 
@@ -209,6 +217,12 @@ AbstractFormDelegate {
 
             Layout.fillWidth: true
 
+            LayoutItemProxy {
+                target: root.leading
+                visible: target && target.visible
+                Layout.rightMargin: visible ? Kirigami.Units.smallSpacing : 0
+            }
+
             QQC2.SpinBox {
                 id: spinbox
                 Layout.fillWidth: true
@@ -218,6 +232,8 @@ AbstractFormDelegate {
 
             LayoutItemProxy {
                 target: root.trailing
+                visible: target && target.visible
+                Layout.leftMargin: visible ? Kirigami.Units.smallSpacing : 0
             }
         }
 
