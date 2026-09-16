@@ -32,9 +32,9 @@ Kirigami.ShadowedRectangle {
      */
     required property T.Control control
 
-    readonly property bool _roundCorners: control?.parent?._roundCorners === true
-    readonly property bool _isFirst: _roundCorners && control.parent._firstVisibleItem === control
-    readonly property bool _isLast: _roundCorners && control.parent._lastVisibleItem === control
+    readonly property real _cornerRadius: control?.parent?._cornerRadius ?? 0
+    readonly property real _topRadius: control?.parent?._firstVisibleItem === control ? _cornerRadius : 0
+    readonly property real _bottomRadius: control?.parent?._lastVisibleItem === control ? _cornerRadius : 0
 
     readonly property real _colorOpacity: !control.enabled ? 0
         : control.pressed ? 0.2
@@ -42,16 +42,17 @@ Kirigami.ShadowedRectangle {
         : !Kirigami.Settings.tabletMode && control.hovered ? 0.07
         : 0
 
-    color: Qt.rgba(Kirigami.Theme.textColor.r, Kirigami.Theme.textColor.g, Kirigami.Theme.textColor.b, _colorOpacity)
+    color: Kirigami.Theme.textColor
+    opacity: _colorOpacity
 
     corners {
-        topLeftRadius: _isFirst ? Kirigami.Units.cornerRadius : 0
-        topRightRadius: _isFirst ? Kirigami.Units.cornerRadius : 0
-        bottomLeftRadius: _isLast ? Kirigami.Units.cornerRadius : 0
-        bottomRightRadius: _isLast ? Kirigami.Units.cornerRadius : 0
+        topLeftRadius: _topRadius
+        topRightRadius: _topRadius
+        bottomLeftRadius: _bottomRadius
+        bottomRightRadius: _bottomRadius
     }
 
-    Behavior on color {
-        ColorAnimation { duration: Kirigami.Units.shortDuration }
+    Behavior on opacity {
+        NumberAnimation { duration: Kirigami.Units.shortDuration }
     }
 }

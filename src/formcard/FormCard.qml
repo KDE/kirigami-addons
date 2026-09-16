@@ -107,8 +107,8 @@ Item {
         ColumnLayout {
             id: internalColumn
 
-            // used in FormDelegateBackground to determine whether to round corners of the background
-            readonly property bool _roundCorners: root.cardWidthRestricted
+            // Shared geometry for the delegate backgrounds in this card.
+            readonly property real _cornerRadius: root.cardWidthRestricted ? Kirigami.Units.cornerRadius : 0
             readonly property list<Item> _visibleItems: visibleChildren.filter(child => child.height !== 0)
             readonly property Item _firstVisibleItem: _visibleItems[0] ?? null
             readonly property Item _lastVisibleItem: _visibleItems[_visibleItems.length - 1] ?? null
