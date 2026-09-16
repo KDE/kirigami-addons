@@ -51,7 +51,7 @@ T.CheckDelegate {
        \brief This property holds an item that will be displayed to the left
        of the delegate's contents.
      */
-    property var leading: null
+    property Item leading: null
 
     /*!
        \brief This property holds the padding after the leading item.
@@ -62,7 +62,7 @@ T.CheckDelegate {
        \brief This property holds an item that will be displayed to the right
        of the delegate's contents.
      */
-    property var trailing: null
+    property Item trailing: null
 
     /*!
        \brief This property holds the padding before the trailing item.
@@ -144,7 +144,7 @@ T.CheckDelegate {
                 visible: root.icon.name.length > 0 || root.icon.source.toString().length > 0
                 source: root.icon.name.length > 0 ? root.icon.name : root.icon.source
                 color: root.icon.color
-                Layout.rightMargin: visible ? Private.FormCardUnits.horizonalSpacing : 0
+                Layout.rightMargin: visible ? Private.FormCardUnits.horizontalSpacing : 0
                 implicitWidth: visible ? root.icon.width : 0
                 implicitHeight: visible ? root.icon.height : 0
             }
@@ -179,4 +179,3 @@ T.CheckDelegate {
         }
     }
 }
-

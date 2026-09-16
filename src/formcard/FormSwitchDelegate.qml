@@ -52,7 +52,7 @@ T.SwitchDelegate {
        \brief This property holds an item that will be displayed
        to the left of the delegate's contents.
      */
-    property var leading: null
+    property Item leading: null
 
     /*!
        \brief This property holds the padding after the leading item.
@@ -63,7 +63,7 @@ T.SwitchDelegate {
        \brief This property holds an item that will be displayed
        to the right of the delegate's contents.
      */
-    property var trailing: null
+    property Item trailing: null
 
     /*!
        \brief This property holds the padding before the trailing item.

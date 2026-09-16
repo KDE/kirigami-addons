@@ -153,7 +153,7 @@ AbstractFormDelegate {
        \default null
        \since 1.12.0
      */
-    property var trailing: null
+    property Item trailing: null
 
     /*!
        \brief This signal is emitted when the spin box value has been interactively modified by the user.

@@ -153,7 +153,7 @@ AbstractFormDelegate {
      *       \default null
      *       \since 1.12.0
      */
-    property var trailing: null
+    property Item trailing: null
 
     enum DisplayMode {
         ComboBox,
@@ -509,4 +509,3 @@ AbstractFormDelegate {
         }
     }
 }
-

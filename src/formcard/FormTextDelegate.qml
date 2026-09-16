@@ -57,7 +57,7 @@ AbstractFormDelegate {
        the delegate's contents.
        \default null
      */
-    property var leading: null
+    property Item leading: null
 
     /*!
        \brief This property holds the padding after the leading item.
@@ -70,7 +70,7 @@ AbstractFormDelegate {
        the delegate's contents.
        \default null
      */
-    property var trailing: null
+    property Item trailing: null
 
     /*!
        \brief This property holds the padding before the trailing item.
@@ -141,4 +141,3 @@ AbstractFormDelegate {
         }
     }
 }
-
