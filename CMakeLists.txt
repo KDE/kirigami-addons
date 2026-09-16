@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2019 David Edmundson <kde@davidedmundson.co.uk>
 # SPDX-License-Identifier: BSD-2-Clause
 
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.29)
 
 project(kirigami-addons VERSION 1.13.1)
 
@@ -10,7 +10,7 @@ include(FeatureSummary)
 set(AUTOMOC_MOC_OPTIONS -Muri=org.kde.kirigami)
 
 set(QT_REQUIRED_VERSION "6.9.0")
-set(KF_MIN_VERSION "6.16.0")
+set(KF_MIN_VERSION "6.25.0")
 
 find_package(ECM ${KF_MIN_VERSION} NO_MODULE)
 set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://projects.kde.org/projects/kdesupport/extra-cmake-modules")
