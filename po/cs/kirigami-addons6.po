@@ -47,12 +47,10 @@ msgstr "O prostředí KDE"
 #, kde-format
 msgctxt "@title:menu"
 msgid "File"
-msgstr ""
+msgstr "Soubor"
 
 #: actions/abstractkirigamiapplication.cpp:208
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title:menu"
 msgid "Settings"
 msgstr "Nastavení"
@@ -61,7 +59,7 @@ msgstr "Nastavení"
 #, kde-format
 msgctxt "@title:menu"
 msgid "Help"
-msgstr ""
+msgstr "Nápověda"
 
 #: actions/private/keysequencehelper.cpp:117
 #, kde-format

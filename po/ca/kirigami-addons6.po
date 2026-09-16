@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-15 00:42+0000\n"
-"PO-Revision-Date: 2026-09-06 09:57+0200\n"
+"PO-Revision-Date: 2026-09-15 11:46+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -49,12 +49,10 @@ msgstr "Quant a KDE"
 #, kde-format
 msgctxt "@title:menu"
 msgid "File"
-msgstr ""
+msgstr "Fitxer"
 
 #: actions/abstractkirigamiapplication.cpp:208
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title:menu"
 msgid "Settings"
 msgstr "Configuració"
@@ -63,7 +61,7 @@ msgstr "Configuració"
 #, kde-format
 msgctxt "@title:menu"
 msgid "Help"
-msgstr ""
+msgstr "Ajuda"
 
 #: actions/private/keysequencehelper.cpp:117
 #, kde-format
