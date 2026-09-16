@@ -159,6 +159,13 @@ public:
 
     bool connectTriggered : 1;
     bool connectHovered : 1;
+
+    QPointer<AbstractKirigamiApplication> m_application;
+    QMetaObject::Connection m_applicationMenusConnection;
+    QList<ActionData *> m_qmlActions;
+    QList<ActionMenu *> m_qmlMenus;
+    QString m_qmlText;
+    bool m_qmlComplete = false;
 };
 
 QList<KirigamiActionCollection *> KirigamiActionCollectionPrivate::s_allCollections;
@@ -177,7 +184,7 @@ KirigamiActionCollection::KirigamiActionCollection(QObject *parent, const QStrin
 
 AbstractKirigamiApplication *KirigamiActionCollection::application() const
 {
-    return m_application;
+    return d->m_application;
 }
 
 QString KirigamiActionCollection::name() const
@@ -199,19 +206,19 @@ void KirigamiActionCollection::setName(const QString &name)
 
 void KirigamiActionCollection::setApplication(AbstractKirigamiApplication *application)
 {
-    if (m_application == application) {
+    if (d->m_application == application) {
         return;
     }
-    auto *oldApplication = m_application.data();
-    QObject::disconnect(m_applicationMenusConnection);
-    m_application = application;
-    if (m_application) {
-        m_applicationMenusConnection = connect(this, &KirigamiActionCollection::menusChanged, m_application, [application]() {
+    auto *oldApplication = d->m_application.data();
+    QObject::disconnect(d->m_applicationMenusConnection);
+    d->m_application = application;
+    if (d->m_application) {
+        d->m_applicationMenusConnection = connect(this, &KirigamiActionCollection::menusChanged, d->m_application, [application]() {
             QMetaObject::invokeMethod(application, "actionCollectionsChanged", Qt::DirectConnection);
         });
     }
-    if (m_qmlComplete) {
-        for (auto action : std::as_const(m_qmlActions)) {
+    if (d->m_qmlComplete) {
+        for (auto action : std::as_const(d->m_qmlActions)) {
             insertAction(action);
         }
     }
@@ -219,27 +226,27 @@ void KirigamiActionCollection::setApplication(AbstractKirigamiApplication *appli
     if (oldApplication) {
         QMetaObject::invokeMethod(oldApplication, "actionCollectionsChanged", Qt::DirectConnection);
     }
-    if (m_application) {
-        QMetaObject::invokeMethod(m_application, "actionCollectionsChanged", Qt::DirectConnection);
+    if (d->m_application) {
+        QMetaObject::invokeMethod(d->m_application, "actionCollectionsChanged", Qt::DirectConnection);
     }
 }
 
 QString KirigamiActionCollection::text() const
 {
-    return m_qmlText.isEmpty() ? componentDisplayName() : m_qmlText;
+    return d->m_qmlText.isEmpty() ? componentDisplayName() : d->m_qmlText;
 }
 
 bool KirigamiActionCollection::isQmlComplete() const
 {
-    return m_qmlComplete;
+    return d->m_qmlComplete;
 }
 
 void KirigamiActionCollection::setText(const QString &text)
 {
-    if (m_qmlText == text) {
+    if (d->m_qmlText == text) {
         return;
     }
-    m_qmlText = text;
+    d->m_qmlText = text;
     setComponentDisplayName(text);
     Q_EMIT textChanged();
 }
@@ -250,10 +257,10 @@ QQmlListProperty<ActionData> KirigamiActionCollection::qmlActions()
                 static_cast<KirigamiActionCollection *>(property->object)->insertAction(action);
             },
             [](QQmlListProperty<ActionData> *property) {
-                return static_cast<KirigamiActionCollection *>(property->object)->m_qmlActions.size();
+                return static_cast<KirigamiActionCollection *>(property->object)->d->m_qmlActions.size();
             },
             [](QQmlListProperty<ActionData> *property, qsizetype index) {
-                const auto actions = static_cast<KirigamiActionCollection *>(property->object)->m_qmlActions;
+                const auto actions = static_cast<KirigamiActionCollection *>(property->object)->d->m_qmlActions;
                 return index >= 0 && index < actions.size() ? actions.at(index) : nullptr;
             },
             nullptr};
@@ -264,27 +271,27 @@ QQmlListProperty<ActionMenu> KirigamiActionCollection::menus()
     return {this, nullptr, [](QQmlListProperty<ActionMenu> *property, ActionMenu *menu) {
         static_cast<KirigamiActionCollection *>(property->object)->insertMenu(menu);
     }, [](QQmlListProperty<ActionMenu> *property) {
-        return static_cast<KirigamiActionCollection *>(property->object)->m_qmlMenus.size();
+        return static_cast<KirigamiActionCollection *>(property->object)->d->m_qmlMenus.size();
     }, [](QQmlListProperty<ActionMenu> *property, qsizetype index) {
-        const auto menus = static_cast<KirigamiActionCollection *>(property->object)->m_qmlMenus;
+        const auto menus = static_cast<KirigamiActionCollection *>(property->object)->d->m_qmlMenus;
         return index >= 0 && index < menus.size() ? menus.at(index) : nullptr;
     }, [](QQmlListProperty<ActionMenu> *property) {
         auto collection = static_cast<KirigamiActionCollection *>(property->object);
-        for (auto *menu : std::as_const(collection->m_qmlMenus)) {
+        for (auto *menu : std::as_const(collection->d->m_qmlMenus)) {
             menu->setCollection(nullptr);
             menu->setParent(nullptr);
         }
-        collection->m_qmlMenus.clear();
+        collection->d->m_qmlMenus.clear();
         Q_EMIT collection->menusChanged();
     }};
 }
 
 void KirigamiActionCollection::insertMenu(ActionMenu *menu)
 {
-    if (!menu || m_qmlMenus.contains(menu)) {
+    if (!menu || d->m_qmlMenus.contains(menu)) {
         return;
     }
-    m_qmlMenus.append(menu);
+    d->m_qmlMenus.append(menu);
     menu->setCollection(this);
     menu->setParent(this);
     connect(menu, &ActionMenu::mergedActionsChanged, this, &KirigamiActionCollection::menusChanged, Qt::UniqueConnection);
@@ -298,7 +305,7 @@ void KirigamiActionCollection::insertMenu(ActionMenu *menu)
 
 const QList<ActionMenu *> &KirigamiActionCollection::registeredMenus() const
 {
-    return m_qmlMenus;
+    return d->m_qmlMenus;
 }
 
 ActionCollectionAttached *KirigamiActionCollection::qmlAttachedProperties(QObject *object)
@@ -312,12 +319,12 @@ void KirigamiActionCollection::insertAction(ActionData *action)
         return;
     }
 
-    if (!m_qmlActions.contains(action)) {
-        m_qmlActions.append(action);
+    if (!d->m_qmlActions.contains(action)) {
+        d->m_qmlActions.append(action);
         action->setParent(this);
     }
 
-    if (m_qmlComplete && m_application && this->action(action->name()) != action) {
+    if (d->m_qmlComplete && d->m_application && this->action(action->name()) != action) {
         addAction(action->name(), action);
         setComponentDisplayName(text());
         readSettings();
@@ -330,9 +337,9 @@ void KirigamiActionCollection::classBegin()
 
 void KirigamiActionCollection::componentComplete()
 {
-    m_qmlComplete = true;
-    if (m_application) {
-        for (auto action : std::as_const(m_qmlActions)) {
+    d->m_qmlComplete = true;
+    if (d->m_application) {
+        for (auto action : std::as_const(d->m_qmlActions)) {
             insertAction(action);
         }
     }
@@ -341,8 +348,8 @@ void KirigamiActionCollection::componentComplete()
 KirigamiActionCollection::~KirigamiActionCollection()
 {
     KirigamiActionCollectionPrivate::s_allCollections.removeAll(this);
-    if (m_application) {
-        QMetaObject::invokeMethod(m_application, "actionCollectionsChanged", Qt::DirectConnection);
+    if (d->m_application) {
+        QMetaObject::invokeMethod(d->m_application, "actionCollectionsChanged", Qt::DirectConnection);
     }
 }
 

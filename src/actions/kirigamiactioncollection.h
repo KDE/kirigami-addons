@@ -584,12 +584,6 @@ private:
     bool isQmlComplete() const;
     const QList<ActionMenu *> &registeredMenus() const;
     std::unique_ptr<class KirigamiActionCollectionPrivate> const d;
-    QPointer<AbstractKirigamiApplication> m_application;
-    QMetaObject::Connection m_applicationMenusConnection;
-    QList<ActionData *> m_qmlActions;
-    QList<ActionMenu *> m_qmlMenus;
-    QString m_qmlText;
-    bool m_qmlComplete = false;
 };
 
 QML_DECLARE_TYPEINFO(ActionCollectionAttached, QML_HAS_ATTACHED_PROPERTIES)
