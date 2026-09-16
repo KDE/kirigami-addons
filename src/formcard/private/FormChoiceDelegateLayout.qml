@@ -9,8 +9,6 @@ import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 
-import "private" as Private
-
 /*! Internal layout shared by check and radio form delegates. */
 ColumnLayout {
     id: root
