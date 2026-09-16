@@ -186,9 +186,6 @@ QVariantList ActionMenu::mergedItems() const
             for (const auto &action : menu->actions()) {
                 if (!actionNames.contains(action)) {
                     const auto resolvedAction = menu->resolveAction(action);
-                    if (!resolvedAction && (!d->collection || d->collection->isQmlComplete())) {
-                        qWarning() << "ActionMenu" << menu->name() << "references unavailable action" << action;
-                    }
                     result.append(QVariantMap{{u"type"_s, u"action"_s},
                                               {u"name"_s, action},
                                               {u"action"_s, QVariant::fromValue<QObject *>(resolvedAction)}});
@@ -211,9 +208,6 @@ QVariantList ActionMenu::mergedItems() const
             const auto action = item->property("name").toString();
             if (!action.isEmpty() && !actionNames.contains(action)) {
                 const auto resolvedAction = menu->resolveAction(action);
-                if (!resolvedAction && (!d->collection || d->collection->isQmlComplete())) {
-                    qWarning() << "ActionMenu" << menu->name() << "references unavailable action" << action;
-                }
                 result.append(QVariantMap{{u"type"_s, u"action"_s},
                                           {u"name"_s, action},
                                           {u"action"_s, QVariant::fromValue<QObject *>(resolvedAction)}});
