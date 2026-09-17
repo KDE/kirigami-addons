@@ -275,18 +275,36 @@ FormCardPage {
             property alias text: bodyLabel.text
 
             parent: QQC2.Overlay.overlay
+            implicitWidth: parent ? Math.min(parent.width - Kirigami.Units.gridUnit * 2, Kirigami.Units.gridUnit * 30) : Kirigami.Units.gridUnit * 30
 
             leftPadding: 0
             rightPadding: 0
             bottomPadding: 0
             topPadding: 0
 
-            header: Kirigami.Heading {
-                text: licenseSheet.title
-                elide: QQC2.Label.ElideRight
+            header: QQC2.Control {
                 padding: licenseSheet.padding
                 topPadding: Kirigami.Units.largeSpacing
                 bottomPadding: Kirigami.Units.largeSpacing
+
+                contentItem: RowLayout {
+                    spacing: Kirigami.Units.largeSpacing
+
+                    Kirigami.Heading {
+                        text: licenseSheet.title
+                        elide: QQC2.Label.ElideRight
+                        padding: 0
+                        leftPadding: Kirigami.Units.largeSpacing
+                        Layout.fillWidth: true
+                    }
+
+                    QQC2.ToolButton {
+                        icon.name: hovered ? "window-close" : "window-close-symbolic"
+                        text: i18ndc("kirigami-addons6", "@action:button", "Close")
+                        display: QQC2.ToolButton.IconOnly
+                        onClicked: licenseSheet.close()
+                    }
+                }
 
                 Kirigami.Separator {
                     anchors {
@@ -299,11 +317,15 @@ FormCardPage {
 
             contentItem: QQC2.ScrollView {
                 id: scrollView
+                contentWidth: availableWidth
+                QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AlwaysOff
 
                 Kirigami.SelectableLabel {
                     id: bodyLabel
+                    width: scrollView.availableWidth
                     text: licenseSheet.text
                     textMargin: Kirigami.Units.gridUnit
+                    wrapMode: Text.WordWrap
                 }
             }
 
@@ -513,6 +535,7 @@ FormCardPage {
                 required property var modelData
 
                 Layout.fillWidth: true
+                Layout.preferredWidth: Kirigami.Units.gridUnit * 30
                 spacing: Kirigami.Units.smallSpacing
 
                 QQC2.Label {
@@ -530,6 +553,7 @@ FormCardPage {
 
                 QQC2.Label {
                     Layout.fillWidth: true
+                    Layout.minimumWidth: 0
                     text: modelData.description
                     textFormat: Text.RichText
                     wrapMode: Text.WordWrap
@@ -717,6 +741,7 @@ FormCardPage {
                                     id: bodyLabel
                                     text: delegate.modelData.licenses.text
                                     textMargin: Kirigami.Units.gridUnit
+                                    wrapMode: Text.WordWrap
                                     onLinkActivated: (link) => { Qt.openUrlExternally(link); }
                                 }
                             }
