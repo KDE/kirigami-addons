@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-15 00:42+0000\n"
-"PO-Revision-Date: 2026-09-06 18:06+0300\n"
+"POT-Creation-Date: 2026-09-17 00:42+0000\n"
+"PO-Revision-Date: 2026-09-15 18:17+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -28,40 +28,38 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "yurchor@ukr.net"
 
-#: actions/abstractkirigamiapplication.cpp:162
+#: actions/abstractkirigamiapplication.cpp:163
 #, kde-format
 msgid "Open Command Bar"
 msgstr "Відкрити панель команд"
 
-#: actions/abstractkirigamiapplication.cpp:184 formcard/AboutPage.qml:106
+#: actions/abstractkirigamiapplication.cpp:185 formcard/AboutPage.qml:114
 #, kde-format
 msgid "About %1"
 msgstr "Про %1"
 
-#: actions/abstractkirigamiapplication.cpp:191 formcard/AboutKDEPage.qml:24
+#: actions/abstractkirigamiapplication.cpp:192 formcard/AboutKDEPage.qml:24
 #, kde-format
 msgid "About KDE"
 msgstr "Про KDE"
 
-#: actions/abstractkirigamiapplication.cpp:201
+#: actions/abstractkirigamiapplication.cpp:202
 #, kde-format
 msgctxt "@title:menu"
 msgid "File"
-msgstr ""
+msgstr "Файл"
 
-#: actions/abstractkirigamiapplication.cpp:208
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#: actions/abstractkirigamiapplication.cpp:209
+#, kde-format
 msgctxt "@title:menu"
 msgid "Settings"
 msgstr "Параметри"
 
-#: actions/abstractkirigamiapplication.cpp:221
+#: actions/abstractkirigamiapplication.cpp:222
 #, kde-format
 msgctxt "@title:menu"
 msgid "Help"
-msgstr ""
+msgstr "Довідка"
 
 #: actions/private/keysequencehelper.cpp:117
 #, kde-format
@@ -273,7 +271,8 @@ msgstr "Попереднє зображення"
 msgid "Next image"
 msgstr "Наступне зображення"
 
-#: components/Banner.qml:185 formcard/AboutPage.qml:582
+#: components/Banner.qml:185 formcard/AboutPage.qml:204
+#: formcard/AboutPage.qml:700
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -379,24 +378,24 @@ msgctxt "@action:button"
 msgid "Go Next"
 msgstr "Перейти до наступного"
 
-#: dateandtime/TimePicker.qml:113
+#: dateandtime/TimePicker.qml:132
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to current time"
 msgstr "Скинути до поточного часу"
 
-#: dateandtime/TimePicker.qml:138
+#: dateandtime/TimePicker.qml:157
 #, kde-format
 msgid "Hours"
 msgstr "Години"
 
-#: dateandtime/TimePicker.qml:161
+#: dateandtime/TimePicker.qml:180
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: dateandtime/TimePicker.qml:176
+#: dateandtime/TimePicker.qml:195
 #, kde-format
 msgid "Minutes"
 msgstr "Хвилини"
@@ -507,7 +506,7 @@ msgstr ""
 "вільного програмного забезпечення. Кожен може долучитися і зробити свій "
 "внесок до KDE, зокрема це можете зробити ви."
 
-#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:250
+#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:329
 #, kde-format
 msgid "Homepage"
 msgstr "Домашня сторінка"
@@ -565,7 +564,7 @@ msgstr ""
 "забезпечувати користувачів графікою, темами, звуками та вдосконаленою "
 "документацію. Вам вирішувати!"
 
-#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:278
+#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:357
 #, kde-format
 msgid "Get Involved"
 msgstr "Приєднатися до команди"
@@ -621,22 +620,27 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:264
+#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:343
 #, kde-format
 msgid "Donate"
 msgstr "Підтримати фінансово"
 
-#: formcard/AboutPage.qml:152
+#: formcard/AboutPage.qml:169
 #, kde-format
 msgid "Copyright"
 msgstr "Авторські права"
 
-#: formcard/AboutPage.qml:160
+#: formcard/AboutPage.qml:177
+#, kde-format
+msgid "Release history"
+msgstr ""
+
+#: formcard/AboutPage.qml:239
 #, kde-format
 msgid "Description"
 msgstr "Опис"
 
-#: formcard/AboutPage.qml:173
+#: formcard/AboutPage.qml:252
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
@@ -645,64 +649,71 @@ msgstr[1] "Ліцензування"
 msgstr[2] "Ліцензування"
 msgstr[3] "Ліцензування"
 
-#: formcard/AboutPage.qml:304
+#: formcard/AboutPage.qml:383
 #, kde-format
 msgid "Report a Bug"
 msgstr "Повідомити про помилку"
 
-#: formcard/AboutPage.qml:321
+#: formcard/AboutPage.qml:400
 #, kde-format
 msgid "Matrix Channel"
 msgstr "Канал Matrix"
 
-#: formcard/AboutPage.qml:341
+#: formcard/AboutPage.qml:420
 #, kde-format
 msgid "Mastodon"
 msgstr "Mastodon"
 
-#: formcard/AboutPage.qml:357
+#: formcard/AboutPage.qml:436
 #, kde-format
 msgid "Source Code"
 msgstr "Початковий код"
 
-#: formcard/AboutPage.qml:363
+#: formcard/AboutPage.qml:442
 #, kde-format
 msgid "Libraries in use"
 msgstr "Використані бібліотеки"
 
-#: formcard/AboutPage.qml:367
+#: formcard/AboutPage.qml:446
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "Скопіювати до буфера"
 
-#: formcard/AboutPage.qml:371
+#: formcard/AboutPage.qml:450
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "Відомості щодо системи скопійовано до буфера обміну даними."
 
-#: formcard/AboutPage.qml:385
+#: formcard/AboutPage.qml:464
 #, kde-format
 msgid "Authors"
 msgstr "Автори"
 
-#: formcard/AboutPage.qml:400
+#: formcard/AboutPage.qml:479
 #, kde-format
 msgid "Credits"
 msgstr "Подяки"
 
-#: formcard/AboutPage.qml:415
+#: formcard/AboutPage.qml:494
 #, kde-format
 msgid "Translators"
 msgstr "Перекладачі"
 
-#: formcard/AboutPage.qml:484
+#: formcard/AboutPage.qml:542
+#, fuzzy, kde-format
+#| msgctxt "@title:dialog"
+#| msgid "Information"
+msgid "More information"
+msgstr "Інформація"
+
+#: formcard/AboutPage.qml:602
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Відвідайте сторінку %1 у KDE Store"
 
-#: formcard/AboutPage.qml:493
+#: formcard/AboutPage.qml:611
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Надіслати повідомлення ел. пошти до %1"

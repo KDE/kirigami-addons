@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-15 00:42+0000\n"
+"POT-Creation-Date: 2026-09-17 00:42+0000\n"
 "PO-Revision-Date: 2024-04-23 19:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -27,28 +27,28 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "i@guoyunhe.me, tds00@qq.com"
 
-#: actions/abstractkirigamiapplication.cpp:162
+#: actions/abstractkirigamiapplication.cpp:163
 #, kde-format
 msgid "Open Command Bar"
 msgstr "打开命令栏"
 
-#: actions/abstractkirigamiapplication.cpp:184 formcard/AboutPage.qml:106
+#: actions/abstractkirigamiapplication.cpp:185 formcard/AboutPage.qml:114
 #, kde-format
 msgid "About %1"
 msgstr "关于 %1"
 
-#: actions/abstractkirigamiapplication.cpp:191 formcard/AboutKDEPage.qml:24
+#: actions/abstractkirigamiapplication.cpp:192 formcard/AboutKDEPage.qml:24
 #, kde-format
 msgid "About KDE"
 msgstr "关于 KDE"
 
-#: actions/abstractkirigamiapplication.cpp:201
+#: actions/abstractkirigamiapplication.cpp:202
 #, kde-format
 msgctxt "@title:menu"
 msgid "File"
 msgstr ""
 
-#: actions/abstractkirigamiapplication.cpp:208
+#: actions/abstractkirigamiapplication.cpp:209
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Settings"
@@ -56,7 +56,7 @@ msgctxt "@title:menu"
 msgid "Settings"
 msgstr "设置"
 
-#: actions/abstractkirigamiapplication.cpp:221
+#: actions/abstractkirigamiapplication.cpp:222
 #, kde-format
 msgctxt "@title:menu"
 msgid "Help"
@@ -269,7 +269,8 @@ msgstr "上一张图像"
 msgid "Next image"
 msgstr "下一张图像"
 
-#: components/Banner.qml:185 formcard/AboutPage.qml:582
+#: components/Banner.qml:185 formcard/AboutPage.qml:204
+#: formcard/AboutPage.qml:700
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -375,24 +376,24 @@ msgctxt "@action:button"
 msgid "Go Next"
 msgstr "前进"
 
-#: dateandtime/TimePicker.qml:113
+#: dateandtime/TimePicker.qml:132
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to current time"
 msgstr "重置为当前时间"
 
-#: dateandtime/TimePicker.qml:138
+#: dateandtime/TimePicker.qml:157
 #, kde-format
 msgid "Hours"
 msgstr "小时"
 
-#: dateandtime/TimePicker.qml:161
+#: dateandtime/TimePicker.qml:180
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: dateandtime/TimePicker.qml:176
+#: dateandtime/TimePicker.qml:195
 #, kde-format
 msgid "Minutes"
 msgstr "分钟"
@@ -498,7 +499,7 @@ msgstr ""
 "制。我们的共同目标是为全世界带来高品质的自由软件。不管您来自何方，我们都欢迎"
 "您加入 KDE 并做出贡献。"
 
-#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:250
+#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:329
 #, kde-format
 msgid "Homepage"
 msgstr "主页"
@@ -553,7 +554,7 @@ msgstr ""
 "团队来翻译软件的界面，您还可以制作图像、主题、音效，或者改进软件配套的文档……"
 "您的角色您来定！"
 
-#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:278
+#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:357
 #, kde-format
 msgid "Get Involved"
 msgstr "参与贡献"
@@ -606,85 +607,97 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:264
+#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:343
 #, kde-format
 msgid "Donate"
 msgstr "捐款"
 
-#: formcard/AboutPage.qml:152
+#: formcard/AboutPage.qml:169
 #, kde-format
 msgid "Copyright"
 msgstr "版权信息"
 
-#: formcard/AboutPage.qml:160
+#: formcard/AboutPage.qml:177
+#, kde-format
+msgid "Release history"
+msgstr ""
+
+#: formcard/AboutPage.qml:239
 #, kde-format
 msgid "Description"
 msgstr "描述"
 
-#: formcard/AboutPage.qml:173
+#: formcard/AboutPage.qml:252
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "许可证"
 
-#: formcard/AboutPage.qml:304
+#: formcard/AboutPage.qml:383
 #, kde-format
 msgid "Report a Bug"
 msgstr "报告程序缺陷"
 
-#: formcard/AboutPage.qml:321
+#: formcard/AboutPage.qml:400
 #, kde-format
 msgid "Matrix Channel"
 msgstr "Matrix 频道"
 
-#: formcard/AboutPage.qml:341
+#: formcard/AboutPage.qml:420
 #, kde-format
 msgid "Mastodon"
 msgstr "Mastodon"
 
-#: formcard/AboutPage.qml:357
+#: formcard/AboutPage.qml:436
 #, kde-format
 msgid "Source Code"
 msgstr "源代码"
 
-#: formcard/AboutPage.qml:363
+#: formcard/AboutPage.qml:442
 #, kde-format
 msgid "Libraries in use"
 msgstr "使用的程序库"
 
-#: formcard/AboutPage.qml:367
+#: formcard/AboutPage.qml:446
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "复制到剪贴板"
 
-#: formcard/AboutPage.qml:371
+#: formcard/AboutPage.qml:450
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "系统信息已复制到剪贴板。"
 
-#: formcard/AboutPage.qml:385
+#: formcard/AboutPage.qml:464
 #, kde-format
 msgid "Authors"
 msgstr "作者"
 
-#: formcard/AboutPage.qml:400
+#: formcard/AboutPage.qml:479
 #, kde-format
 msgid "Credits"
 msgstr "鸣谢"
 
-#: formcard/AboutPage.qml:415
+#: formcard/AboutPage.qml:494
 #, kde-format
 msgid "Translators"
 msgstr "翻译人员"
 
-#: formcard/AboutPage.qml:484
+#: formcard/AboutPage.qml:542
+#, fuzzy, kde-format
+#| msgctxt "@title:dialog"
+#| msgid "Information"
+msgid "More information"
+msgstr "信息"
+
+#: formcard/AboutPage.qml:602
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "访问 %1 的 KDE 商店页面"
 
-#: formcard/AboutPage.qml:493
+#: formcard/AboutPage.qml:611
 #, kde-format
 msgid "Send an email to %1"
 msgstr "发送电子邮件到 %1"

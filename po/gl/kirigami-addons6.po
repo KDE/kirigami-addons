@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-15 00:42+0000\n"
+"POT-Creation-Date: 2026-09-17 00:42+0000\n"
 "PO-Revision-Date: 2025-05-03 06:58+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -27,28 +27,28 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "adrian@chaves.gal"
 
-#: actions/abstractkirigamiapplication.cpp:162
+#: actions/abstractkirigamiapplication.cpp:163
 #, kde-format
 msgid "Open Command Bar"
 msgstr "Abrir a barra de ordes"
 
-#: actions/abstractkirigamiapplication.cpp:184 formcard/AboutPage.qml:106
+#: actions/abstractkirigamiapplication.cpp:185 formcard/AboutPage.qml:114
 #, kde-format
 msgid "About %1"
 msgstr "Sobre %1"
 
-#: actions/abstractkirigamiapplication.cpp:191 formcard/AboutKDEPage.qml:24
+#: actions/abstractkirigamiapplication.cpp:192 formcard/AboutKDEPage.qml:24
 #, kde-format
 msgid "About KDE"
 msgstr "Sobre KDE"
 
-#: actions/abstractkirigamiapplication.cpp:201
+#: actions/abstractkirigamiapplication.cpp:202
 #, kde-format
 msgctxt "@title:menu"
 msgid "File"
 msgstr ""
 
-#: actions/abstractkirigamiapplication.cpp:208
+#: actions/abstractkirigamiapplication.cpp:209
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Settings"
@@ -56,7 +56,7 @@ msgctxt "@title:menu"
 msgid "Settings"
 msgstr "Configuración"
 
-#: actions/abstractkirigamiapplication.cpp:221
+#: actions/abstractkirigamiapplication.cpp:222
 #, kde-format
 msgctxt "@title:menu"
 msgid "Help"
@@ -275,7 +275,8 @@ msgstr "Imaxe anterior"
 msgid "Next image"
 msgstr "Seguinte imaxe"
 
-#: components/Banner.qml:185 formcard/AboutPage.qml:582
+#: components/Banner.qml:185 formcard/AboutPage.qml:204
+#: formcard/AboutPage.qml:700
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -382,24 +383,24 @@ msgctxt "@action:button"
 msgid "Go Next"
 msgstr "Seguinte"
 
-#: dateandtime/TimePicker.qml:113
+#: dateandtime/TimePicker.qml:132
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to current time"
 msgstr ""
 
-#: dateandtime/TimePicker.qml:138
+#: dateandtime/TimePicker.qml:157
 #, kde-format
 msgid "Hours"
 msgstr "Horas"
 
-#: dateandtime/TimePicker.qml:161
+#: dateandtime/TimePicker.qml:180
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: dateandtime/TimePicker.qml:176
+#: dateandtime/TimePicker.qml:195
 #, kde-format
 msgid "Minutes"
 msgstr "Minutos"
@@ -507,7 +508,7 @@ msgstr ""
 "mellor soporte lóxico libre do mundo. Calquera pode unirse e colaborar con "
 "KDE, vostede tamén."
 
-#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:250
+#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:329
 #, kde-format
 msgid "Homepage"
 msgstr "Páxina web"
@@ -565,7 +566,7 @@ msgstr ""
 "interfaces dos programas. Pode fornecer gráficos, temas, sons, e mellorar a "
 "documentación. Vostede decide!"
 
-#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:278
+#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:357
 #, kde-format
 msgid "Get Involved"
 msgstr "Colabore"
@@ -621,86 +622,98 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:264
+#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:343
 #, kde-format
 msgid "Donate"
 msgstr "Doar"
 
-#: formcard/AboutPage.qml:152
+#: formcard/AboutPage.qml:169
 #, kde-format
 msgid "Copyright"
 msgstr "Dereitos de copia"
 
-#: formcard/AboutPage.qml:160
+#: formcard/AboutPage.qml:177
+#, kde-format
+msgid "Release history"
+msgstr ""
+
+#: formcard/AboutPage.qml:239
 #, kde-format
 msgid "Description"
 msgstr "Descrición"
 
-#: formcard/AboutPage.qml:173
+#: formcard/AboutPage.qml:252
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "Licenza"
 msgstr[1] "Licenzas"
 
-#: formcard/AboutPage.qml:304
+#: formcard/AboutPage.qml:383
 #, kde-format
 msgid "Report a Bug"
 msgstr "Informar dun fallo"
 
-#: formcard/AboutPage.qml:321
+#: formcard/AboutPage.qml:400
 #, kde-format
 msgid "Matrix Channel"
 msgstr ""
 
-#: formcard/AboutPage.qml:341
+#: formcard/AboutPage.qml:420
 #, kde-format
 msgid "Mastodon"
 msgstr ""
 
-#: formcard/AboutPage.qml:357
+#: formcard/AboutPage.qml:436
 #, kde-format
 msgid "Source Code"
 msgstr ""
 
-#: formcard/AboutPage.qml:363
+#: formcard/AboutPage.qml:442
 #, kde-format
 msgid "Libraries in use"
 msgstr "Bibliotecas usadas"
 
-#: formcard/AboutPage.qml:367
+#: formcard/AboutPage.qml:446
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "Copiar no portapapeis"
 
-#: formcard/AboutPage.qml:371
+#: formcard/AboutPage.qml:450
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "A información do sistema copiouse no portapapeis."
 
-#: formcard/AboutPage.qml:385
+#: formcard/AboutPage.qml:464
 #, kde-format
 msgid "Authors"
 msgstr "Autoría"
 
-#: formcard/AboutPage.qml:400
+#: formcard/AboutPage.qml:479
 #, kde-format
 msgid "Credits"
 msgstr "Recoñecementos"
 
-#: formcard/AboutPage.qml:415
+#: formcard/AboutPage.qml:494
 #, kde-format
 msgid "Translators"
 msgstr "Tradución"
 
-#: formcard/AboutPage.qml:484
+#: formcard/AboutPage.qml:542
+#, fuzzy, kde-format
+#| msgctxt "@title:dialog"
+#| msgid "Information"
+msgid "More information"
+msgstr "Información"
+
+#: formcard/AboutPage.qml:602
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Visitar a páxina na tenda de KDE de %1"
 
-#: formcard/AboutPage.qml:493
+#: formcard/AboutPage.qml:611
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Enviar unha mensaxe de correo electrónico a %1"
