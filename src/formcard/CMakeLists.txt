@@ -46,6 +46,7 @@ ecm_target_qml_sources(formcardplugin SOURCES
     FormTextAreaDelegate.qml
     FormTextDelegate.qml
     FormTextFieldDelegate.qml
+    FormDelegateCollapsible.qml
 )
 
 if(ANDROID)

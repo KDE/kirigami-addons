@@ -541,6 +541,39 @@ Kirigami.ApplicationWindow {
                     currentFolder: StandardPaths.writableLocation(StandardPaths.DocumentsLocation)
                 }
             }
+
+            // collapsible 
+            FormCard.FormHeader {
+                title: "Collapsible"
+            }
+
+            FormCard.FormCard {
+                FormCard.FormTextDelegate {
+                    text: "Always visible text"
+                }
+                FormCard.FormDelegateSeparator {
+                    below: collapsible.itemBelowPrev
+                }
+                FormCard.FormDelegateCollapsible {
+                    id: collapsible
+                    text: "Collapsible"
+                    description: expanded ? "Click to close!" : "Click to open!"
+
+                    FormCard.FormTextDelegate {
+                        text: "Initially hidden text"
+                    }
+                    FormCard.FormDelegateSeparator {}
+                    FormCard.FormTextDelegate {
+                        text: "When you click the Collapsible's button, it opens!"
+                    }
+                }
+                FormCard.FormDelegateSeparator {
+                    above: collapsible.itemAboveNext
+                }
+                FormCard.FormTextDelegate {
+                    text: "Always visible text"
+                }
+            }
         }
     }
 }
