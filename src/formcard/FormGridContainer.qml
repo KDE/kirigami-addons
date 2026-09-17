@@ -67,6 +67,10 @@ Item {
 
     readonly property bool hasDelegates: delegates.length > 0
 
+    // Internal: the delegates that currently have `visible` set to `true`, used to
+    // lay out the grid and compute column spans while skipping hidden delegates.
+    readonly property var _visibleDelegates: root.delegates.filter(delegate => delegate.visible)
+
     /*!
        This property holds the maximum width of the grid.
        \default Kirigami.Units.gridUnit * 30
@@ -169,13 +173,18 @@ Item {
             model: root.delegates
 
             Item {
-                required property int index
+                id: cell
 
-                implicitWidth: root.delegates[index]?.implicitWidth ?? 0
-                implicitHeight: root.delegates[index]?.implicitHeight ?? 0
+                required property int index
+                readonly property Item delegateItem: root.delegates[index]
+
+                visible: delegateItem?.visible ?? true
+
+                implicitWidth: delegateItem?.implicitWidth ?? 0
+                implicitHeight: delegateItem?.implicitHeight ?? 0
 
                 Layout.preferredWidth: Kirigami.Units.gridUnit * 10
-                Layout.columnSpan: root.delegates.length % 2 !== 0 && index === root.delegates.length - 1 ? 2 : 1
+                Layout.columnSpan: root._visibleDelegates.length % 2 !== 0 && cell.delegateItem === root._visibleDelegates[root._visibleDelegates.length - 1] ? 2 : 1
                 Layout.fillWidth: true
                 Layout.fillHeight: true
 
@@ -188,7 +197,7 @@ Item {
                     id: delegateLoader
 
                     anchors.fill: parent
-                    target: root.delegates[index]
+                    target: cell.delegateItem
                 }
             }
         }

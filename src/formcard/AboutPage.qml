@@ -333,10 +333,11 @@ FormCardPage {
         }
     }
 
-    FormCard {
+    FormGridContainer {
         Layout.topMargin: Kirigami.Units.gridUnit
+        Layout.fillWidth: true
 
-        // hide FormCard if all contents are not visible
+        // hide the container if all contents are not visible
         visible: getInvolvedDelegate.visible
               || donateDelegate.visible
               || homepageDelegate.visible
@@ -353,12 +354,6 @@ FormCardPage {
             visible: aboutData.homepage.length > 0
         }
 
-        FormDelegateSeparator {
-            above: getInvolvedDelegate
-            below: donateDelegate
-            visible: aboutData.homepage.length > 0
-        }
-
         FormLinkDelegate {
             id: donateDelegate
             icon.name: "donate-symbolic"
@@ -367,23 +362,11 @@ FormCardPage {
             visible: donateUrl.toString().length > 0
         }
 
-        FormDelegateSeparator {
-            above: donateDelegate
-            below: homepageDelegate
-            visible: donateUrl.toString().length > 0
-        }
-
         FormLinkDelegate {
             id: homepageDelegate
             icon.name: "applications-development-symbolic"
             text: i18nd("kirigami-addons6", "Get Involved")
             url: page.getInvolvedUrl
-            visible: page.getInvolvedUrl != ""
-        }
-
-        FormDelegateSeparator {
-            above: homepageDelegate
-            below: bugDelegate
             visible: page.getInvolvedUrl != ""
         }
 
@@ -406,10 +389,6 @@ FormCardPage {
             visible: url.length > 0
         }
 
-        FormDelegateSeparator {
-            visible: matrixRoomDelegate.visible
-        }
-
         FormLinkDelegate {
             id: matrixRoomDelegate
             url: {
@@ -421,10 +400,6 @@ FormCardPage {
             icon.name: "im-matrix"
             text: i18nd("kirigami-addons6", "Matrix Channel")
             visible: url.length > 0
-        }
-
-        FormDelegateSeparator {
-            visible: mastodonDelegate.visible
         }
 
         FormLinkDelegate {
@@ -441,10 +416,6 @@ FormCardPage {
             icon.name: "im-mastodon"
             text: i18nd("kirigami-addons6", "Mastodon")
             visible: url.length > 0
-        }
-
-        FormDelegateSeparator {
-            visible: sourceCodeDelegate.visible
         }
 
         FormLinkDelegate {
