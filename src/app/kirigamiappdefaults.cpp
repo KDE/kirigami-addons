@@ -7,12 +7,18 @@
 #include "kirigamiappdefaults.h"
 #include <KAboutData>
 #include <KColorSchemeManager>
-#include <KLocalizedContext>
+#include <KLocalizedString>
 #include <QIcon>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include <QQuickStyle>
 #include <QSurfaceFormat>
+#include <QUrl>
+#include <QVariant>
+
+#if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
+#include <QMessageBox>
+#endif
 
 #ifndef Q_OS_IOS
 #include <KCrash>
@@ -28,6 +34,8 @@
 #include <QFont>
 #include <Windows.h>
 #endif
+
+using namespace Qt::Literals::StringLiterals;
 
 namespace KirigamiAppDefaults
 {
@@ -81,6 +89,62 @@ void apply(QGuiApplication *app)
     });
 #endif
 #endif
+#endif
+}
+
+bool load(QAnyStringView uri, QAnyStringView typeName, QQmlApplicationEngine *engine)
+{
+    Q_ASSERT(engine);
+
+    QStringList qmlErrors;
+    QObject::connect(engine, &QQmlApplicationEngine::warnings, engine, [&qmlErrors](const QList<QQmlError> &warnings) {
+        for (const auto &warning : warnings) {
+            qmlErrors.append(warning.toString());
+        }
+    });
+
+    engine->loadFromModule(uri, typeName);
+    if (!engine->rootObjects().isEmpty()) {
+        return true;
+    }
+
+#if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
+    QMessageBox messageBox(QMessageBox::Critical,
+                            i18nc("@title:window", "Failed to Load Application"),
+                            i18nc("@info", "Could not load the QML application. This issue might be caused by your distribution. Please report it to your distribution first."),
+                            QMessageBox::Close);
+    messageBox.setDetailedText(qmlErrors.join(u'\n'));
+    messageBox.exec();
+    return false;
+#else
+    engine->rootContext()->setContextProperty(u"qmlLoadErrorTitle"_s, i18nc("@title:window", "Failed to Load Application"));
+    engine->rootContext()->setContextProperty(u"qmlLoadErrorMessage"_s, i18nc("@info", "Could not load the QML application."));
+    engine->rootContext()->setContextProperty(u"qmlLoadErrors"_s, QVariant::fromValue(qmlErrors));
+    engine->loadData(R"qml(
+        import QtQuick
+        import QtQuick.Controls as Controls
+        import org.kde.kirigami as Kirigami
+        import org.kde.kirigamiaddons.components as Components
+
+        Kirigami.ApplicationWindow {
+            visible: true
+            width: 400
+            height: 300
+
+            Components.MessageDialog {
+                id: errorDialog
+                title: qmlLoadErrorTitle
+                dialogType: Components.MessageDialog.Error
+                subtitle: qmlLoadErrorMessage
+                    + "\n\n" + qmlLoadErrors.join("\n")
+                standardButtons: Controls.Dialog.Close
+
+                Component.onCompleted: open()
+                onRejected: Qt.quit()
+            }
+        }
+    )qml", QUrl(u"qrc:/qml-load-error.qml"_s));
+    return !engine->rootObjects().isEmpty();
 #endif
 }
 

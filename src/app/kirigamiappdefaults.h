@@ -7,6 +7,9 @@
 #pragma once
 
 class QGuiApplication;
+class QQmlApplicationEngine;
+
+#include <QAnyStringView>
 
 #include "kirigamiapp_export.h"
 
@@ -41,9 +44,7 @@ namespace KirigamiAppDefaults
  *
  *     QQmlApplicationEngine engine;
  *     KLocalization::setupLocalizedContext(&engine);
- *     engine.loadFromModule("org.kde.myapp", u"Main");
- *
- *     if (engine.rootObjects().isEmpty()) {
+ *     if (!KirigamiAppDefaults::load("org.kde.myapp", u"Main", &engine)) {
  *         return EXIT_FAILURE;
  *     }
  *     return app.exec();
@@ -54,4 +55,17 @@ namespace KirigamiAppDefaults
  * \since 1.11
  */
 KIRIGAMIAPP_EXPORT void apply(QGuiApplication *app);
+
+/*!
+ * Loads the QML module and displays its loading errors if startup fails.
+ *
+ * On desktop platforms, the errors are shown in a native message box. On
+ * Android, a Qt Quick dialog is used so this helper does not require Qt Widgets.
+ *
+ * Returns \c true when the requested module or fallback error UI loaded
+ * successfully.
+ *
+ * \since 1.15.0
+ */
+KIRIGAMIAPP_EXPORT bool load(QAnyStringView uri, QAnyStringView typeName, QQmlApplicationEngine *engine);
 }
