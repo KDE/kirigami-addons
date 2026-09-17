@@ -2,15 +2,21 @@
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
 #include <QtGlobal>
-
-#include <KirigamiApp>
+#ifdef Q_OS_ANDROID
+#include <QGuiApplication>
+#else
+#include <QApplication>
+#endif
 
 #include <QIcon>
 #include <QQmlApplicationEngine>
+#include <QQmlContext>
 #include <QUrl>
 
 #include "version-%{APPNAMELC}.h"
 #include <KAboutData>
+#include <KirigamiAppDefaults>
+#include <KLocalizedQmlContext>
 #include <KLocalizedString>
 
 #include "%{APPNAMELC}config.h"
@@ -26,8 +32,12 @@ Q_DECL_EXPORT
 #endif
 int main(int argc, char *argv[])
 {
-    KirigamiApp::App app(argc, argv);
-    KirigamiApp kapp;
+#ifdef Q_OS_ANDROID
+    QGuiApplication app(argc, argv);
+#else
+    QApplication app(argc, argv);
+#endif
+    KirigamiAppDefaults::apply(&app);
 
 #ifdef Q_OS_WINDOWS
     if (AttachConsole(ATTACH_PARENT_PROCESS)) {
@@ -71,7 +81,10 @@ int main(int argc, char *argv[])
 
     qmlRegisterSingletonInstance("org.kde.%{APPNAMELC}.private", 1, 0, "Config", config);
 
-    if (!kapp.start("org.kde.%{APPNAMELC}", u"Main"_s, &engine)) {
+    KLocalization::setupLocalizedContext(&engine);
+    engine.loadFromModule("org.kde.%{APPNAMELC}", u"Main"_s);
+
+    if (engine.rootObjects().isEmpty()) {
         return -1;
     }
 
