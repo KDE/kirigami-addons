@@ -40,19 +40,8 @@ int main(int argc, char *argv[])
     KLocalizedString::setApplicationDomain("%{APPNAMELC}");
     QCoreApplication::setOrganizationName(u"KDE"_s);
 
-    KAboutData aboutData(
-        // The program name used internally.
-        u"%{APPNAMELC}"_s,
-        // A displayable program name string.
-        i18nc("@title", "%{APPNAME}"),
-        // The program version string.
-        QStringLiteral(%{APPNAMEUC}_VERSION_STRING),
-        // Short description of what the app does.
-        i18n("Application Description"),
-        // The license this code is released under.
-        KAboutLicense::GPL,
-        // Copyright Statement.
-        i18n("(c) %{CURRENT_YEAR}"));
+    auto aboutData = KAboutData::fromAppStreamId(u"org.kde.%{APPNAMELC}"_s);
+    aboutData.setVersion(%{APPNAMEUC}_VERSION_STRING);
     aboutData.addAuthor(i18nc("@info:credit", "%{AUTHOR}"),
                         i18nc("@info:credit", "Maintainer"),
                         u"%{EMAIL}"_s,

@@ -16,17 +16,12 @@ ecm_add_qml_module(%{APPNAMELC}_static
         org.kde.%{APPNAMELC}.settings
 )
 
-target_sources(%{APPNAMELC}_static PRIVATE
-    %{APPNAMELC}application.cpp
-    %{APPNAMELC}application.h
-)
-
 target_link_libraries(%{APPNAMELC}_static PUBLIC
     Qt6::Quick
     KF6::I18n
     KF6::CoreAddons
     KF6::ConfigGui
-    KirigamiAddonsStatefulApp
+    KirigamiAddonsActions
 )
 target_include_directories(%{APPNAMELC}_static PUBLIC ${CMAKE_BINARY_DIR})
 

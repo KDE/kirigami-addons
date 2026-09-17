@@ -37,7 +37,7 @@ target_link_libraries(%{APPNAMELC}_static PUBLIC
     KF6::CoreAddons
     KF6::ConfigCore
     KF6::ConfigGui
-    KirigamiAddonsStatefulApp
+    KirigamiAddonsActions
 )
 target_include_directories(%{APPNAMELC}_static PUBLIC ${CMAKE_BINARY_DIR})
 
