@@ -190,7 +190,9 @@ Item {
 
                 Private.FormCardBackground {
                     anchors.fill: parent
-                    rounded: true
+                    anchors.leftMargin: root.cardWidthRestricted ? 0 : -1
+                    anchors.rightMargin: root.cardWidthRestricted ? 0 : -1
+                    rounded: root.cardWidthRestricted
                 }
 
                 LayoutItemProxy {
