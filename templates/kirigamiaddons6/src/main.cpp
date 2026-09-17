@@ -6,19 +6,12 @@
 #include <QtGlobal>
 #include <KirigamiApp>
 
-#ifdef Q_OS_ANDROID
-#include <QGuiApplication>
-#else
-#include <QApplication>
-#endif
 #include <QCommandLineParser>
 #include <QIcon>
 #include <QQmlApplicationEngine>
 
 #include "version-%{APPNAMELC}.h"
 #include <KAboutData>
-#include <KirigamiAppDefaults>
-#include <KLocalizedQmlContext>
 #include <KLocalizedString>
 
 #include "%{APPNAMELC}config.h"
@@ -30,12 +23,8 @@ Q_DECL_EXPORT
 #endif
 int main(int argc, char *argv[])
 {
-#ifdef Q_OS_ANDROID
-    QGuiApplication app(argc, argv);
-#else
-    QApplication app(argc, argv);
-#endif
-    KirigamiAppDefaults::apply(&app);
+    KirigamiApp::App app(argc, argv);
+    KirigamiApp kapp;
 
     KLocalizedString::setApplicationDomain("%{APPNAMELC}");
     QCoreApplication::setOrganizationName(u"KDE"_s);
@@ -52,8 +41,6 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
 
-    KLocalization::setupLocalizedContext(&engine);
-
     auto config = %{APPNAME}Config::self();
 
     qmlRegisterSingletonInstance("org.kde.%{APPNAMELC}.private", 1, 0, "Config", config);
@@ -65,8 +52,7 @@ int main(int argc, char *argv[])
         aboutData.processCommandLine(&parser);
     }
 
-    engine.loadFromModule("org.kde.%{APPNAMELC}", u"Main"_s);
-    if (engine.rootObjects().isEmpty()) {
+    if (!kapp.start("org.kde.%{APPNAMELC}", u"Main"_s, &engine)) {
         return EXIT_FAILURE;
     }
 

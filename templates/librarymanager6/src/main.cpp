@@ -2,22 +2,15 @@
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
 #include <QtGlobal>
-#ifdef Q_OS_ANDROID
-#include <QGuiApplication>
-#else
-#include <QApplication>
-#endif
+
+#include <KirigamiApp>
 
 #include <QIcon>
 #include <QQmlApplicationEngine>
-#include <QQmlContext>
-#include <QQuickStyle>
 #include <QUrl>
 
 #include "version-%{APPNAMELC}.h"
 #include <KAboutData>
-#include <KIconTheme>
-#include <KLocalizedQmlContext>
 #include <KLocalizedString>
 
 #include "%{APPNAMELC}config.h"
@@ -33,19 +26,8 @@ Q_DECL_EXPORT
 #endif
 int main(int argc, char *argv[])
 {
-#ifdef Q_OS_ANDROID
-    QGuiApplication app(argc, argv);
-    QQuickStyle::setStyle(QStringLiteral("org.kde.breeze"));
-#else
-    KIconTheme::initTheme();
-    QIcon::setFallbackThemeName("breeze"_L1);
-    QApplication app(argc, argv);
-
-    // Default to org.kde.desktop style unless the user forces another style
-    if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE")) {
-        QQuickStyle::setStyle(u"org.kde.desktop"_s);
-    }
-#endif
+    KirigamiApp::App app(argc, argv);
+    KirigamiApp kapp;
 
 #ifdef Q_OS_WINDOWS
     if (AttachConsole(ATTACH_PARENT_PROCESS)) {
@@ -89,10 +71,7 @@ int main(int argc, char *argv[])
 
     qmlRegisterSingletonInstance("org.kde.%{APPNAMELC}.private", 1, 0, "Config", config);
 
-    KLocalization::setupLocalizedContext(&engine);
-    engine.loadFromModule("org.kde.%{APPNAMELC}", u"Main"_s);
-
-    if (engine.rootObjects().isEmpty()) {
+    if (!kapp.start("org.kde.%{APPNAMELC}", u"Main"_s, &engine)) {
         return -1;
     }
 
