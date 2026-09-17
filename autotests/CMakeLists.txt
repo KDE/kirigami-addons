@@ -28,6 +28,7 @@ target_link_libraries(qmltest PRIVATE
     Qt6::QuickTest
     Qt6::Qml
     KF6::I18n
+    KF6::I18nQml
 )
 
 macro(kirigami_add_tests)
