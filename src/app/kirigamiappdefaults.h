@@ -65,7 +65,7 @@ KIRIGAMIAPP_EXPORT void apply(QGuiApplication *app);
  * Returns \c true when the requested module or fallback error UI loaded
  * successfully.
  *
- * \since 1.15.0
+ * \since 1.14.1
  */
 KIRIGAMIAPP_EXPORT bool load(QAnyStringView uri, QAnyStringView typeName, QQmlApplicationEngine *engine);
 }
