@@ -8,6 +8,7 @@
 #ifndef KIRIGAMIADDONSDATEANDTIME_ANDROIDINTEGRATION_H
 #define KIRIGAMIADDONSDATEANDTIME_ANDROIDINTEGRATION_H
 
+#include "datetime.h"
 #include "kirigamidateandtime_export.h"
 
 #include <QDateTime>
@@ -32,8 +33,8 @@ public:
     static AndroidIntegration &instance();
 
 Q_SIGNALS:
-    void datePickerFinished(bool accepted, const QDateTime &date);
-    void timePickerFinished(bool accepted, const QDateTime &time);
+    void datePickerFinished(bool accepted, const DateTime &date);
+    void timePickerFinished(bool accepted, const DateTime &time);
 
 private:
     static AndroidIntegration *s_instance;

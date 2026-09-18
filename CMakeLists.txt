@@ -37,6 +37,7 @@ find_package(Qt6 ${QT_REQUIRED_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick
 find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS Kirigami I18n Config CoreAddons GuiAddons ColorScheme)
 if (BUILD_TESTING)
     find_package(Qt6QuickTest ${QT_REQUIRED_VERSION} CONFIG QUIET)
+    find_package(Qt6Test ${QT_REQUIRED_VERSION} CONFIG QUIET)
 endif()
 if(ANDROID)
     find_package(Gradle REQUIRED)

@@ -128,6 +128,7 @@ RowLayout {
     }
 
     Button {
+        objectName: "resetToNowButton"
         implicitHeight: hoursTumbler.currentItem.height + 2
         text: i18nc("@action:button", "Reset to current time")
         icon.name: "accept_time_event-symbolic"
@@ -138,9 +139,9 @@ RowLayout {
         ToolTip.delay: Kirigami.Units.toolTipDelay
 
         onPressed: {
-            let currentTime = new Date();
-            root.minutes = currentTime.getMinutes();
-            root.hours = currentTime.getHours();
+            const now = DateTimeFactory.now();
+            root.minutes = now.minute;
+            root.hours = now.hour;
             root.initializeTime();
         }
     }

@@ -78,26 +78,52 @@ AbstractFormDelegate {
     property int dateTimeDisplay: FormDateTimeDelegate.DateTimeDisplay.DateTime
 
     /*!
-       This property holds the minimum date (inclusive) that the user can select.
-
-       By default, no limit is applied to the date selection.
+       \deprecated[1.15.0]
+       Use \l minimumDateTime instead, which keeps the timezone of the date it was
+       given intact.
      */
     property date minimumDate
 
     /*!
-       This property holds the maximum date (inclusive) that the user can select.
+       \since 1.15.0
+       This property holds the minimum date and time (inclusive) that the user can
+       select.
 
        By default, no limit is applied to the date selection.
+     */
+    property DateTime.DateTime minimumDateTime
+
+    /*!
+       \deprecated[1.15.0]
+       Use \l maximumDateTime instead, which keeps the timezone of the date it was
+       given intact.
      */
     property date maximumDate
 
     /*!
-       This property holds the the date to use as initial default when editing an
-       an unset date.
+       \since 1.15.0
+       This property holds the maximum date and time (inclusive) that the user can
+       select.
+
+       By default, no limit is applied to the date selection.
+     */
+    property DateTime.DateTime maximumDateTime
+
+    /*!
+       \deprecated[1.15.0]
+       Use \l initialDateTime instead, which keeps the timezone of the date it was
+       given intact.
+     */
+    property date initialValue: new Date()
+
+    /*!
+       \since 1.15.0
+       This property holds the date and time to use as initial default when
+       editing an unset date.
 
        By default, this is the current date/time.
      */
-    property date initialValue: new Date()
+    property DateTime.DateTime initialDateTime: DateTime.DateTimeFactory.now()
 
     /*!
        This property holds whether this delegate is readOnly or whether the user
@@ -107,9 +133,93 @@ AbstractFormDelegate {
     property bool readOnly: false
 
     /*!
-       \brief The current date and time selected by the user.
+       \deprecated[1.15.0]
+       Use \l dateTime instead. Reading this property, or writing one of its
+       components (for example \c{value.setFullYear(...)}), always uses the
+       local timezone; \l dateTime keeps the timezone of the date it was given
+       intact and can be edited component by component (for example
+       \c{dateTime.year = 2024}) without that limitation.
      */
     property date value: new Date()
+
+    /*!
+       \since 1.15.0
+       \brief The current date and time selected by the user.
+     */
+    property DateTime.DateTime dateTime
+
+    property bool _syncingValue: false
+    property bool _syncingMinimum: false
+    property bool _syncingMaximum: false
+    property bool _syncingInitial: false
+
+    onValueChanged: {
+        if (root._syncingValue) {
+            return;
+        }
+        root._syncingValue = true;
+        root.dateTime.dateTime = root.value;
+        root._syncingValue = false;
+    }
+    onDateTimeChanged: {
+        if (root._syncingValue) {
+            return;
+        }
+        root._syncingValue = true;
+        root.value = root.dateTime.dateTime;
+        root._syncingValue = false;
+    }
+
+    onMinimumDateChanged: {
+        if (root._syncingMinimum) {
+            return;
+        }
+        root._syncingMinimum = true;
+        root.minimumDateTime.dateTime = root.minimumDate;
+        root._syncingMinimum = false;
+    }
+    onMinimumDateTimeChanged: {
+        if (root._syncingMinimum) {
+            return;
+        }
+        root._syncingMinimum = true;
+        root.minimumDate = root.minimumDateTime.dateTime;
+        root._syncingMinimum = false;
+    }
+
+    onMaximumDateChanged: {
+        if (root._syncingMaximum) {
+            return;
+        }
+        root._syncingMaximum = true;
+        root.maximumDateTime.dateTime = root.maximumDate;
+        root._syncingMaximum = false;
+    }
+    onMaximumDateTimeChanged: {
+        if (root._syncingMaximum) {
+            return;
+        }
+        root._syncingMaximum = true;
+        root.maximumDate = root.maximumDateTime.dateTime;
+        root._syncingMaximum = false;
+    }
+
+    onInitialValueChanged: {
+        if (root._syncingInitial) {
+            return;
+        }
+        root._syncingInitial = true;
+        root.initialDateTime.dateTime = root.initialValue;
+        root._syncingInitial = false;
+    }
+    onInitialDateTimeChanged: {
+        if (root._syncingInitial) {
+            return;
+        }
+        root._syncingInitial = true;
+        root.initialValue = root.initialDateTime.dateTime;
+        root._syncingInitial = false;
+    }
 
     /*!
        \qmlproperty var status
@@ -206,36 +316,16 @@ AbstractFormDelegate {
                 visible: root.dateTimeDisplay === FormDateTimeDelegate.DateTimeDisplay.DateTime || root.dateTimeDisplay === FormDateTimeDelegate.DateTimeDisplay.Date
 
                 text: if (!isNaN(root.value.valueOf())) {
-                    const today = new Date();
-                    if (root.value.getFullYear() === today.getFullYear()
-                        && root.value.getDate() === today.getDate()
-                        && root.value.getMonth() == today.getMonth()) {
+                    if (root.dateTime.isToday) {
                         return i18ndc("kirigami-addons6", "Displayed in place of the date if the selected day is today", "Today");
                     }
                     const locale = Qt.locale();
                     const weekDay = root.value.toLocaleDateString(locale, "ddd, ");
-                    if (root.value.getFullYear() == today.getFullYear()) {
+                    if (root.dateTime.isCurrentYear) {
                         return weekDay + root.value.toLocaleDateString(locale, Locale.ShortFormat);
                     }
 
-                    const escapeRegExp = (strToEscape) => {
-                        // Escape special characters for use in a regular expression
-                        return strToEscape.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
-                    };
-
-                    const trimChar = (origString, charToTrim) => {
-                        charToTrim = escapeRegExp(charToTrim);
-                        const regEx = new RegExp("^[" + charToTrim + "]+|[" + charToTrim + "]+$", "g");
-                        return origString.replace(regEx, "");
-                    };
-
-                    let dateFormat = locale.dateFormat(Locale.ShortFormat)
-                        .replace(root.value.getFullYear(), '')
-                        .replace('yyyy', ''); // I'll be long dead when this will break and this won't be my problem anymore
-
-                    dateFormat = trimChar(trimChar(trimChar(dateFormat, '-'), '.'), '/')
-
-                    return weekDay + root.value.toLocaleDateString(locale, dateFormat);
+                    return weekDay + root.dateTime.shortDate;
                 } else {
                     i18ndc("kirigami-addons6", "Date is not set", "Not set")
                 }
@@ -272,36 +362,28 @@ AbstractFormDelegate {
                         return;
                     }
 
-                    let value = root.value;
-
-                    if (isNaN(value.valueOf())) {
-                        value = root.initialValue;
-                    }
-
-                    if (root.minimumDate) {
-                        root.minimumDate.setHours(0, 0, 0, 0);
-                    }
-                    if (root.maximumDate) {
-                        root.maximumDate.setHours(0, 0, 0, 0);
+                    if (!root.dateTime.isValid) {
+                        root.dateTime = root.initialDateTime;
                     }
 
                     if (Qt.platform.os === 'android') {
                         androidPickerActive = true;
-                        DateTime.AndroidIntegration.showDatePicker(value.getTime());
+                        DateTime.AndroidIntegration.showDatePicker(root.dateTime.dateTime.getTime());
                     } else {
                         const item = datePopup.createObject(root.popupParent, {
-                            value: value,
-                            minimumDate: root.minimumDate,
-                            maximumDate: root.maximumDate,
+                            dateTime: root.dateTime,
+                            minimumDateTime: root.minimumDateTime,
+                            maximumDateTime: root.maximumDateTime,
                         });
 
                         item.accepted.connect(() => {
-                            if (isNaN(root.value.valueOf())) {
-                                root.value = root.initialValue;
+                            if (!root.dateTime.isValid) {
+                                root.dateTime = root.initialDateTime;
                             }
-                            root.value.setFullYear(item.value.getFullYear());
-                            root.value.setMonth(item.value.getMonth());
-                            root.value.setDate(item.value.getDate());
+                            // Set the components individually to preserve the time and timezone.
+                            root.dateTime.year = item.dateTime.year;
+                            root.dateTime.month = item.dateTime.month;
+                            root.dateTime.day = item.dateTime.day;
                         });
 
                         item.open();
@@ -336,12 +418,12 @@ AbstractFormDelegate {
                     function onDatePickerFinished(accepted, newDate) {
                         dateButton.androidPickerActive = false;
                         if (accepted) {
-                            if (isNaN(root.value.valueOf())) {
-                                root.value = root.initialValue;
+                            if (!root.dateTime.isValid) {
+                                root.dateTime.dateTime = root.initialDateTime.dateTime;
                             }
-                            root.value.setFullYear(newDate.getFullYear());
-                            root.value.setMonth(newDate.getMonth());
-                            root.value.setDate(newDate.getDate());
+                            root.dateTime.year = newDate.year;
+                            root.dateTime.month = newDate.month;
+                            root.dateTime.day = newDate.day;
                         }
                     }
                 }
@@ -382,17 +464,16 @@ AbstractFormDelegate {
                         return;
                     }
 
-                    let value = root.value;
-                    if (isNaN(value.valueOf())) {
-                        value = root.initialValue;
+                    if (!root.dateTime.isValid) {
+                        root.dateTime = root.initialDateTime;
                     }
 
                     if (Qt.platform.os === 'android') {
                         androidPickerActive = true;
-                        DateTime.AndroidIntegration.showTimePicker(value.getTime());
+                        DateTime.AndroidIntegration.showTimePicker(root.dateTime.dateTime.getTime());
                     } else {
                         const popup = timePopup.createObject(root.popupParent, {
-                            value: value,
+                            dateTime: root.dateTime,
                         })
                         popup.open();
                     }
@@ -412,10 +493,11 @@ AbstractFormDelegate {
                         modal: true
 
                         onAccepted: {
-                            if (isNaN(root.value.valueOf())) {
-                                root.value = root.initialValue;
+                            if (!root.dateTime.isValid) {
+                                root.dateTime = root.initialDateTime;
                             }
-                            root.value.setHours(popup.value.getHours(), popup.value.getMinutes());
+                            root.dateTime.hour = popup.dateTime.hour;
+                            root.dateTime.minute = popup.dateTime.minute;
                         }
                     }
                 }
@@ -427,10 +509,11 @@ AbstractFormDelegate {
                     function onTimePickerFinished(accepted, newDate) {
                         timeButton.androidPickerActive = false;
                         if (accepted) {
-                            if (isNaN(root.value.valueOf())) {
-                                root.value = root.initialValue;
+                            if (!root.dateTime.isValid) {
+                                root.dateTime.dateTime = root.initialDateTime.dateTime;
                             }
-                            root.value.setHours(newDate.getHours(), newDate.getMinutes());
+                            root.dateTime.hour = newDate.hour;
+                            root.dateTime.minute = newDate.minute;
                         }
                     }
                 }

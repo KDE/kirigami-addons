@@ -5,21 +5,22 @@ import QtQuick
 import QtQuick.Templates as T
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
+import org.kde.kirigamiaddons.dateandtime
 import org.kde.kirigamiaddons.delegates as Delegates
 
 Delegates.RoundedItemDelegate {
     id: root
 
     required property int index
-    required property date date
-    required property date minimumDate
-    required property date maximumDate
+    required property DateTime date
+    required property DateTime minimumDate
+    required property DateTime maximumDate
     required property Repeater repeater
     required property T.Action previousAction
     required property T.Action nextAction
 
-    readonly property bool inScope: (!minimumDate.valueOf() || minimumDate.valueOf() <= date.valueOf())
-        && (!maximumDate.valueOf() || maximumDate.valueOf() >= date.valueOf())
+    readonly property bool inScope: (!minimumDate.isValid || minimumDate <= date)
+        && (!maximumDate.isValid || maximumDate >= date)
 
     leftInset: 0
     rightInset: 0

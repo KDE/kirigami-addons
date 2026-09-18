@@ -1,7 +1,15 @@
 # SPDX-FileCopyrightText: 2021 Arjen Hiemstra <ahiemstra@heimr.nl>
 # SPDX-License-Identifier: BSD-2-Clause
 
+include(ECMAddTests)
+
 add_definitions(-DDATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data")
+
+if (TARGET Qt6::Test)
+    ecm_add_test(tst_datetime.cpp
+        LINK_LIBRARIES KF6::KirigamiDateAndTime Qt6::Test
+    )
+endif()
 
 if(NOT Qt6QuickTest_FOUND)
     message(STATUS "QtQuickTest not found, autotests will not be built.")
@@ -56,4 +64,9 @@ kirigami_add_tests(
     tst_album_qmllistmodel.qml
     tst_album_abstractlistmodel.qml
     tst_album_qmlqobjectmodel.qml
+    tst_datetime.qml
+    tst_formdatetimedelegate.qml
+    tst_datepopup.qml
+    tst_timepopup.qml
+    tst_datepickernav.qml
 )

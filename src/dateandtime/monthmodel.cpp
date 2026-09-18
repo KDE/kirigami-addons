@@ -2,7 +2,11 @@
 // SPDX-License-Identifier: LGPL-2.1-or-later
 
 #include "monthmodel.h"
+#include "datetime.h"
 #include <QRandomGenerator>
+#include <QVariant>
+
+using namespace KirigamiAddonsDateAndTime;
 
 class MonthModel::Private {
 public:
@@ -164,8 +168,9 @@ QVariant MonthModel::data(const QModelIndex &index, int role) const
             }
             const QDate date(year, month, day);
             if (role == Date) {
-                return date.startOfDay();
-                // Ensure the date doesn't get mangled into a different date by QML date conversion
+                // A DateTime, rather than a QDateTime, so QML never has to round-trip
+                // it through a JS Date (which is what used to mangle it).
+                return QVariant::fromValue(DateTime(date.startOfDay()));
             }
 
             if (role == IsSelected) {

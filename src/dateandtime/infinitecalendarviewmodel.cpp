@@ -2,8 +2,11 @@
 // SPDX-License-Identifier: LGPL-2.1-or-later
 
 #include <QMetaEnum>
+#include <QVariant>
 #include <cmath>
 #include "infinitecalendarviewmodel.h"
+
+using namespace KirigamiAddonsDateAndTime;
 
 InfiniteCalendarViewModel::InfiniteCalendarViewModel(QObject *parent)
     : QAbstractListModel(parent)
@@ -31,9 +34,11 @@ void InfiniteCalendarViewModel::setup()
         return;
     }
 
+    const QDateTime currentDate = m_currentDate.dateTime();
+
     switch (m_scale) {
     case WeekScale: {
-        QDateTime firstDay = m_currentDate.addDays(-m_currentDate.date().dayOfWeek() + m_locale.firstDayOfWeek());
+        QDateTime firstDay = currentDate.addDays(-currentDate.date().dayOfWeek() + m_locale.firstDayOfWeek());
         // We create dates before and after where our view will start from (which is m_currentDate)
         firstDay = firstDay.addDays((-m_datesToAdd * 7) / 2);
 
@@ -41,22 +46,22 @@ void InfiniteCalendarViewModel::setup()
         break;
     }
     case MonthScale: {
-        QDateTime firstDay(QDate(m_currentDate.date().year(), m_currentDate.date().month(), 1), {});
+        QDateTime firstDay(QDate(currentDate.date().year(), currentDate.date().month(), 1), {});
         firstDay = firstDay.addMonths(-m_datesToAdd / 2);
 
         addMonthDates(true, firstDay);
         break;
     }
     case YearScale: {
-        QDateTime firstDay(QDate(m_currentDate.date().year(), m_currentDate.date().month(), 1), {});
+        QDateTime firstDay(QDate(currentDate.date().year(), currentDate.date().month(), 1), {});
         firstDay = firstDay.addYears(-m_datesToAdd / 2);
 
         addYearDates(true, firstDay);
         break;
     }
     case DecadeScale: {
-        const int firstYear = ((floor(m_currentDate.date().year() / 10)) * 10) - 1; // E.g. For 2020 have view start at 2019...
-        QDateTime firstDay(QDate(firstYear, m_currentDate.date().month(), 1), {});
+        const int firstYear = ((floor(currentDate.date().year() / 10)) * 10) - 1; // E.g. For 2020 have view start at 2019...
+        QDateTime firstDay(QDate(firstYear, currentDate.date().month(), 1), {});
         firstDay = firstDay.addYears(((-m_datesToAdd * 12) / 2) + 10); // 3 * 4 grid so 12 years, end at 2030, and align for mid index to be current decade
 
         addDecadeDates(true, firstDay);
@@ -72,11 +77,11 @@ QVariant InfiniteCalendarViewModel::data(const QModelIndex &idx, int role) const
     }
 
     if (m_scale == MonthScale && role != StartDateRole) {
-        const auto firstDay = m_firstDayOfMonthDates[idx.row()].date();
+        const DateTime firstDay(m_firstDayOfMonthDates[idx.row()]);
 
         switch (role) {
         case FirstDayOfMonthRole:
-            return firstDay.startOfDay();
+            return QVariant::fromValue(firstDay.startOfDay());
         case SelectedMonthRole:
             return firstDay.month();
         case SelectedYearRole:
@@ -87,13 +92,16 @@ QVariant InfiniteCalendarViewModel::data(const QModelIndex &idx, int role) const
         }
     }
 
-    const auto startDate = m_startDates[idx.row()].date();
+    const DateTime startDate(m_startDates[idx.row()]);
 
     switch (role) {
-    case FirstDayOfMonthRole:
-        return QDate(startDate.year(), startDate.month(), 1).startOfDay();
+    case FirstDayOfMonthRole: {
+        DateTime firstOfMonth = startDate;
+        firstOfMonth.setDay(1);
+        return QVariant::fromValue(firstOfMonth.startOfDay());
+    }
     case StartDateRole:
-        return startDate.startOfDay();
+        return QVariant::fromValue(startDate.startOfDay());
     case SelectedMonthRole:
         return startDate.month();
     case SelectedYearRole:
@@ -120,22 +128,22 @@ QHash<int, QByteArray> InfiniteCalendarViewModel::roleNames() const
     };
 }
 
-QDateTime InfiniteCalendarViewModel::currentDate() const
+DateTime InfiniteCalendarViewModel::currentDate() const
 {
     return m_currentDate;
 }
 
-void InfiniteCalendarViewModel::setCurrentDate(const QDateTime &currentDate)
+void InfiniteCalendarViewModel::setCurrentDate(const DateTime &currentDate)
 {
     m_currentDate = currentDate;
 }
 
-QDateTime InfiniteCalendarViewModel::minimumDate() const
+DateTime InfiniteCalendarViewModel::minimumDate() const
 {
     return m_minimumDate;
 }
 
-void InfiniteCalendarViewModel::setMinimumDate(const QDateTime &minimumDate)
+void InfiniteCalendarViewModel::setMinimumDate(const DateTime &minimumDate)
 {
     if (m_minimumDate == minimumDate) {
         return;
@@ -144,12 +152,12 @@ void InfiniteCalendarViewModel::setMinimumDate(const QDateTime &minimumDate)
     Q_EMIT minimumDateChanged();
 }
 
-QDateTime InfiniteCalendarViewModel::maximumDate() const
+DateTime InfiniteCalendarViewModel::maximumDate() const
 {
     return m_maximumDate;
 }
 
-void InfiniteCalendarViewModel::setMaximumDate(const QDateTime &maximumDate)
+void InfiniteCalendarViewModel::setMaximumDate(const DateTime &maximumDate)
 {
     if (m_maximumDate == maximumDate) {
         return;
@@ -158,20 +166,21 @@ void InfiniteCalendarViewModel::setMaximumDate(const QDateTime &maximumDate)
     Q_EMIT maximumDateChanged();
 }
 
-void InfiniteCalendarViewModel::addDates(bool atEnd, const QDateTime &startFrom)
+void InfiniteCalendarViewModel::addDates(bool atEnd, const DateTime &startFrom)
 {
+    const QDateTime start = startFrom.dateTime();
     switch (m_scale) {
     case WeekScale:
-        addWeekDates(atEnd, startFrom);
+        addWeekDates(atEnd, start);
         break;
     case MonthScale:
-        addMonthDates(atEnd, startFrom);
+        addMonthDates(atEnd, start);
         break;
     case YearScale:
-        addYearDates(atEnd, startFrom);
+        addYearDates(atEnd, start);
         break;
     case DecadeScale:
-        addDecadeDates(atEnd, startFrom);
+        addDecadeDates(atEnd, start);
         break;
     }
 }
@@ -224,7 +233,7 @@ void InfiniteCalendarViewModel::addMonthDates(bool atEnd, const QDateTime &start
         }
 
         if (atEnd) {
-            if (m_maximumDate.isValid() && startDate > m_maximumDate) {
+            if (m_maximumDate.isValid() && m_maximumDate < startDate) {
                 break;
             }
             m_firstDayOfMonthDates.append(firstDay);

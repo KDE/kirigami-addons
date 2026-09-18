@@ -10,6 +10,8 @@
 #include <QQmlParserStatus>
 #include <qqmlregistration.h>
 
+#include "datetime.h"
+
 class InfiniteCalendarViewModel : public QAbstractListModel, public QQmlParserStatus
 {
     Q_OBJECT
@@ -20,9 +22,9 @@ class InfiniteCalendarViewModel : public QAbstractListModel, public QQmlParserSt
     // Amount of dates to add each time the model adds more dates
     Q_PROPERTY(int datesToAdd READ datesToAdd WRITE setDatesToAdd NOTIFY datesToAddChanged)
     Q_PROPERTY(int scale READ scale WRITE setScale NOTIFY scaleChanged)
-    Q_PROPERTY(QDateTime currentDate READ currentDate WRITE setCurrentDate NOTIFY currentDateChanged)
-    Q_PROPERTY(QDateTime minimumDate READ minimumDate WRITE setMinimumDate NOTIFY minimumDateChanged)
-    Q_PROPERTY(QDateTime maximumDate READ maximumDate WRITE setMaximumDate NOTIFY maximumDateChanged)
+    Q_PROPERTY(KirigamiAddonsDateAndTime::DateTime currentDate READ currentDate WRITE setCurrentDate NOTIFY currentDateChanged)
+    Q_PROPERTY(KirigamiAddonsDateAndTime::DateTime minimumDate READ minimumDate WRITE setMinimumDate NOTIFY minimumDateChanged)
+    Q_PROPERTY(KirigamiAddonsDateAndTime::DateTime maximumDate READ maximumDate WRITE setMaximumDate NOTIFY maximumDateChanged)
 
 public:
     // The decade scale is designed to be used in a 4x3 grid, so shows 12 years at a time
@@ -48,16 +50,16 @@ public:
     void classBegin() override;
     void componentComplete() override;
 
-    QDateTime currentDate() const;
-    void setCurrentDate(const QDateTime &currentDate);
+    KirigamiAddonsDateAndTime::DateTime currentDate() const;
+    void setCurrentDate(const KirigamiAddonsDateAndTime::DateTime &currentDate);
 
-    QDateTime minimumDate() const;
-    void setMinimumDate(const QDateTime &minimumDate);
+    KirigamiAddonsDateAndTime::DateTime minimumDate() const;
+    void setMinimumDate(const KirigamiAddonsDateAndTime::DateTime &minimumDate);
 
-    QDateTime maximumDate() const;
-    void setMaximumDate(const QDateTime &maximumDate);
+    KirigamiAddonsDateAndTime::DateTime maximumDate() const;
+    void setMaximumDate(const KirigamiAddonsDateAndTime::DateTime &maximumDate);
 
-    Q_INVOKABLE void addDates(bool atEnd, const QDateTime &startFrom = {});
+    Q_INVOKABLE void addDates(bool atEnd, const KirigamiAddonsDateAndTime::DateTime &startFrom = KirigamiAddonsDateAndTime::DateTime());
 
     int datesToAdd() const;
     void setDatesToAdd(int datesToAdd);
@@ -78,9 +80,9 @@ private:
     void addYearDates(bool atEnd, const QDateTime &startFrom);
     void addDecadeDates(bool atEnd, const QDateTime &startFrom);
 
-    QDateTime m_currentDate;
-    QDateTime m_minimumDate;
-    QDateTime m_maximumDate;
+    KirigamiAddonsDateAndTime::DateTime m_currentDate;
+    KirigamiAddonsDateAndTime::DateTime m_minimumDate;
+    KirigamiAddonsDateAndTime::DateTime m_maximumDate;
     QVector<QDateTime> m_startDates;
     QVector<QDateTime> m_firstDayOfMonthDates;
     QLocale m_locale;

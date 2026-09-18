@@ -4,6 +4,30 @@
 #include <qqmlregistration.h>
 #include <QQmlEngine>
 
+#include "datetime.h"
+#include "datetimefactory.h"
+
+struct DateTimeForeign
+{
+    Q_GADGET
+    QML_FOREIGN(KirigamiAddonsDateAndTime::DateTime)
+    QML_NAMED_ELEMENT(DateTime)
+};
+
+struct DateTimeFactoryForeign
+{
+    Q_GADGET
+    QML_FOREIGN(KirigamiAddonsDateAndTime::DateTimeFactory)
+    QML_NAMED_ELEMENT(DateTimeFactory)
+    QML_SINGLETON
+
+public:
+    static KirigamiAddonsDateAndTime::DateTimeFactory *create(QQmlEngine *, QJSEngine *)
+    {
+        return new KirigamiAddonsDateAndTime::DateTimeFactory();
+    }
+};
+
 #ifdef Q_OS_ANDROID
 #include "androidintegration.h"
 

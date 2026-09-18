@@ -1,17 +1,39 @@
 # SPDX-FileCopyrightText: 2019 David Edmundson <kde@davidedmundson.co.uk>
 # SPDX-License-Identifier: BSD-2-Clause
 
+add_library(KF6KirigamiDateAndTime)
+add_library(KF6::KirigamiDateAndTime ALIAS KF6KirigamiDateAndTime)
+qt_extract_metatypes(KF6KirigamiDateAndTime)
+
+target_sources(KF6KirigamiDateAndTime PRIVATE
+    datetime.cpp
+    datetime.h
+)
+
+generate_export_header(KF6KirigamiDateAndTime BASE_NAME KirigamiDateAndTime)
+
+target_link_libraries(KF6KirigamiDateAndTime PUBLIC Qt6::Core)
+
+target_include_directories(KF6KirigamiDateAndTime PUBLIC
+    "$<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}>"
+    "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KF6KirigamiDateAndTime>"
+)
+
+install(TARGETS KF6KirigamiDateAndTime EXPORT KirigamiAddonsTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+
+install(FILES
+    datetime.h
+    "${CMAKE_CURRENT_BINARY_DIR}/kirigamidateandtime_export.h"
+    DESTINATION "${KDE_INSTALL_INCLUDEDIR}/KF6KirigamiDateAndTime"
+    COMPONENT Devel
+)
+
 if (ANDROID)
-    add_library(KF6KirigamiDateAndTime)
-    add_library(KF6::KirigamiDateAndTime ALIAS KF6KirigamiDateAndTime)
-    qt_extract_metatypes(KF6KirigamiDateAndTime)
     target_sources(KF6KirigamiDateAndTime PRIVATE
         androidintegration.cpp
+        androidintegration.h
     )
-    generate_export_header(KF6KirigamiDateAndTime BASE_NAME KirigamiDateAndTime)
-    target_link_libraries(KF6KirigamiDateAndTime PUBLIC Qt6::Core)
     add_subdirectory(android)
-    install(TARGETS KF6KirigamiDateAndTime EXPORT KirigamiAddonsTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 endif()
 
 ecm_add_qml_module(dateandtimeplugin
@@ -32,6 +54,8 @@ target_sources(dateandtimeplugin PRIVATE
     yearmodel.cpp
     monthmodel.cpp
     infinitecalendarviewmodel.cpp
+    datetimefactory.cpp
+    datetimefactory.h
     types.h
 )
 
@@ -51,9 +75,7 @@ target_link_libraries(dateandtimeplugin PRIVATE
     Qt6::Quick
     Qt6::Qml
     KF6::I18n
+    KF6KirigamiDateAndTime
 )
-if (TARGET KF6KirigamiDateAndTime)
-    target_link_libraries(dateandtimeplugin PRIVATE KF6KirigamiDateAndTime)
-endif()
 
 ecm_finalize_qml_module(dateandtimeplugin DESTINATION ${KDE_INSTALL_QMLDIR} EXPORT KirigamiAddonsTargets)

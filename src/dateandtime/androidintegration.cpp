@@ -23,28 +23,28 @@ static void dateSelected(JNIEnv *env, jobject that, jint day, jint month, jint y
 {
     Q_UNUSED(that);
     Q_UNUSED(env);
-    Q_EMIT AndroidIntegration::instance().datePickerFinished(true, QDate(year, month, day).startOfDay());
+    Q_EMIT AndroidIntegration::instance().datePickerFinished(true, DateTime(QDate(year, month, day).startOfDay()));
 }
 
 static void dateCancelled(JNIEnv *env, jobject that)
 {
     Q_UNUSED(that);
     Q_UNUSED(env);
-    Q_EMIT AndroidIntegration::instance().datePickerFinished(false, {});
+    Q_EMIT AndroidIntegration::instance().datePickerFinished(false, DateTime());
 }
 
 static void timeSelected(JNIEnv *env, jobject that, jint hours, jint minutes)
 {
     Q_UNUSED(that);
     Q_UNUSED(env);
-    Q_EMIT AndroidIntegration::instance().timePickerFinished(true, QDateTime(QDate::currentDate(), QTime(hours, minutes)));
+    Q_EMIT AndroidIntegration::instance().timePickerFinished(true, DateTime(QDateTime(QDate::currentDate(), QTime(hours, minutes))));
 }
 
 static void timeCancelled(JNIEnv *env, jobject that)
 {
     Q_UNUSED(that);
     Q_UNUSED(env);
-    Q_EMIT AndroidIntegration::instance().timePickerFinished(false, {});
+    Q_EMIT AndroidIntegration::instance().timePickerFinished(false, DateTime());
 }
 
 static const JNINativeMethod dateMethods[] = {
