@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-17 00:42+0000\n"
+"POT-Creation-Date: 2026-09-18 00:43+0000\n"
 "PO-Revision-Date: 2026-06-07 12:10+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
@@ -211,6 +211,26 @@ msgctxt "@title:window"
 msgid "About KDE"
 msgstr "KDE について"
 
+#: app/kirigamiappdefaults.cpp:113 app/kirigamiappdefaults.cpp:120
+#, kde-format
+msgctxt "@title:window"
+msgid "Failed to Load Application"
+msgstr ""
+
+#: app/kirigamiappdefaults.cpp:114
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Could not load the QML application. This issue might be caused by your "
+"distribution. Please report it to your distribution first."
+msgstr ""
+
+#: app/kirigamiappdefaults.cpp:121
+#, kde-format
+msgctxt "@info"
+msgid "Could not load the QML application."
+msgstr ""
+
 #: components/AbstractMaximizeComponent.qml:137
 #, kde-format
 msgid "Close"
@@ -264,7 +284,7 @@ msgid "Next image"
 msgstr "次の画像"
 
 #: components/Banner.qml:185 formcard/AboutPage.qml:204
-#: formcard/AboutPage.qml:700
+#: formcard/AboutPage.qml:303 formcard/AboutPage.qml:695
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -496,7 +516,7 @@ msgstr ""
 "ソフトウェアを作成するという共通のゴールを達成するために共に働いています。あ"
 "なたを含め誰でも、自由に KDE に参加･貢献することができます。"
 
-#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:329
+#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:352
 #, kde-format
 msgid "Homepage"
 msgstr "ホームページ"
@@ -555,7 +575,7 @@ msgstr ""
 "ドやドキュメントの改善で貢献していただくこともできます。さあ、あとはあなた次"
 "第です！"
 
-#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:357
+#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:368
 #, kde-format
 msgid "Get Involved"
 msgstr "参加する"
@@ -610,7 +630,7 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:343
+#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:360
 #, kde-format
 msgid "Donate"
 msgstr "寄付"
@@ -636,71 +656,71 @@ msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "ライセンス"
 
-#: formcard/AboutPage.qml:383
+#: formcard/AboutPage.qml:388
 #, kde-format
 msgid "Report a Bug"
 msgstr "バグを報告"
 
-#: formcard/AboutPage.qml:400
+#: formcard/AboutPage.qml:401
 #, kde-format
 msgid "Matrix Channel"
 msgstr ""
 
-#: formcard/AboutPage.qml:420
+#: formcard/AboutPage.qml:417
 #, kde-format
 msgid "Mastodon"
 msgstr ""
 
-#: formcard/AboutPage.qml:436
+#: formcard/AboutPage.qml:429
 #, kde-format
 msgid "Source Code"
 msgstr ""
 
-#: formcard/AboutPage.qml:442
+#: formcard/AboutPage.qml:435
 #, kde-format
 msgid "Libraries in use"
 msgstr "使用されているライブラリ"
 
-#: formcard/AboutPage.qml:446
+#: formcard/AboutPage.qml:439
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "クリップボードにコピー"
 
-#: formcard/AboutPage.qml:450
+#: formcard/AboutPage.qml:443
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "システム情報がクリップボードにコピーされました。"
 
-#: formcard/AboutPage.qml:464
+#: formcard/AboutPage.qml:457
 #, kde-format
 msgid "Authors"
 msgstr "作者"
 
-#: formcard/AboutPage.qml:479
+#: formcard/AboutPage.qml:472
 #, kde-format
 msgid "Credits"
 msgstr "クレジット"
 
-#: formcard/AboutPage.qml:494
+#: formcard/AboutPage.qml:487
 #, kde-format
 msgid "Translators"
 msgstr "翻訳者"
 
-#: formcard/AboutPage.qml:542
+#: formcard/AboutPage.qml:537
 #, fuzzy, kde-format
 #| msgctxt "@title:dialog"
 #| msgid "Information"
 msgid "More information"
 msgstr "情報"
 
-#: formcard/AboutPage.qml:602
+#: formcard/AboutPage.qml:597
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "%1 の KDE Store ページを訪れる"
 
-#: formcard/AboutPage.qml:611
+#: formcard/AboutPage.qml:606
 #, kde-format
 msgid "Send an email to %1"
 msgstr "%1 にメールを送る"

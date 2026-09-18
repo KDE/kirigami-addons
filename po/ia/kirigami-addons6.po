@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-17 00:42+0000\n"
+"POT-Creation-Date: 2026-09-18 00:43+0000\n"
 "PO-Revision-Date: 2026-09-14 17:40+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -224,6 +224,26 @@ msgctxt "@title:window"
 msgid "About KDE"
 msgstr "A proposito de KDE"
 
+#: app/kirigamiappdefaults.cpp:113 app/kirigamiappdefaults.cpp:120
+#, kde-format
+msgctxt "@title:window"
+msgid "Failed to Load Application"
+msgstr ""
+
+#: app/kirigamiappdefaults.cpp:114
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Could not load the QML application. This issue might be caused by your "
+"distribution. Please report it to your distribution first."
+msgstr ""
+
+#: app/kirigamiappdefaults.cpp:121
+#, kde-format
+msgctxt "@info"
+msgid "Could not load the QML application."
+msgstr ""
+
 #: components/AbstractMaximizeComponent.qml:137
 #, kde-format
 msgid "Close"
@@ -277,7 +297,7 @@ msgid "Next image"
 msgstr "Proxime imagine"
 
 #: components/Banner.qml:185 formcard/AboutPage.qml:204
-#: formcard/AboutPage.qml:700
+#: formcard/AboutPage.qml:303 formcard/AboutPage.qml:695
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -508,7 +528,7 @@ msgstr ""
 "commun de construer le plus belle Free Software del mundo. Omnes es "
 "benvenite a unir e contribuera KDE, tu includite."
 
-#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:329
+#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:352
 #, kde-format
 msgid "Homepage"
 msgstr "Pagina Domo o Principal"
@@ -566,7 +586,7 @@ msgstr ""
 "interfacies de programma. Tu pote fornir grapiches, themas, sonos, e "
 "meliorar documentation. Tu decide!"
 
-#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:357
+#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:368
 #, kde-format
 msgid "Get Involved"
 msgstr "Sea involvite"
@@ -622,7 +642,7 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:343
+#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:360
 #, kde-format
 msgid "Donate"
 msgstr "Dona"
@@ -649,71 +669,71 @@ msgid_plural "Licenses"
 msgstr[0] "Licentia"
 msgstr[1] "Licentias"
 
-#: formcard/AboutPage.qml:383
+#: formcard/AboutPage.qml:388
 #, kde-format
 msgid "Report a Bug"
 msgstr "Reporta un bug"
 
-#: formcard/AboutPage.qml:400
+#: formcard/AboutPage.qml:401
 #, kde-format
 msgid "Matrix Channel"
 msgstr "Canale de Matrix"
 
-#: formcard/AboutPage.qml:420
+#: formcard/AboutPage.qml:417
 #, kde-format
 msgid "Mastodon"
 msgstr "Mastodon"
 
-#: formcard/AboutPage.qml:436
+#: formcard/AboutPage.qml:429
 #, kde-format
 msgid "Source Code"
 msgstr "Codice fonte"
 
-#: formcard/AboutPage.qml:442
+#: formcard/AboutPage.qml:435
 #, kde-format
 msgid "Libraries in use"
 msgstr "Bibliothecas in uso"
 
-#: formcard/AboutPage.qml:446
+#: formcard/AboutPage.qml:439
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "Copia in area de transferentia"
 
-#: formcard/AboutPage.qml:450
+#: formcard/AboutPage.qml:443
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "Information de Systema copiate a area de transferentia."
 
-#: formcard/AboutPage.qml:464
+#: formcard/AboutPage.qml:457
 #, kde-format
 msgid "Authors"
 msgstr "Autores"
 
-#: formcard/AboutPage.qml:479
+#: formcard/AboutPage.qml:472
 #, kde-format
 msgid "Credits"
 msgstr "Gratias"
 
-#: formcard/AboutPage.qml:494
+#: formcard/AboutPage.qml:487
 #, kde-format
 msgid "Translators"
 msgstr "Traductores"
 
-#: formcard/AboutPage.qml:542
+#: formcard/AboutPage.qml:537
 #, fuzzy, kde-format
 #| msgctxt "@title:dialog"
 #| msgid "Information"
 msgid "More information"
 msgstr "Information"
 
-#: formcard/AboutPage.qml:602
+#: formcard/AboutPage.qml:597
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Visita pagina %1 de KDE Store"
 
-#: formcard/AboutPage.qml:611
+#: formcard/AboutPage.qml:606
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Invia un message de e-posta a  %1"

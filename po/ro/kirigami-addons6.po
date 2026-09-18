@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-17 00:42+0000\n"
+"POT-Creation-Date: 2026-09-18 00:43+0000\n"
 "PO-Revision-Date: 2026-06-15 16:28+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -222,6 +222,26 @@ msgctxt "@title:window"
 msgid "About KDE"
 msgstr "Despre KDE"
 
+#: app/kirigamiappdefaults.cpp:113 app/kirigamiappdefaults.cpp:120
+#, kde-format
+msgctxt "@title:window"
+msgid "Failed to Load Application"
+msgstr ""
+
+#: app/kirigamiappdefaults.cpp:114
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Could not load the QML application. This issue might be caused by your "
+"distribution. Please report it to your distribution first."
+msgstr ""
+
+#: app/kirigamiappdefaults.cpp:121
+#, kde-format
+msgctxt "@info"
+msgid "Could not load the QML application."
+msgstr ""
+
 #: components/AbstractMaximizeComponent.qml:137
 #, kde-format
 msgid "Close"
@@ -275,7 +295,7 @@ msgid "Next image"
 msgstr "Imaginea următoare"
 
 #: components/Banner.qml:185 formcard/AboutPage.qml:204
-#: formcard/AboutPage.qml:700
+#: formcard/AboutPage.qml:303 formcard/AboutPage.qml:695
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -506,7 +526,7 @@ msgstr ""
 "scopul comun de a construi cele mai bune programe libere din lume. Toți sunt "
 "bineveniți să se alăture și să contribuie la KDE, inclusiv dumneavoastră."
 
-#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:329
+#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:352
 #, kde-format
 msgid "Homepage"
 msgstr "Pagină web"
@@ -564,7 +584,7 @@ msgstr ""
 "programelor. Puteți să creați imagini, tematici, sunete și să îmbunătățiți "
 "documentația. Dumneavoastră decideți!"
 
-#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:357
+#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:368
 #, kde-format
 msgid "Get Involved"
 msgstr "Implică-te"
@@ -620,7 +640,7 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:343
+#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:360
 #, kde-format
 msgid "Donate"
 msgstr "Donează"
@@ -648,71 +668,71 @@ msgstr[0] "Licență"
 msgstr[1] "Licențe"
 msgstr[2] "Licențe"
 
-#: formcard/AboutPage.qml:383
+#: formcard/AboutPage.qml:388
 #, kde-format
 msgid "Report a Bug"
 msgstr "Raportează defect"
 
-#: formcard/AboutPage.qml:400
+#: formcard/AboutPage.qml:401
 #, kde-format
 msgid "Matrix Channel"
 msgstr ""
 
-#: formcard/AboutPage.qml:420
+#: formcard/AboutPage.qml:417
 #, kde-format
 msgid "Mastodon"
 msgstr ""
 
-#: formcard/AboutPage.qml:436
+#: formcard/AboutPage.qml:429
 #, kde-format
 msgid "Source Code"
 msgstr ""
 
-#: formcard/AboutPage.qml:442
+#: formcard/AboutPage.qml:435
 #, kde-format
 msgid "Libraries in use"
 msgstr "Biblioteci folosite"
 
-#: formcard/AboutPage.qml:446
+#: formcard/AboutPage.qml:439
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "Copiază în clipboard"
 
-#: formcard/AboutPage.qml:450
+#: formcard/AboutPage.qml:443
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "Informații despre sistem copiate în clipboard."
 
-#: formcard/AboutPage.qml:464
+#: formcard/AboutPage.qml:457
 #, kde-format
 msgid "Authors"
 msgstr "Autori"
 
-#: formcard/AboutPage.qml:479
+#: formcard/AboutPage.qml:472
 #, kde-format
 msgid "Credits"
 msgstr "Mulțumiri"
 
-#: formcard/AboutPage.qml:494
+#: formcard/AboutPage.qml:487
 #, kde-format
 msgid "Translators"
 msgstr "Traducători"
 
-#: formcard/AboutPage.qml:542
+#: formcard/AboutPage.qml:537
 #, fuzzy, kde-format
 #| msgctxt "@title:dialog"
 #| msgid "Information"
 msgid "More information"
 msgstr "Informație"
 
-#: formcard/AboutPage.qml:602
+#: formcard/AboutPage.qml:597
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Vizitează pagina %1 din Magazinul KDE"
 
-#: formcard/AboutPage.qml:611
+#: formcard/AboutPage.qml:606
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Trimite scrisoare către %1"

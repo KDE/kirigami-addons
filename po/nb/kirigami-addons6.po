@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-17 00:42+0000\n"
+"POT-Creation-Date: 2026-09-18 00:43+0000\n"
 "PO-Revision-Date: 2026-03-03 12:16+0100\n"
 "Last-Translator: Kjetil Sørlund <translate@sorlund.no>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@nuug.no>\n"
@@ -222,6 +222,26 @@ msgctxt "@title:window"
 msgid "About KDE"
 msgstr "Om KDE"
 
+#: app/kirigamiappdefaults.cpp:113 app/kirigamiappdefaults.cpp:120
+#, kde-format
+msgctxt "@title:window"
+msgid "Failed to Load Application"
+msgstr ""
+
+#: app/kirigamiappdefaults.cpp:114
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Could not load the QML application. This issue might be caused by your "
+"distribution. Please report it to your distribution first."
+msgstr ""
+
+#: app/kirigamiappdefaults.cpp:121
+#, kde-format
+msgctxt "@info"
+msgid "Could not load the QML application."
+msgstr ""
+
 #: components/AbstractMaximizeComponent.qml:137
 #, kde-format
 msgid "Close"
@@ -275,7 +295,7 @@ msgid "Next image"
 msgstr "Neste bilde"
 
 #: components/Banner.qml:185 formcard/AboutPage.qml:204
-#: formcard/AboutPage.qml:700
+#: formcard/AboutPage.qml:303 formcard/AboutPage.qml:695
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -505,7 +525,7 @@ msgstr ""
 "gå i. Derimot arbeider vi sammen for å oppnå vårt felles mål om å lage fri "
 "programvare i verdensklasse. Alle er velkomne til å bidra til KDE, du også."
 
-#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:329
+#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:352
 #, kde-format
 msgid "Homepage"
 msgstr "Hjemmeside"
@@ -562,7 +582,7 @@ msgstr ""
 "kan bidra med oversettelser, lage grafikk, tema, lyder eller bedre "
 "hjelpetekster. Her er det noe for alle!"
 
-#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:357
+#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:368
 #, kde-format
 msgid "Get Involved"
 msgstr "Bli med"
@@ -616,7 +636,7 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:343
+#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:360
 #, kde-format
 msgid "Donate"
 msgstr "Gi pengegave"
@@ -643,71 +663,71 @@ msgid_plural "Licenses"
 msgstr[0] "Lisens"
 msgstr[1] "Lisenser"
 
-#: formcard/AboutPage.qml:383
+#: formcard/AboutPage.qml:388
 #, kde-format
 msgid "Report a Bug"
 msgstr "Meld fra om feil"
 
-#: formcard/AboutPage.qml:400
+#: formcard/AboutPage.qml:401
 #, kde-format
 msgid "Matrix Channel"
 msgstr ""
 
-#: formcard/AboutPage.qml:420
+#: formcard/AboutPage.qml:417
 #, kde-format
 msgid "Mastodon"
 msgstr ""
 
-#: formcard/AboutPage.qml:436
+#: formcard/AboutPage.qml:429
 #, kde-format
 msgid "Source Code"
 msgstr ""
 
-#: formcard/AboutPage.qml:442
+#: formcard/AboutPage.qml:435
 #, kde-format
 msgid "Libraries in use"
 msgstr "Brukte bibliotek"
 
-#: formcard/AboutPage.qml:446
+#: formcard/AboutPage.qml:439
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "Kopier til utklippstavla"
 
-#: formcard/AboutPage.qml:450
+#: formcard/AboutPage.qml:443
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "Systeminformasjon kopiert til utklippstavla"
 
-#: formcard/AboutPage.qml:464
+#: formcard/AboutPage.qml:457
 #, kde-format
 msgid "Authors"
 msgstr "Utviklere"
 
-#: formcard/AboutPage.qml:479
+#: formcard/AboutPage.qml:472
 #, kde-format
 msgid "Credits"
 msgstr "Bidragsytere"
 
-#: formcard/AboutPage.qml:494
+#: formcard/AboutPage.qml:487
 #, kde-format
 msgid "Translators"
 msgstr "Oversettere"
 
-#: formcard/AboutPage.qml:542
+#: formcard/AboutPage.qml:537
 #, fuzzy, kde-format
 #| msgctxt "@title:dialog"
 #| msgid "Information"
 msgid "More information"
 msgstr "Informasjon"
 
-#: formcard/AboutPage.qml:602
+#: formcard/AboutPage.qml:597
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Besøk %1-siden i KDE-butikken"
 
-#: formcard/AboutPage.qml:611
+#: formcard/AboutPage.qml:606
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Send e-post til %1"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-17 00:42+0000\n"
+"POT-Creation-Date: 2026-09-18 00:43+0000\n"
 "PO-Revision-Date: 2026-09-09 21:35+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -219,6 +219,26 @@ msgctxt "@title:window"
 msgid "About KDE"
 msgstr "Относно KDE"
 
+#: app/kirigamiappdefaults.cpp:113 app/kirigamiappdefaults.cpp:120
+#, kde-format
+msgctxt "@title:window"
+msgid "Failed to Load Application"
+msgstr ""
+
+#: app/kirigamiappdefaults.cpp:114
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Could not load the QML application. This issue might be caused by your "
+"distribution. Please report it to your distribution first."
+msgstr ""
+
+#: app/kirigamiappdefaults.cpp:121
+#, kde-format
+msgctxt "@info"
+msgid "Could not load the QML application."
+msgstr ""
+
 #: components/AbstractMaximizeComponent.qml:137
 #, kde-format
 msgid "Close"
@@ -272,7 +292,7 @@ msgid "Next image"
 msgstr "Следващо изображение"
 
 #: components/Banner.qml:185 formcard/AboutPage.qml:204
-#: formcard/AboutPage.qml:700
+#: formcard/AboutPage.qml:303 formcard/AboutPage.qml:695
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -503,7 +523,7 @@ msgstr ""
 "за изграждане на най-добрия безплатен софтуер в света. Всеки е добре дошъл "
 "да се присъедини и да допринесе за KDE, включително и вие."
 
-#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:329
+#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:352
 #, kde-format
 msgid "Homepage"
 msgstr "Домашна страница"
@@ -561,7 +581,7 @@ msgstr ""
 "програмни интерфейси. Можете да предоставите графики, теми, звуци и "
 "подобрена документация. Ти решаваш!"
 
-#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:357
+#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:368
 #, kde-format
 msgid "Get Involved"
 msgstr "Включете се"
@@ -619,7 +639,7 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:343
+#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:360
 #, kde-format
 msgid "Donate"
 msgstr "Дарение"
@@ -646,71 +666,71 @@ msgid_plural "Licenses"
 msgstr[0] "Лиценз"
 msgstr[1] "Лицензи"
 
-#: formcard/AboutPage.qml:383
+#: formcard/AboutPage.qml:388
 #, kde-format
 msgid "Report a Bug"
 msgstr "Подаване на сигнал за грешка"
 
-#: formcard/AboutPage.qml:400
+#: formcard/AboutPage.qml:401
 #, kde-format
 msgid "Matrix Channel"
 msgstr "Канал в Matrix"
 
-#: formcard/AboutPage.qml:420
+#: formcard/AboutPage.qml:417
 #, kde-format
 msgid "Mastodon"
 msgstr "Mastodon"
 
-#: formcard/AboutPage.qml:436
+#: formcard/AboutPage.qml:429
 #, kde-format
 msgid "Source Code"
 msgstr "Изходен код"
 
-#: formcard/AboutPage.qml:442
+#: formcard/AboutPage.qml:435
 #, kde-format
 msgid "Libraries in use"
 msgstr "Използвани библиотеки"
 
-#: formcard/AboutPage.qml:446
+#: formcard/AboutPage.qml:439
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "Копиране в клипборда"
 
-#: formcard/AboutPage.qml:450
+#: formcard/AboutPage.qml:443
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "Системната информация е копирана в клипборда"
 
-#: formcard/AboutPage.qml:464
+#: formcard/AboutPage.qml:457
 #, kde-format
 msgid "Authors"
 msgstr "Автори"
 
-#: formcard/AboutPage.qml:479
+#: formcard/AboutPage.qml:472
 #, kde-format
 msgid "Credits"
 msgstr "Заслуги"
 
-#: formcard/AboutPage.qml:494
+#: formcard/AboutPage.qml:487
 #, kde-format
 msgid "Translators"
 msgstr "Преводачи"
 
-#: formcard/AboutPage.qml:542
+#: formcard/AboutPage.qml:537
 #, fuzzy, kde-format
 #| msgctxt "@title:dialog"
 #| msgid "Information"
 msgid "More information"
 msgstr "Информация"
 
-#: formcard/AboutPage.qml:602
+#: formcard/AboutPage.qml:597
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Посетете %1 на страницата на KDE магазин"
 
-#: formcard/AboutPage.qml:611
+#: formcard/AboutPage.qml:606
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Изпращане на имейл до %1"
