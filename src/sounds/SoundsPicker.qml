@@ -17,6 +17,7 @@ import org.kde.kirigamiaddons.delegates as Delegates
    \qmltype SoundsPicker
    \inqmlmodule org.kde.kirigamiaddons.sounds
    \brief A sound picker component for picking ringtones and notifications.
+   \deprecated[1.14.1]
  */
 ListView {
     id: listView

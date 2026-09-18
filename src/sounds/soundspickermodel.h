@@ -11,6 +11,7 @@
 /*!
  * \qmltype SoundsModel
  * \inqmlmodule org.kde.kirigamiaddons.sounds
+   \deprecated[1.14.1]
  */
 class SoundsPickerModel : public QAbstractListModel
 {

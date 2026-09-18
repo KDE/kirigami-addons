@@ -14,7 +14,7 @@
    \inqmlmodule org.kde.kirigamiaddons.dateandtime
    \brief Display the number of months in a year.
 
-   \deprecated[1.15.0]
+   \deprecated[1.14.1]
    This class is unused internally and will be removed in a future version.
  */
 class YearModel : public QAbstractListModel
