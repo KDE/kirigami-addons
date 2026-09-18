@@ -9,7 +9,14 @@
 #include <QAbstractListModel>
 #include <qqmlregistration.h>
 
-/// Display the number of months in a year.
+/*!
+   \qmltype YearModel
+   \inqmlmodule org.kde.kirigamiaddons.dateandtime
+   \brief Display the number of months in a year.
+
+   \deprecated[1.15.0]
+   This class is unused internally and will be removed in a future version.
+ */
 class YearModel : public QAbstractListModel
 {
     Q_OBJECT
