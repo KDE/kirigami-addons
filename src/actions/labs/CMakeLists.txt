@@ -29,7 +29,7 @@ ecm_add_qml_module(actionslabsplugin
         "org.kde.kirigamiaddons.statefulapp.private"
 )
 
-ecm_generate_qdoc(actionslabsplugin kirigamiaddonsstatefulapplicationlabs.qdocconf)
+ecm_generate_qdoc(actionslabsplugin kirigamiaddonsactionslabs.qdocconf)
 
 ecm_target_qml_sources(actionslabsplugin SOURCES
     NativeMenuItem.qml

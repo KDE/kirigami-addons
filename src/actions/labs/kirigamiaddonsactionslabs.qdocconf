@@ -29,4 +29,4 @@ qhp.KirigamiAddonsActionsLabs.subprojects.actionslabs.indexTitle = Kirigami Addo
 qhp.KirigamiAddonsActionsLabs.subprojects.actionslabs.selectors = qmlmodule:org.kde.kirigamiaddons.actions.labs
 qhp.KirigamiAddonsActionsLabs.subprojects.actionslabs.sortPages = true
 
-tagfile = kirigamiaddonsstatefulapplicationlabs.tags
+tagfile = kirigamiaddonsactionslabs.tags
