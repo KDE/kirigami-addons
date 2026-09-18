@@ -15,7 +15,7 @@ import org.kde.kirigami as Kirigami
 /*!
    \qmltype SearchPopupField
    \inqmlmodule org.kde.kirigamiaddons.components
-   \brief SearchField with a Popup to show autocompletion entries or search results
+   \brief SearchField with a Popup to show autocompletion entries or search results.
 
    \deprecated Use Kirigami.SearchDialog instead.
 

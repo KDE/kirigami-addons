@@ -64,8 +64,6 @@ Item {
               Show the user's initials.
        \value Avatar.InitialsMode.UseIcon
               Show a generic icon.
-
-       \sa initialsMode
      */
     property int initialsMode: Avatar.InitialsMode.UseInitials
 
@@ -82,8 +80,6 @@ Item {
               Show the image if it is valid or initials if it is not.
        \value Avatar.ImageMode.AlwaysShowInitials
               Always show initials.
-
-       \sa imageMode
      */
     property int imageMode: Avatar.ImageMode.AdaptiveImageOrInitals
 

@@ -235,6 +235,9 @@ Item {
 
     /*!
        Open the context menu.
+
+       \a parent the item the menu should be positioned relative to.
+       \a position the position, relative to \a parent, to open the menu at.
      */
     function popup(parent = null, position = null): void {
         if (displayMode === ConvergentContextMenu.BottomDrawer) {

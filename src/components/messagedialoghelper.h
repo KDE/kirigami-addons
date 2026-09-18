@@ -8,7 +8,11 @@
 #include <KSharedConfig>
 #include <QJsonObject>
 
-/// @internal Only used by MessageDialog
+/*!
+ * \class MessageDialogHelper
+ * \inmodule KirigamiAddonsComponents
+ * \internal Only used by MessageDialog
+ */
 class MessageDialogHelper : public QObject
 {
     Q_OBJECT

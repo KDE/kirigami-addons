@@ -10,7 +10,8 @@ import org.kde.kirigami as Kirigami
 /*!
    \qmltype RadioSelector
    \inqmlmodule org.kde.kirigamiaddons.components
-   \brief A Component that allows sitching between multiple options.
+   \brief A Component that allows switching between multiple options.
+
    Example:
    \qml
    Components.RadioSelector {
