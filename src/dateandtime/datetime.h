@@ -17,18 +17,6 @@ namespace KirigamiAddonsDateAndTime
  * \inqmlmodule org.kde.kirigamiaddons.dateandtime
  *
  * \brief A timezone-aware date and time value that can be edited from QML.
- *
- * QML's built-in \c date type is backed by JavaScript's \c Date object. Converting a
- * QDateTime to a \c Date always normalizes it to the local timezone, discarding the
- * original timezone. Worse, \c Date's in-place mutators such as \c setFullYear() or
- * \c setHours() do not write back to the QML property they were read from, since QML
- * converts the property to a fresh \c Date object on every read.
- *
- * DateTime avoids both problems: it keeps the underlying QDateTime, including
- * its timezone, intact, and exposes each date/time component as a writable property.
- * Writing one of those properties, for example \c{root.value.year = 2024}, uses QML's
- * normal value type write-back mechanism (the same one used for e.g. \c{rect.x = 5}),
- * so the change is applied to the actual property rather than a throwaway copy.
  */
 class KIRIGAMIDATEANDTIME_EXPORT DateTime
 {

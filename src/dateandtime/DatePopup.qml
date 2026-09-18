@@ -155,6 +155,12 @@ QQC2.Dialog {
         }
     }
 
+    // DatePicker mutates selectedDate itself during navigation, which breaks the
+    // binding above after the first use, so re-seed it on every open.
+    onOpened: {
+        datePicker.selectedDate = root.dateTime;
+    }
+
     footer: QQC2.DialogButtonBox {
         id: box
 
@@ -168,11 +174,9 @@ QQC2.Dialog {
             objectName: "cancelButton"
             text: i18ndc("kirigami-addons6", "@action:button", "Cancel")
             icon.name: "dialog-cancel-symbolic"
-            onClicked: {
-                root.cancelled()
-                root.rejected()
-                root.close()
-            }
+            // Only cancelled() is ours to emit: RejectRole already makes the
+            // DialogButtonBox footer call reject(), which emits rejected() and closes.
+            onClicked: root.cancelled()
 
             QQC2.DialogButtonBox.buttonRole: QQC2.DialogButtonBox.RejectRole
         }
@@ -182,11 +186,9 @@ QQC2.Dialog {
             text: i18ndc("kirigami-addons6", "@action:button", "Select")
             icon.name: "dialog-ok-apply-symbolic"
 
-            onClicked: {
-                root.dateTime = datePicker.selectedDate;
-                root.accepted()
-                root.close()
-            }
+            // AcceptRole already makes the DialogButtonBox footer call accept(),
+            // which emits accepted() and closes.
+            onClicked: root.dateTime = datePicker.selectedDate;
 
             QQC2.DialogButtonBox.buttonRole: QQC2.DialogButtonBox.AcceptRole
         }

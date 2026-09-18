@@ -69,4 +69,6 @@ kirigami_add_tests(
     tst_datepopup.qml
     tst_timepopup.qml
     tst_datepickernav.qml
+    tst_datepopupvisual.qml
+    tst_timepopupvisual.qml
 )

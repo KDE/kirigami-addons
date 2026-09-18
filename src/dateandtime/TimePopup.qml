@@ -75,6 +75,13 @@ QQC2.Dialog {
         }
     }
 
+    // "Reset to current time" mutates hours/minutes, which breaks the bindings
+    // above after the first use, so re-seed them on every open.
+    onOpened: {
+        popupContent.hours = root.dateTime.hour;
+        popupContent.minutes = root.dateTime.minute;
+    }
+
     background: Components.DialogRoundedBackground {}
 
     footer: QQC2.DialogButtonBox {
@@ -84,10 +91,9 @@ QQC2.Dialog {
             objectName: "cancelButton"
             text: i18ndc("kirigami-addons6", "@action:button", "Cancel")
             icon.name: "dialog-cancel-symbolic"
-            onClicked: {
-                root.cancelled()
-                root.close()
-            }
+            // RejectRole already makes the DialogButtonBox footer call reject(),
+            // which emits rejected() and closes.
+            onClicked: root.cancelled()
 
             QQC2.DialogButtonBox.buttonRole: QQC2.DialogButtonBox.RejectRole
         }
@@ -96,11 +102,11 @@ QQC2.Dialog {
             objectName: "selectButton"
             text: i18ndc("kirigami-addons6", "@action:button", "Select")
             icon.name: "dialog-ok-apply-symbolic"
+            // AcceptRole already makes the DialogButtonBox footer call accept(),
+            // which emits accepted() and closes.
             onClicked: {
                 root.dateTime.hour = root._pendingDateTime.hour;
                 root.dateTime.minute = root._pendingDateTime.minute;
-                root.accepted()
-                root.close()
             }
 
             QQC2.DialogButtonBox.buttonRole: QQC2.DialogButtonBox.AcceptRole

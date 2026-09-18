@@ -400,6 +400,7 @@ QQC2.Control {
 
         QQC2.SwipeView {
             id: pickerView
+            objectName: "pickerView"
 
             clip: true
             interactive: false
@@ -410,6 +411,7 @@ QQC2.Control {
 
             DatePathView {
                 id: monthPathView
+                objectName: "monthPathView"
 
                 mainView: pickerView
                 enabled: QQC2.SwipeView.isCurrentItem
@@ -466,6 +468,7 @@ QQC2.Control {
 
                         Repeater {
                             id: dayRepeater
+                            objectName: "dayRepeater"
 
                             model: dayGrid.modelLoader.item
 
