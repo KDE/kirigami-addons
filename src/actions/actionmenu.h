@@ -15,10 +15,10 @@
 #include "kirigamiactioncollection.h"
 
 
-/**
- * \internal
- * \brief Internal backing type for the declarative ActionMenu QML component.
- * \inqmlmodule org.kde.kirigamiaddons.actions
+/*!
+ * \class ActionMenu
+ * \inmodule KirigamiAddonsActions
+ * \internal Backing type for the declarative ActionMenu QML component.
  *
  * Action names are resolved by the containing ActionCollection. Menus with
  * the same name contribute to the same logical menu when used by a menu
@@ -38,10 +38,8 @@ class KIRIGAMIADDONSSTATEFULAPP_EXPORT ActionMenu : public QObject, public QQmlP
     Q_PROPERTY(KirigamiActionCollection *collection READ collection NOTIFY collectionChanged FINAL)
     Q_PROPERTY(QQmlListProperty<ActionMenu> menus READ menus NOTIFY menusChanged FINAL)
     Q_PROPERTY(QStringList mergedActions READ mergedActions NOTIFY mergedActionsChanged FINAL)
-    /*! \qmlproperty list<var> ActionMenu::mergedItems
-     * The merged ordered items. Action entries contain \c type, \c name, and
-     * the resolved \c action object; separator entries contain only \c type.
-     */
+    // The merged ordered items. Action entries contain type, name, and the
+    // resolved action object; separator entries contain only type.
     Q_PROPERTY(QVariantList mergedItems READ mergedItems NOTIFY mergedItemsChanged FINAL)
     Q_PROPERTY(QVariantList mergedMenus READ mergedMenus NOTIFY mergedMenusChanged FINAL)
 

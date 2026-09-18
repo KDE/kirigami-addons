@@ -5,6 +5,11 @@
 
 #include <QSortFilterProxyModel>
 
+/*!
+ * \class CommandBarFilterModel
+ * \inmodule KirigamiAddonsActions
+ * \internal Filter model backing the command bar's search field.
+ */
 class CommandBarFilterModel final : public QSortFilterProxyModel
 {
     Q_OBJECT

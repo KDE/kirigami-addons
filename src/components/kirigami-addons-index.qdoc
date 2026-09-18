@@ -62,5 +62,12 @@
 
     \section1 Licenses
 
-    TODO
+    Kirigami Addons is free software, licensed primarily under the GNU
+    Lesser General Public License, so that it can be used by both free
+    and proprietary software.
+
+    The project follows the \l{https://reuse.software/}{REUSE} specification:
+    every file carries its own \c{SPDX-License-Identifier}, and the full text
+    of each license in use is available in the \c{LICENSES} directory of the
+    source repository.
 */

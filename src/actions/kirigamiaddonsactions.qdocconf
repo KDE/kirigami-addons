@@ -1,0 +1,32 @@
+include($KDE_DOCS/global/qt-module-defaults.qdocconf)
+
+project = KirigamiAddonsActions
+description = Declarative actions, menus, and application-window support for Kirigami applications.
+
+documentationinheaders = true
+
+headerdirs += .
+sourcedirs += .
+
+outputformats = HTML
+
+navigation.landingpage = "Kirigami Addons"
+
+depends += kde kirigami kconfigqml kconfiggui qtcore qtquick qtquickcontrols qtgui kirigamiaddonscomponents
+
+qhp.projects = KirigamiAddonsActions
+
+qhp.KirigamiAddonsActions.file          = kirigamiaddonsactions.qhp
+qhp.KirigamiAddonsActions.namespace     = org.kde.kirigamiaddonsactions.$QT_VERSION_TAG
+qhp.KirigamiAddonsActions.virtualFolder = kirigamiaddonsactions
+qhp.KirigamiAddonsActions.indexTitle    = Kirigami Addons Actions
+qhp.KirigamiAddonsActions.indexRoot     =
+
+qhp.KirigamiAddonsActions.subprojects = actions
+
+qhp.KirigamiAddonsActions.subprojects.actions.title = Kirigami Addons Actions QML Types
+qhp.KirigamiAddonsActions.subprojects.actions.indexTitle = Kirigami Addons Actions QML Types
+qhp.KirigamiAddonsActions.subprojects.actions.selectors = qmlmodule:org.kde.kirigamiaddons.actions
+qhp.KirigamiAddonsActions.subprojects.actions.sortPages = true
+
+tagfile = kirigamiaddonsactions.tags

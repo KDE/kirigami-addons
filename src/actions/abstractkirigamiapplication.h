@@ -72,19 +72,26 @@
  * \endcode{}
  *
  * \since 1.4.0
+ * \inmodule KirigamiAddonsActions
  */
 class KIRIGAMIADDONSSTATEFULAPP_EXPORT AbstractKirigamiApplication : public QObject
 {
     Q_OBJECT
 
-    /// \internal Used by StatefulApp.ManagedWindow
+    /*!
+     * \property AbstractKirigamiApplication::actionsModel
+     * \internal Used by StatefulApp.ManagedWindow
+     */
     Q_PROPERTY(QSortFilterProxyModel *actionsModel READ actionsModel CONSTANT)
 
-    /// \internal Used by StatefulApp.ManagedWindow
+    /*!
+     * \property AbstractKirigamiApplication::shortcutsModel
+     * \internal Used by StatefulApp.ManagedWindow
+     */
     Q_PROPERTY(QAbstractListModel *shortcutsModel READ shortcutsModel CONSTANT)
 
     /*!
-     * \qmlproperty QObject AbstractKirigamiApplication::configurationView
+     * \property AbstractKirigamiApplication::configurationView
      * This property holds the configurationView of the application
      *
      * When set, AbstractKirigamiApplication will setup a "options_configure" action
@@ -93,7 +100,9 @@ class KIRIGAMIADDONSSTATEFULAPP_EXPORT AbstractKirigamiApplication : public QObj
     Q_PROPERTY(QObject *configurationView READ configurationView WRITE setConfigurationView NOTIFY configurationViewChanged)
 
 public:
-    /*! Default constructor of AbstractKirigamiApplication */
+    /*! Default constructor of AbstractKirigamiApplication
+     *  \a parent the parent object
+     */
     explicit AbstractKirigamiApplication(QObject *parent = nullptr);
 
     /*! Default destructor of AbstractKirigamiApplication */
@@ -114,6 +123,7 @@ public:
     QAbstractListModel *shortcutsModel();
 
     /*! Get the named action.
+     *  \a actionName the name of the action to look up.
      *  \return nullptr is not such action is defined.
      */
     Q_INVOKABLE QAction *action(const QString &actionName);
@@ -121,7 +131,9 @@ public:
     /*! Getter for the configurationView property. */
     QObject *configurationView() const;
 
-    /*! Setter for the configurationView property. */
+    /*! Setter for the configurationView property.
+     *  \a configurationView the new configuration view.
+     */
     void setConfigurationView(QObject *configurationView);
 
 Q_SIGNALS:

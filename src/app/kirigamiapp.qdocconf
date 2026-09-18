@@ -10,7 +10,7 @@ sourcedirs += .
 
 outputformats = HTML
 
-depends += kde kirigami qtcore qtquick qtquickcontrols qtgui
+depends += kde kirigami qtcore qtquick qtquickcontrols qtgui kirigamiaddonscomponents
 
 navigation.landingpage = "Kirigami Addons"
 

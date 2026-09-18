@@ -26,7 +26,7 @@ add_library(KirigamiAddonsStatefulApp
     private/declarativeapplication.h
 )
 
-ecm_generate_qdoc(KirigamiAddonsStatefulApp kirigamiaddonsstatefulapplication.qdocconf)
+ecm_generate_qdoc(KirigamiAddonsStatefulApp kirigamiaddonsactions.qdocconf)
 
 set_target_properties(KirigamiAddonsStatefulApp PROPERTIES
     VERSION     ${PROJECT_VERSION}

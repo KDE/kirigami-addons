@@ -16,6 +16,11 @@
 class KeySequenceHelperPrivate;
 class QQuickWindow;
 
+/*!
+ * \class KeySequenceHelper
+ * \inmodule KirigamiAddonsActions
+ * \internal Backing type for the shortcut-recording UI.
+ */
 class KeySequenceHelper : public KKeySequenceRecorder
 {
     Q_OBJECT

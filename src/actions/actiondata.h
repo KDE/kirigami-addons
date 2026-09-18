@@ -26,10 +26,19 @@ class IconGroupPrivate;
  *
  * \since 1.14.0
  */
+/*!
+ * \class ActionGroup
+ * \inmodule KirigamiAddonsActions
+ * \internal Not exposed to C++; use the ActionGroup QML type.
+ */
 class ActionGroup : public QActionGroup
 {
     Q_OBJECT
     QML_ELEMENT
+    /*! \qmlproperty bool ActionGroup::exclusive
+     * Whether actions in this group are mutually exclusive, so that checking
+     * one unchecks the others.
+     */
     Q_PROPERTY(bool exclusive READ isExclusive WRITE setExclusive FINAL)
 public:
     explicit ActionGroup(QObject *parent = nullptr);
@@ -41,6 +50,11 @@ public:
  * \brief Grouped icon properties for ActionData.
  *
  * \since 1.14.0
+ */
+/*!
+ * \class IconGroup
+ * \inmodule KirigamiAddonsActions
+ * \internal Backing type for ActionData's grouped icon properties.
  */
 class IconGroup : public QObject
 {
@@ -115,16 +129,16 @@ private:
  * \code
  * import org.kde.kirigamiaddons.actions as KirigamiActions
  *
- * StatefulApp.StatefulWindow {
+ * KirigamiActions.StatefulWindow {
  *     id: root
  *     application: MyApplication {}
  *
- *     StatefulApp.ActionCollection {
+ *     KirigamiActions.ActionCollection {
  *         application: root.application
  *         name: "document"
  *         text: i18n("Document Actions")
  *
- *         StatefulApp.ActionData {
+ *         KirigamiActions.ActionData {
  *             name: "document_save"
  *             text: i18n("Save")
  *             toolTip: i18n("Save the current document")
@@ -140,6 +154,11 @@ private:
  * \sa StandardActionData
  *
  * \since 1.14.0
+ */
+/*!
+ * \class ActionData
+ * \inmodule KirigamiAddonsActions
+ * \internal Not exposed to C++; use the ActionData QML type.
  */
 class ActionData : public QAction, public QQmlParserStatus
 {
@@ -176,7 +195,7 @@ class ActionData : public QAction, public QQmlParserStatus
      *     id: modes
      *     exclusive: true
      * }
-     * StatefulApp.ActionData {
+     * KirigamiActions.ActionData {
      *     name: "mode_one"
      *     checkable: true
      *     actionGroup: modes
@@ -199,9 +218,9 @@ class ActionData : public QAction, public QQmlParserStatus
      * Direct example:
      *
      * \code
-     * StatefulApp.ActionCollection {
+     * KirigamiActions.ActionCollection {
      *     application: root.application
-     *     StatefulApp.ActionData {
+     *     KirigamiActions.ActionData {
      *         name: "copy"
      *         icon.name: "edit-copy"
      *         text: i18n("Copy")
@@ -218,10 +237,10 @@ class ActionData : public QAction, public QQmlParserStatus
      * Attached property example:
      *
      * \code
-     * StatefulApp.ActionCollection {
+     * KirigamiActions.ActionCollection {
      *     application: root.application
      *     name: "EditActions"
-     *     StatefulApp.ActionData {
+     *     KirigamiActions.ActionData {
      *         name: "copy"
      *         icon.name: "edit-copy"
      *         text: i18n("Copy")
@@ -229,8 +248,8 @@ class ActionData : public QAction, public QQmlParserStatus
      * }
      *
      * Kirigami.Action {
-     *     StatefulApp.ActionCollection.collection: "EditActions"
-     *     StatefulApp.ActionCollection.action: "copy"
+     *     KirigamiActions.ActionCollection.collection: "EditActions"
+     *     KirigamiActions.ActionCollection.action: "copy"
      *     onTriggered: document.copy()
      * }
      * \endcode

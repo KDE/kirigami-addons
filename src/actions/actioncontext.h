@@ -16,6 +16,11 @@
  *
  * \since 1.14.0
  */
+/*!
+ * \class ActionContext
+ * \inmodule KirigamiAddonsActions
+ * \internal Not exposed to C++; use the ActionContext QML type.
+ */
 class ActionContext : public QObject
 {
     Q_OBJECT

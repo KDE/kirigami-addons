@@ -10,7 +10,7 @@ sourcedirs += .
 imagedirs  += ../../docs/pics
 outputformats = HTML
 
-depends += kde kirigami qtcore qtquick qtquickcontrols qtgui kirigamiaddonstreeview
+depends += kde kirigami qtcore qtquick qtquickcontrols qtgui kirigamiaddonstreeview kirigamiaddonscomponents
 
 navigation.landingpage = "Kirigami Addons"
 

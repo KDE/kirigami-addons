@@ -13,8 +13,9 @@ import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.statefulapp.private
 import org.kde.kirigamiaddons.formcard as FormCard
 
-/**
- * @internal
+/*!
+ * \qmltype KeySequenceItem
+ * \internal
  */
 FormCard.AbstractFormDelegate {
     id: root

@@ -29,6 +29,11 @@
  *
  * \since 1.14.0
  */
+/*!
+ * \class StandardActionData
+ * \inmodule KirigamiAddonsActions
+ * \internal Not exposed to C++; use the StandardActionData QML type.
+ */
 class StandardActionData : public ActionData
 {
     Q_OBJECT

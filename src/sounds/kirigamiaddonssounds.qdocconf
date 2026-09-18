@@ -12,7 +12,7 @@ outputformats = HTML
 
 navigation.landingpage = "Kirigami Addons"
 
-depends += kde kirigami qtcore qtquick qtquickcontrols qtgui qtmultimedia kirigamiaddonsdelegates
+depends += kde kirigami qtcore qtquick qtquickcontrols qtgui qtmultimedia kirigamiaddonsdelegates kirigamiaddonscomponents
 
 qhp.projects = KirigamiAddonsSounds
 

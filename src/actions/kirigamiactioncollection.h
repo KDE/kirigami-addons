@@ -32,6 +32,11 @@ class ActionData;
 class ActionMenu;
 class ActionCollectionAttached;
 
+/*!
+ * \class ActionCollectionAttached
+ * \inmodule KirigamiAddonsActions
+ * \internal Backing type for the ActionCollection attached property.
+ */
 class KIRIGAMIADDONSSTATEFULAPP_EXPORT ActionCollectionAttached : public QObject
 {
     Q_OBJECT
@@ -76,6 +81,7 @@ class QString;
 
 /*!
  * \qmltype ActionCollection
+ * \instantiates KirigamiActionCollection
  * \inqmlmodule org.kde.kirigamiaddons.actions
  * \brief A container for a set of QAction objects.
  *
@@ -126,6 +132,12 @@ class QString;
  *
  * \since 1.4.0
  */
+
+/*!
+ * \class KirigamiActionCollection
+ * \inmodule KirigamiAddonsActions
+ * \brief The C++ counterpart of the ActionCollection QML type.
+ */
 class KIRIGAMIADDONSSTATEFULAPP_EXPORT KirigamiActionCollection : public QObject, public QQmlParserStatus
 {
     Q_OBJECT
@@ -136,35 +148,42 @@ class KIRIGAMIADDONSSTATEFULAPP_EXPORT KirigamiActionCollection : public QObject
     /*! \qmlproperty string ActionCollection::name
      * The unique name of the collection.
      */
+    /*! \property KirigamiActionCollection::name */
     Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged FINAL)
     /*! \qmlproperty string ActionCollection::text
      * The user-visible name shown for the collection in shortcut configuration.
      */
+    /*! \property KirigamiActionCollection::text */
     Q_PROPERTY(QString text READ text WRITE setText NOTIFY textChanged FINAL)
     /*! \qmlproperty AbstractKirigamiApplication ActionCollection::application
      * The application to which the declared actions are added.
      */
+    /*! \property KirigamiActionCollection::application */
     Q_PROPERTY(AbstractKirigamiApplication *application READ application WRITE setApplication NOTIFY applicationChanged FINAL)
     /*! \qmlproperty list<ActionData> ActionCollection::actions
      * The ActionData and StandardActionData children in this collection.
      */
+    /*! \property KirigamiActionCollection::actions */
     Q_PROPERTY(QQmlListProperty<ActionData> actions READ qmlActions NOTIFY actionsChanged FINAL)
     /*! \qmlproperty list<ActionMenu> ActionCollection::menus
      * Declarative menus contributed by this collection.
      *
      * \since 1.14.0
      */
+    /*! \property KirigamiActionCollection::menus */
     Q_PROPERTY(QQmlListProperty<ActionMenu> menus READ menus NOTIFY menusChanged FINAL)
 
     Q_CLASSINFO("DefaultProperty", "actions")
 
     /*!
-     * \qmlproperty string KirigamiActionCollection::configGroup
+     * \qmlproperty string ActionCollection::configGroup
      */
+    /*! \property KirigamiActionCollection::configGroup */
     Q_PROPERTY(QString configGroup READ configGroup WRITE setConfigGroup)
     /*!
-     * \qmlproperty bool KirigamiActionCollection::configIsGlobal
+     * \qmlproperty bool ActionCollection::configIsGlobal
      */
+    /*! \property KirigamiActionCollection::configIsGlobal */
     Q_PROPERTY(bool configIsGlobal READ configIsGlobal WRITE setConfigGlobal)
 
 public:
@@ -173,6 +192,9 @@ public:
      *
      * Allows specification of a component name other than the default
      * application name, where needed (remember to call setComponentDisplayName() too).
+     *
+     * \a parent the parent object.
+     * \a cName the component name, or the default application name if empty.
      */
     explicit KirigamiActionCollection(QObject *parent = nullptr, const QString &cName = QString());
 
@@ -210,6 +232,8 @@ public:
     /*!
      * Set whether this action collection's configuration should be global to KDE ( \c true ),
      * or specific to the application ( \c false ).
+     *
+     * \a global whether the configuration should be global to KDE.
      */
     void setConfigGlobal(bool global);
 
@@ -302,7 +326,7 @@ public:
      * \warning Don't call this method on a KirigamiActionCollection that contains
      * actions. This is not supported.
      *
-     * \a componentData the name which is to be associated with this action collection,
+     * \a componentName the name which is to be associated with this action collection,
      * or QString() to indicate the app name. This is used to load/save settings into XML files.
      *
      * KXMLGUIClient::setComponentName takes care of calling this.
@@ -485,8 +509,6 @@ public:
      * \a slot The slot or lambda to connect the triggered(bool) signal to.
      *
      * Returns new action of the given type ActionType.
-     *
-     * \sa add(const QString &, const QObject *, const char *)
      */
     template<class ActionType>
     inline ActionType *add(const QString &name, const Receiver *receiver, Func slot)
