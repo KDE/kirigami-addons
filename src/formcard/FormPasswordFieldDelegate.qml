@@ -96,7 +96,7 @@ AbstractFormDelegate {
 
     /*!
        \qmlproperty string placeholderText
-       \brief This property holds the \l {TextInput::placeholderText} {placeholderText} of the
+       \brief This property holds the \l {TextField::placeholderText} {placeholderText} of the
        internal TextField.
 
        This consists of secondary text shown by default on the text field

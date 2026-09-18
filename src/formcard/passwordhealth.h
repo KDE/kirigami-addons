@@ -6,8 +6,10 @@
 #include <QObject>
 #include <qqmlregistration.h>
 
-/**
- * @internal Do not use!
+/*!
+ * \class PasswordHealth
+ * \inmodule KirigamiAddonsFormCard
+ * \internal Do not use!
  */
 class PasswordHealth : public QObject
 {

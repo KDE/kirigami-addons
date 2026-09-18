@@ -9,7 +9,10 @@ import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 
-/*! Internal layout shared by check and radio form delegates. */
+/*!
+    \qmltype FormChoiceDelegateLayout
+    \internal Layout shared by check and radio form delegates.
+*/
 ColumnLayout {
     id: root
 

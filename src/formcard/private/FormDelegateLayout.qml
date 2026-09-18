@@ -6,7 +6,10 @@
 import QtQuick
 import QtQuick.Layouts
 
-/*! Internal layout shared by form delegates with leading and trailing items. */
+/*!
+    \qmltype FormDelegateLayout
+    \internal Layout shared by form delegates with leading and trailing items.
+*/
 RowLayout {
     id: root
 

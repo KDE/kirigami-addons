@@ -8,36 +8,12 @@ import QtQuick.Layouts
 import org.kde.kirigamiaddons.formcard as FormCard
 import org.kde.kirigami as Kirigami
 
-/**
-  \brief A FormCard delegate for icons.
- 
-  Allow users to select icons. By default "Icon" is the default label
-  but this can be overwritten with the `text` property.
- 
-  \code{qml}
-  FormCard.FormCard {
-      FormCard.FormIconDelegate {}
- 
-      FormCard.FormDelegateSeparator {}
- 
-      FormCard.FormIconDelegate {
-          text: i18nc("@label", "Active icon")
-          iconName: "actor-symbolic"
-      }
-  }
-  \endcode
-  \image html formcardicon.png
- 
-  \note This element is readonly on Android.
- 
-  \since 1.8.0
- */
+// Android-specific implementation of FormIconDelegate; this element is
+// readonly on Android. See the main FormIconDelegate.qml for the public
+// documentation.
 FormCard.AbstractFormDelegate {
     id: root
 
-    /**
-     * This property holds the name of the selected icon.
-     */
     property alias iconName: buttonIcon.source
 
     text: i18nc("@action:button", "Icon")

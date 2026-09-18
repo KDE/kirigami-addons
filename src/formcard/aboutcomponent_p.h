@@ -7,7 +7,11 @@
 #include <qqmlregistration.h>
 #include <KAboutComponent>
 
-/// @internal Do not use this
+/*!
+ * \class AboutComponent
+ * \inmodule KirigamiAddonsFormCard
+ * \internal Do not use this
+ */
 class AboutComponent : public QObject
 {
     Q_OBJECT

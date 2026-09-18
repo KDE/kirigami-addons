@@ -9,7 +9,9 @@ import org.kde.iconthemes as KIconThemes
 import org.kde.kirigamiaddons.formcard as FormCard
 import org.kde.kirigami as Kirigami
 
-/**
+/*!
+  \qmltype FormIconDelegate
+  \inqmlmodule org.kde.kirigamiaddons.formcard
   \brief A FormCard delegate for icons.
  
   Allow users to select icons. By default "Icon" is the default label
@@ -27,7 +29,7 @@ import org.kde.kirigami as Kirigami
       }
   }
   \endcode
-  \image html formcardicon.png
+  \image formcardicon.png
  
   \note This element is readonly on Android.
  
@@ -36,7 +38,7 @@ import org.kde.kirigami as Kirigami
 FormCard.AbstractFormDelegate {
     id: root
 
-    /**
+    /*!
      * This property holds the name of the selected icon.
      */
     property alias iconName: buttonIcon.source
