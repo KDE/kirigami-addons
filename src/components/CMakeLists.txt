@@ -105,6 +105,8 @@ target_sources(componentsplugin PRIVATE
     nameutilselement.cpp
     messagedialoghelper.h
     messagedialoghelper.cpp
+    circularclipitem.h
+    circularclipitem.cpp
 )
 
 ecm_target_qml_sources(componentsplugin SOURCES
@@ -137,5 +139,8 @@ target_link_libraries(componentsplugin PRIVATE
     Qt6::QuickControls2
     KirigamiAddonsComponents
 )
+
+find_package(Qt6QuickPrivate ${QT_REQUIRED_VERSION} REQUIRED)
+target_link_libraries(componentsplugin PRIVATE Qt6::QuickPrivate)
 
 ecm_finalize_qml_module(componentsplugin DESTINATION ${KDE_INSTALL_QMLDIR} EXPORT KirigamiAddonsTargets)

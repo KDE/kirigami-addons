@@ -175,13 +175,14 @@ Item {
         Rectangle {
             id: circleBorder
 
-            visible: !root.__showImage
+	    z: 2
+
             anchors.fill: parent
             radius: root.__diameter
 
             border.width: 1.25
-            border.color: root.color
-            color: Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, border.color, 0.07)
+            border.color: root.__showImage ? Kirigami.Theme.textColor : root.color
+            color: root.__showImage ? 'transparent' : Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, border.color, 0.07)
         }
 
         Text {
@@ -223,29 +224,24 @@ Item {
             source: "user"
         }
 
-        Image {
-            id: avatarImage
+        Components.CircularClipItem {
+            id: avatarImageClip
 
             anchors.fill: parent
 
             visible: root.__showImage
 
-            fillMode: Image.PreserveAspectCrop
-            asynchronous: true
-            retainWhileLoading: true
-            mipmap: true
-            sourceSize {
-                width: root.__diameter * root.Screen.devicePixelRatio
-                height: root.__diameter * root.Screen.devicePixelRatio
-            }
-            layer {
-                enabled: GraphicsInfo.api !== GraphicsInfo.Software
-                textureSize: Qt.size(
-                    root.__diameter * root.Screen.devicePixelRatio,
-                    root.__diameter * root.Screen.devicePixelRatio
-                )
-                effect: Kirigami.ShadowedTexture {
-                    radius: root.__diameter
+            Image {
+                id: avatarImage
+
+                anchors.fill: parent
+
+                fillMode: Image.PreserveAspectCrop
+                asynchronous: true
+                retainWhileLoading: true
+                sourceSize {
+                    width: root.__diameter * root.Screen.devicePixelRatio
+                    height: root.__diameter * root.Screen.devicePixelRatio
                 }
             }
         }
