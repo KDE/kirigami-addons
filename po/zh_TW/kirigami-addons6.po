@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-18 00:43+0000\n"
+"POT-Creation-Date: 2026-09-19 00:43+0000\n"
 "PO-Revision-Date: 2026-09-15 14:28+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -124,19 +124,19 @@ msgstr ""
 "%1 組合鍵已經用於許多應用程式會用到的標準動作「%2」了。您確定要使用它做為全域"
 "的快捷鍵嗎？"
 
-#: actions/private/KeySequenceItem.qml:129
+#: actions/private/KeySequenceItem.qml:130
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "輸入"
 
-#: actions/private/KeySequenceItem.qml:130
+#: actions/private/KeySequenceItem.qml:131
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "無"
 
-#: actions/private/KeySequenceItem.qml:141
+#: actions/private/KeySequenceItem.qml:142
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
@@ -145,13 +145,13 @@ msgstr ""
 "點擊此按鍵，並輸入您要在程式裡做的動作。\n"
 "例如 Ctrl+A：按住 Ctrl 鍵並按 A。"
 
-#: actions/private/KeySequenceItem.qml:182
+#: actions/private/KeySequenceItem.qml:183
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
 msgstr "清除按鍵"
 
-#: actions/private/KeySequenceItem.qml:198
+#: actions/private/KeySequenceItem.qml:199
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel Key Sequence Recording"
@@ -297,14 +297,14 @@ msgctxt "@action:button"
 msgid "Close"
 msgstr "關閉"
 
-#: components/ConvergentContextMenu.qml:321
-#: components/ConvergentContextMenu.qml:431
+#: components/ConvergentContextMenu.qml:324
+#: components/ConvergentContextMenu.qml:434
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "返回"
 
-#: components/ConvergentContextMenu.qml:405 formcard/FormCardDialog.qml:102
+#: components/ConvergentContextMenu.qml:408 formcard/FormCardDialog.qml:102
 #, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
@@ -730,7 +730,7 @@ msgctxt "Accessible description"
 msgid "Current color \"%1\""
 msgstr "目前顏色「%1」"
 
-#: formcard/android/FormIconDelegate.qml:43
+#: formcard/android/FormIconDelegate.qml:19
 #, kde-format
 msgctxt "@action:button"
 msgid "Icon"

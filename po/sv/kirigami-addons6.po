@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-18 00:43+0000\n"
-"PO-Revision-Date: 2026-09-17 21:32+0200\n"
+"POT-Creation-Date: 2026-09-19 00:43+0000\n"
+"PO-Revision-Date: 2026-09-18 20:26+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -123,19 +123,19 @@ msgstr ""
 "vissa program använder.\n"
 "Vill du verkligen också använda den som en global genväg?"
 
-#: actions/private/KeySequenceItem.qml:129
+#: actions/private/KeySequenceItem.qml:130
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Inmatning"
 
-#: actions/private/KeySequenceItem.qml:130
+#: actions/private/KeySequenceItem.qml:131
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "Ingen"
 
-#: actions/private/KeySequenceItem.qml:141
+#: actions/private/KeySequenceItem.qml:142
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
@@ -144,13 +144,13 @@ msgstr ""
 "Klicka på knappen, och mata sedan in genvägen som i programmet.\n"
 "Exempel för Ctrl+A: håll nere tangenten Ctrl och tryck på A."
 
-#: actions/private/KeySequenceItem.qml:182
+#: actions/private/KeySequenceItem.qml:183
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
 msgstr "Ta bort tangentsekvens"
 
-#: actions/private/KeySequenceItem.qml:198
+#: actions/private/KeySequenceItem.qml:199
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel Key Sequence Recording"
@@ -221,7 +221,7 @@ msgstr "Om KDE"
 #, kde-format
 msgctxt "@title:window"
 msgid "Failed to Load Application"
-msgstr ""
+msgstr "Misslyckades ladda program"
 
 #: app/kirigamiappdefaults.cpp:114
 #, kde-format
@@ -230,12 +230,14 @@ msgid ""
 "Could not load the QML application. This issue might be caused by your "
 "distribution. Please report it to your distribution first."
 msgstr ""
+"Det gick inte att ladda QML-programmet. Problemet kan bero på "
+"distributionen. Rapportera det gärna till distributionen i första hand."
 
 #: app/kirigamiappdefaults.cpp:121
 #, kde-format
 msgctxt "@info"
 msgid "Could not load the QML application."
-msgstr ""
+msgstr "Det gick inte att ladda QML-programmet."
 
 #: components/AbstractMaximizeComponent.qml:137
 #, kde-format
@@ -296,14 +298,14 @@ msgctxt "@action:button"
 msgid "Close"
 msgstr "Stäng"
 
-#: components/ConvergentContextMenu.qml:321
-#: components/ConvergentContextMenu.qml:431
+#: components/ConvergentContextMenu.qml:324
+#: components/ConvergentContextMenu.qml:434
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "Gå tillbaka"
 
-#: components/ConvergentContextMenu.qml:405 formcard/FormCardDialog.qml:102
+#: components/ConvergentContextMenu.qml:408 formcard/FormCardDialog.qml:102
 #, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
@@ -740,7 +742,7 @@ msgctxt "Accessible description"
 msgid "Current color \"%1\""
 msgstr "Nuvarande färg \"%1\""
 
-#: formcard/android/FormIconDelegate.qml:43
+#: formcard/android/FormIconDelegate.qml:19
 #, kde-format
 msgctxt "@action:button"
 msgid "Icon"

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-18 00:43+0000\n"
-"PO-Revision-Date: 2026-09-17 11:32+0100\n"
+"POT-Creation-Date: 2026-09-19 00:43+0000\n"
+"PO-Revision-Date: 2026-09-18 15:07+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -128,19 +128,19 @@ msgstr ""
 "que usan algunas aplicaciones.\n"
 "¿Realmente quiere usarla también como atajo de teclado global?"
 
-#: actions/private/KeySequenceItem.qml:129
+#: actions/private/KeySequenceItem.qml:130
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Entrada"
 
-#: actions/private/KeySequenceItem.qml:130
+#: actions/private/KeySequenceItem.qml:131
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "Ninguno"
 
-#: actions/private/KeySequenceItem.qml:141
+#: actions/private/KeySequenceItem.qml:142
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
@@ -150,13 +150,13 @@ msgstr ""
 "programa.\n"
 "Ejemplo para Ctrl+A: mantenga pulsada la tecla Ctrl y pulse A."
 
-#: actions/private/KeySequenceItem.qml:182
+#: actions/private/KeySequenceItem.qml:183
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
 msgstr "Borrar secuencia de teclas"
 
-#: actions/private/KeySequenceItem.qml:198
+#: actions/private/KeySequenceItem.qml:199
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel Key Sequence Recording"
@@ -227,7 +227,7 @@ msgstr "Acerca de KDE"
 #, kde-format
 msgctxt "@title:window"
 msgid "Failed to Load Application"
-msgstr ""
+msgstr "No se ha podido cargar la aplicación"
 
 #: app/kirigamiappdefaults.cpp:114
 #, kde-format
@@ -236,12 +236,14 @@ msgid ""
 "Could not load the QML application. This issue might be caused by your "
 "distribution. Please report it to your distribution first."
 msgstr ""
+"No se ha podido cargar la aplicación QML. Este problema puede estar causado "
+"por su distribución. Debería empezar por notificárselo a su distribución."
 
 #: app/kirigamiappdefaults.cpp:121
 #, kde-format
 msgctxt "@info"
 msgid "Could not load the QML application."
-msgstr ""
+msgstr "No se ha podido cargar la aplicación QML."
 
 #: components/AbstractMaximizeComponent.qml:137
 #, kde-format
@@ -302,14 +304,14 @@ msgctxt "@action:button"
 msgid "Close"
 msgstr "Cerrar"
 
-#: components/ConvergentContextMenu.qml:321
-#: components/ConvergentContextMenu.qml:431
+#: components/ConvergentContextMenu.qml:324
+#: components/ConvergentContextMenu.qml:434
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "Volver"
 
-#: components/ConvergentContextMenu.qml:405 formcard/FormCardDialog.qml:102
+#: components/ConvergentContextMenu.qml:408 formcard/FormCardDialog.qml:102
 #, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
@@ -748,7 +750,7 @@ msgctxt "Accessible description"
 msgid "Current color \"%1\""
 msgstr "Color actual «%1»"
 
-#: formcard/android/FormIconDelegate.qml:43
+#: formcard/android/FormIconDelegate.qml:19
 #, kde-format
 msgctxt "@action:button"
 msgid "Icon"

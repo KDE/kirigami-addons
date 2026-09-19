@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-18 00:43+0000\n"
-"PO-Revision-Date: 2026-09-17 12:11+0200\n"
+"POT-Creation-Date: 2026-09-19 00:43+0000\n"
+"PO-Revision-Date: 2026-09-18 11:23+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -128,19 +128,19 @@ msgstr ""
 "usen algunes aplicacions.\n"
 "Esteu segur que també voleu usar-la com a drecera global?"
 
-#: actions/private/KeySequenceItem.qml:129
+#: actions/private/KeySequenceItem.qml:130
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Entrada"
 
-#: actions/private/KeySequenceItem.qml:130
+#: actions/private/KeySequenceItem.qml:131
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "Cap"
 
-#: actions/private/KeySequenceItem.qml:141
+#: actions/private/KeySequenceItem.qml:142
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
@@ -151,13 +151,13 @@ msgstr ""
 "Exemple per a «Ctrl+A»: manteniu premuda la tecla «Ctrl» mentre premeu la "
 "«A»."
 
-#: actions/private/KeySequenceItem.qml:182
+#: actions/private/KeySequenceItem.qml:183
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
 msgstr "Neteja la seqüència de tecles"
 
-#: actions/private/KeySequenceItem.qml:198
+#: actions/private/KeySequenceItem.qml:199
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel Key Sequence Recording"
@@ -228,7 +228,7 @@ msgstr "Quant a KDE"
 #, kde-format
 msgctxt "@title:window"
 msgid "Failed to Load Application"
-msgstr ""
+msgstr "Ha fallat en carregar una aplicació"
 
 #: app/kirigamiappdefaults.cpp:114
 #, kde-format
@@ -237,12 +237,14 @@ msgid ""
 "Could not load the QML application. This issue might be caused by your "
 "distribution. Please report it to your distribution first."
 msgstr ""
+"No s'ha pogut carregar l'aplicació QML. Aquest problema podria ser causat "
+"per la vostra distribució. Si us plau, informeu-ho a la distribució."
 
 #: app/kirigamiappdefaults.cpp:121
 #, kde-format
 msgctxt "@info"
 msgid "Could not load the QML application."
-msgstr ""
+msgstr "No s'ha pogut trobar l'aplicació QML."
 
 #: components/AbstractMaximizeComponent.qml:137
 #, kde-format
@@ -303,14 +305,14 @@ msgctxt "@action:button"
 msgid "Close"
 msgstr "Tanca"
 
-#: components/ConvergentContextMenu.qml:321
-#: components/ConvergentContextMenu.qml:431
+#: components/ConvergentContextMenu.qml:324
+#: components/ConvergentContextMenu.qml:434
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "Retrocedeix"
 
-#: components/ConvergentContextMenu.qml:405 formcard/FormCardDialog.qml:102
+#: components/ConvergentContextMenu.qml:408 formcard/FormCardDialog.qml:102
 #, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
@@ -751,7 +753,7 @@ msgctxt "Accessible description"
 msgid "Current color \"%1\""
 msgstr "Color actual «%1»"
 
-#: formcard/android/FormIconDelegate.qml:43
+#: formcard/android/FormIconDelegate.qml:19
 #, kde-format
 msgctxt "@action:button"
 msgid "Icon"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-18 00:43+0000\n"
+"POT-Creation-Date: 2026-09-19 00:43+0000\n"
 "PO-Revision-Date: 2025-08-21 10:33+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -126,19 +126,19 @@ msgstr ""
 "kombināciju darbībai „%2“.\n"
 "Vai tiešām vēlaties to izmantot arī kā globālu saīsni?"
 
-#: actions/private/KeySequenceItem.qml:129
+#: actions/private/KeySequenceItem.qml:130
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Ievade"
 
-#: actions/private/KeySequenceItem.qml:130
+#: actions/private/KeySequenceItem.qml:131
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "Nav"
 
-#: actions/private/KeySequenceItem.qml:141
+#: actions/private/KeySequenceItem.qml:142
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
@@ -149,13 +149,13 @@ msgstr ""
 "Piemēram, lai ievadītu saīsni „Ctrl+A“, nospiežot un pieturot nospiestu "
 "„Ctrl“ taustiņu, nospiediet „A“."
 
-#: actions/private/KeySequenceItem.qml:182
+#: actions/private/KeySequenceItem.qml:183
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
 msgstr "Notīrīt taustiņu virkni"
 
-#: actions/private/KeySequenceItem.qml:198
+#: actions/private/KeySequenceItem.qml:199
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel Key Sequence Recording"
@@ -301,14 +301,14 @@ msgctxt "@action:button"
 msgid "Close"
 msgstr "Aizvērt"
 
-#: components/ConvergentContextMenu.qml:321
-#: components/ConvergentContextMenu.qml:431
+#: components/ConvergentContextMenu.qml:324
+#: components/ConvergentContextMenu.qml:434
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "Atgriezties"
 
-#: components/ConvergentContextMenu.qml:405 formcard/FormCardDialog.qml:102
+#: components/ConvergentContextMenu.qml:408 formcard/FormCardDialog.qml:102
 #, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
@@ -749,7 +749,7 @@ msgctxt "Accessible description"
 msgid "Current color \"%1\""
 msgstr "Pašreizēja krāsa „%1“"
 
-#: formcard/android/FormIconDelegate.qml:43
+#: formcard/android/FormIconDelegate.qml:19
 #, kde-format
 msgctxt "@action:button"
 msgid "Icon"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-18 00:43+0000\n"
-"PO-Revision-Date: 2026-09-17 12:01+0200\n"
+"POT-Creation-Date: 2026-09-19 00:43+0000\n"
+"PO-Revision-Date: 2026-09-18 10:51+0200\n"
 "Last-Translator: Libor Filipek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -123,19 +123,19 @@ msgstr ""
 "kterou mnoho aplikací využívá.\n"
 "Opravdu si ji přejete použít jako globální klávesovou zkratku?"
 
-#: actions/private/KeySequenceItem.qml:129
+#: actions/private/KeySequenceItem.qml:130
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "Vstup"
 
-#: actions/private/KeySequenceItem.qml:130
+#: actions/private/KeySequenceItem.qml:131
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "Žádná"
 
-#: actions/private/KeySequenceItem.qml:141
+#: actions/private/KeySequenceItem.qml:142
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
@@ -144,13 +144,13 @@ msgstr ""
 "Klikněte na tlačítko a poté zadejte zkratku, kterou si přejete v programu.\n"
 "Příklad pro Ctrl+A: držte klávesu Ctrl a stiskněte A."
 
-#: actions/private/KeySequenceItem.qml:182
+#: actions/private/KeySequenceItem.qml:183
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
 msgstr "Vymazat posloupnost kláves"
 
-#: actions/private/KeySequenceItem.qml:198
+#: actions/private/KeySequenceItem.qml:199
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel Key Sequence Recording"
@@ -221,7 +221,7 @@ msgstr "O KDE"
 #, kde-format
 msgctxt "@title:window"
 msgid "Failed to Load Application"
-msgstr ""
+msgstr "Aplikaci nelze načíst"
 
 #: app/kirigamiappdefaults.cpp:114
 #, kde-format
@@ -230,12 +230,14 @@ msgid ""
 "Could not load the QML application. This issue might be caused by your "
 "distribution. Please report it to your distribution first."
 msgstr ""
+"Nepodařilo se načíst aplikaci QML. Tento problém může být způsoben vaší "
+"distribucí. Nahlaste jej prosím nejprve tvůrcům vaší distribuce."
 
 #: app/kirigamiappdefaults.cpp:121
 #, kde-format
 msgctxt "@info"
 msgid "Could not load the QML application."
-msgstr ""
+msgstr "Nepodařilo se načíst aplikaci QML."
 
 #: components/AbstractMaximizeComponent.qml:137
 #, kde-format
@@ -296,14 +298,14 @@ msgctxt "@action:button"
 msgid "Close"
 msgstr "Zavřít"
 
-#: components/ConvergentContextMenu.qml:321
-#: components/ConvergentContextMenu.qml:431
+#: components/ConvergentContextMenu.qml:324
+#: components/ConvergentContextMenu.qml:434
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "Jít zpět"
 
-#: components/ConvergentContextMenu.qml:405 formcard/FormCardDialog.qml:102
+#: components/ConvergentContextMenu.qml:408 formcard/FormCardDialog.qml:102
 #, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
@@ -738,7 +740,7 @@ msgctxt "Accessible description"
 msgid "Current color \"%1\""
 msgstr "Aktuální barva \"%1\"."
 
-#: formcard/android/FormIconDelegate.qml:43
+#: formcard/android/FormIconDelegate.qml:19
 #, kde-format
 msgctxt "@action:button"
 msgid "Icon"
