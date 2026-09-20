@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-19 00:43+0000\n"
-"PO-Revision-Date: 2026-09-18 08:57+0200\n"
+"PO-Revision-Date: 2026-09-18 16:52+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -227,7 +227,7 @@ msgstr "À propos de KDE"
 #, kde-format
 msgctxt "@title:window"
 msgid "Failed to Load Application"
-msgstr ""
+msgstr "Échec du chargement de l'application"
 
 #: app/kirigamiappdefaults.cpp:114
 #, kde-format
@@ -236,12 +236,14 @@ msgid ""
 "Could not load the QML application. This issue might be caused by your "
 "distribution. Please report it to your distribution first."
 msgstr ""
+"Impossible de charger l'application QML. Ce problème pourrait être dû à "
+"votre distribution. Veuillez d'abord le signaler à votre distribution."
 
 #: app/kirigamiappdefaults.cpp:121
 #, kde-format
 msgctxt "@info"
 msgid "Could not load the QML application."
-msgstr ""
+msgstr "Impossible de charger l'application QML."
 
 #: components/AbstractMaximizeComponent.qml:137
 #, kde-format
