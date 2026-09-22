@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-19 00:43+0000\n"
-"PO-Revision-Date: 2026-09-16 15:46+0300\n"
+"PO-Revision-Date: 2026-09-21 21:14+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -225,7 +225,7 @@ msgstr "Apie KDE"
 #, kde-format
 msgctxt "@title:window"
 msgid "Failed to Load Application"
-msgstr ""
+msgstr "Nepavyko įkelti programos"
 
 #: app/kirigamiappdefaults.cpp:114
 #, kde-format
@@ -234,12 +234,15 @@ msgid ""
 "Could not load the QML application. This issue might be caused by your "
 "distribution. Please report it to your distribution first."
 msgstr ""
+"Nepavyko įkelti QML programos. Gali būti, kad šią klaidą sukėlė jūsų "
+"naudojamas platinamasis paketas. Iš pradžių, praneškite apie ją savo "
+"platinamajam paketui."
 
 #: app/kirigamiappdefaults.cpp:121
 #, kde-format
 msgctxt "@info"
 msgid "Could not load the QML application."
-msgstr ""
+msgstr "Nepavyko įkelti QML programos."
 
 #: components/AbstractMaximizeComponent.qml:137
 #, kde-format
@@ -649,7 +652,7 @@ msgstr "Autorių teisės"
 #: formcard/AboutPage.qml:177
 #, kde-format
 msgid "Release history"
-msgstr ""
+msgstr "Laidų istorija"
 
 #: formcard/AboutPage.qml:239
 #, kde-format
@@ -718,11 +721,9 @@ msgid "Translators"
 msgstr "Vertėjai"
 
 #: formcard/AboutPage.qml:537
-#, fuzzy, kde-format
-#| msgctxt "@title:dialog"
-#| msgid "Information"
+#, kde-format
 msgid "More information"
-msgstr "Informacija"
+msgstr "Daugiau informacijos"
 
 #: formcard/AboutPage.qml:597
 #, kde-format

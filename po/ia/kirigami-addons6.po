@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-19 00:43+0000\n"
-"PO-Revision-Date: 2026-09-14 17:40+0200\n"
+"PO-Revision-Date: 2026-09-21 12:28+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -47,12 +47,10 @@ msgstr "A proposito de KDE"
 #, kde-format
 msgctxt "@title:menu"
 msgid "File"
-msgstr ""
+msgstr "File"
 
 #: actions/abstractkirigamiapplication.cpp:209
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title:menu"
 msgid "Settings"
 msgstr "Preferentias"
@@ -61,7 +59,7 @@ msgstr "Preferentias"
 #, kde-format
 msgctxt "@title:menu"
 msgid "Help"
-msgstr ""
+msgstr "Adjuta"
 
 #: actions/private/keysequencehelper.cpp:117
 #, kde-format
@@ -228,7 +226,7 @@ msgstr "A proposito de KDE"
 #, kde-format
 msgctxt "@title:window"
 msgid "Failed to Load Application"
-msgstr ""
+msgstr "Il falleva a cargar application ."
 
 #: app/kirigamiappdefaults.cpp:114
 #, kde-format
@@ -237,12 +235,14 @@ msgid ""
 "Could not load the QML application. This issue might be caused by your "
 "distribution. Please report it to your distribution first."
 msgstr ""
+"Non poteva cargar le application QML. Iste problema pote esser causate  per "
+"tu distribution. Per favor, reporta lo a tu distribution primo."
 
 #: app/kirigamiappdefaults.cpp:121
 #, kde-format
 msgctxt "@info"
 msgid "Could not load the QML application."
-msgstr ""
+msgstr "Nonpote cargar la application QML."
 
 #: components/AbstractMaximizeComponent.qml:137
 #, kde-format
@@ -655,7 +655,7 @@ msgstr "Copyright"
 #: formcard/AboutPage.qml:177
 #, kde-format
 msgid "Release history"
-msgstr ""
+msgstr "Historia de versiom"
 
 #: formcard/AboutPage.qml:239
 #, kde-format
@@ -722,11 +722,9 @@ msgid "Translators"
 msgstr "Traductores"
 
 #: formcard/AboutPage.qml:537
-#, fuzzy, kde-format
-#| msgctxt "@title:dialog"
-#| msgid "Information"
+#, kde-format
 msgid "More information"
-msgstr "Information"
+msgstr "Altere information"
 
 #: formcard/AboutPage.qml:597
 #, kde-format

@@ -1,21 +1,21 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kirigami-addons package.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2021-2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-19 00:43+0000\n"
-"PO-Revision-Date: 2025-10-09 00:56+0200\n"
-"Last-Translator: Shinjo Park <kde@peremen.name>\n"
-"Language-Team: Korean <kde-kr@kde.org>\n"
+"PO-Revision-Date: 2026-09-21 23:56+0200\n"
+"Last-Translator: Shinjo Park <peremen@gmail.com>\n"
+"Language-Team: Korean\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -46,12 +46,10 @@ msgstr "KDE 정보"
 #, kde-format
 msgctxt "@title:menu"
 msgid "File"
-msgstr ""
+msgstr "파일"
 
 #: actions/abstractkirigamiapplication.cpp:209
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title:menu"
 msgid "Settings"
 msgstr "설정"
@@ -60,7 +58,7 @@ msgstr "설정"
 #, kde-format
 msgctxt "@title:menu"
 msgid "Help"
-msgstr ""
+msgstr "도움말"
 
 #: actions/private/keysequencehelper.cpp:117
 #, kde-format
@@ -221,7 +219,7 @@ msgstr "KDE 정보"
 #, kde-format
 msgctxt "@title:window"
 msgid "Failed to Load Application"
-msgstr ""
+msgstr "앱을 불러올 수 없음"
 
 #: app/kirigamiappdefaults.cpp:114
 #, kde-format
@@ -230,12 +228,14 @@ msgid ""
 "Could not load the QML application. This issue might be caused by your "
 "distribution. Please report it to your distribution first."
 msgstr ""
+"QML 앱을 불러올 수 없습니다. 배포판의 문제일 수도 있으므로 배포판에 먼저 보고"
+"하십시오."
 
 #: app/kirigamiappdefaults.cpp:121
 #, kde-format
 msgctxt "@info"
 msgid "Could not load the QML application."
-msgstr ""
+msgstr "QML 앱을 불러올 수 없습니다."
 
 #: components/AbstractMaximizeComponent.qml:137
 #, kde-format
@@ -400,7 +400,7 @@ msgstr "앞으로 이동"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to current time"
-msgstr ""
+msgstr "현재 시간으로 재설정"
 
 #: dateandtime/TimePicker.qml:157
 #, kde-format
@@ -640,7 +640,7 @@ msgstr "저작권"
 #: formcard/AboutPage.qml:177
 #, kde-format
 msgid "Release history"
-msgstr ""
+msgstr "릴리스 기록"
 
 #: formcard/AboutPage.qml:239
 #, kde-format
@@ -661,17 +661,17 @@ msgstr "버그 보고"
 #: formcard/AboutPage.qml:401
 #, kde-format
 msgid "Matrix Channel"
-msgstr ""
+msgstr "Matrix 채널"
 
 #: formcard/AboutPage.qml:417
 #, kde-format
 msgid "Mastodon"
-msgstr ""
+msgstr "마스토돈"
 
 #: formcard/AboutPage.qml:429
 #, kde-format
 msgid "Source Code"
-msgstr ""
+msgstr "소스 코드"
 
 #: formcard/AboutPage.qml:435
 #, kde-format
@@ -706,11 +706,9 @@ msgid "Translators"
 msgstr "번역자"
 
 #: formcard/AboutPage.qml:537
-#, fuzzy, kde-format
-#| msgctxt "@title:dialog"
-#| msgid "Information"
+#, kde-format
 msgid "More information"
-msgstr "정보"
+msgstr "더 많은 정보"
 
 #: formcard/AboutPage.qml:597
 #, kde-format
@@ -820,41 +818,31 @@ msgid "%1/%2"
 msgstr "%1/%2"
 
 #: onboarding/private/OnboardingOverlay.qml:201
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Go Previous"
+#, kde-format
 msgctxt "@action:button"
 msgid "Previous"
-msgstr "뒤로 이동"
+msgstr "이전"
 
 #: onboarding/private/OnboardingOverlay.qml:202
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Go Previous"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Previous"
-msgstr "뒤로 이동"
+msgstr "이전"
 
 #: onboarding/private/OnboardingOverlay.qml:221
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Go Next"
+#, kde-format
 msgctxt "@action:button"
 msgid "Next"
-msgstr "앞으로 이동"
+msgstr "다음"
 
 #: onboarding/private/OnboardingOverlay.qml:222
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Go Next"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Next"
-msgstr "앞으로 이동"
+msgstr "다음"
 
 #: onboarding/private/OnboardingOverlay.qml:237
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel"
 msgstr "취소"
