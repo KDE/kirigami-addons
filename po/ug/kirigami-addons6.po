@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-19 00:43+0000\n"
-"PO-Revision-Date: 2026-05-31 18:51-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -47,12 +47,10 @@ msgstr "KDE ھەققىدە"
 #, kde-format
 msgctxt "@title:menu"
 msgid "File"
-msgstr ""
+msgstr "ھۆججەت"
 
 #: actions/abstractkirigamiapplication.cpp:209
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title:menu"
 msgid "Settings"
 msgstr "تەڭشەك"
@@ -61,7 +59,7 @@ msgstr "تەڭشەك"
 #, kde-format
 msgctxt "@title:menu"
 msgid "Help"
-msgstr ""
+msgstr "ياردەم"
 
 #: actions/private/keysequencehelper.cpp:117
 #, kde-format
@@ -77,9 +75,6 @@ msgid ""
 "shortcut.\n"
 "Please choose another one."
 msgstr ""
-"F12 بولسا Windows دا بەلگىلىنىپ بولغان، شۇڭا ئومۇمىيەت تېزلەتمىدە ئىشلەتكىلى "
-"بولمايدۇ\n"
-"باشقا كۇنۇپكا تاللاڭ."
 
 #: actions/private/keysequencehelper.cpp:143
 #, kde-format
@@ -122,9 +117,6 @@ msgid ""
 "some applications use.\n"
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
-"«%1» بىرىكمە كۇنۇپكا بەزى پىروگراممىدا «%2» ئۆلچەملىك مەشغۇلات ئۈچۈن "
-"بېكىتىلگەن.\n"
-"بۇنى راستتىنلا ئومۇمىيەت تېزلەتمە سۈپىتىدە ئىشلىتەمسىز؟"
 
 #: actions/private/KeySequenceItem.qml:130
 #, kde-format
@@ -144,8 +136,6 @@ msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
-"توپچىنى چېكىپ، ئاندىن بۇ پىروگراممىغا تېزلەتمە كىرگۈزۈلىدۇ.\n"
-"مەسىلەن، Ctrl+A يەنى Ctrl كۇنۇپكىسىنى بېسىپ تۇرۇپ ئاندىن A كۇنۇپكا بېسىلىدۇ."
 
 #: actions/private/KeySequenceItem.qml:183
 #, kde-format
@@ -414,7 +404,7 @@ msgstr "سائەت"
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
-msgstr ":"
+msgstr ""
 
 #: dateandtime/TimePicker.qml:195
 #, kde-format
@@ -425,7 +415,7 @@ msgstr "مىنۇت"
 #, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
-msgstr "%1 (%2)"
+msgstr ""
 
 #: formcard/aboutcomponent.cpp:32
 #, kde-format
@@ -443,7 +433,7 @@ msgstr ""
 #: formcard/aboutcomponent.cpp:38
 #, kde-format
 msgid "Qt"
-msgstr "Qt"
+msgstr ""
 
 #: formcard/aboutcomponent.cpp:39
 #, kde-format
@@ -466,7 +456,7 @@ msgstr ""
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Flatpak"
-msgstr "Flatpak"
+msgstr ""
 
 #: formcard/aboutcomponent.cpp:50
 #, kde-format
@@ -478,7 +468,7 @@ msgstr "قادا"
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "AppImage"
-msgstr "AppImage"
+msgstr ""
 
 #: formcard/aboutcomponent.cpp:55
 #, kde-format
@@ -495,7 +485,7 @@ msgstr "ئاستىدىكى سۇپا."
 #: formcard/AboutKDEPage.qml:50
 #, kde-format
 msgid "KDE"
-msgstr "KDE"
+msgstr ""
 
 #: formcard/AboutKDEPage.qml:59
 #, kde-format
@@ -644,7 +634,7 @@ msgstr ""
 #: formcard/AboutPage.qml:429
 #, kde-format
 msgid "Source Code"
-msgstr ""
+msgstr "مەنبە كودى"
 
 #: formcard/AboutPage.qml:435
 #, kde-format
@@ -679,11 +669,9 @@ msgid "Translators"
 msgstr "تەرجىمان"
 
 #: formcard/AboutPage.qml:537
-#, fuzzy, kde-format
-#| msgctxt "@title:dialog"
-#| msgid "Information"
+#, kde-format
 msgid "More information"
-msgstr "ئۇچۇر"
+msgstr ""
 
 #: formcard/AboutPage.qml:597
 #, kde-format
@@ -796,30 +784,28 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Previous"
-msgstr ""
+msgstr "ئالدىنقى"
 
 #: onboarding/private/OnboardingOverlay.qml:202
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Previous"
-msgstr ""
+msgstr "ئالدىنقى"
 
 #: onboarding/private/OnboardingOverlay.qml:221
 #, kde-format
 msgctxt "@action:button"
 msgid "Next"
-msgstr ""
+msgstr "كېيىنكى"
 
 #: onboarding/private/OnboardingOverlay.qml:222
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Next"
-msgstr ""
+msgstr "كېيىنكى"
 
 #: onboarding/private/OnboardingOverlay.qml:237
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel"
 msgstr "ۋاز كەچ"
