@@ -107,12 +107,12 @@ T.SwitchDelegate {
             implicitHeight: visible ? root.icon.height : 0
         }
 
-        Column {
+        ColumnLayout {
             Layout.fillWidth: true
             spacing: Private.FormCardUnits.verticalSpacing
 
             Controls.Label {
-                width: parent.width
+                Layout.fillWidth: true
                 text: root.text
                 elide: Text.ElideRight
                 wrapMode: Text.Wrap
@@ -123,7 +123,7 @@ T.SwitchDelegate {
 
             Controls.Label {
                 visible: root.description !== ""
-                width: parent.width
+                Layout.fillWidth: true
                 text: root.description
                 wrapMode: Text.Wrap
                 color: Kirigami.Theme.disabledTextColor

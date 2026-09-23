@@ -102,13 +102,13 @@ AbstractFormDelegate {
             implicitHeight: (root.icon.name !== "") ? Kirigami.Units.iconSizes.smallMedium : 0
         }
 
-        Column {
+        ColumnLayout {
             Layout.fillWidth: true
             spacing: 0
 
             Label {
                 id: internalTextItem
-                width: parent.width
+                Layout.fillWidth: true
                 text: root.text
                 elide: Text.ElideRight
                 onLinkActivated: root.linkActivated(link)
@@ -118,7 +118,7 @@ AbstractFormDelegate {
 
             Label {
                 id: internalDescriptionItem
-                width: parent.width
+                Layout.fillWidth: true
                 text: root.description
                 color: Kirigami.Theme.disabledTextColor
                 visible: root.description !== ""
