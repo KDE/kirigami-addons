@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-19 00:43+0000\n"
-"PO-Revision-Date: 2026-09-09 21:35+0200\n"
+"PO-Revision-Date: 2026-09-22 23:29+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.08.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -46,12 +46,10 @@ msgstr "Относно KDE"
 #, kde-format
 msgctxt "@title:menu"
 msgid "File"
-msgstr ""
+msgstr "Файл"
 
 #: actions/abstractkirigamiapplication.cpp:209
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title:menu"
 msgid "Settings"
 msgstr "Настройки"
@@ -60,7 +58,7 @@ msgstr "Настройки"
 #, kde-format
 msgctxt "@title:menu"
 msgid "Help"
-msgstr ""
+msgstr "Помощ"
 
 #: actions/private/keysequencehelper.cpp:117
 #, kde-format
@@ -223,7 +221,7 @@ msgstr "Относно KDE"
 #, kde-format
 msgctxt "@title:window"
 msgid "Failed to Load Application"
-msgstr ""
+msgstr "Грешка при зареждане на приложението"
 
 #: app/kirigamiappdefaults.cpp:114
 #, kde-format
@@ -232,12 +230,14 @@ msgid ""
 "Could not load the QML application. This issue might be caused by your "
 "distribution. Please report it to your distribution first."
 msgstr ""
+"Неуспешно зареждане на QML приложението. Този проблем може да бъде причинен "
+"от вашата дистрибуция. Моля, докладвайте го първо на вашата дистрибуция."
 
 #: app/kirigamiappdefaults.cpp:121
 #, kde-format
 msgctxt "@info"
 msgid "Could not load the QML application."
-msgstr ""
+msgstr "Неуспешно зареждане на QML приложението."
 
 #: components/AbstractMaximizeComponent.qml:137
 #, kde-format
@@ -652,7 +652,7 @@ msgstr "Авторско право"
 #: formcard/AboutPage.qml:177
 #, kde-format
 msgid "Release history"
-msgstr ""
+msgstr "История на версиите"
 
 #: formcard/AboutPage.qml:239
 #, kde-format
@@ -719,11 +719,9 @@ msgid "Translators"
 msgstr "Преводачи"
 
 #: formcard/AboutPage.qml:537
-#, fuzzy, kde-format
-#| msgctxt "@title:dialog"
-#| msgid "Information"
+#, kde-format
 msgid "More information"
-msgstr "Информация"
+msgstr "Допълнителна информация"
 
 #: formcard/AboutPage.qml:597
 #, kde-format
