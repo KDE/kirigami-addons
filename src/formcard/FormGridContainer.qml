@@ -195,11 +195,12 @@ Item {
                     rounded: root.cardWidthRestricted
                 }
 
-                LayoutItemProxy {
+                Private.ContentItemLoader {
                     id: delegateLoader
 
                     anchors.fill: parent
-                    target: cell.delegateItem
+                    anchors.margins: 1
+                    contentItem: cell.delegateItem
                 }
             }
         }
