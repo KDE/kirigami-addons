@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-19 00:43+0000\n"
-"PO-Revision-Date: 2026-09-15 17:13+0400\n"
+"PO-Revision-Date: 2026-09-23 17:46+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -221,7 +221,7 @@ msgstr "عن كِيدِي"
 #, kde-format
 msgctxt "@title:window"
 msgid "Failed to Load Application"
-msgstr ""
+msgstr "فشل في تحميل التطبيق"
 
 #: app/kirigamiappdefaults.cpp:114
 #, kde-format
@@ -230,12 +230,14 @@ msgid ""
 "Could not load the QML application. This issue might be caused by your "
 "distribution. Please report it to your distribution first."
 msgstr ""
+"تعذر تحميل تطبيق QML. قد تكون هذه المشكلة ناجمة عن توزيعتك. يرجى الإبلاغ "
+"عنها إلى توزيعتك أولاً."
 
 #: app/kirigamiappdefaults.cpp:121
 #, kde-format
 msgctxt "@info"
 msgid "Could not load the QML application."
-msgstr ""
+msgstr "لا يمكن تحميل تطبيق QML."
 
 #: components/AbstractMaximizeComponent.qml:137
 #, kde-format
@@ -639,7 +641,7 @@ msgstr "حقوق النشر"
 #: formcard/AboutPage.qml:177
 #, kde-format
 msgid "Release history"
-msgstr ""
+msgstr "سجل الإصدارات"
 
 #: formcard/AboutPage.qml:239
 #, kde-format
@@ -710,11 +712,9 @@ msgid "Translators"
 msgstr "المترجمون"
 
 #: formcard/AboutPage.qml:537
-#, fuzzy, kde-format
-#| msgctxt "@title:dialog"
-#| msgid "Information"
+#, kde-format
 msgid "More information"
-msgstr "معلومات"
+msgstr "معلومات أخرى"
 
 #: formcard/AboutPage.qml:597
 #, kde-format

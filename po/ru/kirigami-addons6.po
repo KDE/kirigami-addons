@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-19 00:43+0000\n"
-"PO-Revision-Date: 2026-06-26 20:51+0200\n"
+"PO-Revision-Date: 2026-09-23 08:29+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -49,21 +49,19 @@ msgstr "О KDE"
 #, kde-format
 msgctxt "@title:menu"
 msgid "File"
-msgstr ""
+msgstr "Файл"
 
 #: actions/abstractkirigamiapplication.cpp:209
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title:menu"
 msgid "Settings"
-msgstr "Параметры"
+msgstr "Настройка"
 
 #: actions/abstractkirigamiapplication.cpp:222
 #, kde-format
 msgctxt "@title:menu"
 msgid "Help"
-msgstr ""
+msgstr "Справка"
 
 #: actions/private/keysequencehelper.cpp:117
 #, kde-format
@@ -227,7 +225,7 @@ msgstr "О KDE"
 #, kde-format
 msgctxt "@title:window"
 msgid "Failed to Load Application"
-msgstr ""
+msgstr "Ошибка загрузки приложения"
 
 #: app/kirigamiappdefaults.cpp:114
 #, kde-format
@@ -236,12 +234,15 @@ msgid ""
 "Could not load the QML application. This issue might be caused by your "
 "distribution. Please report it to your distribution first."
 msgstr ""
+"Не удалось загрузить приложение QML. Возможно, проблема вызвана "
+"особенностями дистрибутива. Сначала сообщите о ней разработчикам "
+"дистрибутива."
 
 #: app/kirigamiappdefaults.cpp:121
 #, kde-format
 msgctxt "@info"
 msgid "Could not load the QML application."
-msgstr ""
+msgstr "Не удалось загрузить приложение QML."
 
 #: components/AbstractMaximizeComponent.qml:137
 #, kde-format
@@ -406,7 +407,7 @@ msgstr "Далее"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to current time"
-msgstr ""
+msgstr "Установить текущее время"
 
 #: dateandtime/TimePicker.qml:157
 #, kde-format
@@ -658,7 +659,7 @@ msgstr "Авторские права"
 #: formcard/AboutPage.qml:177
 #, kde-format
 msgid "Release history"
-msgstr ""
+msgstr "История выпусков"
 
 #: formcard/AboutPage.qml:239
 #, kde-format
@@ -682,17 +683,17 @@ msgstr "Сообщить об ошибке"
 #: formcard/AboutPage.qml:401
 #, kde-format
 msgid "Matrix Channel"
-msgstr ""
+msgstr "Канал Matrix"
 
 #: formcard/AboutPage.qml:417
 #, kde-format
 msgid "Mastodon"
-msgstr ""
+msgstr "Mastodon"
 
 #: formcard/AboutPage.qml:429
 #, kde-format
 msgid "Source Code"
-msgstr ""
+msgstr "Исходный код"
 
 #: formcard/AboutPage.qml:435
 #, kde-format
@@ -727,11 +728,9 @@ msgid "Translators"
 msgstr "Переводчики"
 
 #: formcard/AboutPage.qml:537
-#, fuzzy, kde-format
-#| msgctxt "@title:dialog"
-#| msgid "Information"
+#, kde-format
 msgid "More information"
-msgstr "Информация"
+msgstr "Дополнительная информация"
 
 #: formcard/AboutPage.qml:597
 #, kde-format
