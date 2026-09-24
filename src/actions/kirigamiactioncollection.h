@@ -37,7 +37,7 @@ class ActionCollectionAttached;
  * \inmodule KirigamiAddonsActions
  * \internal Backing type for the ActionCollection attached property.
  */
-class KIRIGAMIADDONSSTATEFULAPP_EXPORT ActionCollectionAttached : public QObject
+class ActionCollectionAttached : public QObject
 {
     Q_OBJECT
     /*! \qmlproperty string ActionCollection::collection
@@ -138,12 +138,9 @@ class QString;
  * \inmodule KirigamiAddonsActions
  * \brief The C++ counterpart of the ActionCollection QML type.
  */
-class KIRIGAMIADDONSSTATEFULAPP_EXPORT KirigamiActionCollection : public QObject, public QQmlParserStatus
+class KIRIGAMIADDONSSTATEFULAPP_EXPORT KirigamiActionCollection : public QObject
 {
     Q_OBJECT
-    Q_INTERFACES(QQmlParserStatus)
-    QML_NAMED_ELEMENT(ActionCollection)
-    QML_ATTACHED(ActionCollectionAttached)
 
     /*! \qmlproperty string ActionCollection::name
      * The unique name of the collection.
@@ -356,8 +353,7 @@ public:
     void insertMenu(ActionMenu *menu);
     static ActionCollectionAttached *qmlAttachedProperties(QObject *object);
 
-    void classBegin() override;
-    void componentComplete() override;
+    void componentComplete();
 
     /*! The display name for the associated component. */
     QString componentDisplayName() const;
@@ -608,4 +604,24 @@ private:
     std::unique_ptr<class KirigamiActionCollectionPrivate> const d;
 };
 
-QML_DECLARE_TYPEINFO(ActionCollectionAttached, QML_HAS_ATTACHED_PROPERTIES)
+class KirigamiActionCollectionQml : public KirigamiActionCollection, public QQmlParserStatus
+{
+    Q_OBJECT
+    Q_INTERFACES(QQmlParserStatus)
+    QML_NAMED_ELEMENT(ActionCollection)
+    QML_ATTACHED(ActionCollectionAttached)
+
+public:
+    explicit KirigamiActionCollectionQml(QObject *parent = nullptr)
+        : KirigamiActionCollection(parent)
+    {
+    }
+
+    void classBegin() override {}
+    void componentComplete() override
+    {
+        KirigamiActionCollection::componentComplete();
+    }
+};
+
+QML_DECLARE_TYPEINFO(KirigamiActionCollectionQml, QML_HAS_ATTACHED_PROPERTIES)

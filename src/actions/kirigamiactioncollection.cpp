@@ -331,10 +331,6 @@ void KirigamiActionCollection::insertAction(ActionData *action)
     }
 }
 
-void KirigamiActionCollection::classBegin()
-{
-}
-
 void KirigamiActionCollection::componentComplete()
 {
     d->m_qmlComplete = true;
