@@ -81,7 +81,7 @@ class QString;
 
 /*!
  * \qmltype ActionCollection
- * \instantiates KirigamiActionCollection
+ * \instantiates KirigamiActionCollectionQml
  * \inqmlmodule org.kde.kirigamiaddons.actions
  * \brief A container for a set of QAction objects.
  *
