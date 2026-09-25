@@ -81,6 +81,7 @@ ecm_target_qml_sources(formcardplugin PATH private SOURCES
     private/FormChoiceDelegateLayout.qml
     private/FormDelegateLayout.qml
     private/FormInfoGrid.qml
+    private/FormInlineMessage.qml
     private/FormCardUnits.qml
 )
 

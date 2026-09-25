@@ -9,6 +9,8 @@ import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 
+import "private" as Private
+
 /*!
    \qmltype FormTextAreaDelegate
    \inqmlmodule org.kde.kirigamiaddons.formcard
@@ -212,7 +214,7 @@ AbstractFormDelegate {
             Layout.fillWidth: true
         }
 
-        Kirigami.InlineMessage {
+        Private.FormInlineMessage {
             id: formErrorHandler
 
             visible: root.statusMessage.length > 0
@@ -234,4 +236,3 @@ AbstractFormDelegate {
         }
     }
 }
-

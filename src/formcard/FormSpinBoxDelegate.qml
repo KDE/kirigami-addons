@@ -237,7 +237,7 @@ AbstractFormDelegate {
             }
         }
 
-        Kirigami.InlineMessage {
+        Private.FormInlineMessage {
             id: formErrorHandler
             visible: root.statusMessage.length > 0
             Layout.topMargin: visible ? Kirigami.Units.smallSpacing : 0

@@ -276,7 +276,7 @@ AbstractFormDelegate {
                 wrapMode: Text.Wrap
             }
 
-            Kirigami.InlineMessage {
+            Private.FormInlineMessage {
                 id: formErrorHandler
 
                 visible: false

@@ -11,6 +11,8 @@ import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.delegates as Delegates
 import org.kde.kirigamiaddons.components as Components
 
+import "private" as Private
+
 /*!
    \qmltype FormComboBoxDelegate
    \inqmlmodule org.kde.kirigamiaddons.formcard
@@ -500,7 +502,7 @@ AbstractFormDelegate {
             Accessible.ignored: true
         }
 
-        Kirigami.InlineMessage {
+        Private.FormInlineMessage {
             visible: controlRoot.statusMessage.length > 0
             Layout.topMargin: visible ? Kirigami.Units.smallSpacing : 0
             Layout.fillWidth: true
