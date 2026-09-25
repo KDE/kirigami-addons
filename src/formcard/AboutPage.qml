@@ -447,6 +447,7 @@ FormCardPage {
 
     FormCard {
         visible: page.showLibraries
+        autoSeparators: true
         Repeater {
             model: page.showLibraries ? FormCardModule.AboutComponent.components : null
             delegate: libraryDelegate
@@ -460,6 +461,7 @@ FormCardPage {
 
     FormCard {
         visible: aboutData.authors !== undefined && aboutData.authors.length > 0
+        autoSeparators: true
 
         Repeater {
             id: authorsRepeater
@@ -475,6 +477,7 @@ FormCardPage {
 
     FormCard {
         visible: aboutData.credits !== undefined && aboutData.credits.length > 0
+        autoSeparators: true
 
         Repeater {
             id: repCredits
@@ -490,6 +493,7 @@ FormCardPage {
 
     FormCard {
         visible: aboutData.translators !== undefined && aboutData.translators.length > 0
+        autoSeparators: true
 
         Repeater {
             id: repTranslators
