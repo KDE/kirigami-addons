@@ -3,8 +3,9 @@
  * SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
-import QtQuick.Controls
 import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
@@ -46,6 +47,18 @@ Item {
        This is where you should add new Form delegates.
      */
     default property alias delegates: internalColumn.data
+
+    /*!
+       \brief Whether to insert a FormDelegateSeparator between visible delegates.
+
+       This also works for delegates created by a Repeater. Do not add explicit
+       separators when this property is enabled.
+
+       \default false
+     */
+    property bool autoSeparators: false
+
+    readonly property list<Item> _visibleDelegates: internalColumn.visibleChildren.filter(child => child.height !== 0)
 
     /*!
        \brief The maximum width of the card.
@@ -113,7 +126,7 @@ Item {
             readonly property Item _firstVisibleItem: _visibleItems[0] ?? null
             readonly property Item _lastVisibleItem: _visibleItems[_visibleItems.length - 1] ?? null
 
-            spacing: 0
+            spacing: root.autoSeparators && separatorRepeater.count > 0 ? separatorRepeater.itemAt(0).implicitHeight : 0
 
             // add 1 to margins to account for the border (so content doesn't overlap it)
             anchors {
@@ -122,6 +135,27 @@ Item {
                 rightMargin: root.rightPadding + rectangle.borderWidth
                 topMargin: root.topPadding + rectangle.borderWidth
                 bottomMargin: root.bottomPadding + rectangle.borderWidth
+            }
+        }
+
+        Repeater {
+            id: separatorRepeater
+
+            model: root.autoSeparators ? Math.max(0, root._visibleDelegates.length - 1) : 0
+
+            FormDelegateSeparator {
+                required property int index
+
+                objectName: "automaticSeparator"
+
+                above: root._visibleDelegates[index] ?? null
+                below: root._visibleDelegates[index + 1] ?? null
+                hMargins: Kirigami.Units.largeSpacing
+
+                x: internalColumn.x + hMargins
+                width: Math.max(0, internalColumn.width - 2 * hMargins)
+                height: implicitHeight
+                y: above ? internalColumn.y + above.y + above.height + (internalColumn.spacing - height) / 2 : 0
             }
         }
     }
