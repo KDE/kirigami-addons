@@ -49,6 +49,8 @@ import './private' as Private
 AbstractFormDelegate {
     id: root
 
+    property bool _mobileEditing: false
+
     /*!
        \brief A label containing primary text that appears above the text field.
      */
@@ -290,11 +292,15 @@ AbstractFormDelegate {
 
     onActiveFocusChanged: { // propagate focus to the text field
         if (activeFocus) {
+            _mobileEditing = true;
             textField.forceActiveFocus();
         }
     }
 
-    onClicked: textField.forceActiveFocus()
+    onClicked: {
+        _mobileEditing = true;
+        textField.forceActiveFocus();
+    }
     background: null
     Accessible.role: Accessible.EditableText
 
@@ -304,10 +310,11 @@ AbstractFormDelegate {
             spacing: Private.FormCardUnits.horizontalSpacing
 
             Layout.fillWidth: true
+            visible: !Kirigami.Settings.isMobile || root._mobileEditing
 
             Label {
                 Layout.fillWidth: true
-                text: label
+                text: root.label
                 elide: Text.ElideRight
                 color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
                 wrapMode: Text.Wrap
@@ -340,26 +347,80 @@ AbstractFormDelegate {
         }
 
         RowLayout {
-            id: innerRow
-
+            Layout.fillWidth: true
             spacing: Kirigami.Units.smallSpacing
 
-            Layout.fillWidth: true
+            RowLayout {
+                id: innerRow
 
-            TextField {
-                id: textField
-                Accessible.name: root.label
+                spacing: Kirigami.Units.smallSpacing
+
                 Layout.fillWidth: true
-                placeholderText: root.placeholderText
-                text: root.text
-                onTextChanged: root.text = text
-                onAccepted: root.accepted()
-                onEditingFinished: root.editingFinished()
-                onTextEdited: {
-                       root.text = text;
-                       root.textEdited();
+
+                ColumnLayout {
+                    Layout.fillWidth: true
+                    spacing: 0
+                    visible: Kirigami.Settings.isMobile && !root._mobileEditing
+
+                    Label {
+                        Layout.fillWidth: true
+                        text: root.label
+                        elide: Text.ElideRight
+                        color: root.enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
+                        wrapMode: Text.Wrap
+                        maximumLineCount: 2
+                        Accessible.ignored: true
+                    }
+
+                    Label {
+                        Layout.fillWidth: true
+                        text: root.text
+                        visible: text.length > 0
+                        color: Kirigami.Theme.disabledTextColor
+                        wrapMode: Text.Wrap
+                        Accessible.ignored: true
+                    }
                 }
-                activeFocusOnTab: false
+
+                TextField {
+                    id: textField
+                    Accessible.name: root.label
+                    Layout.fillWidth: true
+                    visible: !Kirigami.Settings.isMobile || root._mobileEditing
+                    placeholderText: root.placeholderText
+                    text: root.text
+                    onTextChanged: root.text = text
+                    onAccepted: root.accepted()
+                    onEditingFinished: root.editingFinished()
+                    onActiveFocusChanged: {
+                        if (!activeFocus && Kirigami.Settings.isMobile) {
+                            root._mobileEditing = false;
+                        }
+                    }
+                    onTextEdited: {
+                        root.text = text;
+                        root.textEdited();
+                    }
+                    activeFocusOnTab: false
+                }
+            }
+
+            Kirigami.Icon {
+                visible: Kirigami.Settings.isMobile && !root._mobileEditing && !root.readOnly && root.enabled
+                source: "document-edit"
+                implicitWidth: Kirigami.Units.iconSizes.smallMedium
+                implicitHeight: Kirigami.Units.iconSizes.smallMedium
+                Accessible.ignored: true
+            }
+
+            ToolButton {
+                objectName: "_mobileDoneButton"
+                visible: Kirigami.Settings.isMobile && root._mobileEditing
+                text: i18ndc("kirigami-addons6", "@action:button", "Done")
+                icon.name: "dialog-ok"
+                display: AbstractButton.IconOnly
+                focusPolicy: Qt.NoFocus
+                onClicked: textField.focus = false
             }
         }
 
