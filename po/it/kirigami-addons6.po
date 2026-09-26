@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-19 00:43+0000\n"
-"PO-Revision-Date: 2026-09-07 15:47+0200\n"
+"POT-Creation-Date: 2026-09-26 00:44+0000\n"
+"PO-Revision-Date: 2026-09-19 18:23+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -47,12 +47,10 @@ msgstr "Informazioni su KDE"
 #, kde-format
 msgctxt "@title:menu"
 msgid "File"
-msgstr ""
+msgstr "File"
 
 #: actions/abstractkirigamiapplication.cpp:209
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title:menu"
 msgid "Settings"
 msgstr "Impostazioni"
@@ -61,7 +59,7 @@ msgstr "Impostazioni"
 #, kde-format
 msgctxt "@title:menu"
 msgid "Help"
-msgstr ""
+msgstr "Aiuto"
 
 #: actions/private/keysequencehelper.cpp:117
 #, kde-format
@@ -226,7 +224,7 @@ msgstr "Informazioni su KDE"
 #, kde-format
 msgctxt "@title:window"
 msgid "Failed to Load Application"
-msgstr ""
+msgstr "Impossibile caricare l'applicazione"
 
 #: app/kirigamiappdefaults.cpp:114
 #, kde-format
@@ -235,12 +233,14 @@ msgid ""
 "Could not load the QML application. This issue might be caused by your "
 "distribution. Please report it to your distribution first."
 msgstr ""
+"Impossibile caricare l'applicazione QML. Il problema potrebbe essere causato "
+"dalla tua distribuzione: segnalalo prima a loro."
 
 #: app/kirigamiappdefaults.cpp:121
 #, kde-format
 msgctxt "@info"
 msgid "Could not load the QML application."
-msgstr ""
+msgstr "Impossibile caricare l'applicazione QML."
 
 #: components/AbstractMaximizeComponent.qml:137
 #, kde-format
@@ -295,7 +295,7 @@ msgid "Next image"
 msgstr "Immagine successiva"
 
 #: components/Banner.qml:185 formcard/AboutPage.qml:204
-#: formcard/AboutPage.qml:303 formcard/AboutPage.qml:695
+#: formcard/AboutPage.qml:303 formcard/AboutPage.qml:699
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -652,7 +652,7 @@ msgstr "Copyright"
 #: formcard/AboutPage.qml:177
 #, kde-format
 msgid "Release history"
-msgstr ""
+msgstr "Cronologia rilasci"
 
 #: formcard/AboutPage.qml:239
 #, kde-format
@@ -703,34 +703,32 @@ msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "Informazioni sul sistema copiate negli appunti."
 
-#: formcard/AboutPage.qml:457
+#: formcard/AboutPage.qml:458
 #, kde-format
 msgid "Authors"
 msgstr "Autori"
 
-#: formcard/AboutPage.qml:472
+#: formcard/AboutPage.qml:474
 #, kde-format
 msgid "Credits"
 msgstr "Riconoscimenti"
 
-#: formcard/AboutPage.qml:487
+#: formcard/AboutPage.qml:490
 #, kde-format
 msgid "Translators"
 msgstr "Traduttori"
 
-#: formcard/AboutPage.qml:537
-#, fuzzy, kde-format
-#| msgctxt "@title:dialog"
-#| msgid "Information"
+#: formcard/AboutPage.qml:541
+#, kde-format
 msgid "More information"
-msgstr "Informazioni"
+msgstr "Altre informazioni"
 
-#: formcard/AboutPage.qml:597
+#: formcard/AboutPage.qml:601
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Visita la pagina del KDE Store di %1"
 
-#: formcard/AboutPage.qml:606
+#: formcard/AboutPage.qml:610
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Invia un messaggio di posta elettronica a %1"
@@ -825,12 +823,19 @@ msgctxt "@info:status"
 msgid "Url copied to clipboard."
 msgstr "URL copiato negli appunti."
 
-#: formcard/FormPasswordFieldDelegate.qml:308
-#: formcard/FormTextAreaDelegate.qml:185 formcard/FormTextFieldDelegate.qml:324
+#: formcard/FormPasswordFieldDelegate.qml:319
+#: formcard/FormTextAreaDelegate.qml:187 formcard/FormTextFieldDelegate.qml:332
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
 msgstr "%1/%2"
+
+#: formcard/FormPasswordFieldDelegate.qml:411
+#: formcard/FormTextFieldDelegate.qml:433
+#, kde-format
+msgctxt "@action:button"
+msgid "Done"
+msgstr ""
 
 #: onboarding/private/OnboardingOverlay.qml:201
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-19 00:43+0000\n"
+"POT-Creation-Date: 2026-09-26 00:44+0000\n"
 "PO-Revision-Date: 2026-09-21 12:28+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -297,7 +297,7 @@ msgid "Next image"
 msgstr "Proxime imagine"
 
 #: components/Banner.qml:185 formcard/AboutPage.qml:204
-#: formcard/AboutPage.qml:303 formcard/AboutPage.qml:695
+#: formcard/AboutPage.qml:303 formcard/AboutPage.qml:699
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -706,32 +706,32 @@ msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "Information de Systema copiate a area de transferentia."
 
-#: formcard/AboutPage.qml:457
+#: formcard/AboutPage.qml:458
 #, kde-format
 msgid "Authors"
 msgstr "Autores"
 
-#: formcard/AboutPage.qml:472
+#: formcard/AboutPage.qml:474
 #, kde-format
 msgid "Credits"
 msgstr "Gratias"
 
-#: formcard/AboutPage.qml:487
+#: formcard/AboutPage.qml:490
 #, kde-format
 msgid "Translators"
 msgstr "Traductores"
 
-#: formcard/AboutPage.qml:537
+#: formcard/AboutPage.qml:541
 #, kde-format
 msgid "More information"
 msgstr "Altere information"
 
-#: formcard/AboutPage.qml:597
+#: formcard/AboutPage.qml:601
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Visita pagina %1 de KDE Store"
 
-#: formcard/AboutPage.qml:606
+#: formcard/AboutPage.qml:610
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Invia un message de e-posta a  %1"
@@ -826,12 +826,19 @@ msgctxt "@info:status"
 msgid "Url copied to clipboard."
 msgstr "URL copiate a area de transferentia."
 
-#: formcard/FormPasswordFieldDelegate.qml:308
-#: formcard/FormTextAreaDelegate.qml:185 formcard/FormTextFieldDelegate.qml:324
+#: formcard/FormPasswordFieldDelegate.qml:319
+#: formcard/FormTextAreaDelegate.qml:187 formcard/FormTextFieldDelegate.qml:332
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
 msgstr "%1/%2"
+
+#: formcard/FormPasswordFieldDelegate.qml:411
+#: formcard/FormTextFieldDelegate.qml:433
+#, kde-format
+msgctxt "@action:button"
+msgid "Done"
+msgstr ""
 
 #: onboarding/private/OnboardingOverlay.qml:201
 #, kde-format
