@@ -1,5 +1,126 @@
 /*!
    \qmlmodule org.kde.kirigamiaddons.formcard
    \title Kirigami Addons FormCard QML Types
-   \brief Todo
+   \brief Form controls for settings pages and dialogs.
+
+   The FormCard module provides controls for settings pages and other forms.
+   Import it with an alias so that its types are easy to distinguish from
+   regular Qt Quick Controls:
+
+   \qml
+   import org.kde.kirigamiaddons.formcard as FormCard
+   \endqml
+
+   \section1 Organizing a form
+
+   A \l FormCardPage is a scrollable page that arranges form sections. Each
+   section normally has a \l FormHeader followed by a \l FormCard. Put the
+   header beside the card in the page, not inside it. The card holds one or
+   more form delegates, such as \l FormSwitchDelegate,
+   \l FormTextFieldDelegate, or \l FormButtonDelegate. The card lays out its
+   delegates vertically and supplies their shared background.
+
+   \qml
+   import org.kde.kirigamiaddons.formcard as FormCard
+
+   FormCard.FormCardPage {
+       title: i18nc("@title", "Settings")
+
+       FormCard.FormHeader {
+           title: i18nc("@title:group", "Account")
+       }
+
+       FormCard.FormCard {
+           autoSeparators: true
+
+           FormCard.FormTextFieldDelegate {
+               label: i18nc("@label:textbox", "Display name")
+           }
+
+           FormCard.FormSwitchDelegate {
+               text: i18nc("@option:check", "Show online status")
+           }
+       }
+   }
+   \endqml
+
+   Add another header and card for another section. The card's
+   \l FormCard::autoSeparators property inserts separators between visible
+   delegates when enabled. You can also add \l FormDelegateSeparator
+   explicitly when you need to control where a separator appears.
+
+   \section1 Creating a custom delegate
+
+   Use \l AbstractFormDelegate as the root of a reusable QML component. It
+   supplies the card's padding, hover and click behavior, and default
+   background. Provide a \c contentItem with an implicit size, and expose
+   any additional properties your delegate needs. For example, save the
+   following as \c CounterDelegate.qml:
+
+   \qml
+   import QtQuick.Controls as Controls
+   import org.kde.kirigamiaddons.formcard as FormCard
+
+   FormCard.AbstractFormDelegate {
+       id: root
+
+       property int count: 0
+
+       text: i18nc("@action:button", "Count: %1").arg(count)
+       onClicked: root.count++
+
+       contentItem: Controls.Label {
+           text: root.text
+       }
+   }
+   \endqml
+
+   Use \c CounterDelegate inside a \l FormCard, just like the built-in
+   delegates. The inherited \c text property also gives this clickable
+   delegate an accessible name. To remove the default background for a
+   different design, set \c {background: null}.
+
+   \section1 Using delegates in a dialog
+
+   \l FormCardDialog provides a dialog header, a vertical layout for form
+   delegates, and optional standard buttons. Place delegates directly inside
+   it; no \l FormCard or \l FormCardPage is needed. Use \c standardButtons to
+   choose the actions and handle \c onAccepted or \c onRejected as with a
+   Qt Quick Controls Dialog:
+
+   \qml
+   import QtQuick.Controls as Controls
+   import org.kde.kirigamiaddons.formcard as FormCard
+
+   FormCard.FormCardDialog {
+       id: dialog
+
+       signal profileCreated(string name)
+
+       title: i18nc("@title:window", "Create Profile")
+       standardButtons: Controls.Dialog.Ok | Controls.Dialog.Cancel
+
+       FormCard.FormTextFieldDelegate {
+           id: nameField
+           label: i18nc("@label:textbox", "Profile name")
+       }
+
+       FormCard.FormDelegateSeparator {}
+
+       FormCard.FormSwitchDelegate {
+           text: i18nc("@option:check", "Use as default")
+       }
+
+       onAccepted: profileCreated(nameField.text)
+   }
+   \endqml
+
+   Call \c dialog.open() from the action that should show the form. Custom
+   delegates based on \l AbstractFormDelegate can also be placed directly
+   in a \l FormCardDialog.
+
+   \sa FormCardPage
+   \sa FormCard
+   \sa FormCardDialog
+   \sa AbstractFormDelegate
  */

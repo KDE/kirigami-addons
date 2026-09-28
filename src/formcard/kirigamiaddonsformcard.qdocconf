@@ -1,7 +1,7 @@
 include($KDE_DOCS/global/qt-module-defaults.qdocconf)
 
 project = KirigamiAddonsFormCard
-description = Todo
+description = Form controls for settings pages and dialogs
 
 documentationinheaders = true
 

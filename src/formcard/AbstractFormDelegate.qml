@@ -18,7 +18,7 @@ import './private' as P
    This component can be used to create your own custom FormCard delegates.
 
    By default, it includes a background with hover and click feedback.
-   Set the \c background property to \c {Item {}} to remove it.
+   Set the \c background property to \c null to remove it.
 
    \since 0.11.0
 
