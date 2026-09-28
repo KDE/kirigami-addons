@@ -70,6 +70,16 @@ Item {
         delegates: [explicitGridDelegate]
     }
 
+    FormCard.FormGridContainer {
+        id: dynamicGrid
+    }
+
+    Component {
+        id: dynamicGridDelegate
+
+        Controls.Button {}
+    }
+
     function separators() {
         return card.children[0].children.filter(item => item.objectName === "automaticSeparator");
     }
@@ -142,6 +152,21 @@ Item {
         function test_explicitDelegates() {
             compare(explicitGrid.delegates.length, 1);
             compare(explicitGrid.delegates[0], explicitGridDelegate);
+
+            dynamicGridDelegate.createObject(explicitGrid);
+            compare(explicitGrid.delegates.length, 1);
+            compare(explicitGrid.delegates[0], explicitGridDelegate);
+        }
+
+        function test_controlsAddedAfterConstruction() {
+            compare(dynamicGrid.delegates.length, 0);
+
+            const first = dynamicGridDelegate.createObject(dynamicGrid);
+            const second = dynamicGridDelegate.createObject(dynamicGrid);
+            tryCompare(dynamicGrid.delegates, "length", 2);
+            compare(dynamicGrid.delegates[0], first);
+            compare(dynamicGrid.delegates[1], second);
+            compare(dynamicGrid.hasDelegates, true);
         }
     }
 }
