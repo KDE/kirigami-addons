@@ -1,7 +1,7 @@
 include($KDE_DOCS/global/qt-module-defaults.qdocconf)
 
 project = KirigamiAddonsTreeview
-description = Todo
+description = Tree expansion decorations for item views backed by KDescendantsProxyModel.
 
 documentationinheaders = true
 

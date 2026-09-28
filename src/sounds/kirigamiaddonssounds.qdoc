@@ -1,5 +1,8 @@
 /*!
    \qmlmodule org.kde.kirigamiaddons.sounds
    \title Kirigami Addons Sounds QML Types
-   \brief Todo
+   \brief QML types for listing and selecting notification sounds and ringtones.
+
+   \l SoundsModel lists available sounds, and \l SoundsPicker lets users
+   select and preview one. Both types are deprecated since 1.14.1.
  */

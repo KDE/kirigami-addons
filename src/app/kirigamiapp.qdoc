@@ -4,5 +4,8 @@
    \ingroup modules
    \cmakepackage KF6
    \cmakecomponent KirigamiAddons
-   \brief Todo
+   \brief Helpers for setting up Kirigami applications.
+
+   Use \l KirigamiAppDefaults to apply suitable Qt defaults and load the
+   application's QML module. The older \l KirigamiApp class is deprecated.
  */

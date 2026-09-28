@@ -1,7 +1,7 @@
 include($KDE_DOCS/global/qt-module-defaults.qdocconf)
 
 project = KirigamiAddonsComponents
-description = Todo
+description = Reusable controls and visual components for Kirigami applications.
 
 documentationinheaders = true
 

@@ -1,7 +1,7 @@
 include($KDE_DOCS/global/qt-module-defaults.qdocconf)
 
 project = KirigamiAddonsTableView
-description = Todo
+description = Table views with configurable columns, headers, sorting, and selection.
 
 documentationinheaders = true
 

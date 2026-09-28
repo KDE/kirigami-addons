@@ -1,5 +1,9 @@
 /*!
    \qmlmodule org.kde.kirigamiaddons.dateandtime
    \title Kirigami Addons DateAndTime QML Types
-   \brief Todo
+   \brief QML types for selecting dates and times.
+
+   Use \l DatePopup to select a date, or \l TimePopup to select a time in a
+   dialog. \l TimePicker provides a time selection control that can also be
+   embedded in another interface.
  */

@@ -1,7 +1,7 @@
 include($KDE_DOCS/global/qt-module-defaults.qdocconf)
 
 project = KirigamiAddonsSounds
-description = Todo
+description = QML types for listing and selecting notification sounds and ringtones.
 
 documentationinheaders = true
 

@@ -1,7 +1,7 @@
 include($KDE_DOCS/global/qt-module-defaults.qdocconf)
 
 project = KirigamiAddonsDateAndTime
-description = Todo
+description = QML types for selecting dates and times.
 
 documentationinheaders = true
 
