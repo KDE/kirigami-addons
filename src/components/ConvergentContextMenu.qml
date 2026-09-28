@@ -18,13 +18,13 @@ import './private' as P
 /*!
    \qmltype ConvergentContextMenu
    \inqmlmodule org.kde.kirigamiaddons.components
-   \brief Menu popup that appears as a tradional menu on desktop and as a bottom
-   drawer mobile.
+   \brief A context menu that can appear as a standard menu, bottom drawer, or dialog.
 
-   ConvergentContextMenu uses abstract \l {QtQuick.Controls::Action} {QtQuick.Controls.Action}
-   and \l {Action} {Kirigami.Action} to build
-   the traditional menu on desktop and the bottom drawer on mobile. Most properties
-   of Kirigami.Action are supported including nested actions.
+   Add \l {QtQuick.Controls::Action} {QtQuick Controls actions} or
+   \l {Action} {Kirigami actions} as child items. Kirigami actions can contain
+   nested actions. By default, the menu uses a standard context menu on desktop
+   and a bottom drawer on mobile. A Kirigami action's \c displayComponent can
+   provide a custom delegate in BottomDrawer and Dialog modes.
 
    \qml
    import QtQuick.Controls as Controls
@@ -81,21 +81,22 @@ import './private' as P
            }
        }
 
-       // custom FormCard delegate only supported on mobile
+       // A custom FormCard delegate is used in BottomDrawer and Dialog modes.
        Kirigami.Action {
-           visible: Kirigami.Settings.isMobile
            displayComponent: FormCard.FormButtonDelegate { ... }
        }
    }
    \endqml
 
-   When creating a menu for a ListView, avoid creating a ConvergentContextMenu for each delegate
-   and instead create a global ConvergentContextMenu for the ListView or use a Component and dynamically
-   instantiate the context menu on demand:
+   For a \c ListView, avoid creating a separate menu instance for every
+   delegate. Keep one menu for the view, or define a \c Component and create a
+   menu when it is needed. The example below creates a menu on demand and passes
+   the current delegate's index to it:
 
    \qml
    import QtQuick
    import QtQuick.Controls as Controls
+   import org.kde.kirigami as Kirigami
    import org.kde.kirigamiaddons.components as Addons
 
    ListView {
@@ -112,16 +113,8 @@ import './private' as P
 
            onPressAndHold: openContextMenu()
 
-           // Since Qt 6.9
+           // Open the menu for a platform context-menu request.
            Controls.ContextMenu.onRequested: (position) => openContextMenu()
-
-           // Before Qt 6.9
-           TapHandler {
-               acceptedButtons: Qt.RightButton
-               onSingleTapped: (eventPoint, button) => {
-                   openContextMenu();
-               }
-           }
        }
 
        Component {
@@ -158,25 +151,28 @@ Item {
     }
 
     /*!
-       \qmlproperty list<Action> actions
-       This property holds the list of actions.
+       \qmlproperty list<Action> ConvergentContextMenu::actions
+       The actions displayed in the menu. This is the default property, so add
+       actions as child items.
 
-       This can be either a traditional \l {QtQuick.Controls::Action} {QtQuick.Controls.Action}
-       or a \l {Action} {Kirigami.Action} with sub actions.
+       Each item can be a \l {QtQuick.Controls::Action} {QtQuick Controls action}
+       or a \l {Action} {Kirigami action}. Kirigami actions can contain subactions.
      */
     default property list<T.Action> actions
 
     /*!
-       Optional item which will be displayed as header of the internal ButtonDrawer.
+       Optional item displayed above the actions in the menu.
 
-       \note This is only displayed on the first level of the ContextMenu mobile mode.
+       \note This item is shown only at the top level in BottomDrawer and Dialog
+       display modes. It is not shown in ContextMenu mode.
      */
     property Item headerContentItem
 
     /*!
-       This property holds whether the popup is fully open.
+       Whether the context menu is open.
 
-       \note Setting this property yourself does nothing. You must open the popup using popup().
+       \note Changing this property does not open or close the menu. Use
+       \l popup() and \l close() to control it.
      */
     property bool opened
 
@@ -190,22 +186,16 @@ Item {
     property P.ActionsMenu _desktopMenuItem: null
 
     /*!
-       \brief This property holds what display mode the context menu should show as.
+       \brief The presentation used to display the context menu.
 
-       Set this property to the desired DisplayMode.
-
-       On mobile, displayMode defaults to \c ConvergentContextMenu.BottomDrawer.
-
-       \default ConvergentContextMenu.ContextMenu
+       By default, this is ContextMenu on desktop and BottomDrawer on mobile.
 
        \value ConvergentContextMenu.ContextMenu
-              A standard ContextMenu component as used in desktop platforms.
+              A standard context menu, typically used on desktop platforms.
        \value ConvergentContextMenu.BottomDrawer
-           A bottom drawer displaying the actions of the context menu with multiple layer
-           for nested actions.
+              A bottom drawer that displays nested actions on separate pages.
        \value ConvergentContextMenu.Dialog
-           A dialog displaying the actions of the context menu with multiple layer
-           for nested actions.
+              A dialog that displays nested actions on separate pages.
      */
     property int displayMode: Kirigami.Settings.isMobile ? ConvergentContextMenu.BottomDrawer : ConvergentContextMenu.ContextMenu
 
@@ -215,7 +205,7 @@ Item {
     signal closed
 
     /*!
-       Close the context menu.
+       Close the currently open context menu.
      */
     function close(): void {
         if (_mobileMenuItem) {
@@ -236,8 +226,12 @@ Item {
     /*!
        Open the context menu.
 
-       \a parent the item the menu should be positioned relative to.
-       \a position the position, relative to \a parent, to open the menu at.
+       \a parent The item that owns the menu and, in ContextMenu mode, the item
+       it is positioned relative to. If omitted, the menu uses this component as
+       its parent.
+
+       \a position The location in \a parent's coordinate system where a
+       ContextMenu should open. This argument is used only in ContextMenu mode.
      */
     function popup(parent = null, position = null): void {
         if (displayMode === ConvergentContextMenu.BottomDrawer) {
