@@ -116,7 +116,7 @@ QList<KAboutComponent> AboutComponent::components() const
                                           KAboutLicense::LGPL_V3));
 
 #if defined(Q_OS_LINUX) && !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
-    QString packageText = i18nc("Linux packaging format", "Unknown/Default");
+    QString packageText;
     if (KSandbox::isFlatpak()) {
         packageText = i18nc("Linux packaging format", "Flatpak");
     }
@@ -126,7 +126,9 @@ QList<KAboutComponent> AboutComponent::components() const
     if (qEnvironmentVariableIsSet("APPIMAGE")) {
         packageText = i18nc("Linux packaging format", "AppImage");
     }
-    allComponents.append(KAboutComponent(packageText, i18nc("@info", "Distribution method.")));
+    if (!packageText.isEmpty()) {
+        allComponents.append(KAboutComponent(packageText, i18nc("@info", "Distribution method.")));
+    }
 #endif
 
     allComponents.prepend(KAboutComponent(platform, i18nc("@info", "Underlying platform.")));
