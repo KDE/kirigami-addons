@@ -40,6 +40,26 @@ Item {
         }
     }
 
+    FormCard.FormSliderDelegate {
+        id: sliderDelegate
+
+        y: 120
+        width: 300
+        label: "Opacity"
+        from: 0
+        to: 1
+        stepSize: 0.1
+        valueText: `${Math.round(value * 100)}%`
+        leading: Item { implicitWidth: 20; implicitHeight: 20 }
+        trailing: Item { implicitWidth: 20; implicitHeight: 20 }
+    }
+
+    SignalSpy {
+        id: sliderMovedSpy
+        target: sliderDelegate
+        signalName: "moved"
+    }
+
     FormCard.FormGridContainer {
         id: grid
 
@@ -167,6 +187,28 @@ Item {
             compare(dynamicGrid.delegates[0], first);
             compare(dynamicGrid.delegates[1], second);
             compare(dynamicGrid.hasDelegates, true);
+        }
+    }
+
+    TestCase {
+        name: "FormSliderDelegate"
+        when: windowShown
+
+        function test_valueAndUserMovement() {
+            const slider = findChild(sliderDelegate, "formSlider");
+            verify(slider !== null);
+            verify(slider.width < sliderDelegate.width - 40);
+
+            sliderMovedSpy.clear();
+            sliderDelegate.value = 0.4;
+            compare(sliderDelegate.valueText, "40%");
+            compare(sliderMovedSpy.count, 0);
+
+            slider.forceActiveFocus();
+            keyClick(Qt.Key_Right);
+            verify(Math.abs(sliderDelegate.value - 0.5) < 0.00001);
+            compare(sliderMovedSpy.count, 1);
+            compare(sliderDelegate.valueText, "50%");
         }
     }
 }

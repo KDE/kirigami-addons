@@ -23,8 +23,8 @@ Kirigami.ApplicationWindow {
     height: Kirigami.Settings.isMobile ? 550 : 500
 
     pageStack.defaultColumnWidth: Kirigami.Units.gridUnit * 35
-    pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.ToolBar;
-    pageStack.globalToolBar.showNavigationButtons: Kirigami.ApplicationHeaderStyle.ShowBackButton;
+    pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.ToolBar
+    pageStack.globalToolBar.showNavigationButtons: Kirigami.ApplicationHeaderStyle.ShowBackButton
 
     pageStack.initialPage: pageComponent
     // Dummy implementation of ki18n
@@ -77,34 +77,34 @@ Kirigami.ApplicationWindow {
         FormCard.AboutPage {
             aboutData: {
                 "displayName": "KirigamiApp",
-               "productName" : "kirigami/app",
-               "componentName" : "kirigamiapp",
-               "shortDescription" : "A Kirigami example",
-               "homepage" : "",
-               "bugAddress" : "submit@bugs.kde.org",
-               "version" : "5.14.80",
-               "otherText" : "",
-               "authors" : [
-                   {
-                       "name" : "Paul Müller",
-                       "task" : "Concept and development",
-                       "emailAddress" : "somebody@kde.org",
-                       "webAddress" : "",
-                       "ocsUsername" : ""
-                   }
-               ],
-               "credits" : [],
-               "translators" : [],
-               "licenses" : [
-                   {
-                       "name" : "GPL v2",
-                       "text" : "long, boring, license text",
-                       "spdx" : "GPL-2.0"
-                   }
-               ],
-               "copyrightStatement" : "© 2010-2018 Plasma Development Team",
-               "desktopFileName" : "org.kde.kirigamiapp"
-           }
+                "productName": "kirigami/app",
+                "componentName": "kirigamiapp",
+                "shortDescription": "A Kirigami example",
+                "homepage": "",
+                "bugAddress": "submit@bugs.kde.org",
+                "version": "5.14.80",
+                "otherText": "",
+                "authors": [
+                    {
+                        "name": "Paul Müller",
+                        "task": "Concept and development",
+                        "emailAddress": "somebody@kde.org",
+                        "webAddress": "",
+                        "ocsUsername": ""
+                    }
+                ],
+                "credits": [],
+                "translators": [],
+                "licenses": [
+                    {
+                        "name": "GPL v2",
+                        "text": "long, boring, license text",
+                        "spdx": "GPL-2.0"
+                    }
+                ],
+                "copyrightStatement": "© 2010-2018 Plasma Development Team",
+                "desktopFileName": "org.kde.kirigamiapp"
+            }
         }
     }
 
@@ -170,17 +170,15 @@ Kirigami.ApplicationWindow {
             }
 
             FormCard.FormCard {
-                FormCard.FormDateTimeDelegate {}
+                autoSeparators: true
 
-                FormCard.FormDelegateSeparator {}
+                FormCard.FormDateTimeDelegate {}
 
                 FormCard.FormDateTimeDelegate {
                     text: "Arrival day:"
                     minimumDate: new Date()
                     dateTimeDisplay: FormCard.FormDateTimeDelegate.DateTimeDisplay.Date
                 }
-
-                FormCard.FormDelegateSeparator {}
 
                 FormCard.FormDateTimeDelegate {
                     text: "Arrival time:"
@@ -194,7 +192,7 @@ Kirigami.ApplicationWindow {
                 title: "Buttons"
             }
             FormCard.FormCard {
-                Layout.fillWidth: true
+                autoSeparators: true
 
                 FormCard.FormButtonDelegate {
                     id: delegate1
@@ -203,15 +201,11 @@ Kirigami.ApplicationWindow {
                     onClicked: applicationWindow().pageStack.push(pageComponent)
                 }
 
-                FormCard.FormDelegateSeparator { above: delegate1; below: delegate2 }
-
                 FormCard.FormButtonDelegate {
                     id: delegate2
                     text: "Form Dialog"
                     onClicked: formDialog.open()
                 }
-
-                FormCard.FormDelegateSeparator { above: delegate2; below: delegate3 }
 
                 FormCard.FormButtonDelegate {
                     id: delegate3
@@ -229,6 +223,8 @@ Kirigami.ApplicationWindow {
                 title: "Checkboxes"
             }
             FormCard.FormCard {
+                autoSeparators: true
+
                 FormCard.FormCheckDelegate {
                     id: checkbox1
                     text: "Check the first box"
@@ -244,7 +240,7 @@ Kirigami.ApplicationWindow {
                     text: "Check the third box"
                 }
             }
-            
+
             FormCard.FormSectionText {
                 text: "Use cards to denote relevant groups of settings."
             }
@@ -254,27 +250,23 @@ Kirigami.ApplicationWindow {
                 title: "Switches"
             }
             FormCard.FormCard {
+                autoSeparators: true
+
                 FormCard.FormSwitchDelegate {
                     id: switch1
                     text: "Toggle the first switch"
                 }
-
-                FormCard.FormDelegateSeparator { above: switch1; below: switch2 }
 
                 FormCard.FormSwitchDelegate {
                     id: switch2
                     text: "Toggle the second switch"
                 }
 
-                FormCard.FormDelegateSeparator { above: switch2; below: switch3 }
-
                 FormCard.FormSwitchDelegate {
                     id: switch3
                     text: "Toggle the third switch"
                     description: "This is a description for the switch."
                 }
-                
-                FormCard.FormDelegateSeparator { above: switch3; below: layoutMirroring }
 
                 FormCard.FormSwitchDelegate {
                     id: layoutMirroring
@@ -293,14 +285,14 @@ Kirigami.ApplicationWindow {
                 title: "Dropdowns"
             }
             FormCard.FormCard {
+                autoSeparators: true
+
                 FormCard.FormComboBoxDelegate {
                     id: dropdown1
                     text: "Select a color"
                     Component.onCompleted: currentIndex = indexOfValue("Breeze Blue")
                     model: ["Breeze Blue", "Konqi Green", "Velvet Red", "Bright Yellow"]
                 }
-
-                FormCard.FormDelegateSeparator { above: dropdown1; below: dropdown2 }
 
                 FormCard.FormComboBoxDelegate {
                     id: dropdown2
@@ -309,8 +301,6 @@ Kirigami.ApplicationWindow {
                     model: ["Circle", "Square", "Pentagon", "Triangle"]
                 }
 
-                FormCard.FormDelegateSeparator { above: dropdown2; below: dropdown3 }
-
                 FormCard.FormComboBoxDelegate {
                     id: dropdown3
                     text: "Select a time format"
@@ -318,8 +308,6 @@ Kirigami.ApplicationWindow {
                     Component.onCompleted: currentIndex = indexOfValue("Use System Default")
                     model: ["Use System Default", "24 Hour Time", "12 Hour Time"]
                 }
-
-                FormCard.FormDelegateSeparator { above: dropdown3; below: dropdown4 }
 
                 FormCard.FormComboBoxDelegate {
                     id: dropdown4
@@ -335,6 +323,8 @@ Kirigami.ApplicationWindow {
                 title: "Radio buttons"
             }
             FormCard.FormCard {
+                autoSeparators: true
+
                 FormCard.FormRadioDelegate {
                     id: radio1
                     text: "Always on"
@@ -354,38 +344,31 @@ Kirigami.ApplicationWindow {
             // misc
             FormCard.FormCard {
                 Layout.topMargin: Kirigami.Units.largeSpacing
+                autoSeparators: true
 
-                FormCard.AbstractFormDelegate {
+                FormCard.FormSliderDelegate {
                     id: slider1
-                    Layout.fillWidth: true
+                    label: "Brightness"
 
-                    background: Item {}
+                    leading: Kirigami.Icon {
+                        implicitWidth: Kirigami.Units.iconSizes.smallMedium
+                        implicitHeight: Kirigami.Units.iconSizes.smallMedium
+                        source: "brightness-low-symbolic"
+                        Accessible.ignored: true
+                    }
 
-                    contentItem: RowLayout {
-                        spacing: Kirigami.Units.gridUnit
-                        Kirigami.Icon {
-                            implicitWidth: Kirigami.Units.iconSizes.smallMedium
-                            implicitHeight: Kirigami.Units.iconSizes.smallMedium
-                            source: "brightness-low"
-                        }
-
-                        Controls.Slider {
-                            Layout.fillWidth: true
-                        }
-
-                        Kirigami.Icon {
-                            implicitWidth: Kirigami.Units.iconSizes.smallMedium
-                            implicitHeight: Kirigami.Units.iconSizes.smallMedium
-                            source: "brightness-high"
-                        }
+                    trailing: Kirigami.Icon {
+                        implicitWidth: Kirigami.Units.iconSizes.smallMedium
+                        implicitHeight: Kirigami.Units.iconSizes.smallMedium
+                        source: "brightness-high-symbolic"
+                        Accessible.ignored: true
                     }
                 }
 
-                FormCard.FormDelegateSeparator { below: textinput1 }
-
                 FormCard.AbstractFormDelegate {
                     id: textinput1
-                    Layout.fillWidth: true
+
+                    background: null
                     contentItem: RowLayout {
                         Controls.Label {
                             Layout.fillWidth: true
@@ -399,11 +382,10 @@ Kirigami.ApplicationWindow {
                     }
                 }
 
-                FormCard.FormDelegateSeparator { above: textinput1; below: action1 }
-
                 FormCard.AbstractFormDelegate {
                     id: action1
-                    Layout.fillWidth: true
+
+                    background: null
                     contentItem: RowLayout {
                         Controls.Label {
                             Layout.fillWidth: true
@@ -423,21 +405,19 @@ Kirigami.ApplicationWindow {
                 title: "Information"
             }
             FormCard.FormCard {
+                autoSeparators: true
+
                 FormCard.FormTextDelegate {
                     id: info1
                     text: "Color"
                     description: "Blue"
                 }
 
-                FormCard.FormDelegateSeparator {}
-
                 FormCard.FormTextDelegate {
                     id: info2
                     text: "Best Desktop Environment"
                     description: "KDE Plasma (Mobile)"
                 }
-
-                FormCard.FormDelegateSeparator {}
 
                 FormCard.FormTextDelegate {
                     id: info3
@@ -460,12 +440,12 @@ Kirigami.ApplicationWindow {
             }
 
             FormCard.FormCard {
+                autoSeparators: true
+
                 FormCard.FormTextFieldDelegate {
                     id: account
                     label: "Account name"
                 }
-
-                FormCard.FormDelegateSeparator {}
 
                 FormCard.FormPasswordFieldDelegate {
                     id: password1
@@ -476,8 +456,6 @@ Kirigami.ApplicationWindow {
                     text: "666666666"
                     showPasswordQuality: true
                 }
-
-                FormCard.FormDelegateSeparator {}
 
                 FormCard.FormPasswordFieldDelegate {
                     id: password2
@@ -494,12 +472,12 @@ Kirigami.ApplicationWindow {
                 title: "Spin boxes"
             }
             FormCard.FormCard {
+                autoSeparators: true
+
                 FormCard.FormSpinBoxDelegate {
                     label: "Amount"
                     value: 42
                 }
-
-                FormCard.FormDelegateSeparator {}
 
                 FormCard.FormSpinBoxDelegate {
                     label: "Amount 2"
@@ -509,11 +487,28 @@ Kirigami.ApplicationWindow {
                 }
             }
 
+            FormCard.FormHeader {
+                title: "Sliders"
+            }
+            FormCard.FormCard {
+                FormCard.FormSliderDelegate {
+                    label: "Opacity"
+                    from: 0
+                    to: 100
+                    stepSize: 5
+                    value: 50
+                    valueText: `${Math.round(value)}%`
+                    description: "Use the arrow keys to adjust the value."
+                }
+            }
+
             // file fields
             FormCard.FormHeader {
                 title: "File boxes"
             }
             FormCard.FormCard {
+                autoSeparators: true
+
                 FormCard.FormFileDelegate {
                     id: openFile
 
@@ -521,8 +516,6 @@ Kirigami.ApplicationWindow {
                     currentFolder: StandardPaths.standardLocations(StandardPaths.DocumentsLocation)[0]
                     fileMode: FileDialog.OpenFile
                 }
-
-                FormCard.FormDelegateSeparator { above: saveFile; below: openFile }
 
                 FormCard.FormFileDelegate {
                     id: saveFile
@@ -532,8 +525,6 @@ Kirigami.ApplicationWindow {
                     fileMode: FileDialog.SaveFile
                 }
 
-                FormCard.FormDelegateSeparator { above: openFolder; below: saveFile }
-
                 FormCard.FormFolderDelegate {
                     id: openFolder
 
@@ -542,7 +533,7 @@ Kirigami.ApplicationWindow {
                 }
             }
 
-            // collapsible 
+            // collapsible
             FormCard.FormHeader {
                 title: "Collapsible"
             }

@@ -17,7 +17,7 @@
    section normally has a \l FormHeader followed by a \l FormCard. Put the
    header beside the card in the page, not inside it. The card holds one or
    more form delegates, such as \l FormSwitchDelegate,
-   \l FormTextFieldDelegate, or \l FormButtonDelegate. The card lays out its
+   \l FormSliderDelegate, \l FormTextFieldDelegate, or \l FormButtonDelegate. The card lays out its
    delegates vertically and supplies their shared background.
 
    \qml
