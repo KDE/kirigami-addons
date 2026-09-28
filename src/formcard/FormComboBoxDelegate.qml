@@ -149,11 +149,11 @@ AbstractFormDelegate {
     property alias editText: combobox.editText
 
     /*!
-     *       \brief This property holds an item that will be displayed after the
-     *       delegate's contents.
-     *
-     *       \default null
-     *       \since 1.12.0
+       \brief This property holds an item that will be displayed after the
+       delegate's contents.
+
+       \default null
+       \since 1.12.0
      */
     property Item trailing: null
 

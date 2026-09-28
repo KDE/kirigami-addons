@@ -8,21 +8,19 @@ import org.kde.kirigami as Kirigami
 import QtQuick.Layouts
 import org.kde.kirigamiaddons.dateandtime
 
-/**
- * A large time picker
- * Represented as a clock provides a very visual way for a user
- * to set and visulise a time being chosen
+/*!
+   A large time picker represented as a clock.
  */
 RowLayout {
     id: root
 
-    /**
-     * This property holds the current hours selected. This is a number between 0 and 23.
+    /*!
+       This property holds the current hours selected. This is a number between 0 and 23.
      */
     property int hours
 
-    /**
-     * This property holds the current minutes selected. This is a number between 0 and 59.
+    /*!
+       This property holds the current minutes selected. This is a number between 0 and 59.
      */
     property int minutes
 

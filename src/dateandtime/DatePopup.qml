@@ -10,42 +10,42 @@ import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.components as Components
 import './private/' as P
 
-/**
- * A popup that prompts the user to select a date
+/*!
+   A popup that prompts the user to select a date.
  */
 QQC2.Dialog {
     id: root
 
-    /**
-     * @brief The current date and time selected by the user.
+    /*!
+       \brief The current date and time selected by the user.
      */
     property date value: new Date()
 
-    /**
-     * Emitted when the user cancells the popup
-     * @deprecated Use rejected instead.
+    /*!
+       Emitted when the user cancels the popup.
+       \deprecated Use rejected instead.
      */
     signal cancelled()
 
-    /**
-     * This property holds the minimum date (inclusive) that the user can select.
-     *
-     * By default, no limit is applied to the date selection.
+    /*!
+       This property holds the minimum date (inclusive) that the user can select.
+
+       By default, no limit is applied to the date selection.
      */
     property date minimumDate
 
-    /**
-     * This property holds the maximum date (inclusive) that the user can select.
-     *
-     * By default, no limit is applied to the date selection.
+    /*!
+       This property holds the maximum date (inclusive) that the user can select.
+
+       By default, no limit is applied to the date selection.
      */
     property date maximumDate
 
-    /**
-     * This property holds whether the date popup will automatically select a date
-     * on selection or has a "Select" button.
-     *
-     * By default, this is false.
+    /*!
+       This property holds whether the date popup will automatically select a date
+       on selection or has a "Select" button.
+
+       By default, this is false.
      */
     property bool autoAccept: false
 

@@ -10,13 +10,13 @@ import org.kde.kirigamiaddons.components as Components
 QQC2.Dialog {
     id: root
 
-    /**
-     * @brief The current date and time selected by the user.
+    /*!
+       \brief The current date and time selected by the user.
      */
     property date value: new Date()
 
-    /**
-     * Emitted when the user cancells the popup
+    /*!
+       Emitted when the user cancels the popup.
      */
     signal cancelled()
 

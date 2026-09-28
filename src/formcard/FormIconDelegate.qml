@@ -39,7 +39,7 @@ FormCard.AbstractFormDelegate {
     id: root
 
     /*!
-     * This property holds the name of the selected icon.
+       This property holds the name of the selected icon.
      */
     property alias iconName: buttonIcon.source
 

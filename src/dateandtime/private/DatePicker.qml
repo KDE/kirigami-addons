@@ -22,17 +22,17 @@ QQC2.Control {
     property bool showDays: true
     property bool showControlHeader: true
 
-    /**
-     * This property holds the minimum date (inclusive) that the user can select.
-     *
-     * By default, no limit is applied to the date selection.
+    /*!
+       This property holds the minimum date (inclusive) that the user can select.
+
+       By default, no limit is applied to the date selection.
      */
     property date minimumDate
 
-    /**
-     * This property holds the maximum date (inclusive) that the user can select.
-     *
-     * By default, no limit is applied to the date selection.
+    /*!
+       This property holds the maximum date (inclusive) that the user can select.
+
+       By default, no limit is applied to the date selection.
      */
     property date maximumDate
 

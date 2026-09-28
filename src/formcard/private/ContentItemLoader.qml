@@ -5,8 +5,8 @@
 
 import QtQuick
 
-/**
- * Simple component for embedding an item and filling the loader's geometry.
+/*!
+   Simple component for embedding an item and filling the loader's geometry.
  */
 Item {
     id: root
