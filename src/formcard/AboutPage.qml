@@ -111,6 +111,20 @@ FormCardPage {
      */
     property bool showLibraries: true
 
+    property bool _showOnlyNewReleases: false
+
+    Binding {
+        target: FormCardModule.AboutComponent
+        property: "currentVersion"
+        value: page.aboutData.version
+    }
+
+    Binding {
+        target: FormCardModule.AboutComponent
+        property: "releaseVersions"
+        value: page.aboutData.releases ? page.aboutData.releases.map(release => release.version) : []
+    }
+
     title: i18nd("kirigami-addons6", "About %1", page.aboutData.displayName)
 
     FormCard {
@@ -138,11 +152,22 @@ FormCardPage {
                     Layout.fillWidth: true
                     spacing: Kirigami.Units.smallSpacing
 
-                    Kirigami.Heading {
-                        Layout.fillWidth: true
-                        text: page.aboutData.displayName + " " + page.aboutData.version
-                        wrapMode: Text.WordWrap
+                    RowLayout {
+                        spacing: Kirigami.Units.smallSpacing
+
+                        Kirigami.Heading {
+                            Layout.fillWidth: true
+                            text: page.aboutData.displayName + " " + page.aboutData.version
+                            wrapMode: Text.WordWrap
+                        }
+
+                        Kirigami.Badge {
+                            visible: FormCardModule.AboutComponent.hasNewReleases
+                            text: i18nd("kirigami-addons6", "What's new")
+                            type: Kirigami.Badge.Type.Positive
+                        }
                     }
+
 
                     Kirigami.Heading {
                         Layout.fillWidth: true
@@ -156,7 +181,9 @@ FormCardPage {
 
             onClicked: {
                 if (page.aboutData.releases && page.aboutData.releases.length > 0) {
+                    page._showOnlyNewReleases = FormCardModule.AboutComponent.hasNewReleases;
                     releasesSheet.open();
+                    FormCardModule.AboutComponent.updateLastSeenVersion();
                 }
             }
         }
@@ -171,12 +198,20 @@ FormCardPage {
             description: aboutData.copyrightStatement
         }
 
-        data: KirigamiComponents.MessageDialog {
+        data: QQC2.Dialog {
             id: releasesSheet
 
             title: i18nd("kirigami-addons6", "Release history")
             parent: QQC2.Overlay.overlay
-            implicitWidth: parent ? Math.min(parent.width - Kirigami.Units.gridUnit * 2, implicitContentWidth) : implicitContentWidth
+            x: Math.round((parent.width - width) / 2)
+            y: Math.round((parent.height - height) / 2)
+            implicitWidth: parent ? Math.min(parent.width - Kirigami.Units.gridUnit * 2, Kirigami.Units.gridUnit * 30) : Kirigami.Units.gridUnit * 30
+            implicitHeight: Math.min(parent ? parent.height - Kirigami.Units.gridUnit * 2 : Kirigami.Units.gridUnit * 32,
+                                     Kirigami.Units.gridUnit * 32,
+                                     releaseDialogHeader.implicitHeight + releasesColumn.implicitHeight + Kirigami.Units.gridUnit * 2)
+            modal: true
+            focus: true
+            background: KirigamiComponents.DialogRoundedBackground {}
 
             leftPadding: 0
             rightPadding: 0
@@ -184,6 +219,7 @@ FormCardPage {
             topPadding: 0
 
             header: QQC2.Control {
+                id: releaseDialogHeader
                 padding: releasesSheet.padding
                 topPadding: Kirigami.Units.largeSpacing
                 bottomPadding: Kirigami.Units.largeSpacing
@@ -217,15 +253,30 @@ FormCardPage {
             }
 
             contentItem: QQC2.ScrollView {
+                id: releasesScrollView
+                contentWidth: availableWidth
+                contentHeight: releasesColumn.implicitHeight + Kirigami.Units.gridUnit * 2
+                QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AlwaysOff
+
                 ColumnLayout {
+                    id: releasesColumn
                     x: Kirigami.Units.gridUnit
                     y: Kirigami.Units.gridUnit
-                    width: parent ? parent.width - Kirigami.Units.gridUnit * 2 : 0
+                    width: releasesScrollView.availableWidth - Kirigami.Units.gridUnit * 2
                     spacing: Kirigami.Units.largeSpacing * 2
 
                     Repeater {
-                        model: page.aboutData.releases
+                        model: page._showOnlyNewReleases
+                            ? page.aboutData.releases.filter((release, index) => FormCardModule.AboutComponent.newReleaseIndexes.includes(index))
+                            : page.aboutData.releases
                         delegate: releaseDelegate
+                    }
+
+                    QQC2.Button {
+                        Layout.alignment: Qt.AlignHCenter
+                        visible: page._showOnlyNewReleases
+                        text: i18nd("kirigami-addons6", "Show older changes…")
+                        onClicked: page._showOnlyNewReleases = false
                     }
                 }
             }

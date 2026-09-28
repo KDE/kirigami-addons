@@ -1,23 +1,97 @@
 // SPDX-FileCopyrightText: 2024 Carl Schwan <carl@carlschwan.eu>
+// SPDX-FileCopyrightText: 2026 Volker Krause <vkrause@kde.org>
 // SPDX-License-Identifier: LGPL-2.1-or-later
 
 #include "aboutcomponent_p.h"
 
+#include <KConfigGroup>
 #include <KCoreAddons>
 #include <KLocalizedString>
+#include <KSharedConfig>
 #if defined(Q_OS_LINUX) && !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
 #include <KSandbox>
 #endif
 #include <QGuiApplication>
 #include <QClipboard>
+#include <QCoreApplication>
+#include <QVersionNumber>
 
 using namespace Qt::StringLiterals;
 
 AboutComponent::AboutComponent(QObject *parent)
     : QObject(parent)
-{}
+    , m_currentVersion(QCoreApplication::applicationVersion())
+{
+    const KConfigGroup config(KSharedConfig::openStateConfig(), QStringLiteral("WhatsNew"));
+    m_lastSeenVersion = config.readEntry("LastSeenVersion", QString());
+    qWarning() << m_lastSeenVersion;
+}
 
 AboutComponent::~AboutComponent() = default;
+
+QStringList AboutComponent::releaseVersions() const
+{
+    return m_releaseVersions;
+}
+
+QString AboutComponent::currentVersion() const
+{
+    return m_currentVersion;
+}
+
+void AboutComponent::setReleaseVersions(const QStringList &releaseVersions)
+{
+    if (m_releaseVersions == releaseVersions) {
+        return;
+    }
+    m_releaseVersions = releaseVersions;
+    updateNewReleases();
+}
+
+void AboutComponent::setCurrentVersion(const QString &currentVersion)
+{
+    if (m_currentVersion == currentVersion) {
+        return;
+    }
+    m_currentVersion = currentVersion;
+    updateNewReleases();
+}
+
+void AboutComponent::updateNewReleases()
+{
+    m_newReleaseIndexes.clear();
+    const auto lastVersion = QVersionNumber::fromString(m_lastSeenVersion.isEmpty() ? m_currentVersion : m_lastSeenVersion);
+    for (int i = 0; i < m_releaseVersions.size(); ++i) {
+        if (QVersionNumber::fromString(m_releaseVersions.at(i)) > lastVersion) {
+            m_newReleaseIndexes.append(i);
+        }
+    }
+    Q_EMIT releasesChanged();
+    Q_EMIT hasNewReleasesChanged();
+}
+
+QList<int> AboutComponent::newReleaseIndexes() const
+{
+    return m_newReleaseIndexes;
+}
+
+bool AboutComponent::hasNewReleases() const
+{
+    return !m_newReleaseIndexes.empty()
+        && QVersionNumber::fromString(m_lastSeenVersion.isEmpty() ? m_currentVersion : m_lastSeenVersion)
+            < QVersionNumber::fromString(m_currentVersion);
+}
+
+void AboutComponent::updateLastSeenVersion()
+{
+    // This intentionally does not update m_newReleaseIndexes, so things don't change in the UI.
+    m_lastSeenVersion = m_currentVersion;
+    KConfigGroup config(KSharedConfig::openStateConfig(), QStringLiteral("WhatsNew"));
+    config.writeEntry("LastSeenVersion", m_lastSeenVersion);
+    config.sync();
+
+    Q_EMIT hasNewReleasesChanged();
+}
 
 QList<KAboutComponent> AboutComponent::components() const
 {
