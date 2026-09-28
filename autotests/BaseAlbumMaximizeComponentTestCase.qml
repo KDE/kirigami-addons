@@ -174,9 +174,9 @@ TestCase {
         tryCompare(testAlbum.content.currentItem.children[0], "status", Image.Ready)
         wait(200) // Let the image resize animation happen.
 
-        mouseClick(root, 702, 18, Qt.LeftButton)
+        testAlbum.actions[4].trigger()
         compare(testAlbum.footer.visible, false)
-        mouseClick(root, 702, 18, Qt.LeftButton)
+        testAlbum.actions[4].trigger()
         compare(testAlbum.footer.visible, true)
 
         testAlbum.destroy();
