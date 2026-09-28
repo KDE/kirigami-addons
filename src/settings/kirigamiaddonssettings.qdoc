@@ -1,5 +1,130 @@
 /*!
    \qmlmodule org.kde.kirigamiaddons.settings
    \title Kirigami Addons Settings QML Types
-   \brief Todo
+   \brief Pages and navigation for application settings.
+
+   The Settings module presents an application's configuration pages in a
+   desktop window or in the application's page stack on mobile. Import it
+   with an alias:
+
+   \qml
+   import org.kde.kirigamiaddons.settings as Settings
+   \endqml
+
+   \section1 Organizing settings pages
+
+   A \l ConfigurationView owns a list of \l ConfigurationModule objects.
+   Each module describes one settings page: its identifier, label, icon, and
+   the component used to create the page. The view shows a list beside the
+   selected page on desktop. On mobile, it shows the list first and opens a
+   selected page in the application window's page stack.
+
+   A desktop settings window with the selected page beside the module list:
+
+   \image settingsdialogdesktop.png Desktop settings window with the Appearance page selected
+
+   A mobile settings page with modules grouped under headings:
+
+   \image settingsdialogmobile.png Mobile settings page with Settings and About groups
+
+   Set \c window to the application's \c Kirigami.ApplicationWindow
+   before calling \c open(). A module's \c page property is a function that
+   returns a \c Component. A \l {FormCardPage} is a convenient root for a
+   settings page:
+
+   \qml
+   import QtQuick
+   import QtQuick.Controls as Controls
+   import org.kde.kirigami as Kirigami
+   import org.kde.kirigamiaddons.formcard as FormCard
+   import org.kde.kirigamiaddons.settings as Settings
+
+   Kirigami.ApplicationWindow {
+       id: window
+
+       Component {
+           id: generalPage
+
+           FormCard.FormCardPage {
+               title: i18nc("@title", "General")
+
+               FormCard.FormHeader {
+                   title: i18nc("@title:group", "Appearance")
+               }
+
+               FormCard.FormCard {
+                   FormCard.FormSwitchDelegate {
+                       text: i18nc("@option:check", "Use dark colors")
+                   }
+               }
+           }
+       }
+
+       Settings.ConfigurationView {
+           id: settingsView
+           window: window
+
+           modules: [
+               Settings.ConfigurationModule {
+                   moduleId: "general"
+                   text: i18nc("@action:button", "General")
+                   icon.name: "preferences-system-symbolic"
+                   page: () => generalPage
+               }
+           ]
+       }
+
+       Controls.Button {
+           text: i18nc("@action:button", "Settings")
+           onClicked: settingsView.open()
+       }
+   }
+   \endqml
+
+   Add more \l ConfigurationModule objects to \c modules for more pages.
+   Give each module a distinct \c moduleId. Pass that ID to
+   \c {settingsView.open("general")} to select a page when opening the
+   settings view. Without an ID, desktop opens the first module and mobile
+   shows the module list.
+
+   \section1 Controlling modules
+
+   Set a module's \c visible property to hide it from the settings list.
+   Set \c category to a translated heading to group modules on mobile;
+   modules with the default category appear in the main Settings group.
+
+   The view creates each page on its first visit and caches it for later
+   visits. Use \c initialProperties to pass values needed at creation time.
+   For example, if the page component declares a \c {required property string
+   accountName}, initialize it like this:
+
+   \qml
+   Settings.ConfigurationModule {
+       moduleId: "account"
+       text: i18nc("@action:button", "Account")
+       page: () => accountPage
+       initialProperties: () => ({ accountName: window.activeAccountName })
+   }
+   \endqml
+
+   Changes to these values after the page has been created need regular QML
+   bindings or signals; \c initialProperties is called only when creating
+   the page.
+
+   \section1 Ready-made modules
+
+   \l SpellcheckingConfigurationModule supplies a spellchecking settings
+   page when the desktop style supports it. \l ShortcutsConfigurationModule
+   supplies a keyboard shortcut editor on desktop and requires an
+   \l {AbstractKirigamiApplication} from the Actions module through its
+   \c application property. Add either type to \c modules alongside your
+   own \l ConfigurationModule objects.
+
+   \l CategorizedSettings and \l SettingAction are deprecated. Use
+   \l ConfigurationView and \l ConfigurationModule for new settings pages.
+
+   \sa ConfigurationView
+   \sa ConfigurationModule
+   \sa SpellcheckingConfigurationModule
+   \sa ShortcutsConfigurationModule
  */

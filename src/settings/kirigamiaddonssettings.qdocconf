@@ -1,7 +1,7 @@
 include($KDE_DOCS/global/qt-module-defaults.qdocconf)
 
 project = KirigamiAddonsSettings
-description = Todo
+description = Pages and navigation for application settings.
 
 documentationinheaders = true
 
@@ -13,7 +13,7 @@ outputformats = HTML
 
 navigation.landingpage = "Kirigami Addons"
 
-depends += kde kirigami kirigamiaddonsactions qtcore qtquick qtquickcontrols qtgui kirigamiaddonscomponents
+depends += kde kirigami kirigamiaddonsactions qtcore qtquick qtquickcontrols qtgui kirigamiaddonscomponents kirigamiaddonsformcard
 
 qhp.projects = KirigamiAddonsSettings
 
