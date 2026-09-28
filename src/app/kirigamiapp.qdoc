@@ -7,5 +7,5 @@
    \brief Helpers for setting up Kirigami applications.
 
    Use \l KirigamiAppDefaults to apply suitable Qt defaults and load the
-   application's QML module. The older \l KirigamiApp class is deprecated.
+   application's QML module. The older \c KirigamiApp class is deprecated.
  */

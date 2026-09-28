@@ -7,16 +7,25 @@ import QtQuick.Controls as QQC2
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.components as Components
 
+/*!
+   \qmltype TimePopup
+   \inqmlmodule org.kde.kirigamiaddons.dateandtime
+   \brief A dialog for selecting a time.
+
+   Set \l value to the initial date and time. When the user clicks Select,
+   the dialog updates \l value and emits \l accepted.
+ */
 QQC2.Dialog {
     id: root
 
     /*!
-       \brief The current date and time selected by the user.
+       The date and time selected by the user. The time is updated when the
+       user clicks Select.
      */
     property date value: new Date()
 
     /*!
-       Emitted when the user cancels the popup.
+       Emitted when the user clicks Cancel.
      */
     signal cancelled()
 
