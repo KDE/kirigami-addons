@@ -198,37 +198,6 @@ T.Dialog {
     readonly property bool _supportsRememberedChoice: root._positiveButtons.length === 1 && root._negativeButtons.length <= 1
                                                     && (root.standardButtons & ~root._knownButtons) === 0
 
-    property bool _structureReady: false
-
-    Component.onCompleted: {
-        root._structureReady = true;
-        root._checkContentItem();
-        root._checkFooter();
-        root._checkHeader();
-    }
-
-    function _checkContentItem(): void {
-        if (root._structureReady && root.contentItem !== gridLayout) {
-            console.error("MessageDialog: replacing contentItem is unsupported; add content as children of the dialog instead.");
-        }
-    }
-
-    function _checkFooter(): void {
-        if (root._structureReady && root.footer !== gridLayoutFooter) {
-            console.error("MessageDialog: replacing footer is unsupported; it contains the standard buttons and remember-choice checkbox.");
-        }
-    }
-
-    function _checkHeader(): void {
-        if (root._structureReady && root.header) {
-            console.error("MessageDialog: setting header is unsupported; use title and the dialog's default content instead.");
-        }
-    }
-
-    onContentItemChanged: root._checkContentItem()
-    onFooterChanged: root._checkFooter()
-    onHeaderChanged: root._checkHeader()
-
     /*!
        Open the dialog only if the user didn't check the "Do not remind me" checkbox
        previously. If a stored choice suppresses the dialog, its corresponding
