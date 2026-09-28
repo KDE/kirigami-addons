@@ -221,7 +221,7 @@ Kirigami.ScrollablePage {
 
             onAccepted: {
                 root.model.save()
-                root.closeDialog();
+                root.Kirigami.PageStack.closeDialog();
             }
             onReset: root.model.resetAll()
         }

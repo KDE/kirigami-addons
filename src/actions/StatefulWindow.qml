@@ -109,7 +109,7 @@ Kirigami.ApplicationWindow {
                 title: i18ndc("kirigami-addons6", "@title:window", "About %1", Core.AboutData.displayName),
             });
             openDialogWindow.Keys.escapePressed.connect(function() {
-                openDialogWindow.closeDialog();
+                openDialogWindow.Kirigami.PageStack.closeDialog();
             });
         }
 
@@ -122,7 +122,7 @@ Kirigami.ApplicationWindow {
                 title: i18ndc("kirigami-addons6", "@title:window", "About KDE"),
             });
             openDialogWindow.Keys.escapePressed.connect(function() {
-                openDialogWindow.closeDialog();
+                openDialogWindow.Kirigami.PageStack.closeDialog();
             });
         }
     }

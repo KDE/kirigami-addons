@@ -256,7 +256,7 @@ AbstractFormDelegate {
      */
     function closeDialog() {
         if (_selectionPageItem) {
-            _selectionPageItem.closeDialog();
+            _selectionPageItem.Kirigami.PageStack.closeDialog();
             _selectionPageItem = null;
         }
 
