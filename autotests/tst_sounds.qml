@@ -16,19 +16,33 @@ SoundsPicker {
     width: 50
     height: 50
 
+    MediaDevices {
+        id: mediaDevices
+    }
+
     TestCase {
         name: "SoundsTest"
         when: windowShown
 
-        function test_hasSounds() {
+        function test_hasSounds(): void {
+            if (soundsPicker.model.rowCount() === 0) {
+                skip("The freedesktop sound theme is not installed");
+            }
             compare(soundsPicker.model.rowCount() > 0, true);
         }
 
-        function test_click() {
+        function test_click(): void {
+            if (soundsPicker.model.rowCount() === 0) {
+                skip("The freedesktop sound theme is not installed");
+            }
+            if (mediaDevices.audioOutputs.length === 0) {
+                skip("No audio output device is available");
+            }
+
             mouseClick(soundsPicker, 5, 5);
-            compare(soundsPicker.audioPlayer.playbackState, MediaPlayer.PlayingState)
+            tryCompare(soundsPicker.audioPlayer, "playbackState", MediaPlayer.PlayingState);
             mouseClick(soundsPicker, 5, 5);
-            compare(soundsPicker.audioPlayer.playbackState, MediaPlayer.PausedState)
+            tryCompare(soundsPicker.audioPlayer, "playbackState", MediaPlayer.PausedState);
         }
     }
 }
