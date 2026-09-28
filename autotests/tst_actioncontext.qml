@@ -371,8 +371,9 @@ Item {
         }
 
         function test_actionMenuMergesContributions() {
-            compare(fileMenu.mergedActions, ["single_page", "continuous_page"]);
+            compare(fileMenu.mergedActions, ["file_quit", "single_page", "continuous_page"]);
             compare(fileMenu.mergedItems, [
+                { type: "action", name: "file_quit", action: application.action("file_quit") },
                 { type: "action", name: "single_page", action: singlePage },
                 { type: "separator" },
                 { type: "action", name: "continuous_page", action: continuousPage },
@@ -382,17 +383,18 @@ Item {
         }
 
         function test_actionMenusAreApplicationScoped() {
-            compare(fileMenu.mergedActions, ["single_page", "continuous_page"]);
+            compare(fileMenu.mergedActions, ["file_quit", "single_page", "continuous_page"]);
             compare(fileMenu.mergedItems.some(item => item.name === "other_application_action"), false);
         }
 
         function test_actionMenuPopupResolvesActions() {
-            compare(fileMenuPopup.generatedActions.length, 4);
-            compare(fileMenuPopup.generatedActions[0].fromQAction, singlePage);
-            compare(fileMenuPopup.generatedActions[1].separator, true);
-            compare(fileMenuPopup.generatedActions[2].fromQAction, continuousPage);
-            compare(fileMenuPopup.generatedActions[3].children[0].fromQAction, recentOne);
-            compare(fileMenuPopup.generatedActions[3].children[1].fromQAction, recentTwo);
+            compare(fileMenuPopup.generatedActions.length, 5);
+            compare(fileMenuPopup.generatedActions[0].fromQAction, application.action("file_quit"));
+            compare(fileMenuPopup.generatedActions[1].fromQAction, singlePage);
+            compare(fileMenuPopup.generatedActions[2].separator, true);
+            compare(fileMenuPopup.generatedActions[3].fromQAction, continuousPage);
+            compare(fileMenuPopup.generatedActions[4].children[0].fromQAction, recentOne);
+            compare(fileMenuPopup.generatedActions[4].children[1].fromQAction, recentTwo);
         }
 
         function test_actionMenuBarMergesMenus() {
@@ -406,7 +408,7 @@ Item {
 
             dynamicCollection.application = application;
             tryCompare(fileMenuBar, "count", 4);
-            compare(fileMenuBar.menuAt(0).count, 1);
+            compare(fileMenuBar.menuAt(0).count, 5);
             compare(menuWithTitle("Tools").title, "Tools");
             tryCompare(menuWithTitle("Tools").itemAt(0), "text", "Dynamic action");
 
@@ -417,8 +419,8 @@ Item {
 
             dynamicMenu.name = "file";
             tryCompare(fileMenuBar, "count", 3);
-            tryCompare(fileMenuBar.menuAt(0), "count", 1);
-            tryCompare(fileMenuPopup.generatedActions, "length", 5);
+            tryCompare(fileMenuBar.menuAt(0), "count", 6);
+            tryCompare(fileMenuPopup.generatedActions, "length", 6);
 
             dynamicMenu.name = "tools";
             tryCompare(fileMenuBar, "count", 4);
@@ -449,7 +451,7 @@ Item {
 
             lateAction = lateActionComponent.createObject(root);
             lateCollection.actions.push(lateAction);
-            tryCompare(menuWithTitle("Late"), "count", 1);
+            tryVerify(() => menuWithTitle("Late")?.count === 1);
             tryCompare(menuWithTitle("Late").itemAt(0), "text", "Late action");
 
             lateCollection.destroy();
