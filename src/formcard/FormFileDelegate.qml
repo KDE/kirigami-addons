@@ -8,12 +8,9 @@ import QtQuick
 import QtQuick.Controls as Controls
 import QtQuick.Layouts
 import QtQuick.Dialogs
-import Qt.labs.folderlistmodel
 
 import org.kde.kirigami as Kirigami
-import org.kde.kirigamiaddons.delegates as Delegates
 import org.kde.kirigamiaddons.formcard as FormCard
-import org.kde.kirigamiaddons.components as Components
 
 import './private' as Private
 
@@ -170,11 +167,8 @@ AbstractFormDelegate {
 
                 Layout.fillWidth: true
 
-                // TODO Qt 6.10 replace with Controls.SearchField for autocompletion
                 Controls.TextField {
                     id: textField
-
-                    property Controls.Popup popup: null
 
                     function checkFile(): void {
                         if (textField.text.length === 0) {
@@ -187,7 +181,7 @@ AbstractFormDelegate {
                                 formErrorHandler.visible = false;
                                 root.selectedFile = 'file://' + textField.text;
                                 root.accepted();
-                            } else if (!textField.popup?.visible ?? true) {
+                            } else if (!pathCompletion.popupVisible) {
                                 formErrorHandler.text = i18ndc("kirigami-addons6", "@info:status", "The path doesn't exist.");
                                 formErrorHandler.visible = true;
                             }
@@ -196,7 +190,7 @@ AbstractFormDelegate {
                                 root.selectedFile = 'file://' + textField.text;
                                 formErrorHandler.visible = false;
                                 root.accepted();
-                            } else if (!textField.popup?.visible ?? true) {
+                            } else if (!pathCompletion.popupVisible) {
                                 formErrorHandler.text = i18ndc("kirigami-addons6", "@info:status", "The file doesn't exist.");
                                 formErrorHandler.visible = true;
                             }
@@ -206,50 +200,31 @@ AbstractFormDelegate {
                     text: fileDialog.currentFolder.toString().replace("file://", "")
                     activeFocusOnTab: false
 
-                    onAccepted: if (!textField.popup?.visible ?? true) {
+                    onAccepted: if (!pathCompletion.popupVisible) {
                         checkFile();
-                    } else if (folderModel.hintCount) {
-                        let fileName = folderModel.get(folderModel.hintArray[0], "fileName")
-                        if (folderModel.isFolder(folderModel.hintArray[0])) {
-                            textField.text = folderModel.folder.toString().replace("file://", "") + folderModel.separator + fileName + folderModel.separator;
-                        } else {
-                            textField.text = folderModel.folder.toString().replace("file://", "") + folderModel.separator + fileName;
-                            textField.popup.close();
-                        }
+                    } else if (pathCompletion.hintCount) {
+                        pathCompletion.selectFirstSuggestion(false);
                         checkFile();
                     } else {
-                        textField.popup?.close();
+                        pathCompletion.closePopup();
                         checkFile();
                     }
 
-                    onEditingFinished: if (!textField.popup?.visible ?? true) {
+                    onEditingFinished: if (!pathCompletion.popupVisible) {
                         checkFile();
                     }
 
                     onTextEdited: if (text.length > 0) {
-                        folderModel.updateSuggestions();
+                        pathCompletion.updateSuggestions();
                     } else {
-                        textField.popup?.close();
+                        pathCompletion.closePopup();
                     }
 
-                    Keys.onDownPressed: {
-                        if (textField.popup?.visible) {
-                            textField.popup.forceActiveFocus();
-                            textField.popup.hintListView.incrementCurrentIndex();
-                            textField.popup.hintListView.currentItem?.forceActiveFocus();
-                        }
-                    }
+                    Keys.onDownPressed: pathCompletion.focusNextSuggestion()
                     Keys.onTabPressed: (event) => {
-                        if (textField.popup?.visible) {
-                            if (folderModel.hintCount) {
-                                let fileName = folderModel.get(folderModel.hintArray[0], "fileName")
-                                if (folderModel.isFolder(folderModel.hintArray[0])) {
-                                    textField.text = folderModel.folder.toString().replace("file://", "") + folderModel.separator + fileName + folderModel.separator;
-                                    folderModel.updateSuggestions();
-                                } else {
-                                    textField.text = folderModel.folder.toString().replace("file://", "") + folderModel.separator + fileName;
-                                    textField.popup.close();
-                                }
+                        if (pathCompletion.popupVisible) {
+                            if (pathCompletion.hintCount) {
+                                pathCompletion.selectFirstSuggestion(true);
                                 checkFile();
                             }
                         } else {
@@ -315,90 +290,15 @@ AbstractFormDelegate {
         nameFilters: ["*"]
     }
 
-    FolderListModel {
-        id: folderModel
+    Private.FormPathCompletion {
+        id: pathCompletion
 
-         // Array with reference numbers to folderModel items which match current user text
-        property var hintArray: []
-        property int hintCount: 0 // due to JS array length is not dynamic
-        property string separator: Qt.platform.os === "windows" ? "\\" : "/"
-        property int lastSlash: textField.text.lastIndexOf(separator) + 1
-
-        showFiles: true
-        showDirsFirst: true
+        textField: textField
+        includeFiles: true
         nameFilters: fileDialog.nameFilters
-        folder: FormCard.FileHelper.folderForFileName(textField.text)
-        onStatusChanged: {
-            if (textField.text.length > 0 && status == FolderListModel.Ready)
-                updateSuggestions();
-        }
-
-        function updateSuggestions(): void {
-            if (folderModel.status !== FolderListModel.Ready)
-                return;
-            folderModel.hintArray.length = 0
-            folderModel.hintCount = 0
-
-            let searchText = textField.text.slice(folderModel.lastSlash, textField.length);
-            for (var i = 0; i < folderModel.count; i++) {
-                let file = folderModel.get(i, "fileName");
-                if (searchText === "" || file.startsWith(searchText))
-                    folderModel.hintArray.push(i)
-            }
-            folderModel.hintCount = folderModel.hintArray.length
-            if (folderModel.hintCount && (textField.activeFocus || textField.popup?.activeFocus)) {
-                if (!textField.popup)
-                    textField.popup = popupComp.createObject(textField)
-                textField.popup.open()
-            } else {
-                textField.popup?.close()
-            }
-        }
-    }
-
-    Component {
-        id: popupComp
-
-        Controls.Popup {
-            property alias hintListView: hintListView
-
-            y: textField.height
-            x: 0
-
-            width: textField.width
-            height: Math.min(Kirigami.Units.gridUnit * 8 + Kirigami.Units.smallSpacing * 7, hintListView.contentHeight)
-
-            background: Components.DialogRoundedBackground {}
-
-            padding: 0
-
-            ListView {
-                id: hintListView
-
-                width: parent.width
-                height: textField.popup?.height
-
-                visible: folderModel.hintCount > 0
-                clip: true
-
-                model: folderModel.hintCount
-                delegate: Delegates.RoundedItemDelegate {
-                    required property int index
-                    width: ListView.view.width - (ListView.view.Controls.ScrollBar.vertical.visible ? ListView.view.Controls.ScrollBar.vertical.width : 0)
-                    text: folderModel.get(folderModel.hintArray[index], "fileName")
-                    onClicked: {
-                        if (folderModel.isFolder(folderModel.hintArray[index])) {
-                            textField.text = folderModel.folder.toString().replace("file://", "") + folderModel.separator + text + folderModel.separator;
-                            textField.checkFile();
-                        } else {
-                            textField.text = folderModel.folder.toString().replace("file://", "") + folderModel.separator + text;
-                            textField.popup.close();
-                        }
-                    }
-                    Keys.onReturnPressed: clicked()
-                    Keys.onEnterPressed: clicked()
-                }
-                Controls.ScrollBar.vertical: Controls.ScrollBar {}
+        onSuggestionClicked: (isFolder) => {
+            if (isFolder) {
+                textField.checkFile();
             }
         }
     }

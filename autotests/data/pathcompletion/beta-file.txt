@@ -1,0 +1,1 @@
+Nonmatching path completion fixture.
