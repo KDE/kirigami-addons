@@ -63,14 +63,31 @@ import "private" as Private
 Item {
     id: root
 
-    /*! The form delegates displayed in the container. */
+    /*!
+       The form delegates displayed in the container. When left empty,
+       controls added as children are included, even after construction.
+     */
     property list<Item> delegates
 
-    Component.onCompleted: {
-        if (root.delegates.length === 0) {
-            root.delegates = root.children.filter(child => child instanceof T.Control);
+    property bool _collectChildControls: false
+
+    function _appendChildControls(): void {
+        if (!root._collectChildControls) {
+            return;
+        }
+
+        const newControls = root.children.filter(child => child instanceof T.Control && !root.delegates.includes(child));
+        if (newControls.length > 0) {
+            root.delegates = [...root.delegates, ...newControls];
         }
     }
+
+    Component.onCompleted: {
+        root._collectChildControls = root.delegates.length === 0;
+        root._appendChildControls();
+    }
+
+    onChildrenChanged: root._appendChildControls()
 
     readonly property bool hasDelegates: delegates.length > 0
 
