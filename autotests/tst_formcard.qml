@@ -6,6 +6,7 @@
 pragma ComponentBehavior: Bound
 
 import QtQuick
+import QtQuick.Controls as Controls
 import QtQuick.Layouts
 import QtTest
 import "../src/formcard" as FormCard
@@ -37,6 +38,36 @@ Item {
                 implicitHeight: 20 + index * 12 + (index === 1 ? root.middleExtraHeight : 0)
             }
         }
+    }
+
+    FormCard.FormGridContainer {
+        id: grid
+
+        QtObject {
+            property string description: "A non-visual child"
+        }
+
+        Item {
+            objectName: "nonControlChild"
+        }
+
+        FormCard.FormButtonDelegate {
+            id: firstGridDelegate
+        }
+
+        Controls.Switch {
+            id: secondGridDelegate
+        }
+    }
+
+    Controls.Button {
+        id: explicitGridDelegate
+    }
+
+    FormCard.FormGridContainer {
+        id: explicitGrid
+
+        delegates: [explicitGridDelegate]
     }
 
     function separators() {
@@ -94,6 +125,23 @@ Item {
 
             delegates.itemAt(1).visible = true;
             root.delegateCount = 0;
+        }
+    }
+
+    TestCase {
+        name: "FormGridContainerChildren"
+        when: windowShown
+
+        function test_controlChildren() {
+            compare(grid.delegates.length, 2);
+            compare(grid.delegates[0], firstGridDelegate);
+            compare(grid.delegates[1], secondGridDelegate);
+            compare(grid.hasDelegates, true);
+        }
+
+        function test_explicitDelegates() {
+            compare(explicitGrid.delegates.length, 1);
+            compare(explicitGrid.delegates[0], explicitGridDelegate);
         }
     }
 }

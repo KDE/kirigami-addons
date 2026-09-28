@@ -5,6 +5,7 @@
 
 import QtQuick
 import QtQuick.Layouts
+import QtQuick.Templates as T
 
 import org.kde.kirigami as Kirigami
 
@@ -63,7 +64,13 @@ Item {
     id: root
 
     /*! The form delegates displayed in the container. */
-    default property list<Item> delegates
+    property list<Item> delegates
+
+    Component.onCompleted: {
+        if (root.delegates.length === 0) {
+            root.delegates = root.children.filter(child => child instanceof T.Control);
+        }
+    }
 
     readonly property bool hasDelegates: delegates.length > 0
 
