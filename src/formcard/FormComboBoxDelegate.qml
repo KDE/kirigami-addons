@@ -188,7 +188,7 @@ AbstractFormDelegate {
     /*!
        \brief The delegate component to use as entries in the ComboBox display mode.
      */
-    property Component comboBoxDelegate: Delegates.RoundedItemDelegate {
+    property Component comboBoxDelegate: QQC2.MenuItem {
         required property var model
         required property int index
 
