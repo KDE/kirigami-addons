@@ -1,5 +1,95 @@
 /*!
    \qmlmodule org.kde.kirigamiaddons.delegates
    \title Kirigami Addons Delegates QML Types
-   \brief Todo
+   \brief Delegates for lists and grids in Kirigami applications.
+
+   Import the module with an alias in a QML file that displays a collection:
+
+   \qml
+   import org.kde.kirigamiaddons.delegates as Delegates
+   \endqml
+
+   \section1 Displaying a list
+
+   Use \l RoundedItemDelegate for a list or grid item that opens another
+   page or selects an item. It provides a rounded background for hover,
+   focus, and selection states. When it is the direct delegate of a
+   \l ListView or \l GridView, it uses the view to size itself and highlight
+   the current item.
+
+   \image roundeditemdelegate.png Rounded delegates in a list
+
+   \qml
+   import QtQuick
+   import org.kde.kirigamiaddons.delegates as Delegates
+
+   ListView {
+       id: foldersView
+       model: ["Inbox", "Archive"]
+
+       delegate: Delegates.RoundedItemDelegate {
+           required property int index
+           required property string modelData
+
+           text: modelData
+           icon.name: "folder"
+           onClicked: foldersView.currentIndex = index
+       }
+   }
+   \endqml
+
+   In a drag and drop workflow, the view's delegate can be an \c Item that
+   stays in the list or grid while its child \l RoundedItemDelegate is
+   reparented during a drag. The child does not receive the view's attached
+   properties automatically. Bind \c {listView: wrapper.ListView} or
+   \c {gridView: wrapper.GridView} to retain the built-in sizing and
+   highlighting, or set those properties on the child explicitly.
+
+   \section1 Adding a subtitle or extra content
+
+   The default \l DefaultContentItem shows the delegate's icon and text.
+   Replace \c contentItem with \l SubtitleContentItem to add a second
+   line. Pass the containing delegate through \c itemDelegate so the
+   content uses its text, icon, font, and enabled state:
+
+   \qml
+   Delegates.RoundedItemDelegate {
+       id: messageDelegate
+       text: i18nc("@title", "Project update")
+       icon.name: "mail-message"
+
+       contentItem: Delegates.SubtitleContentItem {
+           itemDelegate: messageDelegate
+           subtitle: i18nc("@info", "Received today")
+       }
+   }
+   \endqml
+
+   For a more specialized layout, place \l DefaultContentItem inside a
+   \c RowLayout with other controls and assign the layout to
+   \c contentItem.
+
+   \section1 Choices, unread items, and trees
+
+   Use \l CheckDelegate for an independent on/off choice and
+   \l RadioDelegate for a choice in a group. Both show an indicator and
+   expose the inherited \c checked and \c toggled members. Put radio
+   delegates in a \c ButtonGroup when only one choice may be selected.
+   Store the checked state in the model when delegates may be recreated as
+   the user scrolls.
+
+   \l IndicatorItemDelegate adds an accent bar for an unread item. It is
+   intended as a direct \l ListView delegate; set its required \c unread
+   property. The view supplies \c index from the model. Use
+   \l RoundedTreeDelegate with a
+   \c KDescendantsProxyModel to show expandable tree rows in a
+   \l ListView. It expects the descendant level and expansion roles from
+   that model.
+
+   \sa RoundedItemDelegate
+   \sa CheckDelegate
+   \sa RadioDelegate
+   \sa SubtitleContentItem
+   \sa IndicatorItemDelegate
+   \sa RoundedTreeDelegate
  */

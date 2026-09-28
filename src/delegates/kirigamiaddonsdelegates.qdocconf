@@ -1,7 +1,7 @@
 include($KDE_DOCS/global/qt-module-defaults.qdocconf)
 
 project = KirigamiAddonsDelegates
-description = Todo
+description = Delegates for lists and grids in Kirigami applications.
 
 documentationinheaders = true
 
