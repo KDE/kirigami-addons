@@ -52,6 +52,7 @@ T.Dialog {
        The setting is stored in the "Notification Messages" group.
 
        When set, use openDialog() instead of open() to open this dialog.
+       Clicking Cancel or dismissing the dialog does not save a preference.
 
        \warning Overwriting the dialog's footer will disable this feature.
        \default ""
@@ -197,16 +198,6 @@ T.Dialog {
         }
     }
 
-    onRejected: {
-        if (root.dontShowAgainName && checkbox.checked && !root._automaticallyClosed) {
-            if (root.standardButtons === QQC2.Dialog.Ok) {
-                MessageDialogHelper.saveDontShowAgainContinue(root.dontShowAgainName);
-            } else {
-                MessageDialogHelper.saveDontShowAgainTwoActions(root.dontShowAgainName, false);
-            }
-        }
-    }
-
     contentItem: GridLayout {
         id: gridLayout
 
@@ -298,6 +289,13 @@ T.Dialog {
             id: dialogButtonBox
 
             standardButtons: root.standardButtons
+
+            onClicked: (button) => {
+                if (root.dontShowAgainName && checkbox.checked && !root._automaticallyClosed
+                    && (button === dialogButtonBox.standardButton(T.Dialog.No) || button === dialogButtonBox.standardButton(T.Dialog.NoToAll))) {
+                    MessageDialogHelper.saveDontShowAgainTwoActions(root.dontShowAgainName, root.configGroupName, false);
+                }
+            }
 
             onAccepted: root.accepted();
             onDiscarded: root.discarded();
