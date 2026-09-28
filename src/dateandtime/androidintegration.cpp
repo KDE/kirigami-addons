@@ -104,42 +104,24 @@ Q_DECL_EXPORT jint JNICALL JNI_OnLoad(JavaVM *vm, void *)
 void AndroidIntegration::showDatePicker(qint64 initialDate, bool resettable, const QString &resetLabel)
 {
     const QJniObject label = QJniObject::fromString(resetLabel);
-#if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
     QJniObject picker("org/kde/kirigamiaddons/dateandtime/DatePicker",
                       "(Landroid/app/Activity;JZLjava/lang/String;)V",
                       QNativeInterface::QAndroidApplication::context().object<jobject>(),
                       initialDate,
                       jboolean(resettable),
                       label.object<jstring>());
-#else
-    QJniObject picker("org/kde/kirigamiaddons/dateandtime/DatePicker",
-                      "(Landroid/app/Activity;JZLjava/lang/String;)V",
-                      QNativeInterface::QAndroidApplication::context(),
-                      initialDate,
-                      jboolean(resettable),
-                      label.object<jstring>());
-#endif
     picker.callMethod<void>("doShow");
 }
 
 void AndroidIntegration::showTimePicker(qint64 initialTime, bool resettable, const QString &resetLabel)
 {
     const QJniObject label = QJniObject::fromString(resetLabel);
-#if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
     QJniObject picker("org/kde/kirigamiaddons/dateandtime/TimePicker",
                       "(Landroid/app/Activity;JZLjava/lang/String;)V",
                       QNativeInterface::QAndroidApplication::context().object<jobject>(),
                       initialTime,
                       jboolean(resettable),
                       label.object<jstring>());
-#else
-    QJniObject picker("org/kde/kirigamiaddons/dateandtime/TimePicker",
-                      "(Landroid/app/Activity;JZLjava/lang/String;)V",
-                      QNativeInterface::QAndroidApplication::context(),
-                      initialTime,
-                      jboolean(resettable),
-                      label.object<jstring>());
-#endif
     picker.callMethod<void>("doShow");
 }
 
