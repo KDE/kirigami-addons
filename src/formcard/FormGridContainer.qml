@@ -67,7 +67,7 @@ Item {
        The form delegates displayed in the container. When left empty,
        controls added as children are included, even after construction.
      */
-    property list<Item> delegates
+    property list<Item> delegates // TODO KF7 make it default
 
     property bool _collectChildControls: false
 
