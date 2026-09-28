@@ -12,6 +12,7 @@
 #include <KLocalizedString>
 
 #include "example_albummodel.h"
+#include "testconfig.h"
 
 class KirigamiAddonsSetup : public QObject
 {
@@ -29,6 +30,7 @@ public Q_SLOTS:
         KLocalization::setupLocalizedContext(engine);
 
         qmlRegisterType<ExampleAlbumModel>("test.artefacts", 1, 0, "ExampleAlbumModel");
+        qmlRegisterType<TestConfig>("test.artefacts", 1, 0, "TestConfig");
 
         engine->rootContext()->setContextProperty(QStringLiteral("dataDir"), QVariant(QLatin1String(DATA_DIR)));
     }

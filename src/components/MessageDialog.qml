@@ -14,7 +14,38 @@ import org.kde.kirigamiaddons.delegates as Delegates
 /*!
    \qmltype MessageDialog
    \inqmlmodule org.kde.kirigamiaddons.components
-   \brief A dialog to show a message. This dialog exists has 4 modes: success, warning, error, information.
+   \brief A message dialog with success, warning, error, and information styles.
+
+   Set the \c title and \l subtitle to describe the message, choose a \l dialogType,
+   and set \c standardButtons for the available actions. Add extra content as
+   child items; it appears below the title and subtitle.
+
+   \qml
+   import QtQuick.Controls as Controls
+   import org.kde.kirigamiaddons.components as Components
+
+   Controls.ApplicationWindow {
+       visible: true
+
+       Components.MessageDialog {
+           id: errorDialog
+
+           dialogType: Components.MessageDialog.Error
+           title: "Unable to connect"
+           subtitle: "Check your network connection and try again."
+           dontShowAgainName: "connectionError"
+           standardButtons: Controls.Dialog.Ok
+       }
+
+       Controls.Button {
+           text: "Show message"
+           onClicked: errorDialog.openDialog()
+       }
+   }
+   \endqml
+
+   Call \l openDialog() to show the dialog and honor any saved choice. Set
+   \l dontShowAgainName to offer a persistent "Do not show again" checkbox.
 
    \image messagedialog.png
  */
@@ -29,14 +60,14 @@ T.Dialog {
     }
 
     /*!
-       This property holds the dialogType. It can be either:
+       Selects the message style and its default icon and title. It can be:
 
        \value MessageDialog.Success
-              For a sucess message.
+              For a success message.
        \value MessageDialog.Warning
               For a warning message.
        \value MessageDialog.Error
-              For an actual error.
+              For an error message.
        \value MessageDialog.Information
               For an informational message.
 
@@ -45,41 +76,71 @@ T.Dialog {
     property int dialogType: Components.MessageDialog.Success
 
     /*!
-       \brief This property holds the name of setting to store the "Don't show again" preference.
+       \brief The configuration key used to store the "Do not show again" choice.
 
-       If provided, a checkbox is added with which further notifications can be turned off.
-       The string is used to lookup and store the setting in the applications config file.
-       The setting is stored in the "Notification Messages" group.
+       When this property is non-empty, a checkbox is shown for supported
+       standard button combinations. The choice is saved in the application
+       configuration under \l configGroupName.
 
-       When set, use openDialog() instead of open() to open this dialog.
-       Clicking Cancel or dismissing the dialog does not save a preference.
+       Call \l openDialog() to show the dialog. A saved choice can suppress it
+       and emit its corresponding result signal. A positive choice emits
+       \c accepted() or \c applied(), depending
+       on the button. A negative choice emits \c rejected() or \c discarded().
+       Accepted and rejected button actions close the dialog.
+       A choice is remembered only when a supported result button is clicked.
+       Cancel and dismissing the dialog do not save a preference.
+       Supported combinations have exactly one positive button (Ok, Open,
+       Save, Save All, Yes, Yes to All, Apply, Retry, or Ignore), at most one
+       negative button (No, No to All, or Discard), and optionally Cancel,
+       Close, or Abort. Other combinations open normally without the checkbox.
 
-       \warning Overwriting the dialog's footer will disable this feature.
+       \warning Replacing \l {Dialog::contentItem}{contentItem} or
+       \l {Dialog::footer}{footer}, or setting \l {Dialog::header}{header}, is
+       unsupported. The dialog logs an error if any of these properties is
+       changed.
        \default ""
      */
     property string dontShowAgainName: ''
 
     /*!
-       \brief This property holds the name of the config group where the setting to store the "Don't show again" preference are stored.
+       \brief The configuration group used to store the "Do not show again" choice.
 
        \default "Notification Messages"
      */
     property string configGroupName: "Notification Messages"
 
     /*!
-      The text to use in the dialog's contents.
+      \qmlproperty string MessageDialog::subtitle
+
+      The message text shown below the title. For additional content, add
+      child items to the dialog.
      */
     property string subtitle: ''
 
+    /*!
+       \qmlmethod AbstractButton MessageDialog::standardButton(StandardButton button)
+
+       Returns the standard button matching \a button, or \c null if that
+       button is not present in \c standardButtons.
+     */
     function standardButton(button) {
         return dialogButtonBox.standardButton(button);
     }
 
     /*!
+       \qmlproperty list<QtObject> MessageDialog::mainContent
+
+       The default property for additional content items. Child items appear
+       below the title and subtitle. Do not replace the dialog's
+       \l {Dialog::contentItem}{contentItem}.
      */
     default property alias mainContent: mainLayout.data
 
     /*!
+       \qmlproperty string MessageDialog::iconName
+
+       The name of the icon shown beside the message. By default, this is
+       selected from \l dialogType. Set it to an empty string to hide the icon.
      */
     property string iconName: switch (root.dialogType) {
     case MessageDialog.Success:
@@ -129,72 +190,84 @@ T.Dialog {
     padding: Kirigami.Units.largeSpacing * 2
 
     property bool _automaticallyClosed: false
+    readonly property var _positiveButtons: [T.Dialog.Ok, T.Dialog.Open, T.Dialog.Save, T.Dialog.SaveAll, T.Dialog.Yes, T.Dialog.YesToAll,
+                                             T.Dialog.Apply, T.Dialog.Retry, T.Dialog.Ignore].filter(button => (root.standardButtons & button) !== 0)
+    readonly property var _negativeButtons: [T.Dialog.No, T.Dialog.NoToAll, T.Dialog.Discard].filter(button => (root.standardButtons & button) !== 0)
+    readonly property int _knownButtons: [..._positiveButtons, ..._negativeButtons, T.Dialog.Cancel, T.Dialog.Close, T.Dialog.Abort]
+                                         .reduce((mask, button) => mask | button, 0)
+    readonly property bool _supportsRememberedChoice: root._positiveButtons.length === 1 && root._negativeButtons.length <= 1
+                                                    && (root.standardButtons & ~root._knownButtons) === 0
+
+    property bool _structureReady: false
+
+    Component.onCompleted: {
+        root._structureReady = true;
+        root._checkContentItem();
+        root._checkFooter();
+        root._checkHeader();
+    }
+
+    function _checkContentItem(): void {
+        if (root._structureReady && root.contentItem !== gridLayout) {
+            console.error("MessageDialog: replacing contentItem is unsupported; add content as children of the dialog instead.");
+        }
+    }
+
+    function _checkFooter(): void {
+        if (root._structureReady && root.footer !== gridLayoutFooter) {
+            console.error("MessageDialog: replacing footer is unsupported; it contains the standard buttons and remember-choice checkbox.");
+        }
+    }
+
+    function _checkHeader(): void {
+        if (root._structureReady && root.header) {
+            console.error("MessageDialog: setting header is unsupported; use title and the dialog's default content instead.");
+        }
+    }
+
+    onContentItemChanged: root._checkContentItem()
+    onFooterChanged: root._checkFooter()
+    onHeaderChanged: root._checkHeader()
 
     /*!
        Open the dialog only if the user didn't check the "Do not remind me" checkbox
-       previously.
+       previously. If a stored choice suppresses the dialog, its corresponding
+       result signal is emitted instead.
      */
     function openDialog(): void {
-        if (root.dontShowAgainName.length > 0) {
-            if (root.standardButtons === QQC2.Dialog.Ok) {
+        root._automaticallyClosed = false;
+        checkbox.checked = false;
+
+        if (root.dontShowAgainName.length > 0 && root._supportsRememberedChoice) {
+            if (root.standardButtons === T.Dialog.Ok) {
                 const show = MessageDialogHelper.shouldBeShownContinue(root.dontShowAgainName, root.configGroupName);
                 if (!show) {
                     root._automaticallyClosed = true;
-                    root.applied();
                     root.accepted();
                 } else {
-                    checkbox.checked = false;
-                    root._automaticallyClosed = false;
                     root.open();
                 }
             } else {
                 const result = MessageDialogHelper.shouldBeShownTwoActions(root.dontShowAgainName, root.configGroupName);
-                if (!result.show) {
+                if (!result.show && (result.result || root._negativeButtons.length > 0)) {
                     root._automaticallyClosed = true;
                     if (result.result) {
-                        root.accepted();
-                        root.applied();
-                    } else {
+                        if (root._positiveButtons[0] === T.Dialog.Apply) {
+                            root.applied();
+                        } else {
+                            root.accepted();
+                        }
+                    } else if (root._negativeButtons[0] === T.Dialog.Discard) {
                         root.discarded();
+                    } else {
+                        root.rejected();
                     }
                 } else {
-                    checkbox.checked = false;
-                    root._automaticallyClosed = false;
                     root.open();
                 }
             }
         } else {
             root.open();
-        }
-    }
-
-    onApplied: {
-        if (root.dontShowAgainName && checkbox.checked && !root._automaticallyClosed) {
-            if (root.standardButtons === QQC2.Dialog.Ok) {
-                MessageDialogHelper.saveDontShowAgainContinue(root.dontShowAgainName, root.configGroupName);
-            } else {
-                MessageDialogHelper.saveDontShowAgainTwoActions(root.dontShowAgainName, root.configGroupName, true);
-            }
-        }
-    }
-
-    onAccepted: {
-        if (root.dontShowAgainName && checkbox.checked && !root._automaticallyClosed) {
-            if (root.standardButtons === QQC2.Dialog.Ok) {
-                MessageDialogHelper.saveDontShowAgainContinue(root.dontShowAgainName, root.configGroupName);
-            } else {
-                MessageDialogHelper.saveDontShowAgainTwoActions(root.dontShowAgainName, root.configGroupName, true);
-            }
-        }
-    }
-
-    onDiscarded: {
-        if (root.dontShowAgainName && checkbox.checked && !root._automaticallyClosed) {
-            if (root.standardButtons === QQC2.Dialog.Ok) {
-                MessageDialogHelper.saveDontShowAgainContinue(root.dontShowAgainName, root.configGroupName);
-            } else {
-                MessageDialogHelper.saveDontShowAgainTwoActions(root.dontShowAgainName, root.configGroupName, false);
-            }
         }
     }
 
@@ -265,7 +338,7 @@ T.Dialog {
         QQC2.CheckBox {
             id: checkbox
 
-            visible: dontShowAgainName.length > 0
+            visible: root.dontShowAgainName.length > 0 && root._supportsRememberedChoice
             text: i18ndc("kirigami-addons6", "@label:checkbox", "Do not show again")
             background: null
 
@@ -291,17 +364,26 @@ T.Dialog {
             standardButtons: root.standardButtons
 
             onClicked: (button) => {
-                if (root.dontShowAgainName && checkbox.checked && !root._automaticallyClosed
-                    && (button === dialogButtonBox.standardButton(T.Dialog.No) || button === dialogButtonBox.standardButton(T.Dialog.NoToAll))) {
+                if (!root.dontShowAgainName || !root._supportsRememberedChoice || !checkbox.checked || root._automaticallyClosed) {
+                    return;
+                }
+
+                if (button === dialogButtonBox.standardButton(root._positiveButtons[0])) {
+                    if (root.standardButtons === T.Dialog.Ok) {
+                        MessageDialogHelper.saveDontShowAgainContinue(root.dontShowAgainName, root.configGroupName);
+                    } else {
+                        MessageDialogHelper.saveDontShowAgainTwoActions(root.dontShowAgainName, root.configGroupName, true);
+                    }
+                } else if (root._negativeButtons.length > 0 && button === dialogButtonBox.standardButton(root._negativeButtons[0])) {
                     MessageDialogHelper.saveDontShowAgainTwoActions(root.dontShowAgainName, root.configGroupName, false);
                 }
             }
 
-            onAccepted: root.accepted();
+            onAccepted: root.accept();
             onDiscarded: root.discarded();
             onApplied: root.applied();
             onHelpRequested: root.helpRequested();
-            onRejected: root.rejected();
+            onRejected: root.reject();
 
             implicitWidth: 0
             implicitHeight: 0
