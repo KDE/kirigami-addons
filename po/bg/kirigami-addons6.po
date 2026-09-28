@@ -832,10 +832,10 @@ msgstr "%1/%2"
 
 #: formcard/FormPasswordFieldDelegate.qml:411
 #: formcard/FormTextFieldDelegate.qml:433
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@action:button"
 msgid "Done"
-msgstr ""
+msgstr "Готово"
 
 #: onboarding/private/OnboardingOverlay.qml:201
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-26 00:44+0000\n"
-"PO-Revision-Date: 2026-09-18 09:58+0300\n"
+"PO-Revision-Date: 2026-09-26 12:46+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -841,7 +841,7 @@ msgstr "%1/%2"
 #, kde-format
 msgctxt "@action:button"
 msgid "Done"
-msgstr ""
+msgstr "Виконано"
 
 #: onboarding/private/OnboardingOverlay.qml:201
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-26 00:44+0000\n"
-"PO-Revision-Date: 2026-09-21 21:14+0300\n"
+"PO-Revision-Date: 2026-09-27 20:38+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -837,7 +837,7 @@ msgstr "%1/%2"
 #, kde-format
 msgctxt "@action:button"
 msgid "Done"
-msgstr ""
+msgstr "Atlikta"
 
 #: onboarding/private/OnboardingOverlay.qml:201
 #, kde-format
