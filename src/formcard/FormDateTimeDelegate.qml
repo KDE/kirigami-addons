@@ -107,6 +107,19 @@ AbstractFormDelegate {
     property bool readOnly: false
 
     /*!
+       This property holds whether the user can reset the date and time to an
+       unset value.
+
+       When enabled, a "Reset" button is added to the date and time pickers.
+       Clicking it sets \l value to an invalid date, which is displayed as
+       "Not set".
+
+       \default false
+       \since 1.15.0
+     */
+    property bool resettable: false
+
+    /*!
        \brief The current date and time selected by the user.
      */
     property date value: new Date()
@@ -287,7 +300,8 @@ AbstractFormDelegate {
 
                     if (Qt.platform.os === 'android') {
                         androidPickerActive = true;
-                        DateTime.AndroidIntegration.showDatePicker(value.getTime());
+                        DateTime.AndroidIntegration.showDatePicker(value.getTime(), root.resettable,
+                            i18ndc("kirigami-addons6", "@action:button", "Reset"));
                     } else {
                         const item = datePopup.createObject(root.popupParent, {
                             value: value,
@@ -324,7 +338,9 @@ AbstractFormDelegate {
                         height: Kirigami.Units.gridUnit * 20
 
                         modal: true
+                        resettable: root.resettable
 
+                        onReset: root.value = new Date(NaN);
                         onClosed: destroy();
                     }
                 }
@@ -343,6 +359,10 @@ AbstractFormDelegate {
                             root.value.setMonth(newDate.getMonth());
                             root.value.setDate(newDate.getDate());
                         }
+                    }
+                    function onDatePickerReset() {
+                        dateButton.androidPickerActive = false;
+                        root.value = new Date(NaN);
                     }
                 }
             }
@@ -389,7 +409,8 @@ AbstractFormDelegate {
 
                     if (Qt.platform.os === 'android') {
                         androidPickerActive = true;
-                        DateTime.AndroidIntegration.showTimePicker(value.getTime());
+                        DateTime.AndroidIntegration.showTimePicker(value.getTime(), root.resettable,
+                            i18ndc("kirigami-addons6", "@action:button", "Reset"));
                     } else {
                         const popup = timePopup.createObject(root.popupParent, {
                             value: value,
@@ -410,6 +431,9 @@ AbstractFormDelegate {
 
                         parent: root.popupParent.overlay
                         modal: true
+                        resettable: root.resettable
+
+                        onReset: root.value = new Date(NaN);
 
                         onAccepted: {
                             if (isNaN(root.value.valueOf())) {
@@ -432,6 +456,10 @@ AbstractFormDelegate {
                             }
                             root.value.setHours(newDate.getHours(), newDate.getMinutes());
                         }
+                    }
+                    function onTimePickerReset() {
+                        timeButton.androidPickerActive = false;
+                        root.value = new Date(NaN);
                     }
                 }
 

@@ -23,8 +23,8 @@ class KIRIGAMIDATEANDTIME_EXPORT AndroidIntegration : public QObject
     Q_OBJECT
 
 public:
-    Q_INVOKABLE void showDatePicker(qint64 initialDate);
-    Q_INVOKABLE void showTimePicker(qint64 initialTime);
+    Q_INVOKABLE void showDatePicker(qint64 initialDate, bool resettable, const QString &resetLabel);
+    Q_INVOKABLE void showTimePicker(qint64 initialTime, bool resettable, const QString &resetLabel);
 
     void _timeSelected(int hours, int minutes);
     void _timeCancelled();
@@ -34,6 +34,8 @@ public:
 Q_SIGNALS:
     void datePickerFinished(bool accepted, const QDateTime &date);
     void timePickerFinished(bool accepted, const QDateTime &time);
+    void datePickerReset();
+    void timePickerReset();
 
 private:
     static AndroidIntegration *s_instance;

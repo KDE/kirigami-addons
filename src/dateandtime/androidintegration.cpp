@@ -47,14 +47,30 @@ static void timeCancelled(JNIEnv *env, jobject that)
     Q_EMIT AndroidIntegration::instance().timePickerFinished(false, {});
 }
 
+static void dateReset(JNIEnv *env, jobject that)
+{
+    Q_UNUSED(that);
+    Q_UNUSED(env);
+    Q_EMIT AndroidIntegration::instance().datePickerReset();
+}
+
+static void timeReset(JNIEnv *env, jobject that)
+{
+    Q_UNUSED(that);
+    Q_UNUSED(env);
+    Q_EMIT AndroidIntegration::instance().timePickerReset();
+}
+
 static const JNINativeMethod dateMethods[] = {
     {"dateSelected", "(III)V", (void *)dateSelected},
-    {"cancelled", "()V", (void *)dateCancelled}
+    {"cancelled", "()V", (void *)dateCancelled},
+    {"reset", "()V", (void *)dateReset}
 };
 
 static const JNINativeMethod timeMethods[] = {
     {"timeSelected", "(II)V", (void *)timeSelected},
-    {"cancelled", "()V", (void *)timeCancelled}
+    {"cancelled", "()V", (void *)timeCancelled},
+    {"reset", "()V", (void *)timeReset}
 };
 
 Q_DECL_EXPORT jint JNICALL JNI_OnLoad(JavaVM *vm, void *)
@@ -85,22 +101,44 @@ Q_DECL_EXPORT jint JNICALL JNI_OnLoad(JavaVM *vm, void *)
     return JNI_VERSION_1_4;
 }
 
-void AndroidIntegration::showDatePicker(qint64 initialDate)
+void AndroidIntegration::showDatePicker(qint64 initialDate, bool resettable, const QString &resetLabel)
 {
+    const QJniObject label = QJniObject::fromString(resetLabel);
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-    QJniObject picker("org/kde/kirigamiaddons/dateandtime/DatePicker", "(Landroid/app/Activity;J)V", QNativeInterface::QAndroidApplication::context().object<jobject>(), initialDate);
+    QJniObject picker("org/kde/kirigamiaddons/dateandtime/DatePicker",
+                      "(Landroid/app/Activity;JZLjava/lang/String;)V",
+                      QNativeInterface::QAndroidApplication::context().object<jobject>(),
+                      initialDate,
+                      jboolean(resettable),
+                      label.object<jstring>());
 #else
-    QJniObject picker("org/kde/kirigamiaddons/dateandtime/DatePicker", "(Landroid/app/Activity;J)V", QNativeInterface::QAndroidApplication::context(), initialDate);
+    QJniObject picker("org/kde/kirigamiaddons/dateandtime/DatePicker",
+                      "(Landroid/app/Activity;JZLjava/lang/String;)V",
+                      QNativeInterface::QAndroidApplication::context(),
+                      initialDate,
+                      jboolean(resettable),
+                      label.object<jstring>());
 #endif
     picker.callMethod<void>("doShow");
 }
 
-void AndroidIntegration::showTimePicker(qint64 initialTime)
+void AndroidIntegration::showTimePicker(qint64 initialTime, bool resettable, const QString &resetLabel)
 {
+    const QJniObject label = QJniObject::fromString(resetLabel);
 #if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-    QJniObject picker("org/kde/kirigamiaddons/dateandtime/TimePicker", "(Landroid/app/Activity;J)V", QNativeInterface::QAndroidApplication::context().object<jobject>(), initialTime);
+    QJniObject picker("org/kde/kirigamiaddons/dateandtime/TimePicker",
+                      "(Landroid/app/Activity;JZLjava/lang/String;)V",
+                      QNativeInterface::QAndroidApplication::context().object<jobject>(),
+                      initialTime,
+                      jboolean(resettable),
+                      label.object<jstring>());
 #else
-    QJniObject picker("org/kde/kirigamiaddons/dateandtime/TimePicker", "(Landroid/app/Activity;J)V", QNativeInterface::QAndroidApplication::context(), initialTime);
+    QJniObject picker("org/kde/kirigamiaddons/dateandtime/TimePicker",
+                      "(Landroid/app/Activity;JZLjava/lang/String;)V",
+                      QNativeInterface::QAndroidApplication::context(),
+                      initialTime,
+                      jboolean(resettable),
+                      label.object<jstring>());
 #endif
     picker.callMethod<void>("doShow");
 }

@@ -49,6 +49,20 @@ QQC2.Dialog {
      */
     property bool autoAccept: false
 
+    /*!
+       This property holds whether a "Reset" button is shown, allowing the user
+       to unset the value.
+
+       \note The button is not shown when \l autoAccept is enabled.
+
+       When the user clicks it, \l value is set to an invalid date, the
+       \l reset signal is emitted and the popup is closed.
+
+       \default false
+       \since 1.15.0
+     */
+    property bool resettable: false
+
     padding: 0
     topPadding: undefined
     leftPadding: undefined
@@ -61,7 +75,7 @@ QQC2.Dialog {
 
     contentItem: P.DatePicker {
         id: datePicker
-        selectedDate: root.value
+        selectedDate: isNaN(root.value.valueOf()) ? new Date() : root.value
         minimumDate: root.minimumDate
         maximumDate: root.maximumDate
         focus: true
@@ -76,6 +90,8 @@ QQC2.Dialog {
 
     footer: QQC2.DialogButtonBox {
         id: box
+
+        standardButtons: root.resettable ? QQC2.DialogButtonBox.Reset : QQC2.DialogButtonBox.NoButton
 
         visible: !autoAccept
 
@@ -110,6 +126,11 @@ QQC2.Dialog {
     }
 
     background: Components.DialogRoundedBackground {}
+
+    onReset: {
+        value = new Date(NaN);
+        close();
+    }
 
     // black background, fades in and out
     QQC2.Overlay.modal: Rectangle {
