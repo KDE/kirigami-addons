@@ -1,11 +1,37 @@
 /*!
- *   \qmlmodule org.kde.kirigamiaddons.components
- *   \title Kirigami Addons Components QML Types
- *   \brief Todo
- */
+   \qmlmodule org.kde.kirigamiaddons.components
+   \title Kirigami Addons Components QML Types
+   \brief Reusable controls and visual components for Kirigami applications.
+
+   Use \l Avatar to represent a person with a profile image, initials, or
+   an icon. \l ConvergentContextMenu presents actions as a menu on desktop
+   and as a bottom drawer on mobile. \l MessageDialog displays success,
+   warning, error, and information messages, with an optional "Don't show
+   again" choice. \l FloatingToolBar places tools over content, while
+   \l FloatingButton and \l DoubleFloatingButton provide prominent page
+   actions.
+
+   Import the module in the QML files that use these components:
+
+   \qml
+   import org.kde.kirigamiaddons.components as Components
+
+   Components.Avatar {
+       name: i18nc("@info:person", "Alex Doe")
+   }
+   \endqml
+*/
 
 /*!
- *   \qmlmodule org.kde.kirigamiaddons.labs.components
- *   \title Kirigami Addons Components (Labs) QML Types
- *   \brief Todo
- */
+   \qmlmodule org.kde.kirigamiaddons.labs.components
+   \title Kirigami Addons Components (Labs) QML Types
+   \brief Additional components for specialized interfaces.
+
+   The labs module contains additional components for specialized
+   interfaces, including media viewing. Import it separately when using
+   those types:
+
+   \qml
+   import org.kde.kirigamiaddons.labs.components as LabsComponents
+   \endqml
+*/
