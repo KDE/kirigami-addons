@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-26 00:44+0000\n"
+"POT-Creation-Date: 2026-09-29 00:43+0000\n"
 "PO-Revision-Date: 2026-06-07 12:10+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
@@ -32,7 +32,7 @@ msgstr "ryuichi_ya220@outlook.jp"
 msgid "Open Command Bar"
 msgstr ""
 
-#: actions/abstractkirigamiapplication.cpp:185 formcard/AboutPage.qml:114
+#: actions/abstractkirigamiapplication.cpp:185 formcard/AboutPage.qml:128
 #, kde-format
 msgid "About %1"
 msgstr "%1 について"
@@ -283,21 +283,21 @@ msgstr "前の画像"
 msgid "Next image"
 msgstr "次の画像"
 
-#: components/Banner.qml:185 formcard/AboutPage.qml:204
-#: formcard/AboutPage.qml:303 formcard/AboutPage.qml:699
+#: components/Banner.qml:185 formcard/AboutPage.qml:240
+#: formcard/AboutPage.qml:354 formcard/AboutPage.qml:750
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
 msgstr "閉じる"
 
-#: components/ConvergentContextMenu.qml:324
-#: components/ConvergentContextMenu.qml:434
+#: components/ConvergentContextMenu.qml:318
+#: components/ConvergentContextMenu.qml:428
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "戻る"
 
-#: components/ConvergentContextMenu.qml:408 formcard/FormCardDialog.qml:102
+#: components/ConvergentContextMenu.qml:402 formcard/FormCardDialog.qml:102
 #, fuzzy, kde-format
 #| msgid "Close"
 msgctxt "@action:button close dialog"
@@ -309,31 +309,31 @@ msgstr "閉じる"
 msgid "Download"
 msgstr "ダウンロード"
 
-#: components/MessageDialog.qml:117
+#: components/MessageDialog.qml:179
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
 msgstr "成功"
 
-#: components/MessageDialog.qml:119 components/MessageDialog.qml:125
+#: components/MessageDialog.qml:181 components/MessageDialog.qml:187
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
 msgstr "警告"
 
-#: components/MessageDialog.qml:121
+#: components/MessageDialog.qml:183
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
 msgstr "エラー"
 
-#: components/MessageDialog.qml:123
+#: components/MessageDialog.qml:185
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
 msgstr "情報"
 
-#: components/MessageDialog.qml:278
+#: components/MessageDialog.qml:311
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
@@ -345,14 +345,14 @@ msgctxt "@action:button"
 msgid "Volume"
 msgstr "音量"
 
-#: dateandtime/DatePopup.qml:87 dateandtime/TimePopup.qml:46
+#: dateandtime/DatePopup.qml:87 dateandtime/TimePopup.qml:55
 #: onboarding/private/OnboardingOverlay.qml:236
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: dateandtime/DatePopup.qml:99 dateandtime/TimePopup.qml:57
+#: dateandtime/DatePopup.qml:99 dateandtime/TimePopup.qml:66
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
@@ -391,92 +391,86 @@ msgctxt "@action:button"
 msgid "Go Next"
 msgstr "次に移動"
 
-#: dateandtime/TimePicker.qml:132
+#: dateandtime/TimePicker.qml:130
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to current time"
 msgstr ""
 
-#: dateandtime/TimePicker.qml:157
+#: dateandtime/TimePicker.qml:155
 #, kde-format
 msgid "Hours"
 msgstr "時間"
 
-#: dateandtime/TimePicker.qml:180
+#: dateandtime/TimePicker.qml:178
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: dateandtime/TimePicker.qml:195
+#: dateandtime/TimePicker.qml:193
 #, kde-format
 msgid "Minutes"
 msgstr "分"
 
-#: formcard/aboutcomponent.cpp:28
+#: formcard/aboutcomponent.cpp:102
 #, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: formcard/aboutcomponent.cpp:32
+#: formcard/aboutcomponent.cpp:106
 #, kde-format
 msgid "KDE Frameworks"
 msgstr "KDE Frameworks"
 
-#: formcard/aboutcomponent.cpp:33
+#: formcard/aboutcomponent.cpp:107
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr "KDE コミュニティによって作成された Qt を拡張するライブラリ集です。"
 
-#: formcard/aboutcomponent.cpp:38
+#: formcard/aboutcomponent.cpp:112
 #, kde-format
 msgid "Qt"
 msgstr "Qt"
 
-#: formcard/aboutcomponent.cpp:39
+#: formcard/aboutcomponent.cpp:113
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
 msgstr "クロスプラットフォームのアプリケーション開発フレームワークです。"
 
-#: formcard/aboutcomponent.cpp:40
+#: formcard/aboutcomponent.cpp:114
 #, kde-format
 msgid "Using %1 and built against %2"
 msgstr "%1 を使用中 (%2 でビルド)"
 
-#: formcard/aboutcomponent.cpp:45
-#, kde-format
-msgctxt "Linux packaging format"
-msgid "Unknown/Default"
-msgstr "不明/デフォルト"
-
-#: formcard/aboutcomponent.cpp:47
+#: formcard/aboutcomponent.cpp:121
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Flatpak"
 msgstr "Flatpak"
 
-#: formcard/aboutcomponent.cpp:50
+#: formcard/aboutcomponent.cpp:124
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Snap"
 msgstr "Snap"
 
-#: formcard/aboutcomponent.cpp:53
+#: formcard/aboutcomponent.cpp:127
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "AppImage"
 msgstr "AppImage"
 
-#: formcard/aboutcomponent.cpp:55
+#: formcard/aboutcomponent.cpp:130
 #, kde-format
 msgctxt "@info"
 msgid "Distribution method."
 msgstr "アプリケーションの配布方法です。"
 
-#: formcard/aboutcomponent.cpp:58
+#: formcard/aboutcomponent.cpp:134
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
@@ -516,7 +510,7 @@ msgstr ""
 "ソフトウェアを作成するという共通のゴールを達成するために共に働いています。あ"
 "なたを含め誰でも、自由に KDE に参加･貢献することができます。"
 
-#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:352
+#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:403
 #, kde-format
 msgid "Homepage"
 msgstr "ホームページ"
@@ -575,7 +569,7 @@ msgstr ""
 "ドやドキュメントの改善で貢献していただくこともできます。さあ、あとはあなた次"
 "第です！"
 
-#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:368
+#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:419
 #, kde-format
 msgid "Get Involved"
 msgstr "参加する"
@@ -630,97 +624,107 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:360
+#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:411
 #, kde-format
 msgid "Donate"
 msgstr "寄付"
 
-#: formcard/AboutPage.qml:169
+#: formcard/AboutPage.qml:166
+#, kde-format
+msgid "What's new"
+msgstr ""
+
+#: formcard/AboutPage.qml:196
 #, kde-format
 msgid "Copyright"
 msgstr "著作権"
 
-#: formcard/AboutPage.qml:177
+#: formcard/AboutPage.qml:204
 #, kde-format
 msgid "Release history"
 msgstr ""
 
-#: formcard/AboutPage.qml:239
+#: formcard/AboutPage.qml:278
+#, kde-format
+msgid "Show older changes…"
+msgstr ""
+
+#: formcard/AboutPage.qml:290
 #, kde-format
 msgid "Description"
 msgstr "説明"
 
-#: formcard/AboutPage.qml:252
+#: formcard/AboutPage.qml:303
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "ライセンス"
 
-#: formcard/AboutPage.qml:388
+#: formcard/AboutPage.qml:439
 #, kde-format
 msgid "Report a Bug"
 msgstr "バグを報告"
 
-#: formcard/AboutPage.qml:401
+#: formcard/AboutPage.qml:452
 #, kde-format
 msgid "Matrix Channel"
 msgstr ""
 
-#: formcard/AboutPage.qml:417
+#: formcard/AboutPage.qml:468
 #, kde-format
 msgid "Mastodon"
 msgstr ""
 
-#: formcard/AboutPage.qml:429
+#: formcard/AboutPage.qml:480
 #, kde-format
 msgid "Source Code"
 msgstr ""
 
-#: formcard/AboutPage.qml:435
+#: formcard/AboutPage.qml:486
 #, kde-format
 msgid "Libraries in use"
 msgstr "使用されているライブラリ"
 
-#: formcard/AboutPage.qml:439
+#: formcard/AboutPage.qml:490
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "クリップボードにコピー"
 
-#: formcard/AboutPage.qml:443
+#: formcard/AboutPage.qml:494
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "システム情報がクリップボードにコピーされました。"
 
-#: formcard/AboutPage.qml:458
+#: formcard/AboutPage.qml:509
 #, kde-format
 msgid "Authors"
 msgstr "作者"
 
-#: formcard/AboutPage.qml:474
+#: formcard/AboutPage.qml:525
 #, kde-format
 msgid "Credits"
 msgstr "クレジット"
 
-#: formcard/AboutPage.qml:490
+#: formcard/AboutPage.qml:541
 #, kde-format
 msgid "Translators"
 msgstr "翻訳者"
 
-#: formcard/AboutPage.qml:541
+#: formcard/AboutPage.qml:592
 #, fuzzy, kde-format
 #| msgctxt "@title:dialog"
 #| msgid "Information"
 msgid "More information"
 msgstr "情報"
 
-#: formcard/AboutPage.qml:601
+#: formcard/AboutPage.qml:652
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "%1 の KDE Store ページを訪れる"
 
-#: formcard/AboutPage.qml:610
+#: formcard/AboutPage.qml:661
 #, kde-format
 msgid "Send an email to %1"
 msgstr "%1 にメールを送る"
@@ -755,19 +759,19 @@ msgctxt "Date is not set"
 msgid "Not set"
 msgstr "設定されていません"
 
-#: formcard/FormFileDelegate.qml:191
+#: formcard/FormFileDelegate.qml:185
 #, kde-format
 msgctxt "@info:status"
 msgid "The path doesn't exist."
 msgstr ""
 
-#: formcard/FormFileDelegate.qml:200
+#: formcard/FormFileDelegate.qml:194
 #, kde-format
 msgctxt "@info:status"
 msgid "The file doesn't exist."
 msgstr ""
 
-#: formcard/FormFileDelegate.qml:267
+#: formcard/FormFileDelegate.qml:242
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Select"
@@ -775,19 +779,19 @@ msgctxt "@action:button"
 msgid "Select file"
 msgstr "選択"
 
-#: formcard/FormFileDelegate.qml:274
+#: formcard/FormFileDelegate.qml:249
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No file selected"
 msgstr ""
 
-#: formcard/FormFolderDelegate.qml:158
+#: formcard/FormFolderDelegate.qml:152
 #, kde-format
 msgctxt "@info:status"
 msgid "The folder doesn't exist."
 msgstr ""
 
-#: formcard/FormFolderDelegate.qml:215
+#: formcard/FormFolderDelegate.qml:199
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Select"
@@ -795,7 +799,7 @@ msgctxt "@action:button"
 msgid "Select folder"
 msgstr "選択"
 
-#: formcard/FormFolderDelegate.qml:222
+#: formcard/FormFolderDelegate.qml:206
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No folder selected"
@@ -1004,3 +1008,7 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr ""
+
+#~ msgctxt "Linux packaging format"
+#~ msgid "Unknown/Default"
+#~ msgstr "不明/デフォルト"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-26 00:44+0000\n"
+"POT-Creation-Date: 2026-09-29 00:43+0000\n"
 "PO-Revision-Date: 2026-03-05 20:37+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -32,7 +32,7 @@ msgstr "translator@legisign.org"
 msgid "Open Command Bar"
 msgstr "Avaa komentopalkki"
 
-#: actions/abstractkirigamiapplication.cpp:185 formcard/AboutPage.qml:114
+#: actions/abstractkirigamiapplication.cpp:185 formcard/AboutPage.qml:128
 #, kde-format
 msgid "About %1"
 msgstr "Tietoa – %1"
@@ -291,21 +291,21 @@ msgstr "Edellinen kuva"
 msgid "Next image"
 msgstr "Seuraava kuva"
 
-#: components/Banner.qml:185 formcard/AboutPage.qml:204
-#: formcard/AboutPage.qml:303 formcard/AboutPage.qml:699
+#: components/Banner.qml:185 formcard/AboutPage.qml:240
+#: formcard/AboutPage.qml:354 formcard/AboutPage.qml:750
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
 msgstr "Sulje"
 
-#: components/ConvergentContextMenu.qml:324
-#: components/ConvergentContextMenu.qml:434
+#: components/ConvergentContextMenu.qml:318
+#: components/ConvergentContextMenu.qml:428
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "Siirry takaisin"
 
-#: components/ConvergentContextMenu.qml:408 formcard/FormCardDialog.qml:102
+#: components/ConvergentContextMenu.qml:402 formcard/FormCardDialog.qml:102
 #, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
@@ -316,31 +316,31 @@ msgstr "Sulje"
 msgid "Download"
 msgstr "Lataa"
 
-#: components/MessageDialog.qml:117
+#: components/MessageDialog.qml:179
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
 msgstr "Onnistui"
 
-#: components/MessageDialog.qml:119 components/MessageDialog.qml:125
+#: components/MessageDialog.qml:181 components/MessageDialog.qml:187
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
 msgstr "Varoitus"
 
-#: components/MessageDialog.qml:121
+#: components/MessageDialog.qml:183
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
 msgstr "Virhe"
 
-#: components/MessageDialog.qml:123
+#: components/MessageDialog.qml:185
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
 msgstr "Tietoa"
 
-#: components/MessageDialog.qml:278
+#: components/MessageDialog.qml:311
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
@@ -352,14 +352,14 @@ msgctxt "@action:button"
 msgid "Volume"
 msgstr "Äänenvoimakkuus"
 
-#: dateandtime/DatePopup.qml:87 dateandtime/TimePopup.qml:46
+#: dateandtime/DatePopup.qml:87 dateandtime/TimePopup.qml:55
 #: onboarding/private/OnboardingOverlay.qml:236
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Peru"
 
-#: dateandtime/DatePopup.qml:99 dateandtime/TimePopup.qml:57
+#: dateandtime/DatePopup.qml:99 dateandtime/TimePopup.qml:66
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
@@ -398,92 +398,86 @@ msgctxt "@action:button"
 msgid "Go Next"
 msgstr "Siirry seuraavaan"
 
-#: dateandtime/TimePicker.qml:132
+#: dateandtime/TimePicker.qml:130
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to current time"
 msgstr ""
 
-#: dateandtime/TimePicker.qml:157
+#: dateandtime/TimePicker.qml:155
 #, kde-format
 msgid "Hours"
 msgstr "Tunnit"
 
-#: dateandtime/TimePicker.qml:180
+#: dateandtime/TimePicker.qml:178
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: dateandtime/TimePicker.qml:195
+#: dateandtime/TimePicker.qml:193
 #, kde-format
 msgid "Minutes"
 msgstr "minuuttia"
 
-#: formcard/aboutcomponent.cpp:28
+#: formcard/aboutcomponent.cpp:102
 #, kde-format
 msgctxt "@info Platform name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: formcard/aboutcomponent.cpp:32
+#: formcard/aboutcomponent.cpp:106
 #, kde-format
 msgid "KDE Frameworks"
 msgstr "KDE Frameworks"
 
-#: formcard/aboutcomponent.cpp:33
+#: formcard/aboutcomponent.cpp:107
 #, kde-format
 msgctxt "@info"
 msgid "Collection of libraries created by the KDE Community to extend Qt."
 msgstr "Kokoelma KDE-yhteisön Qt:n laventamiseksi kehittämiä kirjastoja."
 
-#: formcard/aboutcomponent.cpp:38
+#: formcard/aboutcomponent.cpp:112
 #, kde-format
 msgid "Qt"
 msgstr "Qt"
 
-#: formcard/aboutcomponent.cpp:39
+#: formcard/aboutcomponent.cpp:113
 #, kde-format
 msgctxt "@info"
 msgid "Cross-platform application development framework."
 msgstr "Monialustainen sovelluskehityskehys."
 
-#: formcard/aboutcomponent.cpp:40
+#: formcard/aboutcomponent.cpp:114
 #, kde-format
 msgid "Using %1 and built against %2"
 msgstr "Käytössä %1, koostettu kirjastolla %2"
 
-#: formcard/aboutcomponent.cpp:45
-#, kde-format
-msgctxt "Linux packaging format"
-msgid "Unknown/Default"
-msgstr "Tuntematon/oletus"
-
-#: formcard/aboutcomponent.cpp:47
+#: formcard/aboutcomponent.cpp:121
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Flatpak"
 msgstr "Flatpak"
 
-#: formcard/aboutcomponent.cpp:50
+#: formcard/aboutcomponent.cpp:124
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "Snap"
 msgstr "Snap"
 
-#: formcard/aboutcomponent.cpp:53
+#: formcard/aboutcomponent.cpp:127
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "AppImage"
 msgstr "AppImage"
 
-#: formcard/aboutcomponent.cpp:55
+#: formcard/aboutcomponent.cpp:130
 #, kde-format
 msgctxt "@info"
 msgid "Distribution method."
 msgstr "Jakelutapa."
 
-#: formcard/aboutcomponent.cpp:58
+#: formcard/aboutcomponent.cpp:134
 #, kde-format
 msgctxt "@info"
 msgid "Underlying platform."
@@ -522,7 +516,7 @@ msgstr ""
 "vapaata ohjelmistoa. Kaikki ovat tervetulleita liittymään ja avustamaan KDE:"
 "tä – myös sinä."
 
-#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:352
+#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:403
 #, kde-format
 msgid "Homepage"
 msgstr "Kotisivu"
@@ -578,7 +572,7 @@ msgstr ""
 "liittyä käyttöliittymää kääntävään kansalliseen ryhmään. Voi myös tehdä "
 "grafiikkaa, teemoja, ääniä tai parantaa dokumentaatiota. Päätä itse!"
 
-#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:368
+#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:419
 #, kde-format
 msgid "Get Involved"
 msgstr "Ota osaa"
@@ -633,98 +627,108 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:360
+#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:411
 #, kde-format
 msgid "Donate"
 msgstr "Lahjoita"
 
-#: formcard/AboutPage.qml:169
+#: formcard/AboutPage.qml:166
+#, kde-format
+msgid "What's new"
+msgstr ""
+
+#: formcard/AboutPage.qml:196
 #, kde-format
 msgid "Copyright"
 msgstr "Tekijänoikeudet"
 
-#: formcard/AboutPage.qml:177
+#: formcard/AboutPage.qml:204
 #, kde-format
 msgid "Release history"
 msgstr ""
 
-#: formcard/AboutPage.qml:239
+#: formcard/AboutPage.qml:278
+#, kde-format
+msgid "Show older changes…"
+msgstr ""
+
+#: formcard/AboutPage.qml:290
 #, kde-format
 msgid "Description"
 msgstr "Kuvaus"
 
-#: formcard/AboutPage.qml:252
+#: formcard/AboutPage.qml:303
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "Lisenssi"
 msgstr[1] "Lisenssit"
 
-#: formcard/AboutPage.qml:388
+#: formcard/AboutPage.qml:439
 #, kde-format
 msgid "Report a Bug"
 msgstr "Ilmoita viasta"
 
-#: formcard/AboutPage.qml:401
+#: formcard/AboutPage.qml:452
 #, kde-format
 msgid "Matrix Channel"
 msgstr ""
 
-#: formcard/AboutPage.qml:417
+#: formcard/AboutPage.qml:468
 #, kde-format
 msgid "Mastodon"
 msgstr ""
 
-#: formcard/AboutPage.qml:429
+#: formcard/AboutPage.qml:480
 #, kde-format
 msgid "Source Code"
 msgstr ""
 
-#: formcard/AboutPage.qml:435
+#: formcard/AboutPage.qml:486
 #, kde-format
 msgid "Libraries in use"
 msgstr "Käytetyt kirjastot"
 
-#: formcard/AboutPage.qml:439
+#: formcard/AboutPage.qml:490
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "Kopioi leikepöydälle"
 
-#: formcard/AboutPage.qml:443
+#: formcard/AboutPage.qml:494
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "Järjestelmätiedot kopioitiin leikepöydälle."
 
-#: formcard/AboutPage.qml:458
+#: formcard/AboutPage.qml:509
 #, kde-format
 msgid "Authors"
 msgstr "Tekijät"
 
-#: formcard/AboutPage.qml:474
+#: formcard/AboutPage.qml:525
 #, kde-format
 msgid "Credits"
 msgstr "Kiitokset"
 
-#: formcard/AboutPage.qml:490
+#: formcard/AboutPage.qml:541
 #, kde-format
 msgid "Translators"
 msgstr "Kääntäjät"
 
-#: formcard/AboutPage.qml:541
+#: formcard/AboutPage.qml:592
 #, fuzzy, kde-format
 #| msgctxt "@title:dialog"
 #| msgid "Information"
 msgid "More information"
 msgstr "Tietoa"
 
-#: formcard/AboutPage.qml:601
+#: formcard/AboutPage.qml:652
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Käy KDE Storen %1 -sivulla"
 
-#: formcard/AboutPage.qml:610
+#: formcard/AboutPage.qml:661
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Lähetä sähköpostia: %1"
@@ -759,43 +763,43 @@ msgctxt "Date is not set"
 msgid "Not set"
 msgstr "Ei asetettu"
 
-#: formcard/FormFileDelegate.qml:191
+#: formcard/FormFileDelegate.qml:185
 #, kde-format
 msgctxt "@info:status"
 msgid "The path doesn't exist."
 msgstr "Sijaintia ei ole olemassa."
 
-#: formcard/FormFileDelegate.qml:200
+#: formcard/FormFileDelegate.qml:194
 #, kde-format
 msgctxt "@info:status"
 msgid "The file doesn't exist."
 msgstr "Tiedostoa ei ole olemassa."
 
-#: formcard/FormFileDelegate.qml:267
+#: formcard/FormFileDelegate.qml:242
 #, kde-format
 msgctxt "@action:button"
 msgid "Select file"
 msgstr "Valitse tiedosto"
 
-#: formcard/FormFileDelegate.qml:274
+#: formcard/FormFileDelegate.qml:249
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No file selected"
 msgstr "Tiedostoa ei ole valittu"
 
-#: formcard/FormFolderDelegate.qml:158
+#: formcard/FormFolderDelegate.qml:152
 #, kde-format
 msgctxt "@info:status"
 msgid "The folder doesn't exist."
 msgstr "Kansiota ei ole olemassa."
 
-#: formcard/FormFolderDelegate.qml:215
+#: formcard/FormFolderDelegate.qml:199
 #, kde-format
 msgctxt "@action:button"
 msgid "Select folder"
 msgstr "Valitse kansio"
 
-#: formcard/FormFolderDelegate.qml:222
+#: formcard/FormFolderDelegate.qml:206
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No folder selected"
@@ -1006,6 +1010,10 @@ msgstr "Pikanäppäimet"
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "Oikeinkirjoituksen tarkistus"
+
+#~ msgctxt "Linux packaging format"
+#~ msgid "Unknown/Default"
+#~ msgstr "Tuntematon/oletus"
 
 #~ msgctxt "%1 is month name, %2 is year"
 #~ msgid "%1 %2"
