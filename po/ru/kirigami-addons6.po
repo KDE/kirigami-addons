@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-29 00:43+0000\n"
-"PO-Revision-Date: 2026-09-26 09:55+0200\n"
+"PO-Revision-Date: 2026-09-29 08:35+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -648,7 +648,7 @@ msgstr "Сделать пожертвование"
 #: formcard/AboutPage.qml:166
 #, kde-format
 msgid "What's new"
-msgstr ""
+msgstr "Что нового?"
 
 #: formcard/AboutPage.qml:196
 #, kde-format
@@ -663,7 +663,7 @@ msgstr "История выпусков"
 #: formcard/AboutPage.qml:278
 #, kde-format
 msgid "Show older changes…"
-msgstr ""
+msgstr "Показать более ранние изменения…"
 
 #: formcard/AboutPage.qml:290
 #, kde-format

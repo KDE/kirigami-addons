@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-29 00:43+0000\n"
-"PO-Revision-Date: 2026-09-26 12:46+0300\n"
+"PO-Revision-Date: 2026-09-29 09:10+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -645,7 +645,7 @@ msgstr "Підтримати фінансово"
 #: formcard/AboutPage.qml:166
 #, kde-format
 msgid "What's new"
-msgstr ""
+msgstr "Що нового?"
 
 #: formcard/AboutPage.qml:196
 #, kde-format
@@ -660,7 +660,7 @@ msgstr "Журнал випусків"
 #: formcard/AboutPage.qml:278
 #, kde-format
 msgid "Show older changes…"
-msgstr ""
+msgstr "Показати старіші зміни…"
 
 #: formcard/AboutPage.qml:290
 #, kde-format

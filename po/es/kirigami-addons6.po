@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-29 00:43+0000\n"
-"PO-Revision-Date: 2026-09-26 16:58+0100\n"
+"PO-Revision-Date: 2026-09-29 11:48+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -646,7 +646,7 @@ msgstr "Hacer un donativo"
 #: formcard/AboutPage.qml:166
 #, kde-format
 msgid "What's new"
-msgstr ""
+msgstr "Novedades"
 
 #: formcard/AboutPage.qml:196
 #, kde-format
@@ -661,7 +661,7 @@ msgstr "Historial de lanzamientos"
 #: formcard/AboutPage.qml:278
 #, kde-format
 msgid "Show older changes…"
-msgstr ""
+msgstr "Mostrar cambios anteriores…"
 
 #: formcard/AboutPage.qml:290
 #, kde-format
@@ -1009,7 +1009,3 @@ msgstr "Atajos de teclado"
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "Comprobación ortográfica"
-
-#~ msgctxt "Linux packaging format"
-#~ msgid "Unknown/Default"
-#~ msgstr "Desconocido/predeterminado"

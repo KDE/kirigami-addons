@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-29 00:43+0000\n"
-"PO-Revision-Date: 2026-09-26 06:48+0200\n"
+"PO-Revision-Date: 2026-09-29 05:45+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -639,7 +639,7 @@ msgstr "შემოწირულობა"
 #: formcard/AboutPage.qml:166
 #, kde-format
 msgid "What's new"
-msgstr ""
+msgstr "რა არის ახალი"
 
 #: formcard/AboutPage.qml:196
 #, kde-format
@@ -654,7 +654,7 @@ msgstr "გამოშვების ისტორია"
 #: formcard/AboutPage.qml:278
 #, kde-format
 msgid "Show older changes…"
-msgstr ""
+msgstr "ძველი ცვლილებების ჩვენება…"
 
 #: formcard/AboutPage.qml:290
 #, kde-format

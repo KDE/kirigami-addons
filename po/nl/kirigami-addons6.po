@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-29 00:43+0000\n"
-"PO-Revision-Date: 2026-09-26 18:44+0200\n"
+"PO-Revision-Date: 2026-09-29 13:29+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -643,7 +643,7 @@ msgstr "Doneren"
 #: formcard/AboutPage.qml:166
 #, kde-format
 msgid "What's new"
-msgstr ""
+msgstr "Wat is nieuw"
 
 #: formcard/AboutPage.qml:196
 #, kde-format
@@ -658,7 +658,7 @@ msgstr "Uitgavegeschiedenis"
 #: formcard/AboutPage.qml:278
 #, kde-format
 msgid "Show older changes…"
-msgstr ""
+msgstr "Oudere wijzigingen tonen…"
 
 #: formcard/AboutPage.qml:290
 #, kde-format

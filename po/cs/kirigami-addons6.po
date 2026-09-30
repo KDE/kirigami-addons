@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-29 00:43+0000\n"
-"PO-Revision-Date: 2026-09-18 10:51+0200\n"
+"PO-Revision-Date: 2026-09-29 13:05+0200\n"
 "Last-Translator: Libor Filipek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -635,7 +635,7 @@ msgstr "Přispět"
 #: formcard/AboutPage.qml:166
 #, kde-format
 msgid "What's new"
-msgstr ""
+msgstr "Co je nového"
 
 #: formcard/AboutPage.qml:196
 #, kde-format
@@ -650,7 +650,7 @@ msgstr "Historie vydání"
 #: formcard/AboutPage.qml:278
 #, kde-format
 msgid "Show older changes…"
-msgstr ""
+msgstr "Zobrazit starší změny…"
 
 #: formcard/AboutPage.qml:290
 #, kde-format

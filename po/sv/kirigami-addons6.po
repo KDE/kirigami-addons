@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-29 00:43+0000\n"
-"PO-Revision-Date: 2026-09-27 14:44+0200\n"
+"PO-Revision-Date: 2026-09-29 19:56+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -638,7 +638,7 @@ msgstr "Ge ett bidrag"
 #: formcard/AboutPage.qml:166
 #, kde-format
 msgid "What's new"
-msgstr ""
+msgstr "Vad är nytt"
 
 #: formcard/AboutPage.qml:196
 #, kde-format
@@ -653,7 +653,7 @@ msgstr "Utgivningshistorik"
 #: formcard/AboutPage.qml:278
 #, kde-format
 msgid "Show older changes…"
-msgstr ""
+msgstr "Visa äldre ändringar…"
 
 #: formcard/AboutPage.qml:290
 #, kde-format

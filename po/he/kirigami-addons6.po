@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-29 00:43+0000\n"
-"PO-Revision-Date: 2026-09-18 23:10+0300\n"
+"PO-Revision-Date: 2026-09-29 08:43+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -625,7 +625,7 @@ msgstr "תרומה"
 #: formcard/AboutPage.qml:166
 #, kde-format
 msgid "What's new"
-msgstr ""
+msgstr "מה חדש"
 
 #: formcard/AboutPage.qml:196
 #, kde-format
@@ -640,7 +640,7 @@ msgstr "היסטוריית מהדורות"
 #: formcard/AboutPage.qml:278
 #, kde-format
 msgid "Show older changes…"
-msgstr ""
+msgstr "הצגת שינויים ישנים יותר…"
 
 #: formcard/AboutPage.qml:290
 #, kde-format
@@ -825,7 +825,7 @@ msgstr "%1/%2"
 #, kde-format
 msgctxt "@action:button"
 msgid "Done"
-msgstr ""
+msgstr "בוצע"
 
 #: onboarding/private/OnboardingOverlay.qml:201
 #, kde-format
