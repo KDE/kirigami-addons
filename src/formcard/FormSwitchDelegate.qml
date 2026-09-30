@@ -132,6 +132,7 @@ T.SwitchDelegate {
         }
 
         Controls.Switch {
+            objectName: "checkControl"
             id: switchItem
             focusPolicy: Qt.NoFocus // provided by delegate
             Layout.leftMargin: Private.FormCardUnits.horizontalSpacing
@@ -153,7 +154,7 @@ T.SwitchDelegate {
             onDoubleClicked: root.doubleClicked()
 
             onCheckedChanged: {
-                root.checked = checked;
+                FormFieldHelper.setPropertyValue(root, "checked", checked);
                 checked = Qt.binding(() => root.checked);
             }
 

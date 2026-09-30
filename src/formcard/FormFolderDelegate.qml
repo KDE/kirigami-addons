@@ -137,6 +137,7 @@ AbstractFormDelegate {
 
                 Controls.TextField {
                     id: textField
+                    objectName: "pathField"
 
                     function checkFolder(): void {
                         if (textField.text.length === 0) {
@@ -146,7 +147,7 @@ AbstractFormDelegate {
 
                         if (FormCard.FileHelper.folderExists(textField.text)) {
                             formErrorHandler.visible = false;
-                            root.selectedFolder = 'file://' + textField.text;
+                            FormFieldHelper.setPropertyValue(root, "selectedFolder", 'file://' + textField.text);
                             root.accepted();
                         } else if (!pathCompletion.popupVisible) {
                             formErrorHandler.text = i18ndc("kirigami-addons6", "@info:status", "The folder doesn't exist.");

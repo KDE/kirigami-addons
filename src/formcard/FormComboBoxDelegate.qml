@@ -210,7 +210,7 @@ AbstractFormDelegate {
         Layout.topMargin: index == 0 ? Math.round(Kirigami.Units.smallSpacing / 2) : 0
 
         onClicked: {
-            controlRoot.currentIndex = index;
+            FormFieldHelper.setPropertyValue(controlRoot, "currentIndex", index);
             controlRoot.activated(index);
             controlRoot.closeDialog();
         }
@@ -350,12 +350,17 @@ AbstractFormDelegate {
 
                 ListView {
                     id: listView
+                    objectName: "selectionList"
 
                     clip: true
                     model: controlRoot.model
                     delegate: controlRoot.dialogDelegate
                     currentIndex: controlRoot.currentIndex
-                    onCurrentIndexChanged: controlRoot.currentIndex = currentIndex
+                    onCurrentIndexChanged: {
+                        if (controlRoot.currentIndex !== currentIndex) {
+                            FormFieldHelper.setPropertyValue(controlRoot, "currentIndex", currentIndex);
+                        }
+                    }
                 }
             }
 
@@ -365,8 +370,14 @@ AbstractFormDelegate {
             }
 
             QQC2.TextField {
+                objectName: "editTextField"
                 visible: controlRoot.editable
-                onTextChanged: controlRoot.editText = text;
+                text: controlRoot.editText
+                onTextChanged: {
+                    if (controlRoot.editText !== text) {
+                        FormFieldHelper.setPropertyValue(controlRoot, "editText", text);
+                    }
+                }
                 Layout.fillWidth: true
             }
         }
@@ -387,8 +398,14 @@ AbstractFormDelegate {
             delegate: controlRoot.dialogDelegate
 
             footer: QQC2.TextField {
+                objectName: "editTextField"
                 visible: controlRoot.editable
-                onTextChanged: controlRoot.editText = text;
+                text: controlRoot.editText
+                onTextChanged: {
+                    if (controlRoot.editText !== text) {
+                        FormFieldHelper.setPropertyValue(controlRoot, "editText", text);
+                    }
+                }
                 Layout.fillWidth: true
             }
         }

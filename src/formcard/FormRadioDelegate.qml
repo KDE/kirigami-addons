@@ -111,6 +111,7 @@ T.RadioDelegate {
         description: root.description
 
         Controls.RadioButton {
+            objectName: "checkControl"
                 id: radioButtonItem
                 focusPolicy: Qt.NoFocus // provided by delegate
                 Layout.rightMargin: Private.FormCardUnits.horizontalSpacing
@@ -137,7 +138,7 @@ T.RadioDelegate {
                 onDoubleClicked: root.doubleClicked()
 
                 onCheckedChanged: {
-                    root.checked = checked;
+                    FormFieldHelper.setPropertyValue(root, "checked", checked);
                     checked = Qt.binding(() => root.checked);
                 }
         }

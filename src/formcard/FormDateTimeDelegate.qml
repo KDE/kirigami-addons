@@ -207,6 +207,7 @@ AbstractFormDelegate {
 
             QQC2.AbstractButton {
                 id: dateButton
+                objectName: "dateButton"
 
                 property bool androidPickerActive: false
 
@@ -311,7 +312,7 @@ AbstractFormDelegate {
 
                         item.accepted.connect(() => {
                             if (isNaN(root.value.valueOf())) {
-                                root.value = root.initialValue;
+                                FormFieldHelper.setPropertyValue(root, "value", root.initialValue);
                             }
                             root.value.setFullYear(item.value.getFullYear());
                             root.value.setMonth(item.value.getMonth());
@@ -330,6 +331,7 @@ AbstractFormDelegate {
                 Component {
                     id: datePopup
                     DateTime.DatePopup {
+                        objectName: "datePopup"
                         x: parent ? Math.round((parent.width - width) / 2) : 0
                         y: parent ? Math.round((parent.height - height) / 2) : 0
 
@@ -340,7 +342,7 @@ AbstractFormDelegate {
                         modal: true
                         resettable: root.resettable
 
-                        onReset: root.value = new Date(NaN);
+                        onReset: FormFieldHelper.setPropertyValue(root, "value", new Date(NaN));
                         onClosed: destroy();
                     }
                 }
@@ -353,7 +355,7 @@ AbstractFormDelegate {
                         dateButton.androidPickerActive = false;
                         if (accepted) {
                             if (isNaN(root.value.valueOf())) {
-                                root.value = root.initialValue;
+                                FormFieldHelper.setPropertyValue(root, "value", root.initialValue);
                             }
                             root.value.setFullYear(newDate.getFullYear());
                             root.value.setMonth(newDate.getMonth());
@@ -362,7 +364,7 @@ AbstractFormDelegate {
                     }
                     function onDatePickerReset() {
                         dateButton.androidPickerActive = false;
-                        root.value = new Date(NaN);
+                        FormFieldHelper.setPropertyValue(root, "value", new Date(NaN));
                     }
                 }
             }
@@ -433,11 +435,11 @@ AbstractFormDelegate {
                         modal: true
                         resettable: root.resettable
 
-                        onReset: root.value = new Date(NaN);
+                        onReset: FormFieldHelper.setPropertyValue(root, "value", new Date(NaN));
 
                         onAccepted: {
                             if (isNaN(root.value.valueOf())) {
-                                root.value = root.initialValue;
+                                FormFieldHelper.setPropertyValue(root, "value", root.initialValue);
                             }
                             root.value.setHours(popup.value.getHours(), popup.value.getMinutes());
                         }
@@ -452,14 +454,14 @@ AbstractFormDelegate {
                         timeButton.androidPickerActive = false;
                         if (accepted) {
                             if (isNaN(root.value.valueOf())) {
-                                root.value = root.initialValue;
+                                FormFieldHelper.setPropertyValue(root, "value", root.initialValue);
                             }
                             root.value.setHours(newDate.getHours(), newDate.getMinutes());
                         }
                     }
                     function onTimePickerReset() {
                         timeButton.androidPickerActive = false;
-                        root.value = new Date(NaN);
+                        FormFieldHelper.setPropertyValue(root, "value", new Date(NaN));
                     }
                 }
 

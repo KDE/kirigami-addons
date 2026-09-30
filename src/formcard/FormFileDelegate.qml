@@ -169,6 +169,7 @@ AbstractFormDelegate {
 
                 Controls.TextField {
                     id: textField
+                    objectName: "pathField"
 
                     function checkFile(): void {
                         if (textField.text.length === 0) {
@@ -179,7 +180,7 @@ AbstractFormDelegate {
                         if (root.fileMode === FileDialog.SaveFile) {
                             if (FormCard.FileHelper.parentDirectoryExists(textField.text)) {
                                 formErrorHandler.visible = false;
-                                root.selectedFile = 'file://' + textField.text;
+                                FormFieldHelper.setPropertyValue(root, "selectedFile", 'file://' + textField.text);
                                 root.accepted();
                             } else if (!pathCompletion.popupVisible) {
                                 formErrorHandler.text = i18ndc("kirigami-addons6", "@info:status", "The path doesn't exist.");
@@ -187,7 +188,7 @@ AbstractFormDelegate {
                             }
                         } else {
                             if (FormCard.FileHelper.fileExists(textField.text)) {
-                                root.selectedFile = 'file://' + textField.text;
+                                FormFieldHelper.setPropertyValue(root, "selectedFile", 'file://' + textField.text);
                                 formErrorHandler.visible = false;
                                 root.accepted();
                             } else if (!pathCompletion.popupVisible) {

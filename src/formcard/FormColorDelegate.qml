@@ -91,8 +91,9 @@ FormCard.AbstractFormDelegate {
 
     ColorDialog {
         id: colorDialog
+        objectName: "colorDialog"
         onAccepted: {
-            root.color = colorDialog.color;
+            FormFieldHelper.setPropertyValue(root, "color", colorDialog.color);
         }
     }
 }

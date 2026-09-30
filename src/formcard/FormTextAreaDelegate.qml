@@ -205,7 +205,11 @@ AbstractFormDelegate {
 
             placeholderText: root.placeholderText
             text: root.text
-            onTextChanged: root.text = text
+            onTextChanged: {
+                if (root.text !== text) {
+                    FormFieldHelper.setText(root, text);
+                }
+            }
             onEditingFinished: root.editingFinished()
             activeFocusOnTab: false
             wrapMode: TextEdit.Wrap

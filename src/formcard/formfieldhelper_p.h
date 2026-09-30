@@ -4,10 +4,11 @@
 #pragma once
 
 #include <QObject>
+#include <QVariant>
 #include <qqmlregistration.h>
 
-// Internal helper for updating a delegate's inherited text property without
-// removing a binding supplied by its caller.
+// Internal helper for updating delegate properties without removing bindings
+// supplied by their callers.
 class FormFieldHelper : public QObject
 {
     Q_OBJECT
@@ -22,8 +23,13 @@ public:
 
     Q_INVOKABLE void setText(QObject *field, const QString &text)
     {
+        setPropertyValue(field, QStringLiteral("text"), text);
+    }
+
+    Q_INVOKABLE void setPropertyValue(QObject *field, const QString &property, const QVariant &value)
+    {
         if (field) {
-            field->setProperty("text", text);
+            field->setProperty(property.toUtf8().constData(), value);
         }
     }
 };

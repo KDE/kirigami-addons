@@ -28,13 +28,22 @@ Item {
             text: root.modelText
         }
     }
+    Component {
+        id: textAreaComponent
+        FormCard.FormTextAreaDelegate {
+            width: root.width
+            label: "Text area"
+            text: root.modelText
+        }
+    }
     TestCase {
         name: "FormFieldBindings"
         when: windowShown
         function test_bindingSurvivesEditing_data(): list<var> {
             return [
                 { tag: "text", component: textComponent },
-                { tag: "password", component: passwordComponent }
+                { tag: "password", component: passwordComponent },
+                { tag: "text-area", component: textAreaComponent }
             ];
         }
         function test_bindingSurvivesEditing(data: var): void {
@@ -46,7 +55,7 @@ Item {
             tryCompare(field, "text", "Updated");
             field.forceActiveFocus();
             tryCompare(field, "fieldActiveFocus", true);
-            field.selectAll();
+            field.clear();
             keySequence("A");
             tryCompare(field, "text", "a");
             root.modelText = "After typing";
