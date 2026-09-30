@@ -55,6 +55,7 @@ kirigami_add_tests(
     tst_sounds.qml
     tst_actioncontext.qml
     tst_formcard.qml
+    tst_formtextfields.qml
     tst_messagedialog.qml
     tst_formpathcompletion.qml
     tst_pdfeditoractions.qml

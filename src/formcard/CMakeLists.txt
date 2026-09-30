@@ -67,6 +67,7 @@ target_sources(formcardplugin PRIVATE
     aboutcomponent_p.h
     filehelper.cpp
     filehelper_p.h
+    formfieldhelper_p.h
     passwordhealth.cpp
     passwordhealth.h
     zxcvbn/zxcvbn.c

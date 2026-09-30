@@ -392,7 +392,7 @@ AbstractFormDelegate {
                     text: root.text
                     onTextChanged: {
                         if (root.text !== text) {
-                            root.text = text;
+                            FormFieldHelper.setText(root, text);
                         }
                     }
                     onAccepted: {
@@ -417,7 +417,7 @@ AbstractFormDelegate {
                     }
                     onTextEdited: {
                         if (root.text !== text) {
-                            root.text = text;
+                            FormFieldHelper.setText(root, text);
                         }
                         root.textEdited();
                     }
