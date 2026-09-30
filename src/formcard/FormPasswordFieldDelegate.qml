@@ -369,7 +369,11 @@ AbstractFormDelegate {
                 visible: !Kirigami.Settings.isMobile || root._mobileEditing
                 placeholderText: root.placeholderText
                 text: root.text
-                onTextChanged: root.text = text
+                onTextChanged: {
+                    if (root.text !== text) {
+                        root.text = text;
+                    }
+                }
                 onAccepted: {
                     root.accepted();
                     if (Kirigami.Settings.isMobile) {
@@ -391,7 +395,9 @@ AbstractFormDelegate {
                     }
                 }
                 onTextEdited: {
-                    root.text = text;
+                    if (root.text !== text) {
+                        root.text = text;
+                    }
                     root.textEdited();
                 }
                 activeFocusOnTab: false
