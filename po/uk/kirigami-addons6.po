@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-29 00:43+0000\n"
+"POT-Creation-Date: 2026-10-01 00:43+0000\n"
 "PO-Revision-Date: 2026-09-29 09:10+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -355,14 +355,14 @@ msgctxt "@action:button"
 msgid "Volume"
 msgstr "Гучність"
 
-#: dateandtime/DatePopup.qml:87 dateandtime/TimePopup.qml:55
+#: dateandtime/DatePopup.qml:103 dateandtime/TimePopup.qml:70
 #: onboarding/private/OnboardingOverlay.qml:236
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: dateandtime/DatePopup.qml:99 dateandtime/TimePopup.qml:66
+#: dateandtime/DatePopup.qml:115 dateandtime/TimePopup.qml:81
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
@@ -761,55 +761,61 @@ msgctxt "@action:button"
 msgid "Icon"
 msgstr "Піктограма"
 
-#: formcard/FormDateTimeDelegate.qml:213
+#: formcard/FormDateTimeDelegate.qml:227
 #, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
 msgid "Today"
 msgstr "Сьогодні"
 
-#: formcard/FormDateTimeDelegate.qml:240 formcard/FormDateTimeDelegate.qml:377
+#: formcard/FormDateTimeDelegate.qml:254 formcard/FormDateTimeDelegate.qml:399
 #, kde-format
 msgctxt "Date is not set"
 msgid "Not set"
 msgstr "Не встановлено"
 
-#: formcard/FormFileDelegate.qml:185
+#: formcard/FormDateTimeDelegate.qml:305 formcard/FormDateTimeDelegate.qml:415
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset"
+msgstr ""
+
+#: formcard/FormFileDelegate.qml:186
 #, kde-format
 msgctxt "@info:status"
 msgid "The path doesn't exist."
 msgstr "Шляху не існує."
 
-#: formcard/FormFileDelegate.qml:194
+#: formcard/FormFileDelegate.qml:195
 #, kde-format
 msgctxt "@info:status"
 msgid "The file doesn't exist."
 msgstr "Файла не існує."
 
-#: formcard/FormFileDelegate.qml:242
+#: formcard/FormFileDelegate.qml:243
 #, kde-format
 msgctxt "@action:button"
 msgid "Select file"
 msgstr "Вибрати файл"
 
-#: formcard/FormFileDelegate.qml:249
+#: formcard/FormFileDelegate.qml:250
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No file selected"
 msgstr "Не вибрано жодного файла"
 
-#: formcard/FormFolderDelegate.qml:152
+#: formcard/FormFolderDelegate.qml:153
 #, kde-format
 msgctxt "@info:status"
 msgid "The folder doesn't exist."
 msgstr "Теки не існує."
 
-#: formcard/FormFolderDelegate.qml:199
+#: formcard/FormFolderDelegate.qml:200
 #, kde-format
 msgctxt "@action:button"
 msgid "Select folder"
 msgstr "Вибрати теку"
 
-#: formcard/FormFolderDelegate.qml:206
+#: formcard/FormFolderDelegate.qml:207
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No folder selected"
@@ -840,8 +846,8 @@ msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
 msgstr "%1/%2"
 
-#: formcard/FormPasswordFieldDelegate.qml:411
-#: formcard/FormTextFieldDelegate.qml:433
+#: formcard/FormPasswordFieldDelegate.qml:417
+#: formcard/FormTextFieldDelegate.qml:439
 #, kde-format
 msgctxt "@action:button"
 msgid "Done"
