@@ -766,7 +766,7 @@ msgstr "Nenastaveno"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset"
-msgstr ""
+msgstr "Obnovit"
 
 #: formcard/FormFileDelegate.qml:186
 #, kde-format

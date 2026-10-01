@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-01 00:43+0000\n"
-"PO-Revision-Date: 2026-09-29 08:43+0300\n"
+"PO-Revision-Date: 2026-10-01 09:09+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -757,7 +757,7 @@ msgstr "לא הוגדר"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset"
-msgstr ""
+msgstr "איפוס"
 
 #: formcard/FormFileDelegate.qml:186
 #, kde-format

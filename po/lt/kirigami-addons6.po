@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-01 00:43+0000\n"
-"PO-Revision-Date: 2026-09-27 20:38+0300\n"
+"PO-Revision-Date: 2026-10-01 14:15+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -641,7 +641,7 @@ msgstr "Paaukoti"
 #: formcard/AboutPage.qml:166
 #, kde-format
 msgid "What's new"
-msgstr ""
+msgstr "Kas naujo"
 
 #: formcard/AboutPage.qml:196
 #, kde-format
@@ -656,7 +656,7 @@ msgstr "Laidų istorija"
 #: formcard/AboutPage.qml:278
 #, kde-format
 msgid "Show older changes…"
-msgstr ""
+msgstr "Rodyti senesnius pakeitimus…"
 
 #: formcard/AboutPage.qml:290
 #, kde-format
@@ -773,7 +773,7 @@ msgstr "Nenustatyta"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset"
-msgstr ""
+msgstr "Atstatyti"
 
 #: formcard/FormFileDelegate.qml:186
 #, kde-format
