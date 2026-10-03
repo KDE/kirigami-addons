@@ -1006,7 +1006,3 @@ msgstr "Snøggtastar"
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "Stavekontroll"
-
-#~ msgctxt "Linux packaging format"
-#~ msgid "Unknown/Default"
-#~ msgstr "Ukjend/standard"

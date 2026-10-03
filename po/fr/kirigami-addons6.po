@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-01 00:43+0000\n"
-"PO-Revision-Date: 2026-09-28 08:49+0200\n"
+"PO-Revision-Date: 2026-10-01 13:26+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -649,7 +649,7 @@ msgstr "Faire un don"
 #: formcard/AboutPage.qml:166
 #, kde-format
 msgid "What's new"
-msgstr ""
+msgstr "Quoi de neuf ?"
 
 #: formcard/AboutPage.qml:196
 #, kde-format
@@ -664,7 +664,7 @@ msgstr "Historique des versions"
 #: formcard/AboutPage.qml:278
 #, kde-format
 msgid "Show older changes…"
-msgstr ""
+msgstr "Afficher les modifications plus anciennes…"
 
 #: formcard/AboutPage.qml:290
 #, kde-format
