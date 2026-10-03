@@ -32,6 +32,8 @@ import "private" as Private
    }
    \endqml
 
+   \image formsliderdelegate.png
+
    \since 1.15.0
  */
 AbstractFormDelegate {
