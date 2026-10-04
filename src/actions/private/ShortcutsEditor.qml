@@ -44,7 +44,7 @@ Kirigami.ScrollablePage {
             required property string actionName
             required property var shortcut
             required property string shortcutDisplay
-            required property string alternateShortcuts
+            required property var alternateShortcuts
 
             text: actionName.replace('&', '')
 

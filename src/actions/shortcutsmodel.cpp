@@ -43,11 +43,7 @@ QVariant ShortcutsModel::data(const QModelIndex &index, int role) const
     case DefaultShortcutRole:
         return item.action->shortcut().toString(QKeySequence::NativeText);
     case AlternateShortcutsRole:
-        if (item.action->shortcuts().size() <= 1) {
-            return {};
-        } else {
-            return QVariant::fromValue(item.action->shortcuts().mid(1));
-        }
+        return QVariant::fromValue(item.action->shortcuts().mid(1));
     case CollectionNameRole:
         return item.collection->componentDisplayName();
     default:
