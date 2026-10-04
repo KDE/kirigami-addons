@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-01 00:43+0000\n"
-"PO-Revision-Date: 2026-09-29 00:48+0200\n"
+"PO-Revision-Date: 2026-10-03 22:34+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -629,7 +629,7 @@ msgstr "기부하기"
 #: formcard/AboutPage.qml:166
 #, kde-format
 msgid "What's new"
-msgstr ""
+msgstr "새로운 기능"
 
 #: formcard/AboutPage.qml:196
 #, kde-format
@@ -644,7 +644,7 @@ msgstr "릴리스 기록"
 #: formcard/AboutPage.qml:278
 #, kde-format
 msgid "Show older changes…"
-msgstr ""
+msgstr "이전 변경 사항 표시…"
 
 #: formcard/AboutPage.qml:290
 #, kde-format
@@ -758,7 +758,7 @@ msgstr "설정하지 않음"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset"
-msgstr ""
+msgstr "초기화"
 
 #: formcard/FormFileDelegate.qml:186
 #, kde-format
