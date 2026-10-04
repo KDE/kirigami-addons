@@ -108,10 +108,24 @@ QQC2.Dialog {
         }
     }
 
-    contentItem: ColumnLayout {
-        id: columnLayout
+    // The content scrolls when the dialog is taller than its parent, instead of going under the footer.
+    contentItem: QQC2.ScrollView {
+        id: scrollView
 
-        spacing: 0
+        implicitWidth: columnLayout.implicitWidth
+        implicitHeight: columnLayout.implicitHeight
+        contentWidth: availableWidth
+        clip: true
+        QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AlwaysOff
+
+        ColumnLayout {
+            id: columnLayout
+
+            width: scrollView.availableWidth
+            // At least the height of the dialog, for the items that fill it.
+            height: Math.max(implicitHeight, scrollView.availableHeight)
+            spacing: 0
+        }
     }
 
     footer: QQC2.DialogButtonBox {
