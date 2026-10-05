@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-01 00:43+0000\n"
-"PO-Revision-Date: 2026-08-01 17:52+0530\n"
+"PO-Revision-Date: 2026-10-04 18:49+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -46,12 +46,10 @@ msgstr "கே.டீ.யீ. பற்றி"
 #, kde-format
 msgctxt "@title:menu"
 msgid "File"
-msgstr ""
+msgstr "கோப்பு"
 
 #: actions/abstractkirigamiapplication.cpp:209
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title:menu"
 msgid "Settings"
 msgstr "அமைப்புகள்"
@@ -60,7 +58,7 @@ msgstr "அமைப்புகள்"
 #, kde-format
 msgctxt "@title:menu"
 msgid "Help"
-msgstr ""
+msgstr "உதவி"
 
 #: actions/private/keysequencehelper.cpp:117
 #, kde-format
@@ -223,7 +221,7 @@ msgstr "கே.டீ.யீ. பற்றி"
 #, kde-format
 msgctxt "@title:window"
 msgid "Failed to Load Application"
-msgstr ""
+msgstr "செயலியைத் திறக்க முடியவில்லை"
 
 #: app/kirigamiappdefaults.cpp:114
 #, kde-format
@@ -232,12 +230,14 @@ msgid ""
 "Could not load the QML application. This issue might be caused by your "
 "distribution. Please report it to your distribution first."
 msgstr ""
+"இந்த QML செயலியைத் துவக்க முடியவில்லை. இது உங்கள் இயக்குதளத்தால் நேர்ந்த சிக்கலாக "
+"இருக்கலாம். முதலில் உங்கள் இயக்குதள வழங்குநரிடம் தெரிவிக்கவும்."
 
 #: app/kirigamiappdefaults.cpp:121
 #, kde-format
 msgctxt "@info"
 msgid "Could not load the QML application."
-msgstr ""
+msgstr "QML செயலியைத் திறக்க முடியவில்லை."
 
 #: components/AbstractMaximizeComponent.qml:137
 #, kde-format
@@ -469,7 +469,7 @@ msgstr "ஸ்னாப்"
 #, kde-format
 msgctxt "Linux packaging format"
 msgid "AppImage"
-msgstr ""
+msgstr "AppImage"
 
 #: formcard/aboutcomponent.cpp:130
 #, kde-format
@@ -631,7 +631,7 @@ msgstr "நன்கொடை அளிப்பது"
 #: formcard/AboutPage.qml:166
 #, kde-format
 msgid "What's new"
-msgstr ""
+msgstr "புதியவை என்ன?"
 
 #: formcard/AboutPage.qml:196
 #, kde-format
@@ -641,12 +641,12 @@ msgstr "பதிப்புரிமை"
 #: formcard/AboutPage.qml:204
 #, kde-format
 msgid "Release history"
-msgstr ""
+msgstr "பதிப்பு வரலாறு"
 
 #: formcard/AboutPage.qml:278
 #, kde-format
 msgid "Show older changes…"
-msgstr ""
+msgstr "பழைய மாற்றங்களைக் காட்டு…"
 
 #: formcard/AboutPage.qml:290
 #, kde-format
@@ -666,9 +666,9 @@ msgid "Report a Bug"
 msgstr "பிழையை தெரிவி"
 
 #: formcard/AboutPage.qml:452
-#, kde-format
+#, fuzzy, kde-format
 msgid "Matrix Channel"
-msgstr ""
+msgstr "மேட்ரிக்ஸு அரட்டை"
 
 #: formcard/AboutPage.qml:468
 #, kde-format
@@ -678,7 +678,7 @@ msgstr ""
 #: formcard/AboutPage.qml:480
 #, kde-format
 msgid "Source Code"
-msgstr ""
+msgstr "மூல குறியீடு"
 
 #: formcard/AboutPage.qml:486
 #, kde-format
@@ -713,11 +713,9 @@ msgid "Translators"
 msgstr "மொழிபெயர்ப்பாளர்கள்"
 
 #: formcard/AboutPage.qml:592
-#, fuzzy, kde-format
-#| msgctxt "@title:dialog"
-#| msgid "Information"
+#, kde-format
 msgid "More information"
-msgstr "தகவல்"
+msgstr "மேலும் விவரங்கள்"
 
 #: formcard/AboutPage.qml:652
 #, kde-format
@@ -763,7 +761,7 @@ msgstr "அமைக்கப்படவில்லை"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset"
-msgstr ""
+msgstr "மீட்டமை"
 
 #: formcard/FormFileDelegate.qml:186
 #, kde-format
@@ -837,7 +835,7 @@ msgstr "%1/%2"
 #, kde-format
 msgctxt "@action:button"
 msgid "Done"
-msgstr ""
+msgstr "முடிந்தது"
 
 #: onboarding/private/OnboardingOverlay.qml:201
 #, kde-format
