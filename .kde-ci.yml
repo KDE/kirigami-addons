@@ -23,4 +23,5 @@ Dependencies:
 
 Options:
   enable-lsan: True
+  run-qmllint: True
 #  require-passing-tests-on: [ 'Linux/Qt6' ]
