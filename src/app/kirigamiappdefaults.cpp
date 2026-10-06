@@ -26,8 +26,9 @@
 
 #if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
 #include <KIconTheme>
+#include <KConfigGroup>
+#include <KSharedConfig>
 #include <QApplication>
-#include <QStyleFactory>
 #endif
 
 #ifdef Q_OS_WINDOWS
@@ -36,6 +37,26 @@
 #endif
 
 using namespace Qt::Literals::StringLiterals;
+
+#if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
+namespace
+{
+void initStyle(QGuiApplication *app)
+{
+    // only QApplication has a QStyle, and do nothing if an explicit style has been requested
+    if (!qobject_cast<QApplication *>(app) || qEnvironmentVariableIsSet("QT_STYLE_OVERRIDE")) {
+        return;
+    }
+
+    // enforce the style configured by the user, with kdeglobals fallback
+    // if not set or the style is not there, use Breeze
+    const QString styleToUse = KConfigGroup(KSharedConfig::openConfig(), u"KDE"_s).readEntry("widgetStyle", QString());
+    if (styleToUse.isEmpty() || !QApplication::setStyle(styleToUse)) {
+        QApplication::setStyle(u"breeze"_s);
+    }
+}
+}
+#endif
 
 namespace KirigamiAppDefaults
 {
@@ -66,8 +87,7 @@ void apply(QGuiApplication *app)
     bool handledByQPT = INITIAL_STYLE != QQuickStyle::name();
     if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE") && !handledByQPT) {
         QQuickStyle::setStyle(u"org.kde.desktop"_s);
-        // TODO remove once we no longer use the org.kde.desktop style
-        qApp->setStyle(QStyleFactory::create(QStringLiteral("Breeze")));
+        initStyle(app);
     }
     KIconTheme::initTheme();
 #ifdef Q_OS_WINDOWS

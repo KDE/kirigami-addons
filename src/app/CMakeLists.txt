@@ -20,7 +20,7 @@ if(TARGET KF6::Crash)
     target_link_libraries(KirigamiApp PRIVATE KF6::Crash)
 endif()
 if(NOT ANDROID AND NOT IOS)
-    target_link_libraries(KirigamiApp PRIVATE Qt6::Widgets KF6::IconThemes)
+    target_link_libraries(KirigamiApp PRIVATE Qt6::Widgets KF6::IconThemes KF6::ConfigCore)
 endif()
 
 target_include_directories(KirigamiApp
