@@ -24,8 +24,13 @@ FormCardPage {
     title: i18nd("kirigami-addons6", "About KDE")
 
     readonly property string _bugReportUrl: {
-        if (Core.AboutData.bugAddress !== "submit@bugs.kde.org") {
-            return Core.AboutData.bugAddress;
+        const bugAddress = Core.AboutData.bugAddress ?? "";
+        if (bugAddress !== "submit@bugs.kde.org") {
+            // A plain email address can only be opened with a mailto: scheme.
+            if (bugAddress.includes("@") && !bugAddress.includes(":")) {
+                return "mailto:" + bugAddress;
+            }
+            return bugAddress;
         }
         const elements = Core.AboutData.productName.split('/');
         let url = `https://bugs.kde.org/enter_bug.cgi?format=guided&product=${elements[0]}&version=${Core.AboutData.version}`;

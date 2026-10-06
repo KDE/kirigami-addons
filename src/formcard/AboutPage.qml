@@ -423,8 +423,13 @@ FormCardPage {
         FormLinkDelegate {
             id: bugDelegate
             url: {
-                if (aboutData.bugAddress !== "submit@bugs.kde.org") {
-                    return aboutData.bugAddress
+                const bugAddress = aboutData.bugAddress ?? "";
+                if (bugAddress !== "submit@bugs.kde.org") {
+                    // A plain email address can only be opened with a mailto: scheme.
+                    if (bugAddress.includes("@") && !bugAddress.includes(":")) {
+                        return "mailto:" + bugAddress;
+                    }
+                    return bugAddress;
                 }
                 const elements = aboutData.productName.split('/');
                 let url = `https://bugs.kde.org/enter_bug.cgi?format=guided&product=${elements[0]}&version=${aboutData.version}`;
