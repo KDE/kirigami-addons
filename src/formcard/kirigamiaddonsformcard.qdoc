@@ -89,31 +89,34 @@
    Qt Quick Controls Dialog:
 
    \qml
-   import QtQuick.Controls as Controls
    import org.kde.kirigamiaddons.formcard as FormCard
+   import QtQuick.Controls
 
    FormCard.FormCardDialog {
-       id: dialog
+       title: "Add Thingy"
 
-       signal profileCreated(string name)
-
-       title: i18nc("@title:window", "Create Profile")
-       standardButtons: Controls.Dialog.Ok | Controls.Dialog.Cancel
-
+       standardButtons: Dialog.Ok | Dialog.Cancel
        FormCard.FormTextFieldDelegate {
-           id: nameField
-           label: i18nc("@label:textbox", "Profile name")
+           label: i18nc("@label:textbox Notebook name", "Name:")
        }
 
        FormCard.FormDelegateSeparator {}
 
-       FormCard.FormSwitchDelegate {
-           text: i18nc("@option:check", "Use as default")
+       FormCard.FormButtonDelegate {
+           text: i18nc("@action:button", "Color")
+           icon.name: "color-picker"
        }
 
-       onAccepted: profileCreated(nameField.text)
+       FormCard.FormDelegateSeparator {}
+
+       FormCard.FormButtonDelegate {
+           text: i18nc("@action:button", "Icon")
+           icon.name: "preferences-desktop-emoticons"
+       }
    }
    \endqml
+
+   \image formcarddialog.png
 
    Call \c dialog.open() from the action that should show the form. Custom
    delegates based on \l AbstractFormDelegate can also be placed directly
