@@ -23,6 +23,18 @@ FormCardPage {
 
     title: i18nd("kirigami-addons6", "About KDE")
 
+    readonly property string _bugReportUrl: {
+        if (Core.AboutData.bugAddress !== "submit@bugs.kde.org") {
+            return Core.AboutData.bugAddress;
+        }
+        const elements = Core.AboutData.productName.split('/');
+        let url = `https://bugs.kde.org/enter_bug.cgi?format=guided&product=${elements[0]}&version=${Core.AboutData.version}`;
+        if (elements.length === 2) {
+            url += "&component=" + elements[1];
+        }
+        return url;
+    }
+
     FormCard {
         autoSeparators: true
         Layout.topMargin: Kirigami.Units.largeSpacing * 4
@@ -78,9 +90,12 @@ KDE is a cooperative enterprise: no single entity controls its direction or prod
 
     FormHeader {
         title: i18nd("kirigami-addons6", "Report bugs")
+        visible: page._bugReportUrl.length > 0
     }
 
     FormCard {
+        // The text refers to the "Report a bug" button, so hide everything without it.
+        visible: page._bugReportUrl.length > 0
         autoSeparators: true
         FormTextDelegate {
             text: i18nd("kirigami-addons6", "Software can always be improved, and the KDE team is ready to do so. However, you - the user - must tell us when something does not work as expected or could be done better.\n\n\
@@ -90,21 +105,9 @@ If you have a suggestion for improvement then you are welcome to use the bug tra
         }
 
         FormLinkDelegate {
-            url: {
-                if (Core.AboutData.bugAddress !== "submit@bugs.kde.org") {
-                    return Core.AboutData.bugAddress
-                }
-                const elements = Core.AboutData.productName.split('/');
-                let url = `https://bugs.kde.org/enter_bug.cgi?format=guided&product=${elements[0]}&version=${Core.AboutData.version}`;
-                if (elements.length === 2) {
-                    url += "&component=" + elements[1];
-                }
-                return url;
-            }
-
+            url: page._bugReportUrl
             icon.name: "tools-report-bug-symbolic"
             text: i18nd("kirigami-addons6", "Report a bug")
-            enabled: url.length > 0
         }
     }
 
@@ -148,17 +151,16 @@ Thank you very much in advance for your support.")
         }
 
         FormLinkDelegate {
-
             text: i18nd("kirigami-addons6", "KDE e.V.")
             icon.name: 'kde-symbolic'
             url: "https://ev.kde.org/"
         }
 
         FormLinkDelegate {
-
             text: i18nd("kirigami-addons6", "Donate")
             icon.name: 'donate-symbolic'
-            url: "https://www.kde.org/donate"
+            // Lets KDE know which application the donation came from, like AboutPage does.
+            url: Core.AboutData.componentName.length > 0 ? "https://www.kde.org/donate?app=" + encodeURIComponent(Core.AboutData.componentName) : "https://www.kde.org/donate"
         }
     }
 }
