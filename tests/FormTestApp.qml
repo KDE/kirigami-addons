@@ -50,6 +50,7 @@ Kirigami.ApplicationWindow {
         id: formDialog
 
         title: "Add Thingy"
+        autoSeparators: true
 
         standardButtons: Controls.Dialog.Ok | Controls.Dialog.Cancel
 
@@ -57,14 +58,10 @@ Kirigami.ApplicationWindow {
             label: i18nc("@label:textbox Notebook name", "Name:")
         }
 
-        FormCard.FormDelegateSeparator {}
-
         FormCard.FormButtonDelegate {
             text: i18nc("@action:button", "Color")
             icon.name: "color-picker"
         }
-
-        FormCard.FormDelegateSeparator {}
 
         FormCard.FormButtonDelegate {
             text: i18nc("@action:button", "Icon")

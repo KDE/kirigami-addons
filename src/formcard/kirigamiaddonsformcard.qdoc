@@ -94,20 +94,17 @@
 
    FormCard.FormCardDialog {
        title: "Add Thingy"
+       autoSeparators: true
 
        standardButtons: Dialog.Ok | Dialog.Cancel
        FormCard.FormTextFieldDelegate {
            label: i18nc("@label:textbox Notebook name", "Name:")
        }
 
-       FormCard.FormDelegateSeparator {}
-
        FormCard.FormButtonDelegate {
            text: i18nc("@action:button", "Color")
            icon.name: "color-picker"
        }
-
-       FormCard.FormDelegateSeparator {}
 
        FormCard.FormButtonDelegate {
            text: i18nc("@action:button", "Icon")

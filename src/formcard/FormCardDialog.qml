@@ -1,6 +1,8 @@
 // SPDX-FileCopyrightText: 2024 Carl Schwan <carl@carlschwan.eu>
 // SPDX-License-Identifier: LGPL-2.1-or-later
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
@@ -22,20 +24,17 @@ import './private' as Private
 
    FormCard.FormCardDialog {
        title: "Add Thingy"
+       autoSeparators: true
 
        standardButtons: Dialog.Ok | Dialog.Cancel
        FormCard.FormTextFieldDelegate {
            label: i18nc("@label:textbox Notebook name", "Name:")
        }
 
-       FormCard.FormDelegateSeparator {}
-
        FormCard.FormButtonDelegate {
            text: i18nc("@action:button", "Color")
            icon.name: "color-picker"
        }
-
-       FormCard.FormDelegateSeparator {}
 
        FormCard.FormButtonDelegate {
            text: i18nc("@action:button", "Icon")
@@ -52,6 +51,19 @@ QQC2.Dialog {
     id: root
 
     default property alias content: columnLayout.data
+
+    /*!
+       \brief Whether to insert a FormDelegateSeparator between visible delegates.
+
+       This also works for delegates created by a Repeater. Do not add explicit
+       separators when this property is enabled.
+
+       \default false
+       \since 1.16.0
+     */
+    property bool autoSeparators: false
+
+    readonly property list<Item> _visibleDelegates: columnLayout.visibleChildren.filter(child => child.height !== 0)
 
     x: Math.round((parent.width - width) / 2)
     y: Math.round((parent.height - height) / 2)
@@ -124,13 +136,42 @@ QQC2.Dialog {
             clip: true
             QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AlwaysOff
 
-            ColumnLayout {
-                id: columnLayout
-
+            // Single child of the ScrollView, so it still computes the content size.
+            Item {
+                implicitWidth: columnLayout.implicitWidth
+                implicitHeight: columnLayout.implicitHeight
                 width: scrollView.availableWidth
                 // At least the height of the dialog, for the items that fill it.
                 height: Math.max(implicitHeight, scrollView.availableHeight)
-                spacing: 0
+
+                ColumnLayout {
+                    id: columnLayout
+
+                    anchors.fill: parent
+                    spacing: root.autoSeparators && separatorRepeater.count > 0 ? separatorRepeater.itemAt(0).implicitHeight : 0
+                }
+
+                // Outside of the ColumnLayout, so the separators aren't laid out as delegates.
+                Repeater {
+                    id: separatorRepeater
+
+                    model: root.autoSeparators ? Math.max(0, root._visibleDelegates.length - 1) : 0
+
+                    FormDelegateSeparator {
+                        required property int index
+
+                        objectName: "automaticSeparator"
+
+                        above: root._visibleDelegates[index] ?? null
+                        below: root._visibleDelegates[index + 1] ?? null
+                        hMargins: Kirigami.Units.largeSpacing
+
+                        x: columnLayout.x + hMargins
+                        width: Math.max(0, columnLayout.width - 2 * hMargins)
+                        height: implicitHeight
+                        y: above ? columnLayout.y + above.y + above.height + (columnLayout.spacing - height) / 2 : 0
+                    }
+                }
             }
         }
 
