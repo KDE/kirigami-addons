@@ -184,8 +184,6 @@ Kirigami.ApplicationWindow {
                     statusMessage: value.getHours() < 8 ? "Very early!" : ""
                 }
 
-                FormCard.FormDelegateSeparator {}
-
                 FormCard.FormDateTimeDelegate {
                     text: "Optional return:"
                     resettable: true

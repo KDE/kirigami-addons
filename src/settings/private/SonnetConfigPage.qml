@@ -34,9 +34,9 @@ FormCard.FormCardPage {
 
     FormCard.FormCard {
         Layout.topMargin: Kirigami.Units.largeSpacing * 4
+        autoSeparators: true
 
         FormCard.FormCheckDelegate {
-            id: enable
             checked: root.settings.checkerEnabledByDefault
             text: i18ndc("kirigami-addons6", "@label:checkbox", "Enable automatic spell checking")
             onCheckedChanged: {
@@ -45,12 +45,7 @@ FormCard.FormCardPage {
             }
         }
 
-        FormCard.FormDelegateSeparator {
-            below: enable; above: skipUppercase
-        }
-
         FormCard.FormCheckDelegate {
-            id: skipUppercase
             checked: root.settings.skipUppercase
             text: i18ndc("kirigami-addons6", "@label:checkbox", "Ignore uppercase words")
             onCheckedChanged: {
@@ -59,22 +54,13 @@ FormCard.FormCardPage {
             }
         }
 
-        FormCard.FormDelegateSeparator {
-            below: skipUppercase; above: skipRunTogether
-        }
-
         FormCard.FormCheckDelegate {
-            id: skipRunTogether
             checked: root.settings.skipRunTogether
             text: i18ndc("kirigami-addons6", "@label:checkbox", "Ignore hyphenated words")
             onCheckedChanged: {
                 root.settings.skipRunTogether = checked;
                 root.settings.save();
             }
-        }
-
-        FormCard.FormDelegateSeparator {
-            below: skipRunTogether; above: autodetectLanguageCheckbox
         }
 
         FormCard.FormCheckDelegate {
@@ -87,12 +73,7 @@ FormCard.FormCardPage {
             }
         }
 
-        FormCard.FormDelegateSeparator {
-            below: autodetectLanguageCheckbox; above: selectedDefaultLanguage
-        }
-
         FormCard.FormComboBoxDelegate {
-            id: selectedDefaultLanguage
             text: i18ndc("kirigami-addons6", "@label:listbox", "Selected default language:")
             model: isEmpty ? [{"display": i18ndc("kirigami-addons6", "No selected language", "None")}] : root.settings.dictionaryModel
             textRole: "display"
@@ -108,12 +89,7 @@ FormCard.FormCardPage {
             onActivated: root.settings.defaultLanguage = currentValue;
         }
 
-        FormCard.FormDelegateSeparator {
-            below: selectedDefaultLanguage; above: spellCheckingLanguage
-        }
-
         FormCard.FormButtonDelegate {
-            id: spellCheckingLanguage
             text: i18ndc("kirigami-addons6", "@label:listbox", "Additional Spell Checking Languages")
             description: i18nd("kirigami-addons6", "%1 will provide spell checking and suggestions for the languages listed here when autodetection is enabled.", Qt.application.displayName)
             onClicked: root.pageStack.pushDialogLayer(spellCheckingLanguageList, {}, {
@@ -122,12 +98,7 @@ FormCard.FormCardPage {
             })
         }
 
-        FormCard.FormDelegateSeparator {
-            below: spellCheckingLanguage; above: personalDictionary
-        }
-
         FormCard.FormButtonDelegate {
-            id: personalDictionary
             text: i18ndc("kirigami-addons6", "@action:button", "Open Personal Dictionary")
             onClicked: root.pageStack.pushDialogLayer(dictionaryPage, {}, {
                 width: root.pageStack.width - Kirigami.Units.gridUnit * 5,

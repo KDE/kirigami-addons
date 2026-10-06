@@ -129,6 +129,7 @@ FormCardPage {
 
     FormCard {
         Layout.topMargin: Kirigami.Units.largeSpacing * 4
+        autoSeparators: true
 
         AbstractFormDelegate {
             id: generalDelegate
@@ -187,8 +188,6 @@ FormCardPage {
                 }
             }
         }
-
-        FormDelegateSeparator {}
 
         FormTextDelegate {
             id: copyrightDelegate

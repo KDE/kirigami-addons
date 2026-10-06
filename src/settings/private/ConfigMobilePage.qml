@@ -103,49 +103,40 @@ FormCard.FormCardPage {
             FormCard.FormCard {
                 id: settingsCard
 
+                autoSeparators: true
+
                 Repeater {
                     id: repeater
 
                     model: categoryDelegate.modelData.modules
-                    delegate: ColumnLayout {
+                    delegate: FormCard.AbstractFormDelegate {
                         id: moduleDelegate
 
-                        required property int index
                         required property ConfigurationModule modelData
 
-                        Layout.fillWidth: true
-
-                        FormCard.FormDelegateSeparator {
-                            visible: moduleDelegate.index !== 0
+                        onClicked: {
+                            root.window.pageStack.layers.push(pageForModule(moduleDelegate.modelData));
                         }
 
-                        FormCard.AbstractFormDelegate {
-                            id: delegateItem
-
-                            onClicked: {
-                                root.window.pageStack.layers.push(pageForModule(modelData));
+                        contentItem: RowLayout {
+                            Kirigami.Icon {
+                                source: moduleDelegate.modelData.icon.name
+                                Layout.rightMargin: Kirigami.Units.largeSpacing
+                                implicitWidth: Kirigami.Units.iconSizes.medium
+                                implicitHeight: Kirigami.Units.iconSizes.medium
                             }
 
-                            contentItem: RowLayout {
-                                Kirigami.Icon {
-                                    source: moduleDelegate.modelData.icon.name
-                                    Layout.rightMargin: Kirigami.Units.largeSpacing
-                                    implicitWidth: Kirigami.Units.iconSizes.medium
-                                    implicitHeight: Kirigami.Units.iconSizes.medium
-                                }
+                            Controls.Label {
+                                Layout.fillWidth: true
+                                text: moduleDelegate.modelData.text
+                                elide: Text.ElideRight
+                            }
 
-                                Controls.Label {
-                                    Layout.fillWidth: true
-                                    text: moduleDelegate.modelData.text
-                                    elide: Text.ElideRight
-                                }
-
-                                Kirigami.Icon {
-                                    Layout.alignment: Qt.AlignRight
-                                    source: "arrow-right"
-                                    implicitWidth: Math.round(Kirigami.Units.iconSizes.small * 0.75)
-                                    implicitHeight: Math.round(Kirigami.Units.iconSizes.small * 0.75)
-                                }
+                            Kirigami.Icon {
+                                Layout.alignment: Qt.AlignRight
+                                source: "arrow-right"
+                                implicitWidth: Math.round(Kirigami.Units.iconSizes.small * 0.75)
+                                implicitHeight: Math.round(Kirigami.Units.iconSizes.small * 0.75)
                             }
                         }
                     }

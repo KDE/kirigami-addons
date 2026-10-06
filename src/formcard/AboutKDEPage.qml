@@ -24,6 +24,7 @@ FormCardPage {
     title: i18nd("kirigami-addons6", "About KDE")
 
     FormCard {
+        autoSeparators: true
         Layout.topMargin: Kirigami.Units.largeSpacing * 4
 
         AbstractFormDelegate {
@@ -62,15 +63,11 @@ FormCardPage {
             }
         }
 
-        FormDelegateSeparator {}
-
         FormTextDelegate {
             text: i18nd("kirigami-addons6", "KDE is a world-wide community of software engineers, artists, writers, translators and creators who are committed to Free Software development. KDE produces the Plasma desktop environment, hundreds of applications, and the many software libraries that support them.\n\n\
 KDE is a cooperative enterprise: no single entity controls its direction or products. Instead, we work together to achieve the common goal of building the world's finest Free Software. Everyone is welcome to join and contribute to KDE, including you.")
             textItem.wrapMode: Text.WordWrap
         }
-
-        FormDelegateSeparator {}
 
         FormLinkDelegate {
             icon.name: "globe-symbolic"
@@ -84,14 +81,13 @@ KDE is a cooperative enterprise: no single entity controls its direction or prod
     }
 
     FormCard {
+        autoSeparators: true
         FormTextDelegate {
             text: i18nd("kirigami-addons6", "Software can always be improved, and the KDE team is ready to do so. However, you - the user - must tell us when something does not work as expected or could be done better.\n\n\
 KDE has a bug tracking system. Use the button below to file a bug, or use the program's About page to report a bug specific to this application.\n\n\
 If you have a suggestion for improvement then you are welcome to use the bug tracking system to register your wish. Make sure you use the severity called \"Wishlist\".")
             textItem.wrapMode: Text.WordWrap
         }
-
-        FormDelegateSeparator {}
 
         FormLinkDelegate {
             url: {
@@ -117,24 +113,19 @@ If you have a suggestion for improvement then you are welcome to use the bug tra
     }
 
     FormCard {
+        autoSeparators: true
         FormTextDelegate {
             text: i18nd("kirigami-addons6", "You do not have to be a software developer to be a member of the KDE team. You can join the language teams that translate program interfaces. You can provide graphics, themes, sounds, and improved documentation. You decide!")
             textItem.wrapMode: Text.WordWrap
         }
 
-        FormDelegateSeparator { above: getInvolved }
-
         FormLinkDelegate {
-            id: getInvolved
             text: i18nd("kirigami-addons6", "Get Involved")
             icon.name: "system-user-list"
             url: "https://community.kde.org/Get_Involved"
         }
 
-        FormDelegateSeparator { above: devDoc; below: getInvolved }
-
         FormLinkDelegate {
-            id: devDoc
             icon.name: 'applications-development-symbolic'
             text: i18nd("kirigami-addons6", "Developer Documentation")
             url: "https://develop.kde.org/"
@@ -146,6 +137,7 @@ If you have a suggestion for improvement then you are welcome to use the bug tra
     }
 
     FormCard {
+        autoSeparators: true
         FormTextDelegate {
             text: i18nd("kirigami-addons6", "KDE software is and will always be available free of charge, however creating it is not free.\n\n\
 To support development the KDE community has formed the KDE e.V., a non-profit organization legally founded in Germany. KDE e.V. represents the KDE community in legal and financial matters.\n\n\
@@ -155,20 +147,14 @@ Thank you very much in advance for your support.")
             textItem.wrapMode: Text.WordWrap
         }
 
-        FormDelegateSeparator { above: ev }
-
         FormLinkDelegate {
-            id: ev
 
             text: i18nd("kirigami-addons6", "KDE e.V.")
             icon.name: 'kde-symbolic'
             url: "https://ev.kde.org/"
         }
 
-        FormDelegateSeparator { above: donate; below: ev }
-
         FormLinkDelegate {
-            id: donate
 
             text: i18nd("kirigami-addons6", "Donate")
             icon.name: 'donate-symbolic'
