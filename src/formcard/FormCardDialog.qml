@@ -109,22 +109,48 @@ QQC2.Dialog {
     }
 
     // The content scrolls when the dialog is taller than its parent, instead of going under the footer.
-    contentItem: QQC2.ScrollView {
-        id: scrollView
+    contentItem: Item {
+        implicitWidth: scrollView.implicitWidth
+        implicitHeight: scrollView.implicitHeight
 
-        implicitWidth: columnLayout.implicitWidth
-        implicitHeight: columnLayout.implicitHeight
-        contentWidth: availableWidth
-        clip: true
-        QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AlwaysOff
+        QQC2.ScrollView {
+            id: scrollView
 
-        ColumnLayout {
-            id: columnLayout
+            anchors.fill: parent
 
-            width: scrollView.availableWidth
-            // At least the height of the dialog, for the items that fill it.
-            height: Math.max(implicitHeight, scrollView.availableHeight)
-            spacing: 0
+            implicitWidth: columnLayout.implicitWidth
+            implicitHeight: columnLayout.implicitHeight
+            contentWidth: availableWidth
+            clip: true
+            QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AlwaysOff
+
+            ColumnLayout {
+                id: columnLayout
+
+                width: scrollView.availableWidth
+                // At least the height of the dialog, for the items that fill it.
+                height: Math.max(implicitHeight, scrollView.availableHeight)
+                spacing: 0
+            }
+        }
+
+        // Overlaid on the edges, so showing them doesn't move the content.
+        Kirigami.Separator {
+            anchors {
+                top: parent.top
+                left: parent.left
+                right: parent.right
+            }
+            visible: !((scrollView.contentItem as Flickable)?.atYBeginning ?? true)
+        }
+
+        Kirigami.Separator {
+            anchors {
+                bottom: parent.bottom
+                left: parent.left
+                right: parent.right
+            }
+            visible: !((scrollView.contentItem as Flickable)?.atYEnd ?? true)
         }
     }
 
