@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 00:43+0000\n"
+"POT-Creation-Date: 2026-10-07 00:46+0000\n"
 "PO-Revision-Date: 2026-09-30 19:10+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -217,13 +217,13 @@ msgctxt "@title:window"
 msgid "About KDE"
 msgstr "عن كِيدِي"
 
-#: app/kirigamiappdefaults.cpp:113 app/kirigamiappdefaults.cpp:120
+#: app/kirigamiappdefaults.cpp:133 app/kirigamiappdefaults.cpp:140
 #, kde-format
 msgctxt "@title:window"
 msgid "Failed to Load Application"
 msgstr "فشل في تحميل التطبيق"
 
-#: app/kirigamiappdefaults.cpp:114
+#: app/kirigamiappdefaults.cpp:134
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -233,7 +233,7 @@ msgstr ""
 "تعذر تحميل تطبيق QML. قد تكون هذه المشكلة ناجمة عن توزيعتك. يرجى الإبلاغ "
 "عنها إلى توزيعتك أولاً."
 
-#: app/kirigamiappdefaults.cpp:121
+#: app/kirigamiappdefaults.cpp:141
 #, kde-format
 msgctxt "@info"
 msgid "Could not load the QML application."
