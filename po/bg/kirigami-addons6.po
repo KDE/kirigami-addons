@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-07 00:46+0000\n"
-"PO-Revision-Date: 2026-09-28 17:26+0200\n"
+"PO-Revision-Date: 2026-10-07 23:45+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -641,7 +641,7 @@ msgstr "Дарение"
 #: formcard/AboutPage.qml:166
 #, kde-format
 msgid "What's new"
-msgstr ""
+msgstr "Какво ново"
 
 #: formcard/AboutPage.qml:196
 #, kde-format
@@ -656,7 +656,7 @@ msgstr "История на версиите"
 #: formcard/AboutPage.qml:278
 #, kde-format
 msgid "Show older changes…"
-msgstr ""
+msgstr "Показване на по-стари промени…"
 
 #: formcard/AboutPage.qml:290
 #, kde-format
@@ -771,7 +771,7 @@ msgstr "Не е указано"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset"
-msgstr ""
+msgstr "Нулиране"
 
 #: formcard/FormFileDelegate.qml:186
 #, kde-format
@@ -1010,7 +1010,3 @@ msgstr "Комбинация от клавиши"
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "Проверка на правописа"
-
-#~ msgctxt "Linux packaging format"
-#~ msgid "Unknown/Default"
-#~ msgstr "Неизвестно/по подразбиране"
