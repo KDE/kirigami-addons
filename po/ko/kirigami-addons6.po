@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-07 00:46+0000\n"
+"POT-Creation-Date: 2026-10-09 00:45+0000\n"
 "PO-Revision-Date: 2026-10-03 22:34+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -289,8 +289,8 @@ msgstr "이전 그림"
 msgid "Next image"
 msgstr "다음 그림"
 
-#: components/Banner.qml:185 formcard/AboutPage.qml:240
-#: formcard/AboutPage.qml:354 formcard/AboutPage.qml:750
+#: components/Banner.qml:185 formcard/AboutPage.qml:239
+#: formcard/AboutPage.qml:353 formcard/AboutPage.qml:754
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -303,7 +303,7 @@ msgctxt "@action:button"
 msgid "Go Back"
 msgstr "뒤로 가기"
 
-#: components/ConvergentContextMenu.qml:402 formcard/FormCardDialog.qml:102
+#: components/ConvergentContextMenu.qml:402 formcard/FormCardDialog.qml:114
 #, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
@@ -481,17 +481,17 @@ msgctxt "@info"
 msgid "Underlying platform."
 msgstr "기반 플랫폼입니다."
 
-#: formcard/AboutKDEPage.qml:50
+#: formcard/AboutKDEPage.qml:68
 #, kde-format
 msgid "KDE"
 msgstr "KDE"
 
-#: formcard/AboutKDEPage.qml:59
+#: formcard/AboutKDEPage.qml:77
 #, kde-format
 msgid "Be Free!"
 msgstr "자유롭게!"
 
-#: formcard/AboutKDEPage.qml:68
+#: formcard/AboutKDEPage.qml:84
 #, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
@@ -513,17 +513,17 @@ msgstr ""
 "께 힘을 모으고 있습니다. KDE에는 이 글을 읽는 여러분과 같은 누구나 참여하고 "
 "기여할 수 있습니다."
 
-#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:403
+#: formcard/AboutKDEPage.qml:91 formcard/AboutPage.qml:402
 #, kde-format
 msgid "Homepage"
 msgstr "홈페이지"
 
-#: formcard/AboutKDEPage.qml:83
+#: formcard/AboutKDEPage.qml:97
 #, kde-format
 msgid "Report bugs"
 msgstr "버그 보고"
 
-#: formcard/AboutKDEPage.qml:88
+#: formcard/AboutKDEPage.qml:106
 #, kde-format
 msgid ""
 "Software can always be improved, and the KDE team is ready to do so. "
@@ -547,17 +547,17 @@ msgstr ""
 "개선 사항 제안을 하고 싶으시다면 버그 보고 시스템을 통해서 알려 주십시오. 이 "
 "경우 심각성 항목에서 \"Wishlist\"를 선택하셔야 합니다."
 
-#: formcard/AboutKDEPage.qml:110
+#: formcard/AboutKDEPage.qml:115
 #, kde-format
 msgid "Report a bug"
 msgstr "버그 보고"
 
-#: formcard/AboutKDEPage.qml:116
+#: formcard/AboutKDEPage.qml:120
 #, kde-format
 msgid "Join us"
 msgstr "참여하기"
 
-#: formcard/AboutKDEPage.qml:121
+#: formcard/AboutKDEPage.qml:126
 #, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
@@ -568,17 +568,17 @@ msgstr ""
 "를 번역하는 각 언어 번역팀을 도울 수도 있습니다. 또한 그래픽, 테마, 소리, 더 "
 "나은 문서 등을 기여할 수도 있습니다. 직접 결정하십시오!"
 
-#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:419
+#: formcard/AboutKDEPage.qml:131 formcard/AboutPage.qml:418
 #, kde-format
 msgid "Get Involved"
 msgstr "참여하기"
 
-#: formcard/AboutKDEPage.qml:139
+#: formcard/AboutKDEPage.qml:138
 #, kde-format
 msgid "Developer Documentation"
 msgstr "개발자 문서"
 
-#: formcard/AboutKDEPage.qml:145
+#: formcard/AboutKDEPage.qml:144
 #, kde-format
 msgid "Support us"
 msgstr "지원하기"
@@ -616,110 +616,110 @@ msgstr ""
 "\n"
 "여러분의 협조에  미리 감사드립니다."
 
-#: formcard/AboutKDEPage.qml:163
+#: formcard/AboutKDEPage.qml:159
 #, kde-format
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:411
+#: formcard/AboutKDEPage.qml:165 formcard/AboutPage.qml:410
 #, kde-format
 msgid "Donate"
 msgstr "기부하기"
 
-#: formcard/AboutPage.qml:166
+#: formcard/AboutPage.qml:167
 #, kde-format
 msgid "What's new"
 msgstr "새로운 기능"
 
-#: formcard/AboutPage.qml:196
+#: formcard/AboutPage.qml:195
 #, kde-format
 msgid "Copyright"
 msgstr "저작권"
 
-#: formcard/AboutPage.qml:204
+#: formcard/AboutPage.qml:203
 #, kde-format
 msgid "Release history"
 msgstr "릴리스 기록"
 
-#: formcard/AboutPage.qml:278
+#: formcard/AboutPage.qml:277
 #, kde-format
 msgid "Show older changes…"
 msgstr "이전 변경 사항 표시…"
 
-#: formcard/AboutPage.qml:290
+#: formcard/AboutPage.qml:289
 #, kde-format
 msgid "Description"
 msgstr "설명"
 
-#: formcard/AboutPage.qml:303
+#: formcard/AboutPage.qml:302
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "라이선스"
 
-#: formcard/AboutPage.qml:439
+#: formcard/AboutPage.qml:443
 #, kde-format
 msgid "Report a Bug"
 msgstr "버그 보고"
 
-#: formcard/AboutPage.qml:452
+#: formcard/AboutPage.qml:456
 #, kde-format
 msgid "Matrix Channel"
 msgstr "Matrix 채널"
 
-#: formcard/AboutPage.qml:468
+#: formcard/AboutPage.qml:472
 #, kde-format
 msgid "Mastodon"
 msgstr "마스토돈"
 
-#: formcard/AboutPage.qml:480
+#: formcard/AboutPage.qml:484
 #, kde-format
 msgid "Source Code"
 msgstr "소스 코드"
 
-#: formcard/AboutPage.qml:486
+#: formcard/AboutPage.qml:490
 #, kde-format
 msgid "Libraries in use"
 msgstr "사용하는 라이브러리"
 
-#: formcard/AboutPage.qml:490
+#: formcard/AboutPage.qml:494
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "클립보드에 복사"
 
-#: formcard/AboutPage.qml:494
+#: formcard/AboutPage.qml:498
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "클립보드에 시스템 정보를 복사했습니다."
 
-#: formcard/AboutPage.qml:509
+#: formcard/AboutPage.qml:513
 #, kde-format
 msgid "Authors"
 msgstr "작성자"
 
-#: formcard/AboutPage.qml:525
+#: formcard/AboutPage.qml:529
 #, kde-format
 msgid "Credits"
 msgstr "제작진"
 
-#: formcard/AboutPage.qml:541
+#: formcard/AboutPage.qml:545
 #, kde-format
 msgid "Translators"
 msgstr "번역자"
 
-#: formcard/AboutPage.qml:592
+#: formcard/AboutPage.qml:596
 #, kde-format
 msgid "More information"
 msgstr "더 많은 정보"
 
-#: formcard/AboutPage.qml:652
+#: formcard/AboutPage.qml:656
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "%1의 KDE 스토어 페이지 방문"
 
-#: formcard/AboutPage.qml:661
+#: formcard/AboutPage.qml:665
 #, kde-format
 msgid "Send an email to %1"
 msgstr "%1(으)로 이메일 보내기"
@@ -900,43 +900,43 @@ msgctxt "@label:checkbox"
 msgid "Enable automatic spell checking"
 msgstr "자동 맞춤법 검사 사용"
 
-#: settings/private/SonnetConfigPage.qml:55
+#: settings/private/SonnetConfigPage.qml:50
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore uppercase words"
 msgstr "대문자 단어 무시"
 
-#: settings/private/SonnetConfigPage.qml:69
+#: settings/private/SonnetConfigPage.qml:59
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore hyphenated words"
 msgstr "하이픈으로 연결된 단어 무시"
 
-#: settings/private/SonnetConfigPage.qml:83
+#: settings/private/SonnetConfigPage.qml:69
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Detect language automatically"
 msgstr "자동으로 언어 감지"
 
-#: settings/private/SonnetConfigPage.qml:96
+#: settings/private/SonnetConfigPage.qml:77
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Selected default language:"
 msgstr "선택한 기본 언어:"
 
-#: settings/private/SonnetConfigPage.qml:97
+#: settings/private/SonnetConfigPage.qml:78
 #, kde-format
 msgctxt "No selected language"
 msgid "None"
 msgstr "없음"
 
-#: settings/private/SonnetConfigPage.qml:117
+#: settings/private/SonnetConfigPage.qml:93
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Additional Spell Checking Languages"
 msgstr "추가 맞춤법 검사 언어"
 
-#: settings/private/SonnetConfigPage.qml:118
+#: settings/private/SonnetConfigPage.qml:94
 #, kde-format
 msgid ""
 "%1 will provide spell checking and suggestions for the languages listed here "
@@ -945,42 +945,42 @@ msgstr ""
 "자동 감지를 활성화하면 %1에서 여기에 표시된 언어 감지와 맞춤법 검사를 제공합"
 "니다."
 
-#: settings/private/SonnetConfigPage.qml:131
+#: settings/private/SonnetConfigPage.qml:102
 #, kde-format
 msgctxt "@action:button"
 msgid "Open Personal Dictionary"
 msgstr "개인 사전 열기"
 
-#: settings/private/SonnetConfigPage.qml:143
+#: settings/private/SonnetConfigPage.qml:114
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking languages"
 msgstr "맞춤법 검사 언어"
 
-#: settings/private/SonnetConfigPage.qml:155
+#: settings/private/SonnetConfigPage.qml:126
 #, kde-format
 msgid "Default Language"
 msgstr "기본 언어"
 
-#: settings/private/SonnetConfigPage.qml:167
+#: settings/private/SonnetConfigPage.qml:138
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking dictionary"
 msgstr "맞춤법 검사 사전"
 
-#: settings/private/SonnetConfigPage.qml:174
+#: settings/private/SonnetConfigPage.qml:145
 #, kde-format
 msgctxt "Placeholder message"
 msgid "Add a new word to your personal dictionary…"
 msgstr "개인 사전에 단어 추가..."
 
-#: settings/private/SonnetConfigPage.qml:177
+#: settings/private/SonnetConfigPage.qml:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Word"
 msgstr "단어 추가"
 
-#: settings/private/SonnetConfigPage.qml:212
+#: settings/private/SonnetConfigPage.qml:183
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete word"

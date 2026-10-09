@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-07 00:46+0000\n"
+"POT-Creation-Date: 2026-10-09 00:45+0000\n"
 "PO-Revision-Date: 2026-10-01 01:05+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -291,8 +291,8 @@ msgstr "前一個影像"
 msgid "Next image"
 msgstr "下一個影像"
 
-#: components/Banner.qml:185 formcard/AboutPage.qml:240
-#: formcard/AboutPage.qml:354 formcard/AboutPage.qml:750
+#: components/Banner.qml:185 formcard/AboutPage.qml:239
+#: formcard/AboutPage.qml:353 formcard/AboutPage.qml:754
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -305,7 +305,7 @@ msgctxt "@action:button"
 msgid "Go Back"
 msgstr "返回"
 
-#: components/ConvergentContextMenu.qml:402 formcard/FormCardDialog.qml:102
+#: components/ConvergentContextMenu.qml:402 formcard/FormCardDialog.qml:114
 #, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
@@ -483,17 +483,17 @@ msgctxt "@info"
 msgid "Underlying platform."
 msgstr "基底平台。"
 
-#: formcard/AboutKDEPage.qml:50
+#: formcard/AboutKDEPage.qml:68
 #, kde-format
 msgid "KDE"
 msgstr "KDE"
 
-#: formcard/AboutKDEPage.qml:59
+#: formcard/AboutKDEPage.qml:77
 #, kde-format
 msgid "Be Free!"
 msgstr "擁抱自由！"
 
-#: formcard/AboutKDEPage.qml:68
+#: formcard/AboutKDEPage.qml:84
 #, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
@@ -513,17 +513,17 @@ msgstr ""
 "KDE 是個合作企業：沒有任何人操控 KDE 的目標和產品，取而代之的是一起達到建立世"
 "界上最好自由軟體的共同目標。歡迎任何人 -- 包括您。"
 
-#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:403
+#: formcard/AboutKDEPage.qml:91 formcard/AboutPage.qml:402
 #, kde-format
 msgid "Homepage"
 msgstr "首頁"
 
-#: formcard/AboutKDEPage.qml:83
+#: formcard/AboutKDEPage.qml:97
 #, kde-format
 msgid "Report bugs"
 msgstr "回報問題"
 
-#: formcard/AboutKDEPage.qml:88
+#: formcard/AboutKDEPage.qml:106
 #, kde-format
 msgid ""
 "Software can always be improved, and the KDE team is ready to do so. "
@@ -546,17 +546,17 @@ msgstr ""
 "如果您有改善的建議，您也可以使用問題追蹤系統來寫下您的希望。此時請使用"
 "「Wishlist」（願望清單）作為問題的嚴重程度。"
 
-#: formcard/AboutKDEPage.qml:110
+#: formcard/AboutKDEPage.qml:115
 #, kde-format
 msgid "Report a bug"
 msgstr "回報問題"
 
-#: formcard/AboutKDEPage.qml:116
+#: formcard/AboutKDEPage.qml:120
 #, kde-format
 msgid "Join us"
 msgstr "加入我們"
 
-#: formcard/AboutKDEPage.qml:121
+#: formcard/AboutKDEPage.qml:126
 #, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
@@ -566,17 +566,17 @@ msgstr ""
 "您不需要是軟體工程師也可以成為 KDE 團隊的一份子。您可以加入翻譯團隊來翻譯程式"
 "的介面。您可以提供圖形、佈景主題、音效，或幫忙撰寫文件，看您喜歡做哪一項。"
 
-#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:419
+#: formcard/AboutKDEPage.qml:131 formcard/AboutPage.qml:418
 #, kde-format
 msgid "Get Involved"
 msgstr "參與"
 
-#: formcard/AboutKDEPage.qml:139
+#: formcard/AboutKDEPage.qml:138
 #, kde-format
 msgid "Developer Documentation"
 msgstr "開發者說明文件"
 
-#: formcard/AboutKDEPage.qml:145
+#: formcard/AboutKDEPage.qml:144
 #, kde-format
 msgid "Support us"
 msgstr "支援我們"
@@ -613,110 +613,110 @@ msgstr ""
 "\n"
 "我們非常感謝您對 KDE 的支持。"
 
-#: formcard/AboutKDEPage.qml:163
+#: formcard/AboutKDEPage.qml:159
 #, kde-format
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:411
+#: formcard/AboutKDEPage.qml:165 formcard/AboutPage.qml:410
 #, kde-format
 msgid "Donate"
 msgstr "贊助"
 
-#: formcard/AboutPage.qml:166
+#: formcard/AboutPage.qml:167
 #, kde-format
 msgid "What's new"
 msgstr "新功能"
 
-#: formcard/AboutPage.qml:196
+#: formcard/AboutPage.qml:195
 #, kde-format
 msgid "Copyright"
 msgstr "版權"
 
-#: formcard/AboutPage.qml:204
+#: formcard/AboutPage.qml:203
 #, kde-format
 msgid "Release history"
 msgstr "發佈歷史"
 
-#: formcard/AboutPage.qml:278
+#: formcard/AboutPage.qml:277
 #, kde-format
 msgid "Show older changes…"
 msgstr "顯示更舊的變更…"
 
-#: formcard/AboutPage.qml:290
+#: formcard/AboutPage.qml:289
 #, kde-format
 msgid "Description"
 msgstr "描述"
 
-#: formcard/AboutPage.qml:303
+#: formcard/AboutPage.qml:302
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "授權"
 
-#: formcard/AboutPage.qml:439
+#: formcard/AboutPage.qml:443
 #, kde-format
 msgid "Report a Bug"
 msgstr "回報問題"
 
-#: formcard/AboutPage.qml:452
+#: formcard/AboutPage.qml:456
 #, kde-format
 msgid "Matrix Channel"
 msgstr "Matrix 頻道"
 
-#: formcard/AboutPage.qml:468
+#: formcard/AboutPage.qml:472
 #, kde-format
 msgid "Mastodon"
 msgstr "Mastodon"
 
-#: formcard/AboutPage.qml:480
+#: formcard/AboutPage.qml:484
 #, kde-format
 msgid "Source Code"
 msgstr "原始碼"
 
-#: formcard/AboutPage.qml:486
+#: formcard/AboutPage.qml:490
 #, kde-format
 msgid "Libraries in use"
 msgstr "使用函式庫"
 
-#: formcard/AboutPage.qml:490
+#: formcard/AboutPage.qml:494
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "複製到剪貼簿"
 
-#: formcard/AboutPage.qml:494
+#: formcard/AboutPage.qml:498
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "已將系統資訊複製到剪貼簿。"
 
-#: formcard/AboutPage.qml:509
+#: formcard/AboutPage.qml:513
 #, kde-format
 msgid "Authors"
 msgstr "作者群"
 
-#: formcard/AboutPage.qml:525
+#: formcard/AboutPage.qml:529
 #, kde-format
 msgid "Credits"
 msgstr "致謝"
 
-#: formcard/AboutPage.qml:541
+#: formcard/AboutPage.qml:545
 #, kde-format
 msgid "Translators"
 msgstr "翻譯者"
 
-#: formcard/AboutPage.qml:592
+#: formcard/AboutPage.qml:596
 #, kde-format
 msgid "More information"
 msgstr "更多資訊"
 
-#: formcard/AboutPage.qml:652
+#: formcard/AboutPage.qml:656
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "造訪 %1 在 KDE Store 的頁面"
 
-#: formcard/AboutPage.qml:661
+#: formcard/AboutPage.qml:665
 #, kde-format
 msgid "Send an email to %1"
 msgstr "傳送電子郵件給 %1"
@@ -897,85 +897,85 @@ msgctxt "@label:checkbox"
 msgid "Enable automatic spell checking"
 msgstr "開啟自動拼字檢查"
 
-#: settings/private/SonnetConfigPage.qml:55
+#: settings/private/SonnetConfigPage.qml:50
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore uppercase words"
 msgstr "忽略大寫單詞"
 
-#: settings/private/SonnetConfigPage.qml:69
+#: settings/private/SonnetConfigPage.qml:59
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore hyphenated words"
 msgstr "忽略利用連字符的單詞"
 
-#: settings/private/SonnetConfigPage.qml:83
+#: settings/private/SonnetConfigPage.qml:69
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Detect language automatically"
 msgstr "自動偵測語言"
 
-#: settings/private/SonnetConfigPage.qml:96
+#: settings/private/SonnetConfigPage.qml:77
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Selected default language:"
 msgstr "所選預設語言："
 
-#: settings/private/SonnetConfigPage.qml:97
+#: settings/private/SonnetConfigPage.qml:78
 #, kde-format
 msgctxt "No selected language"
 msgid "None"
 msgstr "無"
 
-#: settings/private/SonnetConfigPage.qml:117
+#: settings/private/SonnetConfigPage.qml:93
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Additional Spell Checking Languages"
 msgstr "額外的拼字檢查語言"
 
-#: settings/private/SonnetConfigPage.qml:118
+#: settings/private/SonnetConfigPage.qml:94
 #, kde-format
 msgid ""
 "%1 will provide spell checking and suggestions for the languages listed here "
 "when autodetection is enabled."
 msgstr "啟用自動偵測時 %1 會提供此處列出的語言的拼字檢查和建議。"
 
-#: settings/private/SonnetConfigPage.qml:131
+#: settings/private/SonnetConfigPage.qml:102
 #, kde-format
 msgctxt "@action:button"
 msgid "Open Personal Dictionary"
 msgstr "開啟個人字典"
 
-#: settings/private/SonnetConfigPage.qml:143
+#: settings/private/SonnetConfigPage.qml:114
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking languages"
 msgstr "拼字檢查語言"
 
-#: settings/private/SonnetConfigPage.qml:155
+#: settings/private/SonnetConfigPage.qml:126
 #, kde-format
 msgid "Default Language"
 msgstr "預設語言"
 
-#: settings/private/SonnetConfigPage.qml:167
+#: settings/private/SonnetConfigPage.qml:138
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking dictionary"
 msgstr "拼字檢查字典"
 
-#: settings/private/SonnetConfigPage.qml:174
+#: settings/private/SonnetConfigPage.qml:145
 #, kde-format
 msgctxt "Placeholder message"
 msgid "Add a new word to your personal dictionary…"
 msgstr "新增單詞到您的個人字典…"
 
-#: settings/private/SonnetConfigPage.qml:177
+#: settings/private/SonnetConfigPage.qml:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Word"
 msgstr "新增單詞"
 
-#: settings/private/SonnetConfigPage.qml:212
+#: settings/private/SonnetConfigPage.qml:183
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete word"

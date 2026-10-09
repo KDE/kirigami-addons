@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-07 00:46+0000\n"
+"POT-Creation-Date: 2026-10-09 00:45+0000\n"
 "PO-Revision-Date: 2026-10-01 07:33+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -293,8 +293,8 @@ msgstr "Prejšnja slika"
 msgid "Next image"
 msgstr "Naslednja slika"
 
-#: components/Banner.qml:185 formcard/AboutPage.qml:240
-#: formcard/AboutPage.qml:354 formcard/AboutPage.qml:750
+#: components/Banner.qml:185 formcard/AboutPage.qml:239
+#: formcard/AboutPage.qml:353 formcard/AboutPage.qml:754
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -307,7 +307,7 @@ msgctxt "@action:button"
 msgid "Go Back"
 msgstr "Pojdi nazaj"
 
-#: components/ConvergentContextMenu.qml:402 formcard/FormCardDialog.qml:102
+#: components/ConvergentContextMenu.qml:402 formcard/FormCardDialog.qml:114
 #, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
@@ -485,17 +485,17 @@ msgctxt "@info"
 msgid "Underlying platform."
 msgstr "Podčrtovanje platforme."
 
-#: formcard/AboutKDEPage.qml:50
+#: formcard/AboutKDEPage.qml:68
 #, kde-format
 msgid "KDE"
 msgstr "KDE"
 
-#: formcard/AboutKDEPage.qml:59
+#: formcard/AboutKDEPage.qml:77
 #, kde-format
 msgid "Be Free!"
 msgstr "Bodite svobodni!"
 
-#: formcard/AboutKDEPage.qml:68
+#: formcard/AboutKDEPage.qml:84
 #, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
@@ -518,17 +518,17 @@ msgstr ""
 "cilj izgradnje najboljše proste programske opreme na svetu. Vsi so "
 "dobrodošli, vključno z vami, da se pridružite in prispevate k KDE."
 
-#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:403
+#: formcard/AboutKDEPage.qml:91 formcard/AboutPage.qml:402
 #, kde-format
 msgid "Homepage"
 msgstr "Domača stran"
 
-#: formcard/AboutKDEPage.qml:83
+#: formcard/AboutKDEPage.qml:97
 #, kde-format
 msgid "Report bugs"
 msgstr "Poročaj o napaki"
 
-#: formcard/AboutKDEPage.qml:88
+#: formcard/AboutKDEPage.qml:106
 #, kde-format
 msgid ""
 "Software can always be improved, and the KDE team is ready to do so. "
@@ -554,17 +554,17 @@ msgstr ""
 "da registrirate svojo željo. Prepričajte se, da uporabite resnost, imenovano "
 "\"Seznam želja - Wishlist\"."
 
-#: formcard/AboutKDEPage.qml:110
+#: formcard/AboutKDEPage.qml:115
 #, kde-format
 msgid "Report a bug"
 msgstr "Poročaj o napaki"
 
-#: formcard/AboutKDEPage.qml:116
+#: formcard/AboutKDEPage.qml:120
 #, kde-format
 msgid "Join us"
 msgstr "Pridružite se nam"
 
-#: formcard/AboutKDEPage.qml:121
+#: formcard/AboutKDEPage.qml:126
 #, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
@@ -576,17 +576,17 @@ msgstr ""
 "Lahko zagotavljate grafiko, teme, zvoke in izboljšano dokumentacijo. Vi "
 "odločate!"
 
-#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:419
+#: formcard/AboutKDEPage.qml:131 formcard/AboutPage.qml:418
 #, kde-format
 msgid "Get Involved"
 msgstr "Bodite vpleteni"
 
-#: formcard/AboutKDEPage.qml:139
+#: formcard/AboutKDEPage.qml:138
 #, kde-format
 msgid "Developer Documentation"
 msgstr "Razvojna dokumentacija"
 
-#: formcard/AboutKDEPage.qml:145
+#: formcard/AboutKDEPage.qml:144
 #, kde-format
 msgid "Support us"
 msgstr "Podprite nas"
@@ -627,42 +627,42 @@ msgstr ""
 "\n"
 "Že vnaprej se vam najlepše zahvaljujemo za vašo podporo."
 
-#: formcard/AboutKDEPage.qml:163
+#: formcard/AboutKDEPage.qml:159
 #, kde-format
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:411
+#: formcard/AboutKDEPage.qml:165 formcard/AboutPage.qml:410
 #, kde-format
 msgid "Donate"
 msgstr "Donirajte"
 
-#: formcard/AboutPage.qml:166
+#: formcard/AboutPage.qml:167
 #, kde-format
 msgid "What's new"
 msgstr "Kaj je novega"
 
-#: formcard/AboutPage.qml:196
+#: formcard/AboutPage.qml:195
 #, kde-format
 msgid "Copyright"
 msgstr "Copyright"
 
-#: formcard/AboutPage.qml:204
+#: formcard/AboutPage.qml:203
 #, kde-format
 msgid "Release history"
 msgstr "Zgodovina izdaj"
 
-#: formcard/AboutPage.qml:278
+#: formcard/AboutPage.qml:277
 #, kde-format
 msgid "Show older changes…"
 msgstr "Prikaži starejše spremembe…"
 
-#: formcard/AboutPage.qml:290
+#: formcard/AboutPage.qml:289
 #, kde-format
 msgid "Description"
 msgstr "Opis"
 
-#: formcard/AboutPage.qml:303
+#: formcard/AboutPage.qml:302
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
@@ -671,69 +671,69 @@ msgstr[1] "Licenci"
 msgstr[2] "Licence"
 msgstr[3] "Licence"
 
-#: formcard/AboutPage.qml:439
+#: formcard/AboutPage.qml:443
 #, kde-format
 msgid "Report a Bug"
 msgstr "Poročaj o napaki"
 
-#: formcard/AboutPage.qml:452
+#: formcard/AboutPage.qml:456
 #, kde-format
 msgid "Matrix Channel"
 msgstr "Kanal Matrixa"
 
-#: formcard/AboutPage.qml:468
+#: formcard/AboutPage.qml:472
 #, kde-format
 msgid "Mastodon"
 msgstr "Mastodon"
 
-#: formcard/AboutPage.qml:480
+#: formcard/AboutPage.qml:484
 #, kde-format
 msgid "Source Code"
 msgstr "Izvorna koda"
 
-#: formcard/AboutPage.qml:486
+#: formcard/AboutPage.qml:490
 #, kde-format
 msgid "Libraries in use"
 msgstr "Knjižnice v rabi"
 
-#: formcard/AboutPage.qml:490
+#: formcard/AboutPage.qml:494
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "Kopiraj na odložišče"
 
-#: formcard/AboutPage.qml:494
+#: formcard/AboutPage.qml:498
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "Sistemske informacije prekopirane na odložišče."
 
-#: formcard/AboutPage.qml:509
+#: formcard/AboutPage.qml:513
 #, kde-format
 msgid "Authors"
 msgstr "Avtorji"
 
-#: formcard/AboutPage.qml:525
+#: formcard/AboutPage.qml:529
 #, kde-format
 msgid "Credits"
 msgstr "Zasluge"
 
-#: formcard/AboutPage.qml:541
+#: formcard/AboutPage.qml:545
 #, kde-format
 msgid "Translators"
 msgstr "Prevajalci"
 
-#: formcard/AboutPage.qml:592
+#: formcard/AboutPage.qml:596
 #, kde-format
 msgid "More information"
 msgstr "Več informacij"
 
-#: formcard/AboutPage.qml:652
+#: formcard/AboutPage.qml:656
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Obiščite %1 stran skladišča KDE"
 
-#: formcard/AboutPage.qml:661
+#: formcard/AboutPage.qml:665
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Pošljite e-pošto %1"
@@ -914,43 +914,43 @@ msgctxt "@label:checkbox"
 msgid "Enable automatic spell checking"
 msgstr "Omogoči samodejno preverjanje črkovanja"
 
-#: settings/private/SonnetConfigPage.qml:55
+#: settings/private/SonnetConfigPage.qml:50
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore uppercase words"
 msgstr "Prezri besede z velikimi črkami"
 
-#: settings/private/SonnetConfigPage.qml:69
+#: settings/private/SonnetConfigPage.qml:59
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore hyphenated words"
 msgstr "Prezri besede z vezaji"
 
-#: settings/private/SonnetConfigPage.qml:83
+#: settings/private/SonnetConfigPage.qml:69
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Detect language automatically"
 msgstr "Samodejno zaznaj jezik"
 
-#: settings/private/SonnetConfigPage.qml:96
+#: settings/private/SonnetConfigPage.qml:77
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Selected default language:"
 msgstr "Izberi privzeti jezik:"
 
-#: settings/private/SonnetConfigPage.qml:97
+#: settings/private/SonnetConfigPage.qml:78
 #, kde-format
 msgctxt "No selected language"
 msgid "None"
 msgstr "Noben"
 
-#: settings/private/SonnetConfigPage.qml:117
+#: settings/private/SonnetConfigPage.qml:93
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Additional Spell Checking Languages"
 msgstr "Dodatni jeziki za preverjanje črkovanja"
 
-#: settings/private/SonnetConfigPage.qml:118
+#: settings/private/SonnetConfigPage.qml:94
 #, kde-format
 msgid ""
 "%1 will provide spell checking and suggestions for the languages listed here "
@@ -959,42 +959,42 @@ msgstr ""
 "%1 bo zagotovil preverjanje črkovanja in predloge za tukaj navedene jezike, "
 "ko je omogočeno samodejno zaznavanje."
 
-#: settings/private/SonnetConfigPage.qml:131
+#: settings/private/SonnetConfigPage.qml:102
 #, kde-format
 msgctxt "@action:button"
 msgid "Open Personal Dictionary"
 msgstr "Odpri osebni slovar"
 
-#: settings/private/SonnetConfigPage.qml:143
+#: settings/private/SonnetConfigPage.qml:114
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking languages"
 msgstr "Jeziki za preverjanje črkovanja"
 
-#: settings/private/SonnetConfigPage.qml:155
+#: settings/private/SonnetConfigPage.qml:126
 #, kde-format
 msgid "Default Language"
 msgstr "Privzeti jezik"
 
-#: settings/private/SonnetConfigPage.qml:167
+#: settings/private/SonnetConfigPage.qml:138
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking dictionary"
 msgstr "Slovar za preverjanje črkovanja"
 
-#: settings/private/SonnetConfigPage.qml:174
+#: settings/private/SonnetConfigPage.qml:145
 #, kde-format
 msgctxt "Placeholder message"
 msgid "Add a new word to your personal dictionary…"
 msgstr "Dodaj novo besedo v svoj osebni slovar…"
 
-#: settings/private/SonnetConfigPage.qml:177
+#: settings/private/SonnetConfigPage.qml:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Word"
 msgstr "Dodaj besedo"
 
-#: settings/private/SonnetConfigPage.qml:212
+#: settings/private/SonnetConfigPage.qml:183
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete word"

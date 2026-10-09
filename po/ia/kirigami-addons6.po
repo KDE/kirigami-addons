@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-07 00:46+0000\n"
+"POT-Creation-Date: 2026-10-09 00:45+0000\n"
 "PO-Revision-Date: 2026-09-21 12:28+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -296,8 +296,8 @@ msgstr "Previe imagine"
 msgid "Next image"
 msgstr "Proxime imagine"
 
-#: components/Banner.qml:185 formcard/AboutPage.qml:240
-#: formcard/AboutPage.qml:354 formcard/AboutPage.qml:750
+#: components/Banner.qml:185 formcard/AboutPage.qml:239
+#: formcard/AboutPage.qml:353 formcard/AboutPage.qml:754
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -310,7 +310,7 @@ msgctxt "@action:button"
 msgid "Go Back"
 msgstr "Vade retro"
 
-#: components/ConvergentContextMenu.qml:402 formcard/FormCardDialog.qml:102
+#: components/ConvergentContextMenu.qml:402 formcard/FormCardDialog.qml:114
 #, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
@@ -489,17 +489,17 @@ msgctxt "@info"
 msgid "Underlying platform."
 msgstr "Platteformafundamental."
 
-#: formcard/AboutKDEPage.qml:50
+#: formcard/AboutKDEPage.qml:68
 #, kde-format
 msgid "KDE"
 msgstr "KDE"
 
-#: formcard/AboutKDEPage.qml:59
+#: formcard/AboutKDEPage.qml:77
 #, kde-format
 msgid "Be Free!"
 msgstr "Sia Libere!"
 
-#: formcard/AboutKDEPage.qml:68
+#: formcard/AboutKDEPage.qml:84
 #, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
@@ -522,17 +522,17 @@ msgstr ""
 "commun de construer le plus belle Free Software del mundo. Omnes es "
 "benvenite a unir e contribuera KDE, tu includite."
 
-#: formcard/AboutKDEPage.qml:77 formcard/AboutPage.qml:403
+#: formcard/AboutKDEPage.qml:91 formcard/AboutPage.qml:402
 #, kde-format
 msgid "Homepage"
 msgstr "Pagina Domo o Principal"
 
-#: formcard/AboutKDEPage.qml:83
+#: formcard/AboutKDEPage.qml:97
 #, kde-format
 msgid "Report bugs"
 msgstr "Reporta bugs "
 
-#: formcard/AboutKDEPage.qml:88
+#: formcard/AboutKDEPage.qml:106
 #, kde-format
 msgid ""
 "Software can always be improved, and the KDE team is ready to do so. "
@@ -558,17 +558,17 @@ msgstr ""
 "systema de traciatura de faltas per registrar tu desiros. Assecura te que tu "
 "usa le severitate appellate \"Wishlist\" (Lista de desiros)."
 
-#: formcard/AboutKDEPage.qml:110
+#: formcard/AboutKDEPage.qml:115
 #, kde-format
 msgid "Report a bug"
 msgstr "Reporta un bug"
 
-#: formcard/AboutKDEPage.qml:116
+#: formcard/AboutKDEPage.qml:120
 #, kde-format
 msgid "Join us"
 msgstr "Uni te a nos"
 
-#: formcard/AboutKDEPage.qml:121
+#: formcard/AboutKDEPage.qml:126
 #, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
@@ -580,17 +580,17 @@ msgstr ""
 "interfacies de programma. Tu pote fornir grapiches, themas, sonos, e "
 "meliorar documentation. Tu decide!"
 
-#: formcard/AboutKDEPage.qml:129 formcard/AboutPage.qml:419
+#: formcard/AboutKDEPage.qml:131 formcard/AboutPage.qml:418
 #, kde-format
 msgid "Get Involved"
 msgstr "Sea involvite"
 
-#: formcard/AboutKDEPage.qml:139
+#: formcard/AboutKDEPage.qml:138
 #, kde-format
 msgid "Developer Documentation"
 msgstr "Documentation de disveloppator"
 
-#: formcard/AboutKDEPage.qml:145
+#: formcard/AboutKDEPage.qml:144
 #, kde-format
 msgid "Support us"
 msgstr "Supporta nos"
@@ -631,111 +631,111 @@ msgstr ""
 "\n"
 "Multe Gratias anticipate pro tu supporto."
 
-#: formcard/AboutKDEPage.qml:163
+#: formcard/AboutKDEPage.qml:159
 #, kde-format
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:173 formcard/AboutPage.qml:411
+#: formcard/AboutKDEPage.qml:165 formcard/AboutPage.qml:410
 #, kde-format
 msgid "Donate"
 msgstr "Dona"
 
-#: formcard/AboutPage.qml:166
+#: formcard/AboutPage.qml:167
 #, kde-format
 msgid "What's new"
 msgstr ""
 
-#: formcard/AboutPage.qml:196
+#: formcard/AboutPage.qml:195
 #, kde-format
 msgid "Copyright"
 msgstr "Copyright"
 
-#: formcard/AboutPage.qml:204
+#: formcard/AboutPage.qml:203
 #, kde-format
 msgid "Release history"
 msgstr "Historia de versiom"
 
-#: formcard/AboutPage.qml:278
+#: formcard/AboutPage.qml:277
 #, kde-format
 msgid "Show older changes…"
 msgstr ""
 
-#: formcard/AboutPage.qml:290
+#: formcard/AboutPage.qml:289
 #, kde-format
 msgid "Description"
 msgstr "Description"
 
-#: formcard/AboutPage.qml:303
+#: formcard/AboutPage.qml:302
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "Licentia"
 msgstr[1] "Licentias"
 
-#: formcard/AboutPage.qml:439
+#: formcard/AboutPage.qml:443
 #, kde-format
 msgid "Report a Bug"
 msgstr "Reporta un bug"
 
-#: formcard/AboutPage.qml:452
+#: formcard/AboutPage.qml:456
 #, kde-format
 msgid "Matrix Channel"
 msgstr "Canale de Matrix"
 
-#: formcard/AboutPage.qml:468
+#: formcard/AboutPage.qml:472
 #, kde-format
 msgid "Mastodon"
 msgstr "Mastodon"
 
-#: formcard/AboutPage.qml:480
+#: formcard/AboutPage.qml:484
 #, kde-format
 msgid "Source Code"
 msgstr "Codice fonte"
 
-#: formcard/AboutPage.qml:486
+#: formcard/AboutPage.qml:490
 #, kde-format
 msgid "Libraries in use"
 msgstr "Bibliothecas in uso"
 
-#: formcard/AboutPage.qml:490
+#: formcard/AboutPage.qml:494
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "Copia in area de transferentia"
 
-#: formcard/AboutPage.qml:494
+#: formcard/AboutPage.qml:498
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "Information de Systema copiate a area de transferentia."
 
-#: formcard/AboutPage.qml:509
+#: formcard/AboutPage.qml:513
 #, kde-format
 msgid "Authors"
 msgstr "Autores"
 
-#: formcard/AboutPage.qml:525
+#: formcard/AboutPage.qml:529
 #, kde-format
 msgid "Credits"
 msgstr "Gratias"
 
-#: formcard/AboutPage.qml:541
+#: formcard/AboutPage.qml:545
 #, kde-format
 msgid "Translators"
 msgstr "Traductores"
 
-#: formcard/AboutPage.qml:592
+#: formcard/AboutPage.qml:596
 #, kde-format
 msgid "More information"
 msgstr "Altere information"
 
-#: formcard/AboutPage.qml:652
+#: formcard/AboutPage.qml:656
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Visita pagina %1 de KDE Store"
 
-#: formcard/AboutPage.qml:661
+#: formcard/AboutPage.qml:665
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Invia un message de e-posta a  %1"
@@ -916,43 +916,43 @@ msgctxt "@label:checkbox"
 msgid "Enable automatic spell checking"
 msgstr "Habilita corrector orthographic automatic"
 
-#: settings/private/SonnetConfigPage.qml:55
+#: settings/private/SonnetConfigPage.qml:50
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore uppercase words"
 msgstr "Ignora parolas majuscule"
 
-#: settings/private/SonnetConfigPage.qml:69
+#: settings/private/SonnetConfigPage.qml:59
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore hyphenated words"
 msgstr "Ignora parolas con tracto de union"
 
-#: settings/private/SonnetConfigPage.qml:83
+#: settings/private/SonnetConfigPage.qml:69
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Detect language automatically"
 msgstr "Releva linguage automaticamente"
 
-#: settings/private/SonnetConfigPage.qml:96
+#: settings/private/SonnetConfigPage.qml:77
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Selected default language:"
 msgstr "Linguage predefinite seligite:"
 
-#: settings/private/SonnetConfigPage.qml:97
+#: settings/private/SonnetConfigPage.qml:78
 #, kde-format
 msgctxt "No selected language"
 msgid "None"
 msgstr "Necun"
 
-#: settings/private/SonnetConfigPage.qml:117
+#: settings/private/SonnetConfigPage.qml:93
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Additional Spell Checking Languages"
 msgstr "Linguages additional de controlo orthographic"
 
-#: settings/private/SonnetConfigPage.qml:118
+#: settings/private/SonnetConfigPage.qml:94
 #, kde-format
 msgid ""
 "%1 will provide spell checking and suggestions for the languages listed here "
@@ -961,42 +961,42 @@ msgstr ""
 "%1 fornira controlo orthographic e consilios per le linguages listate hic "
 "quando autodiscoperta es habilitate."
 
-#: settings/private/SonnetConfigPage.qml:131
+#: settings/private/SonnetConfigPage.qml:102
 #, kde-format
 msgctxt "@action:button"
 msgid "Open Personal Dictionary"
 msgstr "Aperi Dictionario Personal"
 
-#: settings/private/SonnetConfigPage.qml:143
+#: settings/private/SonnetConfigPage.qml:114
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking languages"
 msgstr "Linguages de controlo orthographic"
 
-#: settings/private/SonnetConfigPage.qml:155
+#: settings/private/SonnetConfigPage.qml:126
 #, kde-format
 msgid "Default Language"
 msgstr "Linguage predefinite"
 
-#: settings/private/SonnetConfigPage.qml:167
+#: settings/private/SonnetConfigPage.qml:138
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking dictionary"
 msgstr "Dictionario de controlo orthographic"
 
-#: settings/private/SonnetConfigPage.qml:174
+#: settings/private/SonnetConfigPage.qml:145
 #, kde-format
 msgctxt "Placeholder message"
 msgid "Add a new word to your personal dictionary…"
 msgstr "adde un nove parola a tu dictionario personal..."
 
-#: settings/private/SonnetConfigPage.qml:177
+#: settings/private/SonnetConfigPage.qml:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Word"
 msgstr "Adde parola"
 
-#: settings/private/SonnetConfigPage.qml:212
+#: settings/private/SonnetConfigPage.qml:183
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete word"
