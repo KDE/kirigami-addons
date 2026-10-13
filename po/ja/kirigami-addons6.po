@@ -5,9 +5,9 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-09 00:45+0000\n"
-"PO-Revision-Date: 2026-06-07 12:10+0900\n"
+"PO-Revision-Date: 2026-10-10 21:17+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
-"Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
+"Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -15,22 +15,22 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Ryuichi Yamada"
+msgstr "Ryuichi Yamada,Mint"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "ryuichi_ya220@outlook.jp"
+msgstr "ryuichi_ya220@outlook.jp,5602mint@gmail.com"
 
 #: actions/abstractkirigamiapplication.cpp:163
 #, kde-format
 msgid "Open Command Bar"
-msgstr ""
+msgstr "コマンドバーを開く"
 
 #: actions/abstractkirigamiapplication.cpp:185 formcard/AboutPage.qml:128
 #, kde-format
@@ -46,12 +46,10 @@ msgstr "KDE について"
 #, kde-format
 msgctxt "@title:menu"
 msgid "File"
-msgstr ""
+msgstr "ファイル"
 
 #: actions/abstractkirigamiapplication.cpp:209
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title:menu"
 msgid "Settings"
 msgstr "設定"
@@ -60,13 +58,13 @@ msgstr "設定"
 #, kde-format
 msgctxt "@title:menu"
 msgid "Help"
-msgstr ""
+msgstr "ヘルプ"
 
 #: actions/private/keysequencehelper.cpp:117
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Reserved Shortcut"
-msgstr ""
+msgstr "予約済みのショートカット"
 
 #: actions/private/keysequencehelper.cpp:119
 #, kde-format
@@ -76,6 +74,9 @@ msgid ""
 "shortcut.\n"
 "Please choose another one."
 msgstr ""
+"F12 は Windows で予約済みになっているため、グローバルショートカットには使えま"
+"せん。\n"
+"他のキーを選択してください。"
 
 #: actions/private/keysequencehelper.cpp:143
 #, kde-format
@@ -83,32 +84,32 @@ msgctxt ""
 "@title:dialog This happen when a global shortcut is already defined with the "
 "same shortcut"
 msgid "Global Shortcut Shadowing"
-msgstr ""
+msgstr "グローバルショートカットの競合"
 
 #: actions/private/keysequencehelper.cpp:146
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination is shadowed by following global actions:\n"
-msgstr ""
+msgstr "\"%1\" は、以下のグローバルアクションによって上書きされています。\n"
 
 #: actions/private/keysequencehelper.cpp:148
 #: actions/private/keysequencehelper.cpp:154
 #, kde-format
 msgctxt "@info"
 msgid "Action '%1' in context '%2'\n"
-msgstr ""
+msgstr "アクション \"%1\" (コンテキスト \"%2\" 内)\n"
 
 #: actions/private/keysequencehelper.cpp:152
 #, kde-format
 msgctxt "@info"
 msgid "The '%1' key combination shadows following global actions:\n"
-msgstr ""
+msgstr "\"%1\" は、以下のグローバルアクションを上書きします。\n"
 
 #: actions/private/keysequencehelper.cpp:193
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Conflict with Standard Application Shortcut"
-msgstr ""
+msgstr "標準アプリケーションショートカットと競合"
 
 #: actions/private/keysequencehelper.cpp:195
 #, kde-format
@@ -118,18 +119,21 @@ msgid ""
 "some applications use.\n"
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
+"\"%1\" は、複数のアプリケーションが使用する標準アクション「%2」でも使用されて"
+"います。\n"
+"本当にこれをグローバルショートカットとしても割り当てますか？"
 
 #: actions/private/KeySequenceItem.qml:130
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
-msgstr ""
+msgstr "入力"
 
 #: actions/private/KeySequenceItem.qml:131
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
-msgstr ""
+msgstr "なし"
 
 #: actions/private/KeySequenceItem.qml:142
 #, kde-format
@@ -137,67 +141,69 @@ msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
 "Example for Ctrl+A: hold the Ctrl key and press A."
 msgstr ""
+"このボタンをクリックしてから、設定したいショートカットを入力してください。\n"
+"例: Ctrl+A の場合、Ctrl を長押ししながら A を押す"
 
 #: actions/private/KeySequenceItem.qml:183
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
-msgstr ""
+msgstr "キーの組み合わせを削除"
 
 #: actions/private/KeySequenceItem.qml:199
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel Key Sequence Recording"
-msgstr ""
+msgstr "キーの組み合わせの記録をキャンセル"
 
 #: actions/private/KQuickCommandBarPage.qml:55
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No results found"
-msgstr ""
+msgstr "検索結果はありません"
 
 #: actions/private/ShortcutsEditor.qml:19 actions/StatefulWindow.qml:99
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcuts"
-msgstr ""
+msgstr "ショートカット"
 
 #: actions/private/ShortcutsEditor.qml:23
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Filter…"
-msgstr ""
+msgstr "フィルタ…"
 
 #: actions/private/ShortcutsEditor.qml:69
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut: %1"
-msgstr ""
+msgstr "ショートカット: %1"
 
 #: actions/private/ShortcutsEditor.qml:89
 #, kde-format
 msgctxt "@label"
 msgid "Shortcut:"
-msgstr ""
+msgstr "ショートカット:"
 
 #: actions/private/ShortcutsEditor.qml:144
 #: actions/private/ShortcutsEditor.qml:172
 #, kde-format
 msgctxt "@label"
 msgid "Alternative:"
-msgstr ""
+msgstr "代替:"
 
 #: actions/private/ShortcutsEditor.qml:210
 #, kde-format
 msgctxt "Placeholder message"
 msgid "No shortcuts found"
-msgstr ""
+msgstr "ショートカットが見つかりません"
 
 #: actions/shortcutsmodel.cpp:41
 #, kde-format
 msgctxt "List separator"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: actions/StatefulWindow.qml:109
 #, kde-format
@@ -215,7 +221,7 @@ msgstr "KDE について"
 #, kde-format
 msgctxt "@title:window"
 msgid "Failed to Load Application"
-msgstr ""
+msgstr "アプリケーションの読み込み失敗"
 
 #: app/kirigamiappdefaults.cpp:134
 #, kde-format
@@ -224,12 +230,15 @@ msgid ""
 "Could not load the QML application. This issue might be caused by your "
 "distribution. Please report it to your distribution first."
 msgstr ""
+"QML アプリケーションを読み込めませんでした。この問題はお使いのディストリ"
+"ビューションが原因の可能性があります。まずはディストリビューションに報告して"
+"ください。"
 
 #: app/kirigamiappdefaults.cpp:141
 #, kde-format
 msgctxt "@info"
 msgid "Could not load the QML application."
-msgstr ""
+msgstr "QML アプリケーションを読み込めませんでした。"
 
 #: components/AbstractMaximizeComponent.qml:137
 #, kde-format
@@ -298,8 +307,7 @@ msgid "Go Back"
 msgstr "戻る"
 
 #: components/ConvergentContextMenu.qml:402 formcard/FormCardDialog.qml:114
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
 msgstr "閉じる"
@@ -395,7 +403,7 @@ msgstr "次に移動"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to current time"
-msgstr ""
+msgstr "現在時刻にリセット"
 
 #: dateandtime/TimePicker.qml:155
 #, kde-format
@@ -536,11 +544,12 @@ msgid ""
 "\"Wishlist\"."
 msgstr ""
 "ソフトウェアの改善に終わりはありません。KDE チームも日々改良に努めています"
-"が、それにはユーザーであるあなたの協力が必要です。不具合や改善点を見つけた場"
-"合は、ぜひ教えてください。\n"
+"が、それにはユーザーのみなさまの協力が必要です。不具合や改善点を見つけた場合"
+"は、ぜひ教えてください。\n"
 "\n"
 "KDE にはバグ追跡システムがあります。下のボタンを押してバグを報告できます。ま"
-"たは、アプリの「〇〇について」の画面からこのアプリのバグを報告できます。\n"
+"たは、アプリの「〇〇について」の画面からこのアプリ固有のバグを報告できま"
+"す。\n"
 "\n"
 "改良のためのいいアイデアをお持ちの場合も、バグ追跡システムを使ってご要望をど"
 "しどしお寄せください。このとき、重要度には \"Wishlist\" (要望) を指定してくだ"
@@ -642,7 +651,7 @@ msgstr "著作権"
 #: formcard/AboutPage.qml:203
 #, kde-format
 msgid "Release history"
-msgstr ""
+msgstr "リリース履歴"
 
 #: formcard/AboutPage.qml:277
 #, kde-format
@@ -668,17 +677,17 @@ msgstr "バグを報告"
 #: formcard/AboutPage.qml:456
 #, kde-format
 msgid "Matrix Channel"
-msgstr ""
+msgstr "Matrix チャンネル"
 
 #: formcard/AboutPage.qml:472
 #, kde-format
 msgid "Mastodon"
-msgstr ""
+msgstr "Mastodon"
 
 #: formcard/AboutPage.qml:484
 #, kde-format
 msgid "Source Code"
-msgstr ""
+msgstr "ソースコード"
 
 #: formcard/AboutPage.qml:490
 #, kde-format
@@ -713,11 +722,9 @@ msgid "Translators"
 msgstr "翻訳者"
 
 #: formcard/AboutPage.qml:596
-#, fuzzy, kde-format
-#| msgctxt "@title:dialog"
-#| msgid "Information"
+#, kde-format
 msgid "More information"
-msgstr "情報"
+msgstr "詳細情報"
 
 #: formcard/AboutPage.qml:656
 #, kde-format
@@ -745,7 +752,7 @@ msgstr "現在の色 \"%1\""
 #, kde-format
 msgctxt "@action:button"
 msgid "Icon"
-msgstr ""
+msgstr "アイコン"
 
 #: formcard/FormDateTimeDelegate.qml:227
 #, kde-format
@@ -769,47 +776,43 @@ msgstr ""
 #, kde-format
 msgctxt "@info:status"
 msgid "The path doesn't exist."
-msgstr ""
+msgstr "パスが存在しません。"
 
 #: formcard/FormFileDelegate.qml:195
 #, kde-format
 msgctxt "@info:status"
 msgid "The file doesn't exist."
-msgstr ""
+msgstr "ファイルが存在しません。"
 
 #: formcard/FormFileDelegate.qml:243
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select file"
-msgstr "選択"
+msgstr "ファイルを選択"
 
 #: formcard/FormFileDelegate.qml:250
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No file selected"
-msgstr ""
+msgstr "ファイルが選択されていません"
 
 #: formcard/FormFolderDelegate.qml:153
 #, kde-format
 msgctxt "@info:status"
 msgid "The folder doesn't exist."
-msgstr ""
+msgstr "フォルダが存在しません。"
 
 #: formcard/FormFolderDelegate.qml:200
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select folder"
-msgstr "選択"
+msgstr "フォルダを選択"
 
 #: formcard/FormFolderDelegate.qml:207
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No folder selected"
-msgstr ""
+msgstr "フォルダが選択されていません"
 
 #: formcard/FormLinkDelegate.qml:54
 #, kde-format
@@ -844,41 +847,31 @@ msgid "Done"
 msgstr ""
 
 #: onboarding/private/OnboardingOverlay.qml:201
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Go Previous"
+#, kde-format
 msgctxt "@action:button"
 msgid "Previous"
-msgstr "前に移動"
+msgstr "前へ"
 
 #: onboarding/private/OnboardingOverlay.qml:202
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Go Previous"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Previous"
-msgstr "前に移動"
+msgstr "前へ"
 
 #: onboarding/private/OnboardingOverlay.qml:221
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Go Next"
+#, kde-format
 msgctxt "@action:button"
 msgid "Next"
-msgstr "次に移動"
+msgstr "次へ"
 
 #: onboarding/private/OnboardingOverlay.qml:222
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Go Next"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Next"
-msgstr "次に移動"
+msgstr "次へ"
 
 #: onboarding/private/OnboardingOverlay.qml:237
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel"
 msgstr "キャンセル"
@@ -917,43 +910,43 @@ msgstr "設定"
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Enable automatic spell checking"
-msgstr ""
+msgstr "自動スペルチェックを有効化"
 
 #: settings/private/SonnetConfigPage.qml:50
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore uppercase words"
-msgstr ""
+msgstr "大文字の単語を無視"
 
 #: settings/private/SonnetConfigPage.qml:59
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore hyphenated words"
-msgstr ""
+msgstr "ハイフン付きの単語を無視"
 
 #: settings/private/SonnetConfigPage.qml:69
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Detect language automatically"
-msgstr ""
+msgstr "言語を自動検出"
 
 #: settings/private/SonnetConfigPage.qml:77
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Selected default language:"
-msgstr ""
+msgstr "選択中のデフォルト言語:"
 
 #: settings/private/SonnetConfigPage.qml:78
 #, kde-format
 msgctxt "No selected language"
 msgid "None"
-msgstr ""
+msgstr "なし"
 
 #: settings/private/SonnetConfigPage.qml:93
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Additional Spell Checking Languages"
-msgstr ""
+msgstr "追加のスペルチェック言語"
 
 #: settings/private/SonnetConfigPage.qml:94
 #, kde-format
@@ -961,60 +954,58 @@ msgid ""
 "%1 will provide spell checking and suggestions for the languages listed here "
 "when autodetection is enabled."
 msgstr ""
+"%1 は自動検出が有効な場合、ここで指定された言語のスペルチェックと提案を行いま"
+"す。"
 
 #: settings/private/SonnetConfigPage.qml:102
 #, kde-format
 msgctxt "@action:button"
 msgid "Open Personal Dictionary"
-msgstr ""
+msgstr "個人用辞書を開く"
 
 #: settings/private/SonnetConfigPage.qml:114
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking languages"
-msgstr ""
+msgstr "スペルチェック言語"
 
 #: settings/private/SonnetConfigPage.qml:126
 #, kde-format
 msgid "Default Language"
-msgstr ""
+msgstr "デフォルト言語"
 
 #: settings/private/SonnetConfigPage.qml:138
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking dictionary"
-msgstr ""
+msgstr "スペルチェック辞書"
 
 #: settings/private/SonnetConfigPage.qml:145
 #, kde-format
 msgctxt "Placeholder message"
 msgid "Add a new word to your personal dictionary…"
-msgstr ""
+msgstr "個人用辞書に新しい単語を登録…"
 
 #: settings/private/SonnetConfigPage.qml:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Word"
-msgstr ""
+msgstr "単語登録"
 
 #: settings/private/SonnetConfigPage.qml:183
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete word"
-msgstr ""
+msgstr "単語を削除"
 
 #: settings/ShortcutsConfigurationModule.qml:26
 #, kde-format
 msgctxt "@action:button"
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "キーボードショートカット"
 
 #: settings/SpellcheckingConfigurationModule.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Spell Checking"
-msgstr ""
-
-#~ msgctxt "Linux packaging format"
-#~ msgid "Unknown/Default"
-#~ msgstr "不明/デフォルト"
+msgstr "スペルチェック機能"
