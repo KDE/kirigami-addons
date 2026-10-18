@@ -49,6 +49,7 @@ import './private' as Private
 AbstractFormDelegate {
     id: root
 
+    readonly property bool _mobileEditingEnabled: Kirigami.Settings.isMobile && Kirigami.Settings.style !== "Material"
     property bool _mobileEditing: false
     property bool _mobileFinishEmitted: false
 
@@ -311,7 +312,7 @@ AbstractFormDelegate {
             spacing: Private.FormCardUnits.horizontalSpacing
 
             Layout.fillWidth: true
-            visible: !Kirigami.Settings.isMobile || root._mobileEditing
+            visible: !root._mobileEditingEnabled || root._mobileEditing
 
             Label {
                 Layout.fillWidth: true
@@ -361,7 +362,7 @@ AbstractFormDelegate {
                 ColumnLayout {
                     Layout.fillWidth: true
                     spacing: 0
-                    visible: Kirigami.Settings.isMobile && !root._mobileEditing
+                    visible: root._mobileEditingEnabled && !root._mobileEditing
 
                     Label {
                         Layout.fillWidth: true
@@ -387,7 +388,7 @@ AbstractFormDelegate {
                     id: textField
                     Accessible.name: root.label
                     Layout.fillWidth: true
-                    visible: !Kirigami.Settings.isMobile || root._mobileEditing
+                    visible: !root._mobileEditingEnabled || root._mobileEditing
                     placeholderText: root.placeholderText
                     text: root.text
                     onTextChanged: {
@@ -397,12 +398,12 @@ AbstractFormDelegate {
                     }
                     onAccepted: {
                         root.accepted();
-                        if (Kirigami.Settings.isMobile) {
+                        if (root._mobileEditingEnabled) {
                             textField.focus = false;
                         }
                     }
                     onEditingFinished: {
-                        if (!Kirigami.Settings.isMobile || !root._mobileFinishEmitted) {
+                        if (!root._mobileEditingEnabled || !root._mobileFinishEmitted) {
                             root.editingFinished();
                             root._mobileFinishEmitted = true;
                         }
@@ -411,7 +412,7 @@ AbstractFormDelegate {
                         if (activeFocus) {
                             root._mobileFinishEmitted = false;
                         }
-                        if (!activeFocus && Kirigami.Settings.isMobile) {
+                        if (!activeFocus && root._mobileEditingEnabled) {
                             root._mobileEditing = false;
                         }
                     }
@@ -426,7 +427,7 @@ AbstractFormDelegate {
             }
 
             Kirigami.Icon {
-                visible: Kirigami.Settings.isMobile && !root._mobileEditing && !root.readOnly && root.enabled
+                visible: root._mobileEditingEnabled && !root._mobileEditing && !root.readOnly && root.enabled
                 source: "document-edit"
                 implicitWidth: Kirigami.Units.iconSizes.smallMedium
                 implicitHeight: Kirigami.Units.iconSizes.smallMedium
@@ -435,7 +436,7 @@ AbstractFormDelegate {
 
             ToolButton {
                 objectName: "_mobileDoneButton"
-                visible: Kirigami.Settings.isMobile && root._mobileEditing
+                visible: root._mobileEditingEnabled && root._mobileEditing
                 text: i18ndc("kirigami-addons6", "@action:button", "Done")
                 icon.name: "dialog-ok"
                 display: AbstractButton.TextBesideIcon
