@@ -412,12 +412,12 @@ AbstractFormDelegate {
                 Accessible.ignored: true
             }
 
-            ToolButton {
+            Button {
                 objectName: "_mobileDoneButton"
                 visible: root._mobileEditingEnabled && root._mobileEditing
                 text: i18ndc("kirigami-addons6", "@action:button", "Done")
                 icon.name: "dialog-ok"
-                display: AbstractButton.TextBesideIcon
+                display: AbstractButton.IconOnly
                 focusPolicy: Qt.NoFocus
                 onClicked: textField.focus = false
             }
