@@ -141,7 +141,6 @@ T.SwitchDelegate {
             checked: root.checked
 
             spacing: 0
-            contentItem: null
 
             topPadding: 0
             leftPadding: 0

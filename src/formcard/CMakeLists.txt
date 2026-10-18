@@ -2,16 +2,19 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 # FormCard module
+add_subdirectory(templates)
+
 ecm_add_qml_module(formcardplugin
     URI "org.kde.kirigamiaddons.formcard"
     VERSION 1.0
-    GENERATE_PLUGIN_SOURCE
+    CLASS_NAME FormCardPlugin
     DEPENDENCIES
         org.kde.coreaddons
         org.kde.kirigami
         org.kde.kirigamiaddons.components
         org.kde.kirigamiaddons.dateandtime
         org.kde.kirigamiaddons.delegates
+        org.kde.kirigamiaddons.formcard.templates
 )
 
 ecm_generate_qdoc(formcardplugin kirigamiaddonsformcard.qdocconf)
@@ -63,6 +66,8 @@ else()
 endif()
 
 target_sources(formcardplugin PRIVATE
+    formcardplugin.cpp
+    formcardplugin.h
     aboutcomponent.cpp
     aboutcomponent_p.h
     filehelper.cpp
@@ -72,6 +77,16 @@ target_sources(formcardplugin PRIVATE
     passwordhealth.h
     zxcvbn/zxcvbn.c
     zxcvbn/zxcvbn.h
+)
+
+qt_target_qml_sources(formcardplugin RESOURCES
+    styles/Material/FormCard.qml
+    styles/Material/FormCardDialog.qml
+    styles/Material/MaterialCardBackground.qml
+    styles/Material/FormCardPage.qml
+    styles/Material/FormDelegateBackground.qml
+    styles/Material/FormGridContainer.qml
+    styles/Material/FormHeader.qml
 )
 target_compile_definitions(formcardplugin PRIVATE -DTRANSLATION_DOMAIN=\"kirigami-addons6\")
 
@@ -95,6 +110,7 @@ target_link_libraries(formcardplugin PRIVATE
     KF6::I18n
     KF6::CoreAddons
     KF6::ConfigCore
+    KF6::KirigamiPlatform
 )
 
 ecm_finalize_qml_module(formcardplugin DESTINATION ${KDE_INSTALL_QMLDIR} EXPORT KirigamiAddonsTargets)

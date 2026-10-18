@@ -20,6 +20,9 @@ Item {
     required property real bottomPadding
     required property bool cardWidthRestricted
     required property list<QtObject> infoCards
+    required property Component backgroundDelegate
+    required property real borderWidth
+    required property real cornerRadius
 
     Kirigami.Theme.colorSet: Kirigami.Theme.View
     Kirigami.Theme.inherit: false
@@ -67,8 +70,8 @@ Item {
                 topPadding: Kirigami.Units.largeSpacing
                 bottomPadding: Kirigami.Units.largeSpacing
 
-                leftInset: root.cardWidthRestricted ? 0 : -infoCardDelegate.background.border.width
-                rightInset: root.cardWidthRestricted ? 0 : -infoCardDelegate.background.border.width
+                leftInset: root.cardWidthRestricted ? 0 : -root.borderWidth
+                rightInset: root.cardWidthRestricted ? 0 : -root.borderWidth
 
                 hoverEnabled: true
 
@@ -84,12 +87,15 @@ Item {
                 QQC2.ToolTip.visible: tooltipText && hovered
                 QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
 
-                background: FormCardBackground {
-                    rounded: root.cardWidthRestricted
+                background: Item {
+                    Loader {
+                        anchors.fill: parent
+                        sourceComponent: root.backgroundDelegate
+                    }
 
                     Rectangle {
                         anchors.fill: parent
-                        radius: root.cardWidthRestricted ? Kirigami.Units.cornerRadius : 0
+                        radius: root.cornerRadius
 
                         color: {
                             let alpha = 0;

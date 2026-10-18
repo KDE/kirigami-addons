@@ -1,0 +1,8 @@
+/*!
+   \qmlmodule org.kde.kirigamiaddons.formcard.templates
+   \title Kirigami Addons FormCard Templates
+   \brief Shared layout and geometry for FormCard style implementations.
+
+   Applications should normally use org.kde.kirigamiaddons.formcard.
+   This module provides the bases for its default and Material appearances.
+ */

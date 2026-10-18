@@ -3,15 +3,10 @@
 
 pragma ComponentBehavior: Bound
 
-import QtQuick
-import QtQuick.Controls as QQC2
-import QtQuick.Layouts
-
-import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.components as Components
-import org.kde.kirigamiaddons.formcard as FormCard
+import org.kde.kirigamiaddons.formcard.templates as T
 
-import './private' as Private
+import "private" as Private
 
 /*!
    \qmltype FormCardDialog
@@ -47,162 +42,9 @@ import './private' as Private
 
    \since 1.1.0
  */
-QQC2.Dialog {
-    id: root
-
-    default property alias content: columnLayout.data
-
-    /*!
-       \brief Whether to insert a FormDelegateSeparator between visible delegates.
-
-       This also works for delegates created by a Repeater. Do not add explicit
-       separators when this property is enabled.
-
-       \default false
-       \since 1.16.0
-     */
-    property bool autoSeparators: false
-
-    readonly property list<Item> _visibleDelegates: columnLayout.visibleChildren.filter(child => child.height !== 0)
-
-    x: Math.round((parent.width - width) / 2)
-    y: Math.round((parent.height - height) / 2)
-    z: Kirigami.OverlayZStacking.z
+T.FormCardDialog {
+    horizontalContentPadding: Private.FormCardUnits.horizontalPadding
+    verticalContentPadding: Private.FormCardUnits.verticalPadding
 
     background: Components.DialogRoundedBackground {}
-
-    parent: applicationWindow().QQC2.Overlay.overlay
-
-    implicitWidth: if (parent.width > 576) {
-        return Math.min(parent.width - Kirigami.Units.gridUnit * 2, Math.max(Kirigami.Units.gridUnit * 15, header.implicitWidth))
-    } else {
-        return parent.width - Kirigami.Units.gridUnit * 2;
-    }
-
-    implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
-                             contentHeight + topPadding + bottomPadding
-                             + (implicitHeaderHeight > 0 ? implicitHeaderHeight + spacing : 0)
-                             + (implicitFooterHeight > 0 ? implicitFooterHeight + spacing : 0))
-
-    modal: true
-    focus: true
-
-    padding: 0
-
-    header: RowLayout {
-        spacing: Kirigami.Units.smallSpacing
-
-	    Kirigami.Heading {
-            text: root.title
-            elide: QQC2.Label.ElideRight
-            leftPadding: Private.FormCardUnits.horizontalPadding
-            rightPadding: Private.FormCardUnits.horizontalPadding
-            topPadding: Private.FormCardUnits.verticalPadding
-            bottomPadding: 0
-
-            Layout.fillWidth: true
-        }
-
-        QQC2.ToolButton {
-            id: closeButton
-
-            Layout.alignment: Qt.AlignVCenter
-            Layout.rightMargin: Private.FormCardUnits.horizontalPadding
-            Layout.topMargin: Private.FormCardUnits.horizontalPadding
-
-            icon.name: hovered ? "window-close" : "window-close-symbolic"
-            text: i18ndc("kirigami-addons6", "@action:button close dialog", "Close")
-            display: QQC2.AbstractButton.IconOnly
-            visible: root.standardButtons & QQC2.Dialog.Cancel
-            enabled: visible && root.standardButton(QQC2.Dialog.Cancel).enabled
-
-            onClicked: root.reject()
-        }
-    }
-
-    // The content scrolls when the dialog is taller than its parent, instead of going under the footer.
-    contentItem: Item {
-        implicitWidth: scrollView.implicitWidth
-        implicitHeight: scrollView.implicitHeight
-
-        QQC2.ScrollView {
-            id: scrollView
-
-            anchors.fill: parent
-
-            implicitWidth: columnLayout.implicitWidth
-            implicitHeight: columnLayout.implicitHeight
-            contentWidth: availableWidth
-            clip: true
-            QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AlwaysOff
-
-            // Single child of the ScrollView, so it still computes the content size.
-            Item {
-                implicitWidth: columnLayout.implicitWidth
-                implicitHeight: columnLayout.implicitHeight
-                width: scrollView.availableWidth
-                // At least the height of the dialog, for the items that fill it.
-                height: Math.max(implicitHeight, scrollView.availableHeight)
-
-                ColumnLayout {
-                    id: columnLayout
-
-                    anchors.fill: parent
-                    spacing: root.autoSeparators && separatorRepeater.count > 0 ? separatorRepeater.itemAt(0).implicitHeight : 0
-                }
-
-                // Outside of the ColumnLayout, so the separators aren't laid out as delegates.
-                Repeater {
-                    id: separatorRepeater
-
-                    model: root.autoSeparators ? Math.max(0, root._visibleDelegates.length - 1) : 0
-
-                    FormDelegateSeparator {
-                        required property int index
-
-                        objectName: "automaticSeparator"
-
-                        above: root._visibleDelegates[index] ?? null
-                        below: root._visibleDelegates[index + 1] ?? null
-                        hMargins: Kirigami.Units.largeSpacing
-
-                        x: columnLayout.x + hMargins
-                        width: Math.max(0, columnLayout.width - 2 * hMargins)
-                        height: implicitHeight
-                        y: above ? columnLayout.y + above.y + above.height + (columnLayout.spacing - height) / 2 : 0
-                    }
-                }
-            }
-        }
-
-        // Overlaid on the edges, so showing them doesn't move the content.
-        Kirigami.Separator {
-            anchors {
-                top: parent.top
-                left: parent.left
-                right: parent.right
-            }
-            visible: !((scrollView.contentItem as Flickable)?.atYBeginning ?? true)
-        }
-
-        Kirigami.Separator {
-            anchors {
-                bottom: parent.bottom
-                left: parent.left
-                right: parent.right
-            }
-            visible: !((scrollView.contentItem as Flickable)?.atYEnd ?? true)
-        }
-    }
-
-    footer: QQC2.DialogButtonBox {
-        leftPadding: Private.FormCardUnits.horizontalPadding
-        rightPadding: Private.FormCardUnits.horizontalPadding
-        bottomPadding: Private.FormCardUnits.verticalPadding
-        topPadding: Kirigami.Units.smallSpacing
-        spacing: Kirigami.Units.mediumSpacing
-
-        standardButtons: root.standardButtons
-        visible: count > 0
-    }
 }

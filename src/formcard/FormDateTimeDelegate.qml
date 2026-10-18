@@ -173,6 +173,10 @@ AbstractFormDelegate {
      */
     property var popupParent: QQC2.ApplicationWindow.window
 
+    readonly property real _cardCornerRadius: root.parent?._cornerRadius ?? 0
+    readonly property real _topCornerRadius: root.parent?._firstVisibleItem === root && !headingLabel.visible ? _cardCornerRadius : 0
+    readonly property real _bottomCornerRadius: root.parent?._lastVisibleItem === root && !formErrorHandler.visible && !internalDescriptionItem.visible ? _cardCornerRadius : 0
+
     background: null
 
     focusPolicy: text.length > 0 ? Qt.TabFocus : Qt.NoFocus
@@ -190,6 +194,7 @@ AbstractFormDelegate {
         spacing: 0
 
         QQC2.Label {
+            id: headingLabel
             text: root.text
             Layout.fillWidth: true
             padding: Kirigami.Units.gridUnit
@@ -326,6 +331,13 @@ AbstractFormDelegate {
                 background: FormDelegateBackground {
                     visible: !root.readOnly
                     control: dateButton
+
+                    corners {
+                        topLeftRadius: !root.mirrored || !timeButton.visible ? root._topCornerRadius : 0
+                        topRightRadius: root.mirrored || !timeButton.visible ? root._topCornerRadius : 0
+                        bottomLeftRadius: !root.mirrored || !timeButton.visible ? root._bottomCornerRadius : 0
+                        bottomRightRadius: root.mirrored || !timeButton.visible ? root._bottomCornerRadius : 0
+                    }
                 }
 
                 Component {
@@ -379,6 +391,7 @@ AbstractFormDelegate {
 
             QQC2.AbstractButton {
                 id: timeButton
+                objectName: "timeButton"
 
                 property bool androidPickerActive: false
 
@@ -495,6 +508,13 @@ AbstractFormDelegate {
                 background: FormDelegateBackground {
                     control: timeButton
                     visible: !root.readOnly
+
+                    corners {
+                        topLeftRadius: root.mirrored || !dateButton.visible ? root._topCornerRadius : 0
+                        topRightRadius: !root.mirrored || !dateButton.visible ? root._topCornerRadius : 0
+                        bottomLeftRadius: root.mirrored || !dateButton.visible ? root._bottomCornerRadius : 0
+                        bottomRightRadius: !root.mirrored || !dateButton.visible ? root._bottomCornerRadius : 0
+                    }
                 }
             }
         }

@@ -104,6 +104,7 @@ T.CheckDelegate {
 
         Controls.CheckBox {
             id: checkBoxItem
+            objectName: "checkControl"
             Layout.rightMargin: Private.FormCardUnits.horizontalSpacing
             focusPolicy: Qt.NoFocus // provided by delegate
 
@@ -124,7 +125,6 @@ T.CheckDelegate {
                 onPressAndHold: root.pressAndHold()
                 onDoubleClicked: root.doubleClicked()
 
-                contentItem: null // Remove right margin
                 spacing: 0
 
                 enabled: root.enabled
