@@ -23,6 +23,14 @@ bool contains(const QString &str, QChar::Script s)
     return false;
 }
 
+QString firstGrapheme(QStringView string)
+{
+    auto boundaryFinder = QTextBoundaryFinder(QTextBoundaryFinder::Grapheme, string);
+    auto end = boundaryFinder.toNextBoundary() < 0 ? 0 : boundaryFinder.position();
+
+    return string.slice(0, end).toString();
+}
+
 QString NameUtils::initialsFromString(const QString &string)
 {
     // "" -> ""
@@ -63,18 +71,18 @@ QString NameUtils::initialsFromString(const QString &string)
         auto last = split.last();
         if (first.isEmpty()) {
             // "" "LastName" -> "L"
-            return QString(last.front()).toUpper();
+            return firstGrapheme(last).toUpper();
         }
         if (last.isEmpty()) {
             // "FirstName" "" -> "F"
-            return QString(first.front()).toUpper();
+            return firstGrapheme(first).toUpper();
         }
         // "FirstName" "LastName" -> "FL"
-        return (QString(first.front()) + last.front()).toUpper();
+        return (firstGrapheme(first) + firstGrapheme(last)).toUpper();
         // "OneName"
     } else {
         // "OneName" -> "O"
-        return QString(normalized.front()).toUpper();
+        return firstGrapheme(normalized).toUpper();
     }
 }
 

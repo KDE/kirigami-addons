@@ -63,6 +63,13 @@ Item {
         function test_bad_names() {
             compare(KirigamiComponents.NameUtils.isStringUnsuitableForInitials("151231023"), true)
         }
+        function test_emoji_names() {
+            compare(KirigamiComponents.NameUtils.isStringUnsuitableForInitials("🤪🤪 last"), false)
+            compare(KirigamiComponents.NameUtils.initialsFromString("🤪🤪 last"), "🤪L")
+
+            compare(KirigamiComponents.NameUtils.isStringUnsuitableForInitials("🤪ha"), false)
+            compare(KirigamiComponents.NameUtils.initialsFromString("🤪ha"), "🤪")
+        }
     }
 
     TestCase {
