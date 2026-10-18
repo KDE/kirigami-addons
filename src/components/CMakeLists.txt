@@ -94,13 +94,15 @@ ecm_finalize_qml_module(componentslabsplugin DESTINATION ${KDE_INSTALL_QMLDIR} E
 ecm_add_qml_module(componentsplugin
     URI "org.kde.kirigamiaddons.components"
     VERSION 1.0
-    GENERATE_PLUGIN_SOURCE
+    CLASS_NAME ComponentsPlugin
     DEPENDENCIES
         org.kde.kirigami
         Qt.labs.qmlmodels
 )
 
 target_sources(componentsplugin PRIVATE
+    componentsplugin.h
+    componentsplugin.cpp
     nameutilselement.h
     nameutilselement.cpp
     messagedialoghelper.h
@@ -124,6 +126,11 @@ ecm_target_qml_sources(componentsplugin SOURCES
     ConvergentContextMenu.qml
 )
 
+qt_target_qml_sources(componentsplugin RESOURCES
+    styles/Material/DoubleFloatingButton.qml
+    styles/Material/FloatingButton.qml
+)
+
 ecm_target_qml_sources(componentsplugin PRIVATE PATH private SOURCES
     private/ContextMenuPage.qml
     private/ActionsMenu.qml
@@ -134,6 +141,7 @@ target_link_libraries(componentsplugin PRIVATE
     Qt6::Quick
     Qt6::Qml
     KF6::ConfigCore
+    KF6::KirigamiPlatform
     Qt6::QuickControls2
     KirigamiAddonsComponents
 )
