@@ -87,7 +87,12 @@ qt_target_qml_sources(formcardplugin RESOURCES
     styles/Material/FormDelegateBackground.qml
     styles/Material/FormGridContainer.qml
     styles/Material/FormHeader.qml
+    OUTPUT_TARGETS _formcard_style_targets
 )
+
+if(_formcard_style_targets)
+    install(TARGETS ${_formcard_style_targets} EXPORT KirigamiAddonsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
+endif()
 target_compile_definitions(formcardplugin PRIVATE -DTRANSLATION_DOMAIN=\"kirigami-addons6\")
 
 set_source_files_properties(private/FormCardUnits.qml PROPERTIES QT_QML_SINGLETON_TYPE TRUE)

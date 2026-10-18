@@ -129,7 +129,12 @@ ecm_target_qml_sources(componentsplugin SOURCES
 qt_target_qml_sources(componentsplugin RESOURCES
     styles/Material/DoubleFloatingButton.qml
     styles/Material/FloatingButton.qml
+    OUTPUT_TARGETS _components_style_targets
 )
+
+if(_components_style_targets)
+    install(TARGETS ${_components_style_targets} EXPORT KirigamiAddonsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
+endif()
 
 ecm_target_qml_sources(componentsplugin PRIVATE PATH private SOURCES
     private/ContextMenuPage.qml
