@@ -78,6 +78,10 @@ Kirigami.ApplicationWindow {
      */
     property StatefulApp.AbstractKirigamiApplication application: Private.DefaultKirigamiApplication
 
+    pageStack.globalToolBar.showNavigationButtons: root.pageStack.currentIndex > 0
+        ? Kirigami.ApplicationHeaderStyle.ShowBackButton
+        : Kirigami.ApplicationHeaderStyle.NoNavigationButtons
+
     Config.WindowStateSaver {
         id: windowStateSaver
     }
