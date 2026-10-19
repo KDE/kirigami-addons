@@ -135,6 +135,7 @@ qt_target_qml_sources(componentsplugin RESOURCES
     styles/Material/FloatingToolBar.qml
     styles/Material/RadioSelector.qml
     styles/Material/BottomDrawer.qml
+    styles/Material/MessageDialog.qml
     OUTPUT_TARGETS _components_style_targets
 )
 

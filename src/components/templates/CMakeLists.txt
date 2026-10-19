@@ -14,6 +14,7 @@ ecm_target_qml_sources(componentstemplatesplugin SOURCES
     DoubleFloatingButton.qml
     RadioSelector.qml
     BottomDrawer.qml
+    MessageDialog.qml
 )
 
 ecm_target_qml_sources(componentstemplatesplugin PRIVATE PATH private SOURCES

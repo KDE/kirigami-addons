@@ -48,6 +48,16 @@ Item {
         }
     }
 
+    Component {
+        id: initialButtonsDialog
+
+        Components.MessageDialog {
+            standardButtons: Controls.Dialog.Save | Controls.Dialog.Cancel
+            enter: null
+            exit: null
+        }
+    }
+
     TestCase {
         name: "MessageDialog"
         when: windowShown
@@ -61,6 +71,24 @@ Item {
 
         function cleanup(): void {
             dialog.close();
+        }
+
+        function test_initialButtonsAreVisible(): void {
+            const initialDialog = createTemporaryObject(initialButtonsDialog, applicationWindow.contentItem);
+            verify(initialDialog);
+            initialDialog.openDialog();
+            tryCompare(initialDialog, "visible", true);
+
+            const saveButton = initialDialog.standardButton(Controls.Dialog.Save);
+            const cancelButton = initialDialog.standardButton(Controls.Dialog.Cancel);
+            verify(saveButton);
+            verify(cancelButton);
+            verify(saveButton.visible);
+            verify(cancelButton.visible);
+            verify(saveButton.width > 0 && saveButton.height > 0);
+            verify(cancelButton.width > 0 && cancelButton.height > 0);
+            mouseClick(saveButton);
+            compare(initialDialog.visible, false);
         }
 
         function test_cancelDoesNotRememberChoice(): void {
