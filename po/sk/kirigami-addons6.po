@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-09 00:45+0000\n"
+"POT-Creation-Date: 2026-10-19 00:45+0000\n"
 "PO-Revision-Date: 2026-09-14 20:10+0200\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -306,7 +306,8 @@ msgctxt "@action:button"
 msgid "Go Back"
 msgstr "Späť"
 
-#: components/ConvergentContextMenu.qml:402 formcard/FormCardDialog.qml:114
+#: components/ConvergentContextMenu.qml:402
+#: formcard/templates/FormCardDialog.qml:120
 #, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
@@ -755,19 +756,19 @@ msgctxt "@action:button"
 msgid "Icon"
 msgstr "Ikona"
 
-#: formcard/FormDateTimeDelegate.qml:227
+#: formcard/FormDateTimeDelegate.qml:232
 #, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
 msgid "Today"
 msgstr "Dnes"
 
-#: formcard/FormDateTimeDelegate.qml:254 formcard/FormDateTimeDelegate.qml:399
+#: formcard/FormDateTimeDelegate.qml:259 formcard/FormDateTimeDelegate.qml:412
 #, kde-format
 msgctxt "Date is not set"
 msgid "Not set"
 msgstr "Nenastavené"
 
-#: formcard/FormDateTimeDelegate.qml:305 formcard/FormDateTimeDelegate.qml:415
+#: formcard/FormDateTimeDelegate.qml:310 formcard/FormDateTimeDelegate.qml:428
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset"
@@ -833,15 +834,15 @@ msgctxt "@info:status"
 msgid "Url copied to clipboard."
 msgstr "Url copied to clipboard."
 
-#: formcard/FormPasswordFieldDelegate.qml:319
-#: formcard/FormTextAreaDelegate.qml:187 formcard/FormTextFieldDelegate.qml:332
+#: formcard/FormPasswordFieldDelegate.qml:320
+#: formcard/FormTextAreaDelegate.qml:187 formcard/FormTextFieldDelegate.qml:333
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
 msgstr "%1/%2"
 
-#: formcard/FormPasswordFieldDelegate.qml:417
-#: formcard/FormTextFieldDelegate.qml:439
+#: formcard/FormPasswordFieldDelegate.qml:418
+#: formcard/FormTextFieldDelegate.qml:440
 #, kde-format
 msgctxt "@action:button"
 msgid "Done"
