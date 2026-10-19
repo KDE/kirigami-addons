@@ -3,7 +3,9 @@
  * SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
+import QtQuick.Controls as QQC2
 import QtQuick.Controls.Material
+import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard.templates as T
 
 T.FormCardDialog {
@@ -16,4 +18,15 @@ T.FormCardDialog {
 
     horizontalPadding: 12
     bottomPadding: 12
+
+    header: Kirigami.Heading {
+        id: heading
+
+        text: root.title
+        elide: QQC2.Label.ElideRight
+        leftPadding: root.horizontalContentPadding
+        rightPadding: root.horizontalContentPadding
+        topPadding: root.verticalContentPadding
+        bottomPadding: 0
+    }
 }
