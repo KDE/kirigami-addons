@@ -1,0 +1,8 @@
+/*!
+   \qmlmodule org.kde.kirigamiaddons.components.templates
+   \title Kirigami Addons Components Templates
+   \brief Shared API and behavior for stylable components.
+
+   Applications should normally use org.kde.kirigamiaddons.components.
+   This module provides the bases for its style implementations.
+ */

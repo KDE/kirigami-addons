@@ -8,6 +8,7 @@ import QtQuick.Layouts
 import QtQuick.Controls as QQC2
 import QtQuick.Templates as T
 import org.kde.kirigami as Kirigami
+import org.kde.kirigamiaddons.components.templates as Templates
 
 /*!
    \qmltype DoubleFloatingButton
@@ -48,18 +49,8 @@ import org.kde.kirigami as Kirigami
 
    \since 0.11
  */
-Kirigami.ShadowedRectangle {
+Templates.DoubleFloatingButton {
     id: root
-
-    /*!
-       This property holds the leading action.
-     */
-    property Kirigami.Action leadingAction
-
-    /*!
-       This property holds the trailing action.
-     */
-    property Kirigami.Action trailingAction
 
     // \note binding corners to each other results in binding loops, because
     // they share one common NOTIFY signal. Storing properties wastes memory.
@@ -78,23 +69,6 @@ Kirigami.ShadowedRectangle {
     readonly property real __padding: radius === Infinity
         ? Math.round(Math.max(Math.max(leadingButton.__effectiveIconSize.width, leadingButton.__effectiveIconSize.height), Math.max(trailingButton.__effectiveIconSize.width, trailingButton.__effectiveIconSize.height)) * (Math.sqrt(2) - 1))
         : Kirigami.Settings.hasTransientTouchInput ? (Kirigami.Units.largeSpacing * 2) : Kirigami.Units.largeSpacing
-
-
-
-    /*!
-       \qmlproperty real margins
-       \qmlproperty real topMargin
-       \qmlproperty real leftMargin
-       \qmlproperty real rightMargin
-       \qmlproperty real bottomMargin
-       \default 0
-       \brief Extra clickable area that adjusts both paddings and insets.
-    */
-    property real margins: 0
-    property real topMargin: margins
-    property real leftMargin: margins
-    property real rightMargin: margins
-    property real bottomMargin: margins
 
     radius: Kirigami.Units.largeSpacing
     color: Kirigami.Theme.backgroundColor
@@ -159,7 +133,6 @@ Kirigami.ShadowedRectangle {
                     Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, Kirigami.Theme.frameContrast)
                 }
             }
-
 
             color: if (leadingButton.down || leadingButton.visualFocus) {
                 Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.6)

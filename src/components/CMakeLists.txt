@@ -1,6 +1,8 @@
 # SPDX-FileCopyrightText: 2023 Carl Schwan <carl@carlschwan.eu>
 # SPDX-License-Identifier: BSD-2-Clause
 
+add_subdirectory(templates)
+
 # C++ Library
 
 add_library(KirigamiAddonsComponents)
@@ -97,6 +99,7 @@ ecm_add_qml_module(componentsplugin
     CLASS_NAME ComponentsPlugin
     DEPENDENCIES
         org.kde.kirigami
+        org.kde.kirigamiaddons.components.templates
         Qt.labs.qmlmodels
 )
 

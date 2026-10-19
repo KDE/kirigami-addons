@@ -7,8 +7,8 @@
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls as QQC2
-import QtQuick.Templates as T
 import org.kde.kirigami as Kirigami
+import org.kde.kirigamiaddons.components.templates as Templates
 
 /*!
    \qmltype FloatingButton
@@ -44,16 +44,11 @@ import org.kde.kirigami as Kirigami
 
    \since 0.11
  */
-T.RoundButton {
+Templates.FloatingButton {
     id: controlRoot
 
     Kirigami.Theme.colorSet: Kirigami.Theme.Button
     Kirigami.Theme.inherit: false
-
-    implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
-                            implicitContentWidth + leftPadding + rightPadding)
-    implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
-                             implicitContentHeight + topPadding + bottomPadding)
 
     readonly property size __effectiveIconSize: Qt.size(
         icon.height > 0 ? icon.height : Kirigami.Units.iconSizes.medium,
@@ -65,42 +60,11 @@ T.RoundButton {
         ? Math.round(Math.max(__effectiveIconSize.width, __effectiveIconSize.height) * (Math.sqrt(2) - 1))
         : Kirigami.Settings.hasTransientTouchInput ? (Kirigami.Units.largeSpacing * 2) : Kirigami.Units.largeSpacing
 
-    /*!
-       \qmlproperty real margins
-       \qmlproperty real topMargin
-       \qmlproperty real leftMargin
-       \qmlproperty real rightMargin
-       \qmlproperty real bottomMargin
-       \default 0
-       \brief Extra clickable area that adjusts both paddings and insets.
-    */
-    property real margins: 0
-    property real topMargin: margins
-    property real leftMargin: margins
-    property real rightMargin: margins
-    property real bottomMargin: margins
-
     // Fit icon into a square bounded by a circle bounded by button
     padding: __padding
 
-    topPadding: padding + topMargin
-    leftPadding: padding + leftMargin
-    rightPadding: padding + rightMargin
-    bottomPadding: padding + bottomMargin
-
-    // If user overrides individual padding value, we should adjust background. By default all insets will be 0.
-    topInset: topMargin
-    leftInset: leftMargin
-    rightInset: rightMargin
-    bottomInset: bottomMargin
-
     // Set to Infinity to get extra padding for round button style.
     radius: Kirigami.Units.largeSpacing
-
-    // Text is not supported anyway
-    spacing: 0
-
-    hoverEnabled: !Kirigami.Settings.hasTransientTouchInput
 
     contentItem: Item {
         implicitWidth: controlRoot.__effectiveIconSize.width

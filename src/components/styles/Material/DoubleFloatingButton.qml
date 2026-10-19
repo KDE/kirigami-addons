@@ -9,24 +9,10 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls.Material
 import org.kde.kirigami as Kirigami
+import org.kde.kirigamiaddons.components.templates as Templates
 
-Item {
+Templates.DoubleFloatingButton {
     id: root
-
-    property Kirigami.Action leadingAction
-    property Kirigami.Action trailingAction
-
-    property real margins: 0
-    property real topMargin: margins
-    property real leftMargin: margins
-    property real rightMargin: margins
-    property real bottomMargin: margins
-
-    property alias radius: surface.radius
-    property alias color: surface.color
-    property alias border: surface.border
-    property alias corners: surface.corners
-    property alias shadow: surface.shadow
 
     implicitWidth: layout.implicitWidth
     implicitHeight: layout.implicitHeight
@@ -40,23 +26,18 @@ Item {
         : !leadingButton.down && !trailingButton.down
             && (leadingButton.hovered || trailingButton.hovered || leadingButton.visualFocus || trailingButton.visualFocus) ? 8 : 6
 
-    Kirigami.ShadowedRectangle {
-        id: surface
+    background.anchors.leftMargin: leftMargin
+    background.anchors.rightMargin: rightMargin
+    background.anchors.topMargin: topMargin
+    background.anchors.bottomMargin: bottomMargin
 
-        anchors.fill: parent
-        anchors.leftMargin: root.leftMargin
-        anchors.rightMargin: root.rightMargin
-        anchors.topMargin: root.topMargin
-        anchors.bottomMargin: root.bottomMargin
-
-        radius: Kirigami.Units.largeSpacing * 2
-        color: root.Material.buttonColor(root.Material.theme, root.Material.background, root.Material.accent,
-                                         root.enabled, false, false, false)
-        shadow {
-            size: root.Material.elevation * 2
-            yOffset: root.Material.elevation / 2
-            color: Qt.rgba(0, 0, 0, 0.2)
-        }
+    radius: Kirigami.Units.largeSpacing * 2
+    color: Material.buttonColor(Material.theme, Material.background, Material.accent,
+                                enabled, false, false, false)
+    shadow {
+        size: root.Material.elevation * 2
+        yOffset: root.Material.elevation / 2
+        color: Qt.rgba(0, 0, 0, 0.2)
     }
 
     component ActionButton: FloatingButton {
@@ -122,8 +103,8 @@ Item {
     Kirigami.Separator {
         x: (leadingButton.onLeft ? leadingButton.x + leadingButton.width : leadingButton.x) - width / 2
         width: implicitWidth
-        anchors.top: surface.top
-        anchors.bottom: surface.bottom
+        anchors.top: root.background.top
+        anchors.bottom: root.background.bottom
         anchors.margins: Kirigami.Units.largeSpacing * 2
         color: Qt.alpha(root.Material.foreground, root.enabled ? 0.24 : 0.12)
     }
