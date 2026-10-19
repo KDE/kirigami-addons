@@ -28,7 +28,7 @@ void FormCardPlugin::registerTypes(const char *uri)
     const QUrl root(u"qrc:/qt/qml/org/kde/kirigamiaddons/formcard/"_s);
     qmlRegisterType(root.resolved(QUrl(prefix + u"FormCard.qml"_s)), uri, 1, 0, "FormCard");
     qmlRegisterType(root.resolved(QUrl(prefix + u"FormCardDialog.qml"_s)), uri, 1, 0, "FormCardDialog");
-    qmlRegisterType(root.resolved(QUrl(prefix + u"FormCardPage.qml"_s)), uri, 1, 0, "FormCardPage");
+    qmlRegisterType(root.resolved(QUrl(u"FormCardPage.qml"_s)), uri, 1, 0, "FormCardPage");
     qmlRegisterType(root.resolved(QUrl(prefix + u"FormDelegateBackground.qml"_s)), uri, 1, 0, "FormDelegateBackground");
     qmlRegisterType(root.resolved(QUrl(prefix + u"FormGridContainer.qml"_s)), uri, 1, 0, "FormGridContainer");
     qmlRegisterType(root.resolved(QUrl(prefix + u"FormHeader.qml"_s)), uri, 1, 0, "FormHeader");

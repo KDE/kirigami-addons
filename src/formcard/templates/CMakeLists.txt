@@ -11,7 +11,6 @@ ecm_add_qml_module(formcardtemplatesplugin
 ecm_target_qml_sources(formcardtemplatesplugin SOURCES
     FormCard.qml
     FormCardDialog.qml
-    FormCardPage.qml
     FormDelegateBackground.qml
     FormGridContainer.qml
     FormHeader.qml

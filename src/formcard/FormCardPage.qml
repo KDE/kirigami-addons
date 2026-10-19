@@ -2,8 +2,8 @@
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
 import QtQuick
+import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
-import org.kde.kirigamiaddons.formcard.templates as T
 
 /*!
    \qmltype FormCardPage
@@ -12,7 +12,9 @@ import org.kde.kirigamiaddons.formcard.templates as T
 
    \since 0.11.0
  */
-T.FormCardPage {
+Kirigami.ScrollablePage {
+    id: root
+
     topPadding: 0
     leftPadding: 0
     rightPadding: 0
@@ -29,5 +31,32 @@ T.FormCardPage {
         }
 
         color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, view.Kirigami.Theme.backgroundColor, 0.5);
+    }
+
+    default property alias cards: internalLayout.data
+
+    function findAncestor(item: Item, predicate: /*function Item => bool*/ var): Item {
+        let target = item.parent
+        while (target && !predicate(target)) {
+            target = target.parent
+        }
+        return target
+    }
+
+    Connections {
+        target: root.Window
+        function onActiveFocusItemChanged(): void {
+            const item = root.Window.activeFocusItem
+            if (item && root.findAncestor(item, (item) => item === root)) {
+                const itemPosition = root.flickable.contentItem.mapFromItem(item, 0, 0)
+                root.ensureVisible(item, itemPosition.x - item.x, itemPosition.y - item.y)
+            }
+        }
+    }
+
+    ColumnLayout {
+        id: internalLayout
+
+        spacing: 0
     }
 }

@@ -19,6 +19,7 @@ T.FormGridContainer {
     _horizontalInset: Kirigami.Units.largeSpacing
 
     _backgroundDelegate: MaterialCardBackground {
+        Material.theme: root.Material.theme
         radius: root._cornerRadius
     }
 }

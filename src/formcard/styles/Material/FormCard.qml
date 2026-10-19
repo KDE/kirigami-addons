@@ -18,6 +18,7 @@ T.FormCard {
     _horizontalInset: Kirigami.Units.largeSpacing
 
     _background: MaterialCardBackground {
+        Material.theme: root.Material.theme
         Material.elevation: root.Material.elevation
         radius: root._cornerRadius
     }

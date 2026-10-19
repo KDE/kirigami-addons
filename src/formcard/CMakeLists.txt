@@ -83,7 +83,6 @@ qt_target_qml_sources(formcardplugin RESOURCES
     styles/Material/FormCard.qml
     styles/Material/FormCardDialog.qml
     styles/Material/MaterialCardBackground.qml
-    styles/Material/FormCardPage.qml
     styles/Material/FormDelegateBackground.qml
     styles/Material/FormGridContainer.qml
     styles/Material/FormHeader.qml
