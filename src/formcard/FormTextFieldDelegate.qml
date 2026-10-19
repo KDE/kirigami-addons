@@ -428,7 +428,7 @@ AbstractFormDelegate {
 
             Kirigami.Icon {
                 visible: root._mobileEditingEnabled && !root._mobileEditing && !root.readOnly && root.enabled
-                source: "document-edit"
+                source: "edit-symbolic"
                 implicitWidth: Kirigami.Units.iconSizes.smallMedium
                 implicitHeight: Kirigami.Units.iconSizes.smallMedium
                 Accessible.ignored: true
