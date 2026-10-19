@@ -34,46 +34,51 @@ QQC2.ScrollView {
         action: modelData
         visible: modelData.visible === undefined || modelData.visible
 
-        leading: RowLayout {
-            spacing: 0
-            visible: modelData.checkable
+        leadingPadding: modelData.checkable ? Kirigami.Units.largeSpacing : 0
 
-            QQC2.CheckBox {
-                id: checkBoxItem
+        leading: Loader {
+            active: button.modelData.checkable
 
-                focusPolicy: Qt.NoFocus // provided by delegate
-                visible: !(modelData instanceof Kirigami.Action) || !modelData.autoExclusive
-
-                action: modelData
-
-                topPadding: 0
-                leftPadding: 0
-                rightPadding: 0
-                bottomPadding: 0
-
-                contentItem: null // Remove right margin
+            sourceComponent: RowLayout {
                 spacing: 0
 
-                Accessible.ignored: true
-            }
+                QQC2.CheckBox {
+                    id: checkBoxItem
 
-            QQC2.RadioButton {
-                id: radioBoxItem
+                    focusPolicy: Qt.NoFocus // provided by delegate
+                    visible: !(modelData instanceof Kirigami.Action) || !modelData.autoExclusive
 
-                focusPolicy: Qt.NoFocus // provided by delegate
-                visible: modelData instanceof Kirigami.Action && modelData.autoExclusive
+                    action: modelData
 
-                action: modelData
+                    topPadding: 0
+                    leftPadding: 0
+                    rightPadding: 0
+                    bottomPadding: 0
 
-                topPadding: 0
-                leftPadding: 0
-                rightPadding: 0
-                bottomPadding: 0
+                    text: "" // The delegate provides the label
+                    spacing: 0
 
-                contentItem: null // Remove right margin
-                spacing: 0
+                    Accessible.ignored: true
+                }
 
-                Accessible.ignored: true
+                QQC2.RadioButton {
+                    id: radioBoxItem
+
+                    focusPolicy: Qt.NoFocus // provided by delegate
+                    visible: modelData instanceof Kirigami.Action && modelData.autoExclusive
+
+                    action: modelData
+
+                    topPadding: 0
+                    leftPadding: 0
+                    rightPadding: 0
+                    bottomPadding: 0
+
+                    text: "" // The delegate provides the label
+                    spacing: 0
+
+                    Accessible.ignored: true
+                }
             }
         }
 
