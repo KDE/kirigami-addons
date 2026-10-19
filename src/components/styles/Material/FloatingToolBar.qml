@@ -14,8 +14,10 @@ import org.kde.kirigamiaddons.components.templates as Templates
 Templates.FloatingToolBar {
     id: root
 
-    padding: Kirigami.Units.largeSpacing
-    horizontalPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+    readonly property bool hasRadioSelector: contentItem instanceof Templates.RadioSelector
+
+    padding: hasRadioSelector ? Kirigami.Units.smallSpacing : Kirigami.Units.largeSpacing
+    horizontalPadding: hasRadioSelector ? Kirigami.Units.smallSpacing : Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
     spacing: Kirigami.Units.largeSpacing
 
     Material.background: Qt.tint(Material.theme === Material.Dark ? Material.color(Material.Grey, Material.Shade900) : "white",
@@ -24,7 +26,7 @@ Templates.FloatingToolBar {
 
     background: Rectangle {
         implicitWidth: Kirigami.Units.largeSpacing * 8
-        implicitHeight: Kirigami.Units.largeSpacing * 8
+        implicitHeight: root.hasRadioSelector ? 0 : Kirigami.Units.largeSpacing * 8
         radius: Math.min(width, height) / 2
         color: root.Material.background
 
