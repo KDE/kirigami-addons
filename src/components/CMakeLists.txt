@@ -132,6 +132,8 @@ ecm_target_qml_sources(componentsplugin SOURCES
 qt_target_qml_sources(componentsplugin RESOURCES
     styles/Material/DoubleFloatingButton.qml
     styles/Material/FloatingButton.qml
+    styles/Material/FloatingToolBar.qml
+    styles/Material/RadioSelector.qml
     OUTPUT_TARGETS _components_style_targets
 )
 

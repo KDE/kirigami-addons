@@ -28,6 +28,8 @@ void ComponentsPlugin::registerTypes(const char *uri)
     const QUrl root(u"qrc:/qt/qml/org/kde/kirigamiaddons/components/"_s);
     qmlRegisterType(root.resolved(QUrl(prefix + u"DoubleFloatingButton.qml"_s)), uri, 1, 0, "DoubleFloatingButton");
     qmlRegisterType(root.resolved(QUrl(prefix + u"FloatingButton.qml"_s)), uri, 1, 0, "FloatingButton");
+    qmlRegisterType(root.resolved(QUrl(prefix + u"FloatingToolBar.qml"_s)), uri, 1, 0, "FloatingToolBar");
+    qmlRegisterType(root.resolved(QUrl(prefix + u"RadioSelector.qml"_s)), uri, 1, 0, "RadioSelector");
 }
 
 #include "moc_componentsplugin.cpp"

@@ -4,7 +4,7 @@
 
 import QtQuick
 import org.kde.kirigami as Kirigami
-import QtQuick.Controls
+import org.kde.kirigamiaddons.components.templates as Templates
 
 /*!
    \qmltype FloatingToolBar
@@ -31,9 +31,12 @@ import QtQuick.Controls
 
    \image floatingtoolbar.png
  */
-ToolBar {
+Templates.FloatingToolBar {
     Kirigami.Theme.inherit: false
     Kirigami.Theme.colorSet: Kirigami.Theme.Window
+
+    padding: contentItem instanceof Templates.RadioSelector ? Kirigami.Units.smallSpacing : 0
+
     background: Kirigami.ShadowedRectangle {
         color: Kirigami.Theme.backgroundColor
         radius: Kirigami.Units.cornerRadius

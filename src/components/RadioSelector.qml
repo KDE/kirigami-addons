@@ -1,11 +1,15 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 // SPDX-FileCopyrightText: 2023 Mathis Brüchert <mbb@kaidan.im>
+// SPDX-FileCopyrightText: 2026 Carl Schwan <carl@carlschwan.eu>
+
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Controls as QQC2
-import QtQuick.Templates as T
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
+import org.kde.kirigamiaddons.components.templates as Templates
+import "templates/private" as Private
 
 /*!
    \qmltype RadioSelector
@@ -34,147 +38,77 @@ import org.kde.kirigami as Kirigami
    \endqml
    \since 1.6.0.
 */
-Item {
+Templates.RadioSelector {
     id: root
 
-    /*!
-       \qmlproperty list<Action> actions
-       \brief This property holds a list of actions, each holding one of the
-       options.
-     */
-    property list<T.Action> actions
+    spacing: Kirigami.Units.smallSpacing
 
-    /*!
-       \brief This property holds whether all the items should have the same
-       width.
-       \default false
-     */
-    property bool consistentWidth: false
+    delegate: Private.RadioSelectorButton {
+        id: button
+        selector: root
 
-    /*!
-       \brief This property holds the currently selected option.
+        Layout.minimumHeight: Kirigami.Units.gridUnit * 2
 
-       By default, it's the first actions or -1 if no actions is set.
-     */
-    property int selectedIndex: actions.length > 0 ? 0 : -1
-
-    Layout.fillWidth: consistentWidth
-    Layout.minimumWidth: switchLayout.implicitWidth
-
-    implicitHeight: switchLayout.implicitHeight
-
-    onSelectedIndexChanged: if (selectedIndex >= 0 && selectedIndex < repeater.count && repeater.childAt(selectedIndex) && !repeater.childAt(selectedIndex).checked) {
-        repeater.childAt(selectedIndex).clicked();
-    }
-
-    QQC2.ButtonGroup {
-        id: buttonGroup
-
-        buttons: switchLayout.children.filter((child) => child !== repeater)
-    }
-
-    RowLayout {
-        id: switchLayout
-        uniformCellSizes: root.consistentWidth
-
-        anchors {
-            top: root.top
-            left: root.left
-            right: root.right
+        icon {
+            width: Kirigami.Units.iconSizes.sizeForLabels
+            height: Kirigami.Units.iconSizes.sizeForLabels
         }
 
-        Repeater {
-            id: repeater
+        background: Rectangle {
+            radius: Kirigami.Units.cornerRadius
+            color: Kirigami.Theme.textColor
+            opacity: Kirigami.Settings.hasTransientTouchInput ? 0 : ( button.hovered ? 0.1 : 0)
 
-            model: actions
-            delegate: QQC2.ToolButton {
-                id: button
+            Behavior on opacity {
+                PropertyAnimation {
+                    duration: Kirigami.Units.shortDuration
+                    easing.type: Easing.InOutCubic
+                }
+            }
+        }
 
-                required property T.Action modelData
-                required property int index
-
+        contentItem: RowLayout {
+            Item {
+                Layout.leftMargin: icon.visible ? Kirigami.Units.smallSpacing : Kirigami.Units.largeSpacing
                 Layout.fillWidth: true
-                Layout.minimumWidth: button.implicitWidth
-                Layout.minimumHeight: Kirigami.Units.gridUnit * 2
+            }
 
-                checkable: true
-                action: modelData
-                text: modelData.text
-                icon.name: modelData.icon.name
-                visible: !(modelData instanceof Kirigami.Action) || modelData.visible
+            Kirigami.Icon {
+                id: icon
 
-                icon {
-                    width: Kirigami.Units.iconSizes.sizeForLabels
-                    height: Kirigami.Units.iconSizes.sizeForLabels
+                color: button.checked ? Kirigami.Theme.hoverColor : Kirigami.Theme.textColor
+                visible: Boolean(button.icon.name || button.icon.source)
+                source: button.icon.name || button.icon.source
+                implicitHeight: button.icon.height
+                implicitWidth: button.icon.width
+                Behavior on color {
+                    PropertyAnimation {
+                        duration: Kirigami.Units.longDuration
+                        easing.type: Easing.InOutCubic
+                    }
                 }
+            }
 
-                background: Rectangle {
-                    radius: Kirigami.Units.cornerRadius
-                    color: Kirigami.Theme.textColor
-                    opacity: Kirigami.Settings.hasTransientTouchInput ? 0 : ( button.hovered ? 0.1 : 0)
+            QQC2.Label {
+                Layout.alignment: Qt.AlignVCenter
 
-                    Behavior on opacity {
-                        PropertyAnimation {
-                            duration: Kirigami.Units.shortDuration
-                            easing.type: Easing.InOutCubic
-                        }
+                font.bold: button.checked
+                color: Kirigami.Theme.textColor
+                text: button.text
+
+                Behavior on font.bold {
+                    PropertyAnimation {
+                        duration: Kirigami.Units.longDuration
+                        easing.type: Easing.InOutCubic
                     }
                 }
 
-                contentItem: RowLayout {
-                    Item {
-                        Layout.leftMargin: icon.visible ? Kirigami.Units.smallSpacing : Kirigami.Units.largeSpacing
-                        Layout.fillWidth: true
-                    }
+                Accessible.ignored: true
+            }
 
-                    Kirigami.Icon {
-                        id: icon
-
-                        color: button.checked ? Kirigami.Theme.hoverColor : Kirigami.Theme.textColor
-                        visible: button.icon.name
-                        source: button.icon.name
-                        implicitHeight: button.icon.height
-                        implicitWidth: button.icon.width
-                        Behavior on color {
-                            PropertyAnimation {
-                                duration: Kirigami.Units.longDuration
-                                easing.type: Easing.InOutCubic
-                            }
-                        }
-                    }
-
-                    QQC2.Label {
-                        Layout.alignment: Qt.AlignVCenter
-
-                        font.bold: button.checked
-                        color: Kirigami.Theme.textColor
-                        text: button.text
-
-                        Behavior on font.bold {
-                            PropertyAnimation {
-                                duration: Kirigami.Units.longDuration
-                                easing.type: Easing.InOutCubic
-                            }
-                        }
-
-                        Accessible.ignored: true
-                    }
-
-                    Item {
-                        Layout.fillWidth: true
-                        Layout.rightMargin: Kirigami.Units.largeSpacing
-                    }
-                }
-
-                onClicked: {
-                    button.checked = true;
-                    root.selectedIndex = index;
-                }
-
-                Component.onCompleted: if (index === root.selectedIndex) {
-                    button.checked = true;
-                    root.selectedIndex = index;
-                }
+            Item {
+                Layout.fillWidth: true
+                Layout.rightMargin: Kirigami.Units.largeSpacing
             }
         }
     }
@@ -182,12 +116,12 @@ Item {
     Kirigami.ShadowedRectangle {
         id: marker
 
-        x: buttonGroup.checkedButton?.x ?? 0
-        y: switchLayout.y
-        z: switchLayout.z - 1
+        x: root.leftPadding + (root.checkedButton?.x ?? 0)
+        y: root.topPadding
+        z: -1
 
-        height: switchLayout.implicitHeight
-        width: buttonGroup.checkedButton?.width ?? 0
+        height: root.availableHeight
+        width: root.checkedButton?.width ?? 0
         radius: Kirigami.Units.cornerRadius
 
         color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.8)

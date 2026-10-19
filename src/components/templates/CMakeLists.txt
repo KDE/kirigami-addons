@@ -10,7 +10,13 @@ ecm_add_qml_module(componentstemplatesplugin
 
 ecm_target_qml_sources(componentstemplatesplugin SOURCES
     FloatingButton.qml
+    FloatingToolBar.qml
     DoubleFloatingButton.qml
+    RadioSelector.qml
+)
+
+ecm_target_qml_sources(componentstemplatesplugin PRIVATE PATH private SOURCES
+    private/RadioSelectorButton.qml
 )
 
 ecm_finalize_qml_module(componentstemplatesplugin DESTINATION ${KDE_INSTALL_QMLDIR} EXPORT KirigamiAddonsTargets)
