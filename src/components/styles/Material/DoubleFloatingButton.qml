@@ -26,10 +26,10 @@ Templates.DoubleFloatingButton {
         : !leadingButton.down && !trailingButton.down
             && (leadingButton.hovered || trailingButton.hovered || leadingButton.visualFocus || trailingButton.visualFocus) ? 8 : 6
 
-    background.anchors.leftMargin: leftMargin
-    background.anchors.rightMargin: rightMargin
-    background.anchors.topMargin: topMargin
-    background.anchors.bottomMargin: bottomMargin
+    _background.anchors.leftMargin: leftMargin
+    _background.anchors.rightMargin: rightMargin
+    _background.anchors.topMargin: topMargin
+    _background.anchors.bottomMargin: bottomMargin
 
     radius: Kirigami.Units.largeSpacing * 2
     color: Material.buttonColor(Material.theme, Material.background, Material.accent,
@@ -103,8 +103,8 @@ Templates.DoubleFloatingButton {
     Kirigami.Separator {
         x: (leadingButton.onLeft ? leadingButton.x + leadingButton.width : leadingButton.x) - width / 2
         width: implicitWidth
-        anchors.top: root.background.top
-        anchors.bottom: root.background.bottom
+        anchors.top: root._background.top
+        anchors.bottom: root._background.bottom
         anchors.margins: Kirigami.Units.largeSpacing * 2
         color: Qt.alpha(root.Material.foreground, root.enabled ? 0.24 : 0.12)
     }

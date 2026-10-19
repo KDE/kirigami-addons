@@ -62,12 +62,12 @@ T.FormGridContainer {
 
     component InfoCard: T.FormGridContainer.InfoCard {}
 
-    borderWidth: 1
-    cornerRadius: cardWidthRestricted ? Kirigami.Units.cornerRadius : 0
+    _borderWidth: 1
+    _cornerRadius: cardWidthRestricted ? Kirigami.Units.cornerRadius : 0
 
-    backgroundDelegate: Private.FormCardBackground {
+    _backgroundDelegate: Private.FormCardBackground {
         rounded: root.cardWidthRestricted
-        radius: root.cornerRadius
-        border.width: root.borderWidth
+        radius: root._cornerRadius
+        border.width: root._borderWidth
     }
 }

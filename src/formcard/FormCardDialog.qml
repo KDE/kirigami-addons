@@ -43,8 +43,8 @@ import "private" as Private
    \since 1.1.0
  */
 T.FormCardDialog {
-    horizontalContentPadding: Private.FormCardUnits.horizontalPadding
-    verticalContentPadding: Private.FormCardUnits.verticalPadding
+    _horizontalContentPadding: Private.FormCardUnits.horizontalPadding
+    _verticalContentPadding: Private.FormCardUnits.verticalPadding
 
     background: Components.DialogRoundedBackground {}
 }

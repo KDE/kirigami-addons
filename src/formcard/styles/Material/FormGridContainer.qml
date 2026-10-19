@@ -15,10 +15,10 @@ T.FormGridContainer {
 
     Material.roundedScale: Material.MediumScale
 
-    cornerRadius: Material.roundedScale
-    horizontalInset: Kirigami.Units.largeSpacing
+    _cornerRadius: Material.roundedScale
+    _horizontalInset: Kirigami.Units.largeSpacing
 
-    backgroundDelegate: MaterialCardBackground {
-        radius: root.cornerRadius
+    _backgroundDelegate: MaterialCardBackground {
+        radius: root._cornerRadius
     }
 }

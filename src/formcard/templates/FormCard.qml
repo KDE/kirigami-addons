@@ -96,36 +96,36 @@ Item {
      */
     readonly property bool cardWidthRestricted: root.width > root.maximumWidth
 
-    /*!
+    /*! \internal
        \brief The card surface, sized to the card's restricted width.
      */
-    property alias background: frame.background
+    property alias _background: frame.background
 
-    /*!
+    /*! \internal
        \brief The border inset reserved around the delegates.
      */
-    property real borderWidth: 0
+    property real _borderWidth: 0
 
-    /*!
+    /*! \internal
        \brief The corner radius shared by the surface and delegate backgrounds.
      */
-    property real cornerRadius: 0
+    property real _cornerRadius: 0
 
-    /*! \brief The minimum space between the card surface and either side of the container. */
-    property real horizontalInset: 0
+    /*! \internal \brief The minimum space between the card surface and either side of the container. */
+    property real _horizontalInset: 0
 
     Layout.fillWidth: true
 
-    implicitHeight: topPadding + bottomPadding + internalColumn.implicitHeight + root.borderWidth * 2
-    implicitWidth: visible ? leftPadding + rightPadding + internalColumn.implicitWidth + root.borderWidth * 2 : 0.0
+    implicitHeight: topPadding + bottomPadding + internalColumn.implicitHeight + root._borderWidth * 2
+    implicitWidth: visible ? leftPadding + rightPadding + internalColumn.implicitWidth + root._borderWidth * 2 : 0.0
 
     T.Control {
         id: frame
 
-        leftPadding: root.leftPadding + root.borderWidth
-        rightPadding: root.rightPadding + root.borderWidth
-        topPadding: root.topPadding + root.borderWidth
-        bottomPadding: root.bottomPadding + root.borderWidth
+        leftPadding: root.leftPadding + root._borderWidth
+        rightPadding: root.rightPadding + root._borderWidth
+        topPadding: root.topPadding + root._borderWidth
+        bottomPadding: root.bottomPadding + root._borderWidth
 
         Kirigami.Theme.colorSet: Kirigami.Theme.View
         Kirigami.Theme.inherit: false
@@ -136,15 +136,15 @@ Item {
             left: parent.left
             right: parent.right
 
-            leftMargin: root.cardWidthRestricted ? Math.max(root.horizontalInset, Math.round((root.width - root.maximumWidth) / 2)) : root.horizontalInset - root.borderWidth
-            rightMargin: root.cardWidthRestricted ? Math.max(root.horizontalInset, Math.round((root.width - root.maximumWidth) / 2)) : root.horizontalInset - root.borderWidth
+            leftMargin: root.cardWidthRestricted ? Math.max(root._horizontalInset, Math.round((root.width - root.maximumWidth) / 2)) : root._horizontalInset - root._borderWidth
+            rightMargin: root.cardWidthRestricted ? Math.max(root._horizontalInset, Math.round((root.width - root.maximumWidth) / 2)) : root._horizontalInset - root._borderWidth
         }
 
         contentItem: ColumnLayout {
             id: internalColumn
 
             // Shared geometry for the delegate backgrounds in this card.
-            readonly property real _cornerRadius: root.cornerRadius
+            readonly property real _cornerRadius: root._cornerRadius
             readonly property list<Item> _visibleItems: visibleChildren.filter(child => child.height !== 0)
             readonly property Item _firstVisibleItem: _visibleItems[0] ?? null
             readonly property Item _lastVisibleItem: _visibleItems[_visibleItems.length - 1] ?? null

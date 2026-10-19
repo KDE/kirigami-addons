@@ -16,7 +16,7 @@ Templates.RadioSelector {
 
     spacing: Kirigami.Units.smallSpacing
 
-    delegate: Private.RadioSelectorButton {
+    _delegate: Private.RadioSelectorButton {
         id: button
         selector: root
 
@@ -55,14 +55,14 @@ Templates.RadioSelector {
     }
 
     Rectangle {
-        x: root.leftPadding + (root.checkedButton?.x ?? 0)
-        y: root.topPadding + (root.checkedButton?.y ?? 0)
+        x: root.leftPadding + (root._checkedButton?.x ?? 0)
+        y: root.topPadding + (root._checkedButton?.y ?? 0)
         z: -1
-        width: root.checkedButton?.width ?? 0
-        height: root.checkedButton?.height ?? 0
+        width: root._checkedButton?.width ?? 0
+        height: root._checkedButton?.height ?? 0
         radius: height / 2
-        visible: root.checkedButton !== null
-        color: Qt.alpha(root.Material.primary, root.checkedButton?.enabled ? 0.16 : 0.08)
+        visible: root._checkedButton !== null
+        color: Qt.alpha(root.Material.primary, root._checkedButton?.enabled ? 0.16 : 0.08)
 
         Behavior on x {
             NumberAnimation {

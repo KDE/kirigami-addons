@@ -39,11 +39,11 @@ T.Control {
      */
     property int selectedIndex: actions.length > 0 ? 0 : -1
 
-    /*! The component used to display each option. */
-    property Component delegate
+    /*! \internal The component used to display each option. */
+    property Component _delegate
 
-    /*! The currently checked option button. */
-    readonly property T.AbstractButton checkedButton: buttonGroup.checkedButton
+    /*! \internal The currently checked option button. */
+    readonly property T.AbstractButton _checkedButton: buttonGroup.checkedButton
 
     implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
                             implicitContentWidth + leftPadding + rightPadding)
@@ -68,7 +68,7 @@ T.Control {
         Repeater {
             id: repeater
             model: root.actions
-            delegate: root.delegate
+            delegate: root._delegate
         }
     }
 }

@@ -20,15 +20,15 @@ Templates.BottomDrawer {
 
     topPadding: 0
 
-    handleMargin: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
-    headerHorizontalPadding: Kirigami.Units.largeSpacing * 3
-    headerBottomPadding: Kirigami.Units.largeSpacing * 2
+    _handleMargin: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
+    _headerHorizontalPadding: Kirigami.Units.largeSpacing * 3
+    _headerBottomPadding: Kirigami.Units.largeSpacing * 2
 
     Material.background: Qt.tint(Material.theme === Material.Dark ? Material.color(Material.Grey, Material.Shade900) : "white",
                                  Qt.alpha(Material.primary, 0.05))
     Material.elevation: 1
 
-    handle: Rectangle {
+    _handle: Rectangle {
         implicitWidth: Kirigami.Units.largeSpacing * 4
         implicitHeight: Kirigami.Units.smallSpacing
         radius: height / 2

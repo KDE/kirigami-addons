@@ -9,7 +9,7 @@ import org.kde.kirigamiaddons.formcard.templates as T
 import "../../private" as Private
 
 T.FormHeader {
-    horizontalInset: Kirigami.Units.largeSpacing
+    _horizontalInset: Kirigami.Units.largeSpacing
 
     topPadding: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
     bottomPadding: Kirigami.Units.smallSpacing

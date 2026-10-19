@@ -30,33 +30,33 @@ QQC2.Drawer {
      */
     property alias headerContentItem: headerContent.contentItem
 
-    /*! The component used for the drag handle. */
-    property Component handle
+    /*! \internal The component used for the drag handle. */
+    property Component _handle
 
-    /*! The spacing around the drag handle when a header is shown. */
-    property real handleMargin: 0
+    /*! \internal The spacing around the drag handle when a header is shown. */
+    property real _handleMargin: 0
 
-    /*! The spacing around the drag handle without a header. */
-    property real handleMarginWithoutHeader: handleMargin
+    /*! \internal The spacing around the drag handle without a header. */
+    property real _handleMarginWithoutHeader: _handleMargin
 
-    /*! The horizontal padding around the header content. */
-    property alias headerHorizontalPadding: headerContent.horizontalPadding
+    /*! \internal The horizontal padding around the header content. */
+    property alias _headerHorizontalPadding: headerContent.horizontalPadding
 
-    /*! The padding below the header content. */
-    property alias headerBottomPadding: headerContent.bottomPadding
+    /*! \internal The padding below the header content. */
+    property alias _headerBottomPadding: headerContent.bottomPadding
 
-    /*! The background behind the header and handle. */
-    property alias headerBackground: headerContainer.background
+    /*! \internal The background behind the header and handle. */
+    property alias _headerBackground: headerContainer.background
 
-    /*! The background behind the drawer content. */
-    property alias contentBackground: drawerContent.background
+    /*! \internal The background behind the drawer content. */
+    property alias _contentBackground: drawerContent.background
 
-    /*! The separator between the header and content. */
-    property Component separator
+    /*! \internal The separator between the header and content. */
+    property Component _separator
 
     component Handle: Loader {
-        sourceComponent: root.handle
-        Layout.margins: root.handleMargin
+        sourceComponent: root._handle
+        Layout.margins: root._handleMargin
         Layout.alignment: Qt.AlignHCenter
     }
 
@@ -108,11 +108,11 @@ QQC2.Drawer {
         Handle {
             // drag indicator displayed when there is no headerContentItem
             visible: !(headerContentItem && headerContentItem.enabled)
-            Layout.margins: root.handleMarginWithoutHeader
+            Layout.margins: root._handleMarginWithoutHeader
         }
 
         Loader {
-            sourceComponent: root.separator
+            sourceComponent: root._separator
             Layout.fillWidth: true
         }
 

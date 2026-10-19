@@ -63,8 +63,8 @@ Item {
      */
     readonly property bool cardWidthRestricted: root.width > root.maximumWidth
 
-    /*! \brief The minimum space between the header and either side of the container. */
-    property real horizontalInset: 0
+    /*! \internal \brief The minimum space between the header and either side of the container. */
+    property real _horizontalInset: 0
 
     Kirigami.Theme.colorSet: Kirigami.Theme.View
     Kirigami.Theme.inherit: false
@@ -81,8 +81,8 @@ Item {
 
         anchors {
             fill: parent
-            leftMargin: Math.max(root.horizontalInset, root.cardWidthRestricted ? Math.round((root.width - root.maximumWidth) / 2) : 0)
-            rightMargin: Math.max(root.horizontalInset, root.cardWidthRestricted ? Math.round((root.width - root.maximumWidth) / 2) : 0)
+            leftMargin: Math.max(root._horizontalInset, root.cardWidthRestricted ? Math.round((root.width - root.maximumWidth) / 2) : 0)
+            rightMargin: Math.max(root._horizontalInset, root.cardWidthRestricted ? Math.round((root.width - root.maximumWidth) / 2) : 0)
         }
 
         QQC2.Label {

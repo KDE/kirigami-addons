@@ -69,17 +69,17 @@ Item {
      */
     property list<Item> delegates // TODO KF7 make it default
 
-    /*! \brief The component used to draw each card surface. */
-    property Component backgroundDelegate
+    /*! \internal \brief The component used to draw each card surface. */
+    property Component _backgroundDelegate
 
-    /*! \brief The border inset reserved around each delegate. */
-    property real borderWidth: 0
+    /*! \internal \brief The border inset reserved around each delegate. */
+    property real _borderWidth: 0
 
-    /*! \brief The corner radius shared by the surfaces and delegate backgrounds. */
-    property real cornerRadius: 0
+    /*! \internal \brief The corner radius shared by the surfaces and delegate backgrounds. */
+    property real _cornerRadius: 0
 
-    /*! \brief The minimum space between the grid and either side of the container. */
-    property real horizontalInset: 0
+    /*! \internal \brief The minimum space between the grid and either side of the container. */
+    property real _horizontalInset: 0
 
     property bool _collectChildControls: false
 
@@ -196,8 +196,8 @@ Item {
         visible: root.hasDelegates
         anchors {
             fill: parent
-            leftMargin: Math.max(root.horizontalInset, root.cardWidthRestricted ? Math.round((root.width - root.maximumWidth) / 2) : 0) + root.leftPadding
-            rightMargin: Math.max(root.horizontalInset, root.cardWidthRestricted ? Math.round((root.width - root.maximumWidth) / 2) : 0) + root.rightPadding
+            leftMargin: Math.max(root._horizontalInset, root.cardWidthRestricted ? Math.round((root.width - root.maximumWidth) / 2) : 0) + root.leftPadding
+            rightMargin: Math.max(root._horizontalInset, root.cardWidthRestricted ? Math.round((root.width - root.maximumWidth) / 2) : 0) + root.rightPadding
             topMargin: root.topPadding
             bottomMargin: root.bottomPadding
         }
@@ -226,20 +226,20 @@ Item {
 
                 Loader {
                     anchors.fill: parent
-                    anchors.leftMargin: root.cardWidthRestricted ? 0 : -root.borderWidth
-                    anchors.rightMargin: root.cardWidthRestricted ? 0 : -root.borderWidth
-                    sourceComponent: root.backgroundDelegate
+                    anchors.leftMargin: root.cardWidthRestricted ? 0 : -root._borderWidth
+                    anchors.rightMargin: root.cardWidthRestricted ? 0 : -root._borderWidth
+                    sourceComponent: root._backgroundDelegate
                 }
 
                 FormCard.ContentItemLoader {
                     id: delegateLoader
 
-                    readonly property real _cornerRadius: root.cornerRadius
+                    readonly property real _cornerRadius: root._cornerRadius
                     readonly property Item _firstVisibleItem: cell.delegateItem
                     readonly property Item _lastVisibleItem: cell.delegateItem
 
                     anchors.fill: parent
-                    anchors.margins: root.borderWidth
+                    anchors.margins: root._borderWidth
                     contentItem: cell.delegateItem
                 }
             }
@@ -257,9 +257,9 @@ Item {
         bottomPadding: root.bottomPadding
         cardWidthRestricted: root.cardWidthRestricted
         infoCards: root.infoCards
-        backgroundDelegate: root.backgroundDelegate
-        borderWidth: root.borderWidth
-        cornerRadius: root.cornerRadius
+        backgroundDelegate: root._backgroundDelegate
+        borderWidth: root._borderWidth
+        cornerRadius: root._cornerRadius
 
         anchors {
             top: parent.top
@@ -267,8 +267,8 @@ Item {
             left: parent.left
             right: parent.right
 
-            leftMargin: Math.max(root.horizontalInset, root.cardWidthRestricted ? Math.round((root.width - root.maximumWidth) / 2) : 0)
-            rightMargin: Math.max(root.horizontalInset, root.cardWidthRestricted ? Math.round((root.width - root.maximumWidth) / 2) : 0)
+            leftMargin: Math.max(root._horizontalInset, root.cardWidthRestricted ? Math.round((root.width - root.maximumWidth) / 2) : 0)
+            rightMargin: Math.max(root._horizontalInset, root.cardWidthRestricted ? Math.round((root.width - root.maximumWidth) / 2) : 0)
         }
 
     }

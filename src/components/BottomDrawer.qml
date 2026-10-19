@@ -50,12 +50,12 @@ import org.kde.kirigamiaddons.components.templates as Templates
    \since 0.12.0
 */
 Templates.BottomDrawer {
-    handleMargin: Kirigami.Units.mediumSpacing
-    handleMarginWithoutHeader: Kirigami.Units.largeSpacing
-    headerHorizontalPadding: Kirigami.Units.mediumSpacing + Math.round(Kirigami.Units.gridUnit / 4)
-    headerBottomPadding: headerHorizontalPadding
+    _handleMargin: Kirigami.Units.mediumSpacing
+    _handleMarginWithoutHeader: Kirigami.Units.largeSpacing
+    _headerHorizontalPadding: Kirigami.Units.mediumSpacing + Math.round(Kirigami.Units.gridUnit / 4)
+    _headerBottomPadding: _headerHorizontalPadding
 
-    handle: Rectangle {
+    _handle: Rectangle {
         color: Kirigami.Theme.textColor
         radius: height
         opacity: 0.5
@@ -75,7 +75,7 @@ Templates.BottomDrawer {
         color: Kirigami.Theme.backgroundColor
     }
 
-    headerBackground: Kirigami.ShadowedRectangle {
+    _headerBackground: Kirigami.ShadowedRectangle {
         Kirigami.Theme.colorSet: Kirigami.Theme.Window
         color: Kirigami.Theme.backgroundColor
         corners {
@@ -84,9 +84,9 @@ Templates.BottomDrawer {
         }
     }
 
-    separator: Kirigami.Separator {}
+    _separator: Kirigami.Separator {}
 
-    contentBackground: Rectangle {
+    _contentBackground: Rectangle {
         Kirigami.Theme.colorSet: Kirigami.Theme.View
         Kirigami.Theme.inherit: false
         color: Kirigami.Theme.backgroundColor

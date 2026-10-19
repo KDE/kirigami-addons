@@ -63,14 +63,14 @@ QQC2.Dialog {
 
     readonly property list<Item> _visibleDelegates: columnLayout.visibleChildren.filter(child => child.height !== 0)
 
-    /*! \brief Horizontal padding used by the dialog heading and buttons. */
-    property real horizontalContentPadding: 0
+    /*! \internal \brief Horizontal padding used by the dialog heading and buttons. */
+    property real _horizontalContentPadding: 0
 
-    /*! \brief Vertical padding used by the dialog heading and buttons. */
-    property real verticalContentPadding: 0
+    /*! \internal \brief Vertical padding used by the dialog heading and buttons. */
+    property real _verticalContentPadding: 0
 
-    /*! \brief The font used for the dialog title. */
-    property alias titleFont: heading.font
+    /*! \internal \brief The font used for the dialog title. */
+    property alias _titleFont: heading.font
 
     x: Math.round((parent.width - width) / 2)
     y: Math.round((parent.height - height) / 2)
@@ -101,9 +101,9 @@ QQC2.Dialog {
             id: heading
             text: root.title
             elide: QQC2.Label.ElideRight
-            leftPadding: root.horizontalContentPadding
-            rightPadding: root.horizontalContentPadding
-            topPadding: root.verticalContentPadding
+            leftPadding: root._horizontalContentPadding
+            rightPadding: root._horizontalContentPadding
+            topPadding: root._verticalContentPadding
             bottomPadding: 0
 
             Layout.fillWidth: true
@@ -113,8 +113,8 @@ QQC2.Dialog {
             id: closeButton
 
             Layout.alignment: Qt.AlignVCenter
-            Layout.rightMargin: root.horizontalContentPadding
-            Layout.topMargin: root.horizontalContentPadding
+            Layout.rightMargin: root._horizontalContentPadding
+            Layout.topMargin: root._horizontalContentPadding
 
             icon.name: hovered ? "window-close" : "window-close-symbolic"
             text: i18ndc("kirigami-addons6", "@action:button close dialog", "Close")
@@ -202,9 +202,9 @@ QQC2.Dialog {
     }
 
     footer: QQC2.DialogButtonBox {
-        leftPadding: root.horizontalContentPadding
-        rightPadding: root.horizontalContentPadding
-        bottomPadding: root.verticalContentPadding
+        leftPadding: root._horizontalContentPadding
+        rightPadding: root._horizontalContentPadding
+        bottomPadding: root._verticalContentPadding
         topPadding: Kirigami.Units.smallSpacing
         spacing: Kirigami.Units.mediumSpacing
 

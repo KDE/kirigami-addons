@@ -14,11 +14,11 @@ T.FormCard {
     Material.roundedScale: Material.MediumScale
     Material.elevation: 1
 
-    cornerRadius: Material.roundedScale
-    horizontalInset: Kirigami.Units.largeSpacing
+    _cornerRadius: Material.roundedScale
+    _horizontalInset: Kirigami.Units.largeSpacing
 
-    background: MaterialCardBackground {
+    _background: MaterialCardBackground {
         Material.elevation: root.Material.elevation
-        radius: root.cornerRadius
+        radius: root._cornerRadius
     }
 }

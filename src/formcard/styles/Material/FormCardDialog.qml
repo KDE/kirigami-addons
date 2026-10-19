@@ -9,12 +9,14 @@ import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard.templates as T
 
 T.FormCardDialog {
+    id: root
+
     Material.roundedScale: Material.ExtraLargeScale
     Material.elevation: 6
 
-    horizontalContentPadding: 24
-    verticalContentPadding: 24
-    titleFont: Qt.font({ pixelSize: Material.dialogTitleFontPixelSize })
+    _horizontalContentPadding: 24
+    _verticalContentPadding: 24
+    _titleFont: Qt.font({ pixelSize: Material.dialogTitleFontPixelSize })
 
     horizontalPadding: 12
     bottomPadding: 12
@@ -24,9 +26,9 @@ T.FormCardDialog {
 
         text: root.title
         elide: QQC2.Label.ElideRight
-        leftPadding: root.horizontalContentPadding
-        rightPadding: root.horizontalContentPadding
-        topPadding: root.verticalContentPadding
+        leftPadding: root._horizontalContentPadding
+        rightPadding: root._horizontalContentPadding
+        topPadding: root._verticalContentPadding
         bottomPadding: 0
     }
 }

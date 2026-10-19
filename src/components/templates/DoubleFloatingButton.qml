@@ -35,8 +35,8 @@ Item {
     property real rightMargin: margins
     property real bottomMargin: margins
 
-    /*! The surface behind the two buttons. */
-    readonly property alias background: surface
+    /*! \internal The surface behind the two buttons. */
+    readonly property alias _background: surface
 
     /*! The corner radius of the surface. */
     property alias radius: surface.radius

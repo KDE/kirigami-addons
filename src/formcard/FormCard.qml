@@ -39,12 +39,12 @@ import "private" as Private
 T.FormCard {
     id: root
 
-    borderWidth: 1
-    cornerRadius: cardWidthRestricted ? Kirigami.Units.cornerRadius : 0
+    _borderWidth: 1
+    _cornerRadius: cardWidthRestricted ? Kirigami.Units.cornerRadius : 0
 
-    background: Private.FormCardBackground {
+    _background: Private.FormCardBackground {
         rounded: root.cardWidthRestricted
-        radius: root.cornerRadius
-        border.width: root.borderWidth
+        radius: root._cornerRadius
+        border.width: root._borderWidth
     }
 }
