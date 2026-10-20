@@ -62,6 +62,7 @@ QQC2.ApplicationWindow {
                 id: view
 
                 model: 40
+                clip: true
 
                 delegate: Delegates.RoundedItemDelegate {
                     required property int index

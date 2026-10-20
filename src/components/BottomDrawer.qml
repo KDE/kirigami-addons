@@ -15,7 +15,7 @@ import org.kde.kirigamiaddons.components.templates as Templates
 
    Example:
    \qml
-   import org.kde.kirigamiaddons.delegates as Delegates
+   import org.kde.kirigamiaddons.formcard as FormCard
    import org.kde.kirigamiaddons.components as Components
 
    Components.BottomDrawer {
@@ -25,21 +25,74 @@ import org.kde.kirigamiaddons.components.templates as Templates
            text: "Drawer"
        }
 
-       Delegates.RoundedItemDelegate {
-           text: "Action 1"
-           icon.name: "list-add"
-           onClicked: {
-               doSomething()
-               drawer.close()
+       ColumnLayout {
+           spacing: 0
+
+           FormCard.FormButtonDelegate {
+               text: "Action 1"
+               icon.name: "list-add-symbolic"
+               onClicked: {
+                   doSomething()
+                   drawer.close()
+               }
+           }
+
+           FormCard.FormButtonDelegate {
+               text: "Action 2"
+               icon.name: "list-remove-symbolic"
+               onClicked: {
+                   doSomething()
+                   drawer.close()
+               }
+           }
+       }
+   }
+   \endqml
+
+   A drawer with a profile header and a scrollable list:
+
+   \qml
+   Components.BottomDrawer {
+       id: drawer
+       width: QQC2.ApplicationWindow.window.width
+
+       headerContentItem: RowLayout {
+           spacing: Kirigami.Units.smallSpacing
+
+           Components.Avatar {
+               name: "World"
+           }
+
+           ColumnLayout {
+               Layout.leftMargin: Kirigami.Units.largeSpacing
+               Layout.fillWidth: true
+               spacing: Kirigami.Units.smallSpacing
+
+               Kirigami.Heading {
+                   text: "John Doe"
+                   Layout.fillWidth: true
+               }
+               QQC2.Label {
+                   text: "Last connection: 20.04.2042"
+                   Layout.fillWidth: true
+               }
            }
        }
 
-       Delegates.RoundedItemDelegate {
-           text: "Action 1"
-           icon.name: "list-add"
-           onClicked: {
-               doSomething()
-               drawer.close()
+       QQC2.ScrollView {
+           implicitHeight: Math.max(view.implicitHeight, QQC2.ApplicationWindow.window.height * 0.8)
+
+           ListView {
+               id: view
+
+               model: 40
+               clip: true
+
+               delegate: Delegates.RoundedItemDelegate {
+                   required property int index
+
+                   text: "Item " + index
+               }
            }
        }
    }
