@@ -77,17 +77,10 @@ Templates.RadioSelector {
             Primitives.Icon {
                 id: icon
 
-                color: button.checked ? Platform.Theme.hoverColor : Platform.Theme.textColor
                 visible: button.icon.name.length > 0 || button.icon.source.length > 0
                 source: button.icon.name || button.icon.source
                 implicitHeight: button.icon.height
                 implicitWidth: button.icon.width
-                Behavior on color {
-                    PropertyAnimation {
-                        duration: Platform.Units.longDuration
-                        easing.type: Easing.InOutCubic
-                    }
-                }
             }
 
             QQC2.Label {
