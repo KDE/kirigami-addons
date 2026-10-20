@@ -62,7 +62,7 @@ Templates.RadioSelector {
         height: root._checkedButton?.height ?? 0
         radius: height / 2
         visible: root._checkedButton !== null
-        color: Qt.alpha(root.Material.primary, root._checkedButton?.enabled ? 0.16 : 0.08)
+        color: Qt.alpha(root.Material.accent, root._checkedButton?.enabled ? 0.16 : 0.08)
 
         Behavior on x {
             NumberAnimation {
