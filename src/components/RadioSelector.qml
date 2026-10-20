@@ -7,7 +7,8 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
-import org.kde.kirigami as Kirigami
+import org.kde.kirigami.platform as Platform
+import org.kde.kirigami.primitives as Primitives
 import org.kde.kirigamiaddons.components.templates as Templates
 import "templates/private" as Private
 
@@ -41,27 +42,27 @@ import "templates/private" as Private
 Templates.RadioSelector {
     id: root
 
-    spacing: Kirigami.Units.smallSpacing
+    spacing: Platform.Units.smallSpacing
 
     _delegate: Private.RadioSelectorButton {
         id: button
         selector: root
 
-        Layout.minimumHeight: Kirigami.Units.gridUnit * 2
+        Layout.minimumHeight: Platform.Units.gridUnit * 2
 
         icon {
-            width: Kirigami.Units.iconSizes.sizeForLabels
-            height: Kirigami.Units.iconSizes.sizeForLabels
+            width: Platform.Units.iconSizes.sizeForLabels
+            height: Platform.Units.iconSizes.sizeForLabels
         }
 
         background: Rectangle {
-            radius: Kirigami.Units.cornerRadius
-            color: Kirigami.Theme.textColor
-            opacity: Kirigami.Settings.hasTransientTouchInput ? 0 : ( button.hovered ? 0.1 : 0)
+            radius: Platform.Units.cornerRadius
+            color: Platform.Theme.textColor
+            opacity: Platform.Settings.hasTransientTouchInput ? 0 : ( button.hovered ? 0.1 : 0)
 
             Behavior on opacity {
                 PropertyAnimation {
-                    duration: Kirigami.Units.shortDuration
+                    duration: Platform.Units.shortDuration
                     easing.type: Easing.InOutCubic
                 }
             }
@@ -69,21 +70,21 @@ Templates.RadioSelector {
 
         contentItem: RowLayout {
             Item {
-                Layout.leftMargin: icon.visible ? Kirigami.Units.smallSpacing : Kirigami.Units.largeSpacing
+                Layout.leftMargin: icon.visible ? Platform.Units.smallSpacing : Platform.Units.largeSpacing
                 Layout.fillWidth: true
             }
 
-            Kirigami.Icon {
+            Primitives.Icon {
                 id: icon
 
-                color: button.checked ? Kirigami.Theme.hoverColor : Kirigami.Theme.textColor
-                visible: Boolean(button.icon.name || button.icon.source)
+                color: button.checked ? Platform.Theme.hoverColor : Platform.Theme.textColor
+                visible: button.icon.name.length > 0 || button.icon.source.length > 0
                 source: button.icon.name || button.icon.source
                 implicitHeight: button.icon.height
                 implicitWidth: button.icon.width
                 Behavior on color {
                     PropertyAnimation {
-                        duration: Kirigami.Units.longDuration
+                        duration: Platform.Units.longDuration
                         easing.type: Easing.InOutCubic
                     }
                 }
@@ -92,28 +93,20 @@ Templates.RadioSelector {
             QQC2.Label {
                 Layout.alignment: Qt.AlignVCenter
 
-                font.bold: button.checked
-                color: Kirigami.Theme.textColor
+                color: Platform.Theme.textColor
                 text: button.text
-
-                Behavior on font.bold {
-                    PropertyAnimation {
-                        duration: Kirigami.Units.longDuration
-                        easing.type: Easing.InOutCubic
-                    }
-                }
 
                 Accessible.ignored: true
             }
 
             Item {
                 Layout.fillWidth: true
-                Layout.rightMargin: Kirigami.Units.largeSpacing
+                Layout.rightMargin: Platform.Units.largeSpacing
             }
         }
     }
 
-    Kirigami.ShadowedRectangle {
+    Primitives.ShadowedRectangle {
         id: marker
 
         x: root.leftPadding + (root._checkedButton?.x ?? 0)
@@ -122,12 +115,12 @@ Templates.RadioSelector {
 
         height: root.availableHeight
         width: root._checkedButton?.width ?? 0
-        radius: Kirigami.Units.cornerRadius
+        radius: Platform.Units.cornerRadius
 
-        color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.8)
+        color: Qt.alpha(Platform.Theme.highlightColor, 0.2)
         border {
             width: 1
-            color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, Kirigami.Theme.backgroundColor, 0.5)
+            color: Platform.Theme.highlightColor
         }
         shadow {
             size: 7
@@ -139,7 +132,7 @@ Templates.RadioSelector {
             PropertyAnimation {
                 id: x_anim
 
-                duration: Kirigami.Units.longDuration
+                duration: Platform.Units.longDuration
                 easing.type: Easing.InOutCubic
             }
         }
@@ -148,7 +141,7 @@ Templates.RadioSelector {
             PropertyAnimation {
                 id: width_anim
 
-                duration: Kirigami.Units.longDuration
+                duration: Platform.Units.longDuration
                 easing.type: Easing.InOutCubic
             }
         }
