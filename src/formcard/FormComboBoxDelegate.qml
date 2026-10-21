@@ -321,13 +321,9 @@ AbstractFormDelegate {
         focus: true
         padding: 0
 
-        header: Kirigami.Heading {
-            text: dialog.title
-            elide: QQC2.Label.ElideRight
-            leftPadding: Kirigami.Units.largeSpacing
-            rightPadding: Kirigami.Units.largeSpacing
-            topPadding: Kirigami.Units.largeSpacing
-            bottomPadding: Kirigami.Units.largeSpacing
+        Component.onCompleted: {
+            header.leftPadding = Kirigami.Units.largeSpacing * 2
+            header.rightPadding = Kirigami.Units.largeSpacing * 2
         }
 
         contentItem: ColumnLayout {
