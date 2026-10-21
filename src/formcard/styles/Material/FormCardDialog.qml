@@ -6,6 +6,7 @@
 import QtQuick.Controls as QQC2
 import QtQuick.Controls.Material
 import org.kde.kirigami as Kirigami
+import org.kde.kirigamiaddons.components as Components
 import org.kde.kirigamiaddons.formcard.templates as T
 
 T.FormCardDialog {
@@ -20,6 +21,11 @@ T.FormCardDialog {
 
     horizontalPadding: 12
     bottomPadding: 12
+
+    background: Components.DialogRoundedBackground {
+        Material.roundedScale: root.Material.roundedScale
+        Material.elevation: root.Material.elevation
+    }
 
     header: Kirigami.Heading {
         id: heading

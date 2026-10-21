@@ -8,7 +8,6 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Controls.Material
-import QtQuick.Controls.Material.impl
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.components.templates as Templates
@@ -50,15 +49,9 @@ Templates.MessageDialog {
         Layout.bottomMargin: root._mobileLayout && index !== root._buttonCount - 1 ? 0 : root.padding
     }
 
-    background: Rectangle {
-        radius: root.Material.roundedScale
-        color: root.Material.dialogColor
-
-        layer.enabled: root.Material.elevation > 0
-        layer.effect: RoundedElevationEffect {
-            roundedScale: root.background.radius
-            elevation: root.Material.elevation
-        }
+    background: DialogRoundedBackground {
+        Material.roundedScale: root.Material.roundedScale
+        Material.elevation: root.Material.elevation
     }
 
     QQC2.Overlay.modal: Rectangle {
