@@ -21,7 +21,11 @@ Kirigami.ApplicationWindow {
     // Do not use Map, it crashes very frequently
     property var pageCache: Object.create(null)
 
-    modality: Qt.WindowModal
+    // On macOS, a window-modal window with a transient parent is presented as a
+    // sheet, which doesn't have a title bar or a close button. Application
+    // modality is used instead: the window is then presented as a regular window,
+    // while the parent window is still blocked from being interacted with.
+    modality: Qt.platform.os === "osx" ? Qt.ApplicationModal : Qt.WindowModal
 
     pageStack {
         columnView.columnWidth: Kirigami.Units.gridUnit * 13
