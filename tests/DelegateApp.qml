@@ -56,11 +56,6 @@ Kirigami.ApplicationWindow {
         Kirigami.ScrollablePage {
             title: "RoundedItemDelegate"
 
-            header: Components.Banner {
-                text: "Hello"
-                visible: true
-            }
-
             ListView {
                 model: 50
                 delegate: Delegates.RoundedItemDelegate {
@@ -100,12 +95,6 @@ Kirigami.ApplicationWindow {
 
         Kirigami.ScrollablePage {
             title: "RoundedItemDelegate with subtitle"
-
-            header: Components.Banner {
-                title: "Hello"
-                text: "Hello world"
-                visible: true
-            }
 
             ListView {
                 model: 50

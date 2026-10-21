@@ -4,7 +4,7 @@
 ecm_add_qml_module(delegatesplugin
     URI "org.kde.kirigamiaddons.delegates"
     VERSION 1.0
-    GENERATE_PLUGIN_SOURCE
+    CLASS_NAME DelegatesPlugin
     DEPENDENCIES
         org.kde.kirigami
         org.kde.kirigamiaddons.treeview
@@ -23,9 +23,27 @@ ecm_target_qml_sources(delegatesplugin SOURCES
     SubtitleContentItem.qml
 )
 
+target_sources(delegatesplugin PRIVATE
+    delegatesplugin.cpp
+    delegatesplugin.h
+)
+
+qt_target_qml_sources(delegatesplugin RESOURCES
+    styles/Material/RoundedItemDelegate.qml
+    styles/Material/CheckDelegate.qml
+    styles/Material/RadioDelegate.qml
+    styles/Material/IndicatorItemDelegate.qml
+    OUTPUT_TARGETS _delegates_style_targets
+)
+
+if(_delegates_style_targets)
+    install(TARGETS ${_delegates_style_targets} EXPORT KirigamiAddonsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
+endif()
+
 target_link_libraries(delegatesplugin PRIVATE
     Qt6::Quick
     Qt6::Qml
+    KF6::KirigamiPlatform
 )
 
 ecm_finalize_qml_module(delegatesplugin DESTINATION ${KDE_INSTALL_QMLDIR} EXPORT KirigamiAddonsTargets)
