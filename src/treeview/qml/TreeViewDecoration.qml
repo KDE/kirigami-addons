@@ -22,6 +22,8 @@ import org.kde.kirigami as Kirigami
    It is recommended to use RoundedTreeDelegate directly instead of this component.
  */
 RowLayout {
+    id: root
+
     /*!
        \qmlproperty ItemDelegate parentDelegate
        This property holds the delegate there this decoration will live in.
@@ -124,8 +126,9 @@ RowLayout {
                 height: width
                 source: kDescendantExpanded ? "go-down-symbolic" : (Qt.application.layoutDirection == Qt.RightToLeft ? "go-previous-symbolic" : "go-next-symbolic")
                 isMask: true
-                color: controlRoot.hovered ? decorationLayout.decorationHighlightColor ? decorationLayout.decorationHighlightColor : Kirigami.Theme.highlightColor : Kirigami.Theme.textColor
-                Kirigami.Theme.highlightColor : Kirigami.Theme.textColor
+                color: controlRoot.hovered
+                    ? (root.decorationHighlightColor.valid ? root.decorationHighlightColor : root.Kirigami.Theme.highlightColor)
+                    : root.Kirigami.Theme.textColor
                 Behavior on color { ColorAnimation { duration: Kirigami.Units.shortDuration; easing.type: Easing.InOutQuad } }
                 visible: kDescendantExpandable
             }
