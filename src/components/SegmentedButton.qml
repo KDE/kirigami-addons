@@ -1,12 +1,15 @@
 // SPDX-FileCopyrightText: 2023 Carl Schwan <carlschwan@kde.org>
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Templates as T
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.delegates as Delegates
+import org.kde.kirigamiaddons.components.templates as Templates
 
 /*!
    \qmltype SegmentedButton
@@ -15,147 +18,133 @@ import org.kde.kirigamiaddons.delegates as Delegates
 
    This holds multiple buttons.
  */
-RowLayout {
+Templates.SegmentedButton {
     id: root
 
-    /*!
-       \qmlproperty list<Action> actions
-       This property holds individual actions representing the buttons of the segmented button.
-     */
-    property list<T.Action> actions
+    delegate: QQC2.AbstractButton {
+        id: buttonDelegate
 
-    spacing: -1//Math.round(Kirigami.Units.smallSpacing / 2)
+        required property int index
+        required property T.Action modelData
 
-    Repeater {
-        id: buttonRepeater
+        property bool highlightBackground: down || checked
+        property bool highlightBorder: enabled && down || checked || visualFocus || hovered
+        z: highlightBorder ? 1 : 0
 
-        model: root.actions
+        padding: Kirigami.Units.mediumSpacing
 
-        delegate: QQC2.AbstractButton {
-            id: buttonDelegate
+        focus: index === 0
 
-            required property int index
-            required property T.Action modelData
+        action: modelData
 
-            property bool highlightBackground: down || checked
-            property bool highlightBorder: enabled && down || checked || visualFocus || hovered
-            z: highlightBorder ? 1 : 0
+        display: modelData.displayHint & Kirigami.DisplayHint.IconOnly ? QQC2.AbstractButton.IconOnly : QQC2.AbstractButton.TextBesideIcon
 
-            padding: Kirigami.Units.mediumSpacing
+        Layout.fillHeight: true
+        Layout.minimumWidth: height
 
-            focus: index === 0
+        icon {
+            width: Kirigami.Units.iconSizes.smallMedium
+            height: Kirigami.Units.iconSizes.smallMedium
+        }
 
-            action: modelData
+        contentItem: Delegates.DefaultContentItem {
+            itemDelegate: buttonDelegate
+            iconItem.Layout.fillWidth: buttonDelegate.modelData instanceof Kirigami.Action
+                ? buttonDelegate.modelData.displayHint & Kirigami.DisplayHint.IconOnly
+                : true
 
-            display: modelData.displayHint & Kirigami.DisplayHint.IconOnly ? QQC2.AbstractButton.IconOnly : QQC2.AbstractButton.TextBesideIcon
+            labelItem {
+                elide: Text.ElideRight
+                horizontalAlignment: Text.AlignHCenter
+                Layout.fillWidth: true
+                Accessible.ignored: true
+            }
+        }
 
-            Layout.fillHeight: true
-            Layout.minimumWidth: height
+        background: Kirigami.ShadowedRectangle {
 
-            icon {
-                width: Kirigami.Units.iconSizes.smallMedium
-                height: Kirigami.Units.iconSizes.smallMedium
+            property color flatColor: Qt.rgba(
+                Kirigami.Theme.backgroundColor.r,
+                Kirigami.Theme.backgroundColor.g,
+                Kirigami.Theme.backgroundColor.b,
+                0
+            )
+
+            corners {
+                topLeftRadius: buttonDelegate.index === (Qt.application.layoutDirection === Qt.RightToLeft ? root._buttonCount - 1 : 0)
+                    ? Kirigami.Units.mediumSpacing : 0
+                bottomLeftRadius: buttonDelegate.index === (Qt.application.layoutDirection === Qt.RightToLeft ? root._buttonCount - 1 : 0)
+                    ? Kirigami.Units.mediumSpacing : 0
+
+                bottomRightRadius: buttonDelegate.index === (Qt.application.layoutDirection === Qt.RightToLeft ? 0 : root._buttonCount - 1)
+                    ? Kirigami.Units.mediumSpacing : 0
+                topRightRadius: buttonDelegate.index === (Qt.application.layoutDirection === Qt.RightToLeft ? 0 : root._buttonCount - 1)
+                    ? Kirigami.Units.mediumSpacing : 0
             }
 
-            contentItem: Delegates.DefaultContentItem {
-                itemDelegate: buttonDelegate
-                iconItem.Layout.fillWidth: buttonDelegate.modelData instanceof Kirigami.Action
-                    ? buttonDelegate.modelData.displayHint & Kirigami.DisplayHint.IconOnly
-                    : true
+            visible: !buttonDelegate.flat || buttonDelegate.editable || buttonDelegate.down || buttonDelegate.checked || buttonDelegate.highlighted || buttonDelegate.visualFocus || buttonDelegate.hovered
 
-                labelItem {
-                    elide: Text.ElideRight
-                    horizontalAlignment: Text.AlignHCenter
-                    Layout.fillWidth: true
-                    Accessible.ignored: true
+            color: {
+                if (buttonDelegate.highlightBackground) {
+                    return Kirigami.Theme.alternateBackgroundColor
+                } else if (buttonDelegate.flat) {
+                    return flatColor
+                } else {
+                    return Kirigami.Theme.backgroundColor
                 }
             }
 
-            background: Kirigami.ShadowedRectangle {
+            border {
+                color: {
+                    if (buttonDelegate.highlightBorder) {
+                        return Kirigami.Theme.focusColor
+                    } else {
+                        return Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, Kirigami.Theme.frameContrast);
+                    }
+                }
+                width: 1
+            }
 
-                property color flatColor: Qt.rgba(
-                    Kirigami.Theme.backgroundColor.r,
-                    Kirigami.Theme.backgroundColor.g,
-                    Kirigami.Theme.backgroundColor.b,
-                    0
-                )
+            Behavior on color {
+                enabled: buttonDelegate.highlightBackground
+                ColorAnimation {
+                    duration: Kirigami.Units.shortDuration
+                    easing.type: Easing.OutCubic
+                }
+            }
+            Behavior on border.color {
+                enabled: buttonDelegate.highlightBorder
+                ColorAnimation {
+                    duration: Kirigami.Units.shortDuration
+                    easing.type: Easing.OutCubic
+                }
+            }
+
+            Kirigami.ShadowedRectangle {
+                height: buttonDelegate.height
+                z: -1
+                color: Qt.rgba(0, 0, 0, 0.1)
+
+                opacity: buttonDelegate.down ? 0 : 1
+                visible: !buttonDelegate.editable && !buttonDelegate.flat && buttonDelegate.enabled
 
                 corners {
-                    topLeftRadius: buttonDelegate.index === (Qt.application.layoutDirection === Qt.RightToLeft ? buttonRepeater.count - 1 : 0)
+                    topLeftRadius: buttonDelegate.index === (Qt.application.layoutDirection === Qt.RightToLeft ? root._buttonCount - 1 : 0)
                         ? Kirigami.Units.mediumSpacing : 0
-                    bottomLeftRadius: buttonDelegate.index === (Qt.application.layoutDirection === Qt.RightToLeft ? buttonRepeater.count - 1 : 0)
+                    bottomLeftRadius: buttonDelegate.index === (Qt.application.layoutDirection === Qt.RightToLeft ? root._buttonCount - 1 : 0)
                         ? Kirigami.Units.mediumSpacing : 0
 
-                    bottomRightRadius: buttonDelegate.index === (Qt.application.layoutDirection === Qt.RightToLeft ? 0 : buttonRepeater.count - 1)
+                    bottomRightRadius: buttonDelegate.index === (Qt.application.layoutDirection === Qt.RightToLeft ? 0 : root._buttonCount - 1)
                         ? Kirigami.Units.mediumSpacing : 0
-                    topRightRadius: buttonDelegate.index === (Qt.application.layoutDirection === Qt.RightToLeft ? 0 : buttonRepeater.count - 1)
+                    topRightRadius: buttonDelegate.index === (Qt.application.layoutDirection === Qt.RightToLeft ? 0 : root._buttonCount - 1)
                         ? Kirigami.Units.mediumSpacing : 0
                 }
 
-                visible: !buttonDelegate.flat || buttonDelegate.editable || buttonDelegate.down || buttonDelegate.checked || buttonDelegate.highlighted || buttonDelegate.visualFocus || buttonDelegate.hovered
-
-                color: {
-                    if (buttonDelegate.highlightBackground) {
-                        return Kirigami.Theme.alternateBackgroundColor
-                    } else if (buttonDelegate.flat) {
-                        return flatColor
-                    } else {
-                        return Kirigami.Theme.backgroundColor
-                    }
-                }
-
-                border {
-                    color: {
-                        if (buttonDelegate.highlightBorder) {
-                            return Kirigami.Theme.focusColor
-                        } else {
-                            return Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, Kirigami.Theme.frameContrast);
-                        }
-                    }
-                    width: 1
-                }
-
-                Behavior on color {
-                    enabled: buttonDelegate.highlightBackground
-                    ColorAnimation {
-                        duration: Kirigami.Units.shortDuration
-                        easing.type: Easing.OutCubic
-                    }
-                }
-                Behavior on border.color {
-                    enabled: buttonDelegate.highlightBorder
-                    ColorAnimation {
-                        duration: Kirigami.Units.shortDuration
-                        easing.type: Easing.OutCubic
-                    }
-                }
-
-                Kirigami.ShadowedRectangle {
-                    height: buttonDelegate.height
-                    z: -1
-                    color: Qt.rgba(0, 0, 0, 0.1)
-
-                    opacity: buttonDelegate.down ? 0 : 1
-                    visible: !buttonDelegate.editable && !buttonDelegate.flat && buttonDelegate.enabled
-
-                    corners {
-                        topLeftRadius: buttonDelegate.index === (Qt.application.layoutDirection === Qt.RightToLeft ? buttonRepeater.count - 1 : 0)
-                            ? Kirigami.Units.mediumSpacing : 0
-                        bottomLeftRadius: buttonDelegate.index === (Qt.application.layoutDirection === Qt.RightToLeft ? buttonRepeater.count - 1 : 0)
-                            ? Kirigami.Units.mediumSpacing : 0
-
-                        bottomRightRadius: buttonDelegate.index === (Qt.application.layoutDirection === Qt.RightToLeft ? 0 : buttonRepeater.count - 1)
-                            ? Kirigami.Units.mediumSpacing : 0
-                        topRightRadius: buttonDelegate.index === (Qt.application.layoutDirection === Qt.RightToLeft ? 0 : buttonRepeater.count - 1)
-                            ? Kirigami.Units.mediumSpacing : 0
-                    }
-
-                    anchors {
-                        top: parent.top
-                        topMargin: 1
-                        left: parent.left
-                        right: parent.right
-                    }
+                anchors {
+                    top: parent.top
+                    topMargin: 1
+                    left: parent.left
+                    right: parent.right
                 }
             }
         }

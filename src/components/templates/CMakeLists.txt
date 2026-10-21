@@ -13,6 +13,7 @@ ecm_target_qml_sources(componentstemplatesplugin SOURCES
     FloatingToolBar.qml
     DoubleFloatingButton.qml
     RadioSelector.qml
+    SegmentedButton.qml
     BottomDrawer.qml
     MessageDialog.qml
 )

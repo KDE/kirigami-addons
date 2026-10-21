@@ -30,6 +30,7 @@ void ComponentsPlugin::registerTypes(const char *uri)
     qmlRegisterType(root.resolved(QUrl(prefix + u"FloatingButton.qml"_s)), uri, 1, 0, "FloatingButton");
     qmlRegisterType(root.resolved(QUrl(prefix + u"FloatingToolBar.qml"_s)), uri, 1, 0, "FloatingToolBar");
     qmlRegisterType(root.resolved(QUrl(prefix + u"RadioSelector.qml"_s)), uri, 1, 0, "RadioSelector");
+    qmlRegisterType(root.resolved(QUrl(prefix + u"SegmentedButton.qml"_s)), uri, 1, 0, "SegmentedButton");
     qmlRegisterType(root.resolved(QUrl(prefix + u"BottomDrawer.qml"_s)), uri, 1, 0, "BottomDrawer");
     qmlRegisterType(root.resolved(QUrl(prefix + u"MessageDialog.qml"_s)), uri, 1, 0, "MessageDialog");
     qmlRegisterType(root.resolved(QUrl(prefix + u"DialogRoundedBackground.qml"_s)), uri, 1, 0, "DialogRoundedBackground");
