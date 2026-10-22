@@ -133,11 +133,18 @@ FormCardPage {
 
         AbstractFormDelegate {
             id: generalDelegate
+
+            readonly property bool hasReleases: (page.aboutData.releases?.length ?? 0) > 0
+
             Layout.fillWidth: true
-            background: FormDelegateBackground {
-                control: generalDelegate
-                visible: page.aboutData.releases && page.aboutData.releases.length > 0
-            }
+            focusPolicy: hasReleases ? Qt.StrongFocus : Qt.NoFocus
+            hoverEnabled: hasReleases
+            Accessible.role: hasReleases ? Accessible.Button : Accessible.StaticText
+            Accessible.name: hasReleases
+                ? i18ndc("kirigami-addons6", "@action:button", "Show release history for %1 %2", page.aboutData.displayName, page.aboutData.version)
+                : page.aboutData.displayName + " " + page.aboutData.version
+            background.visible: hasReleases
+
             contentItem: RowLayout {
                 spacing: Kirigami.Units.smallSpacing * 2
 
@@ -181,7 +188,7 @@ FormCardPage {
             }
 
             onClicked: {
-                if (page.aboutData.releases && page.aboutData.releases.length > 0) {
+                if (generalDelegate.hasReleases) {
                     page._showOnlyNewReleases = FormCardModule.AboutComponent.hasNewReleases;
                     releasesSheet.open();
                     FormCardModule.AboutComponent.updateLastSeenVersion();
@@ -408,7 +415,15 @@ FormCardPage {
             id: donateDelegate
             icon.name: "donate-symbolic"
             text: i18nd("kirigami-addons6", "Donate")
-            url: donateUrl + "?app=" + page.aboutData.componentName
+            url: {
+                if (page.donateUrl.toString().length === 0) {
+                    return "";
+                }
+                const url = new URL(page.donateUrl.toString());
+                const query = url.search ? url.search + "&" : "?";
+                url.search = query + "app=" + encodeURIComponent(page.aboutData.componentName);
+                return url.toString();
+            }
             visible: donateUrl.toString().length > 0
         }
 
@@ -432,11 +447,16 @@ FormCardPage {
                     return bugAddress;
                 }
                 const elements = aboutData.productName.split('/');
-                let url = `https://bugs.kde.org/enter_bug.cgi?format=guided&product=${elements[0]}&version=${aboutData.version}`;
+                const url = new URL("https://bugs.kde.org/enter_bug.cgi");
+                const params = new URLSearchParams();
+                params.set("format", "guided");
+                params.set("product", elements[0]);
+                params.set("version", page.aboutData.version);
                 if (elements.length === 2) {
-                    url += "&component=" + elements[1];
+                    params.set("component", elements[1]);
                 }
-                return url;
+                url.search = params.toString();
+                return url.toString();
             }
 
             icon.name: "tools-report-bug-symbolic"
@@ -651,6 +671,8 @@ FormCardPage {
                     QQC2.ToolButton {
                         visible: typeof(modelData.ocsUsername) !== "undefined" && modelData.ocsUsername.length > 0
                         icon.name: "get-hot-new-stuff-symbolic"
+                        text: i18nd("kirigami-addons6", "Visit %1's KDE Store page", modelData.name)
+                        display: QQC2.ToolButton.IconOnly
                         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                         QQC2.ToolTip.visible: hovered
                         QQC2.ToolTip.text: i18nd("kirigami-addons6", "Visit %1's KDE Store page", modelData.name)
@@ -660,6 +682,8 @@ FormCardPage {
                     QQC2.ToolButton {
                         visible: typeof(modelData.emailAddress) !== "undefined" && modelData.emailAddress.length > 0
                         icon.name: "mail-sent-symbolic"
+                        text: i18nd("kirigami-addons6", "Send an email to %1", modelData.emailAddress)
+                        display: QQC2.ToolButton.IconOnly
                         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                         QQC2.ToolTip.visible: hovered
                         QQC2.ToolTip.text: i18nd("kirigami-addons6", "Send an email to %1", modelData.emailAddress)
@@ -669,6 +693,8 @@ FormCardPage {
                     QQC2.ToolButton {
                         visible: typeof(modelData.webAddress) !== "undefined" && modelData.webAddress.length > 0
                         icon.name: "globe-symbolic"
+                        text: i18ndc("kirigami-addons6", "@action:button", "Visit %1's website", modelData.name)
+                        display: QQC2.ToolButton.IconOnly
                         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                         QQC2.ToolTip.visible: hovered
                         QQC2.ToolTip.text: (typeof(modelData.webAddress) === "undefined" && modelData.webAddress.length > 0) ? "" : modelData.webAddress
@@ -715,6 +741,8 @@ FormCardPage {
                         id: licenseButton
                         visible: modelData.licenses.key !== 0
                         icon.name: "license-symbolic"
+                        text: i18ndc("kirigami-addons6", "@action:button", "Show license for %1", delegate.modelData.name)
+                        display: QQC2.ToolButton.IconOnly
 
                         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                         QQC2.ToolTip.visible: hovered
@@ -785,6 +813,8 @@ FormCardPage {
                     QQC2.ToolButton {
                         visible: typeof(modelData.webAddress) !== "undefined" && modelData.webAddress.length > 0
                         icon.name: "globe-symbolic"
+                        text: i18ndc("kirigami-addons6", "@action:button", "Visit %1's website", delegate.modelData.name)
+                        display: QQC2.ToolButton.IconOnly
                         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                         QQC2.ToolTip.visible: hovered
                         QQC2.ToolTip.text: (typeof(modelData.webAddress) === "undefined" && modelData.webAddress.length > 0) ? "" : modelData.webAddress
