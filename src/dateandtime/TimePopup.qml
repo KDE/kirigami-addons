@@ -47,7 +47,7 @@ QQC2.Dialog {
 
     contentItem: TimePicker {
         id: popupContent
-        implicitWidth: applicationWindow().width
+        implicitWidth: popupContent.Window.window?.width ?? 0
         readonly property date _initialValue: isNaN(root.value.valueOf()) ? new Date() : root.value
         minutes: _initialValue.getMinutes()
         hours: _initialValue.getHours()
