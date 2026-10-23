@@ -111,8 +111,6 @@ FormCardPage {
      */
     property bool showLibraries: true
 
-    property bool _showOnlyNewReleases: false
-
     Binding {
         target: FormCardModule.AboutComponent
         property: "currentVersion"
@@ -189,9 +187,7 @@ FormCardPage {
 
             onClicked: {
                 if (generalDelegate.hasReleases) {
-                    page._showOnlyNewReleases = FormCardModule.AboutComponent.hasNewReleases;
-                    releasesSheet.open();
-                    FormCardModule.AboutComponent.updateLastSeenVersion();
+                    releasesLoader.active = true;
                 }
             }
         }
@@ -202,92 +198,6 @@ FormCardPage {
             text: i18nd("kirigami-addons6", "Copyright")
             descriptionItem.textFormat: Text.PlainText
             description: aboutData.copyrightStatement
-        }
-
-        data: QQC2.Dialog {
-            id: releasesSheet
-
-            title: i18nd("kirigami-addons6", "Release history")
-            parent: QQC2.Overlay.overlay
-            x: Math.round((parent.width - width) / 2)
-            y: Math.round((parent.height - height) / 2)
-            implicitWidth: parent ? Math.min(parent.width - Kirigami.Units.gridUnit * 2, Kirigami.Units.gridUnit * 30) : Kirigami.Units.gridUnit * 30
-            implicitHeight: Math.min(parent ? parent.height - Kirigami.Units.gridUnit * 2 : Kirigami.Units.gridUnit * 32,
-                                     Kirigami.Units.gridUnit * 32,
-                                     releaseDialogHeader.implicitHeight + releasesColumn.implicitHeight + Kirigami.Units.gridUnit * 2)
-            modal: true
-            focus: true
-            background: KirigamiComponents.DialogRoundedBackground {}
-
-            leftPadding: 0
-            rightPadding: 0
-            bottomPadding: 0
-            topPadding: 0
-
-            header: QQC2.Control {
-                id: releaseDialogHeader
-                padding: releasesSheet.padding
-                topPadding: Kirigami.Units.largeSpacing
-                bottomPadding: Kirigami.Units.largeSpacing
-
-                contentItem: RowLayout {
-                    spacing: Kirigami.Units.largeSpacing
-
-                    Kirigami.Heading {
-                        text: releasesSheet.title
-                        elide: QQC2.Label.ElideRight
-                        padding: 0
-                        leftPadding: Kirigami.Units.largeSpacing
-                        Layout.fillWidth: true
-                    }
-
-                    QQC2.ToolButton {
-                        icon.name: hovered ? "window-close" : "window-close-symbolic"
-                        text: i18ndc("kirigami-addons6", "@action:button", "Close")
-                        display: QQC2.ToolButton.IconOnly
-                        onClicked: releasesSheet.close()
-                    }
-                }
-
-                Kirigami.Separator {
-                    anchors {
-                        left: parent.left
-                        right: parent.right
-                        bottom: parent.bottom
-                    }
-                }
-            }
-
-            contentItem: QQC2.ScrollView {
-                id: releasesScrollView
-                contentWidth: availableWidth
-                contentHeight: releasesColumn.implicitHeight + Kirigami.Units.gridUnit * 2
-                QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AlwaysOff
-
-                ColumnLayout {
-                    id: releasesColumn
-                    x: Kirigami.Units.gridUnit
-                    y: Kirigami.Units.gridUnit
-                    width: releasesScrollView.availableWidth - Kirigami.Units.gridUnit * 2
-                    spacing: Kirigami.Units.largeSpacing * 2
-
-                    Repeater {
-                        model: page._showOnlyNewReleases
-                            ? page.aboutData.releases.filter((release, index) => FormCardModule.AboutComponent.newReleaseIndexes.includes(index))
-                            : page.aboutData.releases
-                        delegate: releaseDelegate
-                    }
-
-                    QQC2.Button {
-                        Layout.alignment: Qt.AlignHCenter
-                        visible: page._showOnlyNewReleases
-                        text: i18nd("kirigami-addons6", "Show older changes…")
-                        onClicked: page._showOnlyNewReleases = false
-                    }
-                }
-            }
-
-            footer: null
         }
     }
 
@@ -318,75 +228,8 @@ FormCardPage {
             delegate: FormButtonDelegate {
                 text: modelData.name
                 Layout.fillWidth: true
-                onClicked: {
-                    licenseSheet.text = modelData.text;
-                    licenseSheet.title = modelData.name;
-                    licenseSheet.open();
-                }
+                onClicked: licenseLoader.open(modelData.name, modelData.text)
             }
-        }
-
-        data: KirigamiComponents.MessageDialog {
-            id: licenseSheet
-
-            property alias text: bodyLabel.text
-
-            parent: QQC2.Overlay.overlay
-            implicitWidth: parent ? Math.min(parent.width - Kirigami.Units.gridUnit * 2, Kirigami.Units.gridUnit * 30) : Kirigami.Units.gridUnit * 30
-
-            leftPadding: 0
-            rightPadding: 0
-            bottomPadding: 0
-            topPadding: 0
-
-            header: QQC2.Control {
-                padding: licenseSheet.padding
-                topPadding: Kirigami.Units.largeSpacing
-                bottomPadding: Kirigami.Units.largeSpacing
-
-                contentItem: RowLayout {
-                    spacing: Kirigami.Units.largeSpacing
-
-                    Kirigami.Heading {
-                        text: licenseSheet.title
-                        elide: QQC2.Label.ElideRight
-                        padding: 0
-                        leftPadding: Kirigami.Units.largeSpacing
-                        Layout.fillWidth: true
-                    }
-
-                    QQC2.ToolButton {
-                        icon.name: hovered ? "window-close" : "window-close-symbolic"
-                        text: i18ndc("kirigami-addons6", "@action:button", "Close")
-                        display: QQC2.ToolButton.IconOnly
-                        onClicked: licenseSheet.close()
-                    }
-                }
-
-                Kirigami.Separator {
-                    anchors {
-                        left: parent.left
-                        right: parent.right
-                        bottom: parent.bottom
-                    }
-                }
-            }
-
-            contentItem: QQC2.ScrollView {
-                id: scrollView
-                contentWidth: availableWidth
-                QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AlwaysOff
-
-                Kirigami.SelectableLabel {
-                    id: bodyLabel
-                    width: scrollView.availableWidth
-                    text: licenseSheet.text
-                    textMargin: Kirigami.Units.gridUnit
-                    wrapMode: Text.WordWrap
-                }
-            }
-
-            footer: null
         }
     }
 
@@ -578,44 +421,42 @@ FormCardPage {
     }
 
     data: [
-        Component {
-            id: releaseDelegate
-
-            ColumnLayout {
-                required property var modelData
-
-                Layout.fillWidth: true
-                Layout.preferredWidth: Kirigami.Units.gridUnit * 30
-                spacing: Kirigami.Units.smallSpacing
-
-                QQC2.Label {
-                    Layout.fillWidth: true
-                    text: modelData.version
-                    font.bold: true
+        Loader {
+            id: releasesLoader
+            active: false
+            sourceComponent: Private.AboutReleaseDialog {
+                releases: page.aboutData.releases
+                onClosed: releasesLoader.active = false
+            }
+            onLoaded: {
+                if (status === Loader.Ready) {
+                    item.showOnlyNewReleases = FormCardModule.AboutComponent.hasNewReleases;
+                    item.open();
+                    FormCardModule.AboutComponent.updateLastSeenVersion();
                 }
+            }
+        },
+        Loader {
+            id: licenseLoader
 
-                QQC2.Label {
-                    Layout.fillWidth: true
-                    text: modelData.date.toLocaleDateString()
-                    color: Kirigami.Theme.disabledTextColor
-                    visible: modelData.date && modelData.date.getTime() !== 0
-                }
+            property string licenseTitle
+            property string licenseText
 
-                QQC2.Label {
-                    Layout.fillWidth: true
-                    Layout.minimumWidth: 0
-                    text: modelData.description
-                    textFormat: Text.RichText
-                    wrapMode: Text.WordWrap
-                    onLinkActivated: (link) => Qt.openUrlExternally(link)
-                    visible: text.length > 0
-                }
+            function open(title: string, text: string): void {
+                licenseTitle = title;
+                licenseText = text;
+                active = true;
+            }
 
-                FormLinkDelegate {
-                    Layout.fillWidth: true
-                    text: i18nd("kirigami-addons6", "More information")
-                    url: modelData.url
-                    visible: url.toString().length > 0
+            active: false
+            sourceComponent: Private.AboutLicenseDialog {
+                title: licenseLoader.licenseTitle
+                text: licenseLoader.licenseText
+                onClosed: licenseLoader.active = false
+            }
+            onLoaded: {
+                if (status === Loader.Ready) {
+                    item.open();
                 }
             }
         },
@@ -748,66 +589,7 @@ FormCardPage {
                         QQC2.ToolTip.visible: hovered
                         QQC2.ToolTip.text: !visible ? "" : delegate.modelData.licenses.name
 
-                        KirigamiComponents.MessageDialog {
-                            id: licenseSheet
-
-                            title: delegate.modelData.name
-
-                            parent: licenseButton.QQC2.Overlay.overlay
-                            implicitWidth: parent ? Math.min(parent.width - Kirigami.Units.gridUnit * 2, implicitContentWidth) : implicitContentWidth
-
-                            leftPadding: 0
-                            rightPadding: 0
-                            bottomPadding: 0
-                            topPadding: 0
-
-                            header: QQC2.Control {
-                                padding: licenseSheet.padding
-                                topPadding: Kirigami.Units.largeSpacing
-                                bottomPadding: Kirigami.Units.largeSpacing
-
-                                contentItem: RowLayout {
-                                    spacing: Kirigami.Units.largeSpacing
-
-                                    Kirigami.Heading {
-                                        text: licenseSheet.title
-                                        elide: QQC2.Label.ElideRight
-                                        padding: 0
-                                        leftPadding: Kirigami.Units.largeSpacing
-                                        Layout.fillWidth: true
-                                    }
-
-                                    QQC2.ToolButton {
-                                        icon.name: hovered ? "window-close" : "window-close-symbolic"
-                                        text: i18ndc("kirigami-addons6", "@action:button", "Close")
-                                        display: QQC2.ToolButton.IconOnly
-                                        onClicked: licenseSheet.close()
-                                    }
-                                }
-
-                                Kirigami.Separator {
-                                    anchors {
-                                        left: parent.left
-                                        right: parent.right
-                                        bottom: parent.bottom
-                                    }
-                                }
-                            }
-
-                            contentItem: QQC2.ScrollView {
-                                Kirigami.SelectableLabel {
-                                    id: bodyLabel
-                                    text: delegate.modelData.licenses.text
-                                    textMargin: Kirigami.Units.gridUnit
-                                    wrapMode: Text.WordWrap
-                                    onLinkActivated: (link) => { Qt.openUrlExternally(link); }
-                                }
-                            }
-
-                            footer: null
-                        }
-
-                        onClicked: licenseSheet.open()
+                        onClicked: licenseLoader.open(delegate.modelData.name, delegate.modelData.licenses.text)
                     }
 
                     QQC2.ToolButton {

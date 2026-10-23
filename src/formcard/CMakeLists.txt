@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2022 Devin Lin <devin@kde.org>
+# SPDX-FileCopyrightText: 2026 Carl Schwan <carl@carlschwan.eu>
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 # FormCard module
@@ -97,6 +98,9 @@ target_compile_definitions(formcardplugin PRIVATE -DTRANSLATION_DOMAIN=\"kirigam
 set_source_files_properties(private/FormCardUnits.qml PROPERTIES QT_QML_SINGLETON_TYPE TRUE)
 
 ecm_target_qml_sources(formcardplugin PATH private SOURCES
+    private/AboutDialog.qml
+    private/AboutLicenseDialog.qml
+    private/AboutReleaseDialog.qml
     private/ContentItemLoader.qml
     private/FormCardBackground.qml
     private/FormChoiceDelegateLayout.qml
