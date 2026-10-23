@@ -69,18 +69,6 @@ QQC2.AbstractButton {
     property alias color: avatar.color
 
     /*!
-       \qmlproperty color initialsColor
-       \brief This property holds the color of the avatar's initials.
-     */
-    property alias initialsColor: avatar.initialsColor
-
-    /*!
-       \qmlproperty color defaultInitialsColor
-       \brief This property holds the default color of the avatar's initials.
-     */
-    readonly property alias defaultInitialsColor: avatar.defaultInitialsColor
-
-    /*!
        \qmlproperty Item clippedContent
        \brief This item holds the parent item on the clipped circle.
 

@@ -113,23 +113,6 @@ Item {
     property color color: Components.NameUtils.colorsFromString(name)
 
     /*!
-       \brief This property holds the color of the avatar's initials.
-
-       If not explicitly set, this defaults to defaultInitialsColor.
-
-       \sa defaultInitialsColor
-     */
-    property color initialsColor: defaultInitialsColor
-
-    /*!
-       \qmlproperty color defaultInitialsColor
-       \brief This property holds the default color of the avatar's initials.
-
-       It depends on the avatar's color.
-     */
-    readonly property alias defaultInitialsColor: root.__textColor
-
-    /*!
        \qmlproperty Item clippedContent
        \brief This item holds the parent item on the clipped circle.
 
