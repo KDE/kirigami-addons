@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:51+0000\n"
+"POT-Creation-Date: 2026-10-23 00:47+0000\n"
 "PO-Revision-Date: 2026-09-14 20:10+0200\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -45,12 +45,10 @@ msgstr "Informácie o KDE"
 #, kde-format
 msgctxt "@title:menu"
 msgid "File"
-msgstr ""
+msgstr "Súbor"
 
 #: actions/abstractkirigamiapplication.cpp:209
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title:menu"
 msgid "Settings"
 msgstr "Nastavenia"
@@ -59,7 +57,7 @@ msgstr "Nastavenia"
 #, kde-format
 msgctxt "@title:menu"
 msgid "Help"
-msgstr ""
+msgstr "Pomocník"
 
 #: actions/private/keysequencehelper.cpp:117
 #, kde-format
@@ -224,7 +222,7 @@ msgstr "O prostredí KDE"
 #, kde-format
 msgctxt "@title:window"
 msgid "Failed to Load Application"
-msgstr ""
+msgstr "Nepodarilo sa načítať aplikáciu"
 
 #: app/kirigamiappdefaults.cpp:134
 #, kde-format
@@ -233,12 +231,14 @@ msgid ""
 "Could not load the QML application. This issue might be caused by your "
 "distribution. Please report it to your distribution first."
 msgstr ""
+"Nepodarilo sa načítať aplikáciu QML. Tento problém môže spôsobovať vaša "
+"distribúcia. Nahláste ho najprv vašej distribúcii."
 
 #: app/kirigamiappdefaults.cpp:141
 #, kde-format
 msgctxt "@info"
 msgid "Could not load the QML application."
-msgstr ""
+msgstr "Nepodarilo sa načítať aplikáciu QML."
 
 #: components/AbstractMaximizeComponent.qml:137
 #, kde-format
@@ -292,8 +292,8 @@ msgstr "Predchádzajúci obrázok"
 msgid "Next image"
 msgstr "Ďalší obrázok"
 
-#: components/Banner.qml:185 formcard/AboutPage.qml:239
-#: formcard/AboutPage.qml:353 formcard/AboutPage.qml:754
+#: components/Banner.qml:185 formcard/AboutPage.qml:246
+#: formcard/AboutPage.qml:360 formcard/AboutPage.qml:782
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -519,7 +519,7 @@ msgstr ""
 "the world's finest Free Software. Everyone is welcome to join and contribute "
 "to KDE, including you."
 
-#: formcard/AboutKDEPage.qml:91 formcard/AboutPage.qml:402
+#: formcard/AboutKDEPage.qml:91 formcard/AboutPage.qml:409
 #, kde-format
 msgid "Homepage"
 msgstr "Domovská stránka"
@@ -575,7 +575,7 @@ msgstr ""
 "You can join the language teams that translate program interfaces. You can "
 "provide graphics, themes, sounds, and improved documentation. You decide!"
 
-#: formcard/AboutKDEPage.qml:131 formcard/AboutPage.qml:418
+#: formcard/AboutKDEPage.qml:131 formcard/AboutPage.qml:433
 #, kde-format
 msgid "Get Involved"
 msgstr "Zapojiť sa"
@@ -632,37 +632,44 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "KDE e.V"
 
-#: formcard/AboutKDEPage.qml:165 formcard/AboutPage.qml:410
+#: formcard/AboutKDEPage.qml:165 formcard/AboutPage.qml:417
 #, kde-format
 msgid "Donate"
 msgstr "Venovať peniaze"
 
-#: formcard/AboutPage.qml:167
+#: formcard/AboutPage.qml:144
+#, fuzzy, kde-format
+#| msgid "Release history"
+msgctxt "@action:button"
+msgid "Show release history for %1 %2"
+msgstr "História vydaní"
+
+#: formcard/AboutPage.qml:174
 #, kde-format
 msgid "What's new"
-msgstr ""
+msgstr "Čo je nové"
 
-#: formcard/AboutPage.qml:195
+#: formcard/AboutPage.qml:202
 #, kde-format
 msgid "Copyright"
 msgstr "Copyright"
 
-#: formcard/AboutPage.qml:203
+#: formcard/AboutPage.qml:210
 #, kde-format
 msgid "Release history"
-msgstr ""
+msgstr "História vydaní"
 
-#: formcard/AboutPage.qml:277
+#: formcard/AboutPage.qml:284
 #, kde-format
 msgid "Show older changes…"
-msgstr ""
+msgstr "Zobraziť staršie zmeny…"
 
-#: formcard/AboutPage.qml:289
+#: formcard/AboutPage.qml:296
 #, kde-format
 msgid "Description"
 msgstr "Popis"
 
-#: formcard/AboutPage.qml:302
+#: formcard/AboutPage.qml:309
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
@@ -670,74 +677,85 @@ msgstr[0] "Licencia"
 msgstr[1] "Licencie"
 msgstr[2] "Licencie"
 
-#: formcard/AboutPage.qml:443
+#: formcard/AboutPage.qml:463
 #, kde-format
 msgid "Report a Bug"
 msgstr "Nahlásiť chybu"
 
-#: formcard/AboutPage.qml:456
+#: formcard/AboutPage.qml:476
 #, kde-format
 msgid "Matrix Channel"
 msgstr "Kanál Matrix"
 
-#: formcard/AboutPage.qml:472
+#: formcard/AboutPage.qml:492
 #, kde-format
 msgid "Mastodon"
 msgstr "Mastodon"
 
-#: formcard/AboutPage.qml:484
+#: formcard/AboutPage.qml:504
 #, kde-format
 msgid "Source Code"
 msgstr "Zdrojový kód"
 
-#: formcard/AboutPage.qml:490
+#: formcard/AboutPage.qml:510
 #, kde-format
 msgid "Libraries in use"
 msgstr "Použité knižnice"
 
-#: formcard/AboutPage.qml:494
+#: formcard/AboutPage.qml:514
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "Kopírovať do schránky"
 
-#: formcard/AboutPage.qml:498
+#: formcard/AboutPage.qml:518
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "System information copied to clipboard."
 
-#: formcard/AboutPage.qml:513
+#: formcard/AboutPage.qml:533
 #, kde-format
 msgid "Authors"
 msgstr "Autori"
 
-#: formcard/AboutPage.qml:529
+#: formcard/AboutPage.qml:549
 #, kde-format
 msgid "Credits"
 msgstr "Zásluhy"
 
-#: formcard/AboutPage.qml:545
+#: formcard/AboutPage.qml:565
 #, kde-format
 msgid "Translators"
 msgstr "Prekladatelia"
 
-#: formcard/AboutPage.qml:596
-#, fuzzy, kde-format
-#| msgctxt "@title:dialog"
-#| msgid "Information"
+#: formcard/AboutPage.qml:616
+#, kde-format
 msgid "More information"
-msgstr "Informácia"
+msgstr "Ďalšie informácie"
 
-#: formcard/AboutPage.qml:656
+#: formcard/AboutPage.qml:674 formcard/AboutPage.qml:678
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Navštívte stránku obchodu KDE %1"
 
-#: formcard/AboutPage.qml:665
+#: formcard/AboutPage.qml:685 formcard/AboutPage.qml:689
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Odoslať email pre %1"
+
+#: formcard/AboutPage.qml:696 formcard/AboutPage.qml:816
+#, fuzzy, kde-format
+#| msgid "Visit %1's KDE Store page"
+msgctxt "@action:button"
+msgid "Visit %1's website"
+msgstr "Navštívte stránku obchodu KDE %1"
+
+#: formcard/AboutPage.qml:744
+#, kde-format
+msgctxt "@action:button"
+msgid "Show license for %1"
+msgstr ""
 
 #: formcard/android/FormColorDelegate.qml:42 formcard/FormColorDelegate.qml:52
 #, kde-format
@@ -773,7 +791,7 @@ msgstr "Nenastavené"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset"
-msgstr ""
+msgstr "Obnoviť"
 
 #: formcard/FormFileDelegate.qml:186
 #, kde-format
@@ -847,7 +865,7 @@ msgstr "%1/%2"
 #, kde-format
 msgctxt "@action:button"
 msgid "Done"
-msgstr ""
+msgstr "Hotovo"
 
 #: onboarding/private/OnboardingOverlay.qml:201
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:51+0000\n"
+"POT-Creation-Date: 2026-10-23 00:47+0000\n"
 "PO-Revision-Date: 2026-03-03 12:16+0100\n"
 "Last-Translator: Kjetil Sørlund <translate@sorlund.no>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@nuug.no>\n"
@@ -294,8 +294,8 @@ msgstr "Forrige bilde"
 msgid "Next image"
 msgstr "Neste bilde"
 
-#: components/Banner.qml:185 formcard/AboutPage.qml:239
-#: formcard/AboutPage.qml:353 formcard/AboutPage.qml:754
+#: components/Banner.qml:185 formcard/AboutPage.qml:246
+#: formcard/AboutPage.qml:360 formcard/AboutPage.qml:782
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -521,7 +521,7 @@ msgstr ""
 "gå i. Derimot arbeider vi sammen for å oppnå vårt felles mål om å lage fri "
 "programvare i verdensklasse. Alle er velkomne til å bidra til KDE, du også."
 
-#: formcard/AboutKDEPage.qml:91 formcard/AboutPage.qml:402
+#: formcard/AboutKDEPage.qml:91 formcard/AboutPage.qml:409
 #, kde-format
 msgid "Homepage"
 msgstr "Hjemmeside"
@@ -578,7 +578,7 @@ msgstr ""
 "kan bidra med oversettelser, lage grafikk, tema, lyder eller bedre "
 "hjelpetekster. Her er det noe for alle!"
 
-#: formcard/AboutKDEPage.qml:131 formcard/AboutPage.qml:418
+#: formcard/AboutKDEPage.qml:131 formcard/AboutPage.qml:433
 #, kde-format
 msgid "Get Involved"
 msgstr "Bli med"
@@ -632,111 +632,130 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:165 formcard/AboutPage.qml:410
+#: formcard/AboutKDEPage.qml:165 formcard/AboutPage.qml:417
 #, kde-format
 msgid "Donate"
 msgstr "Gi pengegave"
 
-#: formcard/AboutPage.qml:167
+#: formcard/AboutPage.qml:144
+#, kde-format
+msgctxt "@action:button"
+msgid "Show release history for %1 %2"
+msgstr ""
+
+#: formcard/AboutPage.qml:174
 #, kde-format
 msgid "What's new"
 msgstr ""
 
-#: formcard/AboutPage.qml:195
+#: formcard/AboutPage.qml:202
 #, kde-format
 msgid "Copyright"
 msgstr "Opphavsrett"
 
-#: formcard/AboutPage.qml:203
+#: formcard/AboutPage.qml:210
 #, kde-format
 msgid "Release history"
 msgstr ""
 
-#: formcard/AboutPage.qml:277
+#: formcard/AboutPage.qml:284
 #, kde-format
 msgid "Show older changes…"
 msgstr ""
 
-#: formcard/AboutPage.qml:289
+#: formcard/AboutPage.qml:296
 #, kde-format
 msgid "Description"
 msgstr "Beskrivelse"
 
-#: formcard/AboutPage.qml:302
+#: formcard/AboutPage.qml:309
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "Lisens"
 msgstr[1] "Lisenser"
 
-#: formcard/AboutPage.qml:443
+#: formcard/AboutPage.qml:463
 #, kde-format
 msgid "Report a Bug"
 msgstr "Meld fra om feil"
 
-#: formcard/AboutPage.qml:456
+#: formcard/AboutPage.qml:476
 #, kde-format
 msgid "Matrix Channel"
 msgstr ""
 
-#: formcard/AboutPage.qml:472
+#: formcard/AboutPage.qml:492
 #, kde-format
 msgid "Mastodon"
 msgstr ""
 
-#: formcard/AboutPage.qml:484
+#: formcard/AboutPage.qml:504
 #, kde-format
 msgid "Source Code"
 msgstr ""
 
-#: formcard/AboutPage.qml:490
+#: formcard/AboutPage.qml:510
 #, kde-format
 msgid "Libraries in use"
 msgstr "Brukte bibliotek"
 
-#: formcard/AboutPage.qml:494
+#: formcard/AboutPage.qml:514
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "Kopier til utklippstavla"
 
-#: formcard/AboutPage.qml:498
+#: formcard/AboutPage.qml:518
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "Systeminformasjon kopiert til utklippstavla"
 
-#: formcard/AboutPage.qml:513
+#: formcard/AboutPage.qml:533
 #, kde-format
 msgid "Authors"
 msgstr "Utviklere"
 
-#: formcard/AboutPage.qml:529
+#: formcard/AboutPage.qml:549
 #, kde-format
 msgid "Credits"
 msgstr "Bidragsytere"
 
-#: formcard/AboutPage.qml:545
+#: formcard/AboutPage.qml:565
 #, kde-format
 msgid "Translators"
 msgstr "Oversettere"
 
-#: formcard/AboutPage.qml:596
+#: formcard/AboutPage.qml:616
 #, fuzzy, kde-format
 #| msgctxt "@title:dialog"
 #| msgid "Information"
 msgid "More information"
 msgstr "Informasjon"
 
-#: formcard/AboutPage.qml:656
+#: formcard/AboutPage.qml:674 formcard/AboutPage.qml:678
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Besøk %1-siden i KDE-butikken"
 
-#: formcard/AboutPage.qml:665
+#: formcard/AboutPage.qml:685 formcard/AboutPage.qml:689
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Send e-post til %1"
+
+#: formcard/AboutPage.qml:696 formcard/AboutPage.qml:816
+#, fuzzy, kde-format
+#| msgid "Visit %1's KDE Store page"
+msgctxt "@action:button"
+msgid "Visit %1's website"
+msgstr "Besøk %1-siden i KDE-butikken"
+
+#: formcard/AboutPage.qml:744
+#, kde-format
+msgctxt "@action:button"
+msgid "Show license for %1"
+msgstr ""
 
 #: formcard/android/FormColorDelegate.qml:42 formcard/FormColorDelegate.qml:52
 #, kde-format

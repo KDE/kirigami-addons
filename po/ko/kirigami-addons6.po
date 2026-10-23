@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:51+0000\n"
+"POT-Creation-Date: 2026-10-23 00:47+0000\n"
 "PO-Revision-Date: 2026-10-03 22:34+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -289,8 +289,8 @@ msgstr "이전 그림"
 msgid "Next image"
 msgstr "다음 그림"
 
-#: components/Banner.qml:185 formcard/AboutPage.qml:239
-#: formcard/AboutPage.qml:353 formcard/AboutPage.qml:754
+#: components/Banner.qml:185 formcard/AboutPage.qml:246
+#: formcard/AboutPage.qml:360 formcard/AboutPage.qml:782
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -515,7 +515,7 @@ msgstr ""
 "께 힘을 모으고 있습니다. KDE에는 이 글을 읽는 여러분과 같은 누구나 참여하고 "
 "기여할 수 있습니다."
 
-#: formcard/AboutKDEPage.qml:91 formcard/AboutPage.qml:402
+#: formcard/AboutKDEPage.qml:91 formcard/AboutPage.qml:409
 #, kde-format
 msgid "Homepage"
 msgstr "홈페이지"
@@ -570,7 +570,7 @@ msgstr ""
 "를 번역하는 각 언어 번역팀을 도울 수도 있습니다. 또한 그래픽, 테마, 소리, 더 "
 "나은 문서 등을 기여할 수도 있습니다. 직접 결정하십시오!"
 
-#: formcard/AboutKDEPage.qml:131 formcard/AboutPage.qml:418
+#: formcard/AboutKDEPage.qml:131 formcard/AboutPage.qml:433
 #, kde-format
 msgid "Get Involved"
 msgstr "참여하기"
@@ -623,108 +623,128 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:165 formcard/AboutPage.qml:410
+#: formcard/AboutKDEPage.qml:165 formcard/AboutPage.qml:417
 #, kde-format
 msgid "Donate"
 msgstr "기부하기"
 
-#: formcard/AboutPage.qml:167
+#: formcard/AboutPage.qml:144
+#, fuzzy, kde-format
+#| msgid "Release history"
+msgctxt "@action:button"
+msgid "Show release history for %1 %2"
+msgstr "릴리스 기록"
+
+#: formcard/AboutPage.qml:174
 #, kde-format
 msgid "What's new"
 msgstr "새로운 기능"
 
-#: formcard/AboutPage.qml:195
+#: formcard/AboutPage.qml:202
 #, kde-format
 msgid "Copyright"
 msgstr "저작권"
 
-#: formcard/AboutPage.qml:203
+#: formcard/AboutPage.qml:210
 #, kde-format
 msgid "Release history"
 msgstr "릴리스 기록"
 
-#: formcard/AboutPage.qml:277
+#: formcard/AboutPage.qml:284
 #, kde-format
 msgid "Show older changes…"
 msgstr "이전 변경 사항 표시…"
 
-#: formcard/AboutPage.qml:289
+#: formcard/AboutPage.qml:296
 #, kde-format
 msgid "Description"
 msgstr "설명"
 
-#: formcard/AboutPage.qml:302
+#: formcard/AboutPage.qml:309
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "라이선스"
 
-#: formcard/AboutPage.qml:443
+#: formcard/AboutPage.qml:463
 #, kde-format
 msgid "Report a Bug"
 msgstr "버그 보고"
 
-#: formcard/AboutPage.qml:456
+#: formcard/AboutPage.qml:476
 #, kde-format
 msgid "Matrix Channel"
 msgstr "Matrix 채널"
 
-#: formcard/AboutPage.qml:472
+#: formcard/AboutPage.qml:492
 #, kde-format
 msgid "Mastodon"
 msgstr "마스토돈"
 
-#: formcard/AboutPage.qml:484
+#: formcard/AboutPage.qml:504
 #, kde-format
 msgid "Source Code"
 msgstr "소스 코드"
 
-#: formcard/AboutPage.qml:490
+#: formcard/AboutPage.qml:510
 #, kde-format
 msgid "Libraries in use"
 msgstr "사용하는 라이브러리"
 
-#: formcard/AboutPage.qml:494
+#: formcard/AboutPage.qml:514
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "클립보드에 복사"
 
-#: formcard/AboutPage.qml:498
+#: formcard/AboutPage.qml:518
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "클립보드에 시스템 정보를 복사했습니다."
 
-#: formcard/AboutPage.qml:513
+#: formcard/AboutPage.qml:533
 #, kde-format
 msgid "Authors"
 msgstr "작성자"
 
-#: formcard/AboutPage.qml:529
+#: formcard/AboutPage.qml:549
 #, kde-format
 msgid "Credits"
 msgstr "제작진"
 
-#: formcard/AboutPage.qml:545
+#: formcard/AboutPage.qml:565
 #, kde-format
 msgid "Translators"
 msgstr "번역자"
 
-#: formcard/AboutPage.qml:596
+#: formcard/AboutPage.qml:616
 #, kde-format
 msgid "More information"
 msgstr "더 많은 정보"
 
-#: formcard/AboutPage.qml:656
+#: formcard/AboutPage.qml:674 formcard/AboutPage.qml:678
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "%1의 KDE 스토어 페이지 방문"
 
-#: formcard/AboutPage.qml:665
+#: formcard/AboutPage.qml:685 formcard/AboutPage.qml:689
 #, kde-format
 msgid "Send an email to %1"
 msgstr "%1(으)로 이메일 보내기"
+
+#: formcard/AboutPage.qml:696 formcard/AboutPage.qml:816
+#, fuzzy, kde-format
+#| msgid "Visit %1's KDE Store page"
+msgctxt "@action:button"
+msgid "Visit %1's website"
+msgstr "%1의 KDE 스토어 페이지 방문"
+
+#: formcard/AboutPage.qml:744
+#, kde-format
+msgctxt "@action:button"
+msgid "Show license for %1"
+msgstr ""
 
 #: formcard/android/FormColorDelegate.qml:42 formcard/FormColorDelegate.qml:52
 #, kde-format

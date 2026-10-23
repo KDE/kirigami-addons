@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:51+0000\n"
+"POT-Creation-Date: 2026-10-23 00:47+0000\n"
 "PO-Revision-Date: 2026-09-29 13:05+0200\n"
 "Last-Translator: Libor Filipek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -291,8 +291,8 @@ msgstr "Předchozí obrázek"
 msgid "Next image"
 msgstr "Následující obrázek"
 
-#: components/Banner.qml:185 formcard/AboutPage.qml:239
-#: formcard/AboutPage.qml:353 formcard/AboutPage.qml:754
+#: components/Banner.qml:185 formcard/AboutPage.qml:246
+#: formcard/AboutPage.qml:360 formcard/AboutPage.qml:782
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -518,7 +518,7 @@ msgstr ""
 "Namísto toho spolupracujeme na společném cíli jímž je vytvoření nejlepšího "
 "Free Softwaru. Každý je vítán aby se zapojil a přispíval do KDE, včetně vás."
 
-#: formcard/AboutKDEPage.qml:91 formcard/AboutPage.qml:402
+#: formcard/AboutKDEPage.qml:91 formcard/AboutPage.qml:409
 #, kde-format
 msgid "Homepage"
 msgstr "Domovská stránka"
@@ -575,7 +575,7 @@ msgstr ""
 "programy. Můžete vytvářet grafiku, motivy, zvuky a lepší dokumentaci. Vy se "
 "rozhodněte!"
 
-#: formcard/AboutKDEPage.qml:131 formcard/AboutPage.qml:418
+#: formcard/AboutKDEPage.qml:131 formcard/AboutPage.qml:433
 #, kde-format
 msgid "Get Involved"
 msgstr "Zapojte se"
@@ -629,37 +629,44 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:165 formcard/AboutPage.qml:410
+#: formcard/AboutKDEPage.qml:165 formcard/AboutPage.qml:417
 #, kde-format
 msgid "Donate"
 msgstr "Přispět"
 
-#: formcard/AboutPage.qml:167
+#: formcard/AboutPage.qml:144
+#, fuzzy, kde-format
+#| msgid "Release history"
+msgctxt "@action:button"
+msgid "Show release history for %1 %2"
+msgstr "Historie vydání"
+
+#: formcard/AboutPage.qml:174
 #, kde-format
 msgid "What's new"
 msgstr "Co je nového"
 
-#: formcard/AboutPage.qml:195
+#: formcard/AboutPage.qml:202
 #, kde-format
 msgid "Copyright"
 msgstr "Autorská práva"
 
-#: formcard/AboutPage.qml:203
+#: formcard/AboutPage.qml:210
 #, kde-format
 msgid "Release history"
 msgstr "Historie vydání"
 
-#: formcard/AboutPage.qml:277
+#: formcard/AboutPage.qml:284
 #, kde-format
 msgid "Show older changes…"
 msgstr "Zobrazit starší změny…"
 
-#: formcard/AboutPage.qml:289
+#: formcard/AboutPage.qml:296
 #, kde-format
 msgid "Description"
 msgstr "Popis"
 
-#: formcard/AboutPage.qml:302
+#: formcard/AboutPage.qml:309
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
@@ -667,72 +674,85 @@ msgstr[0] "Licence"
 msgstr[1] "Licence"
 msgstr[2] "Licencí"
 
-#: formcard/AboutPage.qml:443
+#: formcard/AboutPage.qml:463
 #, kde-format
 msgid "Report a Bug"
 msgstr "Nahlásit chybu"
 
-#: formcard/AboutPage.qml:456
+#: formcard/AboutPage.qml:476
 #, kde-format
 msgid "Matrix Channel"
 msgstr "Kanál Matrix"
 
-#: formcard/AboutPage.qml:472
+#: formcard/AboutPage.qml:492
 #, kde-format
 msgid "Mastodon"
 msgstr "Mastodon"
 
-#: formcard/AboutPage.qml:484
+#: formcard/AboutPage.qml:504
 #, kde-format
 msgid "Source Code"
 msgstr "Zdrojový kód"
 
-#: formcard/AboutPage.qml:490
+#: formcard/AboutPage.qml:510
 #, kde-format
 msgid "Libraries in use"
 msgstr "Použité knihovny"
 
-#: formcard/AboutPage.qml:494
+#: formcard/AboutPage.qml:514
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "Zkopírovat do schránky"
 
-#: formcard/AboutPage.qml:498
+#: formcard/AboutPage.qml:518
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "Informace o systému byly zkopírovány do schránky."
 
-#: formcard/AboutPage.qml:513
+#: formcard/AboutPage.qml:533
 #, kde-format
 msgid "Authors"
 msgstr "Autoři"
 
-#: formcard/AboutPage.qml:529
+#: formcard/AboutPage.qml:549
 #, kde-format
 msgid "Credits"
 msgstr "Poděkování"
 
-#: formcard/AboutPage.qml:545
+#: formcard/AboutPage.qml:565
 #, kde-format
 msgid "Translators"
 msgstr "Překladatelé"
 
-#: formcard/AboutPage.qml:596
+#: formcard/AboutPage.qml:616
 #, kde-format
 msgid "More information"
 msgstr "Více informací"
 
-#: formcard/AboutPage.qml:656
+#: formcard/AboutPage.qml:674 formcard/AboutPage.qml:678
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Navštívit stránku KDE Store od %1"
 
-#: formcard/AboutPage.qml:665
+#: formcard/AboutPage.qml:685 formcard/AboutPage.qml:689
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Odeslat e-mail %1"
+
+#: formcard/AboutPage.qml:696 formcard/AboutPage.qml:816
+#, fuzzy, kde-format
+#| msgid "Visit %1's KDE Store page"
+msgctxt "@action:button"
+msgid "Visit %1's website"
+msgstr "Navštívit stránku KDE Store od %1"
+
+#: formcard/AboutPage.qml:744
+#, kde-format
+msgctxt "@action:button"
+msgid "Show license for %1"
+msgstr ""
 
 #: formcard/android/FormColorDelegate.qml:42 formcard/FormColorDelegate.qml:52
 #, kde-format
