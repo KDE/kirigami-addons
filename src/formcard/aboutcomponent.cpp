@@ -151,7 +151,9 @@ void AboutComponent::copyToClipboard()
     }
 
     info += u"Build ABI: "_s + QSysInfo::buildAbi() + u'\n';
-    info += u"Kernel: "_s + QSysInfo::kernelType() + u' ' + QSysInfo::kernelVersion() + u'\n';
+    auto kernel = QSysInfo::kernelType();
+    kernel = kernel.replace(0, 1, kernel[0].toUpper());
+    info += u"Kernel: "_s + kernel + u' ' + QSysInfo::kernelVersion() + u'\n';
 
     QClipboard *clipboard = QGuiApplication::clipboard();
     clipboard->setText(info);
