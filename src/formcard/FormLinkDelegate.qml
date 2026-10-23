@@ -31,6 +31,10 @@ FormCard.FormButtonDelegate {
     trailingLogo.source: LayoutMirroring.enabled ? "open-link-symbolic-rtl" : "open-link-symbolic"
     visible: url.length > 0
 
+    Controls.ToolTip.text: root.url
+    Controls.ToolTip.visible: root.hovered
+    Controls.ToolTip.delay: Kirigami.Units.toolTipDelay
+
     onClicked: Qt.openUrlExternally(url);
     onPressAndHold: {
         const menuItem = menu.createObject(root);
