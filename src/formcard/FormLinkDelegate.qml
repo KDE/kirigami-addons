@@ -37,6 +37,9 @@ FormCard.FormButtonDelegate {
 
     onClicked: Qt.openUrlExternally(url);
     onPressAndHold: {
+        if (!Kirigami.Settings.isMobile) {
+            return;
+        }
         const menuItem = menu.createObject(root);
         menuItem.popup();
     }
