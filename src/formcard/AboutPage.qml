@@ -238,14 +238,14 @@ FormCardPage {
         Layout.topMargin: Kirigami.Units.gridUnit
         Layout.fillWidth: true
 
-        // hide the container if all contents are not visible
-        visible: getInvolvedDelegate.visible
-              || donateDelegate.visible
-              || homepageDelegate.visible
-              || bugDelegate.visible
-              || matrixRoomDelegate.visible
-              || mastodonDelegate.visible
-              || sourceCodeDelegate.visible
+        // Use URLs because delegate visibility also depends on this container's visibility.
+        visible: getInvolvedDelegate.url.length > 0
+              || donateDelegate.url.length > 0
+              || homepageDelegate.url.length > 0
+              || bugDelegate.url.length > 0
+              || matrixRoomDelegate.url.length > 0
+              || mastodonDelegate.url.length > 0
+              || sourceCodeDelegate.url.length > 0
 
         FormLinkDelegate {
             id: getInvolvedDelegate

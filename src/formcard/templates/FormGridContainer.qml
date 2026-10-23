@@ -238,8 +238,13 @@ Item {
                     readonly property Item _firstVisibleItem: cell.delegateItem
                     readonly property Item _lastVisibleItem: cell.delegateItem
 
-                    anchors.fill: parent
-                    anchors.margins: root._borderWidth
+                    // Keep the delegate outside the cell so hiding the cell does not
+                    // change the delegate visibility that the cell depends on.
+                    parent: root
+                    x: delegateGrid.x + cell.x + root._borderWidth
+                    y: delegateGrid.y + cell.y + root._borderWidth
+                    width: Math.max(0, cell.width - root._borderWidth * 2)
+                    height: Math.max(0, cell.height - root._borderWidth * 2)
                     contentItem: cell.delegateItem
                 }
             }
