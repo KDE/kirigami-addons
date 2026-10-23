@@ -4,6 +4,7 @@
 pragma ComponentBehavior: Bound
 
 import QtQuick
+import org.kde.ki18n
 import org.kde.kirigamiaddons.settings as KirigamiSettings
 
 KirigamiSettings.ConfigurationView {
@@ -12,7 +13,7 @@ KirigamiSettings.ConfigurationView {
     modules: [
         KirigamiSettings.ConfigurationModule {
             moduleId: "general"
-            text: i18nc("@action:button", "General")
+            text: KI18n.i18nc("@action:button", "General")
             icon.name: "preferences-system-symbolic"
             page: () => Qt.createComponent("org.kde.%{APPNAMELC}.settings", "GeneralPage")
         }

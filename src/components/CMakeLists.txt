@@ -64,7 +64,7 @@ ecm_add_qml_module(componentslabsplugin
     URI "org.kde.kirigamiaddons.labs.components"
     VERSION 1.0
     GENERATE_PLUGIN_SOURCE
-    DEPENDENCIES org.kde.kirigamiaddons.components QtMultimedia Qt.labs.qmlmodels
+    DEPENDENCIES org.kde.kirigamiaddons.private org.kde.kirigamiaddons.components QtMultimedia Qt.labs.qmlmodels
 )
 
 ecm_generate_qdoc(componentslabsplugin kirigamiaddonscomponents.qdocconf)
@@ -98,6 +98,7 @@ ecm_add_qml_module(componentsplugin
     VERSION 1.0
     CLASS_NAME ComponentsPlugin
     DEPENDENCIES
+        org.kde.kirigamiaddons.private
         org.kde.kirigami
         org.kde.kirigamiaddons.components.templates
         Qt.labs.qmlmodels

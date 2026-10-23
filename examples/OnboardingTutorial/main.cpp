@@ -10,7 +10,6 @@
 
 #include <utility>
 
-#include <KLocalizedContext>
 #include <KLocalizedQmlContext>
 #include <KLocalizedString>
 

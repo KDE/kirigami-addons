@@ -13,6 +13,7 @@ ecm_add_qml_module(%{APPNAMELC}_static
         qml/GridBrowserDelegate.qml
         qml/Sidebar.qml
     DEPENDENCIES
+        org.kde.ki18n
         org.kde.kirigamiaddons.formcard
         org.kde.kirigamiaddons.actions
         org.kde.kirigami

@@ -5,6 +5,7 @@ import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.actions as KirigamiActions
 import org.kde.kirigamiaddons.formcard as FormCard
@@ -17,7 +18,7 @@ KirigamiActions.StatefulWindow {
 
     property int counter: 0
 
-    title: i18nc("@title:window", "%{APPNAME}")
+    title: KI18n.i18nc("@title:window", "%{APPNAME}")
 
     windowName: "%{APPNAME}"
 
@@ -30,7 +31,7 @@ KirigamiActions.StatefulWindow {
 
     Kirigami.Action {
         id: incrementCounterAction
-        text: i18nc("@action:inmenu", "Increment")
+        text: KI18n.i18nc("@action:inmenu", "Increment")
         onTriggered: root.counter += 1
     }
 
@@ -80,7 +81,7 @@ KirigamiActions.StatefulWindow {
     pageStack.initialPage: FormCard.FormCardPage {
         id: page
 
-        title: i18nc("@title", "%{APPNAME}")
+        title: KI18n.i18nc("@title", "%{APPNAME}")
 
         actions: [incrementCounterAction]
 
@@ -94,7 +95,7 @@ KirigamiActions.StatefulWindow {
         }
 
         Kirigami.Heading {
-            text: i18nc("@title", "Welcome to %{APPNAME}") + '\n' + i18nc("@info:status", "Counter: %1", root.counter)
+            text: KI18n.i18nc("@title", "Welcome to %{APPNAME}") + '\n' + KI18n.i18nc("@info:status", "Counter: %1", root.counter)
             horizontalAlignment: Qt.AlignHCenter
 
             Layout.topMargin: Kirigami.Units.largeSpacing

@@ -7,6 +7,7 @@
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls as Controls
+import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCard
 import org.kde.kirigamiaddons.settings
@@ -23,7 +24,7 @@ FormCard.FormCardPage {
 
     property bool initDone: false
 
-    title: i18ndc("kirigami-addons6", "@title", "Settings")
+    title: I18n.i18nc("@title", "Settings")
 
     Connections {
         target: window.pageStack.layers
@@ -96,7 +97,7 @@ FormCard.FormCardPage {
             spacing: 0
 
             FormCard.FormHeader {
-                title: categoryDelegate.modelData.name === "_main_category" ? i18ndc("kirigami-addons6", "@title:group", "Settings") : modelData.name
+                title: categoryDelegate.modelData.name === "_main_category" ? I18n.i18nc("@title:group", "Settings") : modelData.name
             }
 
             // settings categories

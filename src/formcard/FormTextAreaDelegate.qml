@@ -7,6 +7,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 
+import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
 
 import "private" as Private
@@ -184,7 +185,7 @@ AbstractFormDelegate {
                     font: Kirigami.Theme.smallFont
 
                     function label(current: int, maximum: int): string {
-                        return i18nc("@label %1 is current text length, %2 is maximum length of text field", "%1/%2", current, maximum)
+                        return I18n.i18nc("@label %1 is current text length, %2 is maximum length of text field", "%1/%2", current, maximum)
                     }
                 }
                 visible:root.maximumLength != -1

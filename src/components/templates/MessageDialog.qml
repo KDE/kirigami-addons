@@ -8,6 +8,7 @@ import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Templates as T
 import QtQuick.Layouts
+import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.components as Components
 
@@ -236,15 +237,15 @@ T.Dialog {
 
     title: switch (root.dialogType) {
     case MessageDialog.Success:
-        return i18ndc("kirigami-addons6", "@title:dialog", "Success");
+        return I18n.i18nc("@title:dialog", "Success");
     case MessageDialog.Warning:
-        return i18ndc("kirigami-addons6", "@title:dialog", "Warning");
+        return I18n.i18nc("@title:dialog", "Warning");
     case MessageDialog.Error:
-        return i18ndc("kirigami-addons6", "@title:dialog", "Error");
+        return I18n.i18nc("@title:dialog", "Error");
     case MessageDialog.Information:
-        return i18ndc("kirigami-addons6", "@title:dialog", "Information");
+        return I18n.i18nc("@title:dialog", "Information");
     default:
-        return i18ndc("kirigami-addons6", "@title:dialog", "Warning");
+        return I18n.i18nc("@title:dialog", "Warning");
     }
 
     padding: Kirigami.Units.largeSpacing * 2
@@ -370,7 +371,7 @@ T.Dialog {
             id: checkbox
 
             visible: root.dontShowAgainName.length > 0 && root._supportsRememberedChoice
-            text: i18ndc("kirigami-addons6", "@label:checkbox", "Do not show again")
+            text: I18n.i18nc("@label:checkbox", "Do not show again")
             background: null
 
             Layout.fillWidth: true

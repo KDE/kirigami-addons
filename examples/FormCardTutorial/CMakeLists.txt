@@ -17,7 +17,7 @@ find_package(Qt6 REQUIRED COMPONENTS
 )
 find_package(KF6 REQUIRED COMPONENTS
     CoreAddons # For KAboutData
-    I18n       # For KLocalizedContext
+    I18n       # For translations
 )
 qt_policy(SET QTP0001 NEW)
 
@@ -28,6 +28,7 @@ target_sources(addonsexample PRIVATE main.cpp)
 ecm_add_qml_module(addonsexample
     GENERATE_PLUGIN_SOURCE
     URI org.kde.addonsexample
+    DEPENDENCIES org.kde.ki18n
 )
 
 ecm_target_qml_sources(addonsexample SOURCES
@@ -42,6 +43,7 @@ target_link_libraries(addonsexample PRIVATE
     Qt::QuickControls2
     KF6::CoreAddons
     KF6::I18n
+    KF6::I18nQml
 )
 
 install(TARGETS addonsexample DESTINATION ${KDE_INSTALL_BINDIR})

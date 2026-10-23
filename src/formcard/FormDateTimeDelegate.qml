@@ -4,6 +4,7 @@
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls as QQC2
+import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.dateandtime as DateTime
 import org.kde.kirigamiaddons.components as Components
@@ -229,7 +230,7 @@ AbstractFormDelegate {
                     if (root.value.getFullYear() === today.getFullYear()
                         && root.value.getDate() === today.getDate()
                         && root.value.getMonth() == today.getMonth()) {
-                        return i18ndc("kirigami-addons6", "Displayed in place of the date if the selected day is today", "Today");
+                        return I18n.i18nc("Displayed in place of the date if the selected day is today", "Today");
                     }
                     const locale = Qt.locale();
                     const weekDay = root.value.toLocaleDateString(locale, "ddd, ");
@@ -256,7 +257,7 @@ AbstractFormDelegate {
 
                     return weekDay + root.value.toLocaleDateString(locale, dateFormat);
                 } else {
-                    i18ndc("kirigami-addons6", "Date is not set", "Not set")
+                    I18n.i18nc("Date is not set", "Not set")
                 }
 
                 contentItem: RowLayout {
@@ -307,7 +308,7 @@ AbstractFormDelegate {
                     if (Qt.platform.os === 'android') {
                         androidPickerActive = true;
                         DateTime.AndroidIntegration.showDatePicker(value.getTime(), root.resettable,
-                            i18ndc("kirigami-addons6", "@action:button", "Reset"));
+                            I18n.i18nc("@action:button", "Reset"));
                     } else {
                         const item = datePopup.createObject(root.popupParent, {
                             value: value,
@@ -409,7 +410,7 @@ AbstractFormDelegate {
                         .replace(':ss', '');
                     return root.value.toLocaleTimeString(locale, timeFormat);
                 } else {
-                    return i18ndc("kirigami-addons6", "Date is not set", "Not set");
+                    return I18n.i18nc("Date is not set", "Not set");
                 }
 
                 onClicked: {
@@ -425,7 +426,7 @@ AbstractFormDelegate {
                     if (Qt.platform.os === 'android') {
                         androidPickerActive = true;
                         DateTime.AndroidIntegration.showTimePicker(value.getTime(), root.resettable,
-                            i18ndc("kirigami-addons6", "@action:button", "Reset"));
+                            I18n.i18nc("@action:button", "Reset"));
                     } else {
                         const popup = timePopup.createObject(root.popupParent, {
                             value: value,

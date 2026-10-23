@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Layouts
 
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCard
 
@@ -31,19 +32,19 @@ Kirigami.ApplicationWindow {
 
                 FormCard.FormButtonDelegate {
                     icon.name: "kde"
-                    text: i18nc("@action:button", "About KDE Page")
+                    text: KI18n.i18nc("@action:button", "About KDE Page")
                     onClicked: root.pageStack.layers.push(aboutkde)
                 }
 
                 FormCard.FormButtonDelegate {
                     icon.name: "applications-utilities"
-                    text: i18nc("@action:button", "About Addons Example")
+                    text: KI18n.i18nc("@action:button", "About Addons Example")
                     onClicked: root.pageStack.layers.push(aboutpage)
                 }
 
                 FormCard.FormButtonDelegate {
                     icon.name: "settings-configure"
-                    text: i18nc("@action:button", "Single Settings Page")
+                    text: KI18n.i18nc("@action:button", "Single Settings Page")
                     onClicked: root.pageStack.layers.push(settingspage)
                 }
             }

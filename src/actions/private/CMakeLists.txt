@@ -5,6 +5,7 @@ ecm_add_qml_module(statefulappprivateplugin
     URI "org.kde.kirigamiaddons.statefulapp.private"
     GENERATE_PLUGIN_SOURCE
     DEPENDENCIES
+        org.kde.kirigamiaddons.private
         "org.kde.kirigami"
         "org.kde.kirigamiaddons.delegates"
         "org.kde.kirigamiaddons.components"

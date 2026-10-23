@@ -6,6 +6,7 @@
 import QtQuick
 import QtQuick.Controls as QQC2
 
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.tableview as Tables
 import org.kde.kirigamiaddons.BookListModel
@@ -13,7 +14,7 @@ import org.kde.kirigamiaddons.BookListModel
 Kirigami.Page {
     id: root
 
-    title: i18nc("@title:group", "Table View for QAbstractListModel")
+    title: KI18n.i18nc("@title:group", "Table View for QAbstractListModel")
 
     topPadding: 0
     leftPadding: 0
@@ -63,14 +64,14 @@ Kirigami.Page {
             headerComponents: [
                 Tables.HeaderComponent {
                     width: 200
-                    title: i18nc("@title:column", "Book")
+                    title: KI18n.i18nc("@title:column", "Book")
                     textRole: "title"
                     role: BookRoles.TitleRole
                 },
 
                 Tables.HeaderComponent {
                     width: 200
-                    title: i18nc("@title:column", "Author")
+                    title: KI18n.i18nc("@title:column", "Author")
                     textRole: "author"
                     role: BookRoles.AuthorRole
                     draggable: true
@@ -84,7 +85,7 @@ Kirigami.Page {
 
                 Tables.HeaderComponent {
                     width: 100
-                    title: i18nc("@title:column", "Year")
+                    title: KI18n.i18nc("@title:column", "Year")
                     textRole: "year"
                     role: BookRoles.YearRole
                     draggable: true
@@ -92,7 +93,7 @@ Kirigami.Page {
 
                 Tables.HeaderComponent {
                     width: 100
-                    title: i18nc("@title:column", "Rating")
+                    title: KI18n.i18nc("@title:column", "Rating")
                     textRole: "rating"
                     role: BookRoles.RatingRole
                     draggable: true

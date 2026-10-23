@@ -5,6 +5,7 @@
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
+import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.dateandtime
 import org.kde.kirigamiaddons.components as Components
@@ -272,13 +273,13 @@ QQC2.Control {
                     Accessible.focused: parent.activeFocus
                     Accessible.name: {
                         if (modelData.action === dayAction) {
-                            return i18nd("kirigami-addons6", "Day")
+                            return I18n.i18n("Day")
                         }
                         if (modelData.action === monthAction) {
-                            return i18nd("kirigami-addons6", "Month")
+                            return I18n.i18n("Month")
                         }
                         if (modelData.action === yearsViewCheck) {
-                            return i18nd("kirigami-addons6", "Year")
+                            return I18n.i18n("Year")
                         }
                         return ""
                     }
@@ -363,7 +364,7 @@ QQC2.Control {
                     Kirigami.Action {
                         id: goPreviousAction
                         icon.name: Application.layoutDirection === Qt.RightToLeft ? 'go-previous-rtl-symbolic' : 'go-previous-view-symbolic'
-                        text: i18ndc("kirigami-addons6", "@action:button", "Go Previous")
+                        text: I18n.i18nc("@action:button", "Go Previous")
                         displayHint: Kirigami.DisplayHint.IconOnly
                         onTriggered: {
                             if (pickerView.currentIndex === 1) { // monthGrid index
@@ -376,14 +377,14 @@ QQC2.Control {
                         }
                     },
                     Kirigami.Action {
-                        text: i18ndc("kirigami-addons6", "@action:button", "Jump to today")
+                        text: I18n.i18nc("@action:button", "Jump to today")
                         displayHint: Kirigami.DisplayHint.IconOnly
                         icon.name: 'go-jump-today-symbolic'
                         onTriggered: goToday()
                     },
                     Kirigami.Action {
                         id: goNextAction
-                        text: i18ndc("kirigami-addons6", "@action:button", "Go Next")
+                        text: I18n.i18nc("@action:button", "Go Next")
                         icon.name: Application.layoutDirection === Qt.RightToLeft ? 'go-next-rtl-symbolic' : 'go-next-view-symbolic'
                         displayHint: Kirigami.DisplayHint.IconOnly
                         onTriggered: {

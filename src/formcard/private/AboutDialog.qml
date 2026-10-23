@@ -4,6 +4,7 @@
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
+import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.components as KirigamiComponents
 
@@ -39,7 +40,7 @@ QQC2.Dialog {
 
             QQC2.ToolButton {
                 icon.name: hovered ? "window-close" : "window-close-symbolic"
-                text: i18ndc("kirigami-addons6", "@action:button", "Close")
+                text: I18n.i18nc("@action:button", "Close")
                 display: QQC2.ToolButton.IconOnly
                 onClicked: root.close()
             }

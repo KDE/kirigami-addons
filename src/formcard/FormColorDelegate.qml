@@ -6,6 +6,7 @@ import QtQuick.Controls as Controls
 import QtQuick.Layouts
 import Qt.labs.platform
 
+import org.kde.kirigamiaddons.private
 import org.kde.kirigamiaddons.formcard as FormCard
 import org.kde.kirigami as Kirigami
 
@@ -49,8 +50,8 @@ FormCard.AbstractFormDelegate {
        \qmlproperty FormColorDelegate::text
        \default "Color"
      */
-    text: i18ndc("kirigami-addons6", "@action:button", "Color")
-    Accessible.description: i18ndc("kirigami-addons6", "Accessible description", "Current color \"%1\"", color)
+    text: I18n.i18nc("@action:button", "Color")
+    Accessible.description: I18n.i18nc("Accessible description", "Current color \"%1\"", color)
 
     contentItem: RowLayout {
         spacing: 0

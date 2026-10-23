@@ -6,6 +6,7 @@ import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Window
 import QtQuick.Layouts
+import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.components as KirigamiComponents
 import org.kde.kirigamiaddons.formcard as FormCardModule
@@ -123,7 +124,7 @@ FormCardPage {
         value: page.aboutData.releases ? page.aboutData.releases.map(release => release.version) : []
     }
 
-    title: i18nd("kirigami-addons6", "About %1", page.aboutData.displayName)
+    title: I18n.i18n("About %1", page.aboutData.displayName)
 
     FormCard {
         Layout.topMargin: Kirigami.Units.largeSpacing * 4
@@ -139,7 +140,7 @@ FormCardPage {
             hoverEnabled: hasReleases
             Accessible.role: hasReleases ? Accessible.Button : Accessible.StaticText
             Accessible.name: hasReleases
-                ? i18ndc("kirigami-addons6", "@action:button", "Show release history for %1 %2", page.aboutData.displayName, page.aboutData.version)
+                ? I18n.i18nc("@action:button", "Show release history for %1 %2", page.aboutData.displayName, page.aboutData.version)
                 : page.aboutData.displayName + " " + page.aboutData.version
             background.visible: hasReleases
 
@@ -169,7 +170,7 @@ FormCardPage {
 
                         Kirigami.Badge {
                             visible: FormCardModule.AboutComponent.hasNewReleases
-                            text: i18nd("kirigami-addons6", "What's new")
+                            text: I18n.i18n("What's new")
                             type: Kirigami.Badge.Type.Positive
                         }
                     }
@@ -195,7 +196,7 @@ FormCardPage {
         FormTextDelegate {
             id: copyrightDelegate
             visible: aboutData.copyrightStatement.length > 0
-            text: i18nd("kirigami-addons6", "Copyright")
+            text: I18n.i18n("Copyright")
             descriptionItem.textFormat: Text.PlainText
             description: aboutData.copyrightStatement
         }
@@ -203,7 +204,7 @@ FormCardPage {
 
     FormHeader {
         visible: aboutData.otherText.length > 0
-        title: i18nd("kirigami-addons6", "Description")
+        title: I18n.i18n("Description")
     }
 
     FormCard {
@@ -216,7 +217,7 @@ FormCardPage {
     }
 
     FormHeader {
-        title: i18ndp("kirigami-addons6", "License", "Licenses", aboutData.licenses.length)
+        title: I18n.i18np("License", "Licenses", aboutData.licenses.length)
         visible: aboutData.licenses.length
     }
 
@@ -249,7 +250,7 @@ FormCardPage {
         FormLinkDelegate {
             id: getInvolvedDelegate
             icon.name: "globe-symbolic"
-            text: i18nd("kirigami-addons6", "Homepage")
+            text: I18n.i18n("Homepage")
             url: aboutData.homepage
             visible: aboutData.homepage.length > 0
         }
@@ -257,7 +258,7 @@ FormCardPage {
         FormLinkDelegate {
             id: donateDelegate
             icon.name: "donate-symbolic"
-            text: i18nd("kirigami-addons6", "Donate")
+            text: I18n.i18n("Donate")
             url: {
                 if (page.donateUrl.toString().length === 0) {
                     return "";
@@ -273,7 +274,7 @@ FormCardPage {
         FormLinkDelegate {
             id: homepageDelegate
             icon.name: "applications-development-symbolic"
-            text: i18nd("kirigami-addons6", "Get Involved")
+            text: I18n.i18n("Get Involved")
             url: page.getInvolvedUrl
             visible: page.getInvolvedUrl != ""
         }
@@ -303,7 +304,7 @@ FormCardPage {
             }
 
             icon.name: "tools-report-bug-symbolic"
-            text: i18nd("kirigami-addons6", "Report a Bug")
+            text: I18n.i18n("Report a Bug")
             visible: url.length > 0
         }
 
@@ -316,7 +317,7 @@ FormCardPage {
                 return s.startsWith("http") ? s : s != "" ? "https://matrix.to/#/" + s : "";
             }
             icon.name: "im-matrix"
-            text: i18nd("kirigami-addons6", "Matrix Channel")
+            text: I18n.i18n("Matrix Channel")
             visible: url.length > 0
         }
 
@@ -332,7 +333,7 @@ FormCardPage {
                 return m ? ("https://" + m[2] + "/" + m[1]) : ""
             }
             icon.name: "im-mastodon"
-            text: i18nd("kirigami-addons6", "Mastodon")
+            text: I18n.i18n("Mastodon")
             visible: url.length > 0
         }
 
@@ -344,21 +345,21 @@ FormCardPage {
                 page.aboutData.url(Core.AboutUrlType?.VCSBrowser)
             }
             icon.name: "code-context-symbolic"
-            text: i18nd("kirigami-addons6", "Source Code")
+            text: I18n.i18n("Source Code")
             visible: url.length > 0
         }
     }
 
     FormHeader {
-        title: i18nd("kirigami-addons6", "Libraries in use")
+        title: I18n.i18n("Libraries in use")
         visible: page.showLibraries
 
         actions: QQC2.Action {
-            text: i18ndc("kirigami-addons6", "@action:button", "Copy to Clipboard")
+            text: I18n.i18nc("@action:button", "Copy to Clipboard")
             icon.name: 'edit-copy-symbolic'
             onTriggered: {
                 FormCardModule.AboutComponent.copyToClipboard();
-                page.QQC2.ApplicationWindow.window.showPassiveNotification(i18ndc("kirigami-addons6", "@info", "System information copied to clipboard."), 'short');
+                page.QQC2.ApplicationWindow.window.showPassiveNotification(I18n.i18nc("@info", "System information copied to clipboard."), 'short');
             }
         }
     }
@@ -373,7 +374,7 @@ FormCardPage {
     }
 
     FormHeader {
-        title: i18nd("kirigami-addons6", "Authors")
+        title: I18n.i18n("Authors")
         visible: aboutData.authors !== undefined && aboutData.authors.length > 0
     }
 
@@ -389,7 +390,7 @@ FormCardPage {
     }
 
     FormHeader {
-        title: i18nd("kirigami-addons6", "Credits")
+        title: I18n.i18n("Credits")
         visible: aboutData.credits !== undefined && aboutData.credits.length > 0
     }
 
@@ -405,7 +406,7 @@ FormCardPage {
     }
 
     FormHeader {
-        title: i18nd("kirigami-addons6", "Translators")
+        title: I18n.i18n("Translators")
         visible: aboutData.translators !== undefined && aboutData.translators.length > 0
     }
 
@@ -512,29 +513,29 @@ FormCardPage {
                     QQC2.ToolButton {
                         visible: typeof(modelData.ocsUsername) !== "undefined" && modelData.ocsUsername.length > 0
                         icon.name: "get-hot-new-stuff-symbolic"
-                        text: i18nd("kirigami-addons6", "Visit %1's KDE Store page", modelData.name)
+                        text: I18n.i18n("Visit %1's KDE Store page", modelData.name)
                         display: QQC2.ToolButton.IconOnly
                         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                         QQC2.ToolTip.visible: hovered
-                        QQC2.ToolTip.text: i18nd("kirigami-addons6", "Visit %1's KDE Store page", modelData.name)
+                        QQC2.ToolTip.text: I18n.i18n("Visit %1's KDE Store page", modelData.name)
                         onClicked: Qt.openUrlExternally("https://store.kde.org/u/%1".arg(modelData.ocsUsername))
                     }
 
                     QQC2.ToolButton {
                         visible: typeof(modelData.emailAddress) !== "undefined" && modelData.emailAddress.length > 0
                         icon.name: "mail-sent-symbolic"
-                        text: i18nd("kirigami-addons6", "Send an email to %1", modelData.emailAddress)
+                        text: I18n.i18n("Send an email to %1", modelData.emailAddress)
                         display: QQC2.ToolButton.IconOnly
                         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                         QQC2.ToolTip.visible: hovered
-                        QQC2.ToolTip.text: i18nd("kirigami-addons6", "Send an email to %1", modelData.emailAddress)
+                        QQC2.ToolTip.text: I18n.i18n("Send an email to %1", modelData.emailAddress)
                         onClicked: Qt.openUrlExternally("mailto:%1".arg(modelData.emailAddress))
                     }
 
                     QQC2.ToolButton {
                         visible: typeof(modelData.webAddress) !== "undefined" && modelData.webAddress.length > 0
                         icon.name: "globe-symbolic"
-                        text: i18ndc("kirigami-addons6", "@action:button", "Visit %1's website", modelData.name)
+                        text: I18n.i18nc("@action:button", "Visit %1's website", modelData.name)
                         display: QQC2.ToolButton.IconOnly
                         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                         QQC2.ToolTip.visible: hovered
@@ -582,7 +583,7 @@ FormCardPage {
                         id: licenseButton
                         visible: modelData.licenses.key !== 0
                         icon.name: "license-symbolic"
-                        text: i18ndc("kirigami-addons6", "@action:button", "Show license for %1", delegate.modelData.name)
+                        text: I18n.i18nc("@action:button", "Show license for %1", delegate.modelData.name)
                         display: QQC2.ToolButton.IconOnly
 
                         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
@@ -595,7 +596,7 @@ FormCardPage {
                     QQC2.ToolButton {
                         visible: typeof(modelData.webAddress) !== "undefined" && modelData.webAddress.length > 0
                         icon.name: "globe-symbolic"
-                        text: i18ndc("kirigami-addons6", "@action:button", "Visit %1's website", delegate.modelData.name)
+                        text: I18n.i18nc("@action:button", "Visit %1's website", delegate.modelData.name)
                         display: QQC2.ToolButton.IconOnly
                         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                         QQC2.ToolTip.visible: hovered

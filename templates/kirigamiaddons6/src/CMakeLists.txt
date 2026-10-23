@@ -10,6 +10,7 @@ ecm_add_qml_module(%{APPNAMELC}_static
     QML_FILES
         qml/Main.qml
     DEPENDENCIES
+        org.kde.ki18n
         org.kde.kirigamiaddons.formcard
         org.kde.kirigamiaddons.actions
         org.kde.kirigami
@@ -19,6 +20,7 @@ ecm_add_qml_module(%{APPNAMELC}_static
 target_link_libraries(%{APPNAMELC}_static PUBLIC
     Qt6::Quick
     KF6::I18n
+    KF6::I18nQml
     KF6::CoreAddons
     KF6::ConfigGui
     KirigamiAddonsActions
@@ -35,7 +37,6 @@ if (ANDROID)
 else()
     target_link_libraries(%{APPNAMELC}_static PUBLIC
         Qt::Widgets
-        KF6::I18nQml
     )
 endif()
 

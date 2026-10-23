@@ -8,6 +8,7 @@ import QtQml.Models
 import QtQuick.Layouts
 import QtQuick.Effects
 
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.delegates as Delegates
 import org.kde.quickcharts as Charts
@@ -127,7 +128,7 @@ Delegates.RoundedItemDelegate {
             QQC2.Label {
                 visible: root.currentProgress === 0 && root.fallBackIconName === ''
 
-                text: i18nc("should be keep short, inside a label. Will be in uppercase", "New")
+                text: KI18n.i18nc("should be keep short, inside a label. Will be in uppercase", "New")
                 color: "white"
                 padding: 3
 

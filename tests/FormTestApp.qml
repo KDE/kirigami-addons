@@ -10,6 +10,7 @@ import QtQuick.Layouts
 import QtQuick.Layouts
 import QtQuick.Dialogs
 
+import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCard
 import org.kde.kirigamiaddons.components as Components
@@ -27,23 +28,6 @@ Kirigami.ApplicationWindow {
     pageStack.globalToolBar.showNavigationButtons: Kirigami.ApplicationHeaderStyle.ShowBackButton
 
     pageStack.initialPage: pageComponent
-    // Dummy implementation of ki18n
-    function i18nd(context, text) {
-        return text;
-    }
-
-    function i18ndp(context, text1, text2, number) {
-        return number === 1 ? text1 : text2;
-    }
-
-    function i18nc(context, text) {
-        return text;
-    }
-
-    function i18ndc(context, strng, text) {
-        return text;
-    }
-
     LayoutMirroring.enabled: false
 
     FormCard.FormCardDialog {
@@ -55,16 +39,16 @@ Kirigami.ApplicationWindow {
         standardButtons: Controls.Dialog.Ok | Controls.Dialog.Cancel
 
         FormCard.FormTextFieldDelegate {
-            label: i18nc("@label:textbox Notebook name", "Name:")
+            label: I18n.i18nc("@label:textbox Notebook name", "Name:")
         }
 
         FormCard.FormButtonDelegate {
-            text: i18nc("@action:button", "Color")
+            text: I18n.i18nc("@action:button", "Color")
             icon.name: "color-picker"
         }
 
         FormCard.FormButtonDelegate {
-            text: i18nc("@action:button", "Icon")
+            text: I18n.i18nc("@action:button", "Icon")
             icon.name: "preferences-desktop-emoticons"
         }
     }

@@ -4,7 +4,7 @@
  */
 
 #include <KAboutData>
-#include <KLocalizedContext>
+#include <KLocalizedQmlContext>
 #include <KLocalizedString>
 #include <QApplication>
 #include <QIcon>
@@ -81,7 +81,7 @@ int main(int argCount, char *argVector[])
     tableProxy->sort(BookTableModel::YearRole, Qt::AscendingOrder);
 
     QQmlApplicationEngine engine;
-    engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
+    KLocalization::setupLocalizedContext(&engine);
     engine.rootContext()->setContextProperty(QStringLiteral("bookListModel"), listProxy);
     engine.rootContext()->setContextProperty(QStringLiteral("bookTableModel"), tableProxy);
     engine.load(QStringLiteral("qrc:/main.qml"));

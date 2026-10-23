@@ -5,6 +5,7 @@ import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Templates as T
 import QtQuick.Layouts
+import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
 
 /*!
@@ -182,7 +183,7 @@ T.ToolBar {
             id: closeButton
 
             visible: root.showCloseButton
-            text: i18ndc("kirigami-addons6", "@action:button", "Close")
+            text: I18n.i18nc("@action:button", "Close")
 
             icon.name: "dialog-close"
             display: QQC2.ToolButton.IconOnly

@@ -7,6 +7,7 @@ import QtQuick
 import QtQml
 import QtQuick.Layouts
 
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCard
 
@@ -31,12 +32,12 @@ Kirigami.ApplicationWindow {
             autoSeparators: true
 
             FormCard.FormButtonDelegate {
-                text: i18nc("@title:action", "Table View for QAbstractTableModel")
+                text: KI18n.i18nc("@title:action", "Table View for QAbstractTableModel")
                 onClicked: root.pageStack.layers.push(tableviewpage)
             }
 
             FormCard.FormButtonDelegate {
-                text: i18nc("@title:action", "Table View for QAbstractListModel")
+                text: KI18n.i18nc("@title:action", "Table View for QAbstractListModel")
                 onClicked: root.pageStack.layers.push(listtableviewpage)
             }
         }

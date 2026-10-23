@@ -5,23 +5,19 @@ import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 
+import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.components as Components
 
 Kirigami.ApplicationWindow {
     id: root
 
-    title: i18n("RadioSelector Test")
+    title: I18n.i18n("RadioSelector Test")
 
     minimumWidth: Kirigami.Units.gridUnit * 20
     minimumHeight: Kirigami.Units.gridUnit * 20
 
     pageStack.initialPage: page
-
-    // Dummy implementation of ki18n
-    function i18n(text) {
-        return text;
-    }
 
     Kirigami.Page {
         id: page
@@ -51,15 +47,15 @@ Kirigami.ApplicationWindow {
                         consistentWidth: false
                         actions: [
                             Kirigami.Action {
-                                text: i18n("Week")
+                                text: I18n.i18n("Week")
                                 icon.name:  "view-calendar-week"
                             },
                             Kirigami.Action {
-                                text: i18n("3 Days")
+                                text: I18n.i18n("3 Days")
                                 icon.name:  "view-calendar-upcoming-days"
                             },
                             Kirigami.Action {
-                                text: i18n("1 Day")
+                                text: I18n.i18n("1 Day")
                                 icon.name:  "view-calendar-day"
                             }
                         ]
@@ -84,15 +80,15 @@ Kirigami.ApplicationWindow {
                 consistentWidth: false
                 actions: [
                     Kirigami.Action {
-                        text: i18n("Songs")
+                        text: I18n.i18n("Songs")
                         icon.name: "filename-track-amarok"
                     },
                     Kirigami.Action {
-                        text: i18n("Album")
+                        text: I18n.i18n("Album")
                         icon.name: "filename-album-amarok"
                     },
                     Kirigami.Action {
-                        text: i18n("Artist")
+                        text: I18n.i18n("Artist")
                         icon.name: "amarok_artist"
                     }
                 ]

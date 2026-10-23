@@ -4,6 +4,7 @@
 import QtQuick
 import QtQuick.Controls as QQC2
 
+import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
 
 /*!
@@ -37,6 +38,6 @@ Kirigami.Action {
      */
     readonly property bool completed: progress >= 100.0
 
-    text: i18nd("kirigami-addons6", "Download")
+    text: I18n.i18n("Download")
     icon.name: "download"
 }

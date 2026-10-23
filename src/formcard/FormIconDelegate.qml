@@ -24,7 +24,7 @@ import org.kde.kirigami as Kirigami
       FormCard.FormDelegateSeparator {}
  
       FormCard.FormIconDelegate {
-          text: i18nc("@label", "Active icon")
+          text: I18n.i18nc("@label", "Active icon")
           iconName: "actor-symbolic"
       }
   }

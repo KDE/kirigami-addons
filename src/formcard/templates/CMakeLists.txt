@@ -5,7 +5,7 @@ ecm_add_qml_module(formcardtemplatesplugin
     URI "org.kde.kirigamiaddons.formcard.templates"
     VERSION 1.0
     GENERATE_PLUGIN_SOURCE
-    DEPENDENCIES QtQuick org.kde.kirigami
+    DEPENDENCIES org.kde.kirigamiaddons.private QtQuick org.kde.kirigami
 )
 
 ecm_target_qml_sources(formcardtemplatesplugin SOURCES

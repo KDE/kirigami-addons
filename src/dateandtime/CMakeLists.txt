@@ -19,6 +19,7 @@ ecm_add_qml_module(dateandtimeplugin
     VERSION 1.0
     GENERATE_PLUGIN_SOURCE
     DEPENDENCIES
+        org.kde.kirigamiaddons.private
         org.kde.kirigami
         org.kde.kirigamiaddons.components
         org.kde.kirigamiaddons.delegates

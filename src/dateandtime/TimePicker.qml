@@ -4,6 +4,7 @@
 
 import QtQuick
 import QtQuick.Controls
+import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
 import QtQuick.Layouts
 import org.kde.kirigamiaddons.dateandtime
@@ -127,7 +128,7 @@ RowLayout {
 
     Button {
         implicitHeight: hoursTumbler.currentItem.height + 2
-        text: i18nc("@action:button", "Reset to current time")
+        text: I18n.i18nc("@action:button", "Reset to current time")
         icon.name: "accept_time_event-symbolic"
         display: Button.IconOnly
 
@@ -152,7 +153,7 @@ RowLayout {
         onCurrentIndexChanged: if (_init) {
             hours = currentIndex + (_isAmPm && _pm ? 12 : 0)
         }
-        Accessible.name: i18nd("kirigami-addons6", "Hours")
+        Accessible.name: I18n.i18n("Hours")
         Accessible.role: Accessible.Dial
         Accessible.onDecreaseAction: hoursTumbler.currentIndex = (hoursTumbler.currentIndex + hoursTumbler.count - 1) % hoursTumbler.count
         Accessible.onIncreaseAction: hoursTumbler.currentIndex = (hoursTumbler.currentIndex + 1) % hoursTumbler.count
@@ -175,7 +176,7 @@ RowLayout {
 
     Label {
         Layout.alignment: Qt.AlignCenter
-        text: i18ndc("kirigami-addons6", "Time separator", ":")
+        text: I18n.i18nc("Time separator", ":")
         font.pointSize: Kirigami.Theme.defaultFont.pointSize * 1.3
         Accessible.ignored: true
     }
@@ -190,7 +191,7 @@ RowLayout {
             minutes = currentIndex;
         }
 
-        Accessible.name: i18nd("kirigami-addons6", "Minutes")
+        Accessible.name: I18n.i18n("Minutes")
         Accessible.role: Accessible.Dial
         Accessible.onDecreaseAction: minutesTumbler.currentIndex = (minutesTumbler.currentIndex + 59) % 60
         Accessible.onIncreaseAction: minutesTumbler.currentIndex = (minutesTumbler.currentIndex + 1) % 60

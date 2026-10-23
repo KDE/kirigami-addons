@@ -4,6 +4,7 @@
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
+import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.delegates as Delegates
 import org.kde.kirigamiaddons.components as Components
@@ -52,5 +53,5 @@ Kirigami.SearchDialog {
         }
     }
 
-    emptyText: i18ndc("kirigami-addons6", "@info:placeholder", "No results found")
+    emptyText: I18n.i18nc("@info:placeholder", "No results found")
 }

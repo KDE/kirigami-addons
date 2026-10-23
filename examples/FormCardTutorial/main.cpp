@@ -4,7 +4,7 @@
 #include <QIcon>
 #include <QQuickStyle>
 #include <KAboutData>
-#include <KLocalizedContext>
+#include <KLocalizedQmlContext>
 #include <KLocalizedString>
 
 int main(int argCount, char* argVector[])
@@ -33,7 +33,7 @@ int main(int argCount, char* argVector[])
     QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("kde")));
 
     QQmlApplicationEngine engine;
-    engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
+    KLocalization::setupLocalizedContext(&engine);
     engine.loadFromModule("org.kde.addonsexample", "Main");
     app.exec();
 }

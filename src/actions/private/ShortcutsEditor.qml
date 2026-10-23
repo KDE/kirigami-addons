@@ -5,6 +5,7 @@ import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 
+import org.kde.kirigamiaddons.private
 import org.kde.kitemmodels
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCard
@@ -16,11 +17,11 @@ Kirigami.ScrollablePage {
 
     property alias model: searchFilterProxyModel.sourceModel
 
-    title: i18ndc("kirigami-addons6", "@title:window", "Shortcuts")
+    title: I18n.i18nc("@title:window", "Shortcuts")
 
     actions: Kirigami.Action {
         displayComponent: Kirigami.SearchField {
-            placeholderText: i18ndc("kirigami-addons6", "@label:textbox", "Filter…")
+            placeholderText: I18n.i18nc("@label:textbox", "Filter…")
             onTextChanged: searchFilterProxyModel.setFilterFixedString(text);
         }
     }
@@ -66,7 +67,7 @@ Kirigami.ScrollablePage {
             }
 
             onClicked: {
-                shortcutDialog.title = i18ndc("kirigami-addons6", "@title:window", "Shortcut: %1",  shortcutDelegate.text);
+                shortcutDialog.title = I18n.i18nc("@title:window", "Shortcut: %1",  shortcutDelegate.text);
                 shortcutDialog.keySequence = shortcutDelegate.shortcut;
                 shortcutDialog.index = shortcutDelegate.index;
                 shortcutDialog.alternateShortcuts = shortcutDelegate.alternateShortcuts;
@@ -86,7 +87,7 @@ Kirigami.ScrollablePage {
             KeySequenceItem {
                 id: keySequenceItem
 
-                label: i18ndc("kirigami-addons6", "@label", "Shortcut:")
+                label: I18n.i18nc("@label", "Shortcut:")
                 onKeySequenceModified: {
                     root.model.updateShortcut(shortcutDialog.index, 0, keySequence);
                 }
@@ -141,7 +142,7 @@ Kirigami.ScrollablePage {
                     required property int index
                     required property var modelData
 
-                    label: index === 0 ? i18ndc("kirigami-addons6", "@label", "Alternative:") : ''
+                    label: index === 0 ? I18n.i18nc("@label", "Alternative:") : ''
 
                     keySequence: modelData
                     onKeySequenceModified: {
@@ -169,7 +170,7 @@ Kirigami.ScrollablePage {
             KeySequenceItem {
                 id: alternateKeySequenceItem
 
-                label: alternateRepeater.count === 0 ? i18ndc("kirigami-addons6", "@label", "Alternative:") : ''
+                label: alternateRepeater.count === 0 ? I18n.i18nc("@label", "Alternative:") : ''
 
                 onKeySequenceModified: {
                     shortcutDialog.alternateShortcuts = root.model.updateShortcut(shortcutDialog.index, alternateRepeater.count + 1, keySequence);
@@ -207,7 +208,7 @@ Kirigami.ScrollablePage {
         Kirigami.PlaceholderMessage {
             width: parent.width - Kirigami.Units.gridUnit * 4
             anchors.centerIn: parent
-            text: i18ndc("kirigami-addons6", "Placeholder message", "No shortcuts found")
+            text: I18n.i18nc("Placeholder message", "No shortcuts found")
             visible: listView.count === 0
         }
     }

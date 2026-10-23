@@ -8,7 +8,6 @@
 #include <QQmlEngine>
 #include <QtQuickTest/quicktest.h>
 
-#include <KLocalizedQmlContext>
 #include <KLocalizedString>
 
 #include "example_albummodel.h"
@@ -27,7 +26,6 @@ public Q_SLOTS:
     void qmlEngineAvailable(QQmlEngine *engine)
     {
         KLocalizedString::setApplicationDomain("kirigami-addons");
-        KLocalization::setupLocalizedContext(engine);
 
         qmlRegisterType<ExampleAlbumModel>("test.artefacts", 1, 0, "ExampleAlbumModel");
         qmlRegisterType<TestConfig>("test.artefacts", 1, 0, "TestConfig");

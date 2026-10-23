@@ -4,6 +4,7 @@
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
+import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
 import org.kde.kirigami.platform as Platform
 import org.kde.kirigamiaddons.onboarding
@@ -198,8 +199,8 @@ Item {
                             Layout.preferredWidth: implicitWidth
                             visible: Onboarding.hasPreviousItem
 
-                            Accessible.name: i18nc("@action:button", "Previous")
-                            QQC2.ToolTip.text: i18nc("@info:tooltip", "Previous")
+                            Accessible.name: I18n.i18nc("@action:button", "Previous")
+                            QQC2.ToolTip.text: I18n.i18nc("@info:tooltip", "Previous")
                             QQC2.ToolTip.visible: hovered
                             icon.color: toolTip.Platform.Theme.textColor
                             icon.name: Qt.application.layoutDirection === Qt.RightToLeft ? "go-next-symbolic" : "go-previous-symbolic"
@@ -218,8 +219,8 @@ Item {
                             Layout.preferredWidth: implicitWidth
                             visible: Onboarding.hasNextItem
 
-                            Accessible.name: i18nc("@action:button", "Next")
-                            QQC2.ToolTip.text: i18nc("@info:tooltip", "Next")
+                            Accessible.name: I18n.i18nc("@action:button", "Next")
+                            QQC2.ToolTip.text: I18n.i18nc("@info:tooltip", "Next")
                             QQC2.ToolTip.visible: hovered
                             icon.color: toolTip.Platform.Theme.textColor
                             icon.name: Qt.application.layoutDirection === Qt.RightToLeft ? "go-previous-symbolic" : "go-next-symbolic"
@@ -233,8 +234,8 @@ Item {
                             Layout.preferredHeight: implicitHeight
                             Layout.preferredWidth: implicitWidth
 
-                            Accessible.name: i18nc("@action:button", "Cancel")
-                            QQC2.ToolTip.text: i18nc("@info:tooltip", "Cancel")
+                            Accessible.name: I18n.i18nc("@action:button", "Cancel")
+                            QQC2.ToolTip.text: I18n.i18nc("@info:tooltip", "Cancel")
                             QQC2.ToolTip.visible: hovered
                             icon.color: toolTip.Platform.Theme.textColor
                             icon.name: "dialog-cancel-symbolic"

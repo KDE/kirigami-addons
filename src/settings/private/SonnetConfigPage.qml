@@ -5,6 +5,7 @@ import QtQml
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
+import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
 import org.kde.kirigami.delegates as KirigamiDelegates
 import org.kde.sonnet as Sonnet
@@ -38,7 +39,7 @@ FormCard.FormCardPage {
 
         FormCard.FormCheckDelegate {
             checked: root.settings.checkerEnabledByDefault
-            text: i18ndc("kirigami-addons6", "@label:checkbox", "Enable automatic spell checking")
+            text: I18n.i18nc("@label:checkbox", "Enable automatic spell checking")
             onCheckedChanged: {
                 root.settings.checkerEnabledByDefault = checked;
                 root.settings.save();
@@ -47,7 +48,7 @@ FormCard.FormCardPage {
 
         FormCard.FormCheckDelegate {
             checked: root.settings.skipUppercase
-            text: i18ndc("kirigami-addons6", "@label:checkbox", "Ignore uppercase words")
+            text: I18n.i18nc("@label:checkbox", "Ignore uppercase words")
             onCheckedChanged: {
                 root.settings.skipUppercase = checked;
                 root.settings.save();
@@ -56,7 +57,7 @@ FormCard.FormCardPage {
 
         FormCard.FormCheckDelegate {
             checked: root.settings.skipRunTogether
-            text: i18ndc("kirigami-addons6", "@label:checkbox", "Ignore hyphenated words")
+            text: I18n.i18nc("@label:checkbox", "Ignore hyphenated words")
             onCheckedChanged: {
                 root.settings.skipRunTogether = checked;
                 root.settings.save();
@@ -66,7 +67,7 @@ FormCard.FormCardPage {
         FormCard.FormCheckDelegate {
             id: autodetectLanguageCheckbox
             checked: root.settings.autodetectLanguage
-            text: i18ndc("kirigami-addons6", "@label:checkbox", "Detect language automatically")
+            text: I18n.i18nc("@label:checkbox", "Detect language automatically")
             onCheckedChanged: {
                 root.settings.autodetectLanguage = checked;
                 root.settings.save();
@@ -74,8 +75,8 @@ FormCard.FormCardPage {
         }
 
         FormCard.FormComboBoxDelegate {
-            text: i18ndc("kirigami-addons6", "@label:listbox", "Selected default language:")
-            model: isEmpty ? [{"display": i18ndc("kirigami-addons6", "No selected language", "None")}] : root.settings.dictionaryModel
+            text: I18n.i18nc("@label:listbox", "Selected default language:")
+            model: isEmpty ? [{"display": I18n.i18nc("No selected language", "None")}] : root.settings.dictionaryModel
             textRole: "display"
             valueRole: "languageCode"
             property bool isEmpty: false
@@ -90,8 +91,8 @@ FormCard.FormCardPage {
         }
 
         FormCard.FormButtonDelegate {
-            text: i18ndc("kirigami-addons6", "@label:listbox", "Additional Spell Checking Languages")
-            description: i18nd("kirigami-addons6", "%1 will provide spell checking and suggestions for the languages listed here when autodetection is enabled.", Qt.application.displayName)
+            text: I18n.i18nc("@label:listbox", "Additional Spell Checking Languages")
+            description: I18n.i18n("%1 will provide spell checking and suggestions for the languages listed here when autodetection is enabled.", Qt.application.displayName)
             onClicked: root.pageStack.pushDialogLayer(spellCheckingLanguageList, {}, {
                 width: root.pageStack.width - Kirigami.Units.gridUnit * 5,
                 height: root.pageStack.height - Kirigami.Units.gridUnit * 5,
@@ -99,7 +100,7 @@ FormCard.FormCardPage {
         }
 
         FormCard.FormButtonDelegate {
-            text: i18ndc("kirigami-addons6", "@action:button", "Open Personal Dictionary")
+            text: I18n.i18nc("@action:button", "Open Personal Dictionary")
             onClicked: root.pageStack.pushDialogLayer(dictionaryPage, {}, {
                 width: root.pageStack.width - Kirigami.Units.gridUnit * 5,
                 height: root.pageStack.height - Kirigami.Units.gridUnit * 5,
@@ -111,7 +112,7 @@ FormCard.FormCardPage {
                 id: spellCheckingLanguageList
                 Kirigami.ScrollablePage {
                     id: scroll
-                    title: i18ndc("kirigami-addons6", "@title:window", "Spell checking languages")
+                    title: I18n.i18nc("@title:window", "Spell checking languages")
                     enabled: autodetectLanguageCheckbox.checked
                     ListView {
                         clip: true
@@ -123,7 +124,7 @@ FormCard.FormCardPage {
                             action: Kirigami.Action {
                                 onTriggered: model.checked = checked
                             }
-                            Accessible.description: model.isDefault ? i18nd("kirigami-addons6", "Default Language") : ''
+                            Accessible.description: model.isDefault ? I18n.i18n("Default Language") : ''
                             checked: model.checked
 
                             icon.source: model.isDefault ? "favorite" : undefined
@@ -135,17 +136,17 @@ FormCard.FormCardPage {
             Component {
                 id: dictionaryPage
                 Kirigami.ScrollablePage {
-                    title: i18ndc("kirigami-addons6", "@title:window", "Spell checking dictionary")
+                    title: I18n.i18nc("@title:window", "Spell checking dictionary")
                     footer: QQC2.ToolBar {
                         contentItem: RowLayout {
                             QQC2.TextField {
                                 id: dictionaryField
                                 Layout.fillWidth: true
                                 Accessible.name: placeholderText
-                                placeholderText: i18ndc("kirigami-addons6", "Placeholder message", "Add a new word to your personal dictionary…")
+                                placeholderText: I18n.i18nc("Placeholder message", "Add a new word to your personal dictionary…")
                             }
                             QQC2.Button {
-                                text: i18ndc("kirigami-addons6", "@action:button", "Add Word")
+                                text: I18n.i18nc("@action:button", "Add Word")
                                 icon.name: "list-add"
                                 enabled: dictionaryField.text.length > 0
                                 onClicked: {
@@ -180,7 +181,7 @@ FormCard.FormCardPage {
                                 }
 
                                 QQC2.ToolButton {
-                                    text: i18ndc("kirigami-addons6", "@action:button", "Delete word")
+                                    text: I18n.i18nc("@action:button", "Delete word")
                                     icon.name: "delete"
                                     display: QQC2.ToolButton.IconOnly
                                     onClicked: {

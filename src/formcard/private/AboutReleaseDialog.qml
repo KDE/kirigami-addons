@@ -4,6 +4,7 @@
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
+import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCardModule
 
@@ -13,7 +14,7 @@ AboutDialog {
     required property var releases
     property bool showOnlyNewReleases: false
 
-    title: i18nd("kirigami-addons6", "Release history")
+    title: I18n.i18n("Release history")
     implicitHeight: Math.min(parent ? parent.height - Kirigami.Units.gridUnit * 2 : Kirigami.Units.gridUnit * 32,
                              Kirigami.Units.gridUnit * 32,
                              implicitHeaderHeight + releasesColumn.implicitHeight + Kirigami.Units.gridUnit * 2)
@@ -67,7 +68,7 @@ AboutDialog {
 
                     FormCardModule.FormLinkDelegate {
                         Layout.fillWidth: true
-                        text: i18nd("kirigami-addons6", "More information")
+                        text: I18n.i18n("More information")
                         url: modelData.url
                         visible: url.toString().length > 0
                     }
@@ -77,7 +78,7 @@ AboutDialog {
             QQC2.Button {
                 Layout.alignment: Qt.AlignHCenter
                 visible: root.showOnlyNewReleases
-                text: i18nd("kirigami-addons6", "Show older changes…")
+                text: I18n.i18n("Show older changes…")
                 onClicked: root.showOnlyNewReleases = false
             }
         }

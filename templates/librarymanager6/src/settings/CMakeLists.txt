@@ -5,6 +5,7 @@ qt_add_library(%{APPNAMELC}_settings STATIC)
 ecm_add_qml_module(%{APPNAMELC}_settings
     GENERATE_PLUGIN_SOURCE
     URI org.kde.%{APPNAMELC}.settings
+    DEPENDENCIES org.kde.ki18n
     QML_FILES
         %{APPNAME}ConfigurationView.qml
         GeneralPage.qml

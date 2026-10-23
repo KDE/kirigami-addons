@@ -9,6 +9,7 @@ import QtQuick.Controls as Controls
 import QtQuick.Layouts
 import QtQuick.Dialogs
 
+import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCard
 
@@ -150,7 +151,7 @@ AbstractFormDelegate {
                             FormFieldHelper.setPropertyValue(root, "selectedFolder", 'file://' + textField.text);
                             root.accepted();
                         } else if (!pathCompletion.popupVisible) {
-                            formErrorHandler.text = i18ndc("kirigami-addons6", "@info:status", "The folder doesn't exist.");
+                            formErrorHandler.text = I18n.i18nc("@info:status", "The folder doesn't exist.");
                             formErrorHandler.visible = true;
                         }
                     }
@@ -197,14 +198,14 @@ AbstractFormDelegate {
                 Controls.Button {
                     icon.name: "document-open-folder-symbolic"
                     display: Controls.Button.IconOnly
-                    text: i18ndc("kirigami-addons6", "@action:button", "Select folder")
+                    text: I18n.i18nc("@action:button", "Select folder")
                     onClicked: folderDialog.open()
                 }
             }
 
             Controls.Label {
                 visible: Kirigami.Settings.isMobile
-                text: textField.text.length > 0 ? textField.text : i18ndc("kirigami-addons6", "@info:placeholderwrapMode", "No folder selected")
+                text: textField.text.length > 0 ? textField.text : I18n.i18nc("@info:placeholderwrapMode", "No folder selected")
                 color: Kirigami.Theme.disabledTextColor
                 wrapMode: Text.Wrap
             }

@@ -20,14 +20,28 @@ qml-check-i18n:
   rules:
     - changes:
       - "**/*.qml"
+      - ".gitlab-ci.yml"
   tags:
     - Linux
   script:
-    - git config --global --add safe.directory $CI_PROJECT_DIR
-    - bash -c "find src -iname '*.qml' -exec sed -i 's/^\([^*]*\)i18n(\(.*\)/\1i18nd(\"kirigami-addons\", \2/' {} \;"
-    - bash -c "find src -iname '*.qml' -exec sed -i 's/^\([^*]*\)i18nc(\(.*\)/\1i18ndc(\"kirigami-addons\", \2/' {} \;"
-    - bash -c "find src -iname '*.qml' -exec sed -i 's/^\([^*]*\)i18np(\(.*\)/\1i18ndp(\"kirigami-addons\", \2/' {} \;"
-    - bash -c "find src -iname '*.qml' -exec sed -i 's/^\([^*]*\)i18npc(\(.*\)/\1i18ndpc(\"kirigami-addons\", \2/' {} \;"
+    - |
+      python3 - <<'PYTHON'
+      import pathlib
+      import re
+      import sys
+
+      # Ignore comments and quoted strings, retaining line numbers for diagnostics.
+      ignored = re.compile(r"/\*.*?\*/|//[^\n]*|\"(?:\\.|[^\"\\])*\"|'(?:\\.|[^'\\])*'", re.S)
+      calls = re.compile(r"(?<![\w.])(?:KI18n\.)?x?i18nd?c?p?\s*\(")
+      failed = False
+      for path in sorted(pathlib.Path("src").rglob("*.qml")):
+          source = ignored.sub(lambda match: re.sub(r"[^\n]", " ", match[0]), path.read_text())
+          for match in calls.finditer(source):
+              line = source.count("\n", 0, match.start()) + 1
+              print(f"{path}:{line}: use the private I18n singleton for library translations")
+              failed = True
+      sys.exit(failed)
+      PYTHON
 
   after_script:
    - >

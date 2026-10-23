@@ -9,6 +9,7 @@ import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 
+import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.statefulapp.private
 import org.kde.kirigamiaddons.formcard as FormCard
@@ -127,8 +128,8 @@ FormCard.AbstractFormDelegate {
                     const keySequence = helper.currentKeySequence;
                     const text = helper.keySequenceIsEmpty(keySequence)
                         ? (helper.isRecording
-                            ? i18ndc("kirigami-addons6", "What the user inputs now will be taken as the new shortcut", "Input")
-                            : i18ndc("kirigami-addons6", "No shortcut defined", "None"))
+                            ? I18n.i18nc("What the user inputs now will be taken as the new shortcut", "Input")
+                            : I18n.i18nc("No shortcut defined", "None"))
                         // Single ampersand gets interpreted by the button as a mnemonic
                         // and removed; replace it with a double ampersand so that it
                         // will be displayed by the button as a single ampersand, or
@@ -139,7 +140,7 @@ FormCard.AbstractFormDelegate {
                     return " " + text + (helper.isRecording ? " ... " : " ");
                 }
 
-                Accessible.description: i18nd("kirigami-addons6", "Click on the button, then enter the shortcut like you would in the program.\nExample for Ctrl+A: hold the Ctrl key and press A.")
+                Accessible.description: I18n.i18n("Click on the button, then enter the shortcut like you would in the program.\nExample for Ctrl+A: hold the Ctrl key and press A.")
 
                 QQC2.ToolTip.visible: hovered
                 QQC2.ToolTip.text: Accessible.description
@@ -180,7 +181,7 @@ FormCard.AbstractFormDelegate {
                 icon.name: Qt.application.layoutDirection === Qt.LeftToRight ? "edit-clear-locationbar-rtl" : "edit-clear-locationbar-ltr"
 
                 display: QQC2.Button.IconOnly
-                text: i18ndc("kirigami-addons6", "@info:tooltip", "Clear Key Sequence")
+                text: I18n.i18nc("@info:tooltip", "Clear Key Sequence")
 
                 QQC2.ToolTip.visible: hovered
                 QQC2.ToolTip.text: text
@@ -196,7 +197,7 @@ FormCard.AbstractFormDelegate {
                 icon.name: "dialog-cancel"
 
                 display: QQC2.Button.IconOnly
-                text: i18ndc("kirigami-addons6", "@info:tooltip", "Cancel Key Sequence Recording")
+                text: I18n.i18nc("@info:tooltip", "Cancel Key Sequence Recording")
 
                 QQC2.ToolTip.visible: hovered
                 QQC2.ToolTip.text: Accessible.name

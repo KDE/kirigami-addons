@@ -6,6 +6,7 @@ import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 import QtMultimedia
 
+import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
 
 /*!
@@ -278,7 +279,7 @@ Item {
                     QQC2.ToolTip.visible: hovered
                     QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                     QQC2.ToolTip.timeout: Kirigami.Units.toolTipDelay
-                    QQC2.ToolTip.text: i18ndc("kirigami-addons6", "@action:button", "Volume")
+                    QQC2.ToolTip.text: I18n.i18nc("@action:button", "Volume")
 
                     onClicked: {
                         if (videoItem.volume > 0) {

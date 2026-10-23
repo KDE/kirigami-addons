@@ -6,6 +6,7 @@ import QtQuick.Controls as Controls
 import QtQuick.Layouts
 import QtQuick.Dialogs
 
+import org.kde.kirigamiaddons.private
 import org.kde.kirigamiaddons.formcard as FormCard
 import org.kde.kirigami as Kirigami
 
@@ -39,8 +40,8 @@ FormCard.AbstractFormDelegate {
     icon.name: "color-picker"
     onClicked: colorDialog.open()
 
-    text: i18ndc("kirigami-addons6", "@action:button", "Color")
-    Accessible.description: i18ndc("kirigami-addons6", "Accessible description", "Current color \"%1\"", color)
+    text: I18n.i18nc("@action:button", "Color")
+    Accessible.description: I18n.i18nc("Accessible description", "Current color \"%1\"", color)
 
     contentItem: RowLayout {
         spacing: 0

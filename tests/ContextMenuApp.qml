@@ -6,6 +6,7 @@ import QtQuick.Controls as Controls
 import QtQuick.Layouts
 import QtQuick.Layouts
 
+import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCard
 import org.kde.kirigamiaddons.delegates as Delegates
@@ -33,12 +34,12 @@ Kirigami.ApplicationWindow {
             }
 
             FormCard.FormHeader {
-                title: i18nc("@title:group", "Display Mode")
+                title: I18n.i18nc("@title:group", "Display Mode")
             }
 
             FormCard.FormCard {
                 FormCard.FormRadioDelegate {
-                    text: i18nc("@option:radio", "Bottom Drawer")
+                    text: I18n.i18nc("@option:radio", "Bottom Drawer")
                     checked: true
                     onToggled: if (checked) {
                         menu.displayMode = Components.ConvergentContextMenu.BottomDrawer
@@ -46,14 +47,14 @@ Kirigami.ApplicationWindow {
                 }
 
                 FormCard.FormRadioDelegate {
-                    text: i18nc("@option:radio", "Dialog")
+                    text: I18n.i18nc("@option:radio", "Dialog")
                     onToggled: if (checked) {
                         menu.displayMode = Components.ConvergentContextMenu.Dialog
                     }
                 }
 
                 FormCard.FormRadioDelegate {
-                    text: i18nc("@option:radio", "Context menu")
+                    text: I18n.i18nc("@option:radio", "Context menu")
                     onToggled: if (checked) {
                         menu.displayMode = Components.ConvergentContextMenu.ContextMenu
                     }
@@ -61,12 +62,12 @@ Kirigami.ApplicationWindow {
             }
 
             FormCard.FormHeader {
-                title: i18nc("@title:group", "Display Mode")
+                title: I18n.i18nc("@title:group", "Display Mode")
             }
 
             FormCard.FormCard {
                 FormCard.FormSwitchDelegate {
-                    text: i18nc("@option:check", "With custom title")
+                    text: I18n.i18nc("@option:check", "With custom title")
                     checked: true
                     onToggled: if (checked) {
                         menu.headerContentItem = customHeader;
@@ -79,23 +80,6 @@ Kirigami.ApplicationWindow {
             }
 
         }
-    }
-
-    // Dummy implementation of ki18n
-    function i18nd(context, text) {
-        return text;
-    }
-
-    function i18ndp(context, text1, text2, number) {
-        return number === 1 ? text1 : text2;
-    }
-
-    function i18ndc(context, text) {
-        return text
-    }
-
-    function i18nc(context, text) {
-        return text;
     }
 
     Components.ConvergentContextMenu {
@@ -129,42 +113,42 @@ Kirigami.ApplicationWindow {
         }
 
         Controls.Action {
-            text: i18nc("@action:inmenu", "Simple Action")
+            text: I18n.i18nc("@action:inmenu", "Simple Action")
         }
 
         Kirigami.Action {
-            text: i18nc("@action:inmenu", "Nested Action")
+            text: I18n.i18nc("@action:inmenu", "Nested Action")
 
             Controls.Action {
-                text: i18nc("@action:inmenu", "Simple Action 1")
+                text: I18n.i18nc("@action:inmenu", "Simple Action 1")
             }
 
             Controls.Action {
-                text: i18nc("@action:inmenu", "Simple Action 2")
+                text: I18n.i18nc("@action:inmenu", "Simple Action 2")
             }
 
             Controls.Action {
-                text: i18nc("@action:inmenu", "Simple Action 3")
+                text: I18n.i18nc("@action:inmenu", "Simple Action 3")
             }
         }
 
         Kirigami.Action {
-            text: i18nc("@action:inmenu", "Nested Action with Multiple Choices")
+            text: I18n.i18nc("@action:inmenu", "Nested Action with Multiple Choices")
 
             Kirigami.Action {
-                text: i18nc("@action:inmenu", "Follow Global Settings")
+                text: I18n.i18nc("@action:inmenu", "Follow Global Settings")
                 checkable: true
                 autoExclusive: true // Since KF 6.10
             }
 
             Kirigami.Action {
-                text: i18nc("@action:inmenu", "Enabled")
+                text: I18n.i18nc("@action:inmenu", "Enabled")
                 checkable: true
                 autoExclusive: true // Since KF 6.10
             }
 
             Kirigami.Action {
-                text: i18nc("@action:inmenu", "Disabled")
+                text: I18n.i18nc("@action:inmenu", "Disabled")
                 checkable: true
                 autoExclusive: true // Since KF 6.10
             }

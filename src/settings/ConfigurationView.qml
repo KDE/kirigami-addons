@@ -3,6 +3,7 @@
 
 import QtQuick
 import QtQml
+import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.settings.private as Private
 
@@ -80,7 +81,7 @@ QtObject {
 
        \default "Settings"
      */
-    property string title: i18ndc("kirigami-addons6", "@title:window", "Settings")
+    property string title: I18n.i18nc("@title:window", "Settings")
 
     /*!
        \brief This property holds the list of pages for the settings.

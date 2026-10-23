@@ -7,6 +7,7 @@ import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 
+import org.kde.kirigamiaddons.private
 import org.kde.config as Config
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCard
@@ -100,7 +101,7 @@ Kirigami.ApplicationWindow {
             }, {
                 width: Kirigami.Units.gridUnit * 30,
                 height: Kirigami.Units.gridUnit * 30,
-                title: i18ndc("kirigami-addons6", "@title:window", "Shortcuts"),
+                title: I18n.i18nc("@title:window", "Shortcuts"),
             });
         }
 
@@ -110,7 +111,7 @@ Kirigami.ApplicationWindow {
             }, {
                 width: Kirigami.Units.gridUnit * 30,
                 height: Kirigami.Units.gridUnit * 30,
-                title: i18ndc("kirigami-addons6", "@title:window", "About %1", Core.AboutData.displayName),
+                title: I18n.i18nc("@title:window", "About %1", Core.AboutData.displayName),
             });
             openDialogWindow.Keys.escapePressed.connect(function() {
                 openDialogWindow.Kirigami.PageStack.closeDialog();
@@ -123,7 +124,7 @@ Kirigami.ApplicationWindow {
             }, {
                 width: Kirigami.Units.gridUnit * 30,
                 height: Kirigami.Units.gridUnit * 30,
-                title: i18ndc("kirigami-addons6", "@title:window", "About KDE"),
+                title: I18n.i18nc("@title:window", "About KDE"),
             });
             openDialogWindow.Keys.escapePressed.connect(function() {
                 openDialogWindow.Kirigami.PageStack.closeDialog();

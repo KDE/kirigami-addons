@@ -8,6 +8,7 @@ import QtQml
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
+import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.delegates as Delegates
 
@@ -43,7 +44,7 @@ Kirigami.PageRow {
     property alias _stack: root
     property Kirigami.PagePool _pool: Kirigami.PagePool {}
 
-    readonly property string title: root.depth < 2 ? i18ndc("kirigami-addons6", "@title:window", "Settings") :i18ndc("kirigami-addons6", "@title:window", "Settings — %1", root.get(1).title)
+    readonly property string title: root.depth < 2 ? I18n.i18nc("@title:window", "Settings") :I18n.i18nc("@title:window", "Settings — %1", root.get(1).title)
 
     property bool completed: false
 
@@ -97,7 +98,7 @@ Kirigami.PageRow {
 
             QQC2.ToolButton {
                 icon.name: "go-previous-view"
-                text: i18ndc("kirigami-addons6", "@action:intoolbar", "Go back")
+                text: I18n.i18nc("@action:intoolbar", "Go back")
                 display: QQC2.AbstractButton.IconOnly
                 onClicked: pageStack.layers.pop()
                 visible: pageStack.layers.depth > 1

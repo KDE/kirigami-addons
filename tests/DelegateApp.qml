@@ -31,23 +31,6 @@ Kirigami.ApplicationWindow {
     }
 
 
-    // Dummy implementation of ki18n
-    function i18nd(context, text) {
-        return text;
-    }
-
-    function i18ndp(context, text1, text2, number) {
-        return number === 1 ? text1 : text2;
-    }
-
-    function i18ndc(context, text) {
-        return text
-    }
-
-    function i18nc(context, text) {
-        return text;
-    }
-
     LayoutMirroring.enabled: false
 
     Component {

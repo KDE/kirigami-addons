@@ -9,6 +9,7 @@ import QtQuick.Controls as T
 import QtQuick.Layouts
 import Qt.labs.qmlmodels
 
+import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.components as KirigamiComponents
 import org.kde.kirigamiaddons.formcard as FormCard
@@ -315,7 +316,7 @@ Item {
 
                 QQC2.ToolButton {
                     icon.name: 'draw-arrow-back-symbolic'
-                    text: i18ndc("kirigami-addons6", "@action:button", "Go Back")
+                    text: I18n.i18nc("@action:button", "Go Back")
                     display: QQC2.ToolButton.IconOnly
                     onClicked: stackViewMenu.pop();
 
@@ -399,7 +400,7 @@ Item {
                     id: closeButton
 
                     icon.name: hovered ? "window-close" : "window-close-symbolic"
-                    text: i18ndc("kirigami-addons6", "@action:button close dialog", "Close")
+                    text: I18n.i18nc("@action:button close dialog", "Close")
                     display: QQC2.AbstractButton.IconOnly
                     visible: true
 
@@ -425,7 +426,7 @@ Item {
 
                 QQC2.ToolButton {
                     icon.name: 'draw-arrow-back-symbolic'
-                    text: i18ndc("kirigami-addons6", "@action:button", "Go Back")
+                    text: I18n.i18nc("@action:button", "Go Back")
                     display: QQC2.ToolButton.IconOnly
                     onClicked: stackViewMenu.pop();
 

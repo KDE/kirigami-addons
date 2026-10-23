@@ -5,6 +5,7 @@ import QtQuick
 import QtQuick.Controls as Controls
 import QtQuick.Layouts
 
+import org.kde.kirigamiaddons.private
 import org.kde.kirigamiaddons.formcard as FormCard
 import org.kde.kirigami as Kirigami
 
@@ -16,7 +17,7 @@ FormCard.AbstractFormDelegate {
 
     property alias iconName: buttonIcon.source
 
-    text: i18nc("@action:button", "Icon")
+    text: I18n.i18nc("@action:button", "Icon")
     icon.name: "preferences-desktop-emoticons-symbolic"
     onClicked: iconDialog.open()
 

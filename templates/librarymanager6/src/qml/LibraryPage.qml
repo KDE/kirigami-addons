@@ -4,6 +4,7 @@
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
 
 Kirigami.ScrollablePage {
@@ -11,7 +12,7 @@ Kirigami.ScrollablePage {
 
     property var libraryModel
 
-    title: i18nc("@title", "Library")
+    title: KI18n.i18nc("@title", "Library")
 
     GridView {
         id: contentDirectoryView
@@ -52,7 +53,7 @@ Kirigami.ScrollablePage {
             width: parent.width - (Kirigami.Units.largeSpacing * 4)
             visible: contentDirectoryView.count === 0
             icon.name: "application-epub+zip"
-            text: i18nc("@info placeholder", "Add some books")
+            text: KI18n.i18nc("@info placeholder", "Add some books")
         }
     }
 }

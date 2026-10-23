@@ -7,6 +7,7 @@ import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 
+import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCard
 
@@ -117,7 +118,7 @@ QQC2.Dialog {
             Layout.topMargin: root._horizontalContentPadding
 
             icon.name: hovered ? "window-close" : "window-close-symbolic"
-            text: i18ndc("kirigami-addons6", "@action:button close dialog", "Close")
+            text: I18n.i18nc("@action:button close dialog", "Close")
             display: QQC2.AbstractButton.IconOnly
             visible: root.standardButtons & QQC2.Dialog.Cancel
             enabled: visible && root.standardButton(QQC2.Dialog.Cancel).enabled

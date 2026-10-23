@@ -19,7 +19,7 @@ find_package(Qt${QT_MAJOR_VERSION} REQUIRED COMPONENTS
 )
 find_package(KF${QT_MAJOR_VERSION} REQUIRED COMPONENTS
     CoreAddons # For KAboutData
-    I18n       # For KLocalizedContext
+    I18n       # For translations
 )
 
 add_executable(tableviewexample)
@@ -38,6 +38,7 @@ target_link_libraries(tableviewexample PRIVATE
     Qt::QuickControls2
     KF${QT_MAJOR_VERSION}::CoreAddons
     KF${QT_MAJOR_VERSION}::I18n
+    KF${QT_MAJOR_VERSION}::I18nQml
 )
 
 install(TARGETS addonsexample DESTINATION ${KDE_INSTALL_BINDIR})

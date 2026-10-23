@@ -6,6 +6,7 @@ import QtQuick
 import QtQuick.Window
 import QtQuick.Layouts
 import QtQuick.Controls as QQC2
+import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.components as Components
 import './private/' as P
@@ -100,7 +101,7 @@ QQC2.Dialog {
         bottomPadding: Kirigami.Units.mediumSpacing
 
         QQC2.Button {
-            text: i18ndc("kirigami-addons6", "@action:button", "Cancel")
+            text: I18n.i18nc("@action:button", "Cancel")
             icon.name: "dialog-cancel-symbolic"
             onClicked: {
                 root.cancelled()
@@ -112,7 +113,7 @@ QQC2.Dialog {
         }
 
         QQC2.Button {
-            text: i18ndc("kirigami-addons6", "@action:button", "Select")
+            text: I18n.i18nc("@action:button", "Select")
             icon.name: "dialog-ok-apply-symbolic"
 
             onClicked: {

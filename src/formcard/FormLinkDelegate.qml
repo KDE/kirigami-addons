@@ -3,6 +3,7 @@
 
 import QtQuick
 import QtQuick.Controls as Controls
+import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.components as Components
 import org.kde.kirigamiaddons.formcard as FormCard
@@ -51,19 +52,19 @@ FormCard.FormButtonDelegate {
             parent: root.Controls.Overlay.overlay
 
             Controls.Action {
-                text: i18ndc("kirigamiaddons6", "@action:inmnenu", "Open Link")
+                text: I18n.i18nc("@action:inmnenu", "Open Link")
                 icon.name: "edit-copy-symbolic"
                 onTriggered: Qt.openUrlExternally(root.url);
             }
 
             Controls.Action {
-                text: i18ndc("kirigamiaddons6", "@action:inmnenu", "Copy Link to Clipboard")
+                text: I18n.i18nc("@action:inmnenu", "Copy Link to Clipboard")
                 icon.name: "edit-copy-symbolic"
                 onTriggered: {
                     FormCard.AboutComponent.copyTextToClipboard(root.url)
                     const application = root.Controls.ApplicationWindow.window as Kirigami.AbstractApplicationWindow;
                     if (application) {
-                        application.showPassiveNotification(i18ndc("kirigamiaddons6", "@info:status", "Url copied to clipboard."))
+                        application.showPassiveNotification(I18n.i18nc("@info:status", "Url copied to clipboard."))
                     }
                 }
             }

@@ -5,6 +5,7 @@ import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
 import org.kde.kitemmodels
 import org.kde.kirigamiaddons.actions as KirigamiActions
@@ -155,7 +156,7 @@ Kirigami.OverlayDrawer {
                     }
                 }
 
-                emptyText: i18n("No search results")
+                emptyText: KI18n.i18n("No search results")
             }
         }
 
@@ -191,25 +192,25 @@ Kirigami.OverlayDrawer {
                 width: scrollView.width
                 PlaceItem {
                     id: goHomeButton
-                    text: i18nc("Switch to the listing page showing the most recently read books", "Home");
+                    text: KI18n.i18nc("Switch to the listing page showing the most recently read books", "Home");
                     icon.name: "go-home";
                     checked: true
                     QQC2.ButtonGroup.group: placeGroup
                 }
                 PlaceItem {
-                    text: i18nc("Switch to the listing page showing the most recently discovered books", "Recently Added Books")
+                    text: KI18n.i18nc("Switch to the listing page showing the most recently discovered books", "Recently Added Books")
                     icon.name: "appointment-new";
                     QQC2.ButtonGroup.group: placeGroup
                 }
                 PlaceItem {
-                    text: i18nc("Open a book from somewhere on disk (uses the open dialog, or a drilldown on touch devices)", "Open Other...")
+                    text: KI18n.i18nc("Open a book from somewhere on disk (uses the open dialog, or a drilldown on touch devices)", "Open Other...")
                     icon.name: "document-open";
                     QQC2.ButtonGroup.group: null
                     checkable: false
                 }
 
                 PlaceItem {
-                    text: i18nc("Open the settings page", "Settings")
+                    text: KI18n.i18nc("Open the settings page", "Settings")
                     icon.name: "configure"
                     action: Kirigami.Action {
                         fromQAction: application.action('options_configure')
@@ -220,25 +221,25 @@ Kirigami.OverlayDrawer {
                 }
 
                 Kirigami.ListSectionHeader {
-                    text: i18nc("Heading for switching to listing page showing items grouped by some properties", "Group By")
+                    text: KI18n.i18nc("Heading for switching to listing page showing items grouped by some properties", "Group By")
                 }
                 PlaceItem {
-                    text: i18nc("Switch to the listing page showing items grouped by author", "Author");
+                    text: KI18n.i18nc("Switch to the listing page showing items grouped by author", "Author");
                     icon.name: "actor";
                     QQC2.ButtonGroup.group: placeGroup
                 }
                 PlaceItem {
-                    text: i18nc("Switch to the listing page showing items grouped by series", "Series");
+                    text: KI18n.i18nc("Switch to the listing page showing items grouped by series", "Series");
                     icon.name: "edit-group";
                     QQC2.ButtonGroup.group: placeGroup
                 }
                 PlaceItem {
-                    text: i18nc("Switch to the listing page showing items grouped by publisher", "Publisher");
+                    text: KI18n.i18nc("Switch to the listing page showing items grouped by publisher", "Publisher");
                     icon.name: "view-media-publisher";
                     QQC2.ButtonGroup.group: placeGroup
                 }
                 PlaceItem {
-                    text: i18nc("Switch to the listing page showing items grouped by genres", "Keywords");
+                    text: KI18n.i18nc("Switch to the listing page showing items grouped by genres", "Keywords");
                     icon.name: "tag";
                     QQC2.ButtonGroup.group: placeGroup
                 }

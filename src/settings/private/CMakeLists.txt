@@ -5,6 +5,7 @@ ecm_add_qml_module(settingsprivateplugin
     URI "org.kde.kirigamiaddons.settings.private"
     GENERATE_PLUGIN_SOURCE
     DEPENDENCIES
+        org.kde.kirigamiaddons.private
         "org.kde.kirigami"
         "org.kde.kirigamiaddons.delegates"
 )

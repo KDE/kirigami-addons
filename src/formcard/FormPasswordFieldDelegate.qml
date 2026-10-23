@@ -7,6 +7,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 
+import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
 
 import "private" as Private
@@ -317,7 +318,7 @@ AbstractFormDelegate {
                     font: Kirigami.Theme.smallFont
 
                     function label(current: int, maximum: int): string {
-                        return i18ndc("kirigami-addons6", "@label %1 is current text length, %2 is maximum length of text field", "%1/%2", current, maximum)
+                        return I18n.i18nc("@label %1 is current text length, %2 is maximum length of text field", "%1/%2", current, maximum)
                     }
                 }
                 // 32767 is the default value for TextField.maximumLength
@@ -415,7 +416,7 @@ AbstractFormDelegate {
             Button {
                 objectName: "_mobileDoneButton"
                 visible: root._mobileEditingEnabled && root._mobileEditing
-                text: i18ndc("kirigami-addons6", "@action:button", "Done")
+                text: I18n.i18nc("@action:button", "Done")
                 icon.name: "dialog-ok"
                 display: AbstractButton.IconOnly
                 focusPolicy: Qt.NoFocus

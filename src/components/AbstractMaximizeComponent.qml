@@ -6,6 +6,7 @@ import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 import Qt.labs.qmlmodels
 
+import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
 
 /*!
@@ -134,7 +135,7 @@ QQC2.Popup {
                     display: QQC2.AbstractButton.IconOnly
 
                     action: Kirigami.Action {
-                        text: i18nd("kirigami-addons6", "Close")
+                        text: I18n.i18n("Close")
                         icon.name: "dialog-close"
                         onTriggered: root.close()
                     }
