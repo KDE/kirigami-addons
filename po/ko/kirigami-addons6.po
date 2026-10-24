@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-23 00:47+0000\n"
+"POT-Creation-Date: 2026-10-24 00:48+0000\n"
 "PO-Revision-Date: 2026-10-03 22:34+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -32,12 +32,12 @@ msgstr "kde@peremen.name"
 msgid "Open Command Bar"
 msgstr "명령 표시줄 열기"
 
-#: actions/abstractkirigamiapplication.cpp:185 formcard/AboutPage.qml:128
+#: actions/abstractkirigamiapplication.cpp:185 formcard/AboutPage.qml:127
 #, kde-format
 msgid "About %1"
 msgstr "%1 정보"
 
-#: actions/abstractkirigamiapplication.cpp:192 formcard/AboutKDEPage.qml:24
+#: actions/abstractkirigamiapplication.cpp:192 formcard/AboutKDEPage.qml:25
 #, kde-format
 msgid "About KDE"
 msgstr "KDE 정보"
@@ -121,19 +121,19 @@ msgstr ""
 "'%1' 키 조합은 많은 앱이 사용하는 \"%2\" 표준 동작에 할당되어 있습니다.\n"
 "그래도 전역 단축키로 사용하시겠습니까?"
 
-#: actions/private/KeySequenceItem.qml:130
+#: actions/private/KeySequenceItem.qml:131
 #, kde-format
 msgctxt "What the user inputs now will be taken as the new shortcut"
 msgid "Input"
 msgstr "입력"
 
-#: actions/private/KeySequenceItem.qml:131
+#: actions/private/KeySequenceItem.qml:132
 #, kde-format
 msgctxt "No shortcut defined"
 msgid "None"
 msgstr "없음"
 
-#: actions/private/KeySequenceItem.qml:142
+#: actions/private/KeySequenceItem.qml:143
 #, kde-format
 msgid ""
 "Click on the button, then enter the shortcut like you would in the program.\n"
@@ -142,56 +142,56 @@ msgstr ""
 "단추를 클릭한 다음 프로그램에 사용할 단축키를 누르십시오.\n"
 "Ctrl+A를 사용하려면 Ctrl 키를 누르면서 A 키를 누르십시오."
 
-#: actions/private/KeySequenceItem.qml:183
+#: actions/private/KeySequenceItem.qml:184
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Clear Key Sequence"
 msgstr "키 배열 비우기"
 
-#: actions/private/KeySequenceItem.qml:199
+#: actions/private/KeySequenceItem.qml:200
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel Key Sequence Recording"
 msgstr "키 배열 기록 취소"
 
-#: actions/private/KQuickCommandBarPage.qml:55
+#: actions/private/KQuickCommandBarPage.qml:56
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No results found"
 msgstr "결과 없음"
 
-#: actions/private/ShortcutsEditor.qml:19 actions/StatefulWindow.qml:103
+#: actions/private/ShortcutsEditor.qml:20 actions/StatefulWindow.qml:104
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcuts"
 msgstr "단축키"
 
-#: actions/private/ShortcutsEditor.qml:23
+#: actions/private/ShortcutsEditor.qml:24
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Filter…"
 msgstr "필터…"
 
-#: actions/private/ShortcutsEditor.qml:69
+#: actions/private/ShortcutsEditor.qml:70
 #, kde-format
 msgctxt "@title:window"
 msgid "Shortcut: %1"
 msgstr "단축키: %1"
 
-#: actions/private/ShortcutsEditor.qml:89
+#: actions/private/ShortcutsEditor.qml:90
 #, kde-format
 msgctxt "@label"
 msgid "Shortcut:"
 msgstr "단축키:"
 
-#: actions/private/ShortcutsEditor.qml:144
-#: actions/private/ShortcutsEditor.qml:172
+#: actions/private/ShortcutsEditor.qml:145
+#: actions/private/ShortcutsEditor.qml:173
 #, kde-format
 msgctxt "@label"
 msgid "Alternative:"
 msgstr "대안:"
 
-#: actions/private/ShortcutsEditor.qml:210
+#: actions/private/ShortcutsEditor.qml:211
 #, kde-format
 msgctxt "Placeholder message"
 msgid "No shortcuts found"
@@ -203,13 +203,13 @@ msgctxt "List separator"
 msgid ", "
 msgstr ", "
 
-#: actions/StatefulWindow.qml:113
+#: actions/StatefulWindow.qml:114
 #, kde-format
 msgctxt "@title:window"
 msgid "About %1"
 msgstr "%1 정보"
 
-#: actions/StatefulWindow.qml:126
+#: actions/StatefulWindow.qml:127
 #, kde-format
 msgctxt "@title:window"
 msgid "About KDE"
@@ -237,185 +237,184 @@ msgctxt "@info"
 msgid "Could not load the QML application."
 msgstr "QML 앱을 불러올 수 없습니다."
 
-#: components/AbstractMaximizeComponent.qml:137
+#: components/AbstractMaximizeComponent.qml:138
 #, kde-format
 msgid "Close"
 msgstr "닫기"
 
-#: components/AlbumMaximizeComponent.qml:150
+#: components/AlbumMaximizeComponent.qml:151
 #, kde-format
 msgid "Zoom in"
 msgstr "확대"
 
-#: components/AlbumMaximizeComponent.qml:155
+#: components/AlbumMaximizeComponent.qml:156
 #, kde-format
 msgid "Zoom out"
 msgstr "축소"
 
-#: components/AlbumMaximizeComponent.qml:161
+#: components/AlbumMaximizeComponent.qml:162
 #, kde-format
 msgid "Rotate left"
 msgstr "왼쪽으로 회전"
 
-#: components/AlbumMaximizeComponent.qml:167
+#: components/AlbumMaximizeComponent.qml:168
 #, kde-format
 msgid "Rotate right"
 msgstr "오른쪽으로 회전"
 
-#: components/AlbumMaximizeComponent.qml:172
+#: components/AlbumMaximizeComponent.qml:173
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Show caption"
 msgstr "캡션 표시"
 
-#: components/AlbumMaximizeComponent.qml:172
+#: components/AlbumMaximizeComponent.qml:173
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Hide caption"
 msgstr "캡션 숨기기"
 
-#: components/AlbumMaximizeComponent.qml:178
+#: components/AlbumMaximizeComponent.qml:179
 #, kde-format
 msgid "Save as"
 msgstr "다른 이름으로 저장"
 
-#: components/AlbumMaximizeComponent.qml:255
+#: components/AlbumMaximizeComponent.qml:256
 #, kde-format
 msgid "Previous image"
 msgstr "이전 그림"
 
-#: components/AlbumMaximizeComponent.qml:273
+#: components/AlbumMaximizeComponent.qml:274
 #, kde-format
 msgid "Next image"
 msgstr "다음 그림"
 
-#: components/Banner.qml:185 formcard/AboutPage.qml:246
-#: formcard/AboutPage.qml:360 formcard/AboutPage.qml:782
+#: components/Banner.qml:186 formcard/private/AboutDialog.qml:43
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
 msgstr "닫기"
 
-#: components/ConvergentContextMenu.qml:318
-#: components/ConvergentContextMenu.qml:428
+#: components/ConvergentContextMenu.qml:319
+#: components/ConvergentContextMenu.qml:429
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "뒤로 가기"
 
-#: components/ConvergentContextMenu.qml:402
-#: formcard/templates/FormCardDialog.qml:120
+#: components/ConvergentContextMenu.qml:403
+#: formcard/templates/FormCardDialog.qml:121
 #, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
 msgstr "닫기"
 
-#: components/DownloadAction.qml:40
+#: components/DownloadAction.qml:41
 #, kde-format
 msgid "Download"
 msgstr "다운로드"
 
-#: components/templates/MessageDialog.qml:239
+#: components/templates/MessageDialog.qml:240
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Success"
 msgstr "성공"
 
-#: components/templates/MessageDialog.qml:241
-#: components/templates/MessageDialog.qml:247
+#: components/templates/MessageDialog.qml:242
+#: components/templates/MessageDialog.qml:248
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Warning"
 msgstr "경고"
 
-#: components/templates/MessageDialog.qml:243
+#: components/templates/MessageDialog.qml:244
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Error"
 msgstr "오류"
 
-#: components/templates/MessageDialog.qml:245
+#: components/templates/MessageDialog.qml:246
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Information"
 msgstr "정보"
 
-#: components/templates/MessageDialog.qml:373
+#: components/templates/MessageDialog.qml:374
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Do not show again"
 msgstr "다시 보지 않기"
 
-#: components/VideoMaximizeDelegate.qml:281
+#: components/VideoMaximizeDelegate.qml:282
 #, kde-format
 msgctxt "@action:button"
 msgid "Volume"
 msgstr "음량"
 
-#: dateandtime/DatePopup.qml:103 dateandtime/TimePopup.qml:70
-#: onboarding/private/OnboardingOverlay.qml:236
+#: dateandtime/DatePopup.qml:104 dateandtime/TimePopup.qml:71
+#: onboarding/private/OnboardingOverlay.qml:237
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "취소"
 
-#: dateandtime/DatePopup.qml:115 dateandtime/TimePopup.qml:81
+#: dateandtime/DatePopup.qml:116 dateandtime/TimePopup.qml:82
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
 msgstr "선택"
 
-#: dateandtime/private/DatePicker.qml:275
+#: dateandtime/private/DatePicker.qml:276
 #, kde-format
 msgid "Day"
 msgstr "일"
 
-#: dateandtime/private/DatePicker.qml:278
+#: dateandtime/private/DatePicker.qml:279
 #, kde-format
 msgid "Month"
 msgstr "월"
 
-#: dateandtime/private/DatePicker.qml:281
+#: dateandtime/private/DatePicker.qml:282
 #, kde-format
 msgid "Year"
 msgstr "연도"
 
-#: dateandtime/private/DatePicker.qml:366
+#: dateandtime/private/DatePicker.qml:367
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Previous"
 msgstr "뒤로 이동"
 
-#: dateandtime/private/DatePicker.qml:379
+#: dateandtime/private/DatePicker.qml:380
 #, kde-format
 msgctxt "@action:button"
 msgid "Jump to today"
 msgstr "오늘로 이동"
 
-#: dateandtime/private/DatePicker.qml:386
+#: dateandtime/private/DatePicker.qml:387
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Next"
 msgstr "앞으로 이동"
 
-#: dateandtime/TimePicker.qml:130
+#: dateandtime/TimePicker.qml:131
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset to current time"
 msgstr "현재 시간으로 재설정"
 
-#: dateandtime/TimePicker.qml:155
+#: dateandtime/TimePicker.qml:156
 #, kde-format
 msgid "Hours"
 msgstr "시간"
 
-#: dateandtime/TimePicker.qml:178
+#: dateandtime/TimePicker.qml:179
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: dateandtime/TimePicker.qml:193
+#: dateandtime/TimePicker.qml:194
 #, kde-format
 msgid "Minutes"
 msgstr "분"
@@ -483,17 +482,17 @@ msgctxt "@info"
 msgid "Underlying platform."
 msgstr "기반 플랫폼입니다."
 
-#: formcard/AboutKDEPage.qml:68
+#: formcard/AboutKDEPage.qml:69
 #, kde-format
 msgid "KDE"
 msgstr "KDE"
 
-#: formcard/AboutKDEPage.qml:77
+#: formcard/AboutKDEPage.qml:78
 #, kde-format
 msgid "Be Free!"
 msgstr "자유롭게!"
 
-#: formcard/AboutKDEPage.qml:84
+#: formcard/AboutKDEPage.qml:85
 #, kde-format
 msgid ""
 "KDE is a world-wide community of software engineers, artists, writers, "
@@ -515,17 +514,17 @@ msgstr ""
 "께 힘을 모으고 있습니다. KDE에는 이 글을 읽는 여러분과 같은 누구나 참여하고 "
 "기여할 수 있습니다."
 
-#: formcard/AboutKDEPage.qml:91 formcard/AboutPage.qml:409
+#: formcard/AboutKDEPage.qml:92 formcard/AboutPage.qml:253
 #, kde-format
 msgid "Homepage"
 msgstr "홈페이지"
 
-#: formcard/AboutKDEPage.qml:97
+#: formcard/AboutKDEPage.qml:98
 #, kde-format
 msgid "Report bugs"
 msgstr "버그 보고"
 
-#: formcard/AboutKDEPage.qml:106
+#: formcard/AboutKDEPage.qml:107
 #, kde-format
 msgid ""
 "Software can always be improved, and the KDE team is ready to do so. "
@@ -549,17 +548,17 @@ msgstr ""
 "개선 사항 제안을 하고 싶으시다면 버그 보고 시스템을 통해서 알려 주십시오. 이 "
 "경우 심각성 항목에서 \"Wishlist\"를 선택하셔야 합니다."
 
-#: formcard/AboutKDEPage.qml:115
+#: formcard/AboutKDEPage.qml:116
 #, kde-format
 msgid "Report a bug"
 msgstr "버그 보고"
 
-#: formcard/AboutKDEPage.qml:120
+#: formcard/AboutKDEPage.qml:121
 #, kde-format
 msgid "Join us"
 msgstr "참여하기"
 
-#: formcard/AboutKDEPage.qml:126
+#: formcard/AboutKDEPage.qml:127
 #, kde-format
 msgid ""
 "You do not have to be a software developer to be a member of the KDE team. "
@@ -570,22 +569,22 @@ msgstr ""
 "를 번역하는 각 언어 번역팀을 도울 수도 있습니다. 또한 그래픽, 테마, 소리, 더 "
 "나은 문서 등을 기여할 수도 있습니다. 직접 결정하십시오!"
 
-#: formcard/AboutKDEPage.qml:131 formcard/AboutPage.qml:433
+#: formcard/AboutKDEPage.qml:132 formcard/AboutPage.qml:277
 #, kde-format
 msgid "Get Involved"
 msgstr "참여하기"
 
-#: formcard/AboutKDEPage.qml:138
+#: formcard/AboutKDEPage.qml:139
 #, kde-format
 msgid "Developer Documentation"
 msgstr "개발자 문서"
 
-#: formcard/AboutKDEPage.qml:144
+#: formcard/AboutKDEPage.qml:145
 #, kde-format
 msgid "Support us"
 msgstr "지원하기"
 
-#: formcard/AboutKDEPage.qml:150
+#: formcard/AboutKDEPage.qml:151
 #, kde-format
 msgid ""
 "KDE software is and will always be available free of charge, however "
@@ -618,347 +617,347 @@ msgstr ""
 "\n"
 "여러분의 협조에  미리 감사드립니다."
 
-#: formcard/AboutKDEPage.qml:159
+#: formcard/AboutKDEPage.qml:160
 #, kde-format
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:165 formcard/AboutPage.qml:417
+#: formcard/AboutKDEPage.qml:166 formcard/AboutPage.qml:261
 #, kde-format
 msgid "Donate"
 msgstr "기부하기"
 
-#: formcard/AboutPage.qml:144
+#: formcard/AboutPage.qml:143
 #, fuzzy, kde-format
 #| msgid "Release history"
 msgctxt "@action:button"
 msgid "Show release history for %1 %2"
 msgstr "릴리스 기록"
 
-#: formcard/AboutPage.qml:174
+#: formcard/AboutPage.qml:173
 #, kde-format
 msgid "What's new"
 msgstr "새로운 기능"
 
-#: formcard/AboutPage.qml:202
+#: formcard/AboutPage.qml:199
 #, kde-format
 msgid "Copyright"
 msgstr "저작권"
 
-#: formcard/AboutPage.qml:210
-#, kde-format
-msgid "Release history"
-msgstr "릴리스 기록"
-
-#: formcard/AboutPage.qml:284
-#, kde-format
-msgid "Show older changes…"
-msgstr "이전 변경 사항 표시…"
-
-#: formcard/AboutPage.qml:296
+#: formcard/AboutPage.qml:207
 #, kde-format
 msgid "Description"
 msgstr "설명"
 
-#: formcard/AboutPage.qml:309
+#: formcard/AboutPage.qml:220
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "라이선스"
 
-#: formcard/AboutPage.qml:463
+#: formcard/AboutPage.qml:307
 #, kde-format
 msgid "Report a Bug"
 msgstr "버그 보고"
 
-#: formcard/AboutPage.qml:476
+#: formcard/AboutPage.qml:320
 #, kde-format
 msgid "Matrix Channel"
 msgstr "Matrix 채널"
 
-#: formcard/AboutPage.qml:492
+#: formcard/AboutPage.qml:336
 #, kde-format
 msgid "Mastodon"
 msgstr "마스토돈"
 
-#: formcard/AboutPage.qml:504
+#: formcard/AboutPage.qml:348
 #, kde-format
 msgid "Source Code"
 msgstr "소스 코드"
 
-#: formcard/AboutPage.qml:510
+#: formcard/AboutPage.qml:354
 #, kde-format
 msgid "Libraries in use"
 msgstr "사용하는 라이브러리"
 
-#: formcard/AboutPage.qml:514
+#: formcard/AboutPage.qml:358
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "클립보드에 복사"
 
-#: formcard/AboutPage.qml:518
+#: formcard/AboutPage.qml:362
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "클립보드에 시스템 정보를 복사했습니다."
 
-#: formcard/AboutPage.qml:533
+#: formcard/AboutPage.qml:377
 #, kde-format
 msgid "Authors"
 msgstr "작성자"
 
-#: formcard/AboutPage.qml:549
+#: formcard/AboutPage.qml:393
 #, kde-format
 msgid "Credits"
 msgstr "제작진"
 
-#: formcard/AboutPage.qml:565
+#: formcard/AboutPage.qml:409
 #, kde-format
 msgid "Translators"
 msgstr "번역자"
 
-#: formcard/AboutPage.qml:616
-#, kde-format
-msgid "More information"
-msgstr "더 많은 정보"
-
-#: formcard/AboutPage.qml:674 formcard/AboutPage.qml:678
+#: formcard/AboutPage.qml:516 formcard/AboutPage.qml:520
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "%1의 KDE 스토어 페이지 방문"
 
-#: formcard/AboutPage.qml:685 formcard/AboutPage.qml:689
+#: formcard/AboutPage.qml:527 formcard/AboutPage.qml:531
 #, kde-format
 msgid "Send an email to %1"
 msgstr "%1(으)로 이메일 보내기"
 
-#: formcard/AboutPage.qml:696 formcard/AboutPage.qml:816
+#: formcard/AboutPage.qml:538 formcard/AboutPage.qml:599
 #, fuzzy, kde-format
 #| msgid "Visit %1's KDE Store page"
 msgctxt "@action:button"
 msgid "Visit %1's website"
 msgstr "%1의 KDE 스토어 페이지 방문"
 
-#: formcard/AboutPage.qml:744
+#: formcard/AboutPage.qml:586
 #, kde-format
 msgctxt "@action:button"
 msgid "Show license for %1"
 msgstr ""
 
-#: formcard/android/FormColorDelegate.qml:42 formcard/FormColorDelegate.qml:52
+#: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:53
 #, kde-format
 msgctxt "@action:button"
 msgid "Color"
 msgstr "색상"
 
-#: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:53
+#: formcard/android/FormColorDelegate.qml:44 formcard/FormColorDelegate.qml:54
 #, kde-format
 msgctxt "Accessible description"
 msgid "Current color \"%1\""
 msgstr "현재 색상 \"%1\""
 
-#: formcard/android/FormIconDelegate.qml:19
+#: formcard/android/FormIconDelegate.qml:20
 #, kde-format
 msgctxt "@action:button"
 msgid "Icon"
 msgstr "아이콘"
 
-#: formcard/FormDateTimeDelegate.qml:232
+#: formcard/FormDateTimeDelegate.qml:233
 #, kde-format
 msgctxt "Displayed in place of the date if the selected day is today"
 msgid "Today"
 msgstr "오늘"
 
-#: formcard/FormDateTimeDelegate.qml:259 formcard/FormDateTimeDelegate.qml:412
+#: formcard/FormDateTimeDelegate.qml:260 formcard/FormDateTimeDelegate.qml:413
 #, kde-format
 msgctxt "Date is not set"
 msgid "Not set"
 msgstr "설정하지 않음"
 
-#: formcard/FormDateTimeDelegate.qml:310 formcard/FormDateTimeDelegate.qml:428
+#: formcard/FormDateTimeDelegate.qml:311 formcard/FormDateTimeDelegate.qml:429
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset"
 msgstr "초기화"
 
-#: formcard/FormFileDelegate.qml:186
+#: formcard/FormFileDelegate.qml:187
 #, kde-format
 msgctxt "@info:status"
 msgid "The path doesn't exist."
 msgstr "경로가 없습니다."
 
-#: formcard/FormFileDelegate.qml:195
+#: formcard/FormFileDelegate.qml:196
 #, kde-format
 msgctxt "@info:status"
 msgid "The file doesn't exist."
 msgstr "파일이 없습니다."
 
-#: formcard/FormFileDelegate.qml:243
+#: formcard/FormFileDelegate.qml:244
 #, kde-format
 msgctxt "@action:button"
 msgid "Select file"
 msgstr "파일 선택"
 
-#: formcard/FormFileDelegate.qml:250
+#: formcard/FormFileDelegate.qml:251
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No file selected"
 msgstr "선택한 파일 없음"
 
-#: formcard/FormFolderDelegate.qml:153
+#: formcard/FormFolderDelegate.qml:154
 #, kde-format
 msgctxt "@info:status"
 msgid "The folder doesn't exist."
 msgstr "폴더가 없습니다."
 
-#: formcard/FormFolderDelegate.qml:200
+#: formcard/FormFolderDelegate.qml:201
 #, kde-format
 msgctxt "@action:button"
 msgid "Select folder"
 msgstr "폴더 선택"
 
-#: formcard/FormFolderDelegate.qml:207
+#: formcard/FormFolderDelegate.qml:208
 #, kde-format
 msgctxt "@info:placeholderwrapMode"
 msgid "No folder selected"
 msgstr "선택한 폴더 없음"
 
-#: formcard/FormLinkDelegate.qml:54
+#: formcard/FormLinkDelegate.qml:62
 #, kde-format
 msgctxt "@action:inmnenu"
 msgid "Open Link"
 msgstr "링크 열기"
 
-#: formcard/FormLinkDelegate.qml:60
+#: formcard/FormLinkDelegate.qml:68
 #, kde-format
 msgctxt "@action:inmnenu"
 msgid "Copy Link to Clipboard"
 msgstr "클립보드에 링크 복사"
 
-#: formcard/FormLinkDelegate.qml:66
+#: formcard/FormLinkDelegate.qml:74
 #, kde-format
 msgctxt "@info:status"
 msgid "Url copied to clipboard."
 msgstr "클립보드에 URL을 복사했습니다."
 
-#: formcard/FormPasswordFieldDelegate.qml:320
-#: formcard/FormTextAreaDelegate.qml:187 formcard/FormTextFieldDelegate.qml:333
+#: formcard/FormPasswordFieldDelegate.qml:321
+#: formcard/FormTextAreaDelegate.qml:188 formcard/FormTextFieldDelegate.qml:334
 #, kde-format
 msgctxt "@label %1 is current text length, %2 is maximum length of text field"
 msgid "%1/%2"
 msgstr "%1/%2"
 
-#: formcard/FormPasswordFieldDelegate.qml:418
-#: formcard/FormTextFieldDelegate.qml:440
+#: formcard/FormPasswordFieldDelegate.qml:419
+#: formcard/FormTextFieldDelegate.qml:441
 #, kde-format
 msgctxt "@action:button"
 msgid "Done"
 msgstr "완료"
 
-#: onboarding/private/OnboardingOverlay.qml:201
+#: formcard/private/AboutReleaseDialog.qml:17
 #, kde-format
-msgctxt "@action:button"
-msgid "Previous"
-msgstr "이전"
+msgid "Release history"
+msgstr "릴리스 기록"
+
+#: formcard/private/AboutReleaseDialog.qml:71
+#, kde-format
+msgid "More information"
+msgstr "더 많은 정보"
+
+#: formcard/private/AboutReleaseDialog.qml:81
+#, kde-format
+msgid "Show older changes…"
+msgstr "이전 변경 사항 표시…"
 
 #: onboarding/private/OnboardingOverlay.qml:202
 #, kde-format
+msgctxt "@action:button"
+msgid "Previous"
+msgstr "이전"
+
+#: onboarding/private/OnboardingOverlay.qml:203
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Previous"
 msgstr "이전"
 
-#: onboarding/private/OnboardingOverlay.qml:221
+#: onboarding/private/OnboardingOverlay.qml:222
 #, kde-format
 msgctxt "@action:button"
 msgid "Next"
 msgstr "다음"
 
-#: onboarding/private/OnboardingOverlay.qml:222
+#: onboarding/private/OnboardingOverlay.qml:223
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Next"
 msgstr "다음"
 
-#: onboarding/private/OnboardingOverlay.qml:237
+#: onboarding/private/OnboardingOverlay.qml:238
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel"
 msgstr "취소"
 
-#: settings/CategorizedSettings.qml:46 settings/ConfigurationView.qml:83
+#: settings/CategorizedSettings.qml:47 settings/ConfigurationView.qml:84
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "설정"
 
-#: settings/CategorizedSettings.qml:46
+#: settings/CategorizedSettings.qml:47
 #, kde-format
 msgctxt "@title:window"
 msgid "Settings — %1"
 msgstr "설정 — %1"
 
-#: settings/CategorizedSettings.qml:100
+#: settings/CategorizedSettings.qml:101
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Go back"
 msgstr "뒤로 이동"
 
-#: settings/private/ConfigMobilePage.qml:26
+#: settings/private/ConfigMobilePage.qml:27
 #, kde-format
 msgctxt "@title"
 msgid "Settings"
 msgstr "설정"
 
-#: settings/private/ConfigMobilePage.qml:99
+#: settings/private/ConfigMobilePage.qml:100
 #, kde-format
 msgctxt "@title:group"
 msgid "Settings"
 msgstr "설정"
 
-#: settings/private/SonnetConfigPage.qml:41
+#: settings/private/SonnetConfigPage.qml:42
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Enable automatic spell checking"
 msgstr "자동 맞춤법 검사 사용"
 
-#: settings/private/SonnetConfigPage.qml:50
+#: settings/private/SonnetConfigPage.qml:51
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore uppercase words"
 msgstr "대문자 단어 무시"
 
-#: settings/private/SonnetConfigPage.qml:59
+#: settings/private/SonnetConfigPage.qml:60
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore hyphenated words"
 msgstr "하이픈으로 연결된 단어 무시"
 
-#: settings/private/SonnetConfigPage.qml:69
+#: settings/private/SonnetConfigPage.qml:70
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Detect language automatically"
 msgstr "자동으로 언어 감지"
 
-#: settings/private/SonnetConfigPage.qml:77
+#: settings/private/SonnetConfigPage.qml:78
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Selected default language:"
 msgstr "선택한 기본 언어:"
 
-#: settings/private/SonnetConfigPage.qml:78
+#: settings/private/SonnetConfigPage.qml:79
 #, kde-format
 msgctxt "No selected language"
 msgid "None"
 msgstr "없음"
 
-#: settings/private/SonnetConfigPage.qml:93
+#: settings/private/SonnetConfigPage.qml:94
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Additional Spell Checking Languages"
 msgstr "추가 맞춤법 검사 언어"
 
-#: settings/private/SonnetConfigPage.qml:94
+#: settings/private/SonnetConfigPage.qml:95
 #, kde-format
 msgid ""
 "%1 will provide spell checking and suggestions for the languages listed here "
@@ -967,54 +966,54 @@ msgstr ""
 "자동 감지를 활성화하면 %1에서 여기에 표시된 언어 감지와 맞춤법 검사를 제공합"
 "니다."
 
-#: settings/private/SonnetConfigPage.qml:102
+#: settings/private/SonnetConfigPage.qml:103
 #, kde-format
 msgctxt "@action:button"
 msgid "Open Personal Dictionary"
 msgstr "개인 사전 열기"
 
-#: settings/private/SonnetConfigPage.qml:114
+#: settings/private/SonnetConfigPage.qml:115
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking languages"
 msgstr "맞춤법 검사 언어"
 
-#: settings/private/SonnetConfigPage.qml:126
+#: settings/private/SonnetConfigPage.qml:127
 #, kde-format
 msgid "Default Language"
 msgstr "기본 언어"
 
-#: settings/private/SonnetConfigPage.qml:138
+#: settings/private/SonnetConfigPage.qml:139
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking dictionary"
 msgstr "맞춤법 검사 사전"
 
-#: settings/private/SonnetConfigPage.qml:145
+#: settings/private/SonnetConfigPage.qml:146
 #, kde-format
 msgctxt "Placeholder message"
 msgid "Add a new word to your personal dictionary…"
 msgstr "개인 사전에 단어 추가..."
 
-#: settings/private/SonnetConfigPage.qml:148
+#: settings/private/SonnetConfigPage.qml:149
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Word"
 msgstr "단어 추가"
 
-#: settings/private/SonnetConfigPage.qml:183
+#: settings/private/SonnetConfigPage.qml:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete word"
 msgstr "단어 삭제"
 
-#: settings/ShortcutsConfigurationModule.qml:26
+#: settings/ShortcutsConfigurationModule.qml:27
 #, kde-format
 msgctxt "@action:button"
 msgid "Keyboard Shortcuts"
 msgstr "키보드 단축키"
 
-#: settings/SpellcheckingConfigurationModule.qml:15
+#: settings/SpellcheckingConfigurationModule.qml:16
 #, kde-format
 msgctxt "@action:button"
 msgid "Spell Checking"
