@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-24 00:48+0000\n"
-"PO-Revision-Date: 2026-10-23 12:07+0200\n"
+"PO-Revision-Date: 2026-10-24 10:31+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -725,17 +725,16 @@ msgid "Send an email to %1"
 msgstr "Odeslat e-mail %1"
 
 #: formcard/AboutPage.qml:538 formcard/AboutPage.qml:599
-#, fuzzy, kde-format
-#| msgid "Visit %1's KDE Store page"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit %1's website"
-msgstr "Navštívit stránku KDE Store od %1"
+msgstr "Navštívit webovou stránku %1"
 
 #: formcard/AboutPage.qml:586
 #, kde-format
 msgctxt "@action:button"
 msgid "Show license for %1"
-msgstr ""
+msgstr "Zobrazit licenci pro %1"
 
 #: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:53
 #, kde-format
