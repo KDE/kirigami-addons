@@ -637,11 +637,10 @@ msgid "Donate"
 msgstr "Venovať peniaze"
 
 #: formcard/AboutPage.qml:143
-#, fuzzy, kde-format
-#| msgid "Release history"
+#, kde-format
 msgctxt "@action:button"
 msgid "Show release history for %1 %2"
-msgstr "História vydaní"
+msgstr "Zobraziť históriu vydaní %1 %2"
 
 #: formcard/AboutPage.qml:173
 #, kde-format
@@ -729,17 +728,16 @@ msgid "Send an email to %1"
 msgstr "Odoslať email pre %1"
 
 #: formcard/AboutPage.qml:538 formcard/AboutPage.qml:599
-#, fuzzy, kde-format
-#| msgid "Visit %1's KDE Store page"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit %1's website"
-msgstr "Navštívte stránku obchodu KDE %1"
+msgstr "Navštíviť webovú stránku %1"
 
 #: formcard/AboutPage.qml:586
 #, kde-format
 msgctxt "@action:button"
 msgid "Show license for %1"
-msgstr ""
+msgstr "Zobraziť licenciu %1"
 
 #: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:53
 #, kde-format

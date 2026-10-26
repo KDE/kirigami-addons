@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-24 00:48+0000\n"
-"PO-Revision-Date: 2026-10-01 14:15+0300\n"
+"PO-Revision-Date: 2026-10-26 00:16+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Poedit 3.10\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -640,11 +640,10 @@ msgid "Donate"
 msgstr "Paaukoti"
 
 #: formcard/AboutPage.qml:143
-#, fuzzy, kde-format
-#| msgid "Release history"
+#, kde-format
 msgctxt "@action:button"
 msgid "Show release history for %1 %2"
-msgstr "Laidų istorija"
+msgstr "Rodyti %1 %2 laidų istorija"
 
 #: formcard/AboutPage.qml:173
 #, kde-format
@@ -733,17 +732,16 @@ msgid "Send an email to %1"
 msgstr "Siųsti el. laišką, adresu %1"
 
 #: formcard/AboutPage.qml:538 formcard/AboutPage.qml:599
-#, fuzzy, kde-format
-#| msgid "Visit %1's KDE Store page"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit %1's website"
-msgstr "Apsilankyti KDE parduotuvės %1 puslapyje"
+msgstr "Apsilankyti %1 internetinėje svetainėje"
 
 #: formcard/AboutPage.qml:586
 #, kde-format
 msgctxt "@action:button"
 msgid "Show license for %1"
-msgstr ""
+msgstr "Rodyti %1 licenciją"
 
 #: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:53
 #, kde-format

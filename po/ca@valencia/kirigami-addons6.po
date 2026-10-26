@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-24 00:48+0000\n"
-"PO-Revision-Date: 2026-10-01 09:29+0200\n"
+"PO-Revision-Date: 2026-10-23 10:58+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -648,11 +648,10 @@ msgid "Donate"
 msgstr "Donació"
 
 #: formcard/AboutPage.qml:143
-#, fuzzy, kde-format
-#| msgid "Release history"
+#, kde-format
 msgctxt "@action:button"
 msgid "Show release history for %1 %2"
-msgstr "Historial de llançaments"
+msgstr "Mostra l'historial de llançament de %1 %2"
 
 #: formcard/AboutPage.qml:173
 #, kde-format
@@ -739,17 +738,16 @@ msgid "Send an email to %1"
 msgstr "Envia un correu a %1"
 
 #: formcard/AboutPage.qml:538 formcard/AboutPage.qml:599
-#, fuzzy, kde-format
-#| msgid "Visit %1's KDE Store page"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit %1's website"
-msgstr "Visita la pàgina %1 de la KDE Store"
+msgstr "Visiteu el lloc web de %1"
 
 #: formcard/AboutPage.qml:586
 #, kde-format
 msgctxt "@action:button"
 msgid "Show license for %1"
-msgstr ""
+msgstr "Mostra la llicència de %1"
 
 #: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:53
 #, kde-format
