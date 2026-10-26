@@ -32,7 +32,11 @@ QQC2.ScrollView {
         required property T.Action modelData
 
         action: modelData
+        text: Kirigami.MnemonicData.plainTextLabel
         visible: modelData.visible === undefined || modelData.visible
+
+        Kirigami.MnemonicData.enabled: false
+        Kirigami.MnemonicData.label: button.modelData.text
 
         leadingPadding: modelData.checkable ? Kirigami.Units.largeSpacing : 0
 
@@ -94,7 +98,7 @@ QQC2.ScrollView {
                 root.stackView.push(Qt.resolvedUrl('./ContextMenuPage.qml'), {
                     stackView: root.stackView,
                     actions: modelData.children,
-                    title: modelData.text,
+                    title: button.text,
                     popup: root.popup,
                 });
                 return;
