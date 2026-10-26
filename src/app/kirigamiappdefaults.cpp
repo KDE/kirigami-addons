@@ -12,6 +12,7 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include <QQuickStyle>
+#include <QScopeGuard>
 #include <QSurfaceFormat>
 #include <QUrl>
 #include <QVariant>
@@ -117,10 +118,13 @@ bool load(QAnyStringView uri, QAnyStringView typeName, QQmlApplicationEngine *en
     Q_ASSERT(engine);
 
     QStringList qmlErrors;
-    QObject::connect(engine, &QQmlApplicationEngine::warnings, engine, [&qmlErrors](const QList<QQmlError> &warnings) {
+    const auto warningConnection = QObject::connect(engine, &QQmlApplicationEngine::warnings, engine, [&qmlErrors](const QList<QQmlError> &warnings) {
         for (const auto &warning : warnings) {
             qmlErrors.append(warning.toString());
         }
+    });
+    const auto disconnectWarnings = qScopeGuard([warningConnection] {
+        QObject::disconnect(warningConnection);
     });
 
     engine->loadFromModule(uri, typeName);
