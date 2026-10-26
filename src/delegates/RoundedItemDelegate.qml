@@ -79,7 +79,7 @@ T.ItemDelegate {
     topPadding: verticalPadding
     bottomPadding: verticalPadding
 
-    hoverEnabled: !Kirigami.Settings.isMobile
+    hoverEnabled: !Kirigami.Settings.hasTransientTouchInput
 
     topInset: if (root.index !== undefined && index === 0 && listView.view && listView.view.topMargin === 0) {
         Kirigami.Units.smallSpacing;

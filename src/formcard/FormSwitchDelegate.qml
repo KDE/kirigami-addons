@@ -77,7 +77,7 @@ T.SwitchDelegate {
     implicitHeight: contentItem.implicitHeight + topPadding + bottomPadding
 
     focusPolicy: Qt.StrongFocus
-    hoverEnabled: true
+    hoverEnabled: !Kirigami.Settings.hasTransientTouchInput
     background: FormDelegateBackground { control: root }
 
     icon {

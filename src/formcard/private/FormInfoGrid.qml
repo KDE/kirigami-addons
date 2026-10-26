@@ -73,7 +73,7 @@ Item {
                 leftInset: root.cardWidthRestricted ? 0 : -root.borderWidth
                 rightInset: root.cardWidthRestricted ? 0 : -root.borderWidth
 
-                hoverEnabled: true
+                hoverEnabled: !Kirigami.Settings.hasTransientTouchInput
 
                 Accessible.name: title + " " + subtitle
                 Accessible.role: action ? Accessible.Button : Accessible.Note

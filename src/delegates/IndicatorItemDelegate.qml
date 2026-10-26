@@ -53,7 +53,7 @@ T.ItemDelegate {
     topPadding: verticalPadding
     bottomPadding: verticalPadding
 
-    hoverEnabled: !Kirigami.Settings.isMobile
+    hoverEnabled: !Kirigami.Settings.hasTransientTouchInput
 
     icon {
         width: if (contentItem instanceof SubtitleContentItem) {

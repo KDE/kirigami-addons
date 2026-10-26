@@ -137,7 +137,7 @@ FormCardPage {
 
             Layout.fillWidth: true
             focusPolicy: hasReleases ? Qt.StrongFocus : Qt.NoFocus
-            hoverEnabled: hasReleases
+            hoverEnabled: hasReleases && !Kirigami.Settings.hasTransientTouchInput
             Accessible.role: hasReleases ? Accessible.Button : Accessible.StaticText
             Accessible.name: hasReleases
                 ? I18n.i18nc("@action:button", "Show release history for %1 %2", page.aboutData.displayName, page.aboutData.version)

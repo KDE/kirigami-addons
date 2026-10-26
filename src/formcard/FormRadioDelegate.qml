@@ -91,7 +91,7 @@ T.RadioDelegate {
     implicitHeight: contentItem.implicitHeight + topPadding + bottomPadding
 
     focusPolicy: Qt.StrongFocus
-    hoverEnabled: true
+    hoverEnabled: !Kirigami.Settings.hasTransientTouchInput
     background: FormDelegateBackground { control: root }
 
     icon {
@@ -112,29 +112,29 @@ T.RadioDelegate {
 
         Controls.RadioButton {
             objectName: "checkControl"
-                id: radioButtonItem
-                focusPolicy: Qt.NoFocus // provided by delegate
-                Layout.rightMargin: Private.FormCardUnits.horizontalSpacing
+            id: radioButtonItem
+            focusPolicy: Qt.NoFocus // provided by delegate
+            Layout.rightMargin: Private.FormCardUnits.horizontalSpacing
 
-                enabled: root.enabled
-                checked: root.checked
+            enabled: root.enabled
+            checked: root.checked
 
-                spacing: 0
+            spacing: 0
 
-                topPadding: 0
-                leftPadding: 0
-                rightPadding: 0
-                bottomPadding: 0
+            topPadding: 0
+            leftPadding: 0
+            rightPadding: 0
+            bottomPadding: 0
 
-                onToggled: root.toggled()
-                onClicked: root.clicked()
-                onPressAndHold: root.pressAndHold()
-                onDoubleClicked: root.doubleClicked()
+            onToggled: root.toggled()
+            onClicked: root.clicked()
+            onPressAndHold: root.pressAndHold()
+            onDoubleClicked: root.doubleClicked()
 
-                onCheckedChanged: {
-                    FormFieldHelper.setPropertyValue(root, "checked", checked);
-                    checked = Qt.binding(() => root.checked);
-                }
+            onCheckedChanged: {
+                FormFieldHelper.setPropertyValue(root, "checked", checked);
+                checked = Qt.binding(() => root.checked);
+            }
         }
 
         Kirigami.Icon {
@@ -154,5 +154,5 @@ T.RadioDelegate {
                 wrapMode: Text.Wrap
                 maximumLineCount: 2
         }
-}
+    }
 }
