@@ -17,7 +17,7 @@ Dependencies:
   'require':
     'frameworks/kglobalaccel': '@latest-kf6'
 
-- 'on': ['Linux', 'FreeBSD','Windows']
+- 'on': ['Linux', 'FreeBSD','Windows','Android']
   'require':
     'frameworks/kiconthemes': '@latest-kf6'
 

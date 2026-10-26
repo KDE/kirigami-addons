@@ -13,3 +13,7 @@ add_subdirectory(delegates)
 add_subdirectory(settings)
 add_subdirectory(actions)
 add_subdirectory(onboarding)
+
+if (ANDROID)
+    add_subdirectory(android/material)
+endif()

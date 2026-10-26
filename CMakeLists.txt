@@ -10,7 +10,7 @@ include(FeatureSummary)
 set(AUTOMOC_MOC_OPTIONS -Muri=org.kde.kirigami)
 
 set(QT_REQUIRED_VERSION "6.10.0")
-set(KF_MIN_VERSION "6.25.0")
+set(KF_MIN_VERSION "6.27.0")
 
 find_package(ECM ${KF_MIN_VERSION} NO_MODULE)
 set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://projects.kde.org/projects/kdesupport/extra-cmake-modules")
@@ -40,7 +40,7 @@ if (BUILD_TESTING)
 endif()
 if(ANDROID)
     find_package(Gradle REQUIRED)
-    find_package(KF6 6.27 REQUIRED COMPONENTS Crash) # Android support was added in KF 6.27 only
+    find_package(KF6 6.27 REQUIRED COMPONENTS Crash IconThemes)
 elseif(NOT IOS)
     find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS Crash IconThemes)
 endif()
