@@ -20,6 +20,24 @@ Kirigami.ApplicationWindow {
 
     // Do not use Map, it crashes very frequently
     property var pageCache: Object.create(null)
+    property ConfigurationModule currentModule: null
+
+    ConfigurationSearch {
+        id: configurationSearch
+        modules: root.modules
+        pageCache: root.pageCache
+        pageParent: root.contentItem
+        currentPage: root.pageStack.currentItem
+        filterText: searchField.text
+        onResultAccepted: module => {
+            const hadFocus = searchField.activeFocus;
+            root.openModule(module);
+            // Newly created pages take the focus.
+            if (hadFocus) {
+                searchField.forceActiveFocus();
+            }
+        }
+    }
 
     // On macOS, a window-modal window with a transient parent is presented as a
     // sheet, which doesn't have a title bar or a close button. Application
@@ -67,7 +85,10 @@ Kirigami.ApplicationWindow {
                 visible: !Kirigami.Settings.isMobile
 
                 Kirigami.SearchField {
-                    onTextChanged: listview.filterText = text.toLowerCase();
+                    id: searchField
+                    autoAccept: false
+                    onAccepted: configurationSearch.acceptFirstResult()
+                    Keys.onDownPressed: listview.focusResult(0)
                     anchors {
                         verticalCenter: parent.verticalCenter
                         left: parent.left
@@ -83,36 +104,34 @@ Kirigami.ApplicationWindow {
                 ListView {
                     id: listview
 
-                    property string filterText: ""
                     property bool initDone: false
 
-                    currentIndex: -1
+                    function focusResult(index: int): void {
+                        if (index < 0) {
+                            searchField.forceActiveFocus(Qt.BacktabFocusReason);
+                        } else if (index < count) {
+                            positionViewAtIndex(index, ListView.Contain);
+                            itemAtIndex(index)?.forceActiveFocus(Qt.TabFocusReason);
+                        }
+                    }
+
+                    currentIndex: configurationSearch.filteredModules.indexOf(root.currentModule)
 
                     onWidthChanged: if (!initDone) {
                         let module = getModuleByName(defaultModule);
                         if (module) {
                             root.pageStack.push(pageForModule(module));
-                            listview.currentIndex = modules.findIndex(module => module.moduleId == defaultModule);
+                            root.currentModule = module;
                         } else {
                             root.pageStack.push(pageForModule(modules[0]));
-                            listview.currentIndex = 0;
+                            root.currentModule = modules[0];
                             if (root.pageStack.currentItem.title.length === 0) {
                                 root.pageStack.currentItem.title = modules[0].text;
                             }
                         }
                         initDone = true;
                     }
-                    model: {
-                        const isFiltering = filterText.length !== 0;
-                        let filteredModules = [];
-                        for (const module of root.modules) {
-                            const modulePassesFilter = module.text.toLowerCase().includes(filterText);
-                            if (module.visible && (isFiltering ? modulePassesFilter : true)) {
-                                filteredModules.push(module);
-                            }
-                        }
-                        return filteredModules;
-                    }
+                    model: configurationSearch.filteredModules
                     delegate: Delegates.RoundedItemDelegate {
                         id: settingDelegate
 
@@ -122,31 +141,38 @@ Kirigami.ApplicationWindow {
                         text: modelData?.text
                         icon.name: modelData?.icon.name
                         icon.source: modelData?.icon.source
-                        checked: ListView.view.currentIndex === settingDelegate.index
+                        checked: root.currentModule === settingDelegate.modelData
 
-                        onClicked: {
-                            const page = pageForModule(modelData);
-                            if (ListView.view.currentIndex === settingDelegate.index) {
-                                return;
-                            }
+                        Keys.onUpPressed: listview.focusResult(index - 1)
+                        Keys.onDownPressed: listview.focusResult(index + 1)
+                        Keys.onReturnPressed: clicked()
+                        Keys.onEnterPressed: clicked()
 
-                            while (root.pageStack.length > 1) {
-                                root.pageStack.pop(null);
-                            }
-                            root.pageStack.replace(page);
-
-                            ListView.view.currentIndex = settingDelegate.index;
-                            if (root.pageStack.currentItem.title.length === 0) {
-                                root.pageStack.currentItem.title = text;
-                            }
-                        }
+                        onClicked: root.openModule(modelData)
                     }
                 }
             }
         }
     }
 
-    function pageForModule(module: ConfigurationModule): var {
+    function openModule(module: ConfigurationModule): void {
+        if (root.currentModule === module) {
+            return;
+        }
+        const page = pageForModule(module);
+
+        while (root.pageStack.length > 1) {
+            root.pageStack.pop(null);
+        }
+        root.pageStack.replace(page);
+
+        root.currentModule = module;
+        if (root.pageStack.currentItem.title.length === 0) {
+            root.pageStack.currentItem.title = module.text;
+        }
+    }
+
+    function pageForModule(module: ConfigurationModule, parent = root.contentItem): var {
         if (pageCache[module.moduleId]) {
             return pageCache[module.moduleId];
         } else {
@@ -156,12 +182,15 @@ Kirigami.ApplicationWindow {
                 return null;
             }
 
-            if (component.status === Component.Error) {
+            if (component.status !== Component.Ready) {
                 console.error(`Unable to create component for moduleId: "${module.moduleId}". Error: ${component.errorString()}`);
                 return null;
             }
 
-            const page = component.createObject(root, module.initialProperties());
+            const page = component.createObject(parent, module.initialProperties());
+            if (!page) {
+                return null;
+            }
             if (page.title.length === 0) {
                 page.title = module.text;
             }

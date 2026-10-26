@@ -19,4 +19,6 @@ public:
     explicit Helper(QObject *parent = nullptr);
 
     QString styleName() const;
+
+    Q_INVOKABLE bool matches(const QString &pattern, const QString &text) const;
 };
