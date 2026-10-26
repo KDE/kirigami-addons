@@ -58,6 +58,7 @@ kirigami_add_tests(
     tst_formtextfields.qml
     tst_formdelegatebindings.qml
     tst_messagedialog.qml
+    tst_settingssearch.qml
     tst_formpathcompletion.qml
     tst_pdfeditoractions.qml
     tst_album_qmllistmodel.qml
