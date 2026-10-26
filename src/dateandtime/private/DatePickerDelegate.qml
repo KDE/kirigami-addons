@@ -41,27 +41,26 @@ Delegates.RoundedItemDelegate {
         }
     }
 
-    Keys.onLeftPressed: if (inScope) {
-        if (index !== 0) {
-            const item = repeater.itemAt(index - 1);
+    function moveFocus(step: int): void {
+        if (!root.inScope) {
+            return;
+        }
+
+        const nextIndex = root.index + step;
+        if (nextIndex >= 0 && nextIndex < root.repeater.count) {
+            const item = root.repeater.itemAt(nextIndex);
             if (item.inScope) {
                 item.forceActiveFocus();
             }
+        } else if (step < 0) {
+            root.previousAction.trigger();
         } else {
-            goPreviousAction.trigger();
+            root.nextAction.trigger();
         }
     }
 
-    Keys.onRightPressed: if (inScope) {
-        if (index !== repeater.count - 1) {
-            const item = repeater.itemAt(index + 1);
-            if (item.inScope) {
-                item.forceActiveFocus();
-            }
-        } else {
-            goNextAction.trigger();
-        }
-    }
+    Keys.onLeftPressed: moveFocus(root.LayoutMirroring.enabled ? 1 : -1)
+    Keys.onRightPressed: moveFocus(root.LayoutMirroring.enabled ? -1 : 1)
 
     Layout.fillWidth: true
     Layout.fillHeight: true

@@ -13,6 +13,9 @@ PathView {
     required property QQC2.SwipeView mainView
     property int startIndex: 0
 
+    LayoutMirroring.enabled: mainView.mirrored
+    LayoutMirroring.childrenInherit: true
+
     implicitHeight: Kirigami.Units.gridUnit * 16
     flickDeceleration: 200
     highlightRangeMode: PathView.StrictlyEnforceRange

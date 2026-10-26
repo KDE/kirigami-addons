@@ -363,7 +363,7 @@ QQC2.Control {
                 actions: [
                     Kirigami.Action {
                         id: goPreviousAction
-                        icon.name: Application.layoutDirection === Qt.RightToLeft ? 'go-previous-rtl-symbolic' : 'go-previous-view-symbolic'
+                        icon.name: root.LayoutMirroring.enabled ? 'go-previous-rtl-symbolic' : 'go-previous-view-symbolic'
                         text: I18n.i18nc("@action:button", "Go Previous")
                         displayHint: Kirigami.DisplayHint.IconOnly
                         onTriggered: {
@@ -385,7 +385,7 @@ QQC2.Control {
                     Kirigami.Action {
                         id: goNextAction
                         text: I18n.i18nc("@action:button", "Go Next")
-                        icon.name: Application.layoutDirection === Qt.RightToLeft ? 'go-next-rtl-symbolic' : 'go-next-view-symbolic'
+                        icon.name: root.LayoutMirroring.enabled ? 'go-next-rtl-symbolic' : 'go-next-view-symbolic'
                         displayHint: Kirigami.DisplayHint.IconOnly
                         onTriggered: {
                             if (pickerView.currentIndex === 1) { // monthGrid index
@@ -407,6 +407,9 @@ QQC2.Control {
             clip: true
             interactive: false
             padding: 0
+
+            // SwipeView positions its pages from left to right, even when mirrored.
+            contentItem.LayoutMirroring.enabled: false
 
             Layout.fillWidth: true
             Layout.fillHeight: true
