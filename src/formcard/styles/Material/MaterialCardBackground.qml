@@ -8,13 +8,12 @@ import QtQuick.Controls.Material
 import org.kde.kirigami as Kirigami
 
 Kirigami.ShadowedRectangle {
-    Material.elevation: 1
+    Material.elevation: Material.theme === Material.Dark ? 2 : 1
 
     Kirigami.Theme.colorSet: Kirigami.Theme.View
     Kirigami.Theme.inherit: false
 
-    color: Qt.tint(Material.color(Material.Grey, Material.theme === Material.Dark ? Material.Shade900 : Material.Shade100),
-        Qt.alpha(Material.primaryColor, 0.05))
+    color: Material.color(Material.Grey, Material.theme === Material.Dark ? Material.Shade900 : Material.Shade100)
 
     shadow {
         size: Material.elevation * 3
