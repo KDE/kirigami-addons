@@ -34,7 +34,7 @@ T.ItemDelegate {
     implicitHeight: contentItem.implicitHeight + topPadding + bottomPadding
 
     focusPolicy: Qt.StrongFocus
-    hoverEnabled: true
+    hoverEnabled: !Kirigami.Settings.hasTransientTouchInput
     // Todo change this to a property Item
     background: FormDelegateBackground { control: root }
 
