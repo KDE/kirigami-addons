@@ -18,7 +18,10 @@ AboutDialog {
 
         Kirigami.SelectableLabel {
             width: scrollView.availableWidth
-            text: root.text
+            // License texts are hard-wrapped at ~76 columns. Join each line with the
+            // next one so paragraphs wrap to the dialog's width, but keep empty lines
+            // and lines starting with whitespace (headings, list items) on their own.
+            text: root.text.replace(/([^\r\n])\r?\n(?!\s)/g, "$1 ")
             textMargin: Kirigami.Units.gridUnit
             wrapMode: Text.WordWrap
             onLinkActivated: link => Qt.openUrlExternally(link)
