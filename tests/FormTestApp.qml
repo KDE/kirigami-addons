@@ -7,7 +7,6 @@ import QtCore
 import QtQuick
 import QtQuick.Controls as Controls
 import QtQuick.Layouts
-import QtQuick.Layouts
 import QtQuick.Dialogs
 
 import org.kde.kirigamiaddons.private
@@ -259,7 +258,7 @@ Kirigami.ApplicationWindow {
                     text: "Layout mirroring"
                     description: "Toggle layout mirroring to test flipped layouts."
                     onCheckedChanged: {
-                        applicationWindow().LayoutMirroring.enabled = checked;
+                        appwindow.LayoutMirroring.enabled = checked;
                     }
                 }
             }

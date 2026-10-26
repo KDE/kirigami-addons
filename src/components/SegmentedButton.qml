@@ -71,14 +71,14 @@ Templates.SegmentedButton {
             )
 
             corners {
-                topLeftRadius: buttonDelegate.index === (Qt.application.layoutDirection === Qt.RightToLeft ? root._buttonCount - 1 : 0)
+                topLeftRadius: buttonDelegate.index === (root.LayoutMirroring.enabled ? root._buttonCount - 1 : 0)
                     ? Kirigami.Units.mediumSpacing : 0
-                bottomLeftRadius: buttonDelegate.index === (Qt.application.layoutDirection === Qt.RightToLeft ? root._buttonCount - 1 : 0)
+                bottomLeftRadius: buttonDelegate.index === (root.LayoutMirroring.enabled ? root._buttonCount - 1 : 0)
                     ? Kirigami.Units.mediumSpacing : 0
 
-                bottomRightRadius: buttonDelegate.index === (Qt.application.layoutDirection === Qt.RightToLeft ? 0 : root._buttonCount - 1)
+                bottomRightRadius: buttonDelegate.index === (root.LayoutMirroring.enabled ? 0 : root._buttonCount - 1)
                     ? Kirigami.Units.mediumSpacing : 0
-                topRightRadius: buttonDelegate.index === (Qt.application.layoutDirection === Qt.RightToLeft ? 0 : root._buttonCount - 1)
+                topRightRadius: buttonDelegate.index === (root.LayoutMirroring.enabled ? 0 : root._buttonCount - 1)
                     ? Kirigami.Units.mediumSpacing : 0
             }
 
@@ -129,14 +129,14 @@ Templates.SegmentedButton {
                 visible: !buttonDelegate.editable && !buttonDelegate.flat && buttonDelegate.enabled
 
                 corners {
-                    topLeftRadius: buttonDelegate.index === (Qt.application.layoutDirection === Qt.RightToLeft ? root._buttonCount - 1 : 0)
+                    topLeftRadius: buttonDelegate.index === (root.LayoutMirroring.enabled ? root._buttonCount - 1 : 0)
                         ? Kirigami.Units.mediumSpacing : 0
-                    bottomLeftRadius: buttonDelegate.index === (Qt.application.layoutDirection === Qt.RightToLeft ? root._buttonCount - 1 : 0)
+                    bottomLeftRadius: buttonDelegate.index === (root.LayoutMirroring.enabled ? root._buttonCount - 1 : 0)
                         ? Kirigami.Units.mediumSpacing : 0
 
-                    bottomRightRadius: buttonDelegate.index === (Qt.application.layoutDirection === Qt.RightToLeft ? 0 : root._buttonCount - 1)
+                    bottomRightRadius: buttonDelegate.index === (root.LayoutMirroring.enabled ? 0 : root._buttonCount - 1)
                         ? Kirigami.Units.mediumSpacing : 0
-                    topRightRadius: buttonDelegate.index === (Qt.application.layoutDirection === Qt.RightToLeft ? 0 : root._buttonCount - 1)
+                    topRightRadius: buttonDelegate.index === (root.LayoutMirroring.enabled ? 0 : root._buttonCount - 1)
                         ? Kirigami.Units.mediumSpacing : 0
                 }
 
