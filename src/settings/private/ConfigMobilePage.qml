@@ -22,6 +22,16 @@ FormCard.FormCardPage {
     // Do not use Map, it crashes very frequently
     property var pageCache: Object.create(null)
 
+    ConfigurationSearch {
+        id: configurationSearch
+        modules: root.modules
+        pageCache: root.pageCache
+        pageParent: root
+        currentPage: root.window.pageStack.layers.currentItem === root ? null : root.window.pageStack.layers.currentItem
+        filterText: searchField.text
+        onResultAccepted: module => root.openModule(module)
+    }
+
     property bool initDone: false
 
     title: I18n.i18nc("@title", "Settings")
@@ -55,35 +65,27 @@ FormCard.FormCardPage {
             contentItem: Kirigami.SearchField {
                 id: searchField
                 Layout.fillWidth: true
-                autoAccept: true
-                onTextChanged: repeater.filterText = text.toLowerCase();
+                autoAccept: false
                 background: null
+                onAccepted: configurationSearch.acceptFirstResult()
+                Keys.onDownPressed: nextItemInFocusChain(true)?.forceActiveFocus(Qt.TabFocusReason)
             }
         }
     }
 
     Repeater {
-        id: repeater
-
-        property string filterText: ""
-
         model: {
-            const isFiltering = filterText.length !== 0;
             let filteredCategories = new Array();
 
-            for (let i in root.modules) {
-                const module = modules[i];
-                const modulePassesFilter = module.text.toLowerCase().includes(filterText);
-                if (module.visible && (isFiltering ? modulePassesFilter : true)) {
-                    const category = filteredCategories.find((category) => category.name === module.category);
-                    if (category) {
-                        category.modules.push(module);
-                    } else {
-                        filteredCategories.push({
-                            name: module.category,
-                            modules: [module],
-                        });
-                    }
+            for (const module of configurationSearch.filteredModules) {
+                const category = filteredCategories.find((category) => category.name === module.category);
+                if (category) {
+                    category.modules.push(module);
+                } else {
+                    filteredCategories.push({
+                        name: module.category,
+                        modules: [module],
+                    });
                 }
             }
             return filteredCategories;
@@ -107,17 +109,18 @@ FormCard.FormCardPage {
                 autoSeparators: true
 
                 Repeater {
-                    id: repeater
-
                     model: categoryDelegate.modelData.modules
                     delegate: FormCard.AbstractFormDelegate {
                         id: moduleDelegate
 
                         required property ConfigurationModule modelData
 
-                        onClicked: {
-                            root.window.pageStack.layers.push(pageForModule(moduleDelegate.modelData));
-                        }
+                        Keys.onUpPressed: nextItemInFocusChain(false)?.forceActiveFocus(Qt.BacktabFocusReason)
+                        Keys.onDownPressed: nextItemInFocusChain(true)?.forceActiveFocus(Qt.TabFocusReason)
+                        Keys.onReturnPressed: clicked()
+                        Keys.onEnterPressed: clicked()
+
+                        onClicked: root.openModule(moduleDelegate.modelData)
 
                         contentItem: RowLayout {
                             Kirigami.Icon {
@@ -147,15 +150,27 @@ FormCard.FormCardPage {
         }
     }
 
-    function pageForModule(module: ConfigurationModule) {
+    function openModule(module: ConfigurationModule): void {
+        root.window.pageStack.layers.push(pageForModule(module));
+    }
+
+    function pageForModule(module: ConfigurationModule, parent = root): var {
         if (pageCache[module.moduleId]) {
             return pageCache[module.moduleId];
         } else {
             const component = module.page();
-            if (component.status === Component.Error) {
-                console.error(component.errorString());
+            if (!component) {
+                console.error("Unable to create component for moduleId", module.moduleId);
+                return null;
             }
-            const page = component.createObject(root, module.initialProperties());
+            if (component.status !== Component.Ready) {
+                console.error(component.errorString());
+                return null;
+            }
+            const page = component.createObject(parent, module.initialProperties());
+            if (!page) {
+                return null;
+            }
             if (page.title.length === 0) {
                 page.title = module.text;
             }

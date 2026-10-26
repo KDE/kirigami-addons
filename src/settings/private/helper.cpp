@@ -14,3 +14,8 @@ QString Helper::styleName() const
 {
     return QQuickStyle::name();
 }
+
+bool Helper::matches(const QString &pattern, const QString &text) const
+{
+    return text.contains(pattern, Qt::CaseInsensitive);
+}

@@ -44,6 +44,16 @@ QtObject {
     property bool visible: true
 
     /*!
+       Whether this module can appear in search results.
+
+       Set this to false for pages that do not contain searchable settings.
+       Built-in FormCard About pages are excluded automatically.
+       \default true
+       \since 1.16.0
+     */
+    property bool searchable: true
+
+    /*!
        This property holds the initial property that the page needs to be initialized with
        if any.
 
