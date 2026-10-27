@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-24 00:48+0000\n"
-"PO-Revision-Date: 2026-09-27 21:37+0200\n"
+"POT-Creation-Date: 2026-10-27 00:58+0000\n"
+"PO-Revision-Date: 2026-10-26 22:04+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.08.1\n"
+"X-Generator: Lokalize 26.11.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -220,13 +220,13 @@ msgctxt "@title:window"
 msgid "About KDE"
 msgstr "Om KDE"
 
-#: app/kirigamiappdefaults.cpp:133 app/kirigamiappdefaults.cpp:140
+#: app/kirigamiappdefaults.cpp:137 app/kirigamiappdefaults.cpp:144
 #, kde-format
 msgctxt "@title:window"
 msgid "Failed to Load Application"
 msgstr "Klarte ikkje lasta inn program"
 
-#: app/kirigamiappdefaults.cpp:134
+#: app/kirigamiappdefaults.cpp:138
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -236,7 +236,7 @@ msgstr ""
 "Klarte ikkje lasta inn QML-programmet. Dette kan skuldast ein feil i Linux-"
 "distribusjonen din. Meld derfor inn problemet der først."
 
-#: app/kirigamiappdefaults.cpp:141
+#: app/kirigamiappdefaults.cpp:145
 #, kde-format
 msgctxt "@info"
 msgid "Could not load the QML application."
@@ -636,16 +636,15 @@ msgid "Donate"
 msgstr "Gje pengegåve"
 
 #: formcard/AboutPage.qml:143
-#, fuzzy, kde-format
-#| msgid "Release history"
+#, kde-format
 msgctxt "@action:button"
 msgid "Show release history for %1 %2"
-msgstr "Utgjevingshistorikk"
+msgstr "Vis utgjevingshistorikk for %1 %2"
 
 #: formcard/AboutPage.qml:173
 #, kde-format
 msgid "What's new"
-msgstr ""
+msgstr "Nytt i denne utgåva"
 
 #: formcard/AboutPage.qml:199
 #, kde-format
@@ -727,17 +726,16 @@ msgid "Send an email to %1"
 msgstr "Send e-post til %1"
 
 #: formcard/AboutPage.qml:538 formcard/AboutPage.qml:599
-#, fuzzy, kde-format
-#| msgid "Visit %1's KDE Store page"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit %1's website"
-msgstr "Gå til %1-sida i KDE-butikken"
+msgstr "Besøk heimesida til %1"
 
 #: formcard/AboutPage.qml:586
 #, kde-format
 msgctxt "@action:button"
 msgid "Show license for %1"
-msgstr ""
+msgstr "Vis lisensen til %1"
 
 #: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:53
 #, kde-format
@@ -773,7 +771,7 @@ msgstr "Ikkje vald"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset"
-msgstr ""
+msgstr "Tilbakestill"
 
 #: formcard/FormFileDelegate.qml:187
 #, kde-format
@@ -862,7 +860,7 @@ msgstr "Meir informasjon"
 #: formcard/private/AboutReleaseDialog.qml:81
 #, kde-format
 msgid "Show older changes…"
-msgstr ""
+msgstr "Vis eldre endringar …"
 
 #: onboarding/private/OnboardingOverlay.qml:202
 #, kde-format

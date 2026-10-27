@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-24 00:48+0000\n"
+"POT-Creation-Date: 2026-10-27 00:58+0000\n"
 "PO-Revision-Date: 2026-10-10 21:17+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -217,13 +217,13 @@ msgctxt "@title:window"
 msgid "About KDE"
 msgstr "KDE について"
 
-#: app/kirigamiappdefaults.cpp:133 app/kirigamiappdefaults.cpp:140
+#: app/kirigamiappdefaults.cpp:137 app/kirigamiappdefaults.cpp:144
 #, kde-format
 msgctxt "@title:window"
 msgid "Failed to Load Application"
 msgstr "アプリケーションの読み込み失敗"
 
-#: app/kirigamiappdefaults.cpp:134
+#: app/kirigamiappdefaults.cpp:138
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -234,7 +234,7 @@ msgstr ""
 "ビューションが原因の可能性があります。まずはディストリビューションに報告して"
 "ください。"
 
-#: app/kirigamiappdefaults.cpp:141
+#: app/kirigamiappdefaults.cpp:145
 #, kde-format
 msgctxt "@info"
 msgid "Could not load the QML application."
