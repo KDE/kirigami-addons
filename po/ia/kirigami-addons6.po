@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-27 00:58+0000\n"
-"PO-Revision-Date: 2026-09-21 12:28+0200\n"
+"PO-Revision-Date: 2026-10-27 16:49+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -643,16 +643,15 @@ msgid "Donate"
 msgstr "Dona"
 
 #: formcard/AboutPage.qml:143
-#, fuzzy, kde-format
-#| msgid "Release history"
+#, kde-format
 msgctxt "@action:button"
 msgid "Show release history for %1 %2"
-msgstr "Historia de versiom"
+msgstr "Monstra Historia de version per %1 %2"
 
 #: formcard/AboutPage.qml:173
 #, kde-format
 msgid "What's new"
-msgstr ""
+msgstr "Que es de novo"
 
 #: formcard/AboutPage.qml:199
 #, kde-format
@@ -734,17 +733,16 @@ msgid "Send an email to %1"
 msgstr "Invia un message de e-posta a  %1"
 
 #: formcard/AboutPage.qml:538 formcard/AboutPage.qml:599
-#, fuzzy, kde-format
-#| msgid "Visit %1's KDE Store page"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit %1's website"
-msgstr "Visita pagina %1 de KDE Store"
+msgstr "Visita le sito web de %1"
 
 #: formcard/AboutPage.qml:586
 #, kde-format
 msgctxt "@action:button"
 msgid "Show license for %1"
-msgstr ""
+msgstr "Monstra licentia pro %1"
 
 #: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:53
 #, kde-format
@@ -780,7 +778,7 @@ msgstr "Non Fixa"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset"
-msgstr ""
+msgstr "Reinitialisa"
 
 #: formcard/FormFileDelegate.qml:187
 #, kde-format
@@ -854,12 +852,12 @@ msgstr "%1/%2"
 #, kde-format
 msgctxt "@action:button"
 msgid "Done"
-msgstr ""
+msgstr "Facite"
 
 #: formcard/private/AboutReleaseDialog.qml:17
 #, kde-format
 msgid "Release history"
-msgstr "Historia de versiom"
+msgstr "Historia de version"
 
 #: formcard/private/AboutReleaseDialog.qml:71
 #, kde-format
@@ -869,7 +867,7 @@ msgstr "Altere information"
 #: formcard/private/AboutReleaseDialog.qml:81
 #, kde-format
 msgid "Show older changes…"
-msgstr ""
+msgstr "Monstra cambios plus vetere…"
 
 #: onboarding/private/OnboardingOverlay.qml:202
 #, kde-format
