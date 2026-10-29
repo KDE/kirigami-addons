@@ -24,6 +24,7 @@ AboutDialog {
         contentWidth: availableWidth
         contentHeight: releasesColumn.implicitHeight + Kirigami.Units.gridUnit * 2
         QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AlwaysOff
+        QQC2.ScrollBar.vertical.interactive: Kirigami.Settings.style !== 'Material'
 
         ColumnLayout {
             id: releasesColumn

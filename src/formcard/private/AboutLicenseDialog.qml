@@ -15,6 +15,7 @@ AboutDialog {
 
         contentWidth: availableWidth
         QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AlwaysOff
+        QQC2.ScrollBar.vertical.interactive: Kirigami.Settings.style !== 'Material'
 
         Kirigami.SelectableLabel {
             width: scrollView.availableWidth
