@@ -26,6 +26,7 @@ QQC2.Dialog {
     header: QQC2.Control {
         topPadding: Kirigami.Units.largeSpacing
         bottomPadding: Kirigami.Units.largeSpacing
+	leftPadding: root.leftPadding + Kirigami.Units.largeSpacing
 
         contentItem: RowLayout {
             spacing: Kirigami.Units.largeSpacing
