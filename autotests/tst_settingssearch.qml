@@ -143,6 +143,15 @@ Item {
         function test_excluded(data): void {
             searchFor(data.query);
             compare(search.filteredModules.length, 0);
+            tryCompare(search, "indexing", false);
+            compare(search.noResults, true);
+        }
+
+        function test_noResults(): void {
+            searchFor("");
+            compare(search.noResults, false);
+            searchFor("account");
+            compare(search.noResults, false);
         }
 
         function test_acceptFirstResult(): void {
