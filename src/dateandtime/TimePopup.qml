@@ -52,6 +52,7 @@ QQC2.Dialog {
     property date _value: new Date()
 
     title: I18n.i18nc("@title:dialog", "Select time")
+    standardButtons: root.resettable ? QQC2.DialogButtonBox.Reset | QQC2.DialogButtonBox.Cancel | QQC2.DialogButtonBox.Apply : QQC2.DialogButtonBox.Cancel | QQC2.DialogButtonBox.Apply
     modal: true
 
     contentItem: TimePicker {
@@ -69,38 +70,18 @@ QQC2.Dialog {
 
     background: Components.DialogRoundedBackground {}
 
-    footer: QQC2.DialogButtonBox {
-        id: box
-
-        standardButtons: root.resettable ? QQC2.DialogButtonBox.Reset : QQC2.DialogButtonBox.NoButton
-
-        QQC2.Button {
-            text: I18n.i18nc("@action:button", "Cancel")
-            icon.name: "dialog-cancel-symbolic"
-            onClicked: {
-                root.cancelled()
-                root.close()
-            }
-
-            QQC2.DialogButtonBox.buttonRole: QQC2.DialogButtonBox.RejectRole
-        }
-
-        QQC2.Button {
-            text: I18n.i18nc("@action:button", "Select")
-            icon.name: "dialog-ok-apply-symbolic"
-            onClicked: {
-                root.value = root._value;
-                root.accepted()
-                root.close()
-            }
-
-            QQC2.DialogButtonBox.buttonRole: QQC2.DialogButtonBox.AcceptRole
-        }
-    }
-
+    onAccepted: close()
+    onRejected: close()
     onReset: {
         value = new Date(NaN);
         close();
+    }
+
+    Component.onCompleted: standardButton(QQC2.DialogButtonBox.Apply).text = I18n.i18nc("@action:button", "Select")
+
+    footer: QQC2.DialogButtonBox {
+        visible: count > 0
+        padding: root.padding
     }
 
     // black background, fades in and out

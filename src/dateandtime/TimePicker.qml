@@ -55,6 +55,14 @@ ColumnLayout {
 
         signal valueEdited(int value)
 
+        function commit(): void {
+            if (text.length > 0) {
+                const number = Number.fromLocaleString(root._locale, text);
+                valueEdited(Math.max(from, Math.min(to, number)));
+            }
+            text = Qt.binding(() => field.formattedValue);
+        }
+
         Layout.preferredWidth: Kirigami.Units.gridUnit * 4
         Layout.minimumHeight: Kirigami.Units.gridUnit * 3
         Layout.fillHeight: true
@@ -88,15 +96,21 @@ ColumnLayout {
             if (activeFocus) {
                 selectAll();
             } else {
-                text = Qt.binding(() => field.formattedValue);
+                commit();
             }
         }
+
+        Keys.onReturnPressed: commit()
+        Keys.onEnterPressed: commit()
     }
 
     GridLayout {
-        columns: root._isAmPm ? 4 : 3
+        columns: root._isAmPm ? 5 : 4
         columnSpacing: Kirigami.Units.largeSpacing
         rowSpacing: Kirigami.Units.smallSpacing
+
+        Layout.fillWidth: true
+        Layout.preferredWidth: Kirigami.Units.gridUnit * 10
 
         Label {
             id: hourLabel
@@ -182,6 +196,10 @@ ColumnLayout {
                 onClicked: root.hours = root.hours % 12 + 12
                 KeyNavigation.tab: root.showNowButton ? nowButton : null
             }
+        }
+
+        Item {
+            Layout.fillWidth: true
         }
     }
 
