@@ -2,17 +2,18 @@
 // SPDX-FileCopyrightText: 2022 Carl Schwan <carl@carlschwan.eu>
 // SPDX-License-Identifier: LGPL-2.1-or-later
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Layouts
 import org.kde.kirigamiaddons.private
 import org.kde.kirigami as Kirigami
-import QtQuick.Layouts
-import org.kde.kirigamiaddons.dateandtime
 
 /*!
-   A large time picker represented as a clock.
+   A time picker with labeled hour and minute fields.
  */
-RowLayout {
+ColumnLayout {
     id: root
 
     /*!
@@ -25,54 +26,17 @@ RowLayout {
      */
     property int minutes
 
-    property bool _pm: false
-
-    property bool _init: false
+    /*!
+       Whether to show a "Now" button that sets the selected time to the current time.
+       \default false
+       \since 1.16.1
+     */
+    property bool showNowButton: false
 
     readonly property var _locale: Qt.locale()
-    readonly property color _highlightColor: Kirigami.Theme.highlightColor
-    readonly property real _delegateFontSize: fontMetrics.font.pixelSize * 1.25
-    readonly property real _delegateRadius: Kirigami.Units.mediumSpacing
     readonly property bool _isAmPm: _locale.timeFormat().toLowerCase().includes("ap")
-    readonly property var _hoursModel: {
-        const model = [];
-        for (let i = 0; i < 24; ++i) {
-            model.push(formatNumber(i));
-        }
-        return model;
-    }
-    readonly property var _hoursAmPmModel: {
-        const model = [];
-        for (let i = 0; i < 12; ++i) {
-            model.push(formatNumber(i === 0 ? 12 : i));
-        }
-        return model;
-    }
-    readonly property var _minutesModel: {
-        const model = [];
-        for (let i = 0; i < 60; ++i) {
-            model.push(formatNumber(i));
-        }
-        return model;
-    }
 
-    implicitHeight: Kirigami.Units.gridUnit * 5
-    implicitWidth: Kirigami.Units.gridUnit * 10
-
-    Component.onCompleted: initializeTime()
-
-    function initializeTime(): void {
-        hoursTumbler.currentIndex = (_isAmPm && hours > 12 ? hours - 12 : hours);
-        minutesTumbler.currentIndex = minutes;
-        if (_isAmPm) {
-            root._pm = hours > 12 ? 1 : 0;
-            amPmTumbler.currentIndex = _pm;
-        }
-
-        // Avoid initialisation bug where thumbler are by default initialised
-        // to currentIndex 0
-        _init = true;
-    }
+    spacing: Kirigami.Units.largeSpacing
 
     function formatNumber(value): string {
         const s = _locale.toString(value);
@@ -81,147 +45,162 @@ RowLayout {
         return s;
     }
 
-    FontMetrics {
-        id: fontMetrics
-    }
+    component TimeField: TextField {
+        id: field
 
-    Component {
-        id: delegateComponent
-        Label {
-            id: delegate
+        required property int value
+        required property int from
+        required property int to
+        readonly property string formattedValue: root.formatNumber(value)
 
-            readonly property real opacityScale: 2 / Tumbler.tumbler.visibleItemCount
+        signal valueEdited(int value)
 
-            text: modelData
-            opacity: 1.0 - Math.abs(Tumbler.displacement) * opacityScale
-            horizontalAlignment: Text.AlignHCenter
-            verticalAlignment: Text.AlignVCenter
-            font.pixelSize: root._delegateFontSize
-            Accessible.ignored: true
+        Layout.preferredWidth: Kirigami.Units.gridUnit * 4
+        Layout.minimumHeight: Kirigami.Units.gridUnit * 3
+        Layout.fillHeight: true
+        text: formattedValue
+        font.pointSize: Kirigami.Theme.defaultFont.pointSize * 2.5
+        horizontalAlignment: TextInput.AlignHCenter
+        verticalAlignment: TextInput.AlignVCenter
+        inputMethodHints: Qt.ImhDigitsOnly
+        selectByMouse: true
+        maximumLength: 2
 
-            Rectangle {
-                anchors.fill: parent
-                color: 'transparent'
-                radius: root._delegateRadius
-                border {
-                    width: {
-                        return delegate === Tumbler.tumbler.currentItem
-                            ? Tumbler.tumbler.visualFocus ? 2 : 1
-                            : 0;
-                    }
-                    color: root._highlightColor
-                }
+        validator: IntValidator {
+            bottom: field.from
+            top: field.to
+            locale: root._locale.name
+        }
+
+        onTextEdited: {
+            // Keep value changes from formatting the text during an edit.
+            text = text;
+            if (text.length === 0 || !acceptableInput) {
+                return;
             }
+            const number = Number.fromLocaleString(root._locale, text);
+            if (number >= from && number <= to) {
+                valueEdited(number);
+            }
+        }
 
-            TapHandler {
-                onTapped: {
-                    const tumbler = delegate.Tumbler.tumbler;
-                    tumbler.currentIndex = index;
-                }
+        onActiveFocusChanged: {
+            if (activeFocus) {
+                selectAll();
+            } else {
+                text = Qt.binding(() => field.formattedValue);
             }
         }
     }
 
-    Item {
-        Layout.fillWidth: true
+    GridLayout {
+        columns: root._isAmPm ? 4 : 3
+        columnSpacing: Kirigami.Units.largeSpacing
+        rowSpacing: Kirigami.Units.smallSpacing
+
+        Label {
+            id: hourLabel
+            Layout.row: 0
+            Layout.column: 0
+            text: I18n.i18nc("@label:textbox", "Hour")
+            Accessible.ignored: true
+        }
+
+        Label {
+            id: minuteLabel
+            Layout.row: 0
+            Layout.column: 2
+            text: I18n.i18nc("@label:textbox", "Minute")
+            Accessible.ignored: true
+        }
+
+        TimeField {
+            id: hoursInput
+            objectName: "hoursInput"
+            Layout.row: 1
+            Layout.column: 0
+            from: root._isAmPm ? 1 : 0
+            to: root._isAmPm ? 12 : 23
+            value: root._isAmPm ? (root.hours % 12 || 12) : root.hours
+            onValueEdited: value => root.hours = root._isAmPm ? value % 12 + (root.hours >= 12 ? 12 : 0) : value
+            focus: true
+            KeyNavigation.tab: minutesInput
+            Accessible.name: hourLabel.text
+        }
+
+        Label {
+            Layout.row: 1
+            Layout.column: 1
+            text: I18n.i18nc("Time separator", ":")
+            font.pointSize: Kirigami.Theme.defaultFont.pointSize * 2.5
+            Accessible.ignored: true
+        }
+
+        TimeField {
+            id: minutesInput
+            objectName: "minutesInput"
+            Layout.row: 1
+            Layout.column: 2
+            from: 0
+            to: 59
+            value: root.minutes
+            onValueEdited: value => root.minutes = value
+            KeyNavigation.tab: root._isAmPm ? amButton : (root.showNowButton ? nowButton : null)
+            Accessible.name: minuteLabel.text
+        }
+
+        ColumnLayout {
+            Layout.row: 1
+            Layout.column: 3
+            visible: root._isAmPm
+            spacing: Kirigami.Units.smallSpacing
+
+            ButtonGroup {
+                id: periodGroup
+            }
+
+            Button {
+                id: amButton
+                objectName: "amButton"
+                Layout.fillWidth: true
+                text: root._locale.amText
+                checkable: true
+                checked: root.hours < 12
+                ButtonGroup.group: periodGroup
+                onClicked: root.hours = root.hours % 12
+                KeyNavigation.tab: pmButton
+            }
+
+            Button {
+                id: pmButton
+                objectName: "pmButton"
+                Layout.fillWidth: true
+                text: root._locale.pmText
+                checkable: true
+                checked: root.hours >= 12
+                ButtonGroup.group: periodGroup
+                onClicked: root.hours = root.hours % 12 + 12
+                KeyNavigation.tab: root.showNowButton ? nowButton : null
+            }
+        }
     }
 
     Button {
-        implicitHeight: hoursTumbler.currentItem.height + 2
-        text: I18n.i18nc("@action:button", "Reset to current time")
+        id: nowButton
+        objectName: "nowButton"
+        visible: root.showNowButton
+        text: I18n.i18nc("@action:button", "Now")
         icon.name: "accept_time_event-symbolic"
-        display: Button.IconOnly
 
         ToolTip.visible: hovered
-        ToolTip.text: text
+        ToolTip.text: I18n.i18nc("@info:tooltip", "Set to current time")
         ToolTip.delay: Kirigami.Units.toolTipDelay
 
-        onPressed: {
-            let currentTime = new Date();
-            root.minutes = currentTime.getMinutes();
+        onClicked: {
+            nowButton.forceActiveFocus();
+            const currentTime = new Date();
             root.hours = currentTime.getHours();
-            root.initializeTime();
+            root.minutes = currentTime.getMinutes();
         }
-    }
-
-    Tumbler {
-        id: hoursTumbler
-        Layout.preferredHeight: Kirigami.Units.gridUnit * 10
-        model: _isAmPm ? root._hoursAmPmModel : root._hoursModel
-        delegate: delegateComponent
-        visibleItemCount: 5
-        onCurrentIndexChanged: if (_init) {
-            hours = currentIndex + (_isAmPm && _pm ? 12 : 0)
-        }
-        Accessible.name: I18n.i18n("Hours")
-        Accessible.role: Accessible.Dial
-        Accessible.onDecreaseAction: hoursTumbler.currentIndex = (hoursTumbler.currentIndex + hoursTumbler.count - 1) % hoursTumbler.count
-        Accessible.onIncreaseAction: hoursTumbler.currentIndex = (hoursTumbler.currentIndex + 1) % hoursTumbler.count
-        KeyNavigation.right: minutesTumbler
-        // a11y value interface
-        property int minimumValue: root._isAmPm ? 1 : 0
-        property int maximumValue: root._isAmPm ? 12 : 23
-        property int stepSize: 1
-        property int value: root.hours
-        onValueChanged: {
-            if (root._isAmPm && value === 12)
-                hoursTumbler.currentIndex = 0;
-            else
-                hoursTumbler.currentIndex = value;
-            hoursTumbler.value = Qt.binding(function() { return root.hours; });
-        }
-
-        focus: true
-    }
-
-    Label {
-        Layout.alignment: Qt.AlignCenter
-        text: I18n.i18nc("Time separator", ":")
-        font.pointSize: Kirigami.Theme.defaultFont.pointSize * 1.3
-        Accessible.ignored: true
-    }
-
-    Tumbler {
-        id: minutesTumbler
-        Layout.preferredHeight: Kirigami.Units.gridUnit * 10
-        model: root._minutesModel
-        delegate: delegateComponent
-        visibleItemCount: 5
-        onCurrentIndexChanged: if (_init) {
-            minutes = currentIndex;
-        }
-
-        Accessible.name: I18n.i18n("Minutes")
-        Accessible.role: Accessible.Dial
-        Accessible.onDecreaseAction: minutesTumbler.currentIndex = (minutesTumbler.currentIndex + 59) % 60
-        Accessible.onIncreaseAction: minutesTumbler.currentIndex = (minutesTumbler.currentIndex + 1) % 60
-        KeyNavigation.right: amPmTumbler
-        // a11y value interface
-        property int minimumValue: 0
-        property int maximumValue: 59
-        property int stepSize: 1
-        property alias value: minutesTumbler.currentIndex
-    }
-
-    Tumbler {
-        id: amPmTumbler
-        visible: _isAmPm
-        Layout.preferredHeight: Kirigami.Units.gridUnit * 10
-        model: [root._locale.amText, root._locale.pmText]
-        Accessible.name: currentItem.text
-        Accessible.role: Accessible.CheckBox
-        Accessible.ignored: !_isAmPm
-        Accessible.onPressAction: amPmTumbler.currentIndex = (amPmTumbler.currentIndex + 1) % 2
-        Accessible.onToggleAction: amPmTumbler.currentIndex = (amPmTumbler.currentIndex + 1) % 2
-        delegate: delegateComponent
-        visibleItemCount: 5
-        onCurrentIndexChanged: if (_isAmPm && _init) {
-            _pm = currentIndex;
-            hours = (hours + 12) % 24;
-        }
-    }
-
-    Item {
-        Layout.fillWidth: true
     }
 }

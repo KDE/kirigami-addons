@@ -42,13 +42,20 @@ QQC2.Dialog {
      */
     property bool resettable: false
 
+    /*!
+       Whether to show a "Now" button that sets the selected time to the current time.
+       \default false
+       \since 1.16.1
+     */
+    property alias showNowButton: popupContent.showNowButton
+
     property date _value: new Date()
 
+    title: I18n.i18nc("@title:dialog", "Select time")
     modal: true
 
     contentItem: TimePicker {
         id: popupContent
-        implicitWidth: popupContent.Window.window?.width ?? 0
         readonly property date _initialValue: isNaN(root.value.valueOf()) ? new Date() : root.value
         minutes: _initialValue.getMinutes()
         hours: _initialValue.getHours()
