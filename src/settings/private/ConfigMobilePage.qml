@@ -36,17 +36,26 @@ FormCard.FormCardPage {
 
     title: I18n.i18nc("@title", "Settings")
 
+    // The layers are not busy when the push of this page is not animated.
+    Component.onCompleted: Qt.callLater(root.openDefaultModule)
+
     Connections {
-        target: window.pageStack.layers
+        target: root.window.pageStack.layers
 
         function onBusyChanged(): void {
-            if (!window.pageStack.layers.busy && !initDone) {
-                const module = getModuleByName(defaultModule);
-                if (module) {
-                    window.pageStack.layers.push(pageForModule(module));
-                }
-                initDone = true;
-            }
+            root.openDefaultModule();
+        }
+    }
+
+    function openDefaultModule(): void {
+        if (root.initDone || root.window.pageStack.layers.busy) {
+            return;
+        }
+        root.initDone = true;
+        const module = root.getModuleByName(root.defaultModule);
+        const page = module ? root.pageForModule(module) : null;
+        if (page) {
+            root.window.pageStack.layers.push(page);
         }
     }
 
