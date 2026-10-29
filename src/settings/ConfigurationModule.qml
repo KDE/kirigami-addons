@@ -54,6 +54,19 @@ QtObject {
     property bool searchable: true
 
     /*!
+       Additional search terms for this module, also used when searchable is false.
+
+       \qml
+       keywords: [
+           i18nc("@info:search keyword", "Hotkey"),
+           i18nc("@info:search keyword", "Key binding")
+       ]
+       \endqml
+       \since 1.16.0
+     */
+    property list<string> keywords
+
+    /*!
        This property holds the initial property that the page needs to be initialized with
        if any.
 

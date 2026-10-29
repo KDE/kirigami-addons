@@ -28,6 +28,11 @@ ConfigurationModule {
     icon.name: "input-keyboard-symbolic"
     page: () => Qt.createComponent("org.kde.kirigamiaddons.statefulapp.private", "ShortcutsEditor")
     visible: !Kirigami.Settings.isMobile
+    keywords: [
+        I18n.i18nc("@info:search keyword", "Hotkey"),
+        I18n.i18nc("@info:search keyword", "Key binding"),
+        I18n.i18nc("@info:search keyword", "Accelerator")
+    ]
     initialProperties: () => {
         return {
             model: root.application.shortcutsModel

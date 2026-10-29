@@ -95,7 +95,8 @@ QtObject {
             if (!module.visible) {
                 return false;
             }
-            if (pattern.length === 0) {
+            if (pattern.length === 0
+                || module.keywords.some(keyword => Helper.matches(pattern, keyword))) {
                 return true;
             }
             const page = root.indexedPages[module.moduleId];
