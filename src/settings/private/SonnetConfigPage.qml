@@ -28,9 +28,7 @@ FormCard.FormCardPage {
     }
 
     function remove(word: string): void {
-        root.settings.currentIgnoreList = root.settings.currentIgnoreList.filter((value, _, _) => {
-            return value !== word;
-        });
+        root.settings.currentIgnoreList = root.settings.currentIgnoreList.filter(value => value !== word);
     }
 
     FormCard.FormCard {
@@ -40,7 +38,7 @@ FormCard.FormCardPage {
         FormCard.FormCheckDelegate {
             checked: root.settings.checkerEnabledByDefault
             text: I18n.i18nc("@label:checkbox", "Enable automatic spell checking")
-            onCheckedChanged: {
+            onToggled: {
                 root.settings.checkerEnabledByDefault = checked;
                 root.settings.save();
             }
@@ -49,7 +47,7 @@ FormCard.FormCardPage {
         FormCard.FormCheckDelegate {
             checked: root.settings.skipUppercase
             text: I18n.i18nc("@label:checkbox", "Ignore uppercase words")
-            onCheckedChanged: {
+            onToggled: {
                 root.settings.skipUppercase = checked;
                 root.settings.save();
             }
@@ -58,7 +56,7 @@ FormCard.FormCardPage {
         FormCard.FormCheckDelegate {
             checked: root.settings.skipRunTogether
             text: I18n.i18nc("@label:checkbox", "Ignore hyphenated words")
-            onCheckedChanged: {
+            onToggled: {
                 root.settings.skipRunTogether = checked;
                 root.settings.save();
             }
@@ -68,7 +66,7 @@ FormCard.FormCardPage {
             id: autodetectLanguageCheckbox
             checked: root.settings.autodetectLanguage
             text: I18n.i18nc("@label:checkbox", "Detect language automatically")
-            onCheckedChanged: {
+            onToggled: {
                 root.settings.autodetectLanguage = checked;
                 root.settings.save();
             }
@@ -87,7 +85,10 @@ FormCard.FormCardPage {
                     currentIndex = indexOfValue(root.settings.defaultLanguage);
                 }
             }
-            onActivated: root.settings.defaultLanguage = currentValue;
+            onActivated: {
+                root.settings.defaultLanguage = currentValue;
+                root.settings.save();
+            }
         }
 
         FormCard.FormButtonDelegate {
@@ -152,9 +153,7 @@ FormCard.FormCardPage {
                                 onClicked: {
                                     root.add(dictionaryField.text);
                                     dictionaryField.clear();
-                                    if (instantApply) {
-                                        root.settings.save();
-                                    }
+                                    root.settings.save();
                                 }
                                 Layout.rightMargin: Kirigami.Units.largeSpacing
                             }
@@ -186,9 +185,7 @@ FormCard.FormCardPage {
                                     display: QQC2.ToolButton.IconOnly
                                     onClicked: {
                                         root.remove(wordDelegate.modelData);
-                                        if (instantApply) {
-                                            root.settings.save();
-                                        }
+                                        root.settings.save();
                                     }
 
                                     QQC2.ToolTip.text: text
