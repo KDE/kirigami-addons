@@ -159,6 +159,17 @@ FormCard.FormCardPage {
         }
     }
 
+    FormCard.FormCard {
+        Layout.topMargin: Kirigami.Units.gridUnit
+        visible: configurationSearch.noResults
+
+        FormCard.FormPlaceholderMessageDelegate {
+            text: configurationSearch.indexing
+                ? I18n.i18nc("@info:placeholder", "Searching…")
+                : I18n.i18nc("@info:placeholder", "No matching settings")
+        }
+    }
+
     function openModule(module: ConfigurationModule): void {
         root.window.pageStack.layers.push(pageForModule(module));
     }

@@ -49,6 +49,9 @@ QtObject {
     readonly property bool indexing: root.searchText.length > 0
         && (root.pendingModules.length > 0 || root.loadingModule !== null)
 
+    // More results can still appear while indexing.
+    readonly property bool noResults: root.searchText.length > 0 && root.filteredModules.length === 0
+
     // Deferred so the results include the last indexed page.
     onIndexingChanged: Qt.callLater(root.emitAcceptedResult)
 

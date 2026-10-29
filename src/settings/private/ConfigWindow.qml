@@ -9,6 +9,7 @@ import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
+import org.kde.kirigamiaddons.private
 import org.kde.kirigamiaddons.delegates as Delegates
 import org.kde.kirigamiaddons.settings
 
@@ -149,6 +150,16 @@ Kirigami.ApplicationWindow {
                         Keys.onEnterPressed: clicked()
 
                         onClicked: root.openModule(modelData)
+                    }
+
+                    Kirigami.PlaceholderMessage {
+                        parent: listview
+                        anchors.centerIn: parent
+                        width: parent.width - Kirigami.Units.gridUnit * 2
+                        visible: configurationSearch.noResults
+                        text: configurationSearch.indexing
+                            ? I18n.i18nc("@info:placeholder", "Searching…")
+                            : I18n.i18nc("@info:placeholder", "No matching settings")
                     }
                 }
             }
