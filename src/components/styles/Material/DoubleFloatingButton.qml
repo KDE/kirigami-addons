@@ -74,6 +74,10 @@ Templates.DoubleFloatingButton {
             bottomLeftRadius: button.onLeft ? cornerRadius : 0
             topRightRadius: button.onLeft ? 0 : cornerRadius
             bottomRightRadius: button.onLeft ? 0 : cornerRadius
+
+            Behavior on color {
+                ColorAnimation { duration: Kirigami.Units.shortDuration }
+            }
         }
 
         ToolTip.visible: hovered && ToolTip.text.length > 0

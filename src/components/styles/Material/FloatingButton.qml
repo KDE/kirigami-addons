@@ -44,6 +44,10 @@ Templates.FloatingButton {
         color: root.Material.buttonColor(root.Material.theme, root.Material.background,
                                          root.Material.accent, root.enabled, root.flat, root.highlighted, false)
 
+        Behavior on color {
+            ColorAnimation { duration: Kirigami.Units.shortDuration }
+        }
+
         Rectangle {
             anchors.fill: parent
             radius: root.radius

@@ -50,6 +50,10 @@ Templates.RadioSelector {
                 color: Qt.alpha(button.Material.foreground, !button.enabled ? 0 : button.down || button.visualFocus ? 0.12 : button.hovered ? 0.08 : 0)
                 border.width: button.visualFocus ? 2 : 0
                 border.color: button.Material.accent
+
+                Behavior on color {
+                    ColorAnimation { duration: Kirigami.Units.shortDuration }
+                }
             }
         }
     }
@@ -63,6 +67,10 @@ Templates.RadioSelector {
         radius: height / 2
         visible: root._checkedButton !== null
         color: Qt.alpha(root.Material.accent, root._checkedButton?.enabled ? 0.16 : 0.08)
+
+        Behavior on color {
+            ColorAnimation { duration: Kirigami.Units.shortDuration }
+        }
 
         Behavior on x {
             NumberAnimation {
