@@ -37,7 +37,8 @@ Templates.SegmentedButton {
 
         action: modelData
 
-        display: modelData.displayHint & Kirigami.DisplayHint.IconOnly ? QQC2.AbstractButton.IconOnly : QQC2.AbstractButton.TextBesideIcon
+        display: modelData instanceof Kirigami.Action && (modelData as Kirigami.Action).displayHint & Kirigami.DisplayHint.IconOnly
+            ? QQC2.AbstractButton.IconOnly : QQC2.AbstractButton.TextBesideIcon
 
         Layout.fillHeight: true
         Layout.minimumWidth: height
