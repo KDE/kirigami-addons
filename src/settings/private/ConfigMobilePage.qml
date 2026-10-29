@@ -108,7 +108,7 @@ FormCard.FormCardPage {
             spacing: 0
 
             FormCard.FormHeader {
-                title: categoryDelegate.modelData.name === "_main_category" ? I18n.i18nc("@title:group", "Settings") : modelData.name
+                title: categoryDelegate.modelData.name === "_main_category" ? root.title : modelData.name
             }
 
             // settings categories
