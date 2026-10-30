@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-27 00:58+0000\n"
+"POT-Creation-Date: 2026-10-30 00:52+0000\n"
 "PO-Revision-Date: 2026-10-04 18:49+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -291,7 +291,7 @@ msgstr "முந்தைய படம்"
 msgid "Next image"
 msgstr "அடுத்த படம்"
 
-#: components/Banner.qml:186 formcard/private/AboutDialog.qml:43
+#: components/Banner.qml:186 formcard/private/AboutDialog.qml:44
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -848,12 +848,12 @@ msgstr "முடிந்தது"
 msgid "Release history"
 msgstr "பதிப்பு வரலாறு"
 
-#: formcard/private/AboutReleaseDialog.qml:71
+#: formcard/private/AboutReleaseDialog.qml:72
 #, kde-format
 msgid "More information"
 msgstr "மேலும் விவரங்கள்"
 
-#: formcard/private/AboutReleaseDialog.qml:81
+#: formcard/private/AboutReleaseDialog.qml:82
 #, kde-format
 msgid "Show older changes…"
 msgstr "பழைய மாற்றங்களைக் காட்டு…"
@@ -906,61 +906,69 @@ msgctxt "@action:intoolbar"
 msgid "Go back"
 msgstr "பின்னே செல்"
 
-#: settings/private/ConfigMobilePage.qml:27
+#: settings/private/ConfigMobilePage.qml:37
 #, kde-format
 msgctxt "@title"
 msgid "Settings"
 msgstr "அமைப்புகள்"
 
-#: settings/private/ConfigMobilePage.qml:100
+#: settings/private/ConfigMobilePage.qml:168
+#: settings/private/ConfigWindow.qml:161
 #, kde-format
-msgctxt "@title:group"
-msgid "Settings"
-msgstr "அமைப்புகள்"
+msgctxt "@info:placeholder"
+msgid "Searching…"
+msgstr ""
 
-#: settings/private/SonnetConfigPage.qml:42
+#: settings/private/ConfigMobilePage.qml:169
+#: settings/private/ConfigWindow.qml:162
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "No matching settings"
+msgstr ""
+
+#: settings/private/SonnetConfigPage.qml:40
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Enable automatic spell checking"
 msgstr "தானியங்கி சொல் திருத்தத்தை இயக்கு"
 
-#: settings/private/SonnetConfigPage.qml:51
+#: settings/private/SonnetConfigPage.qml:49
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore uppercase words"
 msgstr "பெரிய எழுத்துகள் மட்டுமுடைய சொற்களை பொருட்படுத்தாதே"
 
-#: settings/private/SonnetConfigPage.qml:60
+#: settings/private/SonnetConfigPage.qml:58
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore hyphenated words"
 msgstr "இடைக்கோட்டுடைய சொற்களை பொருட்படுத்தாதே"
 
-#: settings/private/SonnetConfigPage.qml:70
+#: settings/private/SonnetConfigPage.qml:68
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Detect language automatically"
 msgstr "மொழியை தானாக கண்டறி"
 
-#: settings/private/SonnetConfigPage.qml:78
+#: settings/private/SonnetConfigPage.qml:76
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Selected default language:"
 msgstr "தேர்ந்தெடுத்துள்ள இயல்பிருப்பு மொழி:"
 
-#: settings/private/SonnetConfigPage.qml:79
+#: settings/private/SonnetConfigPage.qml:77
 #, kde-format
 msgctxt "No selected language"
 msgid "None"
 msgstr "ஏதுமில்லை"
 
-#: settings/private/SonnetConfigPage.qml:94
+#: settings/private/SonnetConfigPage.qml:95
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Additional Spell Checking Languages"
 msgstr "கூடுதல் சொல் திருத்த மொழிகள்"
 
-#: settings/private/SonnetConfigPage.qml:95
+#: settings/private/SonnetConfigPage.qml:96
 #, kde-format
 msgid ""
 "%1 will provide spell checking and suggestions for the languages listed here "
@@ -969,42 +977,42 @@ msgstr ""
 "தானாக கண்டறியும் அம்சம் இயக்கப்பட்டிருப்பின், கீழுள்ள மொழிகளுக்கான சொல் திருத்தத்தையும் "
 "பரிந்துரைகளையும் %1 வழங்கும்."
 
-#: settings/private/SonnetConfigPage.qml:103
+#: settings/private/SonnetConfigPage.qml:104
 #, kde-format
 msgctxt "@action:button"
 msgid "Open Personal Dictionary"
 msgstr "தனிப்பயன் அகரமுதலியை திற"
 
-#: settings/private/SonnetConfigPage.qml:115
+#: settings/private/SonnetConfigPage.qml:116
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking languages"
 msgstr "சொல் திருத்த மொழிகள்"
 
-#: settings/private/SonnetConfigPage.qml:127
+#: settings/private/SonnetConfigPage.qml:128
 #, kde-format
 msgid "Default Language"
 msgstr "இயல்பிருப்பு மொழி"
 
-#: settings/private/SonnetConfigPage.qml:139
+#: settings/private/SonnetConfigPage.qml:140
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking dictionary"
 msgstr "சொல் திருத்த அகரமுதலி"
 
-#: settings/private/SonnetConfigPage.qml:146
+#: settings/private/SonnetConfigPage.qml:147
 #, kde-format
 msgctxt "Placeholder message"
 msgid "Add a new word to your personal dictionary…"
 msgstr "தனிப்பயன் அகரமுதலியில் ஓர் புதிய சொல்லைச் சேர்…"
 
-#: settings/private/SonnetConfigPage.qml:149
+#: settings/private/SonnetConfigPage.qml:150
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Word"
 msgstr "சொல்லை சேர்"
 
-#: settings/private/SonnetConfigPage.qml:184
+#: settings/private/SonnetConfigPage.qml:183
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete word"
@@ -1016,11 +1024,33 @@ msgctxt "@action:button"
 msgid "Keyboard Shortcuts"
 msgstr "விசைப்பலகை சுருக்குவழிகள்"
 
+#: settings/ShortcutsConfigurationModule.qml:32
+#, kde-format
+msgctxt "@info:search keyword"
+msgid "Hotkey"
+msgstr ""
+
+#: settings/ShortcutsConfigurationModule.qml:33
+#, kde-format
+msgctxt "@info:search keyword"
+msgid "Key binding"
+msgstr ""
+
+#: settings/ShortcutsConfigurationModule.qml:34
+#, kde-format
+msgctxt "@info:search keyword"
+msgid "Accelerator"
+msgstr ""
+
 #: settings/SpellcheckingConfigurationModule.qml:16
 #, kde-format
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "சொல் திருத்தம்"
+
+#~ msgctxt "@title:group"
+#~ msgid "Settings"
+#~ msgstr "அமைப்புகள்"
 
 #~ msgctxt "Linux packaging format"
 #~ msgid "Unknown/Default"

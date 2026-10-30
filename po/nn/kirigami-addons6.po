@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-27 00:58+0000\n"
+"POT-Creation-Date: 2026-10-30 00:52+0000\n"
 "PO-Revision-Date: 2026-10-26 22:04+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
@@ -294,7 +294,7 @@ msgstr "Førre bilete"
 msgid "Next image"
 msgstr "Neste bilete"
 
-#: components/Banner.qml:186 formcard/private/AboutDialog.qml:43
+#: components/Banner.qml:186 formcard/private/AboutDialog.qml:44
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -852,12 +852,12 @@ msgstr "Ferdig"
 msgid "Release history"
 msgstr "Utgjevingshistorikk"
 
-#: formcard/private/AboutReleaseDialog.qml:71
+#: formcard/private/AboutReleaseDialog.qml:72
 #, kde-format
 msgid "More information"
 msgstr "Meir informasjon"
 
-#: formcard/private/AboutReleaseDialog.qml:81
+#: formcard/private/AboutReleaseDialog.qml:82
 #, kde-format
 msgid "Show older changes…"
 msgstr "Vis eldre endringar …"
@@ -910,61 +910,69 @@ msgctxt "@action:intoolbar"
 msgid "Go back"
 msgstr "Gå tilbake"
 
-#: settings/private/ConfigMobilePage.qml:27
+#: settings/private/ConfigMobilePage.qml:37
 #, kde-format
 msgctxt "@title"
 msgid "Settings"
 msgstr "Innstillingar"
 
-#: settings/private/ConfigMobilePage.qml:100
+#: settings/private/ConfigMobilePage.qml:168
+#: settings/private/ConfigWindow.qml:161
 #, kde-format
-msgctxt "@title:group"
-msgid "Settings"
-msgstr "Innstillingar"
+msgctxt "@info:placeholder"
+msgid "Searching…"
+msgstr ""
 
-#: settings/private/SonnetConfigPage.qml:42
+#: settings/private/ConfigMobilePage.qml:169
+#: settings/private/ConfigWindow.qml:162
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "No matching settings"
+msgstr ""
+
+#: settings/private/SonnetConfigPage.qml:40
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Enable automatic spell checking"
 msgstr "Bruk automatisk stavekontroll"
 
-#: settings/private/SonnetConfigPage.qml:51
+#: settings/private/SonnetConfigPage.qml:49
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore uppercase words"
 msgstr "Ignorer ord med store bokstavar"
 
-#: settings/private/SonnetConfigPage.qml:60
+#: settings/private/SonnetConfigPage.qml:58
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore hyphenated words"
 msgstr "Ignorer ord med bindestrekar"
 
-#: settings/private/SonnetConfigPage.qml:70
+#: settings/private/SonnetConfigPage.qml:68
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Detect language automatically"
 msgstr "Oppdag automatisk rett språk"
 
-#: settings/private/SonnetConfigPage.qml:78
+#: settings/private/SonnetConfigPage.qml:76
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Selected default language:"
 msgstr "Valt standardspråk:"
 
-#: settings/private/SonnetConfigPage.qml:79
+#: settings/private/SonnetConfigPage.qml:77
 #, kde-format
 msgctxt "No selected language"
 msgid "None"
 msgstr "Ingen"
 
-#: settings/private/SonnetConfigPage.qml:94
+#: settings/private/SonnetConfigPage.qml:95
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Additional Spell Checking Languages"
 msgstr "Fleire stavekontroll-språk"
 
-#: settings/private/SonnetConfigPage.qml:95
+#: settings/private/SonnetConfigPage.qml:96
 #, kde-format
 msgid ""
 "%1 will provide spell checking and suggestions for the languages listed here "
@@ -973,42 +981,42 @@ msgstr ""
 "%1 vil kontrollera stavinga og gje staveforslag for desse språka når "
 "automatisk språk­attkjenning er slått på."
 
-#: settings/private/SonnetConfigPage.qml:103
+#: settings/private/SonnetConfigPage.qml:104
 #, kde-format
 msgctxt "@action:button"
 msgid "Open Personal Dictionary"
 msgstr "Opna personleg ordliste"
 
-#: settings/private/SonnetConfigPage.qml:115
+#: settings/private/SonnetConfigPage.qml:116
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking languages"
 msgstr "Språk for stavekontroll"
 
-#: settings/private/SonnetConfigPage.qml:127
+#: settings/private/SonnetConfigPage.qml:128
 #, kde-format
 msgid "Default Language"
 msgstr "Standardspråk"
 
-#: settings/private/SonnetConfigPage.qml:139
+#: settings/private/SonnetConfigPage.qml:140
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking dictionary"
 msgstr "Stavekontroll-ordliste"
 
-#: settings/private/SonnetConfigPage.qml:146
+#: settings/private/SonnetConfigPage.qml:147
 #, kde-format
 msgctxt "Placeholder message"
 msgid "Add a new word to your personal dictionary…"
 msgstr "Legg nytt ord til personleg ordliste …"
 
-#: settings/private/SonnetConfigPage.qml:149
+#: settings/private/SonnetConfigPage.qml:150
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Word"
 msgstr "Legg til ord"
 
-#: settings/private/SonnetConfigPage.qml:184
+#: settings/private/SonnetConfigPage.qml:183
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete word"
@@ -1020,8 +1028,30 @@ msgctxt "@action:button"
 msgid "Keyboard Shortcuts"
 msgstr "Snøggtastar"
 
+#: settings/ShortcutsConfigurationModule.qml:32
+#, kde-format
+msgctxt "@info:search keyword"
+msgid "Hotkey"
+msgstr ""
+
+#: settings/ShortcutsConfigurationModule.qml:33
+#, kde-format
+msgctxt "@info:search keyword"
+msgid "Key binding"
+msgstr ""
+
+#: settings/ShortcutsConfigurationModule.qml:34
+#, kde-format
+msgctxt "@info:search keyword"
+msgid "Accelerator"
+msgstr ""
+
 #: settings/SpellcheckingConfigurationModule.qml:16
 #, kde-format
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "Stavekontroll"
+
+#~ msgctxt "@title:group"
+#~ msgid "Settings"
+#~ msgstr "Innstillingar"

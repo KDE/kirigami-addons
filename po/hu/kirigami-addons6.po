@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-27 00:58+0000\n"
+"POT-Creation-Date: 2026-10-30 00:52+0000\n"
 "PO-Revision-Date: 2025-09-03 20:53+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -293,7 +293,7 @@ msgstr "Előző kép"
 msgid "Next image"
 msgstr "Következő kép"
 
-#: components/Banner.qml:186 formcard/private/AboutDialog.qml:43
+#: components/Banner.qml:186 formcard/private/AboutDialog.qml:44
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
@@ -860,14 +860,14 @@ msgstr ""
 msgid "Release history"
 msgstr ""
 
-#: formcard/private/AboutReleaseDialog.qml:71
+#: formcard/private/AboutReleaseDialog.qml:72
 #, fuzzy, kde-format
 #| msgctxt "@title:dialog"
 #| msgid "Information"
 msgid "More information"
 msgstr "Információ"
 
-#: formcard/private/AboutReleaseDialog.qml:81
+#: formcard/private/AboutReleaseDialog.qml:82
 #, kde-format
 msgid "Show older changes…"
 msgstr ""
@@ -930,61 +930,69 @@ msgctxt "@action:intoolbar"
 msgid "Go back"
 msgstr "Ugrás vissza"
 
-#: settings/private/ConfigMobilePage.qml:27
+#: settings/private/ConfigMobilePage.qml:37
 #, kde-format
 msgctxt "@title"
 msgid "Settings"
 msgstr "Beállítások"
 
-#: settings/private/ConfigMobilePage.qml:100
+#: settings/private/ConfigMobilePage.qml:168
+#: settings/private/ConfigWindow.qml:161
 #, kde-format
-msgctxt "@title:group"
-msgid "Settings"
-msgstr "Beállítások"
+msgctxt "@info:placeholder"
+msgid "Searching…"
+msgstr ""
 
-#: settings/private/SonnetConfigPage.qml:42
+#: settings/private/ConfigMobilePage.qml:169
+#: settings/private/ConfigWindow.qml:162
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "No matching settings"
+msgstr ""
+
+#: settings/private/SonnetConfigPage.qml:40
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Enable automatic spell checking"
 msgstr "Automatikus helyesírás-ellenőrzés bekapcsolása"
 
-#: settings/private/SonnetConfigPage.qml:51
+#: settings/private/SonnetConfigPage.qml:49
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore uppercase words"
 msgstr "Nagybetűs szavak kihagyása"
 
-#: settings/private/SonnetConfigPage.qml:60
+#: settings/private/SonnetConfigPage.qml:58
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Ignore hyphenated words"
 msgstr "Kötőjeles szavak kihagyása"
 
-#: settings/private/SonnetConfigPage.qml:70
+#: settings/private/SonnetConfigPage.qml:68
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Detect language automatically"
 msgstr "Automatikus nyelvfelismerés"
 
-#: settings/private/SonnetConfigPage.qml:78
+#: settings/private/SonnetConfigPage.qml:76
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Selected default language:"
 msgstr "Alapértelmezett nyelv:"
 
-#: settings/private/SonnetConfigPage.qml:79
+#: settings/private/SonnetConfigPage.qml:77
 #, kde-format
 msgctxt "No selected language"
 msgid "None"
 msgstr "Nincs"
 
-#: settings/private/SonnetConfigPage.qml:94
+#: settings/private/SonnetConfigPage.qml:95
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Additional Spell Checking Languages"
 msgstr "További helyesírás-ellenőrzési nyelvek"
 
-#: settings/private/SonnetConfigPage.qml:95
+#: settings/private/SonnetConfigPage.qml:96
 #, kde-format
 msgid ""
 "%1 will provide spell checking and suggestions for the languages listed here "
@@ -993,42 +1001,42 @@ msgstr ""
 "A(z) %1 biztosítja a helyesírás-ellenőrzést és a javaslatokat az alábbi "
 "nyelvekhez, ha az automatikus felismerés be van kapcsolva."
 
-#: settings/private/SonnetConfigPage.qml:103
+#: settings/private/SonnetConfigPage.qml:104
 #, kde-format
 msgctxt "@action:button"
 msgid "Open Personal Dictionary"
 msgstr "Személyes szótár megnyitása"
 
-#: settings/private/SonnetConfigPage.qml:115
+#: settings/private/SonnetConfigPage.qml:116
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking languages"
 msgstr "Helyesírás-ellenőrzés nyelvei"
 
-#: settings/private/SonnetConfigPage.qml:127
+#: settings/private/SonnetConfigPage.qml:128
 #, kde-format
 msgid "Default Language"
 msgstr "Alapértelmezett nyelv"
 
-#: settings/private/SonnetConfigPage.qml:139
+#: settings/private/SonnetConfigPage.qml:140
 #, kde-format
 msgctxt "@title:window"
 msgid "Spell checking dictionary"
 msgstr "Helyesírás-ellenőrzési szótár"
 
-#: settings/private/SonnetConfigPage.qml:146
+#: settings/private/SonnetConfigPage.qml:147
 #, kde-format
 msgctxt "Placeholder message"
 msgid "Add a new word to your personal dictionary…"
 msgstr "Új szó hozzáadása a személyes szótárhoz…"
 
-#: settings/private/SonnetConfigPage.qml:149
+#: settings/private/SonnetConfigPage.qml:150
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Word"
 msgstr "Szó hozzáadása"
 
-#: settings/private/SonnetConfigPage.qml:184
+#: settings/private/SonnetConfigPage.qml:183
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete word"
@@ -1040,11 +1048,33 @@ msgctxt "@action:button"
 msgid "Keyboard Shortcuts"
 msgstr "Gyorsbillentyűk"
 
+#: settings/ShortcutsConfigurationModule.qml:32
+#, kde-format
+msgctxt "@info:search keyword"
+msgid "Hotkey"
+msgstr ""
+
+#: settings/ShortcutsConfigurationModule.qml:33
+#, kde-format
+msgctxt "@info:search keyword"
+msgid "Key binding"
+msgstr ""
+
+#: settings/ShortcutsConfigurationModule.qml:34
+#, kde-format
+msgctxt "@info:search keyword"
+msgid "Accelerator"
+msgstr ""
+
 #: settings/SpellcheckingConfigurationModule.qml:16
 #, kde-format
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "Helyesírás-ellenőrzés"
+
+#~ msgctxt "@title:group"
+#~ msgid "Settings"
+#~ msgstr "Beállítások"
 
 #~ msgctxt "Linux packaging format"
 #~ msgid "Unknown/Default"
