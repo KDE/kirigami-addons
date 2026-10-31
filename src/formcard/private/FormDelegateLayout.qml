@@ -24,10 +24,12 @@ RowLayout {
 
     Layout.fillWidth: true
 
-    LayoutItemProxy {
-        target: root.leading
-        visible: target && target.visible
-        Layout.rightMargin: visible ? root.leadingPadding : 0
+    ContentItemLoader {
+        readonly property bool _visible: root.leading && root.leading.visible
+        Layout.rightMargin: _visible ? root.leadingPadding : 0
+        implicitHeight: _visible ? root.leading.implicitHeight : 0
+        implicitWidth: _visible ? root.leading.implicitWidth : 0
+        contentItem: root.leading
     }
 
     RowLayout {
@@ -37,9 +39,11 @@ RowLayout {
         spacing: 0
     }
 
-    LayoutItemProxy {
-        target: root.trailing
-        visible: target && target.visible
-        Layout.leftMargin: visible ? root.trailingPadding : 0
+    ContentItemLoader {
+        readonly property bool _visible: root.trailing && root.trailing.visible
+        Layout.leftMargin: _visible ? root.trailingPadding : 0
+        implicitHeight: _visible ? root.trailing.implicitHeight : 0
+        implicitWidth: _visible ? root.trailing.implicitWidth : 0
+        contentItem: root.trailing
     }
 }
