@@ -1065,7 +1065,3 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "Stavekontroll"
-
-#~ msgctxt "@title:group"
-#~ msgid "Settings"
-#~ msgstr "Innstillinger"

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-30 00:52+0000\n"
-"PO-Revision-Date: 2026-10-24 00:23+0100\n"
+"PO-Revision-Date: 2026-10-31 01:05+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -930,14 +930,14 @@ msgstr "Preferencias"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Searching…"
-msgstr ""
+msgstr "Buscando…"
 
 #: settings/private/ConfigMobilePage.qml:169
 #: settings/private/ConfigWindow.qml:162
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No matching settings"
-msgstr ""
+msgstr "No hay ajustes que coincidan"
 
 #: settings/private/SonnetConfigPage.qml:40
 #, kde-format
@@ -1041,26 +1041,22 @@ msgstr "Atajos de teclado"
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Hotkey"
-msgstr ""
+msgstr "Acceso rápido"
 
 #: settings/ShortcutsConfigurationModule.qml:33
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Key binding"
-msgstr ""
+msgstr "Asignación de teclas"
 
 #: settings/ShortcutsConfigurationModule.qml:34
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Accelerator"
-msgstr ""
+msgstr "Acelerador"
 
 #: settings/SpellcheckingConfigurationModule.qml:16
 #, kde-format
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "Comprobación ortográfica"
-
-#~ msgctxt "@title:group"
-#~ msgid "Settings"
-#~ msgstr "Preferencias"

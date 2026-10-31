@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-30 00:52+0000\n"
-"PO-Revision-Date: 2026-10-23 10:58+0200\n"
+"PO-Revision-Date: 2026-10-30 11:09+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.08.2\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -933,14 +933,14 @@ msgstr "Configuració"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Searching…"
-msgstr ""
+msgstr "S'està cercant…"
 
 #: settings/private/ConfigMobilePage.qml:169
 #: settings/private/ConfigWindow.qml:162
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No matching settings"
-msgstr ""
+msgstr "No hi ha paràmetres coincidents"
 
 #: settings/private/SonnetConfigPage.qml:40
 #, kde-format
@@ -1044,19 +1044,19 @@ msgstr "Dreceres de teclat"
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Hotkey"
-msgstr ""
+msgstr "Drecera"
 
 #: settings/ShortcutsConfigurationModule.qml:33
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Key binding"
-msgstr ""
+msgstr "Lligam de tecla"
 
 #: settings/ShortcutsConfigurationModule.qml:34
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Accelerator"
-msgstr ""
+msgstr "Accelerador"
 
 #: settings/SpellcheckingConfigurationModule.qml:16
 #, kde-format

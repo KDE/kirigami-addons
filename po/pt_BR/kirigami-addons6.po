@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-30 00:52+0000\n"
-"PO-Revision-Date: 2026-10-23 06:45-0300\n"
+"PO-Revision-Date: 2026-10-30 07:27-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -929,14 +929,14 @@ msgstr "Configurações"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Searching…"
-msgstr ""
+msgstr "Pesquisando…"
 
 #: settings/private/ConfigMobilePage.qml:169
 #: settings/private/ConfigWindow.qml:162
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No matching settings"
-msgstr ""
+msgstr "Nenhuma configuração correspondente"
 
 #: settings/private/SonnetConfigPage.qml:40
 #, kde-format
@@ -1040,19 +1040,19 @@ msgstr "Atalhos de teclado"
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Hotkey"
-msgstr ""
+msgstr "Atalho"
 
 #: settings/ShortcutsConfigurationModule.qml:33
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Key binding"
-msgstr ""
+msgstr "Associação de tecla"
 
 #: settings/ShortcutsConfigurationModule.qml:34
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Accelerator"
-msgstr ""
+msgstr "Acelerador"
 
 #: settings/SpellcheckingConfigurationModule.qml:16
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-30 00:52+0000\n"
-"PO-Revision-Date: 2026-10-23 06:28+0200\n"
+"PO-Revision-Date: 2026-10-30 04:41+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -923,14 +923,14 @@ msgstr "მორგება"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Searching…"
-msgstr ""
+msgstr "ძებნა…"
 
 #: settings/private/ConfigMobilePage.qml:169
 #: settings/private/ConfigWindow.qml:162
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No matching settings"
-msgstr ""
+msgstr "შესაბამისი პარამეტრების გარეშე"
 
 #: settings/private/SonnetConfigPage.qml:40
 #, kde-format
@@ -1034,19 +1034,19 @@ msgstr "კლავიატურის მალსახმობები"
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Hotkey"
-msgstr ""
+msgstr "მალსახმობი ღილაკი"
 
 #: settings/ShortcutsConfigurationModule.qml:33
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Key binding"
-msgstr ""
+msgstr "ღილაკის მიბმა"
 
 #: settings/ShortcutsConfigurationModule.qml:34
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Accelerator"
-msgstr ""
+msgstr "ამაჩქარებელი"
 
 #: settings/SpellcheckingConfigurationModule.qml:16
 #, kde-format
