@@ -17,7 +17,7 @@ import "private" as Private
    \brief FormDateTimeDelegate is a delegate for FormCard that lets the user enter either
    a date, a time or both.
 
-   This component allows to define a minimumDate and maximumDate to restrict
+   This component allows one to define a minimumDate and maximumDate to restrict
    the date that the user is allowed to enter.
 
    You should not add a label but instead use the above FormHeader

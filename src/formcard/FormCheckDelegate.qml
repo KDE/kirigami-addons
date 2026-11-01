@@ -71,7 +71,7 @@ T.CheckDelegate {
 
     /*!
        \qmlproperty Label descriptionItem
-       \brief This property allows to override the internal description
+       \brief This property allows one to override the internal description
        item with a custom component.
      */
     property alias descriptionItem: choiceLayout.descriptionItem

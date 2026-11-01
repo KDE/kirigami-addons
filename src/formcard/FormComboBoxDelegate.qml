@@ -293,7 +293,7 @@ AbstractFormDelegate {
     /*!
        \brief The dialog component used for the ComboBox.
 
-       This property allows to override the internal dialog
+       This property allows one to override the internal dialog
        with a custom component.
      */
     property Component dialog: QQC2.Dialog {
@@ -382,7 +382,7 @@ AbstractFormDelegate {
     /*!
        \brief The page component used for the ComboBox, if applicable.
 
-       This property allows to override the internal
+       This property allows one to override the internal
        \l ScrollablePage {Kirigami.ScrollablePage} with a custom component.
      */
     property Component page: Kirigami.ScrollablePage {

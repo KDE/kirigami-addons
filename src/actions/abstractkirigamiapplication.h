@@ -15,7 +15,7 @@
  *
  * AbstractKirigamiApplication is a class that needs to be inherited in your application.
  *
- * It allows to expose the various actions of your application to the QML frontend. Depending
+ * It allows one to expose the various actions of your application to the QML frontend. Depending
  * on the complexitiy of the application, you can either reimplement setupActions only
  * and put all your actions inside the mainCollection, or, if you want to organize your actions
  * in multiple collections, you can also expose the custom collections by overwriting
