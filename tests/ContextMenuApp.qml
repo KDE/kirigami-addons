@@ -28,7 +28,7 @@ Kirigami.ApplicationWindow {
                 Layout.topMargin: Kirigami.Units.gridUnit
 
                 FormCard.FormButtonDelegate {
-                    text: "Open Context meu"
+                    text: "Open Context menu"
                     onClicked: menu.popup()
                 }
             }

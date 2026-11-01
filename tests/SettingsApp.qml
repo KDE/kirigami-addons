@@ -32,7 +32,7 @@ Kirigami.ApplicationWindow {
                 Settings.SettingAction {
                     actionName: "appearance"
                     icon.name: "preferences-desktop-theme-global"
-                    text: I18n.i18nc("@window:title", "Appeareance")
+                    text: I18n.i18nc("@window:title", "Appearance")
                     page: Qt.resolvedUrl("TestSettingPage.qml#1")
                 }
             ]

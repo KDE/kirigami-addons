@@ -16,7 +16,7 @@ import org.kde.kirigamiaddons.formcard.templates as T
    when the control has focus or is currently being pressed, for example.
 
    This is used in AbstractFormDelegate so that new delegates provide this
-   feedback by default, and can be easily overriden with an Item.
+   feedback by default, and can be easily overridden with an Item.
 
    \since 0.11.0
 

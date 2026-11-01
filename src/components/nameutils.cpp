@@ -54,7 +54,7 @@ QString NameUtils::initialsFromString(const QString &string)
     // "FirstName Name Name LastName"
     normalized = normalized.trimmed();
 
-    // Remove stuff inside parantheses
+    // Remove stuff inside parentheses
     normalized = normalized.split(QLatin1Char('('))[0];
 
     if (normalized.isEmpty()) {

@@ -15,7 +15,7 @@ import org.kde.kirigami as Kirigami
    warning and error types, and with support for associated actions.
 
    Banner can be used to inform or interact with the user
-   without requiring the use of a dialog and are positionned in the footer
+   without requiring the use of a dialog and are positioned in the footer
    or header of a page. For inline content, see Kirigami.InlineMessage.
 
    The Banner is hidden by default.
