@@ -2,8 +2,8 @@
    \module KirigamiApp
    \title Kirigami Addons App C++ Classes
    \ingroup modules
-   \cmakepackage KF6
-   \cmakecomponent KirigamiAddons
+   \cmakepackage KF6KirigamiAddons
+   \cmaketargetitem KirigamiApp
    \brief Helpers for setting up Kirigami applications.
 
    Use \l KirigamiAppDefaults to apply suitable Qt defaults and load the
