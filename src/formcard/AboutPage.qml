@@ -133,17 +133,8 @@ FormCardPage {
         AbstractFormDelegate {
             id: generalDelegate
 
-            readonly property bool hasReleases: (page.aboutData.releases?.length ?? 0) > 0
-
-            Layout.fillWidth: true
-            focusPolicy: hasReleases ? Qt.StrongFocus : Qt.NoFocus
-            hoverEnabled: hasReleases && !Kirigami.Settings.hasTransientTouchInput
-            Accessible.role: hasReleases ? Accessible.Button : Accessible.StaticText
-            Accessible.name: hasReleases
-                ? I18n.i18nc("@action:button", "Show release history for %1 %2", page.aboutData.displayName, page.aboutData.version)
-                : page.aboutData.displayName + " " + page.aboutData.version
-            background.visible: hasReleases
-
+            Accessible.name: page.aboutData.displayName + " " + page.aboutData.version
+            background: null
             contentItem: RowLayout {
                 spacing: Kirigami.Units.smallSpacing * 2
 
@@ -159,22 +150,11 @@ FormCardPage {
                     Layout.fillWidth: true
                     spacing: Kirigami.Units.smallSpacing
 
-                    RowLayout {
-                        spacing: Kirigami.Units.smallSpacing
-
-                        Kirigami.Heading {
-                            Layout.fillWidth: true
-                            text: page.aboutData.displayName + " " + page.aboutData.version
-                            wrapMode: Text.WordWrap
-                        }
-
-                        Kirigami.Badge {
-                            visible: FormCardModule.AboutComponent.hasNewReleases
-                            text: I18n.i18n("What's new")
-                            type: Kirigami.Badge.Type.Positive
-                        }
+                    Kirigami.Heading {
+                        Layout.fillWidth: true
+                        text: page.aboutData.displayName + " " + page.aboutData.version
+                        wrapMode: Text.WordWrap
                     }
-
 
                     Kirigami.Heading {
                         Layout.fillWidth: true
@@ -183,12 +163,6 @@ FormCardPage {
                         wrapMode: Text.WordWrap
                         text: page.aboutData.shortDescription
                     }
-                }
-            }
-
-            onClicked: {
-                if (generalDelegate.hasReleases) {
-                    releasesLoader.active = true;
                 }
             }
         }
@@ -210,7 +184,6 @@ FormCardPage {
     FormCard {
         visible: aboutData.otherText.length > 0
         FormTextDelegate {
-            Layout.fillWidth: true
             textItem.wrapMode: Text.WordWrap
             text: aboutData.otherText
         }
@@ -228,7 +201,6 @@ FormCardPage {
             model: aboutData.licenses
             delegate: FormButtonDelegate {
                 text: modelData.name
-                Layout.fillWidth: true
                 onClicked: licenseLoader.open(modelData.name, modelData.text)
             }
         }
@@ -236,7 +208,6 @@ FormCardPage {
 
     FormGridContainer {
         Layout.topMargin: Kirigami.Units.gridUnit
-        Layout.fillWidth: true
 
         // Use URLs because delegate visibility also depends on this container's visibility.
         visible: getInvolvedDelegate.url.length > 0
@@ -351,6 +322,74 @@ FormCardPage {
     }
 
     FormHeader {
+        id: headerRelease
+
+        readonly property bool hasReleases: (page.aboutData.releases?.length ?? 0) > 0
+
+        title: I18n.i18nc("@title:group", "Releases")
+        visible: hasReleases
+    }
+
+    Loader {
+        active: headerRelease.hasReleases
+        Layout.fillWidth: true
+
+        sourceComponent: FormCard {
+            autoSeparators: true
+
+            AbstractFormDelegate {
+                background: null
+                contentItem: ColumnLayout {
+                    id: releaseDelegate
+
+                    readonly property var modelData: page.aboutData.releases[0]
+
+                    Layout.fillWidth: true
+                    Layout.preferredWidth: Kirigami.Units.gridUnit * 30
+                    spacing: Kirigami.Units.smallSpacing
+
+                    QQC2.Label {
+                        Layout.fillWidth: true
+                        text: releaseDelegate.modelData.version
+                        font.bold: true
+                    }
+
+                    QQC2.Label {
+                        Layout.fillWidth: true
+                        text: releaseDelegate.modelData.date.toLocaleDateString()
+                        wrapMode: Text.WordWrap
+                        color: Kirigami.Theme.disabledTextColor
+                        visible: text.length > 0
+                    }
+
+                    QQC2.Label {
+                        Layout.fillWidth: true
+                        Layout.minimumWidth: 0
+                        text: '<style>ul { margin-left: -30px; }</style>' + releaseDelegate.modelData.description
+                        textFormat: Text.RichText
+                        wrapMode: Text.WordWrap
+                        onLinkActivated: (link) => Qt.openUrlExternally(link)
+                        visible: (releaseDelegate.modelData.description?.length ?? 0) > 0
+                    }
+
+                    QQC2.Label {
+                        Layout.fillWidth: true
+                        text: '<a href="' + releaseDelegate.modelData.url + '">' + I18n.i18n("More information</a>") + ' &lt;</a>'
+                        wrapMode: Text.WordWrap
+                        visible: releaseDelegate.modelData.url.toString().length > 0
+                        onLinkActivated: (link) => Qt.openUrlExternally(link)
+                    }
+                }
+            }
+
+            FormButtonDelegate {
+                text: I18n.i18nc("@action:button", "Show previous releases", page.aboutData.displayName)
+                onClicked: releasesLoader.active = true;
+            }
+        }
+    }
+
+    FormHeader {
         title: I18n.i18n("Libraries in use")
         visible: page.showLibraries
 
@@ -427,11 +466,10 @@ FormCardPage {
             active: false
             sourceComponent: Private.AboutReleaseDialog {
                 releases: page.aboutData.releases
-                onClosed: releasesLoader.active = false
+                onClosed: releasesLoader.active = FormCardModule.AboutComponent.hasNewReleases
             }
             onLoaded: {
                 if (status === Loader.Ready) {
-                    item.showOnlyNewReleases = FormCardModule.AboutComponent.hasNewReleases;
                     item.open();
                     FormCardModule.AboutComponent.updateLastSeenVersion();
                 }
@@ -465,7 +503,6 @@ FormCardPage {
             id: personDelegate
 
             AbstractFormDelegate {
-                Layout.fillWidth: true
                 background: null
                 contentItem: RowLayout {
                     spacing: Private.FormCardUnits.horizontalSpacing

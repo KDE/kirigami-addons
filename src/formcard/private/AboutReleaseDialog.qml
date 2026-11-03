@@ -12,7 +12,6 @@ AboutDialog {
     id: root
 
     required property var releases
-    property bool showOnlyNewReleases: false
 
     title: I18n.i18n("Release history")
     implicitHeight: Math.min(parent ? parent.height - Kirigami.Units.gridUnit * 2 : Kirigami.Units.gridUnit * 32,
@@ -34,10 +33,10 @@ AboutDialog {
             spacing: Kirigami.Units.largeSpacing * 2
 
             Repeater {
-                model: root.showOnlyNewReleases
-                    ? root.releases.filter((release, index) => FormCardModule.AboutComponent.newReleaseIndexes.includes(index))
-                    : root.releases
+                model: root.releases
                 delegate: ColumnLayout {
+                    id: delegate
+
                     required property var modelData
 
                     Layout.fillWidth: true
@@ -46,41 +45,34 @@ AboutDialog {
 
                     QQC2.Label {
                         Layout.fillWidth: true
-                        text: modelData.version
+                        text: delegate.modelData.version
                         font.bold: true
                     }
 
                     QQC2.Label {
                         Layout.fillWidth: true
-                        text: modelData.date.toLocaleDateString()
+                        text: delegate.modelData.date.toLocaleDateString()
                         color: Kirigami.Theme.disabledTextColor
-                        visible: modelData.date && modelData.date.getTime() !== 0
+                        visible: text.length > 0
                     }
 
                     QQC2.Label {
                         Layout.fillWidth: true
                         Layout.minimumWidth: 0
-                        text: modelData.description
+                        text: '<style>ul { margin-left: -30px; }</style>' + delegate.modelData.description
                         textFormat: Text.RichText
                         wrapMode: Text.WordWrap
                         onLinkActivated: (link) => Qt.openUrlExternally(link)
-                        visible: text.length > 0
+                        visible: (delegate.modelData.description?.length ?? 0) > 0
                     }
 
                     FormCardModule.FormLinkDelegate {
                         Layout.fillWidth: true
                         text: I18n.i18n("More information")
-                        url: modelData.url
+                        url: delegate.modelData.url
                         visible: url.toString().length > 0
                     }
                 }
-            }
-
-            QQC2.Button {
-                Layout.alignment: Qt.AlignHCenter
-                visible: root.showOnlyNewReleases
-                text: I18n.i18n("Show older changes…")
-                onClicked: root.showOnlyNewReleases = false
             }
         }
     }
