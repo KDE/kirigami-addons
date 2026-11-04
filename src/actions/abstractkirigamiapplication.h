@@ -77,6 +77,8 @@
 class KIRIGAMIADDONSSTATEFULAPP_EXPORT AbstractKirigamiApplication : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_UNCREATABLE("Abstract class, subclass it in C++")
 
     /*!
      * \property AbstractKirigamiApplication::actionsModel
