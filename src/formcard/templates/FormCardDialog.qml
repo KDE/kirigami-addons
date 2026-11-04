@@ -80,7 +80,7 @@ QQC2.Dialog {
     parent: QQC2.Overlay.overlay
 
     implicitWidth: if (parent.width > 576) {
-        return Math.min(parent.width - Kirigami.Units.gridUnit * 2, Math.max(Kirigami.Units.gridUnit * 15, header.implicitWidth))
+        return Math.min(parent.width - Kirigami.Units.gridUnit * 2, Math.max(Kirigami.Units.gridUnit * 20, header.implicitWidth))
     } else {
         return parent.width - Kirigami.Units.gridUnit * 2;
     }
@@ -105,7 +105,7 @@ QQC2.Dialog {
             leftPadding: root._horizontalContentPadding
             rightPadding: root._horizontalContentPadding
             topPadding: root._verticalContentPadding
-            bottomPadding: 0
+            bottomPadding: root._verticalContentPadding
 
             Layout.fillWidth: true
         }
@@ -116,6 +116,7 @@ QQC2.Dialog {
             Layout.alignment: Qt.AlignVCenter
             Layout.rightMargin: root._horizontalContentPadding
             Layout.topMargin: root._horizontalContentPadding
+            Layout.bottomMargin: root._verticalContentPadding
 
             icon.name: hovered ? "window-close" : "window-close-symbolic"
             text: I18n.i18nc("@action:button close dialog", "Close")
@@ -189,7 +190,7 @@ QQC2.Dialog {
                 left: parent.left
                 right: parent.right
             }
-            visible: !((scrollView.contentItem as Flickable)?.atYBeginning ?? true)
+            visible: scrollView.QQC2.ScrollBar.vertical.size < 1
         }
 
         Kirigami.Separator {
@@ -198,7 +199,7 @@ QQC2.Dialog {
                 left: parent.left
                 right: parent.right
             }
-            visible: !((scrollView.contentItem as Flickable)?.atYEnd ?? true)
+            visible: scrollView.QQC2.ScrollBar.vertical.size < 1
         }
     }
 
@@ -206,7 +207,7 @@ QQC2.Dialog {
         leftPadding: root._horizontalContentPadding
         rightPadding: root._horizontalContentPadding
         bottomPadding: root._verticalContentPadding
-        topPadding: Kirigami.Units.smallSpacing
+        topPadding: root._verticalContentPadding
         spacing: Kirigami.Units.mediumSpacing
 
         standardButtons: root.standardButtons
