@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-30 00:52+0000\n"
+"POT-Creation-Date: 2026-11-04 01:01+0000\n"
 "PO-Revision-Date: 2026-10-30 04:41+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -521,7 +521,7 @@ msgstr ""
 "თავისუფალი პროგრამები შევქმნათ. KDE-ის საზოგადოებაში ყველას მივესალმებით, "
 "თქვენი ჩათვლით."
 
-#: formcard/AboutKDEPage.qml:92 formcard/AboutPage.qml:253
+#: formcard/AboutKDEPage.qml:92 formcard/AboutPage.qml:224
 #, kde-format
 msgid "Homepage"
 msgstr "Homepage"
@@ -578,7 +578,7 @@ msgstr ""
 "ნახატები, თემები, ხმოვანი ფაილები და გააუმჯობესოთ დოკუმენტაცია. გადაწყვიტეთ "
 "რას ისურვებთ!"
 
-#: formcard/AboutKDEPage.qml:132 formcard/AboutPage.qml:277
+#: formcard/AboutKDEPage.qml:132 formcard/AboutPage.qml:248
 #, kde-format
 msgid "Get Involved"
 msgstr "შემოგვიერთდით"
@@ -632,108 +632,116 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:166 formcard/AboutPage.qml:261
+#: formcard/AboutKDEPage.qml:166 formcard/AboutPage.qml:232
 #, kde-format
 msgid "Donate"
 msgstr "შემოწირულობა"
 
-#: formcard/AboutPage.qml:143
-#, kde-format
-msgctxt "@action:button"
-msgid "Show release history for %1 %2"
-msgstr "გამოშვების ისტორიის ჩვენება %1 %2-ისთვის"
-
 #: formcard/AboutPage.qml:173
-#, kde-format
-msgid "What's new"
-msgstr "რა არის ახალი"
-
-#: formcard/AboutPage.qml:199
 #, kde-format
 msgid "Copyright"
 msgstr "საავტორო უფლებები"
 
-#: formcard/AboutPage.qml:207
+#: formcard/AboutPage.qml:181
 #, kde-format
 msgid "Description"
 msgstr "აღწერა"
 
-#: formcard/AboutPage.qml:220
+#: formcard/AboutPage.qml:193
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "ლიცენზია"
 msgstr[1] "ლიცენზიები"
 
-#: formcard/AboutPage.qml:307
+#: formcard/AboutPage.qml:278
 #, kde-format
 msgid "Report a Bug"
 msgstr "შეცდომის პატაკი"
 
-#: formcard/AboutPage.qml:320
+#: formcard/AboutPage.qml:291
 #, kde-format
 msgid "Matrix Channel"
 msgstr "Matrix-ის არხი"
 
-#: formcard/AboutPage.qml:336
+#: formcard/AboutPage.qml:307
 #, kde-format
 msgid "Mastodon"
 msgstr "Mastodon"
 
-#: formcard/AboutPage.qml:348
+#: formcard/AboutPage.qml:319
 #, kde-format
 msgid "Source Code"
 msgstr "საწყისი კოდი"
 
-#: formcard/AboutPage.qml:354
+#: formcard/AboutPage.qml:329
+#, fuzzy, kde-format
+#| msgid "Release history"
+msgctxt "@title:group"
+msgid "Releases"
+msgstr "გამოშვების ისტორია"
+
+#: formcard/AboutPage.qml:377
+#, fuzzy, kde-format
+#| msgid "More information"
+msgid "More information</a>"
+msgstr "მეტი ინფორმაცია"
+
+#: formcard/AboutPage.qml:386
+#, kde-format
+msgctxt "@action:button"
+msgid "Show previous releases"
+msgstr ""
+
+#: formcard/AboutPage.qml:393
 #, kde-format
 msgid "Libraries in use"
 msgstr "გამოყენებული ბიბლიოთეკები"
 
-#: formcard/AboutPage.qml:358
+#: formcard/AboutPage.qml:397
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "ბუფერში კოპირება"
 
-#: formcard/AboutPage.qml:362
+#: formcard/AboutPage.qml:401
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "ინფორმაცია სისტემის შესახებ დაკოპირდა ბუფერში."
 
-#: formcard/AboutPage.qml:377
+#: formcard/AboutPage.qml:416
 #, kde-format
 msgid "Authors"
 msgstr "ავტორები"
 
-#: formcard/AboutPage.qml:393
+#: formcard/AboutPage.qml:432
 #, kde-format
 msgid "Credits"
 msgstr "კრედიტები"
 
-#: formcard/AboutPage.qml:409
+#: formcard/AboutPage.qml:448
 #, kde-format
 msgid "Translators"
 msgstr "მთარგმნელები"
 
-#: formcard/AboutPage.qml:516 formcard/AboutPage.qml:520
+#: formcard/AboutPage.qml:553 formcard/AboutPage.qml:557
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "ეწვიეთ %1-ის KDE მაღაზიის გვერდს"
 
-#: formcard/AboutPage.qml:527 formcard/AboutPage.qml:531
+#: formcard/AboutPage.qml:564 formcard/AboutPage.qml:568
 #, kde-format
 msgid "Send an email to %1"
 msgstr "%1-სთვის ელფოსტის გაგზავნა"
 
-#: formcard/AboutPage.qml:538 formcard/AboutPage.qml:599
+#: formcard/AboutPage.qml:575 formcard/AboutPage.qml:636
 #, kde-format
 msgctxt "@action:button"
 msgid "Visit %1's website"
 msgstr "გადასვლა %1-ის ვებგვერდზე"
 
-#: formcard/AboutPage.qml:586
+#: formcard/AboutPage.qml:623
 #, kde-format
 msgctxt "@action:button"
 msgid "Show license for %1"
@@ -849,20 +857,15 @@ msgctxt "@action:button"
 msgid "Done"
 msgstr "მზადაა"
 
-#: formcard/private/AboutReleaseDialog.qml:17
+#: formcard/private/AboutReleaseDialog.qml:16
 #, kde-format
 msgid "Release history"
 msgstr "გამოშვების ისტორია"
 
-#: formcard/private/AboutReleaseDialog.qml:72
+#: formcard/private/AboutReleaseDialog.qml:71
 #, kde-format
 msgid "More information"
 msgstr "მეტი ინფორმაცია"
-
-#: formcard/private/AboutReleaseDialog.qml:82
-#, kde-format
-msgid "Show older changes…"
-msgstr "ძველი ცვლილებების ჩვენება…"
 
 #: onboarding/private/OnboardingOverlay.qml:202
 #, kde-format
@@ -1053,6 +1056,16 @@ msgstr "ამაჩქარებელი"
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "მართლწერის შემოწმება"
+
+#~ msgctxt "@action:button"
+#~ msgid "Show release history for %1 %2"
+#~ msgstr "გამოშვების ისტორიის ჩვენება %1 %2-ისთვის"
+
+#~ msgid "What's new"
+#~ msgstr "რა არის ახალი"
+
+#~ msgid "Show older changes…"
+#~ msgstr "ძველი ცვლილებების ჩვენება…"
 
 #~ msgctxt "@title:group"
 #~ msgid "Settings"

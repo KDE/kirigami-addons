@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-30 00:52+0000\n"
+"POT-Creation-Date: 2026-11-04 01:01+0000\n"
 "PO-Revision-Date: 2026-10-31 16:18+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -522,7 +522,7 @@ msgstr ""
 "sukurtume geriausią pasaulyje laisvąją programinę įrangą. Visi, įskaitant ir "
 "jus, yra kviečiami prisijungti ir talkinti KDE."
 
-#: formcard/AboutKDEPage.qml:92 formcard/AboutPage.qml:253
+#: formcard/AboutKDEPage.qml:92 formcard/AboutPage.qml:224
 #, kde-format
 msgid "Homepage"
 msgstr "Internetinė svetainė"
@@ -582,7 +582,7 @@ msgstr ""
 "programų sąsajas. Galite teikti grafinius paveikslus, apipavidalinimus, "
 "garsus bei patobulintą dokumentaciją. Spręskite patys!"
 
-#: formcard/AboutKDEPage.qml:132 formcard/AboutPage.qml:277
+#: formcard/AboutKDEPage.qml:132 formcard/AboutPage.qml:248
 #, kde-format
 msgid "Get Involved"
 msgstr "Įsitraukti"
@@ -634,33 +634,22 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:166 formcard/AboutPage.qml:261
+#: formcard/AboutKDEPage.qml:166 formcard/AboutPage.qml:232
 #, kde-format
 msgid "Donate"
 msgstr "Paaukoti"
 
-#: formcard/AboutPage.qml:143
-#, kde-format
-msgctxt "@action:button"
-msgid "Show release history for %1 %2"
-msgstr "Rodyti %1 %2 laidų istorija"
-
 #: formcard/AboutPage.qml:173
-#, kde-format
-msgid "What's new"
-msgstr "Kas naujo"
-
-#: formcard/AboutPage.qml:199
 #, kde-format
 msgid "Copyright"
 msgstr "Autorių teisės"
 
-#: formcard/AboutPage.qml:207
+#: formcard/AboutPage.qml:181
 #, kde-format
 msgid "Description"
 msgstr "Aprašas"
 
-#: formcard/AboutPage.qml:220
+#: formcard/AboutPage.qml:193
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
@@ -669,75 +658,94 @@ msgstr[1] "Licencijos"
 msgstr[2] "Licencijos"
 msgstr[3] "Licencijos"
 
-#: formcard/AboutPage.qml:307
+#: formcard/AboutPage.qml:278
 #, kde-format
 msgid "Report a Bug"
 msgstr "Pranešti apie klaidą"
 
-#: formcard/AboutPage.qml:320
+#: formcard/AboutPage.qml:291
 #, kde-format
 msgid "Matrix Channel"
 msgstr "Matrix kanalas"
 
-#: formcard/AboutPage.qml:336
+#: formcard/AboutPage.qml:307
 #, kde-format
 msgid "Mastodon"
 msgstr "Mastodon"
 
-#: formcard/AboutPage.qml:348
+#: formcard/AboutPage.qml:319
 #, kde-format
 msgid "Source Code"
 msgstr "Pradinis kodas"
 
-#: formcard/AboutPage.qml:354
+#: formcard/AboutPage.qml:329
+#, fuzzy, kde-format
+#| msgid "Release history"
+msgctxt "@title:group"
+msgid "Releases"
+msgstr "Laidų istorija"
+
+#: formcard/AboutPage.qml:377
+#, fuzzy, kde-format
+#| msgid "More information"
+msgid "More information</a>"
+msgstr "Daugiau informacijos"
+
+#: formcard/AboutPage.qml:386
+#, kde-format
+msgctxt "@action:button"
+msgid "Show previous releases"
+msgstr ""
+
+#: formcard/AboutPage.qml:393
 #, kde-format
 msgid "Libraries in use"
 msgstr "Naudojamos bibliotekos"
 
-#: formcard/AboutPage.qml:358
+#: formcard/AboutPage.qml:397
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "Kopijuoti į iškarpinę"
 
-#: formcard/AboutPage.qml:362
+#: formcard/AboutPage.qml:401
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "Informacija apie sistemą nukopijuota į iškarpinę."
 
-#: formcard/AboutPage.qml:377
+#: formcard/AboutPage.qml:416
 #, kde-format
 msgid "Authors"
 msgstr "Autoriai"
 
-#: formcard/AboutPage.qml:393
+#: formcard/AboutPage.qml:432
 #, kde-format
 msgid "Credits"
 msgstr "Padėkos"
 
-#: formcard/AboutPage.qml:409
+#: formcard/AboutPage.qml:448
 #, kde-format
 msgid "Translators"
 msgstr "Vertėjai"
 
-#: formcard/AboutPage.qml:516 formcard/AboutPage.qml:520
+#: formcard/AboutPage.qml:553 formcard/AboutPage.qml:557
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Apsilankyti KDE parduotuvės %1 puslapyje"
 
-#: formcard/AboutPage.qml:527 formcard/AboutPage.qml:531
+#: formcard/AboutPage.qml:564 formcard/AboutPage.qml:568
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Siųsti el. laišką, adresu %1"
 
-#: formcard/AboutPage.qml:538 formcard/AboutPage.qml:599
+#: formcard/AboutPage.qml:575 formcard/AboutPage.qml:636
 #, kde-format
 msgctxt "@action:button"
 msgid "Visit %1's website"
 msgstr "Apsilankyti %1 internetinėje svetainėje"
 
-#: formcard/AboutPage.qml:586
+#: formcard/AboutPage.qml:623
 #, kde-format
 msgctxt "@action:button"
 msgid "Show license for %1"
@@ -853,20 +861,15 @@ msgctxt "@action:button"
 msgid "Done"
 msgstr "Atlikta"
 
-#: formcard/private/AboutReleaseDialog.qml:17
+#: formcard/private/AboutReleaseDialog.qml:16
 #, kde-format
 msgid "Release history"
 msgstr "Laidų istorija"
 
-#: formcard/private/AboutReleaseDialog.qml:72
+#: formcard/private/AboutReleaseDialog.qml:71
 #, kde-format
 msgid "More information"
 msgstr "Daugiau informacijos"
-
-#: formcard/private/AboutReleaseDialog.qml:82
-#, kde-format
-msgid "Show older changes…"
-msgstr "Rodyti senesnius pakeitimus…"
 
 #: onboarding/private/OnboardingOverlay.qml:202
 #, kde-format
@@ -1057,6 +1060,16 @@ msgstr "Klavišų kombinacija"
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "Rašybos tikrinimas"
+
+#~ msgctxt "@action:button"
+#~ msgid "Show release history for %1 %2"
+#~ msgstr "Rodyti %1 %2 laidų istorija"
+
+#~ msgid "What's new"
+#~ msgstr "Kas naujo"
+
+#~ msgid "Show older changes…"
+#~ msgstr "Rodyti senesnius pakeitimus…"
 
 #~ msgctxt "@title:group"
 #~ msgid "Settings"

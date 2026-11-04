@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-30 00:52+0000\n"
+"POT-Creation-Date: 2026-11-04 01:01+0000\n"
 "PO-Revision-Date: 2026-10-04 18:49+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -516,7 +516,7 @@ msgstr ""
 "படைப்புக்களையோ கட்டுப்படுத்துவதில்லை. கே.டீ.யீ.-யில் நீங்கள் உட்பட எவரேனும் இணைந்து "
 "பங்களிக்கலாம்."
 
-#: formcard/AboutKDEPage.qml:92 formcard/AboutPage.qml:253
+#: formcard/AboutKDEPage.qml:92 formcard/AboutPage.qml:224
 #, kde-format
 msgid "Homepage"
 msgstr "முகப்புப்பக்கம்"
@@ -570,7 +570,7 @@ msgstr ""
 "மொழிபெயர்க்கும் குழுக்களில் செரலாம். ஓவியங்களையும் தோற்றத்திட்டங்களையும் உருவாக்கலாம். "
 "கையேடுகளை எழுதலாம். முடிவு உங்களதே!"
 
-#: formcard/AboutKDEPage.qml:132 formcard/AboutPage.qml:277
+#: formcard/AboutKDEPage.qml:132 formcard/AboutPage.qml:248
 #, kde-format
 msgid "Get Involved"
 msgstr "பங்களிப்பது"
@@ -624,110 +624,117 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "கே.டீ.யீ. e.V."
 
-#: formcard/AboutKDEPage.qml:166 formcard/AboutPage.qml:261
+#: formcard/AboutKDEPage.qml:166 formcard/AboutPage.qml:232
 #, kde-format
 msgid "Donate"
 msgstr "நன்கொடை அளிப்பது"
 
-#: formcard/AboutPage.qml:143
-#, fuzzy, kde-format
-#| msgid "Release history"
-msgctxt "@action:button"
-msgid "Show release history for %1 %2"
-msgstr "பதிப்பு வரலாறு"
-
 #: formcard/AboutPage.qml:173
-#, kde-format
-msgid "What's new"
-msgstr "புதியவை என்ன?"
-
-#: formcard/AboutPage.qml:199
 #, kde-format
 msgid "Copyright"
 msgstr "பதிப்புரிமை"
 
-#: formcard/AboutPage.qml:207
+#: formcard/AboutPage.qml:181
 #, kde-format
 msgid "Description"
 msgstr "விவரணம்"
 
-#: formcard/AboutPage.qml:220
+#: formcard/AboutPage.qml:193
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "உரிமம்"
 msgstr[1] "உரிமங்கள்"
 
-#: formcard/AboutPage.qml:307
+#: formcard/AboutPage.qml:278
 #, kde-format
 msgid "Report a Bug"
 msgstr "பிழையை தெரிவி"
 
-#: formcard/AboutPage.qml:320
+#: formcard/AboutPage.qml:291
 #, fuzzy, kde-format
 msgid "Matrix Channel"
 msgstr "மேட்ரிக்ஸு அரட்டை"
 
-#: formcard/AboutPage.qml:336
+#: formcard/AboutPage.qml:307
 #, kde-format
 msgid "Mastodon"
 msgstr ""
 
-#: formcard/AboutPage.qml:348
+#: formcard/AboutPage.qml:319
 #, kde-format
 msgid "Source Code"
 msgstr "மூல குறியீடு"
 
-#: formcard/AboutPage.qml:354
+#: formcard/AboutPage.qml:329
+#, fuzzy, kde-format
+#| msgid "Release history"
+msgctxt "@title:group"
+msgid "Releases"
+msgstr "பதிப்பு வரலாறு"
+
+#: formcard/AboutPage.qml:377
+#, fuzzy, kde-format
+#| msgid "More information"
+msgid "More information</a>"
+msgstr "மேலும் விவரங்கள்"
+
+#: formcard/AboutPage.qml:386
+#, kde-format
+msgctxt "@action:button"
+msgid "Show previous releases"
+msgstr ""
+
+#: formcard/AboutPage.qml:393
 #, kde-format
 msgid "Libraries in use"
 msgstr "பயனிலுள்ள நிரலகங்கள்"
 
-#: formcard/AboutPage.qml:358
+#: formcard/AboutPage.qml:397
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "பிடிப்புப்பலகைக்கு நகலெடு"
 
-#: formcard/AboutPage.qml:362
+#: formcard/AboutPage.qml:401
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "கணினி விவரங்கள் பிடிப்புப்பலகைக்கு நகலெடுக்கப்பட்டன."
 
-#: formcard/AboutPage.qml:377
+#: formcard/AboutPage.qml:416
 #, kde-format
 msgid "Authors"
 msgstr "இயற்றியவர்கள்"
 
-#: formcard/AboutPage.qml:393
+#: formcard/AboutPage.qml:432
 #, kde-format
 msgid "Credits"
 msgstr "நன்றி"
 
-#: formcard/AboutPage.qml:409
+#: formcard/AboutPage.qml:448
 #, kde-format
 msgid "Translators"
 msgstr "மொழிபெயர்ப்பாளர்கள்"
 
-#: formcard/AboutPage.qml:516 formcard/AboutPage.qml:520
+#: formcard/AboutPage.qml:553 formcard/AboutPage.qml:557
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "%1-இன் கே.டீ.யீ. களஞ்சியப் பக்கத்தை பாருங்கள்"
 
-#: formcard/AboutPage.qml:527 formcard/AboutPage.qml:531
+#: formcard/AboutPage.qml:564 formcard/AboutPage.qml:568
 #, kde-format
 msgid "Send an email to %1"
 msgstr "%1 என்பவருக்கு மின்னஞ்சல் அனுப்பு"
 
-#: formcard/AboutPage.qml:538 formcard/AboutPage.qml:599
+#: formcard/AboutPage.qml:575 formcard/AboutPage.qml:636
 #, fuzzy, kde-format
 #| msgid "Visit %1's KDE Store page"
 msgctxt "@action:button"
 msgid "Visit %1's website"
 msgstr "%1-இன் கே.டீ.யீ. களஞ்சியப் பக்கத்தை பாருங்கள்"
 
-#: formcard/AboutPage.qml:586
+#: formcard/AboutPage.qml:623
 #, kde-format
 msgctxt "@action:button"
 msgid "Show license for %1"
@@ -843,20 +850,15 @@ msgctxt "@action:button"
 msgid "Done"
 msgstr "முடிந்தது"
 
-#: formcard/private/AboutReleaseDialog.qml:17
+#: formcard/private/AboutReleaseDialog.qml:16
 #, kde-format
 msgid "Release history"
 msgstr "பதிப்பு வரலாறு"
 
-#: formcard/private/AboutReleaseDialog.qml:72
+#: formcard/private/AboutReleaseDialog.qml:71
 #, kde-format
 msgid "More information"
 msgstr "மேலும் விவரங்கள்"
-
-#: formcard/private/AboutReleaseDialog.qml:82
-#, kde-format
-msgid "Show older changes…"
-msgstr "பழைய மாற்றங்களைக் காட்டு…"
 
 #: onboarding/private/OnboardingOverlay.qml:202
 #, kde-format
@@ -1047,6 +1049,18 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "சொல் திருத்தம்"
+
+#, fuzzy
+#~| msgid "Release history"
+#~ msgctxt "@action:button"
+#~ msgid "Show release history for %1 %2"
+#~ msgstr "பதிப்பு வரலாறு"
+
+#~ msgid "What's new"
+#~ msgstr "புதியவை என்ன?"
+
+#~ msgid "Show older changes…"
+#~ msgstr "பழைய மாற்றங்களைக் காட்டு…"
 
 #~ msgctxt "@title:group"
 #~ msgid "Settings"

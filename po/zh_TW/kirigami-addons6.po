@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-30 00:52+0000\n"
-"PO-Revision-Date: 2026-10-01 01:05+0900\n"
+"POT-Creation-Date: 2026-11-04 01:01+0000\n"
+"PO-Revision-Date: 2026-11-03 21:52+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -514,7 +514,7 @@ msgstr ""
 "KDE 是個合作企業：沒有任何人操控 KDE 的目標和產品，取而代之的是一起達到建立世"
 "界上最好自由軟體的共同目標。歡迎任何人 -- 包括您。"
 
-#: formcard/AboutKDEPage.qml:92 formcard/AboutPage.qml:253
+#: formcard/AboutKDEPage.qml:92 formcard/AboutPage.qml:224
 #, kde-format
 msgid "Homepage"
 msgstr "首頁"
@@ -567,7 +567,7 @@ msgstr ""
 "您不需要是軟體工程師也可以成為 KDE 團隊的一份子。您可以加入翻譯團隊來翻譯程式"
 "的介面。您可以提供圖形、佈景主題、音效，或幫忙撰寫文件，看您喜歡做哪一項。"
 
-#: formcard/AboutKDEPage.qml:132 formcard/AboutPage.qml:277
+#: formcard/AboutKDEPage.qml:132 formcard/AboutPage.qml:248
 #, kde-format
 msgid "Get Involved"
 msgstr "參與"
@@ -619,113 +619,119 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:166 formcard/AboutPage.qml:261
+#: formcard/AboutKDEPage.qml:166 formcard/AboutPage.qml:232
 #, kde-format
 msgid "Donate"
 msgstr "贊助"
 
-#: formcard/AboutPage.qml:143
-#, fuzzy, kde-format
-#| msgid "Release history"
-msgctxt "@action:button"
-msgid "Show release history for %1 %2"
-msgstr "發佈歷史"
-
 #: formcard/AboutPage.qml:173
-#, kde-format
-msgid "What's new"
-msgstr "新功能"
-
-#: formcard/AboutPage.qml:199
 #, kde-format
 msgid "Copyright"
 msgstr "版權"
 
-#: formcard/AboutPage.qml:207
+#: formcard/AboutPage.qml:181
 #, kde-format
 msgid "Description"
 msgstr "描述"
 
-#: formcard/AboutPage.qml:220
+#: formcard/AboutPage.qml:193
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "授權"
 
-#: formcard/AboutPage.qml:307
+#: formcard/AboutPage.qml:278
 #, kde-format
 msgid "Report a Bug"
 msgstr "回報問題"
 
-#: formcard/AboutPage.qml:320
+#: formcard/AboutPage.qml:291
 #, kde-format
 msgid "Matrix Channel"
 msgstr "Matrix 頻道"
 
-#: formcard/AboutPage.qml:336
+#: formcard/AboutPage.qml:307
 #, kde-format
 msgid "Mastodon"
 msgstr "Mastodon"
 
-#: formcard/AboutPage.qml:348
+#: formcard/AboutPage.qml:319
 #, kde-format
 msgid "Source Code"
 msgstr "原始碼"
 
-#: formcard/AboutPage.qml:354
+#: formcard/AboutPage.qml:329
+#, fuzzy, kde-format
+#| msgid "Release history"
+msgctxt "@title:group"
+msgid "Releases"
+msgstr "發佈歷史"
+
+#: formcard/AboutPage.qml:377
+#, fuzzy, kde-format
+#| msgid "More information"
+msgid "More information</a>"
+msgstr "更多資訊"
+
+#: formcard/AboutPage.qml:386
+#, kde-format
+msgctxt "@action:button"
+msgid "Show previous releases"
+msgstr ""
+
+#: formcard/AboutPage.qml:393
 #, kde-format
 msgid "Libraries in use"
 msgstr "使用函式庫"
 
-#: formcard/AboutPage.qml:358
+#: formcard/AboutPage.qml:397
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "複製到剪貼簿"
 
-#: formcard/AboutPage.qml:362
+#: formcard/AboutPage.qml:401
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "已將系統資訊複製到剪貼簿。"
 
-#: formcard/AboutPage.qml:377
+#: formcard/AboutPage.qml:416
 #, kde-format
 msgid "Authors"
 msgstr "作者群"
 
-#: formcard/AboutPage.qml:393
+#: formcard/AboutPage.qml:432
 #, kde-format
 msgid "Credits"
 msgstr "致謝"
 
-#: formcard/AboutPage.qml:409
+#: formcard/AboutPage.qml:448
 #, kde-format
 msgid "Translators"
 msgstr "翻譯者"
 
-#: formcard/AboutPage.qml:516 formcard/AboutPage.qml:520
+#: formcard/AboutPage.qml:553 formcard/AboutPage.qml:557
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "造訪 %1 在 KDE Store 的頁面"
 
-#: formcard/AboutPage.qml:527 formcard/AboutPage.qml:531
+#: formcard/AboutPage.qml:564 formcard/AboutPage.qml:568
 #, kde-format
 msgid "Send an email to %1"
 msgstr "傳送電子郵件給 %1"
 
-#: formcard/AboutPage.qml:538 formcard/AboutPage.qml:599
-#, fuzzy, kde-format
-#| msgid "Visit %1's KDE Store page"
+#: formcard/AboutPage.qml:575 formcard/AboutPage.qml:636
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit %1's website"
-msgstr "造訪 %1 在 KDE Store 的頁面"
+msgstr "造訪 %1 的網站"
 
-#: formcard/AboutPage.qml:586
+#: formcard/AboutPage.qml:623
 #, kde-format
 msgctxt "@action:button"
 msgid "Show license for %1"
-msgstr ""
+msgstr "顯示 %1 的授權條款"
 
 #: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:53
 #, kde-format
@@ -761,7 +767,7 @@ msgstr "未設定"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset"
-msgstr ""
+msgstr "重設"
 
 #: formcard/FormFileDelegate.qml:187
 #, kde-format
@@ -837,20 +843,15 @@ msgctxt "@action:button"
 msgid "Done"
 msgstr "完成"
 
-#: formcard/private/AboutReleaseDialog.qml:17
+#: formcard/private/AboutReleaseDialog.qml:16
 #, kde-format
 msgid "Release history"
 msgstr "發佈歷史"
 
-#: formcard/private/AboutReleaseDialog.qml:72
+#: formcard/private/AboutReleaseDialog.qml:71
 #, kde-format
 msgid "More information"
 msgstr "更多資訊"
-
-#: formcard/private/AboutReleaseDialog.qml:82
-#, kde-format
-msgid "Show older changes…"
-msgstr "顯示更舊的變更…"
 
 #: onboarding/private/OnboardingOverlay.qml:202
 #, kde-format
@@ -911,14 +912,14 @@ msgstr "設定"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Searching…"
-msgstr ""
+msgstr "搜尋中…"
 
 #: settings/private/ConfigMobilePage.qml:169
 #: settings/private/ConfigWindow.qml:162
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No matching settings"
-msgstr ""
+msgstr "沒有符合的設定"
 
 #: settings/private/SonnetConfigPage.qml:40
 #, kde-format
@@ -1020,25 +1021,36 @@ msgstr "鍵盤快捷鍵"
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Hotkey"
-msgstr ""
+msgstr "熱鍵"
 
 #: settings/ShortcutsConfigurationModule.qml:33
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Key binding"
-msgstr ""
+msgstr "按鍵綁定"
 
 #: settings/ShortcutsConfigurationModule.qml:34
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Accelerator"
-msgstr ""
+msgstr "加速鍵"
 
 #: settings/SpellcheckingConfigurationModule.qml:16
 #, kde-format
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "拼字檢查"
+
+#~| msgid "Release history"
+#~ msgctxt "@action:button"
+#~ msgid "Show release history for %1 %2"
+#~ msgstr "顯示 %1 %2 的發佈歷史"
+
+#~ msgid "What's new"
+#~ msgstr "新功能"
+
+#~ msgid "Show older changes…"
+#~ msgstr "顯示更舊的變更…"
 
 #~ msgctxt "@title:group"
 #~ msgid "Settings"

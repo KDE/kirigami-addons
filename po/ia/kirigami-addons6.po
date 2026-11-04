@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-30 00:52+0000\n"
+"POT-Creation-Date: 2026-11-04 01:01+0000\n"
 "PO-Revision-Date: 2026-10-27 16:49+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -523,7 +523,7 @@ msgstr ""
 "commun de construer le plus belle Free Software del mundo. Omnes es "
 "benvenite a unir e contribuera KDE, tu includite."
 
-#: formcard/AboutKDEPage.qml:92 formcard/AboutPage.qml:253
+#: formcard/AboutKDEPage.qml:92 formcard/AboutPage.qml:224
 #, kde-format
 msgid "Homepage"
 msgstr "Pagina Domo o Principal"
@@ -581,7 +581,7 @@ msgstr ""
 "interfacies de programma. Tu pote fornir grapiches, themas, sonos, e "
 "meliorar documentation. Tu decide!"
 
-#: formcard/AboutKDEPage.qml:132 formcard/AboutPage.qml:277
+#: formcard/AboutKDEPage.qml:132 formcard/AboutPage.qml:248
 #, kde-format
 msgid "Get Involved"
 msgstr "Sea involvite"
@@ -637,108 +637,116 @@ msgstr ""
 msgid "KDE e.V."
 msgstr "KDE e.V."
 
-#: formcard/AboutKDEPage.qml:166 formcard/AboutPage.qml:261
+#: formcard/AboutKDEPage.qml:166 formcard/AboutPage.qml:232
 #, kde-format
 msgid "Donate"
 msgstr "Dona"
 
-#: formcard/AboutPage.qml:143
-#, kde-format
-msgctxt "@action:button"
-msgid "Show release history for %1 %2"
-msgstr "Monstra Historia de version per %1 %2"
-
 #: formcard/AboutPage.qml:173
-#, kde-format
-msgid "What's new"
-msgstr "Que es de novo"
-
-#: formcard/AboutPage.qml:199
 #, kde-format
 msgid "Copyright"
 msgstr "Copyright"
 
-#: formcard/AboutPage.qml:207
+#: formcard/AboutPage.qml:181
 #, kde-format
 msgid "Description"
 msgstr "Description"
 
-#: formcard/AboutPage.qml:220
+#: formcard/AboutPage.qml:193
 #, kde-format
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] "Licentia"
 msgstr[1] "Licentias"
 
-#: formcard/AboutPage.qml:307
+#: formcard/AboutPage.qml:278
 #, kde-format
 msgid "Report a Bug"
 msgstr "Reporta un bug"
 
-#: formcard/AboutPage.qml:320
+#: formcard/AboutPage.qml:291
 #, kde-format
 msgid "Matrix Channel"
 msgstr "Canale de Matrix"
 
-#: formcard/AboutPage.qml:336
+#: formcard/AboutPage.qml:307
 #, kde-format
 msgid "Mastodon"
 msgstr "Mastodon"
 
-#: formcard/AboutPage.qml:348
+#: formcard/AboutPage.qml:319
 #, kde-format
 msgid "Source Code"
 msgstr "Codice fonte"
 
-#: formcard/AboutPage.qml:354
+#: formcard/AboutPage.qml:329
+#, fuzzy, kde-format
+#| msgid "Release history"
+msgctxt "@title:group"
+msgid "Releases"
+msgstr "Historia de version"
+
+#: formcard/AboutPage.qml:377
+#, fuzzy, kde-format
+#| msgid "More information"
+msgid "More information</a>"
+msgstr "Altere information"
+
+#: formcard/AboutPage.qml:386
+#, kde-format
+msgctxt "@action:button"
+msgid "Show previous releases"
+msgstr ""
+
+#: formcard/AboutPage.qml:393
 #, kde-format
 msgid "Libraries in use"
 msgstr "Bibliothecas in uso"
 
-#: formcard/AboutPage.qml:358
+#: formcard/AboutPage.qml:397
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "Copia in area de transferentia"
 
-#: formcard/AboutPage.qml:362
+#: formcard/AboutPage.qml:401
 #, kde-format
 msgctxt "@info"
 msgid "System information copied to clipboard."
 msgstr "Information de Systema copiate a area de transferentia."
 
-#: formcard/AboutPage.qml:377
+#: formcard/AboutPage.qml:416
 #, kde-format
 msgid "Authors"
 msgstr "Autores"
 
-#: formcard/AboutPage.qml:393
+#: formcard/AboutPage.qml:432
 #, kde-format
 msgid "Credits"
 msgstr "Gratias"
 
-#: formcard/AboutPage.qml:409
+#: formcard/AboutPage.qml:448
 #, kde-format
 msgid "Translators"
 msgstr "Traductores"
 
-#: formcard/AboutPage.qml:516 formcard/AboutPage.qml:520
+#: formcard/AboutPage.qml:553 formcard/AboutPage.qml:557
 #, kde-format
 msgid "Visit %1's KDE Store page"
 msgstr "Visita pagina %1 de KDE Store"
 
-#: formcard/AboutPage.qml:527 formcard/AboutPage.qml:531
+#: formcard/AboutPage.qml:564 formcard/AboutPage.qml:568
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Invia un message de e-posta a  %1"
 
-#: formcard/AboutPage.qml:538 formcard/AboutPage.qml:599
+#: formcard/AboutPage.qml:575 formcard/AboutPage.qml:636
 #, kde-format
 msgctxt "@action:button"
 msgid "Visit %1's website"
 msgstr "Visita le sito web de %1"
 
-#: formcard/AboutPage.qml:586
+#: formcard/AboutPage.qml:623
 #, kde-format
 msgctxt "@action:button"
 msgid "Show license for %1"
@@ -854,20 +862,15 @@ msgctxt "@action:button"
 msgid "Done"
 msgstr "Facite"
 
-#: formcard/private/AboutReleaseDialog.qml:17
+#: formcard/private/AboutReleaseDialog.qml:16
 #, kde-format
 msgid "Release history"
 msgstr "Historia de version"
 
-#: formcard/private/AboutReleaseDialog.qml:72
+#: formcard/private/AboutReleaseDialog.qml:71
 #, kde-format
 msgid "More information"
 msgstr "Altere information"
-
-#: formcard/private/AboutReleaseDialog.qml:82
-#, kde-format
-msgid "Show older changes…"
-msgstr "Monstra cambios plus vetere…"
 
 #: onboarding/private/OnboardingOverlay.qml:202
 #, kde-format
@@ -1058,6 +1061,16 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "Controlo Orthographic"
+
+#~ msgctxt "@action:button"
+#~ msgid "Show release history for %1 %2"
+#~ msgstr "Monstra Historia de version per %1 %2"
+
+#~ msgid "What's new"
+#~ msgstr "Que es de novo"
+
+#~ msgid "Show older changes…"
+#~ msgstr "Monstra cambios plus vetere…"
 
 #~ msgctxt "@title:group"
 #~ msgid "Settings"
