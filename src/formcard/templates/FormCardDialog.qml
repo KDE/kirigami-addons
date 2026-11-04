@@ -77,7 +77,7 @@ QQC2.Dialog {
     y: Math.round((parent.height - height) / 2)
     z: Kirigami.OverlayZStacking.z
 
-    parent: applicationWindow().QQC2.Overlay.overlay
+    parent: QQC2.Overlay.overlay
 
     implicitWidth: if (parent.width > 576) {
         return Math.min(parent.width - Kirigami.Units.gridUnit * 2, Math.max(Kirigami.Units.gridUnit * 15, header.implicitWidth))

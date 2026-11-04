@@ -114,7 +114,7 @@ Kirigami.ApplicationWindow {
                         title: "42"
                         subtitle: "Follows"
                         action: Kirigami.Action {
-                            onTriggered: applicationWindow().showPassiveNotification("42 Follows")
+                            onTriggered: appwindow.showPassiveNotification("42 Follows")
                         }
                     }
                 ]
@@ -127,7 +127,7 @@ Kirigami.ApplicationWindow {
                 FormCard.FormButtonDelegate {
                     id: aboutDelegate
                     text: "About"
-                    onClicked: applicationWindow().pageStack.push(aboutComponent)
+                    onClicked: appwindow.pageStack.push(aboutComponent)
                 }
             }
 
@@ -183,7 +183,7 @@ Kirigami.ApplicationWindow {
                     id: delegate1
                     text: "Button"
                     description: "Click me!"
-                    onClicked: applicationWindow().pageStack.push(pageComponent)
+                    onClicked: appwindow.pageStack.push(pageComponent)
                 }
 
                 FormCard.FormButtonDelegate {

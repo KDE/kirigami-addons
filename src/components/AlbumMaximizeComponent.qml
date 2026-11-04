@@ -322,7 +322,7 @@ AbstractMaximizeComponent {
         }
     }
 
-    parent: applicationWindow().overlay
+    parent: QQC2.Overlay.overlay
     closePolicy: QQC2.Popup.CloseOnEscape
     width: parent.width
     height: parent.height

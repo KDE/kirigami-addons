@@ -312,49 +312,49 @@ Kirigami.ApplicationWindow {
                         MobileForm.FormGridContainer.InfoCard {
                             title: "RoundedItemDelegate"
                             action: Kirigami.Action {
-                                onTriggered: applicationWindow().pageStack.push(roundedItemDelegatePageComponent);
+                                onTriggered: appwindow.pageStack.push(roundedItemDelegatePageComponent);
                             }
                         },
                         MobileForm.FormGridContainer.InfoCard {
                             title: "RoundedItemDelegate with subtitle"
                             action: Kirigami.Action {
-                                onTriggered: applicationWindow().pageStack.push(subtitleRoundedItemDelegatePageComponent);
+                                onTriggered: appwindow.pageStack.push(subtitleRoundedItemDelegatePageComponent);
                             }
                         },
                         MobileForm.FormGridContainer.InfoCard {
                             title: "IndicatorItemDelegate"
                             action: Kirigami.Action {
-                                onTriggered: applicationWindow().pageStack.push(indicatorItemDelegatePageComponent);
+                                onTriggered: appwindow.pageStack.push(indicatorItemDelegatePageComponent);
                             }
                         },
                         MobileForm.FormGridContainer.InfoCard {
                             title: "IndicatorItemDelegate with subtitle"
                             action: Kirigami.Action {
-                                onTriggered: applicationWindow().pageStack.push(subtitleIndicatorItemDelegatePageComponent);
+                                onTriggered: appwindow.pageStack.push(subtitleIndicatorItemDelegatePageComponent);
                             }
                         },
                         MobileForm.FormGridContainer.InfoCard {
                             title: "CheckDelegate"
                             action: Kirigami.Action {
-                                onTriggered: applicationWindow().pageStack.push(checkDelegateComponent);
+                                onTriggered: appwindow.pageStack.push(checkDelegateComponent);
                             }
                         },
                         MobileForm.FormGridContainer.InfoCard {
                             title: "CheckDelegate with subtitle"
                             action: Kirigami.Action {
-                                onTriggered: applicationWindow().pageStack.push(checkDelegateSubtitleComponent);
+                                onTriggered: appwindow.pageStack.push(checkDelegateSubtitleComponent);
                             }
                         },
                         MobileForm.FormGridContainer.InfoCard {
                             title: "RadioDelegate"
                             action: Kirigami.Action {
-                                onTriggered: applicationWindow().pageStack.push(radioDelegateComponent);
+                                onTriggered: appwindow.pageStack.push(radioDelegateComponent);
                             }
                         },
                         MobileForm.FormGridContainer.InfoCard {
                             title: "RadioDelegate with subtitle"
                             action: Kirigami.Action {
-                                onTriggered: applicationWindow().pageStack.push(radioDelegateSubtitleComponent);
+                                onTriggered: appwindow.pageStack.push(radioDelegateSubtitleComponent);
                             }
                         }
                     ]
