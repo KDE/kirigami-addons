@@ -123,4 +123,8 @@ Templates.FloatingButton {
             }
         }
     }
+
+    QQC2.ToolTip.text: controlRoot.action.tooltip
+    QQC2.ToolTip.visible: controlRoot.hovered && QQC2.ToolTip.text.length > 0
+    QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
 }
