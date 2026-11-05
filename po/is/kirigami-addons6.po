@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-04 01:01+0000\n"
+"POT-Creation-Date: 2026-11-05 00:54+0000\n"
 "PO-Revision-Date: 2025-12-02 16:17+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -307,7 +307,7 @@ msgid "Go Back"
 msgstr "Fara til baka"
 
 #: components/ConvergentContextMenu.qml:403
-#: formcard/templates/FormCardDialog.qml:121
+#: formcard/templates/FormCardDialog.qml:122
 #, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"

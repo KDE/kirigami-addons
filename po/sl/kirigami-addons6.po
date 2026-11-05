@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-04 01:01+0000\n"
-"PO-Revision-Date: 2026-10-30 06:16+0100\n"
+"POT-Creation-Date: 2026-11-05 00:54+0000\n"
+"PO-Revision-Date: 2026-11-04 10:28+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -307,7 +307,7 @@ msgid "Go Back"
 msgstr "Pojdi nazaj"
 
 #: components/ConvergentContextMenu.qml:403
-#: formcard/templates/FormCardDialog.qml:121
+#: formcard/templates/FormCardDialog.qml:122
 #, kde-format
 msgctxt "@action:button close dialog"
 msgid "Close"
@@ -678,23 +678,21 @@ msgid "Source Code"
 msgstr "Izvorna koda"
 
 #: formcard/AboutPage.qml:329
-#, fuzzy, kde-format
-#| msgid "Release history"
+#, kde-format
 msgctxt "@title:group"
 msgid "Releases"
-msgstr "Zgodovina izdaj"
+msgstr "Izdaje"
 
 #: formcard/AboutPage.qml:377
-#, fuzzy, kde-format
-#| msgid "More information"
+#, kde-format
 msgid "More information</a>"
-msgstr "Več informacij"
+msgstr "Več informacij</a>"
 
 #: formcard/AboutPage.qml:386
 #, kde-format
 msgctxt "@action:button"
 msgid "Show previous releases"
-msgstr ""
+msgstr "Prikaži prejšnje izdaje"
 
 #: formcard/AboutPage.qml:393
 #, kde-format
