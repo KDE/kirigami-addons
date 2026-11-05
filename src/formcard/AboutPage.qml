@@ -374,7 +374,7 @@ FormCardPage {
 
                     QQC2.Label {
                         Layout.fillWidth: true
-                        text: '<a href="' + releaseDelegate.modelData.url + '">' + I18n.i18n("More information</a>") + ' &lt;</a>'
+                        text: '<a href="' + releaseDelegate.modelData.url + '">' + I18n.i18n("More information") + '</a>'
                         wrapMode: Text.WordWrap
                         visible: releaseDelegate.modelData.url.toString().length > 0
                         onLinkActivated: (link) => Qt.openUrlExternally(link)
