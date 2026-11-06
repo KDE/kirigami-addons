@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-05 00:54+0000\n"
-"PO-Revision-Date: 2026-10-01 09:09+0300\n"
+"PO-Revision-Date: 2026-11-05 13:05+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -663,23 +663,21 @@ msgid "Source Code"
 msgstr "קוד המקור"
 
 #: formcard/AboutPage.qml:329
-#, fuzzy, kde-format
-#| msgid "Release history"
+#, kde-format
 msgctxt "@title:group"
 msgid "Releases"
-msgstr "היסטוריית מהדורות"
+msgstr "מהדורות"
 
 #: formcard/AboutPage.qml:377
-#, fuzzy, kde-format
-#| msgid "More information"
+#, kde-format
 msgid "More information</a>"
-msgstr "פרטים נוספים"
+msgstr "פרטים נוספים</a>"
 
 #: formcard/AboutPage.qml:386
 #, kde-format
 msgctxt "@action:button"
 msgid "Show previous releases"
-msgstr ""
+msgstr "הצגת הרישיונות הקודמים"
 
 #: formcard/AboutPage.qml:393
 #, kde-format
@@ -724,17 +722,16 @@ msgid "Send an email to %1"
 msgstr "שליחת דוא״ל אל %1"
 
 #: formcard/AboutPage.qml:575 formcard/AboutPage.qml:636
-#, fuzzy, kde-format
-#| msgid "Visit %1's KDE Store page"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit %1's website"
-msgstr "ביקור בעמוד של %1 בחנות KDE"
+msgstr "ביקור באתר של %1"
 
 #: formcard/AboutPage.qml:623
 #, kde-format
 msgctxt "@action:button"
 msgid "Show license for %1"
-msgstr ""
+msgstr "הצגת רישיון עבור %1"
 
 #: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:53
 #, kde-format
@@ -915,14 +912,14 @@ msgstr "הגדרות"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Searching…"
-msgstr ""
+msgstr "מתבצע חיפוש…"
 
 #: settings/private/ConfigMobilePage.qml:169
 #: settings/private/ConfigWindow.qml:162
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No matching settings"
-msgstr ""
+msgstr "אין הגדרות תואמות"
 
 #: settings/private/SonnetConfigPage.qml:40
 #, kde-format
@@ -1024,19 +1021,19 @@ msgstr "קיצורי מקשים"
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Hotkey"
-msgstr ""
+msgstr "מקש חם"
 
 #: settings/ShortcutsConfigurationModule.qml:33
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Key binding"
-msgstr ""
+msgstr "איגוד מקשים"
 
 #: settings/ShortcutsConfigurationModule.qml:34
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Accelerator"
-msgstr ""
+msgstr "מקש האצה"
 
 #: settings/SpellcheckingConfigurationModule.qml:16
 #, kde-format

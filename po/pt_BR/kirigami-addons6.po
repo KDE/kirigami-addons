@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-05 00:54+0000\n"
-"PO-Revision-Date: 2026-10-30 07:27-0300\n"
+"PO-Revision-Date: 2026-11-05 07:36-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -681,23 +681,21 @@ msgid "Source Code"
 msgstr "Código-fonte"
 
 #: formcard/AboutPage.qml:329
-#, fuzzy, kde-format
-#| msgid "Release history"
+#, kde-format
 msgctxt "@title:group"
 msgid "Releases"
-msgstr "Histórico de lançamento"
+msgstr "Lançamentos"
 
 #: formcard/AboutPage.qml:377
-#, fuzzy, kde-format
-#| msgid "More information"
+#, kde-format
 msgid "More information</a>"
-msgstr "Mais informações"
+msgstr "Mais informações</a>"
 
 #: formcard/AboutPage.qml:386
 #, kde-format
 msgctxt "@action:button"
 msgid "Show previous releases"
-msgstr ""
+msgstr "Mostrar lançamentos anteriores"
 
 #: formcard/AboutPage.qml:393
 #, kde-format

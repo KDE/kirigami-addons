@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-05 00:54+0000\n"
-"PO-Revision-Date: 2026-10-31 17:37+0400\n"
+"PO-Revision-Date: 2026-11-05 09:02+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -670,23 +670,21 @@ msgid "Source Code"
 msgstr "الشيفرة المصدرية"
 
 #: formcard/AboutPage.qml:329
-#, fuzzy, kde-format
-#| msgid "Release history"
+#, kde-format
 msgctxt "@title:group"
 msgid "Releases"
-msgstr "سجل الإصدارات"
+msgstr "الإصدارات"
 
 #: formcard/AboutPage.qml:377
-#, fuzzy, kde-format
-#| msgid "More information"
+#, kde-format
 msgid "More information</a>"
-msgstr "معلومات أخرى"
+msgstr "معلومات أكثر</a>"
 
 #: formcard/AboutPage.qml:386
 #, kde-format
 msgctxt "@action:button"
 msgid "Show previous releases"
-msgstr ""
+msgstr "اعرض الإصدارات السابقة"
 
 #: formcard/AboutPage.qml:393
 #, kde-format

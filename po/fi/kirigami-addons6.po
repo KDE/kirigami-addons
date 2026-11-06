@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-05 00:54+0000\n"
-"PO-Revision-Date: 2026-09-12 18:05+0300\n"
+"PO-Revision-Date: 2026-10-11 20:41+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -46,12 +46,10 @@ msgstr "Tietoa KDE:stä"
 #, kde-format
 msgctxt "@title:menu"
 msgid "File"
-msgstr ""
+msgstr "Tiedosto"
 
 #: actions/abstractkirigamiapplication.cpp:209
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title:menu"
 msgid "Settings"
 msgstr "Asetukset"
@@ -60,7 +58,7 @@ msgstr "Asetukset"
 #, kde-format
 msgctxt "@title:menu"
 msgid "Help"
-msgstr ""
+msgstr "Ohje"
 
 #: actions/private/keysequencehelper.cpp:117
 #, kde-format
@@ -223,7 +221,7 @@ msgstr "Tietoa KDE:stä"
 #, kde-format
 msgctxt "@title:window"
 msgid "Failed to Load Application"
-msgstr ""
+msgstr "Sovelluksen lataaminen epäonnistui"
 
 #: app/kirigamiappdefaults.cpp:138
 #, kde-format
@@ -232,12 +230,14 @@ msgid ""
 "Could not load the QML application. This issue might be caused by your "
 "distribution. Please report it to your distribution first."
 msgstr ""
+"QML-sovellusta ei voitu ladata. Ongelma voi johtua jakelusta. Ilmoita siitä "
+"ensin jakelullesi."
 
 #: app/kirigamiappdefaults.cpp:145
 #, kde-format
 msgctxt "@info"
 msgid "Could not load the QML application."
-msgstr ""
+msgstr "QML-sovellusta ei voitu ladata."
 
 #: components/AbstractMaximizeComponent.qml:138
 #, kde-format
@@ -658,17 +658,17 @@ msgstr "Ilmoita viasta"
 #: formcard/AboutPage.qml:291
 #, kde-format
 msgid "Matrix Channel"
-msgstr ""
+msgstr "Matrix-kanava"
 
 #: formcard/AboutPage.qml:307
 #, kde-format
 msgid "Mastodon"
-msgstr ""
+msgstr "Mastodon"
 
 #: formcard/AboutPage.qml:319
 #, kde-format
 msgid "Source Code"
-msgstr ""
+msgstr "Lähdekoodi"
 
 #: formcard/AboutPage.qml:329
 #, kde-format
@@ -778,7 +778,7 @@ msgstr "Ei asetettu"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset"
-msgstr ""
+msgstr "Palauta"
 
 #: formcard/FormFileDelegate.qml:187
 #, kde-format
@@ -852,19 +852,17 @@ msgstr "%1/%2"
 #, kde-format
 msgctxt "@action:button"
 msgid "Done"
-msgstr ""
+msgstr "Valmis"
 
 #: formcard/private/AboutReleaseDialog.qml:16
 #, kde-format
 msgid "Release history"
-msgstr ""
+msgstr "Julkaisuhistoria"
 
 #: formcard/private/AboutReleaseDialog.qml:71
-#, fuzzy, kde-format
-#| msgctxt "@title:dialog"
-#| msgid "Information"
+#, kde-format
 msgid "More information"
-msgstr "Tietoa"
+msgstr "Lisätietoa"
 
 #: onboarding/private/OnboardingOverlay.qml:202
 #, kde-format

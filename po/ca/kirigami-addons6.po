@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-05 00:54+0000\n"
-"PO-Revision-Date: 2026-10-30 11:09+0100\n"
+"PO-Revision-Date: 2026-11-05 08:52+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -685,23 +685,21 @@ msgid "Source Code"
 msgstr "Codi font"
 
 #: formcard/AboutPage.qml:329
-#, fuzzy, kde-format
-#| msgid "Release history"
+#, kde-format
 msgctxt "@title:group"
 msgid "Releases"
-msgstr "Historial de llançaments"
+msgstr "Llançaments"
 
 #: formcard/AboutPage.qml:377
-#, fuzzy, kde-format
-#| msgid "More information"
+#, kde-format
 msgid "More information</a>"
-msgstr "Més informació"
+msgstr "Més informació</a>"
 
 #: formcard/AboutPage.qml:386
 #, kde-format
 msgctxt "@action:button"
 msgid "Show previous releases"
-msgstr ""
+msgstr "Mostra els llançaments anteriors"
 
 #: formcard/AboutPage.qml:393
 #, kde-format

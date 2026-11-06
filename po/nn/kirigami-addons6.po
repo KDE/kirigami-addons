@@ -1054,13 +1054,3 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "Stavekontroll"
-
-#~ msgctxt "@action:button"
-#~ msgid "Show release history for %1 %2"
-#~ msgstr "Vis utgjevingshistorikk for %1 %2"
-
-#~ msgid "What's new"
-#~ msgstr "Nytt i denne utgåva"
-
-#~ msgid "Show older changes…"
-#~ msgstr "Vis eldre endringar …"
