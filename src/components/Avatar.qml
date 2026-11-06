@@ -138,7 +138,7 @@ Item {
         case Avatar.ImageMode.AlwaysShowImage:
             return true;
         case Avatar.ImageMode.AdaptiveImageOrInitals:
-            return avatarImage.status === Image.Ready;
+            return avatarImage.status === Image.Ready && avatarImage.implicitWidth > 0;
         case Avatar.ImageMode.AlwaysShowInitials:
         default:
             return false;
