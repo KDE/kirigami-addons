@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-05 00:54+0000\n"
+"POT-Creation-Date: 2026-11-07 00:56+0000\n"
 "PO-Revision-Date: 2026-11-04 10:28+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -355,14 +355,13 @@ msgctxt "@action:button"
 msgid "Volume"
 msgstr "Glasnost"
 
-#: dateandtime/DatePopup.qml:104 dateandtime/TimePopup.qml:71
-#: onboarding/private/OnboardingOverlay.qml:237
+#: dateandtime/DatePopup.qml:104 onboarding/private/OnboardingOverlay.qml:237
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Prekliči"
 
-#: dateandtime/DatePopup.qml:116 dateandtime/TimePopup.qml:82
+#: dateandtime/DatePopup.qml:116 dateandtime/TimePopup.qml:74
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
@@ -401,27 +400,33 @@ msgctxt "@action:button"
 msgid "Go Next"
 msgstr "Pojdi na naslednji"
 
-#: dateandtime/TimePicker.qml:131
-#, kde-format
-msgctxt "@action:button"
-msgid "Reset to current time"
-msgstr "Ponastavi na trenutni čas"
-
-#: dateandtime/TimePicker.qml:156
-#, kde-format
-msgid "Hours"
+#: dateandtime/TimePicker.qml:111
+#, fuzzy, kde-format
+#| msgid "Hours"
+msgctxt "@label:textbox"
+msgid "Hour"
 msgstr "Ur"
 
-#: dateandtime/TimePicker.qml:179
+#: dateandtime/TimePicker.qml:119
+#, fuzzy, kde-format
+#| msgid "Minutes"
+msgctxt "@label:textbox"
+msgid "Minute"
+msgstr "Minut"
+
+#: dateandtime/TimePicker.qml:140
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: dateandtime/TimePicker.qml:194
-#, kde-format
-msgid "Minutes"
-msgstr "Minut"
+#: dateandtime/TimePopup.qml:47
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Select file"
+msgctxt "@title:dialog"
+msgid "Select time"
+msgstr "Izberite datoteko"
 
 #: formcard/aboutcomponent.cpp:102
 #, kde-format
@@ -683,10 +688,10 @@ msgctxt "@title:group"
 msgid "Releases"
 msgstr "Izdaje"
 
-#: formcard/AboutPage.qml:377
+#: formcard/AboutPage.qml:377 formcard/private/AboutReleaseDialog.qml:71
 #, kde-format
-msgid "More information</a>"
-msgstr "Več informacij</a>"
+msgid "More information"
+msgstr "Več informacij"
 
 #: formcard/AboutPage.qml:386
 #, kde-format
@@ -862,11 +867,6 @@ msgstr "Opravljeno"
 #, kde-format
 msgid "Release history"
 msgstr "Zgodovina izdaj"
-
-#: formcard/private/AboutReleaseDialog.qml:71
-#, kde-format
-msgid "More information"
-msgstr "Več informacij"
 
 #: onboarding/private/OnboardingOverlay.qml:202
 #, kde-format
@@ -1057,6 +1057,13 @@ msgstr "Pospeševalnik"
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "Preverjanje črkovanja"
+
+#~ msgctxt "@action:button"
+#~ msgid "Reset to current time"
+#~ msgstr "Ponastavi na trenutni čas"
+
+#~ msgid "More information</a>"
+#~ msgstr "Več informacij</a>"
 
 #~ msgctxt "@action:button"
 #~ msgid "Show release history for %1 %2"

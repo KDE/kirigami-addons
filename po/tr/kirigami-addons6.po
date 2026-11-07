@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-05 00:54+0000\n"
+"POT-Creation-Date: 2026-11-07 00:56+0000\n"
 "PO-Revision-Date: 2026-11-03 22:22+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -356,14 +356,13 @@ msgctxt "@action:button"
 msgid "Volume"
 msgstr "Ses Düzeyi"
 
-#: dateandtime/DatePopup.qml:104 dateandtime/TimePopup.qml:71
-#: onboarding/private/OnboardingOverlay.qml:237
+#: dateandtime/DatePopup.qml:104 onboarding/private/OnboardingOverlay.qml:237
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "İptal"
 
-#: dateandtime/DatePopup.qml:116 dateandtime/TimePopup.qml:82
+#: dateandtime/DatePopup.qml:116 dateandtime/TimePopup.qml:74
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
@@ -402,27 +401,33 @@ msgctxt "@action:button"
 msgid "Go Next"
 msgstr "Sonrakine Git"
 
-#: dateandtime/TimePicker.qml:131
-#, kde-format
-msgctxt "@action:button"
-msgid "Reset to current time"
-msgstr "Şu anki zamana sıfırla"
-
-#: dateandtime/TimePicker.qml:156
-#, kde-format
-msgid "Hours"
+#: dateandtime/TimePicker.qml:111
+#, fuzzy, kde-format
+#| msgid "Hours"
+msgctxt "@label:textbox"
+msgid "Hour"
 msgstr "Saat"
 
-#: dateandtime/TimePicker.qml:179
+#: dateandtime/TimePicker.qml:119
+#, fuzzy, kde-format
+#| msgid "Minutes"
+msgctxt "@label:textbox"
+msgid "Minute"
+msgstr "Dakika"
+
+#: dateandtime/TimePicker.qml:140
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: dateandtime/TimePicker.qml:194
-#, kde-format
-msgid "Minutes"
-msgstr "Dakika"
+#: dateandtime/TimePopup.qml:47
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Select file"
+msgctxt "@title:dialog"
+msgid "Select time"
+msgstr "Dosya Seç"
 
 #: formcard/aboutcomponent.cpp:102
 #, kde-format
@@ -685,10 +690,10 @@ msgctxt "@title:group"
 msgid "Releases"
 msgstr "Yayımlar"
 
-#: formcard/AboutPage.qml:377
+#: formcard/AboutPage.qml:377 formcard/private/AboutReleaseDialog.qml:71
 #, kde-format
-msgid "More information</a>"
-msgstr "Daha Fazla Bilgi</a>"
+msgid "More information"
+msgstr "Daha Fazla Bilgi"
 
 #: formcard/AboutPage.qml:386
 #, kde-format
@@ -864,11 +869,6 @@ msgstr "Bitti"
 #, kde-format
 msgid "Release history"
 msgstr "Yayım Geçmişi"
-
-#: formcard/private/AboutReleaseDialog.qml:71
-#, kde-format
-msgid "More information"
-msgstr "Daha Fazla Bilgi"
 
 #: onboarding/private/OnboardingOverlay.qml:202
 #, kde-format
@@ -1059,6 +1059,13 @@ msgstr "İvmelendirici"
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "Yazım Denetimi"
+
+#~ msgctxt "@action:button"
+#~ msgid "Reset to current time"
+#~ msgstr "Şu anki zamana sıfırla"
+
+#~ msgid "More information</a>"
+#~ msgstr "Daha Fazla Bilgi</a>"
 
 #~ msgctxt "@action:button"
 #~ msgid "Show release history for %1 %2"

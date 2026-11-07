@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-05 00:54+0000\n"
+"POT-Creation-Date: 2026-11-07 00:56+0000\n"
 "PO-Revision-Date: 2023-12-14 23:04+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Assamese <alministradores@softastur.org>\n"
@@ -345,14 +345,13 @@ msgctxt "@action:button"
 msgid "Volume"
 msgstr "Volume"
 
-#: dateandtime/DatePopup.qml:104 dateandtime/TimePopup.qml:71
-#: onboarding/private/OnboardingOverlay.qml:237
+#: dateandtime/DatePopup.qml:104 onboarding/private/OnboardingOverlay.qml:237
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr ""
 
-#: dateandtime/DatePopup.qml:116 dateandtime/TimePopup.qml:82
+#: dateandtime/DatePopup.qml:116 dateandtime/TimePopup.qml:74
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
@@ -391,26 +390,28 @@ msgctxt "@action:button"
 msgid "Go Next"
 msgstr ""
 
-#: dateandtime/TimePicker.qml:131
+#: dateandtime/TimePicker.qml:111
 #, kde-format
-msgctxt "@action:button"
-msgid "Reset to current time"
+msgctxt "@label:textbox"
+msgid "Hour"
 msgstr ""
 
-#: dateandtime/TimePicker.qml:156
+#: dateandtime/TimePicker.qml:119
 #, kde-format
-msgid "Hours"
+msgctxt "@label:textbox"
+msgid "Minute"
 msgstr ""
 
-#: dateandtime/TimePicker.qml:179
+#: dateandtime/TimePicker.qml:140
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: dateandtime/TimePicker.qml:194
+#: dateandtime/TimePopup.qml:47
 #, kde-format
-msgid "Minutes"
+msgctxt "@title:dialog"
+msgid "Select time"
 msgstr ""
 
 #: formcard/aboutcomponent.cpp:102
@@ -633,9 +634,9 @@ msgctxt "@title:group"
 msgid "Releases"
 msgstr ""
 
-#: formcard/AboutPage.qml:377
+#: formcard/AboutPage.qml:377 formcard/private/AboutReleaseDialog.qml:71
 #, kde-format
-msgid "More information</a>"
+msgid "More information"
 msgstr ""
 
 #: formcard/AboutPage.qml:386
@@ -811,11 +812,6 @@ msgstr ""
 #: formcard/private/AboutReleaseDialog.qml:16
 #, kde-format
 msgid "Release history"
-msgstr ""
-
-#: formcard/private/AboutReleaseDialog.qml:71
-#, kde-format
-msgid "More information"
 msgstr ""
 
 #: onboarding/private/OnboardingOverlay.qml:202

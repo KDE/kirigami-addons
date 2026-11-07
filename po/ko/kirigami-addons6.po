@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-05 00:54+0000\n"
+"POT-Creation-Date: 2026-11-07 00:56+0000\n"
 "PO-Revision-Date: 2026-10-03 22:34+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -351,14 +351,13 @@ msgctxt "@action:button"
 msgid "Volume"
 msgstr "음량"
 
-#: dateandtime/DatePopup.qml:104 dateandtime/TimePopup.qml:71
-#: onboarding/private/OnboardingOverlay.qml:237
+#: dateandtime/DatePopup.qml:104 onboarding/private/OnboardingOverlay.qml:237
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "취소"
 
-#: dateandtime/DatePopup.qml:116 dateandtime/TimePopup.qml:82
+#: dateandtime/DatePopup.qml:116 dateandtime/TimePopup.qml:74
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
@@ -397,27 +396,33 @@ msgctxt "@action:button"
 msgid "Go Next"
 msgstr "앞으로 이동"
 
-#: dateandtime/TimePicker.qml:131
-#, kde-format
-msgctxt "@action:button"
-msgid "Reset to current time"
-msgstr "현재 시간으로 재설정"
-
-#: dateandtime/TimePicker.qml:156
-#, kde-format
-msgid "Hours"
+#: dateandtime/TimePicker.qml:111
+#, fuzzy, kde-format
+#| msgid "Hours"
+msgctxt "@label:textbox"
+msgid "Hour"
 msgstr "시간"
 
-#: dateandtime/TimePicker.qml:179
+#: dateandtime/TimePicker.qml:119
+#, fuzzy, kde-format
+#| msgid "Minutes"
+msgctxt "@label:textbox"
+msgid "Minute"
+msgstr "분"
+
+#: dateandtime/TimePicker.qml:140
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: dateandtime/TimePicker.qml:194
-#, kde-format
-msgid "Minutes"
-msgstr "분"
+#: dateandtime/TimePopup.qml:47
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Select file"
+msgctxt "@title:dialog"
+msgid "Select time"
+msgstr "파일 선택"
 
 #: formcard/aboutcomponent.cpp:102
 #, kde-format
@@ -670,10 +675,9 @@ msgctxt "@title:group"
 msgid "Releases"
 msgstr "릴리스 기록"
 
-#: formcard/AboutPage.qml:377
-#, fuzzy, kde-format
-#| msgid "More information"
-msgid "More information</a>"
+#: formcard/AboutPage.qml:377 formcard/private/AboutReleaseDialog.qml:71
+#, kde-format
+msgid "More information"
 msgstr "더 많은 정보"
 
 #: formcard/AboutPage.qml:386
@@ -851,11 +855,6 @@ msgstr "완료"
 #, kde-format
 msgid "Release history"
 msgstr "릴리스 기록"
-
-#: formcard/private/AboutReleaseDialog.qml:71
-#, kde-format
-msgid "More information"
-msgstr "더 많은 정보"
 
 #: onboarding/private/OnboardingOverlay.qml:202
 #, kde-format
@@ -1046,6 +1045,15 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "맞춤법 검사"
+
+#~ msgctxt "@action:button"
+#~ msgid "Reset to current time"
+#~ msgstr "현재 시간으로 재설정"
+
+#, fuzzy
+#~| msgid "More information"
+#~ msgid "More information</a>"
+#~ msgstr "더 많은 정보"
 
 #, fuzzy
 #~| msgid "Release history"

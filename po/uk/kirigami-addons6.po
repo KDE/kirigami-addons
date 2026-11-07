@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-05 00:54+0000\n"
+"POT-Creation-Date: 2026-11-07 00:56+0000\n"
 "PO-Revision-Date: 2026-11-04 22:00+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -356,14 +356,13 @@ msgctxt "@action:button"
 msgid "Volume"
 msgstr "Гучність"
 
-#: dateandtime/DatePopup.qml:104 dateandtime/TimePopup.qml:71
-#: onboarding/private/OnboardingOverlay.qml:237
+#: dateandtime/DatePopup.qml:104 onboarding/private/OnboardingOverlay.qml:237
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: dateandtime/DatePopup.qml:116 dateandtime/TimePopup.qml:82
+#: dateandtime/DatePopup.qml:116 dateandtime/TimePopup.qml:74
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
@@ -402,27 +401,33 @@ msgctxt "@action:button"
 msgid "Go Next"
 msgstr "Перейти до наступного"
 
-#: dateandtime/TimePicker.qml:131
-#, kde-format
-msgctxt "@action:button"
-msgid "Reset to current time"
-msgstr "Скинути до поточного часу"
-
-#: dateandtime/TimePicker.qml:156
-#, kde-format
-msgid "Hours"
+#: dateandtime/TimePicker.qml:111
+#, fuzzy, kde-format
+#| msgid "Hours"
+msgctxt "@label:textbox"
+msgid "Hour"
 msgstr "Години"
 
-#: dateandtime/TimePicker.qml:179
+#: dateandtime/TimePicker.qml:119
+#, fuzzy, kde-format
+#| msgid "Minutes"
+msgctxt "@label:textbox"
+msgid "Minute"
+msgstr "Хвилини"
+
+#: dateandtime/TimePicker.qml:140
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: dateandtime/TimePicker.qml:194
-#, kde-format
-msgid "Minutes"
-msgstr "Хвилини"
+#: dateandtime/TimePopup.qml:47
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Select file"
+msgctxt "@title:dialog"
+msgid "Select time"
+msgstr "Вибрати файл"
 
 #: formcard/aboutcomponent.cpp:102
 #, kde-format
@@ -688,10 +693,10 @@ msgctxt "@title:group"
 msgid "Releases"
 msgstr "Випуски"
 
-#: formcard/AboutPage.qml:377
+#: formcard/AboutPage.qml:377 formcard/private/AboutReleaseDialog.qml:71
 #, kde-format
-msgid "More information</a>"
-msgstr "Додаткові відомості</a>"
+msgid "More information"
+msgstr "Докладніше"
 
 #: formcard/AboutPage.qml:386
 #, kde-format
@@ -867,11 +872,6 @@ msgstr "Виконано"
 #, kde-format
 msgid "Release history"
 msgstr "Журнал випусків"
-
-#: formcard/private/AboutReleaseDialog.qml:71
-#, kde-format
-msgid "More information"
-msgstr "Докладніше"
 
 #: onboarding/private/OnboardingOverlay.qml:202
 #, kde-format
@@ -1062,6 +1062,13 @@ msgstr "Прискорювач"
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "Перевірка правопису"
+
+#~ msgctxt "@action:button"
+#~ msgid "Reset to current time"
+#~ msgstr "Скинути до поточного часу"
+
+#~ msgid "More information</a>"
+#~ msgstr "Додаткові відомості</a>"
 
 #~ msgctxt "@action:button"
 #~ msgid "Show release history for %1 %2"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-05 00:54+0000\n"
+"POT-Creation-Date: 2026-11-07 00:56+0000\n"
 "PO-Revision-Date: 2024-11-16 12:53+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -354,14 +354,13 @@ msgctxt "@action:button"
 msgid "Volume"
 msgstr "Volume"
 
-#: dateandtime/DatePopup.qml:104 dateandtime/TimePopup.qml:71
-#: onboarding/private/OnboardingOverlay.qml:237
+#: dateandtime/DatePopup.qml:104 onboarding/private/OnboardingOverlay.qml:237
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Cancel"
 
-#: dateandtime/DatePopup.qml:116 dateandtime/TimePopup.qml:82
+#: dateandtime/DatePopup.qml:116 dateandtime/TimePopup.qml:74
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
@@ -400,27 +399,33 @@ msgctxt "@action:button"
 msgid "Go Next"
 msgstr "Go Next"
 
-#: dateandtime/TimePicker.qml:131
-#, kde-format
-msgctxt "@action:button"
-msgid "Reset to current time"
-msgstr ""
-
-#: dateandtime/TimePicker.qml:156
-#, kde-format
-msgid "Hours"
+#: dateandtime/TimePicker.qml:111
+#, fuzzy, kde-format
+#| msgid "Hours"
+msgctxt "@label:textbox"
+msgid "Hour"
 msgstr "Hours"
 
-#: dateandtime/TimePicker.qml:179
+#: dateandtime/TimePicker.qml:119
+#, fuzzy, kde-format
+#| msgid "Minutes"
+msgctxt "@label:textbox"
+msgid "Minute"
+msgstr "Minutes"
+
+#: dateandtime/TimePicker.qml:140
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: dateandtime/TimePicker.qml:194
-#, kde-format
-msgid "Minutes"
-msgstr "Minutes"
+#: dateandtime/TimePopup.qml:47
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Select"
+msgctxt "@title:dialog"
+msgid "Select time"
+msgstr "Select"
 
 #: formcard/aboutcomponent.cpp:102
 #, kde-format
@@ -680,11 +685,11 @@ msgctxt "@title:group"
 msgid "Releases"
 msgstr ""
 
-#: formcard/AboutPage.qml:377
+#: formcard/AboutPage.qml:377 formcard/private/AboutReleaseDialog.qml:71
 #, fuzzy, kde-format
 #| msgctxt "@title:dialog"
 #| msgid "Information"
-msgid "More information</a>"
+msgid "More information"
 msgstr "Information"
 
 #: formcard/AboutPage.qml:386
@@ -870,13 +875,6 @@ msgstr ""
 #, kde-format
 msgid "Release history"
 msgstr ""
-
-#: formcard/private/AboutReleaseDialog.qml:71
-#, fuzzy, kde-format
-#| msgctxt "@title:dialog"
-#| msgid "Information"
-msgid "More information"
-msgstr "Information"
 
 #: onboarding/private/OnboardingOverlay.qml:202
 #, fuzzy, kde-format
@@ -1079,6 +1077,12 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "Spell Checking"
+
+#, fuzzy
+#~| msgctxt "@title:dialog"
+#~| msgid "Information"
+#~ msgid "More information</a>"
+#~ msgstr "Information"
 
 #~ msgctxt "@title:group"
 #~ msgid "Settings"

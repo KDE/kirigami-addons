@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-05 00:54+0000\n"
+"POT-Creation-Date: 2026-11-07 00:56+0000\n"
 "PO-Revision-Date: 2026-10-06 08:18+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -356,14 +356,13 @@ msgctxt "@action:button"
 msgid "Volume"
 msgstr "Volume"
 
-#: dateandtime/DatePopup.qml:104 dateandtime/TimePopup.qml:71
-#: onboarding/private/OnboardingOverlay.qml:237
+#: dateandtime/DatePopup.qml:104 onboarding/private/OnboardingOverlay.qml:237
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Annulla"
 
-#: dateandtime/DatePopup.qml:116 dateandtime/TimePopup.qml:82
+#: dateandtime/DatePopup.qml:116 dateandtime/TimePopup.qml:74
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
@@ -402,27 +401,33 @@ msgctxt "@action:button"
 msgid "Go Next"
 msgstr "Vai al successivo"
 
-#: dateandtime/TimePicker.qml:131
-#, kde-format
-msgctxt "@action:button"
-msgid "Reset to current time"
-msgstr "Ripristina l'ora corrente"
-
-#: dateandtime/TimePicker.qml:156
-#, kde-format
-msgid "Hours"
+#: dateandtime/TimePicker.qml:111
+#, fuzzy, kde-format
+#| msgid "Hours"
+msgctxt "@label:textbox"
+msgid "Hour"
 msgstr "Ore"
 
-#: dateandtime/TimePicker.qml:179
+#: dateandtime/TimePicker.qml:119
+#, fuzzy, kde-format
+#| msgid "Minutes"
+msgctxt "@label:textbox"
+msgid "Minute"
+msgstr "Minuti"
+
+#: dateandtime/TimePicker.qml:140
 #, kde-format
 msgctxt "Time separator"
 msgid ":"
 msgstr ":"
 
-#: dateandtime/TimePicker.qml:194
-#, kde-format
-msgid "Minutes"
-msgstr "Minuti"
+#: dateandtime/TimePopup.qml:47
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Select file"
+msgctxt "@title:dialog"
+msgid "Select time"
+msgstr "Seleziona file"
 
 #: formcard/aboutcomponent.cpp:102
 #, kde-format
@@ -683,10 +688,9 @@ msgctxt "@title:group"
 msgid "Releases"
 msgstr "Cronologia rilasci"
 
-#: formcard/AboutPage.qml:377
-#, fuzzy, kde-format
-#| msgid "More information"
-msgid "More information</a>"
+#: formcard/AboutPage.qml:377 formcard/private/AboutReleaseDialog.qml:71
+#, kde-format
+msgid "More information"
 msgstr "Altre informazioni"
 
 #: formcard/AboutPage.qml:386
@@ -864,11 +868,6 @@ msgstr "Fatto"
 #, kde-format
 msgid "Release history"
 msgstr "Cronologia rilasci"
-
-#: formcard/private/AboutReleaseDialog.qml:71
-#, kde-format
-msgid "More information"
-msgstr "Altre informazioni"
 
 #: onboarding/private/OnboardingOverlay.qml:202
 #, kde-format
@@ -1059,6 +1058,15 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "Controllo ortografico"
+
+#~ msgctxt "@action:button"
+#~ msgid "Reset to current time"
+#~ msgstr "Ripristina l'ora corrente"
+
+#, fuzzy
+#~| msgid "More information"
+#~ msgid "More information</a>"
+#~ msgstr "Altre informazioni"
 
 #, fuzzy
 #~| msgid "Release history"
