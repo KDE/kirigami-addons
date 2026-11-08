@@ -1053,12 +1053,3 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "Stavekontroll"
-
-#~ msgctxt "@action:button"
-#~ msgid "Reset to current time"
-#~ msgstr "Tilbakestill til gjeldande klokkeslett"
-
-#, fuzzy
-#~| msgid "More information"
-#~ msgid "More information</a>"
-#~ msgstr "Meir informasjon"

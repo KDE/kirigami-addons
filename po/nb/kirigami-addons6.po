@@ -1066,9 +1066,3 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "Stavekontroll"
-
-#, fuzzy
-#~| msgctxt "@title:dialog"
-#~| msgid "Information"
-#~ msgid "More information</a>"
-#~ msgstr "Informasjon"

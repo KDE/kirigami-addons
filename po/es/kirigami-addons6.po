@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-07 00:56+0000\n"
-"PO-Revision-Date: 2026-11-05 12:22+0100\n"
+"PO-Revision-Date: 2026-11-07 12:31+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -405,18 +405,16 @@ msgid "Go Next"
 msgstr "Ir al siguiente"
 
 #: dateandtime/TimePicker.qml:111
-#, fuzzy, kde-format
-#| msgid "Hours"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Hour"
-msgstr "Horas"
+msgstr "Hora"
 
 #: dateandtime/TimePicker.qml:119
-#, fuzzy, kde-format
-#| msgid "Minutes"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Minute"
-msgstr "Minutos"
+msgstr "Minuto"
 
 #: dateandtime/TimePicker.qml:140
 #, kde-format
@@ -425,12 +423,10 @@ msgid ":"
 msgstr ":"
 
 #: dateandtime/TimePopup.qml:47
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select file"
+#, kde-format
 msgctxt "@title:dialog"
 msgid "Select time"
-msgstr "Seleccionar archivo"
+msgstr "Seleccionar hora"
 
 #: formcard/aboutcomponent.cpp:102
 #, kde-format
@@ -1061,10 +1057,3 @@ msgstr "Acelerador"
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "Comprobación ortográfica"
-
-#~ msgctxt "@action:button"
-#~ msgid "Reset to current time"
-#~ msgstr "Reiniciar a la hora actual"
-
-#~ msgid "More information</a>"
-#~ msgstr "Más información</a>"
