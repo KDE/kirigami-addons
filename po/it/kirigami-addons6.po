@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-07 00:56+0000\n"
-"PO-Revision-Date: 2026-10-06 08:18+0200\n"
+"PO-Revision-Date: 2026-11-04 18:22+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.08.1\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -682,11 +682,10 @@ msgid "Source Code"
 msgstr "Codice sorgente"
 
 #: formcard/AboutPage.qml:329
-#, fuzzy, kde-format
-#| msgid "Release history"
+#, kde-format
 msgctxt "@title:group"
 msgid "Releases"
-msgstr "Cronologia rilasci"
+msgstr "Rilasci"
 
 #: formcard/AboutPage.qml:377 formcard/private/AboutReleaseDialog.qml:71
 #, kde-format
@@ -697,7 +696,7 @@ msgstr "Altre informazioni"
 #, kde-format
 msgctxt "@action:button"
 msgid "Show previous releases"
-msgstr ""
+msgstr "Mostra rilasci precedenti"
 
 #: formcard/AboutPage.qml:393
 #, kde-format
@@ -742,17 +741,16 @@ msgid "Send an email to %1"
 msgstr "Invia un messaggio di posta elettronica a %1"
 
 #: formcard/AboutPage.qml:575 formcard/AboutPage.qml:636
-#, fuzzy, kde-format
-#| msgid "Visit %1's KDE Store page"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit %1's website"
-msgstr "Visita la pagina del KDE Store di %1"
+msgstr "Visita il sito web di %1"
 
 #: formcard/AboutPage.qml:623
 #, kde-format
 msgctxt "@action:button"
 msgid "Show license for %1"
-msgstr ""
+msgstr "Mostra la licenza per %1"
 
 #: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:53
 #, kde-format
@@ -928,14 +926,14 @@ msgstr "Impostazioni"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Searching…"
-msgstr ""
+msgstr "Ricerca…"
 
 #: settings/private/ConfigMobilePage.qml:169
 #: settings/private/ConfigWindow.qml:162
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No matching settings"
-msgstr ""
+msgstr "Nessuna impostazione corrispondente"
 
 #: settings/private/SonnetConfigPage.qml:40
 #, kde-format
@@ -1039,19 +1037,19 @@ msgstr "Scorciatoie da tastiera"
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Hotkey"
-msgstr ""
+msgstr "Tasto scorciatoia"
 
 #: settings/ShortcutsConfigurationModule.qml:33
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Key binding"
-msgstr ""
+msgstr "Associazioni dei tasti"
 
 #: settings/ShortcutsConfigurationModule.qml:34
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Accelerator"
-msgstr ""
+msgstr "Acceleratore"
 
 #: settings/SpellcheckingConfigurationModule.qml:16
 #, kde-format
