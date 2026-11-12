@@ -13,8 +13,8 @@ import org.kde.kirigamiaddons.formcard as FormCard
    \inqmlmodule org.kde.kirigamiaddons.formcard
    \brief A form delegate that contains a URL.
 
-   It will open the url by default, allow to copy it if triggered with the
-   secondary mouse button.
+   It will open the url by default, allowing one to copy it if triggered with
+   the secondary mouse button.
 
    \since 1.8.0
  */
