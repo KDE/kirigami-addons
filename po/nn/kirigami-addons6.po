@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-07 00:56+0000\n"
-"PO-Revision-Date: 2026-10-26 22:04+0100\n"
+"PO-Revision-Date: 2026-11-12 21:45+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.11.70\n"
+"X-Generator: Lokalize 26.08.3\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -402,15 +402,13 @@ msgid "Go Next"
 msgstr "Gå til neste"
 
 #: dateandtime/TimePicker.qml:111
-#, fuzzy, kde-format
-#| msgid "Hours"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Hour"
-msgstr "Timar"
+msgstr "Time"
 
 #: dateandtime/TimePicker.qml:119
-#, fuzzy, kde-format
-#| msgid "Minutes"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Minute"
 msgstr "Minutt"
@@ -422,12 +420,10 @@ msgid ":"
 msgstr ":"
 
 #: dateandtime/TimePopup.qml:47
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select file"
+#, kde-format
 msgctxt "@title:dialog"
 msgid "Select time"
-msgstr "Vel fil"
+msgstr "Vel klokkeslett"
 
 #: formcard/aboutcomponent.cpp:102
 #, kde-format
@@ -678,11 +674,10 @@ msgid "Source Code"
 msgstr "Kjeldekode"
 
 #: formcard/AboutPage.qml:329
-#, fuzzy, kde-format
-#| msgid "Release history"
+#, kde-format
 msgctxt "@title:group"
 msgid "Releases"
-msgstr "Utgjevingshistorikk"
+msgstr "Utgåver"
 
 #: formcard/AboutPage.qml:377 formcard/private/AboutReleaseDialog.qml:71
 #, kde-format
@@ -693,7 +688,7 @@ msgstr "Meir informasjon"
 #, kde-format
 msgctxt "@action:button"
 msgid "Show previous releases"
-msgstr ""
+msgstr "Vis tidlegare utgåver"
 
 #: formcard/AboutPage.qml:393
 #, kde-format
@@ -923,7 +918,7 @@ msgstr "Innstillingar"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Searching…"
-msgstr ""
+msgstr "Søkjer …"
 
 #: settings/private/ConfigMobilePage.qml:169
 #: settings/private/ConfigWindow.qml:162
@@ -1040,7 +1035,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Key binding"
-msgstr ""
+msgstr "Tastebinding"
 
 #: settings/ShortcutsConfigurationModule.qml:34
 #, kde-format

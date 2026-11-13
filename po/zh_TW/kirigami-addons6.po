@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-07 00:56+0000\n"
-"PO-Revision-Date: 2026-11-03 21:52+0900\n"
+"PO-Revision-Date: 2026-11-12 19:28+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -399,18 +399,16 @@ msgid "Go Next"
 msgstr "下一個"
 
 #: dateandtime/TimePicker.qml:111
-#, fuzzy, kde-format
-#| msgid "Hours"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Hour"
-msgstr "小時"
+msgstr "時"
 
 #: dateandtime/TimePicker.qml:119
-#, fuzzy, kde-format
-#| msgid "Minutes"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Minute"
-msgstr "分鐘"
+msgstr "分"
 
 #: dateandtime/TimePicker.qml:140
 #, kde-format
@@ -419,12 +417,10 @@ msgid ":"
 msgstr ":"
 
 #: dateandtime/TimePopup.qml:47
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select file"
+#, kde-format
 msgctxt "@title:dialog"
 msgid "Select time"
-msgstr "選擇檔案"
+msgstr "選取時間"
 
 #: formcard/aboutcomponent.cpp:102
 #, kde-format
@@ -666,11 +662,10 @@ msgid "Source Code"
 msgstr "原始碼"
 
 #: formcard/AboutPage.qml:329
-#, fuzzy, kde-format
-#| msgid "Release history"
+#, kde-format
 msgctxt "@title:group"
 msgid "Releases"
-msgstr "發佈歷史"
+msgstr "釋出版本"
 
 #: formcard/AboutPage.qml:377 formcard/private/AboutReleaseDialog.qml:71
 #, kde-format
@@ -681,7 +676,7 @@ msgstr "更多資訊"
 #, kde-format
 msgctxt "@action:button"
 msgid "Show previous releases"
-msgstr ""
+msgstr "顯示先前的版本"
 
 #: formcard/AboutPage.qml:393
 #, kde-format
