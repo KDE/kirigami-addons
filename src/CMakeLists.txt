@@ -3,6 +3,7 @@
 
 add_subdirectory(private)
 add_subdirectory(app)
+add_subdirectory(chips)
 add_subdirectory(components)
 add_subdirectory(dateandtime)
 add_subdirectory(tableview)
