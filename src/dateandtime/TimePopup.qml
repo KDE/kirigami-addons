@@ -45,7 +45,7 @@ QQC2.Dialog {
     property date _value: new Date()
 
     title: I18n.i18nc("@title:dialog", "Select time")
-    standardButtons: root.resettable ? QQC2.DialogButtonBox.Reset | QQC2.DialogButtonBox.Cancel | QQC2.DialogButtonBox.Apply : QQC2.DialogButtonBox.Cancel | QQC2.DialogButtonBox.Apply
+    standardButtons: root.resettable ? QQC2.DialogButtonBox.Reset | QQC2.DialogButtonBox.Cancel | QQC2.DialogButtonBox.Ok : QQC2.DialogButtonBox.Cancel | QQC2.DialogButtonBox.Ok
     modal: true
     contentWidth: Math.max(popupContent.implicitWidth, footer.implicitWidth)
 
@@ -64,14 +64,17 @@ QQC2.Dialog {
 
     background: Components.DialogRoundedBackground {}
 
-    onAccepted: close()
+    onAccepted: {
+        root.value = root._value;
+        close();
+    }
     onRejected: close()
     onReset: {
         value = new Date(NaN);
         close();
     }
 
-    Component.onCompleted: standardButton(QQC2.DialogButtonBox.Apply).text = I18n.i18nc("@action:button", "Select")
+    Component.onCompleted: standardButton(QQC2.DialogButtonBox.Ok).text = I18n.i18nc("@action:button", "Select")
 
     footer: QQC2.DialogButtonBox {
         visible: count > 0
