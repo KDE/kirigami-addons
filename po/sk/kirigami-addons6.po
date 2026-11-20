@@ -400,18 +400,16 @@ msgid "Go Next"
 msgstr "Prejsť na nasledujúci"
 
 #: dateandtime/TimePicker.qml:111
-#, fuzzy, kde-format
-#| msgid "Hours"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Hour"
-msgstr "Hodiny"
+msgstr "Hodina"
 
 #: dateandtime/TimePicker.qml:119
-#, fuzzy, kde-format
-#| msgid "Minutes"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Minute"
-msgstr "Minúty"
+msgstr "Minúta"
 
 #: dateandtime/TimePicker.qml:140
 #, kde-format
@@ -420,12 +418,10 @@ msgid ":"
 msgstr ":"
 
 #: dateandtime/TimePopup.qml:47
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select file"
+#, kde-format
 msgctxt "@title:dialog"
 msgid "Select time"
-msgstr "Vybrať"
+msgstr "Vybrať čas"
 
 #: formcard/aboutcomponent.cpp:102
 #, kde-format
@@ -680,11 +676,10 @@ msgid "Source Code"
 msgstr "Zdrojový kód"
 
 #: formcard/AboutPage.qml:329
-#, fuzzy, kde-format
-#| msgid "Release history"
+#, kde-format
 msgctxt "@title:group"
 msgid "Releases"
-msgstr "História vydaní"
+msgstr "Vydania"
 
 #: formcard/AboutPage.qml:377 formcard/private/AboutReleaseDialog.qml:71
 #, kde-format
@@ -695,7 +690,7 @@ msgstr "Ďalšie informácie"
 #, kde-format
 msgctxt "@action:button"
 msgid "Show previous releases"
-msgstr ""
+msgstr "Zobraziť predchádzajúce vydania"
 
 #: formcard/AboutPage.qml:393
 #, kde-format
@@ -925,14 +920,14 @@ msgstr "Nastavenia"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Searching…"
-msgstr ""
+msgstr "Hľadá sa…"
 
 #: settings/private/ConfigMobilePage.qml:169
 #: settings/private/ConfigWindow.qml:162
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No matching settings"
-msgstr ""
+msgstr "Žiadne zodpovedajúce nastavenia"
 
 #: settings/private/SonnetConfigPage.qml:40
 #, kde-format
@@ -1036,19 +1031,19 @@ msgstr "Keyboard Shortcuts"
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Hotkey"
-msgstr ""
+msgstr "Klávesová skratka"
 
 #: settings/ShortcutsConfigurationModule.qml:33
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Key binding"
-msgstr ""
+msgstr "Priradenie klávesov"
 
 #: settings/ShortcutsConfigurationModule.qml:34
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Accelerator"
-msgstr ""
+msgstr "Akcelerátor"
 
 #: settings/SpellcheckingConfigurationModule.qml:16
 #, kde-format
@@ -1061,7 +1056,6 @@ msgstr "Spell Checking"
 #~ msgstr "Nastaviť na aktuálny čas"
 
 #, fuzzy
-#~| msgid "More information"
 #~ msgid "More information</a>"
 #~ msgstr "Ďalšie informácie"
 

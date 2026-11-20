@@ -1,0 +1,1054 @@
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: kirigami-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-11-07 00:56+0000\n"
+"PO-Revision-Date: 2026-11-19 17:02+0100\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Nemanja Hiršl"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "nemhirsl@gmail.com"
+
+#: actions/abstractkirigamiapplication.cpp:163
+#, kde-format
+msgid "Open Command Bar"
+msgstr "Otvori traku naredbi"
+
+#: actions/abstractkirigamiapplication.cpp:185 formcard/AboutPage.qml:127
+#, kde-format
+msgid "About %1"
+msgstr "O %1|/|O $[dat %1]"
+
+#: actions/abstractkirigamiapplication.cpp:192 formcard/AboutKDEPage.qml:25
+#, kde-format
+msgid "About KDE"
+msgstr "O KDE‑u"
+
+#: actions/abstractkirigamiapplication.cpp:202
+#, kde-format
+msgctxt "@title:menu"
+msgid "File"
+msgstr "Fajl"
+
+#: actions/abstractkirigamiapplication.cpp:209
+#, kde-format
+msgctxt "@title:menu"
+msgid "Settings"
+msgstr "Podešavanje"
+
+#: actions/abstractkirigamiapplication.cpp:222
+#, kde-format
+msgctxt "@title:menu"
+msgid "Help"
+msgstr "Pomoć"
+
+#: actions/private/keysequencehelper.cpp:117
+#, kde-format
+msgctxt "@title:dialog"
+msgid "Reserved Shortcut"
+msgstr "Rezervisana prečica"
+
+#: actions/private/keysequencehelper.cpp:119
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The F12 key is reserved on Windows, so cannot be used for a global "
+"shortcut.\n"
+"Please choose another one."
+msgstr ""
+"Taster F12 je rezervisan na Windowsu, pa se ne može koristiti kao globalna "
+"prečica.\n"
+"Izaberite neku drugu."
+
+#: actions/private/keysequencehelper.cpp:143
+#, kde-format
+msgctxt ""
+"@title:dialog This happen when a global shortcut is already defined with the "
+"same shortcut"
+msgid "Global Shortcut Shadowing"
+msgstr "Zasenjivanje globalnih prečica"
+
+#: actions/private/keysequencehelper.cpp:146
+#, kde-format
+msgctxt "@info"
+msgid "The '%1' key combination is shadowed by following global actions:\n"
+msgstr "Kombinaciju tastera %1 zasenjuju sledeće globalne radnje:\n"
+
+#: actions/private/keysequencehelper.cpp:148
+#: actions/private/keysequencehelper.cpp:154
+#, kde-format
+msgctxt "@info"
+msgid "Action '%1' in context '%2'\n"
+msgstr "Radnja „%1“ u kontekstu „%2“\n"
+
+#: actions/private/keysequencehelper.cpp:152
+#, kde-format
+msgctxt "@info"
+msgid "The '%1' key combination shadows following global actions:\n"
+msgstr "Kombinacija tastera %1 zasenjuje sledeće globalne radnje:\n"
+
+#: actions/private/keysequencehelper.cpp:193
+#, kde-format
+msgctxt "@title:dialog"
+msgid "Conflict with Standard Application Shortcut"
+msgstr "Sukob sa standardnom programskom prečicom"
+
+#: actions/private/keysequencehelper.cpp:195
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The '%1' key combination is also used for the standard action \"%2\" that "
+"some applications use.\n"
+"Do you really want to use it as a global shortcut as well?"
+msgstr ""
+"Kombinacija tastera %1 već je dodeljena standardnoj radnji „%2“, koju "
+"koriste neki programi.\n"
+"Želite li zaista da je koristite i kao globalnu prečicu?"
+
+#: actions/private/KeySequenceItem.qml:131
+#, kde-format
+msgctxt "What the user inputs now will be taken as the new shortcut"
+msgid "Input"
+msgstr "unesite"
+
+#: actions/private/KeySequenceItem.qml:132
+#, kde-format
+msgctxt "No shortcut defined"
+msgid "None"
+msgstr "nijedna"
+
+#: actions/private/KeySequenceItem.qml:143
+#, kde-format
+msgid ""
+"Click on the button, then enter the shortcut like you would in the program.\n"
+"Example for Ctrl+A: hold the Ctrl key and press A."
+msgstr ""
+"Kliknite na dugme, pa unesite prečicu kao što biste u programu.\n"
+"Primer za Ctrl+A: držite taster Ctrl i pritisnite A."
+
+#: actions/private/KeySequenceItem.qml:184
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Clear Key Sequence"
+msgstr "Očisti kombinaciju tastera"
+
+#: actions/private/KeySequenceItem.qml:200
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cancel Key Sequence Recording"
+msgstr "Otkaži snimanje kombinacije tastera"
+
+#: actions/private/KQuickCommandBarPage.qml:56
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "No results found"
+msgstr "Nisu nađeni rezultati"
+
+#: actions/private/ShortcutsEditor.qml:20 actions/StatefulWindow.qml:104
+#, kde-format
+msgctxt "@title:window"
+msgid "Shortcuts"
+msgstr "Prečice"
+
+#: actions/private/ShortcutsEditor.qml:24
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Filter…"
+msgstr "Filter…"
+
+#: actions/private/ShortcutsEditor.qml:70
+#, kde-format
+msgctxt "@title:window"
+msgid "Shortcut: %1"
+msgstr "Prečica: %1"
+
+#: actions/private/ShortcutsEditor.qml:90
+#, kde-format
+msgctxt "@label"
+msgid "Shortcut:"
+msgstr "Prečica:"
+
+#: actions/private/ShortcutsEditor.qml:145
+#: actions/private/ShortcutsEditor.qml:173
+#, kde-format
+msgctxt "@label"
+msgid "Alternative:"
+msgstr "Alternativna:"
+
+#: actions/private/ShortcutsEditor.qml:211
+#, kde-format
+msgctxt "Placeholder message"
+msgid "No shortcuts found"
+msgstr "Nisu nađene prečice"
+
+#: actions/shortcutsmodel.cpp:41
+#, kde-format
+msgctxt "List separator"
+msgid ", "
+msgstr ", "
+
+#: actions/StatefulWindow.qml:114
+#, kde-format
+msgctxt "@title:window"
+msgid "About %1"
+msgstr "O %1|/|O $[dat %1]"
+
+#: actions/StatefulWindow.qml:127
+#, kde-format
+msgctxt "@title:window"
+msgid "About KDE"
+msgstr "O KDE‑u"
+
+#: app/kirigamiappdefaults.cpp:137 app/kirigamiappdefaults.cpp:144
+#, kde-format
+msgctxt "@title:window"
+msgid "Failed to Load Application"
+msgstr "Ne mogu da učitam program"
+
+#: app/kirigamiappdefaults.cpp:138
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Could not load the QML application. This issue might be caused by your "
+"distribution. Please report it to your distribution first."
+msgstr ""
+"Ne mogu da učitam QML program. Problem je možda u vašoj distribuciji. "
+"Prijavite ga prvo svojoj distribuciji."
+
+#: app/kirigamiappdefaults.cpp:145
+#, kde-format
+msgctxt "@info"
+msgid "Could not load the QML application."
+msgstr "Ne mogu da učitam QML program."
+
+#: components/AbstractMaximizeComponent.qml:138
+#, kde-format
+msgid "Close"
+msgstr "Zatvori"
+
+#: components/AlbumMaximizeComponent.qml:151
+#, kde-format
+msgid "Zoom in"
+msgstr "Uveličaj"
+
+#: components/AlbumMaximizeComponent.qml:156
+#, kde-format
+msgid "Zoom out"
+msgstr "Umanji"
+
+#: components/AlbumMaximizeComponent.qml:162
+#, kde-format
+msgid "Rotate left"
+msgstr "Rotiraj ulevo"
+
+#: components/AlbumMaximizeComponent.qml:168
+#, kde-format
+msgid "Rotate right"
+msgstr "Rotiraj udesno"
+
+#: components/AlbumMaximizeComponent.qml:173
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "Show caption"
+msgstr "Prikaži natpis"
+
+#: components/AlbumMaximizeComponent.qml:173
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "Hide caption"
+msgstr "Sakrij natpis"
+
+#: components/AlbumMaximizeComponent.qml:179
+#, kde-format
+msgid "Save as"
+msgstr "Sačuvaj kao"
+
+#: components/AlbumMaximizeComponent.qml:256
+#, kde-format
+msgid "Previous image"
+msgstr "Prethodna slika"
+
+#: components/AlbumMaximizeComponent.qml:274
+#, kde-format
+msgid "Next image"
+msgstr "Sledeća slika"
+
+#: components/Banner.qml:186 formcard/private/AboutDialog.qml:44
+#, kde-format
+msgctxt "@action:button"
+msgid "Close"
+msgstr "Zatvori"
+
+#: components/ConvergentContextMenu.qml:319
+#: components/ConvergentContextMenu.qml:429
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Back"
+msgstr "Idi nazad"
+
+#: components/ConvergentContextMenu.qml:403
+#: formcard/templates/FormCardDialog.qml:122
+#, kde-format
+msgctxt "@action:button close dialog"
+msgid "Close"
+msgstr "Zatvori"
+
+#: components/DownloadAction.qml:41
+#, kde-format
+msgid "Download"
+msgstr "Preuzmi"
+
+#: components/templates/MessageDialog.qml:240
+#, kde-format
+msgctxt "@title:dialog"
+msgid "Success"
+msgstr "Uspeh"
+
+#: components/templates/MessageDialog.qml:242
+#: components/templates/MessageDialog.qml:248
+#, kde-format
+msgctxt "@title:dialog"
+msgid "Warning"
+msgstr "Upozorenje"
+
+#: components/templates/MessageDialog.qml:244
+#, kde-format
+msgctxt "@title:dialog"
+msgid "Error"
+msgstr "Greška"
+
+#: components/templates/MessageDialog.qml:246
+#, kde-format
+msgctxt "@title:dialog"
+msgid "Information"
+msgstr "Informacija"
+
+#: components/templates/MessageDialog.qml:374
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Do not show again"
+msgstr "Ne prikazuj više"
+
+#: components/VideoMaximizeDelegate.qml:282
+#, kde-format
+msgctxt "@action:button"
+msgid "Volume"
+msgstr "Jačina"
+
+#: dateandtime/DatePopup.qml:104 onboarding/private/OnboardingOverlay.qml:237
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Odustani"
+
+#: dateandtime/DatePopup.qml:116 dateandtime/TimePopup.qml:74
+#, kde-format
+msgctxt "@action:button"
+msgid "Select"
+msgstr "Izaberi"
+
+#: dateandtime/private/DatePicker.qml:276
+#, kde-format
+msgid "Day"
+msgstr "Dan"
+
+#: dateandtime/private/DatePicker.qml:279
+#, kde-format
+msgid "Month"
+msgstr "Mesec"
+
+#: dateandtime/private/DatePicker.qml:282
+#, kde-format
+msgid "Year"
+msgstr "Godina"
+
+#: dateandtime/private/DatePicker.qml:367
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Previous"
+msgstr "Idi na prethodno"
+
+#: dateandtime/private/DatePicker.qml:380
+#, kde-format
+msgctxt "@action:button"
+msgid "Jump to today"
+msgstr "Skoči na danas"
+
+#: dateandtime/private/DatePicker.qml:387
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Next"
+msgstr "Idi na sledeće"
+
+#: dateandtime/TimePicker.qml:111
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Hour"
+msgstr "Sat"
+
+#: dateandtime/TimePicker.qml:119
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Minute"
+msgstr "Minut"
+
+#: dateandtime/TimePicker.qml:140
+#, kde-format
+msgctxt "Time separator"
+msgid ":"
+msgstr ":"
+
+#: dateandtime/TimePopup.qml:47
+#, kde-format
+msgctxt "@title:dialog"
+msgid "Select time"
+msgstr "Izbor vremena"
+
+#: formcard/aboutcomponent.cpp:102
+#, kde-format
+msgctxt "@info Platform name"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: formcard/aboutcomponent.cpp:106
+#, kde-format
+msgid "KDE Frameworks"
+msgstr "Radni okviri KDE‑a"
+
+#: formcard/aboutcomponent.cpp:107
+#, kde-format
+msgctxt "@info"
+msgid "Collection of libraries created by the KDE Community to extend Qt."
+msgstr ""
+"Zbirka biblioteka koje je napravila zajednica KDE‑a radi proširenja Qt‑a."
+
+#: formcard/aboutcomponent.cpp:112
+#, kde-format
+msgid "Qt"
+msgstr "Qt"
+
+#: formcard/aboutcomponent.cpp:113
+#, kde-format
+msgctxt "@info"
+msgid "Cross-platform application development framework."
+msgstr "Višeplatformski radni okvir za razvoj programa."
+
+#: formcard/aboutcomponent.cpp:114
+#, kde-format
+msgid "Using %1 and built against %2"
+msgstr "Koristi %1, izgrađeno prema %2"
+
+#: formcard/aboutcomponent.cpp:121
+#, kde-format
+msgctxt "Linux packaging format"
+msgid "Flatpak"
+msgstr "Flatpak"
+
+#: formcard/aboutcomponent.cpp:124
+#, kde-format
+msgctxt "Linux packaging format"
+msgid "Snap"
+msgstr "Snap"
+
+#: formcard/aboutcomponent.cpp:127
+#, kde-format
+msgctxt "Linux packaging format"
+msgid "AppImage"
+msgstr "AppImage"
+
+#: formcard/aboutcomponent.cpp:130
+#, kde-format
+msgctxt "@info"
+msgid "Distribution method."
+msgstr "Metod distribucije."
+
+#: formcard/aboutcomponent.cpp:134
+#, kde-format
+msgctxt "@info"
+msgid "Underlying platform."
+msgstr "Osnovna platforma."
+
+#: formcard/AboutKDEPage.qml:69
+#, kde-format
+msgid "KDE"
+msgstr "KDE"
+
+#: formcard/AboutKDEPage.qml:78
+#, kde-format
+msgid "Be Free!"
+msgstr "Ka slobodi!"
+
+#: formcard/AboutKDEPage.qml:85
+#, kde-format
+msgid ""
+"KDE is a world-wide community of software engineers, artists, writers, "
+"translators and creators who are committed to Free Software development. KDE "
+"produces the Plasma desktop environment, hundreds of applications, and the "
+"many software libraries that support them.\n"
+"\n"
+"KDE is a cooperative enterprise: no single entity controls its direction or "
+"products. Instead, we work together to achieve the common goal of building "
+"the world's finest Free Software. Everyone is welcome to join and contribute "
+"to KDE, including you."
+msgstr ""
+"KDE je svetska zajednica softverskih inženjera, grafičara, pisaca, "
+"prevodilaca i stvaralaca posvećenih razvoju slobodnog softvera. KDE stvara "
+"okruženje površi Plasma, stotine programa i mnoge softverske biblioteke koje "
+"ih podržavaju.\n"
+"\n"
+"KDE je zajednički poduhvat: nijedan entitet ne upravlja njegovim smerom ni "
+"proizvodima. Umesto toga, radimo zajedno na zajedničkom cilju — stvaranju "
+"najboljeg slobodnog softvera na svetu. Svi su dobrodošli da se priključe i "
+"doprinesu KDE‑u, uključujući i vas."
+
+#: formcard/AboutKDEPage.qml:92 formcard/AboutPage.qml:224
+#, kde-format
+msgid "Homepage"
+msgstr "Domaća stranica"
+
+#: formcard/AboutKDEPage.qml:98
+#, kde-format
+msgid "Report bugs"
+msgstr "Prijavite greške"
+
+#: formcard/AboutKDEPage.qml:107
+#, kde-format
+msgid ""
+"Software can always be improved, and the KDE team is ready to do so. "
+"However, you - the user - must tell us when something does not work as "
+"expected or could be done better.\n"
+"\n"
+"KDE has a bug tracking system. Use the button below to file a bug, or use "
+"the program's About page to report a bug specific to this application.\n"
+"\n"
+"If you have a suggestion for improvement then you are welcome to use the bug "
+"tracking system to register your wish. Make sure you use the severity called "
+"\"Wishlist\"."
+msgstr ""
+"Softver uvek može biti poboljšan, i tim KDE‑a postojano radi na tome. Ipak, "
+"vi — korisnik — morate izvestiti programere kada nešto ne radi kako je "
+"očekivano, ili može biti urađeno na bolji način.\n"
+"\n"
+"KDE poseduje sistem za praćenje grešaka. Upotrebite dugme ispod da biste "
+"prijavili grešku, ili stranicu o programu da biste prijavili grešku koja se "
+"tiče samo ovog programa.\n"
+"\n"
+"Ukoliko imate predlog za poboljšanje, takođe možete iskoristiti sistem za "
+"praćenje grešaka da registrujete svoju želju. Ne zaboravite da tada za "
+"ozbiljnost izaberete „Wishlist“ (spisak želja)."
+
+#: formcard/AboutKDEPage.qml:116
+#, kde-format
+msgid "Report a bug"
+msgstr "Prijavi grešku"
+
+#: formcard/AboutKDEPage.qml:121
+#, kde-format
+msgid "Join us"
+msgstr "Pridružite nam se"
+
+#: formcard/AboutKDEPage.qml:127
+#, kde-format
+msgid ""
+"You do not have to be a software developer to be a member of the KDE team. "
+"You can join the language teams that translate program interfaces. You can "
+"provide graphics, themes, sounds, and improved documentation. You decide!"
+msgstr ""
+"Ne morate biti programer da biste postali član tima KDE‑a. Možete se "
+"pridružiti jezičkim timovima koji prevode programska sučelja. Možete crtati "
+"grafiku, teme, snimati zvukove, ili pisati dokumentaciju. Na vama je da "
+"odlučite!"
+
+#: formcard/AboutKDEPage.qml:132 formcard/AboutPage.qml:248
+#, kde-format
+msgid "Get Involved"
+msgstr "Uključi se"
+
+#: formcard/AboutKDEPage.qml:139
+#, kde-format
+msgid "Developer Documentation"
+msgstr "Dokumentacija za programere"
+
+#: formcard/AboutKDEPage.qml:145
+#, kde-format
+msgid "Support us"
+msgstr "Podržite nas"
+
+#: formcard/AboutKDEPage.qml:151
+#, kde-format
+msgid ""
+"KDE software is and will always be available free of charge, however "
+"creating it is not free.\n"
+"\n"
+"To support development the KDE community has formed the KDE e.V., a non-"
+"profit organization legally founded in Germany. KDE e.V. represents the KDE "
+"community in legal and financial matters.\n"
+"\n"
+"KDE benefits from many kinds of contributions, including financial. We use "
+"the funds to reimburse members and others for expenses they incur when "
+"contributing. Further funds are used for legal support and organizing "
+"conferences and meetings.\n"
+"\n"
+"We would like to encourage you to support our efforts with a financial "
+"donation.\n"
+"\n"
+"Thank you very much in advance for your support."
+msgstr ""
+"Softver KDE‑a je dostupan besplatno, i to će uvek biti tako, ali se u "
+"njegovo stvaranje ulažu sredstva.\n"
+"\n"
+"Radi podrške razvoju, zajednica KDE‑a je oformila KDE e.V., neprofitnu "
+"organizaciju sa sedištem u Nemačkoj. KDE e.V. predstavlja zajednicu KDE‑a u "
+"pravnim i finansijskim pitanjima.\n"
+"\n"
+"KDE‑u znače raznovrsni vidovi podrške, uključujući i finansijsku. Novčanim "
+"sredstvima pokrivamo izdatke nastale tokom doprinošenja, članovima i "
+"drugima. Sredstva se takođe koriste za zakonsku zaštitu i organizovanje "
+"konferencija i susreta.\n"
+"\n"
+"Želimo da vas podstaknemo da podržite KDE novčanom donacijom.\n"
+"\n"
+"Unapred vam se zahvaljujemo na podršci."
+
+#: formcard/AboutKDEPage.qml:160
+#, kde-format
+msgid "KDE e.V."
+msgstr "KDE e.V."
+
+#: formcard/AboutKDEPage.qml:166 formcard/AboutPage.qml:232
+#, kde-format
+msgid "Donate"
+msgstr "Doniraj"
+
+#: formcard/AboutPage.qml:173
+#, kde-format
+msgid "Copyright"
+msgstr "Autorska prava"
+
+#: formcard/AboutPage.qml:181
+#, kde-format
+msgid "Description"
+msgstr "Opis"
+
+#: formcard/AboutPage.qml:193
+#, kde-format
+msgid "License"
+msgid_plural "Licenses"
+msgstr[0] "Licenca"
+msgstr[1] "Licence"
+msgstr[2] "Licence"
+msgstr[3] "Licenca"
+
+#: formcard/AboutPage.qml:278
+#, kde-format
+msgid "Report a Bug"
+msgstr "Prijavi grešku"
+
+#: formcard/AboutPage.qml:291
+#, kde-format
+msgid "Matrix Channel"
+msgstr "Matrix kanal"
+
+#: formcard/AboutPage.qml:307
+#, kde-format
+msgid "Mastodon"
+msgstr "Mastodon"
+
+#: formcard/AboutPage.qml:319
+#, kde-format
+msgid "Source Code"
+msgstr "Izvorni kod"
+
+#: formcard/AboutPage.qml:329
+#, kde-format
+msgctxt "@title:group"
+msgid "Releases"
+msgstr "Izdanja"
+
+#: formcard/AboutPage.qml:377 formcard/private/AboutReleaseDialog.qml:71
+#, kde-format
+msgid "More information"
+msgstr "Više informacija"
+
+#: formcard/AboutPage.qml:386
+#, kde-format
+msgctxt "@action:button"
+msgid "Show previous releases"
+msgstr "Prikaži prethodna izdanja"
+
+#: formcard/AboutPage.qml:393
+#, kde-format
+msgid "Libraries in use"
+msgstr "Korišćene biblioteke"
+
+#: formcard/AboutPage.qml:397
+#, kde-format
+msgctxt "@action:button"
+msgid "Copy to Clipboard"
+msgstr "Kopiraj u klipbord"
+
+#: formcard/AboutPage.qml:401
+#, kde-format
+msgctxt "@info"
+msgid "System information copied to clipboard."
+msgstr "Podaci o sistemu su kopirani u klipbord."
+
+#: formcard/AboutPage.qml:416
+#, kde-format
+msgid "Authors"
+msgstr "Autori"
+
+#: formcard/AboutPage.qml:432
+#, kde-format
+msgid "Credits"
+msgstr "Zasluge"
+
+#: formcard/AboutPage.qml:448
+#, kde-format
+msgid "Translators"
+msgstr "Prevodioci"
+
+#: formcard/AboutPage.qml:553 formcard/AboutPage.qml:557
+#, kde-format
+msgid "Visit %1's KDE Store page"
+msgstr "Poseti stranicu %1 u Radnji KDE‑a"
+
+#: formcard/AboutPage.qml:564 formcard/AboutPage.qml:568
+#, kde-format
+msgid "Send an email to %1"
+msgstr "Pošalji e‑poštu na %1"
+
+#: formcard/AboutPage.qml:575 formcard/AboutPage.qml:636
+#, kde-format
+msgctxt "@action:button"
+msgid "Visit %1's website"
+msgstr "Poseti veb sajt %1"
+
+#: formcard/AboutPage.qml:623
+#, kde-format
+msgctxt "@action:button"
+msgid "Show license for %1"
+msgstr "Prikaži licencu za %1"
+
+#: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:53
+#, kde-format
+msgctxt "@action:button"
+msgid "Color"
+msgstr "Boja"
+
+#: formcard/android/FormColorDelegate.qml:44 formcard/FormColorDelegate.qml:54
+#, kde-format
+msgctxt "Accessible description"
+msgid "Current color \"%1\""
+msgstr "Trenutna boja „%1“"
+
+#: formcard/android/FormIconDelegate.qml:20
+#, kde-format
+msgctxt "@action:button"
+msgid "Icon"
+msgstr "Ikonica"
+
+#: formcard/FormDateTimeDelegate.qml:233
+#, kde-format
+msgctxt "Displayed in place of the date if the selected day is today"
+msgid "Today"
+msgstr "Danas"
+
+#: formcard/FormDateTimeDelegate.qml:260 formcard/FormDateTimeDelegate.qml:413
+#, kde-format
+msgctxt "Date is not set"
+msgid "Not set"
+msgstr "Nije postavljeno"
+
+#: formcard/FormDateTimeDelegate.qml:311 formcard/FormDateTimeDelegate.qml:429
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset"
+msgstr "Resetuj"
+
+#: formcard/FormFileDelegate.qml:187
+#, kde-format
+msgctxt "@info:status"
+msgid "The path doesn't exist."
+msgstr "Putanja ne postoji."
+
+#: formcard/FormFileDelegate.qml:196
+#, kde-format
+msgctxt "@info:status"
+msgid "The file doesn't exist."
+msgstr "Fajl ne postoji."
+
+#: formcard/FormFileDelegate.qml:244
+#, kde-format
+msgctxt "@action:button"
+msgid "Select file"
+msgstr "Izaberi fajl"
+
+#: formcard/FormFileDelegate.qml:251
+#, kde-format
+msgctxt "@info:placeholderwrapMode"
+msgid "No file selected"
+msgstr "Fajl nije izabran"
+
+#: formcard/FormFolderDelegate.qml:154
+#, kde-format
+msgctxt "@info:status"
+msgid "The folder doesn't exist."
+msgstr "Fascikla ne postoji."
+
+#: formcard/FormFolderDelegate.qml:201
+#, kde-format
+msgctxt "@action:button"
+msgid "Select folder"
+msgstr "Izaberi fasciklu"
+
+#: formcard/FormFolderDelegate.qml:208
+#, kde-format
+msgctxt "@info:placeholderwrapMode"
+msgid "No folder selected"
+msgstr "Fascikla nije izabrana"
+
+#: formcard/FormLinkDelegate.qml:62
+#, kde-format
+msgctxt "@action:inmnenu"
+msgid "Open Link"
+msgstr "Otvori vezu"
+
+#: formcard/FormLinkDelegate.qml:68
+#, kde-format
+msgctxt "@action:inmnenu"
+msgid "Copy Link to Clipboard"
+msgstr "Kopiraj vezu u klipbord"
+
+#: formcard/FormLinkDelegate.qml:74
+#, kde-format
+msgctxt "@info:status"
+msgid "Url copied to clipboard."
+msgstr "URL je kopiran u klipbord."
+
+#: formcard/FormPasswordFieldDelegate.qml:321
+#: formcard/FormTextAreaDelegate.qml:188 formcard/FormTextFieldDelegate.qml:334
+#, kde-format
+msgctxt "@label %1 is current text length, %2 is maximum length of text field"
+msgid "%1/%2"
+msgstr "%1/%2"
+
+#: formcard/FormPasswordFieldDelegate.qml:419
+#: formcard/FormTextFieldDelegate.qml:441
+#, kde-format
+msgctxt "@action:button"
+msgid "Done"
+msgstr "Gotovo"
+
+#: formcard/private/AboutReleaseDialog.qml:16
+#, kde-format
+msgid "Release history"
+msgstr "Istorijat izdanja"
+
+#: onboarding/private/OnboardingOverlay.qml:202
+#, kde-format
+msgctxt "@action:button"
+msgid "Previous"
+msgstr "Prethodno"
+
+#: onboarding/private/OnboardingOverlay.qml:203
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Previous"
+msgstr "Prethodno"
+
+#: onboarding/private/OnboardingOverlay.qml:222
+#, kde-format
+msgctxt "@action:button"
+msgid "Next"
+msgstr "Sledeće"
+
+#: onboarding/private/OnboardingOverlay.qml:223
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Next"
+msgstr "Sledeće"
+
+#: onboarding/private/OnboardingOverlay.qml:238
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cancel"
+msgstr "Odustani"
+
+#: settings/CategorizedSettings.qml:47 settings/ConfigurationView.qml:84
+#, kde-format
+msgctxt "@title:window"
+msgid "Settings"
+msgstr "Postavke"
+
+#: settings/CategorizedSettings.qml:47
+#, kde-format
+msgctxt "@title:window"
+msgid "Settings — %1"
+msgstr "Postavke — %1"
+
+#: settings/CategorizedSettings.qml:101
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "Go back"
+msgstr "Idi nazad"
+
+#: settings/private/ConfigMobilePage.qml:37
+#, kde-format
+msgctxt "@title"
+msgid "Settings"
+msgstr "Postavke"
+
+#: settings/private/ConfigMobilePage.qml:168
+#: settings/private/ConfigWindow.qml:161
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Searching…"
+msgstr "Tražim…"
+
+#: settings/private/ConfigMobilePage.qml:169
+#: settings/private/ConfigWindow.qml:162
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "No matching settings"
+msgstr "Nema odgovarajućih postavki"
+
+#: settings/private/SonnetConfigPage.qml:40
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Enable automatic spell checking"
+msgstr "Uključi automatsku proveru pravopisa"
+
+#: settings/private/SonnetConfigPage.qml:49
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Ignore uppercase words"
+msgstr "Ignoriši reči pisane velikim slovima"
+
+#: settings/private/SonnetConfigPage.qml:58
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Ignore hyphenated words"
+msgstr "Ignoriši reči sa crticom"
+
+#: settings/private/SonnetConfigPage.qml:68
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Detect language automatically"
+msgstr "Automatski otkrivaj jezik"
+
+#: settings/private/SonnetConfigPage.qml:76
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Selected default language:"
+msgstr "Izabrani podrazumevani jezik:"
+
+#: settings/private/SonnetConfigPage.qml:77
+#, kde-format
+msgctxt "No selected language"
+msgid "None"
+msgstr "nijedan"
+
+#: settings/private/SonnetConfigPage.qml:95
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Additional Spell Checking Languages"
+msgstr "Dodatni jezici za proveru pravopisa"
+
+#: settings/private/SonnetConfigPage.qml:96
+#, kde-format
+msgid ""
+"%1 will provide spell checking and suggestions for the languages listed here "
+"when autodetection is enabled."
+msgstr ""
+"%1 će pružati proveru pravopisa i predloge za ovde navedene jezike kada je "
+"uključeno automatsko otkrivanje."
+
+#: settings/private/SonnetConfigPage.qml:104
+#, kde-format
+msgctxt "@action:button"
+msgid "Open Personal Dictionary"
+msgstr "Otvori lični rečnik"
+
+#: settings/private/SonnetConfigPage.qml:116
+#, kde-format
+msgctxt "@title:window"
+msgid "Spell checking languages"
+msgstr "Jezici za proveru pravopisa"
+
+#: settings/private/SonnetConfigPage.qml:128
+#, kde-format
+msgid "Default Language"
+msgstr "Podrazumevani jezik"
+
+#: settings/private/SonnetConfigPage.qml:140
+#, kde-format
+msgctxt "@title:window"
+msgid "Spell checking dictionary"
+msgstr "Rečnik za proveru pravopisa"
+
+#: settings/private/SonnetConfigPage.qml:147
+#, kde-format
+msgctxt "Placeholder message"
+msgid "Add a new word to your personal dictionary…"
+msgstr "Dodajte novu reč u lični rečnik…"
+
+#: settings/private/SonnetConfigPage.qml:150
+#, kde-format
+msgctxt "@action:button"
+msgid "Add Word"
+msgstr "Dodaj reč"
+
+#: settings/private/SonnetConfigPage.qml:183
+#, kde-format
+msgctxt "@action:button"
+msgid "Delete word"
+msgstr "Obriši reč"
+
+#: settings/ShortcutsConfigurationModule.qml:27
+#, kde-format
+msgctxt "@action:button"
+msgid "Keyboard Shortcuts"
+msgstr "Prečice sa tastature"
+
+#: settings/ShortcutsConfigurationModule.qml:32
+#, kde-format
+msgctxt "@info:search keyword"
+msgid "Hotkey"
+msgstr "Prečica"
+
+#: settings/ShortcutsConfigurationModule.qml:33
+#, kde-format
+msgctxt "@info:search keyword"
+msgid "Key binding"
+msgstr "Sveza tastera"
+
+#: settings/ShortcutsConfigurationModule.qml:34
+#, kde-format
+msgctxt "@info:search keyword"
+msgid "Accelerator"
+msgstr "Ubrzivač"
+
+#: settings/SpellcheckingConfigurationModule.qml:16
+#, kde-format
+msgctxt "@action:button"
+msgid "Spell Checking"
+msgstr "Provera pravopisa"
