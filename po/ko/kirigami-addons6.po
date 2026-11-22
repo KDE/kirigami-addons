@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-07 00:56+0000\n"
-"PO-Revision-Date: 2026-10-03 22:34+0200\n"
+"PO-Revision-Date: 2026-11-22 00:24+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -397,15 +397,13 @@ msgid "Go Next"
 msgstr "앞으로 이동"
 
 #: dateandtime/TimePicker.qml:111
-#, fuzzy, kde-format
-#| msgid "Hours"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Hour"
 msgstr "시간"
 
 #: dateandtime/TimePicker.qml:119
-#, fuzzy, kde-format
-#| msgid "Minutes"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Minute"
 msgstr "분"
@@ -417,12 +415,10 @@ msgid ":"
 msgstr ":"
 
 #: dateandtime/TimePopup.qml:47
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select file"
+#, kde-format
 msgctxt "@title:dialog"
 msgid "Select time"
-msgstr "파일 선택"
+msgstr "시간 선택"
 
 #: formcard/aboutcomponent.cpp:102
 #, kde-format
@@ -669,11 +665,10 @@ msgid "Source Code"
 msgstr "소스 코드"
 
 #: formcard/AboutPage.qml:329
-#, fuzzy, kde-format
-#| msgid "Release history"
+#, kde-format
 msgctxt "@title:group"
 msgid "Releases"
-msgstr "릴리스 기록"
+msgstr "릴리스"
 
 #: formcard/AboutPage.qml:377 formcard/private/AboutReleaseDialog.qml:71
 #, kde-format
@@ -684,7 +679,7 @@ msgstr "더 많은 정보"
 #, kde-format
 msgctxt "@action:button"
 msgid "Show previous releases"
-msgstr ""
+msgstr "이전 릴리스 보기"
 
 #: formcard/AboutPage.qml:393
 #, kde-format
@@ -729,17 +724,16 @@ msgid "Send an email to %1"
 msgstr "%1(으)로 이메일 보내기"
 
 #: formcard/AboutPage.qml:575 formcard/AboutPage.qml:636
-#, fuzzy, kde-format
-#| msgid "Visit %1's KDE Store page"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit %1's website"
-msgstr "%1의 KDE 스토어 페이지 방문"
+msgstr "%1의 웹사이트 방문"
 
 #: formcard/AboutPage.qml:623
 #, kde-format
 msgctxt "@action:button"
 msgid "Show license for %1"
-msgstr ""
+msgstr "%1의 라이선스 표시"
 
 #: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:53
 #, kde-format
@@ -915,14 +909,14 @@ msgstr "설정"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Searching…"
-msgstr ""
+msgstr "검색 중…"
 
 #: settings/private/ConfigMobilePage.qml:169
 #: settings/private/ConfigWindow.qml:162
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No matching settings"
-msgstr ""
+msgstr "일치하는 설정 없음"
 
 #: settings/private/SonnetConfigPage.qml:40
 #, kde-format
@@ -1026,19 +1020,19 @@ msgstr "키보드 단축키"
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Hotkey"
-msgstr ""
+msgstr "단축키"
 
 #: settings/ShortcutsConfigurationModule.qml:33
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Key binding"
-msgstr ""
+msgstr "키 바인딩"
 
 #: settings/ShortcutsConfigurationModule.qml:34
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Accelerator"
-msgstr ""
+msgstr "가속기 키"
 
 #: settings/SpellcheckingConfigurationModule.qml:16
 #, kde-format
