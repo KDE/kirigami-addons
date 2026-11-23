@@ -46,12 +46,10 @@ msgstr "关于 KDE"
 #, kde-format
 msgctxt "@title:menu"
 msgid "File"
-msgstr ""
+msgstr "文件"
 
 #: actions/abstractkirigamiapplication.cpp:209
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@title:menu"
 msgid "Settings"
 msgstr "设置"
@@ -60,7 +58,7 @@ msgstr "设置"
 #, kde-format
 msgctxt "@title:menu"
 msgid "Help"
-msgstr ""
+msgstr "帮助"
 
 #: actions/private/keysequencehelper.cpp:117
 #, kde-format
@@ -221,7 +219,7 @@ msgstr "关于 KDE"
 #, kde-format
 msgctxt "@title:window"
 msgid "Failed to Load Application"
-msgstr ""
+msgstr "加载应用程序失败"
 
 #: app/kirigamiappdefaults.cpp:138
 #, kde-format
@@ -230,12 +228,14 @@ msgid ""
 "Could not load the QML application. This issue might be caused by your "
 "distribution. Please report it to your distribution first."
 msgstr ""
+"无法加载 QML 应用程序。此问题可能是由本机安装的发行版引起的。请先向该发行版报"
+"告该问题。"
 
 #: app/kirigamiappdefaults.cpp:145
 #, kde-format
 msgctxt "@info"
 msgid "Could not load the QML application."
-msgstr ""
+msgstr "无法加载 QML 应用程序。"
 
 #: components/AbstractMaximizeComponent.qml:138
 #, kde-format
@@ -397,15 +397,13 @@ msgid "Go Next"
 msgstr "前进"
 
 #: dateandtime/TimePicker.qml:111
-#, fuzzy, kde-format
-#| msgid "Hours"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Hour"
 msgstr "小时"
 
 #: dateandtime/TimePicker.qml:119
-#, fuzzy, kde-format
-#| msgid "Minutes"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Minute"
 msgstr "分钟"
@@ -417,12 +415,10 @@ msgid ":"
 msgstr ":"
 
 #: dateandtime/TimePopup.qml:47
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select file"
+#, kde-format
 msgctxt "@title:dialog"
 msgid "Select time"
-msgstr "选择文件"
+msgstr "选择时间"
 
 #: formcard/aboutcomponent.cpp:102
 #, kde-format
@@ -672,20 +668,18 @@ msgstr "源代码"
 #, kde-format
 msgctxt "@title:group"
 msgid "Releases"
-msgstr ""
+msgstr "发布版本"
 
 #: formcard/AboutPage.qml:377 formcard/private/AboutReleaseDialog.qml:71
-#, fuzzy, kde-format
-#| msgctxt "@title:dialog"
-#| msgid "Information"
+#, kde-format
 msgid "More information"
-msgstr "信息"
+msgstr "更多信息"
 
 #: formcard/AboutPage.qml:386
 #, kde-format
 msgctxt "@action:button"
 msgid "Show previous releases"
-msgstr ""
+msgstr "显示先前的版本"
 
 #: formcard/AboutPage.qml:393
 #, kde-format
@@ -730,17 +724,16 @@ msgid "Send an email to %1"
 msgstr "发送电子邮件到 %1"
 
 #: formcard/AboutPage.qml:575 formcard/AboutPage.qml:636
-#, fuzzy, kde-format
-#| msgid "Visit %1's KDE Store page"
+#, kde-format
 msgctxt "@action:button"
 msgid "Visit %1's website"
-msgstr "访问 %1 的 KDE 商店页面"
+msgstr "访问 %1 的网站"
 
 #: formcard/AboutPage.qml:623
 #, kde-format
 msgctxt "@action:button"
 msgid "Show license for %1"
-msgstr ""
+msgstr "显示 %1 的许可证"
 
 #: formcard/android/FormColorDelegate.qml:43 formcard/FormColorDelegate.qml:53
 #, kde-format
@@ -776,7 +769,7 @@ msgstr "未设置"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset"
-msgstr ""
+msgstr "重置"
 
 #: formcard/FormFileDelegate.qml:187
 #, kde-format
@@ -850,12 +843,12 @@ msgstr "%1/%2"
 #, kde-format
 msgctxt "@action:button"
 msgid "Done"
-msgstr ""
+msgstr "完成"
 
 #: formcard/private/AboutReleaseDialog.qml:16
 #, kde-format
 msgid "Release history"
-msgstr ""
+msgstr "版本历史"
 
 #: onboarding/private/OnboardingOverlay.qml:202
 #, kde-format
@@ -916,14 +909,14 @@ msgstr "设置"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Searching…"
-msgstr ""
+msgstr "正在搜索…"
 
 #: settings/private/ConfigMobilePage.qml:169
 #: settings/private/ConfigWindow.qml:162
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No matching settings"
-msgstr ""
+msgstr "没有匹配的设置"
 
 #: settings/private/SonnetConfigPage.qml:40
 #, kde-format
@@ -1025,40 +1018,22 @@ msgstr "键盘快捷键"
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Hotkey"
-msgstr ""
+msgstr "热键"
 
 #: settings/ShortcutsConfigurationModule.qml:33
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Key binding"
-msgstr ""
+msgstr "按键绑定"
 
 #: settings/ShortcutsConfigurationModule.qml:34
 #, kde-format
 msgctxt "@info:search keyword"
 msgid "Accelerator"
-msgstr ""
+msgstr "快捷键"
 
 #: settings/SpellcheckingConfigurationModule.qml:16
 #, kde-format
 msgctxt "@action:button"
 msgid "Spell Checking"
 msgstr "拼写检查"
-
-#~ msgctxt "@action:button"
-#~ msgid "Reset to current time"
-#~ msgstr "重置为当前时间"
-
-#, fuzzy
-#~| msgctxt "@title:dialog"
-#~| msgid "Information"
-#~ msgid "More information</a>"
-#~ msgstr "信息"
-
-#~ msgctxt "@title:group"
-#~ msgid "Settings"
-#~ msgstr "设置"
-
-#~ msgctxt "Linux packaging format"
-#~ msgid "Unknown/Default"
-#~ msgstr "未知/默认"
