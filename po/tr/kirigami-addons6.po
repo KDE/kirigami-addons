@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-07 00:56+0000\n"
-"PO-Revision-Date: 2026-11-14 18:34+0300\n"
+"PO-Revision-Date: 2026-11-23 18:14+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -962,7 +962,7 @@ msgstr "Dili kendiliğinden algıla"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Selected default language:"
-msgstr "Seçili öntanımlı dil:"
+msgstr "Seçili varsayılan dil:"
 
 #: settings/private/SonnetConfigPage.qml:77
 #, kde-format
@@ -1000,7 +1000,7 @@ msgstr "Yazım Denetimi Dilleri"
 #: settings/private/SonnetConfigPage.qml:128
 #, kde-format
 msgid "Default Language"
-msgstr "Öntanımlı Dil"
+msgstr "Varsayılan Dil"
 
 #: settings/private/SonnetConfigPage.qml:140
 #, kde-format
