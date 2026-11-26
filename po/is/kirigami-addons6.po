@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-07 00:56+0000\n"
+"POT-Creation-Date: 2026-11-26 01:02+0000\n"
 "PO-Revision-Date: 2025-12-02 16:17+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -361,7 +361,7 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Hætta við"
 
-#: dateandtime/DatePopup.qml:116 dateandtime/TimePopup.qml:74
+#: dateandtime/DatePopup.qml:116 dateandtime/TimePopup.qml:77
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
